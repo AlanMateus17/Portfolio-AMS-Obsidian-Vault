@@ -112,6 +112,14 @@ Você não precisa navegar pelas pastas do computador — use os links abaixo. O
 - [[github-estrutura-profissional-autoridade|GitHub: estrutura profissional e autoridade]]
 - [[passo-a-passo-portfolio-vaga-junior|Portfólio para vaga júnior — passo a passo]] ⭐
 
+### Automação — o que automatizar, quando, e como
+- 👉 **[[plano-automacao-completo]]** — documento único: padrão de mercado + o que só você constrói + seu setup 100% conectado + práticas indispensáveis
+- [[automacao-total-ambiente-trabalho]] — cada categoria com comando real
+- [[por-que-automatizar-riscos-e-testes]] — por quê, vantagem, desvantagem, teste de validação
+- [[ordem-e-sequencia-de-execucao-automacoes]] — quando cada uma entra no seu Passo real
+- [[veredito-clonar-ou-nao-ferramenta-paga]] — Jira, Kafka, Vault, PagerDuty: clonar, adotar grátis, ou já está coberto
+- [[painel-central-arquitetura-todas-fases]] — arquitetura do painel central, pra todas as fases da carreira
+
 ## 7️⃣ Estudo e Carreira
 *Sua trilha de aprendizado, entrelaçada com o desenvolvimento*
 
@@ -129,6 +137,7 @@ Você não precisa navegar pelas pastas do computador — use os links abaixo. O
 - [[mapa-mestre-prioridade-total|🗺️ MAPA MESTRE DE PRIORIDADE TOTAL]] ⭐⭐⭐
 - [[biblioteca-recursos-por-passo|📚 Biblioteca de Recursos — o que ler em cada passo]] ⭐
 - [[perfil-senior-completo-auditoria|Perfil sênior completo — auditoria]]
+- [[mapa-automacao-por-contexto-profissional|Mapa de automação: sozinho vs. freelance vs. empregado]]
 
 ## 8️⃣ Material Comercial
 
@@ -139,6 +148,11 @@ Você não precisa navegar pelas pastas do computador — use os links abaixo. O
 
 - 👉 **[[00-catalogo-progresso]]** — índice único de tudo que cada Passo produz: código, Ficha Dupla e Registro de Entrevista
 - [[metodo-estudo-producao-didatica-simultanea]] — o método, com os dois formatos de artefato didático
+
+## 🔟 Ferramentas Pessoais Produtizáveis
+
+- 👉 **[[aura-status-documento-projeto-final|aura-status]]** — painel central de status, a única das 4 ferramentas de automação pessoal com modelo de receita real
+- [[aura-queue-vault-oncall-documento-portfolio|aura-queue, aura-vault-simples, aura-oncall]] — as outras 3, documentadas como peça de portfólio/aprendizado, não produto — com a razão explicada
 
 ---
 
