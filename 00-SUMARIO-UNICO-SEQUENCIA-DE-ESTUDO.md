@@ -134,7 +134,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Docker multi-stage, deploy gerenciado, pipeline GitHub Actions, observabilidade.
   **Desenvolver:** deploy real do AuraPOS — primeiro marco de verdade do portfólio.
   **✅ Pronto quando:** sistema no ar, observável, deploy automático a cada push.
-  **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, `aura-vault-simples` — ver [[ordem-e-sequencia-de-execucao-automacoes]] e [[aura-queue-vault-oncall-documento-portfolio]].
+  **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [[aura-secrets-documento-projeto-final|aura-secrets]] — ver [[ordem-e-sequencia-de-execucao-automacoes]].
 
 - [ ] **Passo 11 — Performance com dado real** *(após meses em produção)*
   `Span<T>`, Garbage Collector, `BenchmarkDotNet` + Matemática Cap. 9 (Estatística Descritiva).

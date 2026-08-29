@@ -142,6 +142,8 @@ status: completo
 
 Tudo o resto do documento é: C#/.NET que você já domina, integração de API de terceiro (trabalho de engenharia, não lacuna de conhecimento), ou decisão de fornecedor (decisão de negócio, não de estudo).
 
+**As 4 ferramentas pessoais** (`aura-status`, `aura-queue`, `aura-secrets`, `aura-oncall` — ver [[stack-tecnologica-por-sistema]]) não acrescentam nada a esta lista — são construídas inteiramente com stack já dominado, de propósito, exatamente pra não abrir estudo novo em paralelo ao portfólio principal.
+
 ---
 
 ## 🔗 Documentos relacionados

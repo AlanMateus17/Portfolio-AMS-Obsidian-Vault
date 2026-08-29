@@ -50,7 +50,7 @@ Só três itens passam nas duas condições (conceito valioso de aprender **e** 
 
 **Onde entra:** depois que 2-3 sistemas já estiverem em produção e precisarem conversar entre si — não antes, não é urgente agora.
 
-### `aura-vault-simples` — versão mínima de cofre de segredo (conceito do HashiCorp Vault)
+### `aura-secrets` — versão mínima de cofre de segredo (conceito do HashiCorp Vault)
 
 **O que ensina de verdade:** por que segredo não deveria nunca ficar em arquivo de configuração, e como um serviço central de segredo funciona (pedido autenticado → segredo devolvido → nunca fica gravado em texto puro).
 
@@ -72,7 +72,7 @@ Só três itens passam nas duas condições (conceito valioso de aprender **e** 
 
 - **2 itens:** você já está construindo, nem precisa pensar de novo (Jira → AgileFlow, Confluence → MkDocs)
 - **9 itens:** adote a versão gratuita, nunca construa a sua — o aprendizado não compensa o tempo
-- **3 itens:** valem uma versão pequena, de aprendizado, no momento certo do seu portfólio (não agora) — e nem são projetos novos soltos, dois deles (`aura-queue`, `aura-vault-simples`) só nascem quando o problema real que resolvem já existir, e o terceiro é extensão de algo que você já tem
+- **3 itens:** valem uma versão pequena, de aprendizado, no momento certo do seu portfólio (não agora) — e nem são projetos novos soltos, dois deles (`aura-queue`, `aura-secrets`) só nascem quando o problema real que resolvem já existir, e o terceiro é extensão de algo que você já tem
 
 Isso significa **zero projeto novo agora** — os três só entram quando o Passo correspondente chegar, do jeito que todo o resto do portfólio já funciona.
 

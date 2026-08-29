@@ -152,7 +152,7 @@ Você não precisa navegar pelas pastas do computador — use os links abaixo. O
 ## 🔟 Ferramentas Pessoais Produtizáveis
 
 - 👉 **[[aura-status-documento-projeto-final|aura-status]]** — painel central de status, a única das 4 ferramentas de automação pessoal com modelo de receita real
-- [[aura-queue-vault-oncall-documento-portfolio|aura-queue, aura-vault-simples, aura-oncall]] — as outras 3, documentadas como peça de portfólio/aprendizado, não produto — com a razão explicada
+- [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]] — as outras 3, documentadas como peça de portfólio/aprendizado, não produto — com a razão explicada
 
 ---
 

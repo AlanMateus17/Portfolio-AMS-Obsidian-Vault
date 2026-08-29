@@ -129,6 +129,22 @@ C#/.NET 10. Integração com **KMS/HSM gerenciado** (AWS KMS, Azure Key Vault ou
 
 ---
 
+## Ferramentas pessoais produtizáveis (fora da numeração dos 21 sistemas/serviços — ver [[painel-central-arquitetura-todas-fases]])
+
+### `aura-status`
+C#/.NET 10, console app. Sem banco de dados — lê Git local, arquivo de log, `gh` CLI. Multi-provedor futuro (GitHub/GitLab/Bitbucket) via `IFonteDeStatus`.
+
+### `aura-queue`
+C#/.NET 10, em memória ou sobre o Redis já usado no stack — sem dependência nova.
+
+### `aura-secrets`
+C#/.NET 10, PostgreSQL, criptografia local — sem dependência externa (diferente do `aura-vault` acima, que integra KMS/HSM gerenciado).
+
+### `aura-oncall`
+C#/.NET 10 — extensão do `aura-notifications`, sem stack nova.
+
+---
+
 ## Tecnologias explicitamente fora do portfólio (decisão já tomada)
 
 Bun, Hono, Rust, Tauri, gRPC — mantido em todos os 21 documentos, nenhuma exceção encontrada na revisão.

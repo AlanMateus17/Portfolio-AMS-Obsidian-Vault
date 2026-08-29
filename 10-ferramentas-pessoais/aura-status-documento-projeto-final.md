@@ -5,7 +5,7 @@ status: completo
 ---
 
 # aura-status — Documento de Projeto Final
-### O único das 4 ferramentas de automação pessoal com potencial real de virar produto vendável — os outros 3 estão em [[aura-queue-vault-oncall-documento-portfolio]], como peça de portfólio, não produto
+### O único das 4 ferramentas de automação pessoal com potencial real de virar produto vendável — os outros 3 estão em [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]], como peça de portfólio, não produto
 
 ---
 
@@ -157,5 +157,5 @@ Núcleo com ~170 linhas já escrito (RF01-RF11), funcionando localmente. RF12-RF
 
 ## 🔗 Documentos relacionados
 - [[painel-central-arquitetura-todas-fases]] — a arquitetura de fonte plugável
-- [[aura-queue-vault-oncall-documento-portfolio]] — as outras 3 ferramentas, sem o mesmo potencial comercial
+- [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]] — as outras 3 ferramentas, sem o mesmo potencial comercial
 - [[template-documento-projeto-final]] — o padrão que este documento segue, igual aos 23 sistemas de negócio

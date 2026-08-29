@@ -20,14 +20,14 @@ São 4 ferramentas, nenhuma nova além do que já desenhamos nesta conversa, e n
 | `aura-status` (núcleo) | ~170 linhas — **já escrito** | Menor que um único RF do AuraPOS | Já feito |
 | Cada fonte nova do painel | 20-40 linhas cada | Fração de uma entidade de domínio | 1-2h, quando plugar |
 | `aura-queue` | ~100-150 linhas | Bem menor que a lógica de venda do AuraPOS | Um fim de semana, quando 2+ sistemas precisarem conversar |
-| `aura-vault-simples` | ~300-400 linhas | Do tamanho de um RF médio (login com JWT) | 2-3 dias, no Passo 10 (produção) |
+| `aura-secrets` | ~300-400 linhas | Do tamanho de um RF médio (login com JWT) | 2-3 dias, no Passo 10 (produção) |
 | `aura-oncall` | ~100-150 linhas | Pequeno, é só temporizador + reenvio | Meio dia, só com mais de uma pessoa no time |
 
 **Somando tudo: entre 700 e 900 linhas, espalhadas ao longo de anos — menor que um único sistema de negócio do seu portfólio.** O AuraPOS sozinho, com os 15 RF completos, já é maior que essas 4 ferramentas juntas. Não é um segundo portfólio competindo com os 23 sistemas — é uma camada fina, construída aos pedaços, cada pedaço nascendo só quando o problema que resolve existir de verdade.
 
 **Documento de projeto completo, no mesmo padrão dos 23 sistemas, pra cada uma:**
 - [[aura-status-documento-projeto-final]] — o único dos 4 com potencial real de virar produto vendável
-- [[aura-queue-vault-oncall-documento-portfolio]] — os outros 3, documentados como peça de portfólio/aprendizado, não como produto — a razão de cada um estar nessa categoria, explicada dentro do próprio documento
+- [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]] — os outros 3, documentados como peça de portfólio/aprendizado, não como produto — a razão de cada um estar nessa categoria, explicada dentro do próprio documento
 
 ---
 
@@ -112,8 +112,15 @@ Cada fase da sua carreira não é um programa novo — é uma ou duas classes no
 
 ---
 
+## Por que só o aura-status tem modelo de receita, entre as 4 ferramentas
+
+`aura-status` tem um ângulo que `aura-queue`, `aura-secrets` e `aura-oncall` não têm: **ninguém mais construiu especificamente pra TDAH, com esse desenho de baixa carga cognitiva** — é diferenciação real. Fila de mensagem, cofre de segredo e escalonamento de incidente **já são resolvidos**, de graça, por ferramentas com anos de maturidade — não existe diferenciação possível numa versão "simples" feita por uma pessoa só. Documentar as 4 com o mesmo rigor técnico dos 23 sistemas do portfólio (11 seções completas cada, ver [[aura-queue-documento-projeto-final]], [[aura-secrets-documento-projeto-final]] e [[aura-oncall-documento-projeto-final]]) sem forçar um modelo de receita que não existe é mais útil do que fingir que as 4 são igualmente promissoras.
+
+---
+
 ## 🔗 Documentos relacionados
 - [[automacao-total-ambiente-trabalho]] e o código já existente do `aura-status` — o núcleo que este documento estende
 - [[mapa-automacao-por-contexto-profissional]] — o detalhe de cada fase (o que você controla, o que precisa seguir)
 - [[veredito-clonar-ou-nao-ferramenta-paga]] — por que Jira/PagerDuty não precisam ser clonados, só ter uma fonte de leitura no painel
 - [[ordem-e-sequencia-de-execucao-automacoes]] — quando cada fonte da tabela acima realmente entra
+- [[aura-status-documento-projeto-final]], [[aura-queue-documento-projeto-final]], [[aura-secrets-documento-projeto-final]], [[aura-oncall-documento-projeto-final]] — os 4 documentos completos, mesmo padrão dos 23 sistemas de negócio
