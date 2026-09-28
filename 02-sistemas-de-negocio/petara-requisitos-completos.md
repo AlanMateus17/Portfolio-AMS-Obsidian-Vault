@@ -308,7 +308,7 @@ Segue exatamente o stack fixo que você já validou pro resto do ecossistema Aur
 | Banco de dados | PostgreSQL + **PostGIS** | PostGIS é essencial aqui (diferente de produtos anteriores que usam Postgres puro): atendimento domiciliar e visita técnica de campo em grandes animais precisam de geolocalização real, não endereço em texto |
 | Cache/sessão | Redis | Cache de catálogo da loja, sessão de carrinho |
 | Tempo real | SignalR | Status de internação em tempo real pro tutor; status de protocolo reprodutivo em tempo real pro produtor (painel B2B) |
-| Autenticação | JWT + BCrypt | Mesmo padrão AuraPOS |
+| Autenticação | JWT + BCrypt | Mesmo padrão AM Kaixara |
 | Frontend web | TypeScript, Next.js, Tailwind CSS | Painel administrativo + loja/e-commerce |
 | App/portal do tutor | Next.js (PWA) inicialmente | Decisão de app nativo (React Native ou similar) fica pra quando o volume justificar — não é stack fixado ainda, registrar como pendência |
 | Testes | xUnit (backend) | Mesmo padrão dos outros produtos |
@@ -360,7 +360,7 @@ Essa divisão não é sobre "o que é menos importante" — é sobre o que preci
 
 ## 11. Próximo passo natural
 
-Este documento cobre o quê o sistema precisa ter. O próximo passo é priorizar: dado que a formação dela ainda leva ~3 anos, dá pra tratar isso como um projeto de maturação longa dentro do seu roadmap — provavelmente como uma trilha paralela de baixa intensidade agora (arquitetura e módulos essenciais, começando pelo Pet Care) crescendo perto da formatura dela, sem competir agora com o tempo que o AuraPOS precisa. As verticais de grandes animais e reprodução/biotecnologia podem entrar como fase 2 desse projeto — depois que ela tiver definido se vai atuar nessas áreas de fato, já que exigem registro MAPA e conhecimento técnico bem mais específico.
+Este documento cobre o quê o sistema precisa ter. O próximo passo é priorizar: dado que a formação dela ainda leva ~3 anos, dá pra tratar isso como um projeto de maturação longa dentro do seu roadmap — provavelmente como uma trilha paralela de baixa intensidade agora (arquitetura e módulos essenciais, começando pelo Pet Care) crescendo perto da formatura dela, sem competir agora com o tempo que o AM Kaixara precisa. As verticais de grandes animais e reprodução/biotecnologia podem entrar como fase 2 desse projeto — depois que ela tiver definido se vai atuar nessas áreas de fato, já que exigem registro MAPA e conhecimento técnico bem mais específico.
 
 ## 12. Deploy e CI/CD
 
@@ -389,10 +389,10 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 ### 12.3 Veterinário/equipe clínica
 - **Cadastro:** criado pelo admin da clínica (ela mesma, inicialmente)
 - **Uso:** prontuário, prescrição, agenda, painel administrativo (seção 1.9)
-- **Suporte:** mesma lógica do operador de caixa do AuraPOS — dúvida operacional resolvida internamente pela admin da clínica, não pelo seu suporte
+- **Suporte:** mesma lógica do operador de caixa do AM Kaixara — dúvida operacional resolvida internamente pela admin da clínica, não pelo seu suporte
 
 ### 12.4 Suporte técnico interno (Grupo AMtech)
-- **Lacuna, mesmo padrão identificado no AuraPOS e no Delivery:** nenhum painel de suporte interno foi especificado até agora para o AuraVet. Como este sistema tem a vertical de Reprodução & Biotecnologia com exigência de conformidade MAPA, o suporte interno aqui também precisaria de visibilidade sobre status de registro/conformidade por tenant, não só sobre dado operacional comum.
+- **Lacuna, mesmo padrão identificado no AM Kaixara e no Delivery:** nenhum painel de suporte interno foi especificado até agora para o AuraVet. Como este sistema tem a vertical de Reprodução & Biotecnologia com exigência de conformidade MAPA, o suporte interno aqui também precisaria de visibilidade sobre status de registro/conformidade por tenant, não só sobre dado operacional comum.
 
 ---
 
@@ -416,5 +416,5 @@ Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]
 2. **Decisão dela sobre atuar ou não na vertical de Reprodução & Biotecnologia** — trava o início do trabalho de conformidade MAPA.
 3. **App nativo vs. PWA** para o portal do tutor — mesma pendência já registrada em outros sistemas do portfólio, decisão única recomendada.
 4. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado, com a mesma restrição de acesso a metadado (não conteúdo de prontuário) que a seção 12 (Segurança) deste documento já previa.
-5. **Provedor de gateway de pagamento** — ainda não definido (mesma pendência transversal do AuraFix/AuraPOS).
+5. **Provedor de gateway de pagamento** — ainda não definido (mesma pendência transversal do AM Consertta/AM Kaixara).
 

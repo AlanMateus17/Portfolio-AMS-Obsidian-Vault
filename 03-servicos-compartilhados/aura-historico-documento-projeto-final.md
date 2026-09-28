@@ -12,9 +12,9 @@ Segue a estrutura fixa do [[template-documento-projeto-final]].
 
 ## 1. Visão do produto
 
-Serviço de registro imutável de eventos, construído em Clojure + Datomic — única peça do portfólio fora do stack fixo .NET, decisão consciente por causa da vantagem estrutural real do Datomic em histórico consultável no tempo. Consumido por qualquer sistema que precise de auditoria robusta ou simulação especulativa (o "e se" do AuraWealth).
+Serviço de registro imutável de eventos, construído em Clojure + Datomic — única peça do portfólio fora do stack fixo .NET, decisão consciente por causa da vantagem estrutural real do Datomic em histórico consultável no tempo. Consumido por qualquer sistema que precise de auditoria robusta ou simulação especulativa (o "e se" do AM Rendara).
 
-**Diferencial de inovação:** a maioria dos sistemas guarda histórico como log de mudança (before/after num campo). Aqui, cada fato é imutável e consultável em qualquer ponto do tempo (`as-of`), e permite transação especulativa (`d/with`) sem afetar o dado real — isso é o que viabiliza o simulador "e se" de rebalanceamento do AuraWealth sem duplicar a carteira do cliente num ambiente de teste separado.
+**Diferencial de inovação:** a maioria dos sistemas guarda histórico como log de mudança (before/after num campo). Aqui, cada fato é imutável e consultável em qualquer ponto do tempo (`as-of`), e permite transação especulativa (`d/with`) sem afetar o dado real — isso é o que viabiliza o simulador "e se" de rebalanceamento do AM Rendara sem duplicar a carteira do cliente num ambiente de teste separado.
 
 ---
 
@@ -28,7 +28,7 @@ Serviço de registro imutável de eventos, construído em Clojure + Datomic — 
 - API de consulta `as-of` (estado em um ponto específico do tempo) e `history` (linha do tempo completa de um fato)
 
 ### 2.3 Simulação especulativa
-- Transação especulativa via `d/with`, usada hoje exclusivamente pelo simulador "e se" do AuraWealth — permite simular sem persistir
+- Transação especulativa via `d/with`, usada hoje exclusivamente pelo simulador "e se" do AM Rendara — permite simular sem persistir
 
 ---
 
@@ -46,7 +46,7 @@ Serviço de registro imutável de eventos, construído em Clojure + Datomic — 
 
 ## 4. Sistemas e interfaces paralelas por perfil de usuário
 
-### 4.1 Sistema consumidor (AuraWealth, e futuramente outros)
+### 4.1 Sistema consumidor (AM Rendara, e futuramente outros)
 - **Uso:** publica evento, consulta histórico/simulação via API
 - Não tem usuário humano direto — é consumido máquina a máquina
 
@@ -69,7 +69,7 @@ Serviço de registro imutável de eventos, construído em Clojure + Datomic — 
 
 | Categoria | Aplicação específica no aura-historico |
 |---|---|
-| Dados | Se registra fato financeiro (fluxo de caixa do AuraWealth), herda a mesma sensibilidade do sistema de origem |
+| Dados | Se registra fato financeiro (fluxo de caixa do AM Rendara), herda a mesma sensibilidade do sistema de origem |
 | Auditoria externa | Prioridade baixa por ora — uso interno, sem exposição direta a cliente final; sobe de prioridade só se virar produto vendável (seção 9) |
 
 ---
@@ -90,7 +90,7 @@ Diferente do restante do stack, este serviço roda em Clojure/Datomic, não em .
 
 | Fonte | Modelo |
 |---|---|
-| Uso interno (padrão) | Não gera receita direta — sustenta auditoria e simulação do AuraWealth |
+| Uso interno (padrão) | Não gera receita direta — sustenta auditoria e simulação do AM Rendara |
 | **"Trilha de auditoria como serviço" para terceiros** | Empresas de outros setores (fintech, healthtech) que precisam de histórico imutável robusto e não querem montar infraestrutura Clojure/Datomic própria — cobrança por volume de evento registrado |
 
 ---

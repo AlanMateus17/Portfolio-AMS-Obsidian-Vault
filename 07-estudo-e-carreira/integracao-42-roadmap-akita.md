@@ -21,7 +21,7 @@ Adotar esse currículo inteiro significa **aprender C e C++ do zero**, como tril
 
 | Projeto 42 | Entra? | Por quê |
 |---|---|---|
-| **`born2beroot`** (VM Linux, SSH, hardening, política de senha) | ✅ Entra | Não exige C — é Linux/ops puro, e conecta direto com a Fase 6 (deploy) já existente. Fazer esse projeto de verdade antes do primeiro deploy real do AuraPOS é preparo genuíno, não currículo por currículo |
+| **`born2beroot`** (VM Linux, SSH, hardening, política de senha) | ✅ Entra | Não exige C — é Linux/ops puro, e conecta direto com a Fase 6 (deploy) já existente. Fazer esse projeto de verdade antes do primeiro deploy real do AM Kaixara é preparo genuíno, não currículo por currículo |
 | **`net_practice`** (configuração de rede/IP) | ✅ Entra | Mesma lógica — sem custo de linguagem nova, fortalece exatamente o tipo de conhecimento de infraestrutura que a Fase 6 e a Fase 12 (pentest) já exigem |
 | **Conceito de `webserv`** (construir servidor HTTP do zero) | ⚠️ Entra, mas **não em C++** | O valor real é entender o que o ASP.NET Core abstrai por baixo — isso dá pra fazer em C# mesmo (um servidor HTTP mínimo usando só `Socket`/`TcpListener`, sem framework), sem pagar o custo de aprender C++ só pra isso |
 | `libft`, `ft_printf`, `get_next_line`, `minishell`, `philosophers`, `cub3d`, módulos C++ | ❌ Não entram | Alto custo de linguagem nova (C/C++), baixo retorno incremental dado que você já vai aprender concorrência, algoritmo e manipulação de string dentro do próprio C#/.NET nas fases já planejadas |

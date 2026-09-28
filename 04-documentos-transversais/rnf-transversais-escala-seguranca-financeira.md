@@ -7,7 +7,7 @@ status: completo
 # RNF Transversais — Escala e Segurança Financeira
 ### Documento de referência única, aplicável a todos os sistemas do portfólio que vendem produto ou processam pagamento
 
-Este documento não pertence a um sistema específico. Ele existe para ser **referenciado** pelo documento de RF/RNF de cada sistema (AuraPOS, AuraFix, AuraVet, Delivery, Loja Virtual, `aura-licensing`), em vez de repetir o mesmo requisito em cada um. Quando um requisito próprio de um sistema depender de um destes, ele deve citar o ID aqui definido em vez de redescrever.
+Este documento não pertence a um sistema específico. Ele existe para ser **referenciado** pelo documento de RF/RNF de cada sistema (AM Kaixara, AM Consertta, AuraVet, Delivery, Loja Virtual, `aura-licensing`), em vez de repetir o mesmo requisito em cada um. Quando um requisito próprio de um sistema depender de um destes, ele deve citar o ID aqui definido em vez de redescrever.
 
 ---
 
@@ -17,7 +17,7 @@ Este documento não pertence a um sistema específico. Ele existe para ser **ref
 
 **Critério de verificação:** disparar duas requisições de venda simultâneas para o último item em estoque deve resultar em uma venda confirmada e uma rejeitada com erro claro ("estoque insuficiente"), nunca em duas vendas confirmadas.
 
-**Aplica-se a:** AuraPOS, AuraFix, AuraVet (módulo de loja), Loja Virtual, Aura Delivery — qualquer sistema com estoque compartilhado entre mais de um canal de venda.
+**Aplica-se a:** AM Kaixara, AM Consertta, AuraVet (módulo de loja), Loja Virtual, AM Rotara — qualquer sistema com estoque compartilhado entre mais de um canal de venda.
 
 **Mecanismo recomendado:** coluna de versão (`xmin` do próprio PostgreSQL, ou coluna `RowVersion` explícita) na tabela de estoque, com a atualização feita como `UPDATE ... WHERE id = @id AND versao = @versao_lida` — se zero linhas forem afetadas, a aplicação trata como conflito de concorrência e recarrega o estado antes de tentar de novo.
 
@@ -29,7 +29,7 @@ Este documento não pertence a um sistema específico. Ele existe para ser **ref
 
 **Critério de verificação:** reenviar manualmente o mesmo payload de webhook duas vezes não deve gerar cobrança duplicada, baixa de estoque duplicada, nem duplicar o registro da venda.
 
-**Aplica-se a:** qualquer sistema que processa pagamento — AuraPOS, AuraFix, AuraVet (assinatura/plano), Loja Virtual, `aura-licensing` (cobrança recorrente).
+**Aplica-se a:** qualquer sistema que processa pagamento — AM Kaixara, AM Consertta, AuraVet (assinatura/plano), Loja Virtual, `aura-licensing` (cobrança recorrente).
 
 **Mecanismo recomendado:** chave de idempotência única por evento (geralmente já fornecida pelo próprio gateway como ID da transação), registrada antes do processamento; qualquer evento com chave já registrada é descartado sem reprocessar.
 
@@ -41,7 +41,7 @@ Este documento não pertence a um sistema específico. Ele existe para ser **ref
 
 **Critério de verificação:** uma falha temporária no serviço de emissão fiscal não deve impedir a confirmação da venda ao cliente; a emissão deve completar depois, via re-tentativa, sem intervenção manual.
 
-**Aplica-se a:** todos os sistemas de venda, com prioridade nos que esperam maior volume simultâneo (AuraPOS, AuraFix, Loja Virtual).
+**Aplica-se a:** todos os sistemas de venda, com prioridade nos que esperam maior volume simultâneo (AM Kaixara, AM Consertta, Loja Virtual).
 
 **Mecanismo recomendado:** fila baseada em Redis Streams (já cogitado para o `aura-historico`, reaproveitável aqui) ou equivalente, separando "confirmar venda" (síncrono, rápido) de "processar consequências da venda" (assíncrono).
 
@@ -77,7 +77,7 @@ Este documento não pertence a um sistema específico. Ele existe para ser **ref
 
 **Critério de verificação:** divergência entre os dois totais deve ser detectada e reportada automaticamente, não apenas descoberta manualmente em auditoria eventual.
 
-**Aplica-se a:** `aura-licensing` (responsável central pela cobrança recorrente de todo o portfólio) como dono principal deste requisito; cada sistema que processa pagamento direto (AuraPOS, AuraFix, Loja Virtual) também precisa expor os dados necessários para essa reconciliação.
+**Aplica-se a:** `aura-licensing` (responsável central pela cobrança recorrente de todo o portfólio) como dono principal deste requisito; cada sistema que processa pagamento direto (AM Kaixara, AM Consertta, Loja Virtual) também precisa expor os dados necessários para essa reconciliação.
 
 **Mecanismo recomendado:** job agendado (pode rodar via GitHub Actions em cron, sem necessidade de infraestrutura nova) comparando extratos.
 
@@ -87,10 +87,10 @@ Este documento não pertence a um sistema específico. Ele existe para ser **ref
 
 | Sistema | E01 (estoque) | E02 (idempotência) | E03 (fila) | E04 (banco) | E05 (observabilidade) | E06 (reconciliação) |
 |---|---|---|---|---|---|---|
-| AuraPOS | Sim — prioridade alta, já em código | Sim, quando integrar gateway online | Sim | Sim | Sim | Reporta dados, não é dono |
-| AuraFix | Sim — prioridade alta | Sim | Sim | Sim | Sim | Reporta dados, não é dono |
+| AM Kaixara | Sim — prioridade alta, já em código | Sim, quando integrar gateway online | Sim | Sim | Sim | Reporta dados, não é dono |
+| AM Consertta | Sim — prioridade alta | Sim | Sim | Sim | Sim | Reporta dados, não é dono |
 | AuraVet | Sim (módulo de loja) | Sim (assinatura/plano) | Sim | Sim | Sim | Reporta dados, não é dono |
-| Aura Delivery | Sim | Sim | Sim | Sim | Sim | Reporta dados, não é dono |
+| AM Rotara | Sim | Sim | Sim | Sim | Sim | Reporta dados, não é dono |
 | Loja Virtual | Sim | Sim | Sim | Sim | Sim | Reporta dados, não é dono |
 | Momentos/Cupido | Não se aplica (sem estoque físico) | Sim (assinatura) | Opcional | Sim | Sim | Reporta dados, não é dono |
 | `aura-licensing` | Não se aplica | Sim — crítico, é o motor central | Opcional | Sim | Sim | **Dono do requisito** |

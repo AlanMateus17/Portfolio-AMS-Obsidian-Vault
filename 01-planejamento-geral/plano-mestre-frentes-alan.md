@@ -56,7 +56,7 @@ No final: matriz-resumo, cronograma de fases, e a lógica de por que essa ordem.
 **Capital/formalização:** baixo-médio (ferramentas nível 1 já mapeadas). **MEI, CNAE 95.21-5/00**, é rápido, barato e você já tem o passo a passo pronto.
 
 **Prioridade de abertura:** **1 (mais alta do grupo empresarial)** — é a que exige menos capital, menos tempo de maturação e gera caixa em semanas, não meses.
-**Prioridade de execução:** **Alta no curto prazo** — mas com teto de tempo definido: não deixe ela consumir as horas que precisam ir para o AuraPOS. Trate como "motor de caixa", não como projeto de vida.
+**Prioridade de execução:** **Alta no curto prazo** — mas com teto de tempo definido: não deixe ela consumir as horas que precisam ir para o AM Kaixara. Trate como "motor de caixa", não como projeto de vida.
 **Funcionário:** este é o candidato mais provável a **primeiro funcionário do grupo inteiro**. Gatilho objetivo: fila de espera consistente acima de 5-7 dias úteis por 3 meses seguidos, ou perda de clientes por falta de capacidade — nesse ponto, contratar um técnico júnior paga a própria conta rápido porque o serviço é imediatamente faturável.
 
 ---
@@ -65,7 +65,7 @@ No final: matriz-resumo, cronograma de fases, e a lógica de por que essa ordem.
 
 Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou detalhar cada um, mas a decisão de prioridade é sobre o conjunto.
 
-### 3.1 AuraPOS (carro-chefe)
+### 3.1 AM Kaixara (carro-chefe)
 **O que é:** PDV + gestão de estoque, multi-tenant, já em Sprint 3-4 (rumo a JWT).
 **Produtos:** módulos por pacote comercial (venda, estoque, dashboard, fiscal), possivelmente pacotes por porte de cliente.
 **Renda:** assinatura mensal recorrente (SaaS/MRR) por tenant, possível taxa de setup/onboarding para pequenos comércios locais.
@@ -76,12 +76,12 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 **O que é:** motor de cobrança/gating de módulos usado por todos os outros produtos.
 **Renda:** não gera receita direta — é o que viabiliza cobrança recorrente dos outros. Trate como pré-requisito técnico, não como "produto" separado na priorização comercial.
 
-### 3.3 Aura Delivery
-**O que é:** compartilha 70-85% da base do AuraPOS.
+### 3.3 AM Rotara
+**O que é:** compartilha 70-85% da base do AM Kaixara.
 **Renda:** assinatura + possível comissão por pedido, dependendo do modelo escolhido.
-**Escalabilidade:** alta, mas **dependente do AuraPOS estar maduro primeiro** (reaproveitamento de base é a vantagem competitiva dele — lançar antes disso desperdiça a economia de escala).
+**Escalabilidade:** alta, mas **dependente do AM Kaixara estar maduro primeiro** (reaproveitamento de base é a vantagem competitiva dele — lançar antes disso desperdiça a economia de escala).
 
-### 3.4 AuraWealth
+### 3.4 AM Rendara
 **O que é:** finanças pessoais/corporativas com ARCA, Barsi, Value Investing; camada de consultoria premium.
 **Renda:** assinatura do app (self-service) + consultoria paga (bloqueada até certificação).
 **Escalabilidade:** alta no tier self-service; o tier de consultoria tem teto humano (1 pessoa = X clientes atendidos por mês), a menos que você contrate outros consultores certificados depois.
@@ -90,21 +90,21 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 ### 3.5 Momentos/Cupido
 **O que é:** plataforma B2C de relacionamento (motor de compatibilidade, sites de casal, cartão NFC físico).
 **Renda:** modelo de afiliados inspirado em Zola, venda do cartão NFC físico, possíveis assinaturas para recursos premium.
-**Escalabilidade:** alta em tese (B2C digital), mas é a frente com **maior dependência de marketing/aquisição de usuários** — diferente do AuraPOS, que pode crescer por venda direta local, este precisa de tração de público, o que é um tipo de esforço diferente do que você tem feito até aqui.
+**Escalabilidade:** alta em tese (B2C digital), mas é a frente com **maior dependência de marketing/aquisição de usuários** — diferente do AM Kaixara, que pode crescer por venda direta local, este precisa de tração de público, o que é um tipo de esforço diferente do que você tem feito até aqui.
 
 **Capital/formalização do conjunto Aura:** baixo capital financeiro, alto capital de tempo. Formalização: **PJ (ME/Simples Nacional)** — SaaS B2B com faturamento recorrente tende a estourar o teto do MEI rápido se dois ou três produtos decolarem juntos, então vale já nascer em ME quando a primeira assinatura for fechada, para não ter que migrar no meio de contratos. Detalhamento completo de CNAE e custo em [[estrutura-juridica-amtech]].
 
 **Prioridade de abertura formal:** **2** — depois da assistência técnica (que é mais rápida/barata de formalizar), mas antes de qualquer outra frente, porque é aqui que está o maior potencial de receita recorrente do grupo todo.
 
 **Prioridade de execução dentro do conjunto Aura:**
-1. AuraPOS até MVP vendável (prioridade máxima — é o que já está andando)
+1. AM Kaixara até MVP vendável (prioridade máxima — é o que já está andando)
 2. aura-licensing (pré-requisito técnico, desenvolver junto)
-3. Aura Delivery (só depois do AuraPOS maduro, para aproveitar a base)
-4. AuraWealth self-service (pode rodar em paralelo, ritmo mais lento)
-5. AuraWealth consultoria (só após CEA/CFP — planejar como marco de médio prazo)
+3. AM Rotara (só depois do AM Kaixara maduro, para aproveitar a base)
+4. AM Rendara self-service (pode rodar em paralelo, ritmo mais lento)
+5. AM Rendara consultoria (só após CEA/CFP — planejar como marco de médio prazo)
 6. Momentos/Cupido (menor prioridade agora — exige esforço de marketing que compete com as outras frentes por tempo)
 
-**Funcionário:** gatilho é **financeiro, não de volume de tarefas** — contrate o primeiro desenvolvedor quando o MRR (receita recorrente mensal) do AuraPOS cobrir o salário dele com folga (regra de bolso: MRR ≥ 3x o custo do salário, pra sobrar caixa de segurança). Antes disso, contratar dev é queimar caixa que ainda não existe. Suporte técnico/atendimento a cliente pode vir antes do segundo dev, se o volume de tickets começar a tomar seu tempo de desenvolvimento.
+**Funcionário:** gatilho é **financeiro, não de volume de tarefas** — contrate o primeiro desenvolvedor quando o MRR (receita recorrente mensal) do AM Kaixara cobrir o salário dele com folga (regra de bolso: MRR ≥ 3x o custo do salário, pra sobrar caixa de segurança). Antes disso, contratar dev é queimar caixa que ainda não existe. Suporte técnico/atendimento a cliente pode vir antes do segundo dev, se o volume de tickets começar a tomar seu tempo de desenvolvimento.
 
 ---
 
@@ -121,7 +121,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 **Capital/formalização:** baixíssimo. Pode operar via MEI (mesmo CNPJ da assistência técnica, se o CNAE permitir, ou CNAE secundário de "outras atividades de ensino").
 
 **Prioridade de abertura:** **3** — simples de formalizar, mas não é urgente porque não depende de estrutura física.
-**Prioridade de execução:** **média** — é "dinheiro parado" no sentido de que o material já existe; vale um sprint curto e isolado (ex: 1 fim de semana) para transformar as apostilas em um produto vendável, sem tirar foco do AuraPOS no dia a dia.
+**Prioridade de execução:** **média** — é "dinheiro parado" no sentido de que o material já existe; vale um sprint curto e isolado (ex: 1 fim de semana) para transformar as apostilas em um produto vendável, sem tirar foco do AM Kaixara no dia a dia.
 **Funcionário:** raramente necessário; se escalar, terceirize edição/design/gravação em vez de contratar CLT.
 
 ---
@@ -139,7 +139,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 **Capital/formalização:** baixo. MEI simples (mesmo CNPJ pode ter esse CNAE como secundário).
 
 **Prioridade de abertura:** **4** — fácil de formalizar, mas não corre risco de "perder a janela" se atrasar.
-**Prioridade de execução:** **média-baixa** — é uma boa frente de caixa rápido por projeto pontual, mas cada projeto puxa horas diretamente do desenvolvimento do Aura. Recomendo tratá-la como **oportunista** (aceitar projetos quando aparecerem via indicação, sem prospecção ativa) até o AuraPOS estar gerando receita própria.
+**Prioridade de execução:** **média-baixa** — é uma boa frente de caixa rápido por projeto pontual, mas cada projeto puxa horas diretamente do desenvolvimento do Aura. Recomendo tratá-la como **oportunista** (aceitar projetos quando aparecerem via indicação, sem prospecção ativa) até o AM Kaixara estar gerando receita própria.
 **Funcionário:** subcontratar freelancer pontual apenas se o pipeline de projetos exceder sua capacidade — não vale contratar CLT para isso.
 
 ---
@@ -168,11 +168,11 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 |---|---|---|---|---|
 | Carreira docente (Matemática) | — | Alta (contínua) | Baixa | N/A |
 | Assistência técnica | **1** | Alta (curto prazo) | Baixa-média (física) | Fila > 5-7 dias por 3 meses |
-| Ecossistema Aura (AuraPOS primeiro) | **2** | **Máxima** | Alta | MRR ≥ 3x salário de um dev |
+| Ecossistema Aura (AM Kaixara primeiro) | **2** | **Máxima** | Alta | MRR ≥ 3x salário de um dev |
 | Educação (apostilas/cursos) | 3 | Média | Média-alta | Raramente necessário |
 | Freelance web dev | 4 | Média-baixa (oportunista) | Baixa-média | Só subcontratação pontual |
 | Dropshipping/afiliados | 5 | Baixa | Alta em tese, arriscada | Só se validado e lucrativo |
-| AuraWealth consultoria | (depende de CEA/CFP) | Baixa por ora | Alta (limitada por pessoa) | Após certificação + demanda |
+| AM Rendara consultoria | (depende de CEA/CFP) | Baixa por ora | Alta (limitada por pessoa) | Após certificação + demanda |
 
 ---
 
@@ -180,22 +180,22 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 
 **Fase 0 — Agora até ~3 meses:**
 - Formalizar MEI com CNAE 95.21-5/00 (assistência técnica) — abre caixa rápido.
-- Continuar AuraPOS até fechar autenticação JWT e MVP vendável.
+- Continuar AM Kaixara até fechar autenticação JWT e MVP vendável.
 - Sprint curto (1 fim de semana) para empacotar as apostilas como produto vendável (Frente 4) — baixo esforço, ativo já pronto.
 - Freelance web dev e afiliados: só aceitar oportunidades que aparecerem sem prospecção ativa.
 
 **Fase 1 — ~3 a 9 meses:**
-- Primeiros clientes pagantes do AuraPOS (comércios locais em Barbacena/região).
+- Primeiros clientes pagantes do AM Kaixara (comércios locais em Barbacena/região).
 - Avaliar abrir ME (Simples Nacional) para o CNPJ de software assim que a primeira assinatura recorrente for fechada.
 - Observar fila da assistência técnica — se estourar 5-7 dias, iniciar processo de contratação do primeiro técnico.
 
 **Fase 2 — ~9 a 18 meses:**
-- Expandir base de clientes AuraPOS; iniciar Aura Delivery reaproveitando a base técnica.
-- Avaliar início do estudo para CEA (mais rápido que CFP) visando destravar AuraWealth Consultoria.
+- Expandir base de clientes AM Kaixara; iniciar AM Rotara reaproveitando a base técnica.
+- Avaliar início do estudo para CEA (mais rápido que CFP) visando destravar AM Rendara Consultoria.
 - Decidir sobre primeiro dev contratado, com base na regra de MRR ≥ 3x salário.
 
 **Fase 3 — 18+ meses:**
-- AuraWealth Consultoria (pós-certificação), Momentos/Cupido (se houver capacidade de marketing dedicada).
+- AM Rendara Consultoria (pós-certificação), Momentos/Cupido (se houver capacidade de marketing dedicada).
 - Reavaliar se compensa reduzir carga horária da docência, só depois que a renda empresarial líquida sustentar 2x o salário atual por 6 meses seguidos.
 
 ---
@@ -204,4 +204,4 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 
 A ordem não segue "maior potencial primeiro" — segue **tempo até o primeiro real (caixa) vs seu tempo disponível (9h/semana)**. Assistência técnica entra primeiro porque de todas as frentes é a que menos depende de você ter tempo de desenvolvimento sobrando: uma vez formalizada e com ferramenta básica, ela gera caixa por conta própria. O Aura entra em segundo lugar não porque tem menos potencial — pelo contrário, é a maior aposta de longo prazo — mas porque o tempo de maturação até o primeiro cliente pagante é mais longo, então ela precisa começar a rodar em paralelo desde já, sem esperar a assistência técnica "terminar" (ela nunca termina, é operação contínua).
 
-As frentes de menor prioridade (freela, dropship) não são descartadas — são tratadas como **oportunistas**: você aproveita se aparecer, mas não investe prospecção ativa nelas, porque cada hora ali é uma hora a menos no AuraPOS, que é onde está o maior efeito composto (uma vez pronto, o produto vende pra mais um cliente sem custo adicional de desenvolvimento — o que nenhuma das outras frentes, exceto educação digital, tem).
+As frentes de menor prioridade (freela, dropship) não são descartadas — são tratadas como **oportunistas**: você aproveita se aparecer, mas não investe prospecção ativa nelas, porque cada hora ali é uma hora a menos no AM Kaixara, que é onde está o maior efeito composto (uma vez pronto, o produto vende pra mais um cliente sem custo adicional de desenvolvimento — o que nenhuma das outras frentes, exceto educação digital, tem).

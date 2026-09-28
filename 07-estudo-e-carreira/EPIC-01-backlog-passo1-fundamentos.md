@@ -207,7 +207,7 @@ status: completo
 **Critério de aceite:** função recebe "dias em atraso" e retorna status (ativo/atraso/restrito/suspenso) corretamente nos 4 casos e nos limites entre eles.
 **Estimativa:** 1h30 | **Prioridade:** Alta | **Depende de:** US-02
 
-### US-14 — Simulação simplificada do rebalanceamento ARCA (AuraWealth)
+### US-14 — Simulação simplificada do rebalanceamento ARCA (AM Rendara)
 **Critério de aceite:** função recebe 4 valores de quadrante e retorna quanto falta para cada um chegar a 25% do total, sem usar banco de dado, só aritmética e `if`.
 **Estimativa:** 2h | **Prioridade:** Alta | **Depende de:** US-01
 
@@ -283,3 +283,4 @@ Você resolve as três simulações da Sprint 4 (carrinho, inadimplência, ARCA)
 - [[CARTAO-voce-esta-aqui]] — o resumo diário do que fazer agora
 - [[metodo-estudo-producao-didatica-simultanea]] — como transformar cada User Story em material de aula
 - [[matematica-e-desenvolvimento-integrado]] — o mapeamento completo do livro contra todas as fases futuras
+ 

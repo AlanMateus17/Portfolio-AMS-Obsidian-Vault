@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraCondo — Documento de Projeto Final (Nome provisório)
+# AM Predara — Documento de Projeto Final (Nome provisório)
 ### Sistema de Gestão de Condomínio
 
 Segue a estrutura fixa do [[template-documento-projeto-final]].
@@ -13,7 +13,7 @@ Segue a estrutura fixa do [[template-documento-projeto-final]].
 
 ## 1. Visão do produto
 
-Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro sistema do portfólio tem ao mesmo tempo: síndico/administradora (gestor), morador (cliente cativo), e prestador de serviço terceirizado (portaria, limpeza, manutenção). Reaproveita peças já maduras do portfólio (módulo de OS do AuraFix para chamado de manutenção, padrão de cobrança recorrente do `aura-licensing`, `aura-notifications` para aviso/boleto), aplicadas a uma dinâmica de negócio genuinamente nova.
+Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro sistema do portfólio tem ao mesmo tempo: síndico/administradora (gestor), morador (cliente cativo), e prestador de serviço terceirizado (portaria, limpeza, manutenção). Reaproveita peças já maduras do portfólio (módulo de OS do AM Consertta para chamado de manutenção, padrão de cobrança recorrente do `aura-licensing`, `aura-notifications` para aviso/boleto), aplicadas a uma dinâmica de negócio genuinamente nova.
 
 **Diferencial de inovação:** a maioria do mercado (Superlógica e afins) vende para administradora com contrato pesado e onboarding lento. Aqui a arquitetura modular do portfólio permite vender direto para síndico de condomínio pequeno/médio — sem contrato robusto, sem venda consultiva — e também para administradora que gerencia carteira de vários condomínios (ver seção 9), sem manter dois produtos diferentes.
 
@@ -32,7 +32,7 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 - Cobrança de multa/advertência por infração ao regulamento interno
 
 ### 2.3 Manutenção e operação
-- Chamado de manutenção (área comum ou unidade privativa) — especialização do mesmo módulo de Ordem de Serviço já formalizado no AuraFix
+- Chamado de manutenção (área comum ou unidade privativa) — especialização do mesmo módulo de Ordem de Serviço já formalizado no AM Consertta
 - Escala e ponto de funcionário do condomínio (porteiro, zelador, faxineira)
 - Livro de ocorrências
 
@@ -41,7 +41,7 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 - Registro de entrada/saída, integrado a hardware de portaria
 
 ### 2.5 Reserva de área comum
-- Agenda de salão de festas, churrasqueira, quadra — mesmo padrão de agendamento já usado no AuraVet/AuraFix
+- Agenda de salão de festas, churrasqueira, quadra — mesmo padrão de agendamento já usado no AuraVet/AM Consertta
 
 ### 2.6 Assembleia e governança
 - Convocação, pauta e ata digital
@@ -63,7 +63,7 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 | RF01 | Cadastro de condomínio, bloco, unidade e morador (proprietário/inquilino) | Base de identidade para qualquer cobrança, comunicado ou chamado |
 | RF02 | Cobrança recorrente de taxa condominial com escada de inadimplência graduada | Reduz inadimplência sem gerar corte abrupto/disputa desnecessária |
 | RF03 | Prestação de contas com balancete categorizado | Obrigação legal do síndico perante os condôminos, formalizada sem planilha manual |
-| RF04 | Chamado de manutenção com checklist e status, reaproveitando o módulo de OS | Padroniza atendimento de manutenção sem reescrever lógica já validada no AuraFix |
+| RF04 | Chamado de manutenção com checklist e status, reaproveitando o módulo de OS | Padroniza atendimento de manutenção sem reescrever lógica já validada no AM Consertta |
 | RF05 | Escala e ponto de funcionário do condomínio | Substitui controle manual de ponto, reduzindo disputa trabalhista por registro impreciso |
 | RF06 | Liberação de acesso e registro de entrada/saída de visitante/prestador | É o requisito de segurança física central do sistema — sem isso não é "gestão de condomínio", é só financeiro |
 | RF07 | Agenda de reserva de área comum, com regra de bloqueio de conflito | Evita dois moradores reservando o mesmo espaço no mesmo horário |
@@ -84,7 +84,7 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 ### 4.2 Morador (proprietário ou inquilino)
 - **Cadastro:** convite do síndico/administradora, self-service para completar cadastro
 - **Uso:** portal do morador (2.7)
-- **Suporte:** canal com o síndico primeiro (mesma lógica do operador de caixa do AuraPOS — dúvida operacional é do síndico, não do Grupo AMtech), escalando para o suporte técnico só em problema do sistema em si
+- **Suporte:** canal com o síndico primeiro (mesma lógica do operador de caixa do AM Kaixara — dúvida operacional é do síndico, não do Grupo AMtech), escalando para o suporte técnico só em problema do sistema em si
 
 ### 4.3 Prestador de serviço terceirizado (portaria, limpeza, manutenção)
 - **Cadastro:** criado pelo síndico/administradora
@@ -98,7 +98,7 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 
 ## 5. Requisitos Não Funcionais (RNF) — próprios + transversais
 
-| ID | Aplicação no AuraCondo | Para que serve |
+| ID | Aplicação no AM Predara | Para que serve |
 |---|---|---|
 | RNFT-E01 (concorrência) | Reserva de área comum não pode aceitar dois moradores no mesmo horário simultaneamente | Mesmo princípio de concorrência já aplicado a estoque, aqui aplicado a agenda |
 | RNFT-E02 (idempotência de pagamento) | Cobrança de taxa condominial recorrente | Evita cobrança duplicada em reenvio de webhook |
@@ -110,9 +110,9 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 
 ## 6. Segurança de nível profissional
 
-| Categoria | Aplicação específica no AuraCondo |
+| Categoria | Aplicação específica no AM Predara |
 |---|---|
-| Controle de acesso físico | Maior superfície de risco físico de todo o portfólio — integração com hardware de portaria (interfone IP, fechadura eletrônica) exige o mesmo cuidado de menor privilégio já aplicado ao agente local do AuraPOS |
+| Controle de acesso físico | Maior superfície de risco físico de todo o portfólio — integração com hardware de portaria (interfone IP, fechadura eletrônica) exige o mesmo cuidado de menor privilégio já aplicado ao agente local do AM Kaixara |
 | Dados | Dado de inadimplência do morador é sensível e pode gerar constrangimento/dano reputacional se exposto indevidamente a vizinho |
 | Integridade de votação | Log de auditoria imutável por voto — mesma lógica de rastreabilidade já usada no aura-historico, candidato natural de integração |
 | Auditoria externa | Prioridade alta, dado o componente de segurança física (controle de acesso) e o valor legal da votação eletrônica |
@@ -123,14 +123,14 @@ Plataforma de gestão de condomínio cobrindo os três perfis que nenhum outro s
 
 **Aplicável, diferente da maioria dos serviços recentes.** O controle de acesso (2.4) exige integração com hardware de portaria:
 - Interfone IP / videoporteiro, leitor de RFID/QR code para portão, fechadura eletrônica
-- Mesmo padrão de agente local já usado no AuraPOS (RF09 daquele documento), adaptado para hardware de portaria em vez de hardware de PDV
-- Distribuição do software segue o padrão SaaS do restante do portfólio; o hardware de portaria pode ser vendido como bundle opcional (equipamento + instalação + assinatura), reaproveitando a mesma lógica de instalador/licenciamento já definida para o AuraPOS
+- Mesmo padrão de agente local já usado no AM Kaixara (RF09 daquele documento), adaptado para hardware de portaria em vez de hardware de PDV
+- Distribuição do software segue o padrão SaaS do restante do portfólio; o hardware de portaria pode ser vendido como bundle opcional (equipamento + instalação + assinatura), reaproveitando a mesma lógica de instalador/licenciamento já definida para o AM Kaixara
 
 ---
 
 ## 8. Deploy e CI/CD
 
-Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml` de produção, pipeline GitHub Actions. Ponto de atenção: se o controle de acesso depender de hardware local, o mesmo cuidado de resiliência offline do AuraPOS (fila local, sincronização) se aplica aqui — portaria não pode parar de liberar acesso por instabilidade de internet.
+Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml` de produção, pipeline GitHub Actions. Ponto de atenção: se o controle de acesso depender de hardware local, o mesmo cuidado de resiliência offline do AM Kaixara (fila local, sincronização) se aplica aqui — portaria não pode parar de liberar acesso por instabilidade de internet.
 
 ---
 
@@ -140,7 +140,7 @@ Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml` de pr
 |---|---|
 | Assinatura SaaS por unidade ou por condomínio | Mensalidade recorrente, escalando com o tamanho do condomínio |
 | Taxa de setup/onboarding | Cobrança única na implantação |
-| Bundle de hardware de portaria | Venda de equipamento + instalação + assinatura de software (mesmo modelo híbrido do AuraPOS) |
+| Bundle de hardware de portaria | Venda de equipamento + instalação + assinatura de software (mesmo modelo híbrido do AM Kaixara) |
 | **Canal B2B2C — administradora de condomínio** | Venda por carteira: uma administradora que gerencia dezenas de condomínios contrata o sistema para toda a carteira de uma vez — é o canal de maior alavancagem comercial deste sistema, uma única venda equivale a dezenas de clientes finais |
 | Comissão sobre seguro do condomínio | Se o módulo de seguro (2.8) evoluir para intermediação real, não só registro |
 

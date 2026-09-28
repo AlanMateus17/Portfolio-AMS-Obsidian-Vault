@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraPOS — Especificação Técnica Completa
+# AM Kaixara — Especificação Técnica Completa
 ### Nível arquiteto/staff engineer — modelo de dados, contrato de API, fluxos, padrões de erro, threat model
 
 ---
@@ -97,7 +97,7 @@ CREATE TABLE venda_item (
 **Padrão de erro (RFC 7807 — Problem Details), usado em toda resposta de erro da API, sem exceção:**
 ```json
 {
-  "type": "https://aurapos.dev/erros/estoque-insuficiente",
+  "type": "https://kaixara.dev/erros/estoque-insuficiente",
   "title": "Estoque insuficiente",
   "status": 409,
   "detail": "Restam 3 unidades do produto 'Camiseta P', solicitado 5.",
@@ -160,9 +160,9 @@ Esse é o desenho exato que faz o RNFT-E01 funcionar na prática, não só o con
 
 ---
 
-## 6. Threat Model (STRIDE aplicado ao AuraPOS)
+## 6. Threat Model (STRIDE aplicado ao AM Kaixara)
 
-| Categoria STRIDE | Ameaça específica do AuraPOS | Mitigação já prevista |
+| Categoria STRIDE | Ameaça específica do AM Kaixara | Mitigação já prevista |
 |---|---|---|
 | **S**poofing | Alguém se passar por outro operador | JWT assinado + BCrypt (RF01) |
 | **T**ampering | Manipular `row_version` pra burlar concorrência | Validação sempre no banco (WHERE clause), nunca confiar em valor vindo do cliente |

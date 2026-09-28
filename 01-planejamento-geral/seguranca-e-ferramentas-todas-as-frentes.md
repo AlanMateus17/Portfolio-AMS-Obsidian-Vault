@@ -28,7 +28,7 @@ Git normal versiona texto bem, mas fica pesado com arquivo binário grande (víd
 
 **Onde isso te afeta de verdade:**
 - **Momentos/Cupido** — fotos/mídia de usuário, se algum dia entrar teste local com asset real no repo (produção já usa Cloudflare R2, então isso é só pra desenvolvimento/design, não pra dado de cliente)
-- **AuraEdu** — as 180 apostilas em PDF, se ficarem versionadas no mesmo repo do código do sistema (considere um repo separado só de conteúdo, ou LFS, pra não inchar o clone de quem só quer o código)
+- **AM Saberia** — as 180 apostilas em PDF, se ficarem versionadas no mesmo repo do código do sistema (considere um repo separado só de conteúdo, ou LFS, pra não inchar o clone de quem só quer o código)
 - **Infoprodutos (Camada 11 da [[infraestrutura-fisica-10-anos]])** — vídeo bruto de curso gravado NUNCA deveria ir pro Git, nem com LFS — isso é trabalho pro NAS, não pro controle de versão
 
 **Regra prática:** se o arquivo muda pouco e é grande (PDF final, vídeo), ele não pertence ao Git — nem com LFS. LFS serve pra binário que muda com frequência e precisa de histórico de versão (ex: arquivo de design em edição ativa), não pra armazenamento de mídia finalizada.
@@ -53,7 +53,7 @@ Adicionar ao `setup-ambiente-trabalho-final.md` (ver seção 🔗 abaixo, já li
 
 Protege contra reclamação de cliente por erro, falha ou atraso na prestação de serviço de TI (bug que causa prejuízo, sistema fora do ar, conselho técnico errado). Cobre despesa de defesa, acordo e indenização.
 
-**Por que isso importa especialmente pra você:** já está registrado como pendência real em dois dos seus próprios documentos — `auraarquiteto-documento-projeto-final` (Fase 0 jurídica) e `aurafix-sistema-assistencia-tecnica` (seguro de transporte/responsabilidade). Isso não é exagero de cautela: **contrato corporativo às vezes exige comprovação de cobertura como condição pra fechar parceria** — ter o seguro é vantagem comercial, não só proteção.
+**Por que isso importa especialmente pra você:** já está registrado como pendência real em dois dos seus próprios documentos — `projeta-documento-projeto-final` (Fase 0 jurídica) e `consertta-sistema-assistencia-tecnica` (seguro de transporte/responsabilidade). Isso não é exagero de cautela: **contrato corporativo às vezes exige comprovação de cobertura como condição pra fechar parceria** — ter o seguro é vantagem comercial, não só proteção.
 
 ### 2.2 Seguro Cibernético (RC Cibernética)
 
@@ -67,7 +67,7 @@ Cobertura separada, específica pra: vazamento de dado, ataque hacker, multa por
 
 **O que se aplica a você, mesmo pequeno:**
 - **Dispensa de DPO formal** pra ME/EPP/MEI (Resolução ANPD nº 2/2022) — mas isso **não dispensa** proteger o dado, evitar coleta excessiva, nem o dever de notificar incidente
-- Toda frente que coleta CPF, telefone, e-mail, geolocalização, dado de saúde (AuraVet), dado financeiro (AuraWealth) está sujeita — "empresa pequena" não é isenção
+- Toda frente que coleta CPF, telefone, e-mail, geolocalização, dado de saúde (AuraVet), dado financeiro (AM Rendara) está sujeita — "empresa pequena" não é isenção
 - Base legal explícita pra cada coleta (consentimento é a mais comum pra pequena empresa)
 - Banner de cookie: não pode disparar cookie de terceiro (Analytics, Meta Pixel) antes do aceite; botão "recusar" com o mesmo destaque visual do "aceitar"
 

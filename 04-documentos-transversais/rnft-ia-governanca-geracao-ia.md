@@ -5,13 +5,13 @@ status: completo
 ---
 
 # RNFT-IA01 a IA04 — Governança de Geração por IA
-### Série transversal nova, originada no AuraArquiteto, reaproveitável por qualquer sistema futuro do portfólio que gere conteúdo por IA voltado ao cliente final
+### Série transversal nova, originada no AM Projeta, reaproveitável por qualquer sistema futuro do portfólio que gere conteúdo por IA voltado ao cliente final
 
 ---
 
 ## Por que existe
 
-Diferente de RNFT-E (escala), RNFT-S (segurança/distribuição) e RNFT-D (design), esta série resolve um risco específico: **conteúdo gerado por IA, entregue direto ao cliente final, sem revisão humana em tempo real**. Isso já existe no AuraArquiteto (relatório de arquitetura) e potencialmente reaparece em qualquer sistema futuro que use `aura-copilot` pra saída voltada ao cliente, não só uso interno.
+Diferente de RNFT-E (escala), RNFT-S (segurança/distribuição) e RNFT-D (design), esta série resolve um risco específico: **conteúdo gerado por IA, entregue direto ao cliente final, sem revisão humana em tempo real**. Isso já existe no AM Projeta (relatório de arquitetura) e potencialmente reaparece em qualquer sistema futuro que use `aura-copilot` pra saída voltada ao cliente, não só uso interno.
 
 ---
 
@@ -35,7 +35,7 @@ Follow-up automatizado em pontos fixos (7/30/90 dias) verificando se o cliente r
 
 ## Onde já se aplica
 
-- **AuraArquiteto** — origem da série, relatório de arquitetura gerado por IA
+- **AM Projeta** — origem da série, relatório de arquitetura gerado por IA
 - Qualquer sistema futuro que usar `aura-copilot` pra saída direta ao cliente final, sem revisão humana no caminho crítico
 
 ## Onde não se aplica
@@ -45,6 +45,6 @@ Uso interno de IA (ex: sugestão de código, resumo administrativo) não precisa
 ---
 
 ## 🔗 Documentos relacionados
-- [[auraarquiteto-documento-projeto-final]] — o sistema que originou esta série
+- [[projeta-documento-projeto-final]] — o sistema que originou esta série
 - [[aura-copilot-documento-projeto-final]] — o serviço compartilhado que esta série governa
 - [[rnf-transversais-escala-seguranca-financeira]], [[rnf-transversais-design-tema]], [[distribuicao-licenciamento-seguranca]] — as demais séries transversais do portfólio

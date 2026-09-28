@@ -8,7 +8,7 @@ tipo: dashboard-diario
 *[[00-INICIO|← Voltar pro Início]]*
 
 **Fase atual:** Passo 1 — Fundamentos (Lógica de Programação + Matemática Básica)
-**Sistema em construção:** nenhum ainda — isso é o alicerce antes do primeiro código do AuraPOS
+**Sistema em construção:** nenhum ainda — isso é o alicerce antes do primeiro código do AM Kaixara
 
 ---
 

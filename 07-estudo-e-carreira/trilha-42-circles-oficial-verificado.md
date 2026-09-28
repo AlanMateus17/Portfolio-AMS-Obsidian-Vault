@@ -79,7 +79,7 @@ A versão anterior (`trilha-42-circles-oficial-verificado`) tinha 3 erros reais:
 | 05 | `Inception` | — (Docker já dominado na Fase 6D; entra como auditoria de disciplina extra: só Debian, sem tag `latest`) | Mesmo, com a disciplina específica da 42 |
 | 05 | `webserv` | Já feito na Fase 2.2 (`TcpListener`) | C++, socket POSIX e `poll`/`epoll` |
 | 05 | `ft_irc` | C# com `TcpListener`, protocolo IRC | C++, socket POSIX |
-| 06 | `ft_transcendence` | Nenhuma necessária — o AuraPOS já supera o que este projeto pede | JavaScript/NestJS — fazer como exercício comparativo contra sua própria arquitetura |
+| 06 | `ft_transcendence` | Nenhuma necessária — o AM Kaixara já supera o que este projeto pede | JavaScript/NestJS — fazer como exercício comparativo contra sua própria arquitetura |
 
 **Total: 25 entregáveis + 5 Exam Rank (avaliação de gate, não projeto de estudo — mas real, cronometrado, sem consulta).**
 

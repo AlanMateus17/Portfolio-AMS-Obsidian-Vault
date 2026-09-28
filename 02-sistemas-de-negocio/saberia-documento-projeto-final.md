@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraEdu — Documento de Projeto Final (Nome provisório)
+# AM Saberia — Documento de Projeto Final (Nome provisório)
 ### Sistema de Gestão Escolar, Cursinho e Curso Livre
 
 Segue a estrutura fixa do [[template-documento-projeto-final]].
@@ -44,10 +44,10 @@ Plataforma de gestão para escola particular pequena, cursinho preparatório, cu
 - Biblioteca de material didático, incluindo as 180 apostilas já existentes como conteúdo inicial embutido
 
 ### 2.6 Loja de material
-- Venda de apostila física/digital, uniforme, material escolar — reaproveitando o padrão de loja já validado em AuraFix/AuraVet, com envio via `aura-logistics` quando físico
+- Venda de apostila física/digital, uniforme, material escolar — reaproveitando o padrão de loja já validado em AM Consertta/AuraVet, com envio via `aura-logistics` quando físico
 
 ### 2.7 Gestão de professor
-- Alocação de turma, carga horária, remuneração por aula/turma — reaproveitando o padrão de comissionamento já formalizado no AuraFix
+- Alocação de turma, carga horária, remuneração por aula/turma — reaproveitando o padrão de comissionamento já formalizado no AM Consertta
 
 ### 2.8 Vertical B2B
 - Venda do sistema para outras escolas pequenas ou professores particulares que queiram usar a mesma plataforma — mesmo modelo de licenciamento já aplicado ao AuraVet
@@ -69,7 +69,7 @@ Plataforma de gestão para escola particular pequena, cursinho preparatório, cu
 | RF09 | Suporte a aula síncrona (ao vivo) e assíncrona (gravada) | Cobre tanto o modelo presencial quanto EAD, sem exigir sistema separado |
 | RF10 | Biblioteca de material didático, com suporte a conteúdo pré-carregado | Viabiliza lançar o sistema já com conteúdo real (as 180 apostilas), não vazio |
 | RF11 | Loja de material didático/uniforme, com envio via `aura-logistics` quando físico | Reaproveita o módulo de logística compartilhado em vez de reconstruir |
-| RF12 | Alocação de turma e comissionamento por professor | Reaproveita o padrão de comissionamento já formalizado no AuraFix |
+| RF12 | Alocação de turma e comissionamento por professor | Reaproveita o padrão de comissionamento já formalizado no AM Consertta |
 | RF13 | Licenciamento do sistema para outras escolas/professores particulares via `aura-licensing` | Abre a vertical B2B sem reescrever nada da base |
 
 ---
@@ -103,7 +103,7 @@ Plataforma de gestão para escola particular pequena, cursinho preparatório, cu
 
 ## 5. Requisitos Não Funcionais (RNF) — próprios + transversais
 
-| ID | Aplicação no AuraEdu | Para que serve |
+| ID | Aplicação no AM Saberia | Para que serve |
 |---|---|---|
 | RNFT06 (LGPD) | Dado de menor de idade é categoria com proteção reforçada — exige consentimento do responsável, não do próprio titular | Cumpre obrigação legal específica para dado de criança/adolescente, mais rígida que dado de adulto |
 | RNFT-E01 (concorrência) | Matrícula em turma com vaga limitada não pode aceitar mais alunos que o limite simultaneamente | Mesmo princípio de concorrência já aplicado a estoque, aqui aplicado a vaga de turma |
@@ -114,17 +114,17 @@ Plataforma de gestão para escola particular pequena, cursinho preparatório, cu
 
 ## 6. Segurança de nível profissional
 
-| Categoria | Aplicação específica no AuraEdu |
+| Categoria | Aplicação específica no AM Saberia |
 |---|---|
 | Dados de menor | Consentimento do responsável, não do aluno, quando menor de idade — controle de acesso deve refletir isso na própria estrutura de permissão, não só na política |
 | Auditoria externa | Prioridade média — não processa pagamento de alto valor nem dado altamente sensível como saúde, mas tem volume de dado pessoal de menor de idade relevante |
-| Conexão entre sistemas | Se a escola também usar AuraFix/AuraVet, mesma regra de consentimento explícito e escopo mínimo do restante do portfólio |
+| Conexão entre sistemas | Se a escola também usar AM Consertta/AuraVet, mesma regra de consentimento explícito e escopo mínimo do restante do portfólio |
 
 ---
 
 ## 7. Hardware, instalador e distribuição
 
-**Não aplicável.** SaaS puro, sem componente físico dedicado — diferente do AuraPOS/AuraCondo. O único "hardware" indireto é o dispositivo do professor/aluno para aula síncrona, sem integração especial exigida.
+**Não aplicável.** SaaS puro, sem componente físico dedicado — diferente do AM Kaixara/AM Predara. O único "hardware" indireto é o dispositivo do professor/aluno para aula síncrona, sem integração especial exigida.
 
 ---
 
@@ -154,7 +154,7 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 
 ## 11. Pendências e decisões em aberto
 
-1. **Validação com profissional de gestão educacional** sobre exigências específicas de credenciamento junto à Secretaria de Educação (para escola regular, diferente de cursinho livre) — recomendo essa validação antes de tratar RF05 (emissão de histórico escolar oficial) como pronto para produção, mesmo raciocínio já aplicado ao AuraObra com advogado.
+1. **Validação com profissional de gestão educacional** sobre exigências específicas de credenciamento junto à Secretaria de Educação (para escola regular, diferente de cursinho livre) — recomendo essa validação antes de tratar RF05 (emissão de histórico escolar oficial) como pronto para produção, mesmo raciocínio já aplicado ao AM Canteira com advogado.
 2. **Provedor de videoaula síncrona** — solução própria vs. integração com Zoom/Google Meet, ainda não decidido.
 3. **Prazo formal de retenção de histórico acadêmico** — precisa de definição mais precisa que "muito longo prazo".
 4. **Provedor de gateway de pagamento** — mesma pendência transversal do restante do portfólio.

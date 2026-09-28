@@ -46,21 +46,21 @@ status: completo
 
 | Biblioteca/técnica | Para quê | Sistema |
 |---|---|---|
-| **Google OR-Tools** | Otimização combinatória — roteirização de veículos (VRP) | `aura-analytics` → Aura Delivery |
-| **Prophet** ou **statsmodels** | Previsão de série temporal | `aura-analytics` → AuraPOS, AuraWealth |
+| **Google OR-Tools** | Otimização combinatória — roteirização de veículos (VRP) | `aura-analytics` → AM Rotara |
+| **Prophet** ou **statsmodels** | Previsão de série temporal | `aura-analytics` → AM Kaixara, AM Rendara |
 | **Datomic (client API)** | Consulta temporal e transação especulativa | `aura-historico` |
 | Criptografia de campo (biblioteca .NET nativa, ex: `System.Security.Cryptography`) | Proteção de dado sensível | `aura-vault` |
-| **SQLCipher** | Criptografia de banco local SQLite | AuraPOS (modo offline) |
-| **ESC/POS** (protocolo de impressora) | Comunicação com impressora não-fiscal | AuraPOS (agente local) |
+| **SQLCipher** | Criptografia de banco local SQLite | AM Kaixara (modo offline) |
+| **ESC/POS** (protocolo de impressora) | Comunicação com impressora não-fiscal | AM Kaixara (agente local) |
 
 ---
 
 ## 6. Dados e persistência
 
 - **PostgreSQL** — banco relacional padrão de todo o portfólio
-- **PostGIS** — extensão geoespacial, usada em Aura Delivery, AuraVet, potencialmente AuraObra e AuraCondo
+- **PostGIS** — extensão geoespacial, usada em AM Rotara, AuraVet, potencialmente AM Canteira e AM Predara
 - **Datomic** — banco imutável de fato, exclusivo do `aura-historico`
-- **SQLite** — só localmente, no agente do AuraPOS (modo offline) e no protótipo ainda não migrado do Momentos/Cupido
+- **SQLite** — só localmente, no agente do AM Kaixara (modo offline) e no protótipo ainda não migrado do Momentos/Cupido
 - **Redis** — cache e sessão em todo o portfólio
 - **Redis Streams** — fila de mensageria entre sistemas e serviços compartilhados (ingestão de evento do `aura-historico`, fila do `aura-notifications`, do `aura-logistics`)
 
@@ -78,14 +78,14 @@ status: completo
 - **JWT** + **BCrypt** — padrão de autenticação, a ser centralizado no `aura-identity`
 - **2FA** (TOTP ou similar) — a definir biblioteca específica, obrigatório no `aura-support`, opcional configurável nos demais
 - **KMS/HSM gerenciado** (AWS KMS, Azure Key Vault ou HashiCorp Vault) — `aura-vault`
-- **Code Signing/Authenticode** — assinatura de instalador executável (AuraPOS)
+- **Code Signing/Authenticode** — assinatura de instalador executável (AM Kaixara)
 
 ---
 
 ## 9. Testes e qualidade
 
 - **xUnit** — testes de backend .NET
-- **Teste de contrato de integração externa** — mencionado como prática necessária (AuraFix, `aura-logistics`), ferramenta específica ainda a escolher
+- **Teste de contrato de integração externa** — mencionado como prática necessária (AM Consertta, `aura-logistics`), ferramenta específica ainda a escolher
 - Framework de teste em Python (pytest, provável) — `aura-analytics`
 - `clojure.test` (padrão da linguagem) — `aura-historico`
 
@@ -113,12 +113,12 @@ status: completo
 | Gateway de pagamento | Stripe/Vindi/Iugu/Asaas | Transversal a quase todo o portfólio |
 | WhatsApp Business API | Oficial Meta vs. BSP | `aura-notifications` |
 | SMS/e-mail transacional | Provedor a definir | `aura-notifications` |
-| Transportadora | Correios vs. privada | `aura-logistics`, AuraFix |
-| Assinatura eletrônica | DocuSign/Clicksign/D4Sign | AuraObra |
-| Videoaula síncrona | Zoom/Meet vs. solução própria | AuraEdu |
-| Emissão fiscal (NFC-e/NFSe) | Gateway terceirizado vs. SEFAZ própria | AuraPOS |
+| Transportadora | Correios vs. privada | `aura-logistics`, AM Consertta |
+| Assinatura eletrônica | DocuSign/Clicksign/D4Sign | AM Canteira |
+| Videoaula síncrona | Zoom/Meet vs. solução própria | AM Saberia |
+| Emissão fiscal (NFC-e/NFSe) | Gateway terceirizado vs. SEFAZ própria | AM Kaixara |
 | Modelo de linguagem (IA) | API externa vs. auto-hospedado | `aura-copilot` |
-| Hardware de portaria | Fornecedor a definir | AuraCondo |
+| Hardware de portaria | Fornecedor a definir | AM Predara |
 
 ---
 
@@ -151,4 +151,4 @@ Tudo o resto do documento é: C#/.NET que você já domina, integração de API 
 - [[revisao-stack-tecnologica]] — o corte entre o que é decisão de fornecedor e o que é estudo genuíno
 - [[plano-estudos-basico-avancado-entrelacado]] — onde cada tecnologia desta lista entra no cronograma de estudo
 - [[trilha-42-circles-oficial-verificado]] — C/C++ como bloco de linguagem adicional, fora desta lista de stack padrão
-- [[agileflow-decisao-stack-portfolio]] — GraphQL via HotChocolate no próprio .NET, revisado a partir da versão anterior (React/Node/GraphQL completo)
+- [[taskoro-decisao-stack-portfolio]] — GraphQL via HotChocolate no próprio .NET, revisado a partir da versão anterior (React/Node/GraphQL completo)

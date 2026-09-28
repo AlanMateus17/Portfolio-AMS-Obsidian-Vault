@@ -43,8 +43,8 @@ Fila de mensagem mínima, em memória ou sobre o Redis já usado no stack Aura, 
 
 | Sistema Aura | Papel | Evento típico |
 |---|---|---|
-| AuraPOS | Publica | "Venda concluída" |
-| AuraWealth | Consome | Reage à venda pra registrar receita |
+| AM Kaixara | Publica | "Venda concluída" |
+| AM Rendara | Consome | Reage à venda pra registrar receita |
 | AuraNotifications | Consome | Dispara notificação relacionada ao evento |
 
 Não há interface de usuário final — é infraestrutura interna, consumida só por código de outros sistemas Aura.

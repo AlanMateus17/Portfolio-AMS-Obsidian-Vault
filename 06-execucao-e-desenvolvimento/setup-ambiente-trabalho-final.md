@@ -7,7 +7,7 @@ status: completo
 # Setup do Ambiente de Trabalho — Versão Final Consolidada
 ### Acer Nitro AN515-45 — reconstruído após reinstalação do Windows, atualizado com tudo decidido no portfólio de 23 sistemas
 
-> **Contexto real:** o Windows foi reinstalado (corrupção) e o ambiente está sendo remontado do zero. Este documento consolida o que já foi confirmado instalado, o que falta do checklist original, e o que precisa ser **adicionado** agora que o portfólio cresceu (AgileFlow, Trilha 42, Segurança Ofensiva **e** Defensiva).
+> **Contexto real:** o Windows foi reinstalado (corrupção) e o ambiente está sendo remontado do zero. Este documento consolida o que já foi confirmado instalado, o que falta do checklist original, e o que precisa ser **adicionado** agora que o portfólio cresceu (AM Taskoro, Trilha 42, Segurança Ofensiva **e** Defensiva).
 
 ---
 
@@ -28,7 +28,7 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 - WSL2 + Ubuntu, usuário `alanmateus`
 - Chave SSH ED25519 gerada e autenticada no GitHub
 - Identidade Git configurada (nome + e-mail)
-- Repositórios confirmados intactos no GitHub: Aura, AuraPOS, AMtech
+- Repositórios confirmados intactos no GitHub: Aura, AM Kaixara, AMtech
 - Visual Studio 2026 instalando com workload **C++ Desktop** já incluído — bom, isso já cobre parte do que a Trilha 42 vai precisar
 
 ---
@@ -50,7 +50,7 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 ### Camada 3 — Banco de dado e API local
 - [ ] DBeaver (cliente visual de Postgres/Redis)
 - [ ] Bruno (cliente de API, alternativa gratuita ao Postman)
-- [ ] `docker-compose.yml` padrão do AuraPOS rodando Postgres + Redis local
+- [ ] `docker-compose.yml` padrão do AM Kaixara rodando Postgres + Redis local
 
 ### Camada 4 — Trilha 42 (C/C++)
 - [ ] Toolchain C/C++ dentro do WSL2: `build-essential`, `make`, `cmake`, `gdb`, `valgrind`
@@ -89,5 +89,5 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 - [[seguranca-e-ferramentas-todas-as-frentes]] — Gitleaks, Git LFS e Claude Code, detalhados
 - [[plano-estudos-basico-avancado-entrelacado]] — Fase 12 (Segurança Ofensiva) e Fase 12B (Segurança Defensiva, nova)
 - [[trilha-42-circles-oficial-verificado]] — o que a Camada 4 deste setup sustenta
-- [[rnf-transversais-design-tema|Next.js/Design System]] — o que a Camada 2 deste setup sustenta (não mais o AgileFlow, que agora é .NET)
+- [[rnf-transversais-design-tema|Next.js/Design System]] — o que a Camada 2 deste setup sustenta (não mais o AM Taskoro, que agora é .NET)
 - [[sequencia-mestra-completa-desde-o-inicio]] — onde cada camada entra na ordem real de estudo

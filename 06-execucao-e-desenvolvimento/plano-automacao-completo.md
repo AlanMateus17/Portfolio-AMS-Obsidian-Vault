@@ -87,7 +87,7 @@ Resumo das que não têm meio-termo, detalhadas em [[por-que-automatizar-riscos-
 5. **Nunca** automação financeira 100% sem revisão humana, mesmo depois de meses funcionando bem
 6. **Nunca** IA aprovando o próprio código que ela mesma escreveu
 7. **Sempre** log estruturado desde o primeiro deploy, não como correção depois de um incidente
-8. **Sempre** limite de profundidade de query GraphQL configurado (relevante pro AgileFlow) desde o primeiro deploy
+8. **Sempre** limite de profundidade de query GraphQL configurado (relevante pro AM Taskoro) desde o primeiro deploy
 
 ---
 

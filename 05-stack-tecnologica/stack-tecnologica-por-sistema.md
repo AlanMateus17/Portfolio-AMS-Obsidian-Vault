@@ -11,7 +11,7 @@ status: completo
 
 ## Sistemas de negócio
 
-### AuraPOS
+### AM Kaixara
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers, Clean Architecture + DDD |
@@ -21,7 +21,7 @@ status: completo
 | Frontend | Next.js, TypeScript, Tailwind |
 | **Específico** | Agente local (.NET, Windows Service) com `IImpressoraFiscal` (ESC/POS), `IGavetaDinheiro`, `IBalanca` (porta serial), `ITefService`; SQLite local para modo offline; instalador MSIX/WiX com Code Signing |
 
-### Aura Delivery
+### AM Rotara
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
@@ -30,7 +30,7 @@ status: completo
 | Tempo real | SignalR |
 | **Específico** | Consome `aura-analytics` (Google OR-Tools) para roteirização; apps de entregador/cliente (PWA vs. nativo — pendente) |
 
-### AuraWealth
+### AM Rendara
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
@@ -45,12 +45,12 @@ status: completo
 | Armazenamento de arquivo | Cloudflare R2 (laudo, imagem de exame) |
 | **Específico** | Consome `aura-vault` (prontuário clínico); consome `aura-licensing`; app do tutor em Next.js PWA (nativo pendente) |
 
-### AuraFix
+### AM Consertta
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
 | Banco | PostgreSQL |
-| **Específico** | Reaproveita motor de PDV/estoque do AuraPOS; consome `aura-logistics` (frete/rastreio); consome `aura-notifications` |
+| **Específico** | Reaproveita motor de PDV/estoque do AM Kaixara; consome `aura-logistics` (frete/rastreio); consome `aura-notifications` |
 
 ### Momentos/Cupido
 | Camada | Tecnologia |
@@ -62,31 +62,31 @@ status: completo
 ### Loja Virtual
 | Camada | Tecnologia |
 |---|---|
-| Backend | C#/.NET 10, ASP.NET Core Controllers (módulo do AuraPOS) |
-| **Específico** | Sem stack próprio — é extensão direta do AuraPOS; consome `aura-logistics` |
+| Backend | C#/.NET 10, ASP.NET Core Controllers (módulo do AM Kaixara) |
+| **Específico** | Sem stack próprio — é extensão direta do AM Kaixara; consome `aura-logistics` |
 
-### AuraCondo
+### AM Predara
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
 | Banco | PostgreSQL |
 | **Específico** | Agente local de portaria (protocolo a definir com fornecedor de hardware — interfone IP/RFID/fechadura eletrônica); votação eletrônica com log de auditoria imutável (candidato a integrar `aura-historico`) |
 
-### AuraObra
+### AM Canteira
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
 | Banco | PostgreSQL |
 | **Específico** | Consome `aura-vault` (documento contratual); integração de assinatura eletrônica (DocuSign/Clicksign/D4Sign — pendente); app de campo da equipe de obra com modo offline básico |
 
-### AuraEdu
+### AM Saberia
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
 | Banco | PostgreSQL |
 | **Específico** | Integração de videoaula síncrona (Zoom/Meet, ou solução própria — pendente); consome `aura-logistics` para material físico; consome `aura-licensing` para o canal B2B |
 
-### AuraAgenda
+### AM Horaria
 | Camada | Tecnologia |
 |---|---|
 | Backend | C#/.NET 10, ASP.NET Core Controllers |
@@ -101,10 +101,10 @@ status: completo
 C#/.NET 10, PostgreSQL. Integração com plataforma de cobrança recorrente (Stripe Billing/Vindi/Iugu/Asaas — pendente).
 
 ### `aura-goals`
-C#/.NET 10, PostgreSQL. Sem dependência externa nova — consumido via API por AuraWealth e Momentos/Cupido.
+C#/.NET 10, PostgreSQL. Sem dependência externa nova — consumido via API por AM Rendara e Momentos/Cupido.
 
 ### `aura-historico`
-**Clojure + Datomic** (fora do stack .NET). Consumido via Redis Streams (evento) por qualquer sistema, hoje principalmente AuraWealth.
+**Clojure + Datomic** (fora do stack .NET). Consumido via Redis Streams (evento) por qualquer sistema, hoje principalmente AM Rendara.
 
 ### `aura-analytics`
 **Python + FastAPI** (fora do stack .NET). Bibliotecas: **Prophet** ou **statsmodels** (previsão de demanda), **Google OR-Tools** (roteirização/VRP).
@@ -154,4 +154,4 @@ Bun, Hono, Rust, Tauri, gRPC — mantido em todos os 21 documentos, nenhuma exce
 ## 🔗 Documentos relacionados
 - [[stack-consolidada-estudo]] — a mesma stack, agora organizada por categoria pra estudo
 - [[revisao-stack-tecnologica]] — quais dessas tecnologias são realmente necessárias vs. adiáveis
-- [[aurapos-documento-projeto-final|AuraPOS]] — o sistema onde a maior parte dessa stack é usada primeiro
+- [[kaixara-documento-projeto-final|AM Kaixara]] — o sistema onde a maior parte dessa stack é usada primeiro

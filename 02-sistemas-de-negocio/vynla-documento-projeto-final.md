@@ -31,7 +31,7 @@ Plataforma que acompanha um casal do primeiro "sim" até os grandes marcos da vi
 ### 2.2 Cupido
 - Perfil privado por pessoa (planos de vida, valores, gostos), nunca exposto em bruto ao parceiro
 - Insights de compatibilidade gerados a partir dos dois perfis
-- Metas e planejamento do casal: cofrinho de metas compartilhadas, contribuição individual com privacidade opcional, sugestão de aporte mensal — via `aura-goals` (compartilhado com o AuraWealth)
+- Metas e planejamento do casal: cofrinho de metas compartilhadas, contribuição individual com privacidade opcional, sugestão de aporte mensal — via `aura-goals` (compartilhado com o AM Rendara)
 
 ### 2.3 Meu Círculo
 - Sistema de relacionamentos em 4 camadas, com isolamento técnico entre elas: notas privadas (nunca sai da camada estritamente privada), vínculos confirmados (exigem confirmação mútua, nunca unilaterais), árvore genealógica, preferências de presente declaradas pela própria pessoa
@@ -115,7 +115,7 @@ Plataforma que acompanha um casal do primeiro "sim" até os grandes marcos da vi
 
 | Categoria | Aplicação específica no Momentos/Cupido |
 |---|---|
-| Dados | Dado afetivo/relacional é categoria sensível por natureza — mesmo sem ser "dado bancário" como no AuraWealth, um vazamento aqui tem dano reputacional e emocional real para o usuário |
+| Dados | Dado afetivo/relacional é categoria sensível por natureza — mesmo sem ser "dado bancário" como no AM Rendara, um vazamento aqui tem dano reputacional e emocional real para o usuário |
 | Conteúdo público (RNFT-S06 aplicado a moderação) | Hash-matching contra PhotoDNA/StopNCII precisa estar ativo antes do Mural do Amor sair do MVP — não é opcional, é o que evita a plataforma virar veículo de conteúdo abusivo |
 | Conexão entre sistemas | `aura-goals` só conecta com consentimento mútuo explícito, credencial de escopo mínimo — mesmo padrão do resto do portfólio |
 | Se a plataforma avançar para mensageria entre desconhecidos | Isso exige uma fase própria de segurança (verificação de idade, denúncia, bloqueio, moderação dedicada) — não deve ser adicionado de forma incremental ao MVP; é decisão que merece projeto de segurança à parte, não um RF a mais |
@@ -127,7 +127,7 @@ Plataforma que acompanha um casal do primeiro "sim" até os grandes marcos da vi
 
 **Majoritariamente não aplicável** — SaaS puro, sem instalador. **Exceção: o cartão NFC físico (seção 2.6)**, que precisa de:
 - Fabricação e estoque do cartão (fornecedor a definir)
-- Logística de envio nacional — candidato direto a reaproveitar o **Módulo de Logística e Envios** já especificado no AuraFix, em vez de construir um fluxo de frete/rastreio próprio para este produto isolado
+- Logística de envio nacional — candidato direto a reaproveitar o **Módulo de Logística e Envios** já especificado no AM Consertta, em vez de construir um fluxo de frete/rastreio próprio para este produto isolado
 
 ---
 

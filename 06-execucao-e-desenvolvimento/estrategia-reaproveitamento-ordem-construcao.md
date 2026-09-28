@@ -16,13 +16,13 @@ status: completo
 - **Leitura errada:** codar os 21 sistemas em paralelo, literalmente. Impossível — você só consegue escrever código num lugar por vez.
 - **Leitura real, e é essa que este documento resolve:** construir uma **fundação reaproveitável de verdade** (não só "parecida"), de forma que o sistema #2 leve uma fração do tempo do #1, o #3 uma fração do #2, e por aí em diante. Isso é o que empresa de software de verdade chama de "plataforma interna" — e é inteiramente possível pra você, dado que 19 dos 21 sistemas já compartilham a mesma base técnica.
 
-O AuraPOS continua sendo o primeiro sistema a construir (nada muda no seu plano de estudo já existente) — o que muda é **o que fazer logo depois dele estar pronto**, antes de começar o segundo sistema.
+O AM Kaixara continua sendo o primeiro sistema a construir (nada muda no seu plano de estudo já existente) — o que muda é **o que fazer logo depois dele estar pronto**, antes de começar o segundo sistema.
 
 ---
 
 ## A etapa que ninguém pula sem querer, mas que é a mais importante: extração
 
-Isso é o ponto central deste documento. Enquanto você constrói o AuraPOS (Fases 0-6C do plano de estudo), a Clean Architecture, a autenticação JWT, o sistema de tokens de design — tudo isso nasce **dentro do AuraPOS**, específico dele. Reaproveitamento de verdade não acontece sozinho só porque o código é parecido — precisa de um passo deliberado de **extrair** essa base pra fora do AuraPOS, transformando-a em algo instalável/importável pelos próximos sistemas. Sem esse passo, "reaproveitar" vira "copiar e colar", que é exatamente o retrabalho que você está tentando evitar.
+Isso é o ponto central deste documento. Enquanto você constrói o AM Kaixara (Fases 0-6C do plano de estudo), a Clean Architecture, a autenticação JWT, o sistema de tokens de design — tudo isso nasce **dentro do AM Kaixara**, específico dele. Reaproveitamento de verdade não acontece sozinho só porque o código é parecido — precisa de um passo deliberado de **extrair** essa base pra fora do AM Kaixara, transformando-a em algo instalável/importável pelos próximos sistemas. Sem esse passo, "reaproveitar" vira "copiar e colar", que é exatamente o retrabalho que você está tentando evitar.
 
 **Esse passo de extração é trabalho novo, real, que precisa entrar no cronograma — não é grátis, mas se paga já no segundo sistema.**
 
@@ -34,11 +34,11 @@ Isso é o ponto central deste documento. Enquanto você constrói o AuraPOS (Fas
 
 | # | O que extrair/construir | De onde vem | Impacto |
 |---|---|---|---|
-| 1 | **Template de projeto** (`dotnet new` customizado) com Clean Architecture já configurada (Domain/Application/Infrastructure/Api), `tenant_id`+RLS já no esqueleto | AuraPOS, depois de pronto | Sistema novo nasce em minutos com a estrutura certa, não em dias montando pasta por pasta |
-| 2 | **`aura-identity`** funcionando de verdade (não só documentado) | Extraído do JWT do AuraPOS | Elimina reescrever autenticação nos outros 6 sistemas que ainda a implementam própria |
-| 3 | **Pacote interno de multi-tenancy** (biblioteca com o filtro global de `tenant_id`, convenção de RLS) | Extraído do AuraPOS | Isolamento correto "de graça" em todo sistema novo, sem reimplementar a regra |
-| 4 | **Pipeline de CI/CD reutilizável** (GitHub Actions composite action ou template de workflow) | Extraído do AuraPOS | Sistema novo herda build→teste→deploy funcionando, só troca o nome do projeto |
-| 5 | **Component library de frontend com o sistema de tokens (RNFT-D01-D07)** | Extraído da tela de PDV do AuraPOS | Todo painel/portal novo já nasce com a paleta e o contraste certos, sem reconstruir a base visual |
+| 1 | **Template de projeto** (`dotnet new` customizado) com Clean Architecture já configurada (Domain/Application/Infrastructure/Api), `tenant_id`+RLS já no esqueleto | AM Kaixara, depois de pronto | Sistema novo nasce em minutos com a estrutura certa, não em dias montando pasta por pasta |
+| 2 | **`aura-identity`** funcionando de verdade (não só documentado) | Extraído do JWT do AM Kaixara | Elimina reescrever autenticação nos outros 6 sistemas que ainda a implementam própria |
+| 3 | **Pacote interno de multi-tenancy** (biblioteca com o filtro global de `tenant_id`, convenção de RLS) | Extraído do AM Kaixara | Isolamento correto "de graça" em todo sistema novo, sem reimplementar a regra |
+| 4 | **Pipeline de CI/CD reutilizável** (GitHub Actions composite action ou template de workflow) | Extraído do AM Kaixara | Sistema novo herda build→teste→deploy funcionando, só troca o nome do projeto |
+| 5 | **Component library de frontend com o sistema de tokens (RNFT-D01-D07)** | Extraído da tela de PDV do AM Kaixara | Todo painel/portal novo já nasce com a paleta e o contraste certos, sem reconstruir a base visual |
 
 ### Tier 2 — Infraestrutura usada por metade ou mais dos sistemas
 
@@ -53,11 +53,11 @@ Isso é o ponto central deste documento. Enquanto você constrói o AuraPOS (Fas
 
 | # | Módulo | Reaproveitado por |
 |---|---|---|
-| 10 | Ordem de Serviço | AuraFix → AuraVet → AuraCondo (manutenção) → AuraObra (assistência pós-entrega) |
-| 11 | Motor de agendamento genérico | AuraVet → AuraEdu → AuraAgenda |
-| 12 | `aura-vault` | AuraWealth, AuraVet, AuraAgenda, AuraObra |
-| 13 | `aura-logistics` | AuraFix, Loja Virtual, AuraVet, Momentos/Cupido |
-| 14 | `aura-goals` | AuraWealth, Momentos/Cupido |
+| 10 | Ordem de Serviço | AM Consertta → AuraVet → AM Predara (manutenção) → AM Canteira (assistência pós-entrega) |
+| 11 | Motor de agendamento genérico | AuraVet → AM Saberia → AM Horaria |
+| 12 | `aura-vault` | AM Rendara, AuraVet, AM Horaria, AM Canteira |
+| 13 | `aura-logistics` | AM Consertta, Loja Virtual, AuraVet, Momentos/Cupido |
+| 14 | `aura-goals` | AM Rendara, Momentos/Cupido |
 
 ---
 
@@ -82,9 +82,9 @@ Você já tem isso descrito no `aura-licensing` (ativar módulo por `tenant_id`)
 
 ## Onde isso se encaixa no plano de estudo já existente
 
-Não é uma fase nova separada — é o que você faz **entre** o fim da Fase 6C (AuraPOS pronto, sênior) e o início do próximo sistema (Aura Delivery, Fase 5 do plano de estudo). Chame isso de:
+Não é uma fase nova separada — é o que você faz **entre** o fim da Fase 6C (AM Kaixara pronto, sênior) e o início do próximo sistema (AM Rotara, Fase 5 do plano de estudo). Chame isso de:
 
-**Fase 6D — Extração da plataforma interna (nova, 2-3 semanas, depois do AuraPOS em produção, antes do Aura Delivery começar)**
+**Fase 6D — Extração da plataforma interna (nova, 2-3 semanas, depois do AM Kaixara em produção, antes do AM Rotara começar)**
 
 Conteúdo: os 5 itens do Tier 1, priorizados nessa ordem. Não é opcional se o objetivo é "reduzir tempo de todos os sistemas" — é literalmente o mecanismo que produz essa redução. Pular essa fase significa que cada sistema novo vai continuar custando quase o mesmo tempo do anterior, porque nada foi de fato extraído pra reaproveitar.
 
@@ -92,8 +92,8 @@ Conteúdo: os 5 itens do Tier 1, priorizados nessa ordem. Não é opcional se o 
 
 ## O que isso muda na prática, com número honesto
 
-Sem essa extração, o Aura Delivery provavelmente custaria quase o mesmo tempo de estudo+desenvolvimento que o AuraPOS custou — porque você reescreveria autenticação, estrutura de projeto, multi-tenancy do zero, mesmo já sabendo fazer.
+Sem essa extração, o AM Rotara provavelmente custaria quase o mesmo tempo de estudo+desenvolvimento que o AM Kaixara custou — porque você reescreveria autenticação, estrutura de projeto, multi-tenancy do zero, mesmo já sabendo fazer.
 
-Com a extração feita, o Aura Delivery herda tudo isso pronto — o tempo dele fica concentrado só no que é genuinamente novo dele (PostGIS, roteirização, SignalR de pedido). O terceiro sistema (AuraWealth ou o que vier depois) herda ainda mais, porque a biblioteca de concorrência e o `aura-support` já existem também.
+Com a extração feita, o AM Rotara herda tudo isso pronto — o tempo dele fica concentrado só no que é genuinamente novo dele (PostGIS, roteirização, SignalR de pedido). O terceiro sistema (AM Rendara ou o que vier depois) herda ainda mais, porque a biblioteca de concorrência e o `aura-support` já existem também.
 
 **Isso é o que "desenvolver todos ao mesmo tempo" significa de verdade para quem trabalha sozinho: não é simultaneidade, é aceleração composta** — cada sistema deixando o próximo mais barato, não porque fica mais fácil, mas porque menos coisa precisa ser reconstruída.

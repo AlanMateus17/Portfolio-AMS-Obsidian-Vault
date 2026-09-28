@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AgileFlow — Documento de Projeto Final
+# AM Taskoro — Documento de Projeto Final
 ### 22º sistema do portfólio — plataforma de gestão de projeto (Kanban/Scrum/RAD), .NET com GraphQL híbrido
 
 ---
@@ -51,7 +51,7 @@ Plataforma de gerenciamento de projeto full-stack, suportando **Kanban, Scrum e 
 | RF07 | Sincronização em tempo real de mudança de card/quadro entre usuários conectados | Evita que dois membros editem o mesmo card com dado desatualizado na tela |
 | RF08 | Motor de automação de fluxo configurável sem código ("quando X, faça Y") | Reduz trabalho manual repetitivo (mover card, notificar, atribuir) sem exigir script |
 | RF09 | Integração com GitHub — PR vinculado a card, status refletido automaticamente | Elimina atualização manual de status quando o código já diz onde a tarefa está |
-| RF10 | Integração com Slack/Discord — notificação de evento do quadro | Leva a notificação pro canal que o time já usa, sem exigir que abram o AgileFlow toda hora |
+| RF10 | Integração com Slack/Discord — notificação de evento do quadro | Leva a notificação pro canal que o time já usa, sem exigir que abram o AM Taskoro toda hora |
 | RF11 | Embed de protótipo Figma dentro do card RAD | Centraliza a validação de design junto do card, sem alternar de ferramenta |
 | RF12 | Relatório de cycle time, lead time e velocity histórico | Dá ao Product Owner dado real de ritmo do time, não estimativa |
 | RF13 | API GraphQL com query granular por campo e subscription | Permite que o próprio cliente (ou integração futura) consuma só o dado que precisa, sem over-fetching |
@@ -73,7 +73,7 @@ Plataforma de gerenciamento de projeto full-stack, suportando **Kanban, Scrum e 
 
 ## 5. Requisitos Não Funcionais (RNF) — próprios e transversais
 
-| ID | Aplicação no AgileFlow | Para que serve |
+| ID | Aplicação no AM Taskoro | Para que serve |
 |---|---|---|
 | RNFT06 (LGPD) | Dado de membro (nome, e-mail) e conteúdo de card são dado pessoal/de negócio do cliente | Cumpre obrigação legal sobre dado de contato e conteúdo de trabalho |
 | RNFT07 (BOLA) | Toda query/mutation GraphQL que recebe ID de card/workspace deve validar que o usuário autenticado pertence àquele workspace | Impede que um membro de um workspace veja/edite card de outro só trocando o ID na query |
@@ -93,7 +93,7 @@ Plataforma de gerenciamento de projeto full-stack, suportando **Kanban, Scrum e 
 
 ## 7. Hardware, instalador e distribuição
 
-**Não aplicável.** AgileFlow é SaaS puro (backend + frontend web), sem componente físico e sem modelo de instalador executável. Distribuição comercial segue o padrão de pacotes + `aura-licensing`, como qualquer outro sistema do portfólio sem hardware.
+**Não aplicável.** AM Taskoro é SaaS puro (backend + frontend web), sem componente físico e sem modelo de instalador executável. Distribuição comercial segue o padrão de pacotes + `aura-licensing`, como qualquer outro sistema do portfólio sem hardware.
 
 ---
 
@@ -127,7 +127,7 @@ Padrão do portfólio, sem desvio: Docker multi-stage, GitHub Actions, deploy ge
 ---
 
 ## 🔗 Documentos relacionados
-- [[agileflow-decisao-stack-portfolio]] — a decisão de stack em detalhe, com o critério geral de quando aceitar desvio
+- [[taskoro-decisao-stack-portfolio]] — a decisão de stack em detalhe, com o critério geral de quando aceitar desvio
 - [[sequencia-mestra-completa-desde-o-inicio]] — onde este sistema entra na ordem real de estudo
 - [[revisao-stack-tecnologica]] — critério geral de desvio de stack, aplicado aqui
 - [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] — posição deste sistema na trilha de estudo

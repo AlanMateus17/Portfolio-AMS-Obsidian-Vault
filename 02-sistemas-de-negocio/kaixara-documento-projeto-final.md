@@ -4,17 +4,17 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraPOS — Documento de Projeto Final
+# AM Kaixara — Documento de Projeto Final
 
 > **Nota de correção:** a primeira versão deste documento estava incompleta. Ao cruzar com o histórico completo de planejamento, faltavam o bloco de hardware/emissão fiscal (seção 2.7), o modo offline (seção 2.8) e o roadmap de deploy (seção 8) — todos já decididos anteriormente, só não tinham entrado na consolidação. Corrigido abaixo.
 
-Este é o documento único de referência do AuraPOS: tudo que o sistema vai ter ao final do desenvolvimento, consolidado a partir de tudo que já foi decidido ao longo do planejamento (stack, arquitetura, RF/RNF, pacotes comerciais) mais o que mudou agora com a auditoria de escala e segurança financeira. Serve para você avaliar de uma vez só se é exatamente isso que você quer, em vez de garimpar em documentos espalhados.
+Este é o documento único de referência do AM Kaixara: tudo que o sistema vai ter ao final do desenvolvimento, consolidado a partir de tudo que já foi decidido ao longo do planejamento (stack, arquitetura, RF/RNF, pacotes comerciais) mais o que mudou agora com a auditoria de escala e segurança financeira. Serve para você avaliar de uma vez só se é exatamente isso que você quer, em vez de garimpar em documentos espalhados.
 
 ---
 
 ## 1. Visão do produto
 
-Sistema de PDV (ponto de venda) e gestão de estoque multi-tenant, para pequeno/médio varejo, com arquitetura pensada desde o início para venda modular (pacotes comerciais diferentes por porte de cliente) e para servir de motor de estoque/venda reaproveitado por outros sistemas do portfólio (Loja Virtual, AuraFix).
+Sistema de PDV (ponto de venda) e gestão de estoque multi-tenant, para pequeno/médio varejo, com arquitetura pensada desde o início para venda modular (pacotes comerciais diferentes por porte de cliente) e para servir de motor de estoque/venda reaproveitado por outros sistemas do portfólio (Loja Virtual, AM Consertta).
 
 ---
 
@@ -39,7 +39,7 @@ Sistema de PDV (ponto de venda) e gestão de estoque multi-tenant, para pequeno/
 
 ### 2.4 Estoque
 - Controle de quantidade por produto/filial
-- Reserva de estoque (`ReservedQuantity`/`ReservedUntil`) — mecanismo que também é reaproveitado pelo AuraFix na reserva de peça por Ordem de Serviço
+- Reserva de estoque (`ReservedQuantity`/`ReservedUntil`) — mecanismo que também é reaproveitado pelo AM Consertta na reserva de peça por Ordem de Serviço
 - Histórico de movimentação
 
 ### 2.5 Dashboard e relatórios
@@ -47,11 +47,11 @@ Sistema de PDV (ponto de venda) e gestão de estoque multi-tenant, para pequeno/
 - Visão consolidada multi-filial
 
 ### 2.6 Comercialização modular
-- Suporte a pacotes vendáveis parciais (ex: AuraPOS Starter, combinações com Delivery/AuraWealth) via `aura-licensing`
+- Suporte a pacotes vendáveis parciais (ex: AM Kaixara Starter, combinações com Delivery/AM Rendara) via `aura-licensing`
 - Interfaces trocáveis já definidas na arquitetura: `IFonteDeEstoque`, `IEmissorFiscal`, `IFonteDeMovimentacaoBancaria` — permitem trocar implementação (ex: emissor fiscal diferente por cliente) sem alterar o núcleo do sistema
 
 ### 2.7 Hardware de PDV e emissão fiscal — **bloco que faltava na primeira versão deste documento**
-Isso é o que uma nota sua de planejamento anterior descreve textualmente como "o que torna o AuraPOS realmente vendável" — sem isso, o sistema é só um cadastro de produto e venda, não um PDV de verdade para varejo físico.
+Isso é o que uma nota sua de planejamento anterior descreve textualmente como "o que torna o AM Kaixara realmente vendável" — sem isso, o sistema é só um cadastro de produto e venda, não um PDV de verdade para varejo físico.
 - **Agente local** (.NET, Windows Service ou app em background) expondo API HTTP em `localhost`, responsável por toda comunicação com hardware conectado ao caixa
 - **`IImpressoraFiscal`** — implementação ESC/POS para cupom não-fiscal
 - **`IGavetaDinheiro`** — abertura de gaveta via comando pela impressora
@@ -73,24 +73,24 @@ Isso é o que uma nota sua de planejamento anterior descreve textualmente como "
 
 ## 3. Requisitos Funcionais (RF)
 
-| ID | Requisito | Para que serve |
-|---|---|---|
-| RF01 | Login com JWT + BCrypt, isolado por `tenant_id` | Garante que cada lojista só acessa seus próprios dados, e que senha nunca fica em texto plano |
-| RF02 | Controle de acesso por papel (operador, gerente, admin) | Operador de caixa não deve conseguir alterar preço ou ver relatório consolidado — limita dano de erro humano ou uso indevido |
-| RF03 | CRUD de produto e categoria, com campos de controle (`TenantId`, `FilialId`, `ReservedQuantity`, `ReservedUntil`) | Base de dado para venda, estoque e reserva funcionarem de forma consistente entre filiais |
-| RF04 | Carrinho de venda com múltiplos meios de pagamento | Cobre o cenário real de PDV, onde o cliente pode pagar parte em dinheiro e parte em cartão |
-| RF05 | Abertura/fechamento de caixa com conferência física vs. esperado | Detecta divergência de caixa (falta ou sobra) no mesmo dia, não semanas depois numa auditoria |
-| RF06 | Cancelamento de venda com restauração automática de estoque | Evita que um cancelamento gere estoque fantasma (vendido no sistema, mas fisicamente ainda na loja) |
-| RF07 | Emissão de NFC-e com contingência offline | Obrigação fiscal — sem isso, o lojista não pode operar legalmente; contingência evita parar de vender quando a SEFAZ está fora do ar |
-| RF08 | Integração `ITefService` com adquirente de cartão | Permite pagamento com cartão direto no fluxo de venda, sem processo manual paralelo |
-| RF09 | Agente local com `IImpressoraFiscal`, `IGavetaDinheiro`, `IBalanca` | Sem isso o sistema não controla o hardware físico do caixa — é o que torna o AuraPOS um PDV de verdade, não só um cadastro |
-| RF10 | Modo offline com fila local (SQLite) e sincronização automática | Loja não pode parar de vender por causa de instabilidade de internet — resiliência mínima de 4h (RNF04) |
-| RF11 | Reserva de estoque (`ReservedQuantity`/`ReservedUntil`) | Permite que outro sistema (AuraFix) reserve peça sem vender de fato — pré-requisito para o reaproveitamento entre sistemas |
-| RF12 | Dashboard com indicador de venda, produto mais vendido, faturamento por período | Dá ao lojista visibilidade de negócio sem precisar exportar dado pra planilha |
-| RF13 | Ativação de módulo comercial via `aura-licensing` | Viabiliza vender pacote parcial (Starter, Standard) sem manter versões de código separadas por pacote |
-| RF14 | Histórico de movimentação de estoque (entrada, saída, ajuste) por produto/filial | Permite auditoria de "por que o estoque está diferente do esperado", essencial pra investigar divergência |
-| RF15 | Emissão de recibo de venda não-fiscal, com suporte a impressão via `IImpressoraFiscal` | Comprovante imediato pro cliente, independente do ciclo de emissão fiscal (NFC-e) |
-| RF16 | Integração opcional com `aura-historico` (registro imutável de evento) e `aura-analytics` (previsão de demanda) quando ativados pelo tenant | Sem RF explícito, a ativação condicional desses serviços fica sem contrato formal de comportamento esperado |
+| ID   | Requisito                                                                                                                                   | Para que serve                                                                                                                       |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| RF01 | Login com JWT + BCrypt, isolado por `tenant_id`                                                                                             | Garante que cada lojista só acessa seus próprios dados, e que senha nunca fica em texto plano                                        |
+| RF02 | Controle de acesso por papel (operador, gerente, admin)                                                                                     | Operador de caixa não deve conseguir alterar preço ou ver relatório consolidado — limita dano de erro humano ou uso indevido         |
+| RF03 | CRUD de produto e categoria, com campos de controle (`TenantId`, `FilialId`, `ReservedQuantity`, `ReservedUntil`)                           | Base de dado para venda, estoque e reserva funcionarem de forma consistente entre filiais                                            |
+| RF04 | Carrinho de venda com múltiplos meios de pagamento                                                                                          | Cobre o cenário real de PDV, onde o cliente pode pagar parte em dinheiro e parte em cartão                                           |
+| RF05 | Abertura/fechamento de caixa com conferência física vs. esperado                                                                            | Detecta divergência de caixa (falta ou sobra) no mesmo dia, não semanas depois numa auditoria                                        |
+| RF06 | Cancelamento de venda com restauração automática de estoque                                                                                 | Evita que um cancelamento gere estoque fantasma (vendido no sistema, mas fisicamente ainda na loja)                                  |
+| RF07 | Emissão de NFC-e com contingência offline                                                                                                   | Obrigação fiscal — sem isso, o lojista não pode operar legalmente; contingência evita parar de vender quando a SEFAZ está fora do ar |
+| RF08 | Integração `ITefService` com adquirente de cartão                                                                                           | Permite pagamento com cartão direto no fluxo de venda, sem processo manual paralelo                                                  |
+| RF09 | Agente local com `IImpressoraFiscal`, `IGavetaDinheiro`, `IBalanca`                                                                         | Sem isso o sistema não controla o hardware físico do caixa — é o que torna o AM Kaixara um PDV de verdade, não só um cadastro           |
+| RF10 | Modo offline com fila local (SQLite) e sincronização automática                                                                             | Loja não pode parar de vender por causa de instabilidade de internet — resiliência mínima de 4h (RNF04)                              |
+| RF11 | Reserva de estoque (`ReservedQuantity`/`ReservedUntil`)                                                                                     | Permite que outro sistema (AM Consertta) reserve peça sem vender de fato — pré-requisito para o reaproveitamento entre sistemas           |
+| RF12 | Dashboard com indicador de venda, produto mais vendido, faturamento por período                                                             | Dá ao lojista visibilidade de negócio sem precisar exportar dado pra planilha                                                        |
+| RF13 | Ativação de módulo comercial via `aura-licensing`                                                                                           | Viabiliza vender pacote parcial (Starter, Standard) sem manter versões de código separadas por pacote                                |
+| RF14 | Histórico de movimentação de estoque (entrada, saída, ajuste) por produto/filial                                                            | Permite auditoria de "por que o estoque está diferente do esperado", essencial pra investigar divergência                            |
+| RF15 | Emissão de recibo de venda não-fiscal, com suporte a impressão via `IImpressoraFiscal`                                                      | Comprovante imediato pro cliente, independente do ciclo de emissão fiscal (NFC-e)                                                    |
+| RF16 | Integração opcional com `aura-historico` (registro imutável de evento) e `aura-analytics` (previsão de demanda) quando ativados pelo tenant | Sem RF explícito, a ativação condicional desses serviços fica sem contrato formal de comportamento esperado                          |
 
 ---
 
@@ -109,18 +109,18 @@ Isso é o que uma nota sua de planejamento anterior descreve textualmente como "
 ### 4.3 Suporte técnico interno (você/futuro time do Grupo AMtech)
 - **Cadastro:** não se aplica — é você mesmo, com acesso administrativo elevado
 - **Uso:** precisa de um painel/acesso que permita ver o estado de qualquer tenant (sem ver dado sensível de venda além do necessário para diagnosticar problema), reprocessar uma sincronização travada, verificar status de licença
-- **Lacuna real:** este painel de suporte interno **não existe em nenhum documento do AuraPOS até agora** — mesmo ponto cego identificado no Aura Delivery, mas ainda não corrigido aqui. Sem ele, um problema relatado por um lojista só pode ser investigado direto no banco de dados, o que não escala além de poucos clientes.
+- **Lacuna real:** este painel de suporte interno **não existe em nenhum documento do AM Kaixara até agora** — mesmo ponto cego identificado no AM Rotara, mas ainda não corrigido aqui. Sem ele, um problema relatado por um lojista só pode ser investigado direto no banco de dados, o que não escala além de poucos clientes.
 
 ---
 
 ## 5. Requisitos Não Funcionais — próprios + transversais
 
-Além dos RNF específicos já definidos no documento `requisitos-funcionais-e-nao-funcionais.md` do ecossistema, o AuraPOS agora referencia formalmente os seguintes itens do documento **RNF Transversais — Escala e Segurança Financeira**:
+Além dos RNF específicos já definidos no documento `requisitos-funcionais-e-nao-funcionais.md` do ecossistema, o AM Kaixara agora referencia formalmente os seguintes itens do documento **RNF Transversais — Escala e Segurança Financeira**:
 
-| ID transversal | Aplicação no AuraPOS | Para que serve |
+| ID transversal | Aplicação no AM Kaixara | Para que serve |
 |---|---|---|
 | RNFT-E01 | Controle de concorrência na baixa de estoque durante a venda — **ver seção 10, é o item com maior impacto no código já escrito** | Impede que dois canais vendam a última unidade do mesmo produto ao mesmo tempo |
-| RNFT-E02 | Idempotência em qualquer integração futura de pagamento via gateway online (hoje o PDV é presencial/manual; passa a valer no momento em que o AuraPOS aceitar pagamento processado por webhook) | Evita cobrança duplicada se o gateway reenviar a mesma confirmação de pagamento |
+| RNFT-E02 | Idempotência em qualquer integração futura de pagamento via gateway online (hoje o PDV é presencial/manual; passa a valer no momento em que o AM Kaixara aceitar pagamento processado por webhook) | Evita cobrança duplicada se o gateway reenviar a mesma confirmação de pagamento |
 | RNFT-E03 | Fila para desacoplar confirmação de venda de emissão fiscal/notificação | Impede que uma falha na emissão fiscal trave a confirmação da venda ao cliente |
 | RNFT-E04 | Índice composto por `tenant_id` nas tabelas de maior volume (produto, venda) | Evita que a consulta de um tenant fique lenta por causa do volume de dado de outro tenant |
 | RNFT-E05 | Log estruturado de operação financeira + alerta de divergência | Permite descobrir um problema financeiro antes do lojista reclamar, não depois |
@@ -132,7 +132,7 @@ Além dos RNF específicos já definidos no documento `requisitos-funcionais-e-n
 
 Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]]) a este sistema:
 
-| Categoria | Aplicação específica no AuraPOS |
+| Categoria | Aplicação específica no AM Kaixara |
 |---|---|
 | Instalador/agente local (RNFT-S01) | O agente local que fala com hardware (impressora, gaveta, balança, TEF) é a maior superfície de ataque física do sistema — precisa rodar com menor privilégio possível, nunca exigir admin além do estritamente necessário |
 | Licenciamento (RNFT-S02) | Ativação online com tolerância offline de pelo menos 7 dias — nunca travar o caixa por falha de verificação de licença no meio do expediente |
@@ -145,11 +145,11 @@ Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]
 
 ## 7. Hardware, instalador e distribuição
 
-O AuraPOS é o sistema piloto da distribuição híbrida do portfólio (SaaS + instalador executável), detalhada no documento [[distribuicao-licenciamento-seguranca]]. Resumo aplicado aqui:
+O AM Kaixara é o sistema piloto da distribuição híbrida do portfólio (SaaS + instalador executável), detalhada no documento [[distribuicao-licenciamento-seguranca]]. Resumo aplicado aqui:
 - Empacotamento como instalador Windows (MSIX ou WiX — decisão pendente, ver seção 11), contendo o agente local (2.7) já assinado digitalmente (Code Signing/Authenticode)
 - Ativação de licença online na instalação, vinculada ao `tenant_id`, com tolerância offline
 - Painel de configuração pós-compra (web) provisionando o tenant antes mesmo do instalador rodar localmente pela primeira vez
-- Conexão com outros sistemas do portfólio comprados pelo mesmo cliente (ex: AuraWealth) via consentimento explícito e credencial de escopo limitado
+- Conexão com outros sistemas do portfólio comprados pelo mesmo cliente (ex: AM Rendara) via consentimento explícito e credencial de escopo limitado
 
 ---
 
@@ -171,7 +171,7 @@ O AuraPOS é o sistema piloto da distribuição híbrida do portfólio (SaaS + i
 
 ## 10. Status atual de desenvolvimento — o que mudou e o que isso afeta no que já foi desenvolvido
 
-Isso é o que você pediu para deixar mais claro. O AuraPOS é o único sistema do portfólio com código já em produção-alvo (Sprint 3-4), então é o único onde "o que mudou" tem custo real de retrofit, não só de planejamento.
+Isso é o que você pediu para deixar mais claro. O AM Kaixara é o único sistema do portfólio com código já em produção-alvo (Sprint 3-4), então é o único onde "o que mudou" tem custo real de retrofit, não só de planejamento.
 
 ### 10.1 O que mudou
 A auditoria de escala e segurança financeira identificou que o controle de concorrência em operação de estoque (RNFT-E01) não estava formalizado como requisito em nenhum documento até agora — inclusive no que já foi desenvolvido.
@@ -183,7 +183,7 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 - **O que NÃO muda**: autenticação/JWT em andamento não é afetada por este ponto — pode continuar a implementação atual do Sprint 3-4 normalmente. A auditoria só afeta a camada de estoque/venda, não a de autenticação.
 
 ### 10.3 O que fica como recomendação futura, sem ação imediata no código atual
-- RNFT-E02 (idempotência de pagamento) só passa a exigir mudança de código quando o AuraPOS integrar um gateway de pagamento online — o PDV presencial atual não está exposto a esse risco do mesmo jeito.
+- RNFT-E02 (idempotência de pagamento) só passa a exigir mudança de código quando o AM Kaixara integrar um gateway de pagamento online — o PDV presencial atual não está exposto a esse risco do mesmo jeito.
 - RNFT-E03, E05, E06 são aditivos (fila, log, reconciliação) — não exigem alterar lógica já escrita, só adicionar camada por cima, quando o volume justificar.
 - RNFT-E04 (índice por `tenant_id`) vale uma verificação rápida no schema atual, mas não é uma mudança estrutural se os índices já foram pensados com `tenant_id` desde o início (como o padrão do ecossistema sugere que foram).
 
@@ -197,10 +197,10 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 ---
 
 ## 🔗 Documentos relacionados
-- [[aurapos-especificacao-tecnica-completa]] — schema, contrato de API, fluxos de sequência e threat model
-- [[aurapos-frontend-documento-unico]] — plano de frontend completo, do Discovery à Engenharia
+- [[kaixara-especificacao-tecnica-completa]] — schema, contrato de API, fluxos de sequência e threat model
+- [[kaixara-frontend-documento-unico]] — plano de frontend completo, do Discovery à Engenharia
 - [[stack-tecnologica-por-sistema]] — detalhamento da stack usada neste sistema
-- [[passo-a-passo-mestre-desde-o-inicio]] — a sequência de construção que usa o AuraPOS como base
+- [[passo-a-passo-mestre-desde-o-inicio]] — a sequência de construção que usa o AM Kaixara como base
 
 ---
 
@@ -210,6 +210,6 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 2. **MSIX vs. WiX Toolset** para o instalador — ambos válidos, falta decidir.
 3. **Gateway fiscal terceirizado vs. implementação própria de comunicação com a SEFAZ** — decisão de negócio/custo que trava o início do módulo de NFC-e (seção 2.7).
 4. **Adquirente de cartão (TEF)** — implementação de `ITefService` depende de qual adquirente for escolhido.
-5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado (ver [[aura-support-documento-projeto-final]]), com painel de reprocessamento e correção manual para qualquer tenant do AuraPOS.
+5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado (ver [[aura-support-documento-projeto-final]]), com painel de reprocessamento e correção manual para qualquer tenant do AM Kaixara.
 6. **Canal formal de suporte ao lojista** (seção 4.2) — WhatsApp Business, ticket ou e-mail; hoje não está formalizado em nenhum RF.
 7. **Certificado de assinatura de código** — precisa ser adquirido de uma autoridade reconhecida antes do primeiro instalador público.

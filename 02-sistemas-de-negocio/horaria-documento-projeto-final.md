@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraAgenda — Documento de Projeto Final (Nome provisório)
+# AM Horaria — Documento de Projeto Final (Nome provisório)
 ### Sistema de Agendamento Genérico para Serviço Pessoal (salão, clínica, academia, psicólogo)
 
 Segue a estrutura fixa do [[template-documento-projeto-final]].
@@ -39,7 +39,7 @@ Motor genérico de agendamento + histórico de cliente + venda de produto + assi
 
 ### 2.5 Multi-profissional e comissionamento
 - Suporte a estabelecimento com múltiplos profissionais, cada um com agenda própria
-- Comissionamento por profissional/serviço — mesmo padrão do AuraFix
+- Comissionamento por profissional/serviço — mesmo padrão do AM Consertta
 
 ### 2.6 Portal do cliente
 - Agendamento, histórico de sessão (exceto conteúdo sigiloso de prontuário psicológico, que segue regra própria), compra de pacote/produto
@@ -87,9 +87,9 @@ Motor genérico de agendamento + histórico de cliente + venda de produto + assi
 
 ## 5. Requisitos Não Funcionais (RNF) — próprios + transversais
 
-| ID | Aplicação no AuraAgenda | Para que serve |
+| ID | Aplicação no AM Horaria | Para que serve |
 |---|---|---|
-| RNFT-E01 (concorrência) | Agendamento não pode aceitar dois clientes no mesmo horário/profissional simultaneamente | Mesmo princípio já aplicado a estoque e a reserva de área comum do AuraCondo |
+| RNFT-E01 (concorrência) | Agendamento não pode aceitar dois clientes no mesmo horário/profissional simultaneamente | Mesmo princípio já aplicado a estoque e a reserva de área comum do AM Predara |
 | RNFT-E02 (idempotência de pagamento) | Cobrança de assinatura e de pacote de sessão | Evita cobrança duplicada em reenvio de webhook |
 | RNFT06 (LGPD) | Dado de saúde/estética é categoria sensível | Cumpre obrigação legal geral |
 | **Sigilo profissional psicológico (próprio, mais rígido que o RNFT06 geral)** | Prontuário psicológico deve ser tecnicamente isolado — nem o administrador do sistema, nem outro profissional do estabelecimento, nem o suporte técnico têm acesso ao conteúdo, só o psicólogo responsável | É a exigência mais rígida de todo o portfólio em termos de isolamento de dado — mais restrita até que o prontuário veterinário do AuraVet, porque aqui a lei protege sigilo entre profissional e paciente mesmo dentro da própria instituição |
@@ -99,7 +99,7 @@ Motor genérico de agendamento + histórico de cliente + venda de produto + assi
 
 ## 6. Segurança de nível profissional
 
-| Categoria | Aplicação específica no AuraAgenda |
+| Categoria | Aplicação específica no AM Horaria |
 |---|---|
 | Isolamento de prontuário psicológico | **É o requisito de segurança mais importante deste sistema.** Tecnicamente, o prontuário psicológico precisa estar numa camada de acesso separada até do próprio administrador do estabelecimento — diferente de qualquer outro dado do portfólio, onde o dono do negócio normalmente tem visão completa. **RESOLVIDO/atualizado:** implementado via `aura-vault`, que já formaliza exatamente essa restrição (RF07 daquele documento: impede até o `aura-support` de acessar conteúdo protegido por categoria restrita) |
 | Dados | Ficha de anamnese/treino é sensível, mas de nível de proteção padrão (RNFT06); prontuário psicológico exige camada adicional (acima) |
@@ -140,6 +140,6 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 ## 11. Pendências e decisões em aberto
 
 1. **Arquitetura de segregação do módulo de psicologia** (seção 8) — em grande parte RESOLVIDO pelo `aura-vault` (controle de acesso reforçado por categoria de dado, RF03 daquele documento); resta só decidir se ainda vale segregação física de schema além do que o `aura-vault` já garante, ou se é redundante.
-2. **Validação por psicólogo ou consultor jurídico especializado em ética profissional** antes de tratar o RF05/RF06 como pronto para produção — mesmo padrão de cautela já aplicado ao AuraObra (advogado) e sugerido ao AuraEdu (gestão educacional).
+2. **Validação por psicólogo ou consultor jurídico especializado em ética profissional** antes de tratar o RF05/RF06 como pronto para produção — mesmo padrão de cautela já aplicado ao AM Canteira (advogado) e sugerido ao AM Saberia (gestão educacional).
 3. **Nome comercial por vertical** (seção 9) — decisão de marketing, não técnica, mas relevante para a estratégia de venda segmentada.
 4. **Provedor de gateway de pagamento** — mesma pendência transversal do restante do portfólio.

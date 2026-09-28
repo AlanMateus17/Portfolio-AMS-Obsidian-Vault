@@ -17,7 +17,7 @@ Siga os **Passos 1 a 10** do `passo-a-passo-mestre-desde-o-inicio` — lógica, 
 
 ---
 
-## Fase 1 — Escopo de funcionalidade do AuraPOS pra vitrine (não é o AuraPOS "100% completo")
+## Fase 1 — Escopo de funcionalidade do AM Kaixara pra vitrine (não é o AM Kaixara "100% completo")
 
 ### Tier 1 — Essencial, sem isso o portfólio não está pronto
 
@@ -64,7 +64,7 @@ Emissão fiscal real (NFC-e/SEFAZ), integração TEF com adquirente real, agente
 
 Diferente da estratégia de "empresa" (organização separada, já planejada em `[[github-estrutura-profissional-autoridade]]`), pra busca de vaga o que mais pesa é o **seu perfil pessoal**:
 
-1. **Fixe o repositório do AuraPOS** no topo do seu perfil pessoal (mesmo que o código "de verdade" esteja também replicado na organização)
+1. **Fixe o repositório do AM Kaixara** no topo do seu perfil pessoal (mesmo que o código "de verdade" esteja também replicado na organização)
 2. **Profile README** — quem você é, o que estuda, link pro projeto principal, contato
 3. **Consistência de commit visível** (o "gráfico verde") — recrutador técnico olha isso como sinal de disciplina, mesmo sabendo que não é métrica perfeita
 4. Repositório com nome claro, descrição preenchida, tópicos/tags corretos (`dotnet`, `csharp`, `postgresql`, `clean-architecture`)
@@ -76,7 +76,7 @@ Diferente da estratégia de "empresa" (organização separada, já planejada em 
 1. **Treinar explicar o projeto em 2 minutos**, sem gaguejar — grave você mesmo falando e reescute
 2. **Método STAR** pra pergunta comportamental ("me conte uma vez que você resolveu um problema difícil") — já detalhado em `[[perfil-senior-completo-auditoria]]`
 3. **LinkedIn atualizado**, com o mesmo projeto em destaque, e headline clara ("Desenvolvedor Full Stack Júnior | C#/.NET, TypeScript/Next.js")
-4. **Currículo de uma página**, projeto do AuraPOS com link, sem enumerar os outros 20 sistemas do portfólio de negócio — mesma lógica de foco já discutida
+4. **Currículo de uma página**, projeto do AM Kaixara com link, sem enumerar os outros 20 sistemas do portfólio de negócio — mesma lógica de foco já discutida
 5. Inglês básico de entrevista, se for aplicar em vaga remota internacional — ver `[[ingles-espanhol-integrado]]`, nível B1-B2 já é suficiente pra maioria das entrevistas júnior
 
 ---
@@ -105,4 +105,4 @@ Fase 4 (prontidão de entrevista, antes da primeira entrevista real acontecer)
 
 ## O que isso não muda
 
-O `passo-a-passo-mestre-desde-o-inicio` e os 21 sistemas do portfólio de negócio continuam existindo, no seu ritmo — este documento é uma lente de foco temporária em cima do mesmo AuraPOS, não um substituto do plano maior.
+O `passo-a-passo-mestre-desde-o-inicio` e os 21 sistemas do portfólio de negócio continuam existindo, no seu ritmo — este documento é uma lente de foco temporária em cima do mesmo AM Kaixara, não um substituto do plano maior.

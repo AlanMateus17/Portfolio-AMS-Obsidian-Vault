@@ -14,7 +14,7 @@ Segue a estrutura fixa do [[template-documento-projeto-final]]. Segundo dos 4 se
 
 Serviço central de notificação (WhatsApp Business API, push, e-mail, SMS), consumido por todos os sistemas que precisam avisar o cliente de algo — status de pedido, lembrete de consulta, boleto, aviso de assembleia. Hoje implementado separadamente em pelo menos 5 sistemas, cada um pagando e configurando sua própria integração.
 
-**Diferencial de inovação:** além de eliminar duplicação, um serviço central de notificação abre uma possibilidade que nenhum sistema isolado tem — throttling e priorização inteligente por cliente (evitar que um mesmo morador do AuraCondo receba 5 notificações separadas de 5 sistemas diferentes no mesmo minuto, se algum dia ele for cliente de mais de um produto Aura).
+**Diferencial de inovação:** além de eliminar duplicação, um serviço central de notificação abre uma possibilidade que nenhum sistema isolado tem — throttling e priorização inteligente por cliente (evitar que um mesmo morador do AM Predara receba 5 notificações separadas de 5 sistemas diferentes no mesmo minuto, se algum dia ele for cliente de mais de um produto Aura).
 
 ---
 

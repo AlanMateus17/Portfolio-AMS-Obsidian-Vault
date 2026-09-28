@@ -142,7 +142,7 @@ Pra cada tecnologia/conceito, 1-3 recursos **verificados**, não uma lista gené
 
 ---
 
-## Bloco 21B — AgileFlow (GraphQL via HotChocolate — dentro do .NET, não stack separada)
+## Bloco 21B — AM Taskoro (GraphQL via HotChocolate — dentro do .NET, não stack separada)
 
 | Tópico | Recurso | Tipo |
 |---|---|---|

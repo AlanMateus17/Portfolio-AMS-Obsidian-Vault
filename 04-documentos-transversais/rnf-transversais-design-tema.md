@@ -13,7 +13,7 @@ Segue o mesmo princípio dos outros RNF Transversais: não pertence a nenhum sis
 
 ## 0. Paleta padrão Aura (base, usada em todo painel administrativo)
 
-**Atualização: valores exatos, corrigindo a lacuna encontrada na auditoria do frontend do AuraPOS.** Antes desta correção, a paleta existia só como descrição ("azul petróleo", "dourado") — nenhum documento tinha o valor hexadecimal definitivo, o que significava que cada tela nova corria o risco de usar um tom levemente diferente do anterior.
+**Atualização: valores exatos, corrigindo a lacuna encontrada na auditoria do frontend do AM Kaixara.** Antes desta correção, a paleta existia só como descrição ("azul petróleo", "dourado") — nenhum documento tinha o valor hexadecimal definitivo, o que significava que cada tela nova corria o risco de usar um tom levemente diferente do anterior.
 
 | Token | Valor hex | Uso |
 |---|---|---|
@@ -27,13 +27,13 @@ Segue o mesmo princípio dos outros RNF Transversais: não pertence a nenhum sis
 | `--aura-alerta` | `#C99A3E` | Semântica, fixa |
 | `--aura-info` | `#3B6FA0` | Semântica, fixa |
 
-Esta é a paleta padrão de todo painel administrativo — construída uma vez, reaproveitada em todos os sistemas. Sistemas com identidade de sub-marca própria (ex: Momentos/Cupido em bordô/dourado, AuraWealth em verde-esmeralda/dourado) substituem `--aura-primaria` pela cor própria, mas mantêm a mesma estrutura de token — nunca inventam um nome de variável novo.
+Esta é a paleta padrão de todo painel administrativo — construída uma vez, reaproveitada em todos os sistemas. Sistemas com identidade de sub-marca própria (ex: Momentos/Cupido em bordô/dourado, AM Rendara em verde-esmeralda/dourado) substituem `--aura-primaria` pela cor própria, mas mantêm a mesma estrutura de token — nunca inventam um nome de variável novo.
 
 ---
 
 ## 0.1 Valores transversais de elevação, z-index e animação — correção: nunca existiam
 
-Aplicam-se a todo sistema do portfólio, não só ao AuraPOS:
+Aplicam-se a todo sistema do portfólio, não só ao AM Kaixara:
 
 | Categoria | Token | Valor |
 |---|---|---|
@@ -50,7 +50,7 @@ Aplicam-se a todo sistema do portfólio, não só ao AuraPOS:
 
 ## 0.2 Cor de estado dinâmico — correção: nunca existia, aplicável a todo sistema com dashboard ou entidade com ciclo de vida
 
-Diferente da paleta estática (seção 0), esta cobre elemento que muda de estado em tempo real — necessário em qualquer sistema do portfólio com gráfico, badge de status ou indicador de conexão, não só o AuraPOS.
+Diferente da paleta estática (seção 0), esta cobre elemento que muda de estado em tempo real — necessário em qualquer sistema do portfólio com gráfico, badge de status ou indicador de conexão, não só o AM Kaixara.
 
 | Categoria | Token | Valor |
 |---|---|---|
@@ -63,7 +63,7 @@ Diferente da paleta estática (seção 0), esta cobre elemento que muda de estad
 | Conexão online/offline | `--conexao-online` / `--conexao-offline` | `#2E7D5B` / `#C99A3E` |
 | Skeleton loading | `--skeleton-base` / `--skeleton-shimmer` | `#EEECE5` / gradiente animado |
 
-Todo sistema com dashboard (AuraWealth, AuraVet, AuraCondo, AuraFix) usa **exatamente** essa paleta de visualização de dado, na mesma ordem de série — nunca inventa cor nova pra gráfico próprio.
+Todo sistema com dashboard (AM Rendara, AuraVet, AM Predara, AM Consertta) usa **exatamente** essa paleta de visualização de dado, na mesma ordem de série — nunca inventa cor nova pra gráfico próprio.
 
 ---
 
@@ -95,7 +95,7 @@ Todo sistema com dashboard (AuraWealth, AuraVet, AuraCondo, AuraFix) usa **exata
 
 **Critério de verificação:** logar como lojista/síndico/veterinária no painel administrativo deve mostrar sempre a mesma paleta Aura, independente do tenant; acessar a loja online/portal público do mesmo tenant pode mostrar cor de marca diferente.
 
-**Aplica-se a:** todo sistema com mais de um tipo de superfície (admin vs. público). Sistemas sem superfície pública (AuraWealth, painéis internos de serviço compartilhado) usam só a paleta padrão, sem exceção nem necessidade de suporte a tema.
+**Aplica-se a:** todo sistema com mais de um tipo de superfície (admin vs. público). Sistemas sem superfície pública (AM Rendara, painéis internos de serviço compartilhado) usam só a paleta padrão, sem exceção nem necessidade de suporte a tema.
 
 ---
 
@@ -162,15 +162,15 @@ Qualquer sistema que seguir essa nomenclatura de variável herda automaticamente
 
 | Sistema | Painel admin (sempre padrão Aura) | Superfície pública themeable |
 |---|---|---|
-| AuraPOS | Sim | Loja online (quando ativa) |
-| Aura Delivery | Sim | Não — app do cliente final reflete a marca do Delivery em si, não do lojista, mesma lógica de mercado do iFood |
-| AuraWealth | Sim | Não tem superfície pública — só a paleta padrão se aplica |
+| AM Kaixara | Sim | Loja online (quando ativa) |
+| AM Rotara | Sim | Não — app do cliente final reflete a marca do Delivery em si, não do lojista, mesma lógica de mercado do iFood |
+| AM Rendara | Sim | Não tem superfície pública — só a paleta padrão se aplica |
 | AuraVet | Sim | Portal do tutor, página pública de agendamento |
-| AuraFix | Sim | Loja online (reaproveitada da Loja Virtual) |
+| AM Consertta | Sim | Loja online (reaproveitada da Loja Virtual) |
 | Momentos/Cupido | Não se aplica no sentido tradicional | Site da Vida a Dois, Mural do Amor — aqui quem personaliza é o casal, não uma empresa |
 | Loja Virtual | Sim (painel do lojista) | Catálogo/checkout público |
-| AuraCondo | Sim | Portal do morador |
-| AuraObra | Sim | Portal do cliente comprador |
+| AM Predara | Sim | Portal do morador |
+| AM Canteira | Sim | Portal do cliente comprador |
 | `aura-licensing`, `aura-goals`, `aura-historico`, `aura-analytics`, `aura-copilot` | Sem interface própria hoje — se algum vier a ter painel próprio no futuro, segue a paleta padrão Aura sem exceção | Não aplicável |
 
 ---

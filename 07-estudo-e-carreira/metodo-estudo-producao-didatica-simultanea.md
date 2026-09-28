@@ -65,7 +65,7 @@ Isso não é "parecido" com a tabela-verdade — é a mesma tabela-verdade, com 
 *Exercício:* escreva um `if` que só libera a compra se o cliente tiver mais de 18 anos E tiver saldo suficiente.
 
 **3. Por que isso importa de verdade**
-Todo sistema de venda — inclusive o AuraPOS, que estamos construindo de verdade — decide, centenas de vezes por dia, se libera ou não uma venda, usando exatamente essa lógica.
+Todo sistema de venda — inclusive o AM Kaixara, que estamos construindo de verdade — decide, centenas de vezes por dia, se libera ou não uma venda, usando exatamente essa lógica.
 
 **4. Conexão com o próximo tópico**
 A próxima ficha mostra o "OU" (disjunção) — e por que ele se comporta diferente do "E" na hora de decidir.
@@ -91,7 +91,7 @@ PERGUNTA QUE ISSO RESPONDE: a pergunta de entrevista que este registro cobre
 
 **TÍTULO:** Decisão de usar `&&` com curto-circuito na validação de venda
 
-**CONTEXTO:** AuraPOS precisava impedir venda com estoque zerado ou cliente inativo, sem consultar o banco duas vezes.
+**CONTEXTO:** AM Kaixara precisava impedir venda com estoque zerado ou cliente inativo, sem consultar o banco duas vezes.
 
 **DECISÃO:** Usei `&&` (curto-circuito), não `&`, e coloquei a condição mais barata (`clienteAtivo`, já em memória) antes da mais cara (`estoque > 0`, exige consulta) — considerei validar em duas etapas separadas, descartei porque duplicava a mensagem de erro sem ganho real.
 
@@ -125,14 +125,14 @@ O [[passo-a-passo-mestre-desde-o-inicio]] e o [[EPIC-01-backlog-passo1-fundament
 | Passo 9 (PostGIS + Geometria Analítica) | Ficha de distância entre pontos ↔ `ST_Distance`, vetor ↔ geolocalização |
 | Passo 13+ (Python/OR-Tools + Combinatória) | Ficha de combinatória ↔ roteirização de entrega |
 
-Ao final da Fase 6C do plano mestre (AuraPOS pronto e sênior), você não só tem um sistema em produção — **já tem uma unidade didática inteira de "Matemática Aplicada à Programação"**, testada em você mesmo antes de testar nos alunos.
+Ao final da Fase 6C do plano mestre (AM Kaixara pronto e sênior), você não só tem um sistema em produção — **já tem uma unidade didática inteira de "Matemática Aplicada à Programação"**, testada em você mesmo antes de testar nos alunos.
 
 ---
 
 ## Onde isso se conecta com o que você já construiu
 
-- **AuraEdu (RF10 — biblioteca de material didático com conteúdo pré-carregado):** as fichas duplas são candidatas diretas a virar o conteúdo inicial desse sistema, exatamente como as 180 apostilas do EMTI já entraram na visão do produto
-- **Frente de Educação (plano mestre):** essas fichas são produto vendável — curso de "matemática aplicada à programação" pra outras escolas/professores, reaproveitando o canal B2B que já está no documento do AuraEdu (RF13)
+- **AM Saberia (RF10 — biblioteca de material didático com conteúdo pré-carregado):** as fichas duplas são candidatas diretas a virar o conteúdo inicial desse sistema, exatamente como as 180 apostilas do EMTI já entraram na visão do produto
+- **Frente de Educação (plano mestre):** essas fichas são produto vendável — curso de "matemática aplicada à programação" pra outras escolas/professores, reaproveitando o canal B2B que já está no documento do AM Saberia (RF13)
 - **Workflow de apostila já existente:** você já tem o processo de gerar `.docx` formatado (Word, cabeçalho laranja/azul, Consolas pra código) — as fichas duplas encaixam nesse mesmo pipeline sem inventar ferramenta nova
 
 ---
@@ -157,5 +157,5 @@ Quer que eu monte agora o template de ficha dupla como documento `.docx` reaprov
 - [[00-catalogo-progresso]] — onde cada par (Ficha Dupla + Registro de Entrevista) fica indexado
 - [[EPIC-01-backlog-passo1-fundamentos]] — onde a primeira ficha dupla nasce, User Story por User Story
 - [[matematica-e-desenvolvimento-integrado]] — a fonte dos tópicos de matemática que viram ficha
-- [[auraedu-documento-projeto-final|AuraEdu]] — o sistema que um dia hospeda essas fichas como conteúdo (RF10)
+- [[saberia-documento-projeto-final|AM Saberia]] — o sistema que um dia hospeda essas fichas como conteúdo (RF10)
 - [[perfil-senior-completo-auditoria]] — o que a entrevista real cobra, pra calibrar o Registro de Entrevista

@@ -108,7 +108,7 @@ API1 BOLA, API2 Broken Authentication, API3 Broken Object Property Level Auth, A
 Técnicas específicas: Mass Assignment, Parameter Pollution, GraphQL introspection/batching/field suggestions, Verb tampering, Content-type confusion, Swagger/OpenAPI exposure. Ferramentas: Postman/Insomnia, Kiterunner, Arjun, ffuf, GraphQL Playground, jwt_tool.
 
 > [!note] Conexão com seu portfólio
-> Você constrói APIs REST (ASP.NET Core) e GraphQL (AgileFlow). Esta seção é o lado ofensivo exato do que você já projeta defensivamente nos seus RNFTs de segurança. Estude os dois lados juntos.
+> Você constrói APIs REST (ASP.NET Core) e GraphQL (AM Taskoro). Esta seção é o lado ofensivo exato do que você já projeta defensivamente nos seus RNFTs de segurança. Estude os dois lados juntos.
 
 ## 1.5 WAF Evasion
 Fingerprinting (wafw00f), encoding bypass (URL simples/duplo, Unicode, HTML entities, Base64), case manipulation, comentários SQL, whitespace alternatives, HTTP Parameter Pollution, Chunked Transfer Encoding, bypass de WAF cloud via origin direct (Shodan p/ IP real), header manipulation (X-Forwarded-For, X-Real-IP).
@@ -131,7 +131,7 @@ Fingerprinting (wafw00f), encoding bypass (URL simples/duplo, Unicode, HTML enti
 > [!important] Regra de ouro
 > Autorização verbal não tem valor legal no Brasil. Sempre escrito, sempre assinado, sempre guardado.
 >
-> **Conexão:** isso se conecta com a Fase 0 jurídica que o [[auraarquiteto-documento-projeto-final]] e o AuraObra/AuraEdu já preveem — a mesma disciplina de contrato e LGPD vale para prestar serviço de pentest.
+> **Conexão:** isso se conecta com a Fase 0 jurídica que o [[projeta-documento-projeto-final]] e o AM Canteira/AM Saberia já preveem — a mesma disciplina de contrato e LGPD vale para prestar serviço de pentest.
 
 ## 1.9 Relatório de Pentest
 Executive Summary (linguagem de negócio), Escopo/Metodologia, Sumário de Risco (CVSS v3.1), Findings (título, severidade, evidência, impacto, recomendação, referências), Narrativa de Ataque, Roadmap de Remediação, Apêndices. Ferramentas: Sysreptor, Ghostwriter, Dradis, PlexTrac.
@@ -273,7 +273,7 @@ Protocolos (Modbus 502, DNP3 20000, Profinet, EtherNet/IP 44818, Siemens S7 102,
 Prompt injection (direct/indirect), jailbreaking, tool call hijacking, adversarial ML (evasão de detectores, model extraction, training data poisoning), LLM como ferramenta ofensiva, testes em sistemas com LLM. Recurso: OWASP Top 10 for LLM Applications.
 
 > [!note] Conexão direta com seu portfólio
-> Você tem o `aura-copilot` (IA function-calling) e o [[auraarquiteto-documento-projeto-final]] (geração por IA voltada ao cliente). A série [[rnft-ia-governanca-geracao-ia]] que você já criou é justamente a defesa contra parte disto. Esta seção é o ataque correspondente — os dois lados da mesma moeda.
+> Você tem o `aura-copilot` (IA function-calling) e o [[projeta-documento-projeto-final]] (geração por IA voltada ao cliente). A série [[rnft-ia-governanca-geracao-ia]] que você já criou é justamente a defesa contra parte disto. Esta seção é o ataque correspondente — os dois lados da mesma moeda.
 
 ## 6.2 APT Emulation
 Simular threat actor específico com TTPs documentadas. APTs para estudo: APT29 (Midnight Blizzard), APT41, Lazarus, FIN7/CARBANAK, ALPHV/BlackCat. Plataformas: SCYTHE, Vectr.

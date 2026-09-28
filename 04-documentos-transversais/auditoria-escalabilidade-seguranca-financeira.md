@@ -29,8 +29,8 @@ status: completo
 Esta é a parte que importa mais — não são falhas do que você já fez, são lacunas que qualquer sistema nesse estágio de planejamento naturalmente ainda tem, e que precisam virar requisito antes de operar em volume nacional.
 
 ### 2.1 Concorrência de estoque entre canais (o risco mais provável de virar prejuízo real)
-**O problema:** você já tem estoque compartilhado entre loja física, loja online e reserva de OS (AuraFix), e entre loja e Delivery (AuraPOS). Sem controle de concorrência explícito, dois canais podem vender a última unidade do mesmo item ao mesmo tempo — isso não é hipotético, é o bug mais comum em sistema de estoque multicanal, e o resultado é literalmente vender algo que você não tem, com reembolso e cliente insatisfeito.
-**O que falta:** controle de concorrência otimista (versionamento de linha) ou reserva pessimista com lock de curta duração no momento do checkout, em toda operação que decrementa estoque — não é uma feature nova, é um requisito não funcional que precisa estar em cada sistema que mexe em estoque (AuraPOS, AuraFix, AuraVet, Loja Virtual, Delivery).
+**O problema:** você já tem estoque compartilhado entre loja física, loja online e reserva de OS (AM Consertta), e entre loja e Delivery (AM Kaixara). Sem controle de concorrência explícito, dois canais podem vender a última unidade do mesmo item ao mesmo tempo — isso não é hipotético, é o bug mais comum em sistema de estoque multicanal, e o resultado é literalmente vender algo que você não tem, com reembolso e cliente insatisfeito.
+**O que falta:** controle de concorrência otimista (versionamento de linha) ou reserva pessimista com lock de curta duração no momento do checkout, em toda operação que decrementa estoque — não é uma feature nova, é um requisito não funcional que precisa estar em cada sistema que mexe em estoque (AM Kaixara, AM Consertta, AuraVet, Loja Virtual, Delivery).
 
 ### 2.2 Idempotência em pagamento e webhook de gateway
 **O problema:** gateways de pagamento (Pix, cartão) confirmam transação por webhook, e webhooks podem chegar duplicados ou atrasados por natureza da própria infraestrutura de rede — isso é comportamento normal do protocolo, não uma falha do gateway. Sem tratamento, um webhook duplicado pode gerar cobrança dupla ou baixa dupla de estoque.
@@ -60,9 +60,9 @@ Vale calibrar esforço pelo estágio real de cada um, não tratar tudo como emer
 
 | Sistema | Prioridade de aplicar essas proteções |
 |---|---|
-| **AuraPOS** | Alta — já está em desenvolvimento ativo, é onde vale corrigir a concorrência de estoque e idempotência de pagamento primeiro, antes de ir pra produção |
-| **AuraFix** | Alta — planejamento ainda fresco, mais barato incluir agora do que depois; herda diretamente o risco de estoque compartilhado do AuraPOS |
-| **Aura Delivery / AuraVet / Loja Virtual** | Média — ainda em planejamento, mas sem código; dá pra já nascerem com esses requisitos formalizados, sem custo de retrabalho |
+| **AM Kaixara** | Alta — já está em desenvolvimento ativo, é onde vale corrigir a concorrência de estoque e idempotência de pagamento primeiro, antes de ir pra produção |
+| **AM Consertta** | Alta — planejamento ainda fresco, mais barato incluir agora do que depois; herda diretamente o risco de estoque compartilhado do AM Kaixara |
+| **AM Rotara / AuraVet / Loja Virtual** | Média — ainda em planejamento, mas sem código; dá pra já nascerem com esses requisitos formalizados, sem custo de retrabalho |
 | **Momentos/Cupido** | Baixa nesse recorte específico — o risco de estoque/concorrência financeira é bem menor num produto B2C de conteúdo/assinatura do que num sistema de venda de produto físico |
 | **`aura-licensing`** | Alta indireta — como ele centraliza cobrança de todos os outros, qualquer falha de idempotência aqui se propaga para o portfólio inteiro; é o candidato certo pra receber a reconciliação financeira periódica (item 2.6) como responsabilidade própria dele |
 
@@ -70,10 +70,10 @@ Vale calibrar esforço pelo estágio real de cada um, não tratar tudo como emer
 
 ## 4. O que fazer com isso na prática
 
-Não é uma lista de "features" — é uma lista de **requisitos não funcionais transversais** que precisam entrar no documento de RF/RNF de cada sistema que ainda não tem código escrito, e virar item de revisão técnica no que já está em desenvolvimento (AuraPOS). Sugiro:
+Não é uma lista de "features" — é uma lista de **requisitos não funcionais transversais** que precisam entrar no documento de RF/RNF de cada sistema que ainda não tem código escrito, e virar item de revisão técnica no que já está em desenvolvimento (AM Kaixara). Sugiro:
 
 1. Criar um documento único de **"Requisitos Não Funcionais Transversais de Escala e Segurança Financeira"**, com os 6 itens da seção 2 detalhados como RNF formais (com ID, igual ao padrão que você já usa) — e referenciar esse documento a partir de todos os outros, em vez de repetir o conteúdo em cada um
-2. Revisar o AuraPOS (que já está em código) contra os itens 2.1 e 2.2 antes de avançar mais sprints — são os dois com maior custo de retrofit depois de pronto
+2. Revisar o AM Kaixara (que já está em código) contra os itens 2.1 e 2.2 antes de avançar mais sprints — são os dois com maior custo de retrofit depois de pronto
 3. Os demais sistemas (ainda em papel) simplesmente herdam esse documento transversal por referência, sem precisar reescrever nada
 
 Quer que eu já monte esse documento de RNF transversal agora, no mesmo padrão dos outros (com IDs formais), para você plugar em cada sistema?

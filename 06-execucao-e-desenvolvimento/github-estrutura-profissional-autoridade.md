@@ -24,8 +24,8 @@ Tudo nasce local, em `C:\dev\`, organizado em três categorias que **nunca se mi
 ```
 C:\dev\
 ├── aura-workspace\              (sistemas reais — 1 pasta por repositório da Organization)
-│   ├── aurapos-backend\
-│   ├── aurapos-frontend\
+│   ├── kaixara-backend\
+│   ├── kaixara-frontend\
 │   └── ...                      (nasce só quando o sistema chegar no Passo correspondente)
 │
 ├── aura-estudos\                (exercício e prática dos Passos — NÃO é produto)
@@ -45,15 +45,15 @@ Diferente dos sistemas (1 repositório por sistema, seção 2), os exercícios d
 
 
 
-Com 21 sistemas documentados mas só o AuraPOS em código, criar 40+ repositórios vazios agora seria o oposto de profissional — pareceria abandono, não ambição. Regra simples: **repositório só nasce quando o primeiro commit real está pronto pra subir**, não quando o planejamento termina.
+Com 21 sistemas documentados mas só o AM Kaixara em código, criar 40+ repositórios vazios agora seria o oposto de profissional — pareceria abandono, não ambição. Regra simples: **repositório só nasce quando o primeiro commit real está pronto pra subir**, não quando o planejamento termina.
 
 O que existe desde já, independente disso:
 
 | Repositório | Conteúdo | Por quê já |
 |---|---|---|
-| `aura-ecosystem` | README com visão geral, arquitetura, roadmap dos 21 sistemas — **sem código** | É a vitrine. Fixado no topo da organização. Escalando o que o guia anterior já propunha pro `aurapos-ecosystem` |
+| `aura-ecosystem` | README com visão geral, arquitetura, roadmap dos 21 sistemas — **sem código** | É a vitrine. Fixado no topo da organização. Escalando o que o guia anterior já propunha pro `kaixara-ecosystem` |
 | `aura-docs` (novo) | O conteúdo do seu vault do Obsidian, publicado como site (seção 5) | Documentação pública é diferencial real — poucos portfólios júnior/pleno mostram isso |
-| `aurapos-backend`, `aurapos-frontend` | Já existe, já em código | — |
+| `kaixara-backend`, `kaixara-frontend` | Já existe, já em código | — |
 
 Os outros 19 sistemas e 9 serviços restantes (`aura-identity` já tem conteúdo suficiente pra nascer logo, dado que é Tier 1 da sua estratégia de extração) entram conforme a Fase 6D e os passos seguintes do `passo-a-passo-mestre-desde-o-inicio` forem sendo cumpridos.
 
@@ -105,7 +105,7 @@ Isso é o que dá autoridade de verdade, mais do que qualquer configuração de 
 - A visão geral do ecossistema e a arquitetura reaproveitável (RNFT-E, RNFT-S, RNFT-D)
 - Os ADRs conforme forem nascendo
 - O padrão de Clean Architecture + multi-tenant que você usa
-- **Não publicar:** dado financeiro específico de precificação, informação de cliente real, qualquer coisa da AuraObra/AuraAgenda com risco jurídico se mal interpretada fora de contexto
+- **Não publicar:** dado financeiro específico de precificação, informação de cliente real, qualquer coisa da AM Canteira/AM Horaria com risco jurídico se mal interpretada fora de contexto
 
 **Por que isso constrói autoridade de verdade:** um recrutador ou cliente que lê "aqui está como decidimos proteger dado sensível de forma centralizada em vez de reimplementar 4 vezes" enxerga pensamento de arquiteto sênior — isso é raro em portfólio de quem está começando, e é exatamente o que você já documentou no `aura-vault`.
 
@@ -121,7 +121,7 @@ Isso é o que dá autoridade de verdade, mais do que qualquer configuração de 
 
 ## 7. Ordem prática de execução, sem sobrecarregar
 
-1. Criar a organização e mover o `aurapos-backend`/`aurapos-frontend` existentes pra dentro dela
+1. Criar a organização e mover o `kaixara-backend`/`kaixara-frontend` existentes pra dentro dela
 2. Criar `aura-ecosystem` com o README de visão geral (reaproveitando o `00-INICIO` do Obsidian como base)
 3. Publicar `aura-docs` via GitHub Pages — pode ser feito com o material que já existe, sem esperar mais nenhum sistema avançar
 4. A partir da próxima decisão real tomada (ex: gateway de pagamento), já registrar como ADR — hábito novo, começa no próximo, não precisa retroagir todas as pendências antigas de uma vez

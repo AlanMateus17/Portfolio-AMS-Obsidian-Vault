@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraObra — Documento de Projeto Final (Nome provisório)
+# AM Canteira — Documento de Projeto Final (Nome provisório)
 ### Sistema de Vendas na Planta, Construção Personalizada e Gestão de Obra
 
 Segue a estrutura fixa do [[template-documento-projeto-final]].
@@ -48,7 +48,7 @@ Plataforma para construtora/imobiliária que cobre dois modelos de negócio ao m
 
 ### 2.6 Entrega e pós-venda
 - Vistoria de entrega com checklist formal ("habite-se" / termo de entrega de chaves)
-- Assistência técnica pós-entrega — especialização do mesmo módulo de Ordem de Serviço já formalizado no AuraFix/AuraVet, aqui cobrindo garantia de construção (estrutural, hidráulica, elétrica) conforme prazo legal por item
+- Assistência técnica pós-entrega — especialização do mesmo módulo de Ordem de Serviço já formalizado no AM Consertta/AuraVet, aqui cobrindo garantia de construção (estrutural, hidráulica, elétrica) conforme prazo legal por item
 
 ### 2.7 Portal do cliente
 - Acompanhamento de % de obra, próximo pagamento, documento do contrato, abertura de chamado pós-entrega
@@ -102,29 +102,29 @@ Plataforma para construtora/imobiliária que cobre dois modelos de negócio ao m
 
 ## 5. Requisitos Não Funcionais (RNF) — próprios + transversais
 
-| ID | Aplicação no AuraObra | Para que serve |
+| ID | Aplicação no AM Canteira | Para que serve |
 |---|---|---|
 | RNFT-E01 (concorrência) | Reserva de unidade não pode aceitar duas reservas simultâneas da mesma unidade | Evita venda duplicada, problema com consequência jurídica real neste sistema |
 | RNFT-E02 (idempotência de pagamento) | Cobrança de parcela recorrente | Evita cobrança duplicada em valor alto — erro aqui é caro de verdade |
 | RNFT06 (LGPD) | Dado financeiro e documento pessoal do comprador (para contrato e financiamento) | Cumpre obrigação legal sobre dado sensível de alto valor |
-| Precisão de cálculo financeiro (próprio) | Cálculo de distrato, parcela e retenção deve ter cobertura de teste próxima de 100%, mesmo padrão de rigor do motor determinístico do AuraWealth | Erro de cálculo aqui tem consequência financeira e jurídica direta, em valores tipicamente muito acima de qualquer outro sistema do portfólio |
+| Precisão de cálculo financeiro (próprio) | Cálculo de distrato, parcela e retenção deve ter cobertura de teste próxima de 100%, mesmo padrão de rigor do motor determinístico do AM Rendara | Erro de cálculo aqui tem consequência financeira e jurídica direta, em valores tipicamente muito acima de qualquer outro sistema do portfólio |
 | Auditabilidade contratual (próprio) | Toda alteração de contrato, aprovação e cálculo de distrato deve ser registrada de forma imutável | É evidência formal em caso de disputa judicial — o sistema pode ser chamado como prova |
 
 ---
 
 ## 6. Segurança de nível profissional
 
-| Categoria | Aplicação específica no AuraObra |
+| Categoria | Aplicação específica no AM Canteira |
 |---|---|
-| Dados | Documento pessoal e dado financeiro de alto valor — nível de sensibilidade próximo ao do AuraWealth. **RESOLVIDO/atualizado:** implementado via `aura-vault`, o serviço compartilhado de proteção de dado extra-sensível |
+| Dados | Documento pessoal e dado financeiro de alto valor — nível de sensibilidade próximo ao do AM Rendara. **RESOLVIDO/atualizado:** implementado via `aura-vault`, o serviço compartilhado de proteção de dado extra-sensível |
 | Assinatura eletrônica | Precisa de provedor com validade jurídica reconhecida (ICP-Brasil ou equivalente comercial reconhecido pelos tribunais), não uma implementação própria informal |
-| Auditoria externa (RNFT-S06) | Prioridade máxima, no mesmo nível do AuraWealth — é o segundo sistema do portfólio (depois do AuraWealth) onde uma falha tem consequência financeira direta e alta, mais o agravante de exposição jurídica contratual |
+| Auditoria externa (RNFT-S06) | Prioridade máxima, no mesmo nível do AM Rendara — é o segundo sistema do portfólio (depois do AM Rendara) onde uma falha tem consequência financeira direta e alta, mais o agravante de exposição jurídica contratual |
 
 ---
 
 ## 7. Hardware, instalador e distribuição
 
-**Majoritariamente não aplicável** — SaaS puro. Exceção parcial: o app de campo da equipe de obra (2.5) roda em dispositivo móvel comum, sem hardware dedicado, mas com dependência de conectividade em canteiro de obra (possível área com sinal fraco) — vale considerar modo offline básico para registro de evidência fotográfica, sincronizando quando a conexão voltar, mesmo princípio já aplicado ao AuraPOS.
+**Majoritariamente não aplicável** — SaaS puro. Exceção parcial: o app de campo da equipe de obra (2.5) roda em dispositivo móvel comum, sem hardware dedicado, mas com dependência de conectividade em canteiro de obra (possível área com sinal fraco) — vale considerar modo offline básico para registro de evidência fotográfica, sincronizando quando a conexão voltar, mesmo princípio já aplicado ao AM Kaixara.
 
 ---
 

@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AgileFlow — Decisão de Stack e Entrada no Portfólio
+# AM Taskoro — Decisão de Stack e Entrada no Portfólio
 ### 22º sistema do portfólio — decisão de stack revisada: híbrido, sem sair do .NET
 
 ---

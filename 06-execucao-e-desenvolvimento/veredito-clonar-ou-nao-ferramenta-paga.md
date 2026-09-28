@@ -15,7 +15,7 @@ status: novo
 
 | Ferramenta paga | Por que já está resolvido |
 |---|---|
-| **Jira** (gestão de tarefa/sprint) | **É o AgileFlow.** Kanban + Scrum + RAD, exatamente o que Jira faz — você já tem o Documento de Projeto Final completo dele. Não precisa de um segundo projeto pra isso |
+| **Jira** (gestão de tarefa/sprint) | **É o AM Taskoro.** Kanban + Scrum + RAD, exatamente o que Jira faz — você já tem o Documento de Projeto Final completo dele. Não precisa de um segundo projeto pra isso |
 | **Confluence** (documentação de time) | MkDocs + GitHub Pages, já no seu plano — mesma função, publicado automaticamente |
 
 ---
@@ -46,7 +46,7 @@ Só três itens passam nas duas condições (conceito valioso de aprender **e** 
 
 **O que ensina de verdade:** como sistema desacopla comunicação — um sistema publica um evento, outro consome, sem esperar resposta direta. É o mecanismo, não a escala de bilhões de mensagens/segundo do Kafka real.
 
-**Escopo realista:** uma fila em memória (ou usando o Redis que você já tem no stack) com `Publish(evento)` e `Subscribe(tipo)` — sem replicação, sem partição, sem garantia de entrega distribuída. Isso já ensina o conceito e ainda resolve um problema real seu: quando dois sistemas Aura precisarem se avisar de algo (ex: AuraPOS avisa AuraWealth de uma venda) sem chamar a API um do outro diretamente.
+**Escopo realista:** uma fila em memória (ou usando o Redis que você já tem no stack) com `Publish(evento)` e `Subscribe(tipo)` — sem replicação, sem partição, sem garantia de entrega distribuída. Isso já ensina o conceito e ainda resolve um problema real seu: quando dois sistemas Aura precisarem se avisar de algo (ex: AM Kaixara avisa AM Rendara de uma venda) sem chamar a API um do outro diretamente.
 
 **Onde entra:** depois que 2-3 sistemas já estiverem em produção e precisarem conversar entre si — não antes, não é urgente agora.
 
@@ -70,7 +70,7 @@ Só três itens passam nas duas condições (conceito valioso de aprender **e** 
 
 ## Resumindo pra não ficar confuso
 
-- **2 itens:** você já está construindo, nem precisa pensar de novo (Jira → AgileFlow, Confluence → MkDocs)
+- **2 itens:** você já está construindo, nem precisa pensar de novo (Jira → AM Taskoro, Confluence → MkDocs)
 - **9 itens:** adote a versão gratuita, nunca construa a sua — o aprendizado não compensa o tempo
 - **3 itens:** valem uma versão pequena, de aprendizado, no momento certo do seu portfólio (não agora) — e nem são projetos novos soltos, dois deles (`aura-queue`, `aura-secrets`) só nascem quando o problema real que resolvem já existir, e o terceiro é extensão de algo que você já tem
 
@@ -80,5 +80,5 @@ Isso significa **zero projeto novo agora** — os três só entram quando o Pass
 
 ## 🔗 Documentos relacionados
 - [[plano-automacao-completo]] — a tabela original de onde cada item desta lista veio
-- [[agileflow-documento-projeto-final]] — o "Jira" que você já está construindo
+- [[taskoro-documento-projeto-final]] — o "Jira" que você já está construindo
 - [[ordem-e-sequencia-de-execucao-automacoes]] — onde os três itens 🟡 entrariam, quando chegar a hora

@@ -119,9 +119,9 @@ Em vez de clicar na nuvem pra criar cada recurso, um arquivo descreve o que deve
 
 ```hcl
 # main.tf (Terraform)
-resource "digitalocean_droplet" "aurapos" {
+resource "digitalocean_droplet" "kaixara" {
   image  = "docker-20-04"
-  name   = "aurapos-producao"
+  name   = "kaixara-producao"
   region = "nyc1"
   size   = "s-1vcpu-2gb"
 }
@@ -212,8 +212,8 @@ npx semantic-release
 **`CODEOWNERS` — define quem precisa aprovar mudança em cada parte do código:**
 ```
 # .github/CODEOWNERS
-/aurapos-backend/  @AlanMateus17
-/aurapos-frontend/ @AlanMateus17
+/kaixara-backend/  @AlanMateus17
+/kaixara-frontend/ @AlanMateus17
 ```
 
 **Time gigante 🔴:** fila de merge (impede dois PRs aprovados ao mesmo tempo quebrarem a `main`), relatório de sprint gerado sozinho a partir do GitHub Projects.
@@ -356,7 +356,7 @@ Sem sistema em produção ainda, a lista real de "vale fazer já" (🟢) é bem 
 
 1. Pre-commit hook com Gitleaks — já feito
 2. Dependabot — 2 cliques, zero manutenção, ativa agora mesmo
-3. CI básico (build + teste a cada push) — vale configurar já no AuraPOS, que já tem código
+3. CI básico (build + teste a cada push) — vale configurar já no AM Kaixara, que já tem código
 4. Backup agendado do `C:\dev\` — resolve a lição que a própria reconstrução do notebook já ensinou
 5. Script de setup de ambiente em um comando — economiza tempo desde já, mesmo sozinho
 

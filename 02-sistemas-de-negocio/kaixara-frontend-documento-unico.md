@@ -10,7 +10,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraPOS — Frontend: Documento Único
+# AM Kaixara — Frontend: Documento Único
 ### Discovery → Arquitetura da Informação → Design System → UI → Prototipação → Engenharia → Acessibilidade → QA → Performance → Segurança → Lançamento (11 etapas)
 ### Substitui os 5 documentos anteriores de frontend, com as correções já integradas ao raciocínio, não em anexo separado
 
@@ -39,7 +39,7 @@ status: completo
 
 ### 1.4 Análise competitiva — **correção: seção nova, não existia antes**
 
-| Concorrente | Ponto forte | Ponto fraco | Brecha real pro AuraPOS |
+| Concorrente | Ponto forte | Ponto fraco | Brecha real pro AM Kaixara |
 |---|---|---|---|
 | Sistema genérico de mercado (ex: Superlógica e afins) | Robusto, muitos recursos | Contrato pesado, onboarding lento, não pensado pra velocidade de operação | Venda direta ao pequeno lojista, sem venda consultiva, com foco em velocidade de uso, não em quantidade de funcionalidade |
 | Caderno/planilha (o "concorrente" mais comum de verdade) | Zero custo, zero curva de aprendizado | Sem controle de estoque real, sem histórico confiável, erro humano constante | Substituir com curva de aprendizado baixa o suficiente pra competir com "não ter sistema nenhum" |
@@ -219,7 +219,7 @@ Erro, sucesso, alerta e informação **sempre fixas**, nunca personalizáveis po
 
 Tudo até a seção 3.8 cobre cor **estática** (primária, neutro, semântica fixa). Elemento que muda de estado em tempo real — badge, gráfico, indicador de conexão — nunca tinha cor formalizada, e cada demonstração visual inventava valor novo sem virar padrão.
 
-**Paleta de visualização de dado (gráfico com múltiplas séries)** — usada em qualquer dashboard do portfólio, não só AuraPOS:
+**Paleta de visualização de dado (gráfico com múltiplas séries)** — usada em qualquer dashboard do portfólio, não só AM Kaixara:
 | Token | Valor hex |
 |---|---|
 | `--viz-1` | `#B08D57` (dourado — série principal) |
@@ -268,7 +268,7 @@ Ordem fixa — a primeira série de qualquer gráfico novo usa sempre `--viz-1`,
 
 ## ETAPA 4 — Design Visual e Usabilidade
 
-### 4.1 Heurísticas de Nielsen aplicadas ao AuraPOS
+### 4.1 Heurísticas de Nielsen aplicadas ao AM Kaixara
 
 | Heurística | Aplicação concreta |
 |---|---|
@@ -397,10 +397,10 @@ Server Components por padrão (só `"use client"` onde precisa de interatividade
 Extensão barata do sistema de tokens já existente — trocar valor de variável, não reconstruir.
 
 ### 6.4 Cliente de API — correção: não especificado antes
-O cliente HTTP não é escrito manualmente endpoint por endpoint — é **gerado automaticamente a partir do contrato OpenAPI** já definido em `aurapos-especificacao-tecnica-completa` (seção 2). Isso garante que o contrato (backend) e o cliente (frontend) nunca ficam dessincronizados — se o backend mudar um campo, o cliente gerado quebra a build, avisando o problema em tempo de desenvolvimento, não em produção.
+O cliente HTTP não é escrito manualmente endpoint por endpoint — é **gerado automaticamente a partir do contrato OpenAPI** já definido em `kaixara-especificacao-tecnica-completa` (seção 2). Isso garante que o contrato (backend) e o cliente (frontend) nunca ficam dessincronizados — se o backend mudar um campo, o cliente gerado quebra a build, avisando o problema em tempo de desenvolvimento, não em produção.
 
 ### 6.5 Carregamento de tema por tenant em runtime — correção: não especificado antes
-Ao abrir o sistema, antes de renderizar qualquer tela: identificar o tenant (por subdomínio, ex: `lojadojoao.aurapos.com`, ou por token já autenticado) → buscar a configuração de tema daquele tenant (cor de marca, logo) → aplicar os tokens (RNFT-D) antes da primeira renderização visível, evitando "flash" de tema padrão trocando pro tema real um instante depois.
+Ao abrir o sistema, antes de renderizar qualquer tela: identificar o tenant (por subdomínio, ex: `lojadojoao.kaixara.com`, ou por token já autenticado) → buscar a configuração de tema daquele tenant (cor de marca, logo) → aplicar os tokens (RNFT-D) antes da primeira renderização visível, evitando "flash" de tema padrão trocando pro tema real um instante depois.
 
 ### 6.6 Feature flag ligado ao `aura-licensing` — correção: não especificado antes
 O menu de navegação (Etapa 2.5) não é fixo — cada item consulta se o módulo correspondente está ativo pro tenant (via `aura-licensing`) antes de aparecer. Um tenant sem o módulo de Dashboard avançado, por exemplo, simplesmente não vê esse item no menu — não é "aparece desabilitado", é "não aparece", evitando poluição visual com funcionalidade que o cliente não contratou.
@@ -506,7 +506,7 @@ As métricas de sucesso definidas no Discovery (tempo médio de venda, taxa de e
 
 ## Definition of Done — critério de aceite geral do frontend
 
-O frontend do AuraPOS está pronto pra apresentação quando, e só quando:
+O frontend do AM Kaixara está pronto pra apresentação quando, e só quando:
 
 - [ ] As 11 etapas têm todo checklist de execução marcado
 - [ ] O fluxo crítico (2.2) passa no teste de usabilidade com pelo menos 4 de 5 pessoas (5.4)

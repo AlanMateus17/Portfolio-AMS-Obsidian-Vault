@@ -12,7 +12,7 @@ Segue a estrutura fixa do [[template-documento-projeto-final]]. Este é o servi�
 
 ## 1. Visão do produto
 
-Assistente de IA embutido em AuraPOS, Loja Virtual e AuraWealth, usando **function-calling contra dado ao vivo do sistema**, não RAG (busca em documento estático) — decisão já tomada anteriormente e que vale manter como princípio central.
+Assistente de IA embutido em AM Kaixara, Loja Virtual e AM Rendara, usando **function-calling contra dado ao vivo do sistema**, não RAG (busca em documento estático) — decisão já tomada anteriormente e que vale manter como princípio central.
 
 **Diferencial de inovação:** a maioria dos "assistentes de IA" embutidos em SaaS de varejo/finanças hoje é RAG sobre manual de ajuda — responde pergunta sobre "como usar o sistema", não sobre o dado real do negócio. Aqui a proposta é o oposto: o assistente consulta o dado ao vivo (estoque, venda, carteira) e responde/age sobre ele — "quanto vendi essa semana comparado à anterior", "sugere um rebalanceamento", em vez de só "como faço para cadastrar produto".
 
@@ -20,14 +20,14 @@ Assistente de IA embutido em AuraPOS, Loja Virtual e AuraWealth, usando **functi
 
 ## 2. Funcionalidades completas (estado final — ainda o mais especulativo do portfólio)
 
-### 2.1 No AuraPOS
+### 2.1 No AM Kaixara
 - Consulta em linguagem natural sobre venda, estoque, faturamento ("como estão minhas vendas essa semana")
 - Ação assistida (ex: sugerir reposição de estoque, com confirmação do usuário antes de executar)
 
 ### 2.2 Na Loja Virtual
-- Assistente de compra para o cliente final (ex: recomendação de produto), papel diferente do assistente administrativo do AuraPOS
+- Assistente de compra para o cliente final (ex: recomendação de produto), papel diferente do assistente administrativo do AM Kaixara
 
-### 2.3 No AuraWealth
+### 2.3 No AM Rendara
 - Explicação de sugestão de rebalanceamento em linguagem natural, apoiando (não substituindo) o motor determinístico já existente
 
 ---
@@ -38,15 +38,15 @@ Assistente de IA embutido em AuraPOS, Loja Virtual e AuraWealth, usando **functi
 |---|---|---|
 | RF01 | Responder pergunta em linguagem natural consultando dado ao vivo via function-calling, nunca RAG sobre documento estático | É o diferencial central do produto — sem isso, é só mais um chatbot de ajuda genérico |
 | RF02 | Toda ação sugerida que altere dado (ex: ajustar estoque) exige confirmação explícita do usuário antes de executar | Impede que uma alucinação do modelo cause dano real ao negócio do cliente |
-| RF03 | No AuraWealth, o copilot explica a sugestão do motor determinístico, nunca substitui o cálculo dele | Preserva a garantia de motor auditável e determinístico já estabelecida como requisito central do AuraWealth |
+| RF03 | No AM Rendara, o copilot explica a sugestão do motor determinístico, nunca substitui o cálculo dele | Preserva a garantia de motor auditável e determinístico já estabelecida como requisito central do AM Rendara |
 | RF04 | Escopo de dado consultável pelo copilot deve respeitar o mesmo isolamento por `tenant_id` do sistema hospedeiro | Um copilot mal implementado é o tipo de superfície que mais facilmente vaza dado entre tenant, se não for tratado com o mesmo rigor do resto do sistema |
-| RF05 | Na Loja Virtual, o copilot atua como assistente de compra para o cliente final (recomendação de produto), papel distinto do assistente administrativo do AuraPOS/AuraWealth | Sem essa distinção formal, o comportamento esperado do copilot fica ambíguo entre "ajudar o lojista" e "ajudar o comprador" |
+| RF05 | Na Loja Virtual, o copilot atua como assistente de compra para o cliente final (recomendação de produto), papel distinto do assistente administrativo do AM Kaixara/AM Rendara | Sem essa distinção formal, o comportamento esperado do copilot fica ambíguo entre "ajudar o lojista" e "ajudar o comprador" |
 
 ---
 
 ## 4. Sistemas e interfaces paralelas por perfil de usuário
 
-### 4.1 Usuário administrativo (AuraPOS, AuraWealth)
+### 4.1 Usuário administrativo (AM Kaixara, AM Rendara)
 - **Uso:** chat/consulta embutido na interface já existente do sistema hospedeiro
 - **Não tem cadastro próprio** — herda a sessão autenticada do sistema hospedeiro
 

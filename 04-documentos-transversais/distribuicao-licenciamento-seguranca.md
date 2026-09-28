@@ -13,18 +13,18 @@ status: completo
 
 ### 0.1 Modelo de distribuição passa a ser híbrido
 Até agora todo o portfólio foi pensado como SaaS puro (cloud, multi-tenant). Vender como "pacote de arquivos executável que qualquer pessoa instala no computador" é um modelo de distribuição diferente — **on-premise** — e isso não substitui o SaaS, os dois vão coexistir:
-- **AuraPOS** é o candidato natural a essa distribuição híbrida, porque já depende de um agente local para hardware (impressora fiscal, gaveta, balança, TEF) — esse agente local É basicamente a metade do caminho para um instalador completo
-- Sistemas puramente cloud (AuraWealth, Momentos/Cupido, AuraVet) não precisam de instalador — continuam SaaS, acessados via navegador; a distribuição executável se aplica especificamente a sistemas com componente físico/local, e AuraPOS/AuraFix são os que se encaixam nesse perfil
+- **AM Kaixara** é o candidato natural a essa distribuição híbrida, porque já depende de um agente local para hardware (impressora fiscal, gaveta, balança, TEF) — esse agente local É basicamente a metade do caminho para um instalador completo
+- Sistemas puramente cloud (AM Rendara, Momentos/Cupido, AuraVet) não precisam de instalador — continuam SaaS, acessados via navegador; a distribuição executável se aplica especificamente a sistemas com componente físico/local, e AM Kaixara/AM Consertta são os que se encaixam nesse perfil
 
 ### 0.2 Precisa de uma identidade central de cliente (conta Aura única)
-Para "conectar o AuraPOS com o outro sistema online que a pessoa comprou", é preciso que exista uma conta única do cliente que sabe quais produtos ele comprou — hoje o `aura-licensing` sabe quais módulos um `tenant_id` tem ativo, mas não existe ainda o conceito de **uma pessoa dona de múltiplos tenants/produtos diferentes do portfólio**. Isso é uma peça nova, e ela nasce dentro do próprio `aura-licensing` (ou como extensão dele), não como serviço separado.
+Para "conectar o AM Kaixara com o outro sistema online que a pessoa comprou", é preciso que exista uma conta única do cliente que sabe quais produtos ele comprou — hoje o `aura-licensing` sabe quais módulos um `tenant_id` tem ativo, mas não existe ainda o conceito de **uma pessoa dona de múltiplos tenants/produtos diferentes do portfólio**. Isso é uma peça nova, e ela nasce dentro do próprio `aura-licensing` (ou como extensão dele), não como serviço separado.
 
 ---
 
-## 1. Pacote executável instalável (foco inicial: AuraPOS)
+## 1. Pacote executável instalável (foco inicial: AM Kaixara)
 
 ### 1.1 O que o instalador contém
-- Agente local (já especificado no documento final do AuraPOS) empacotado como serviço Windows
+- Agente local (já especificado no documento final do AM Kaixara) empacotado como serviço Windows
 - Runtime necessário embutido ou verificado na instalação (evita depender do cliente já ter .NET instalado)
 - Banco local (SQLite, já previsto para o modo offline) pré-configurado
 - Assistente de instalação com poucos passos: inserir chave de licença → validar online → configurar impressora/gaveta/balança conectados → pronto
@@ -56,7 +56,7 @@ Nenhum mecanismo de proteção de licença é inquebrável — engenharia revers
 
 ### 2.3 Conexão entre sistemas comprados (o pedido específico seu)
 - Na conta única do cliente (item 0.2), ele vê todos os produtos do portfólio que possui
-- Um botão de "conectar" entre dois produtos (ex: AuraPOS local + AuraWealth cloud) dispara um fluxo de autorização — o cliente aprova explicitamente a conexão, o sistema gera uma credencial de integração (API key ou token com escopo limitado, nunca a senha da conta), e a partir daí o `FonteReceitaAuraPOS` (já especificado no AuraWealth) passa a alimentar o fluxo de caixa automaticamente
+- Um botão de "conectar" entre dois produtos (ex: AM Kaixara local + AM Rendara cloud) dispara um fluxo de autorização — o cliente aprova explicitamente a conexão, o sistema gera uma credencial de integração (API key ou token com escopo limitado, nunca a senha da conta), e a partir daí o `FonteReceitaAM Kaixara` (já especificado no AM Rendara) passa a alimentar o fluxo de caixa automaticamente
 - Esse consentimento explícito do cliente antes de conectar dois sistemas é requisito de segurança e também de LGPD — nunca conectar automaticamente sem ação do cliente
 
 ---
@@ -66,7 +66,7 @@ Nenhum mecanismo de proteção de licença é inquebrável — engenharia revers
 Organizado do jeito que uma auditoria de segurança de verdade organizaria: não é uma lista de "features", é postura em cada camada.
 
 ### 3.1 Código e desenvolvimento (Secure SDLC)
-- Scan de dependência vulnerável automatizado no pipeline (Dependabot/Snyk ou equivalente) — vocês já encontraram e corrigiram 2 CVEs reais no AuraPOS; isso deveria ser automático a cada build, não descoberto manualmente
+- Scan de dependência vulnerável automatizado no pipeline (Dependabot/Snyk ou equivalente) — vocês já encontraram e corrigiram 2 CVEs reais no AM Kaixara; isso deveria ser automático a cada build, não descoberto manualmente
 - SAST (análise estática de código) no CI/CD, antes de qualquer merge
 - Nunca segredo/senha hardcoded — já foi corrigido uma vez nos `docker-compose.yml`; formalizar isso como gate automático de CI (falha o build se detectar segredo em texto plano)
 - Revisão de código obrigatória em qualquer mudança que toque autenticação, pagamento ou dado sensível
@@ -92,7 +92,7 @@ Organizado do jeito que uma auditoria de segurança de verdade organizaria: não
 - Plano de resposta a incidente por escrito, mesmo que simples: o que fazer nas primeiras horas se uma chave vazar ou uma conta for comprometida
 
 ### 3.6 O item que nenhum documento interno substitui: auditoria externa real
-Isso é o ponto mais importante desta seção. Tudo acima é o que reduz a superfície de ataque — mas "as boas práticas que uma empresa de PenTest aplica" inclui, por definição, **uma pessoa de fora tentando invadir de propósito**, coisa que nenhum checklist interno reproduz sozinho. Antes de vender o AuraPOS como instalador para o público (não só como MVP de portfólio), vale contratar um pentest externo real — mesmo que pontual e de escopo pequeno no início — porque é o único jeito de validar que as proteções acima realmente seguram na prática, não só no papel.
+Isso é o ponto mais importante desta seção. Tudo acima é o que reduz a superfície de ataque — mas "as boas práticas que uma empresa de PenTest aplica" inclui, por definição, **uma pessoa de fora tentando invadir de propósito**, coisa que nenhum checklist interno reproduz sozinho. Antes de vender o AM Kaixara como instalador para o público (não só como MVP de portfólio), vale contratar um pentest externo real — mesmo que pontual e de escopo pequeno no início — porque é o único jeito de validar que as proteções acima realmente seguram na prática, não só no papel.
 
 ---
 
@@ -109,9 +109,9 @@ Isso é o ponto mais importante desta seção. Tudo acima é o que reduz a super
 
 ---
 
-## 5. Impacto direto no AuraPOS (documento de projeto final)
+## 5. Impacto direto no AM Kaixara (documento de projeto final)
 
-Este documento adiciona ao AuraPOS, além do que já estava consolidado:
+Este documento adiciona ao AM Kaixara, além do que já estava consolidado:
 - Empacotamento como instalador Windows assinado (novo bloco de trabalho, além do agente local já previsto)
 - Licenciamento com ativação online + tolerância offline
 - Painel de configuração pós-compra

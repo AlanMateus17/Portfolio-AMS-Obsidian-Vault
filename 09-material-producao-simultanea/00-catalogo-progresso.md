@@ -21,7 +21,7 @@ status: novo
 
 | Sistema | Repositório | Status | Passo onde começou |
 |---|---|---|---|
-| AuraPOS | *(preencher com a URL real do GitHub quando a Organization for criada)* | Em desenvolvimento (Sprint 3-4) | Passo 1 |
+| AM Kaixara | *(preencher com a URL real do GitHub quando a Organization for criada)* | Em desenvolvimento (Sprint 3-4) | Passo 1 |
 | *(os outros 21 sistemas entram aqui conforme cada um chegar no Passo correspondente)* | | | |
 
 ## Trilha 42

@@ -88,7 +88,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 2 — Git, SQL, Docker** *(1-2 semanas)*
   Git, SQL/PostgreSQL (`EXPLAIN ANALYZE`), Docker.
-  **Desenvolver:** schema real do AuraPOS (produto, categoria, estoque, venda) + schema do `aura-licensing`.
+  **Desenvolver:** schema real do AM Kaixara (produto, categoria, estoque, venda) + schema do `aura-licensing`.
   **✅ Pronto quando:** lê um `EXPLAIN ANALYZE` e identifica full scan; ambiente sobe com `docker-compose up`.
   **🤖 Automação que entra aqui:** pre-commit hook (Gitleaks) + Dependabot + backup agendado de `C:\dev\` — ver [[ordem-e-sequencia-de-execucao-automacoes]].
 
@@ -99,7 +99,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 4 — API e Autenticação** *(2-3 semanas)*
   Rota, DTO, validação, JWT, OWASP Top 10, rate limiting + Matemática Cap. 4 (Aritmética Modular/RSA). Inglês Fase B começa.
-  **Desenvolver:** `tenant_id`+RLS → login JWT/BCrypt (AuraPOS RF01) → controle de acesso por papel (RF02) → blindagem OWASP. Frontend: Design System (tokens reais) + tela de login.
+  **Desenvolver:** `tenant_id`+RLS → login JWT/BCrypt (AM Kaixara RF01) → controle de acesso por papel (RF02) → blindagem OWASP. Frontend: Design System (tokens reais) + tela de login.
   **✅ Pronto quando:** login funcional, protegido, com tela real usando os tokens corretos.
 
 - [ ] **Passo 5 — EF Core + CRUD molde** *(1-2 semanas)*
@@ -113,26 +113,26 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   **✅ Pronto quando:** cobertura real no fluxo de venda, backend e frontend.
   **🤖 Automação que entra aqui:** CI completo (build + teste a cada push) + CodeQL — ver [[ordem-e-sequencia-de-execucao-automacoes]].
 
-- [ ] **Passo 7 — Fechar o AuraPOS: pagamento e cobrança** *(2-3 semanas)*
+- [ ] **Passo 7 — Fechar o AM Kaixara: pagamento e cobrança** *(2-3 semanas)*
   Aplicação do que já foi estudado, sem tópico novo formal.
   **Desenvolver:** múltiplos meios de pagamento (RF04) → idempotência/RNFT-E02 → abertura/fechamento de caixa (RF05) → cancelamento com restauração (RF06). Frontend: dashboard + checkout.
-  **✅ Pronto quando:** AuraPOS com fluxo de venda ponta a ponta, pagamento idempotente.
+  **✅ Pronto quando:** AM Kaixara com fluxo de venda ponta a ponta, pagamento idempotente.
 
 - [ ] **Passo 8 — Arquitetura de verdade** *(contínuo, consolida aqui)*
   SOLID, Design Patterns, Clean Architecture, DI ligada à arquitetura.
-  **Desenvolver:** refatorar o AuraPOS aplicando cada padrão nele mesmo (`IFonteDeEstoque`, `IEmissorFiscal`).
+  **Desenvolver:** refatorar o AM Kaixara aplicando cada padrão nele mesmo (`IFonteDeEstoque`, `IEmissorFiscal`).
   **✅ Pronto quando:** você refatora uma classe e explica por que segue SOLID.
 
   > 🔓 **A partir daqui destravam as Trilhas Paralelas** (Trilha 42, Pentest/OSCP) — ver seção abaixo. Elas rodam por baixo dos Passos 9+ sem bloquear nada.
 
-- [ ] **Passo 9 — Ponte técnica pro próximo sistema** *(após MVP do AuraPOS)*
+- [ ] **Passo 9 — Ponte técnica pro próximo sistema** *(após MVP do AM Kaixara)*
   PostGIS, Redis, SignalR, PWA vs. nativo + Matemática Cap. 13 e 17 (Estruturas Lineares, Geometria Analítica — cobre o que seria "Álgebra Linear I"). Inglês Fase C (ADR/README em inglês).
-  **Desenvolver:** cache Redis no AuraPOS + SignalR no dashboard.
+  **Desenvolver:** cache Redis no AM Kaixara + SignalR no dashboard.
   **✅ Pronto quando:** dashboard atualiza em tempo real sem refresh.
 
 - [ ] **Passo 10 — Produção real** *(2-3 semanas)*
   Docker multi-stage, deploy gerenciado, pipeline GitHub Actions, observabilidade.
-  **Desenvolver:** deploy real do AuraPOS — primeiro marco de verdade do portfólio.
+  **Desenvolver:** deploy real do AM Kaixara — primeiro marco de verdade do portfólio.
   **✅ Pronto quando:** sistema no ar, observável, deploy automático a cada push.
   **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [[aura-secrets-documento-projeto-final|aura-secrets]] — ver [[ordem-e-sequencia-de-execucao-automacoes]].
 
@@ -144,18 +144,18 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 12 — Extração da plataforma interna** *(2-3 semanas — ponto de virada do cronograma)*
   Template `dotnet new`, NuGet privado, monorepo vs. polyrepo. Espanhol Fase A começa (Inglês já em B1-B2). Nomear a metodologia ágil já praticada.
-  **Desenvolver, extraindo do AuraPOS pronto:** template Clean Architecture+`tenant_id` → `aura-identity` real → lib de multi-tenancy → CI/CD reutilizável → component library (Storybook) → `aura-notifications` → `aura-support` → primeira apostila piloto (fichas duplas acumuladas) → segurança de frontend + lançamento (CDN, cache, métricas).
+  **Desenvolver, extraindo do AM Kaixara pronto:** template Clean Architecture+`tenant_id` → `aura-identity` real → lib de multi-tenancy → CI/CD reutilizável → component library (Storybook) → `aura-notifications` → `aura-support` → primeira apostila piloto (fichas duplas acumuladas) → segurança de frontend + lançamento (CDN, cache, métricas).
   **✅ Pronto quando:** gera a estrutura de um sistema novo com um comando, autenticado, com tema, sem escrever do zero.
   **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [[ordem-e-sequencia-de-execucao-automacoes]].
 
-- [ ] **Passo 13 — Segundo sistema: Aura Delivery** *(bem mais rápido que o primeiro)*
+- [ ] **Passo 13 — Segundo sistema: AM Rotara** *(bem mais rápido que o primeiro)*
   Reforço de Geometria Analítica/Estruturas Lineares. No bloco de roteirização: Python + OR-Tools + Matemática Cap. 19-20 (Combinatória, Probabilidade/Bayes).
-  **Desenvolver:** Aura Delivery Bloco 1 (pedido + geolocalização via PostGIS), já herdando login/tema/multi-tenancy/CI-CD do Passo 12.
+  **Desenvolver:** AM Rotara Bloco 1 (pedido + geolocalização via PostGIS), já herdando login/tema/multi-tenancy/CI-CD do Passo 12.
   **✅ Pronto quando:** segundo sistema em produção — meça quanto tempo real foi economizado vs. o primeiro.
 
 - [ ] **Passo 14 em diante — Terceiro sistema e além**
-  Ordem de prioridade do portfólio (AuraWealth, AuraVet, AuraFix, Momentos/Cupido, Loja Virtual, AuraCondo, AuraObra, AuraEdu, AuraAgenda, AuraArquiteto...). Cada sistema novo reaproveita mais que o anterior — a fundação já existe. System Design formal e preparação de entrevista (STAR) entram perto da hora real de aplicar pra vaga.
-  **✅ Critério de entrada do AgileFlow** *(22º sistema, GraphQL híbrido via HotChocolate — .NET, não stack separada)*: quando 2-3 sistemas principais já estiverem em produção e a Trilha 42 estiver avançada — ver Trilhas Paralelas abaixo.
+  Ordem de prioridade do portfólio (AM Rendara, AuraVet, AM Consertta, Momentos/Cupido, Loja Virtual, AM Predara, AM Canteira, AM Saberia, AM Horaria, AM Projeta...). Cada sistema novo reaproveita mais que o anterior — a fundação já existe. System Design formal e preparação de entrevista (STAR) entram perto da hora real de aplicar pra vaga.
+  **✅ Critério de entrada do AM Taskoro** *(22º sistema, GraphQL híbrido via HotChocolate — .NET, não stack separada)*: quando 2-3 sistemas principais já estiverem em produção e a Trilha 42 estiver avançada — ver Trilhas Paralelas abaixo.
 
 ---
 
@@ -170,7 +170,7 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 | **Espanhol** | Passo 12 (Inglês já em B1-B2) | Mais rápido que o Inglês | [[ingles-espanhol-integrado]] |
 | **Python + OR-Tools** | Passo 13, no bloco de roteirização | 5-7 semanas | detalhe dentro do próprio Passo 13 acima |
 | **Perfil sênior** (System Design, IaC) | Depois do Passo 12 | Pontual, não bloco longo | [[perfil-senior-completo-auditoria]] |
-| **AgileFlow** (GraphQL/HotChocolate híbrido — .NET, 22º sistema) | Passo 14+, quando 2-3 sistemas em produção e Trilha 42 avançada | 2-3 meses (mais rápido que antes — sem stack nova pra aprender) | [[agileflow-documento-projeto-final]] |
+| **AM Taskoro** (GraphQL/HotChocolate híbrido — .NET, 22º sistema) | Passo 14+, quando 2-3 sistemas em produção e Trilha 42 avançada | 2-3 meses (mais rápido que antes — sem stack nova pra aprender) | [[taskoro-documento-projeto-final]] |
 | **Física básica** | Desde o Passo 1, em paralelo | — | ⚠️ estrutura provisória — trilha só fecha de verdade quando você comprar o livro e eu vir o sumário real |
 
 ---
@@ -201,7 +201,7 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 
 - **Física:** sem sumário real do livro ainda — quando comprar, me mostre o índice e eu reconstruo essa trilha com precisão.
 - **Contagem de projetos da 42 inconsistente entre documentos-fonte** (você vai ver "29", "25 entregáveis + 5 Exam Rank" e "24" em arquivos diferentes do vault) — [[trilha-42-circles-oficial-verificado]] é o mais recente e corrigido; use ele como fonte de verdade até os outros arquivos serem atualizados.
-- **`aura-historico` (Clojure/Datomic)** — mesma pergunta que revisou o AgileFlow ainda em aberto aqui: Event Sourcing com Marten (.NET/PostgreSQL) resolveria o mesmo problema sem sair da stack. Diferente do AgileFlow, o motivo original parece ser diversificação de paradigma (funcional/imutável), não só resolver o problema — decisão seguinte, sua, não corrigida automaticamente.
+- **`aura-historico` (Clojure/Datomic)** — mesma pergunta que revisou o AM Taskoro ainda em aberto aqui: Event Sourcing com Marten (.NET/PostgreSQL) resolveria o mesmo problema sem sair da stack. Diferente do AM Taskoro, o motivo original parece ser diversificação de paradigma (funcional/imutável), não só resolver o problema — decisão seguinte, sua, não corrigida automaticamente.
 
 ---
 

@@ -30,10 +30,10 @@ Você decidiu explicitamente manter tudo que é TI (desenvolvimento, licenciamen
 | CNAE | Atividade | Cobre |
 |---|---|---|
 | `6201-5/01` (principal) | Desenvolvimento sob encomenda | Freelas avulsos, projetos fechados |
-| `6202-3/00` | Licenciamento de software customizável | AuraPOS e demais sistemas Aura |
-| `6203-1/00` | Licenciamento de software não customizável | Momentos & Cupido (SaaS por assinatura) |
+| `6202-3/00` | Licenciamento de software customizável | AM Kaixara e demais sistemas Aura |
+| `6203-1/00` | Licenciamento de software não customizável | AM Vynla (SaaS por assinatura) |
 | `6209-1/00` | Suporte técnico e manutenção de sistemas | Manutenção vendida a clientes |
-| `6204-0/00` | Consultoria em TI | Diagnóstico avulso (ex: AuraArquiteto como serviço) |
+| `6204-0/00` | Consultoria em TI | Diagnóstico avulso (ex: AM Projeta como serviço) |
 | `9511-8/00` | Reparação e manutenção de computadores e periféricos | Mão de obra de conserto |
 
 ### Comércio (Anexo I do Simples — bloco tributário diferente)
@@ -56,7 +56,7 @@ Você decidiu explicitamente manter tudo que é TI (desenvolvimento, licenciamen
 | CNAE | Quando começar a faturar |
 |---|---|
 | `6201` (freela) | Assim que fechar o primeiro contrato avulso |
-| `6202`/`6203` (Aura/Momentos-Cupido) | Quando o primeiro cliente pagar pela licença/assinatura — ainda em desenvolvimento |
+| `6202`/`6203` (Aura/AM Vynla) | Quando o primeiro cliente pagar pela licença/assinatura — ainda em desenvolvimento |
 | `6209` (manutenção de sistemas) | Pode começar a oferecer e faturar desde já — fonte de caixa rápida enquanto os produtos próprios amadurecem |
 | `9511` (manutenção de hardware) | Mesma lógica — rápido de monetizar |
 | CNAEs de comércio | Quando a loja física/online estiver operando de fato |
@@ -95,7 +95,7 @@ Você decidiu explicitamente manter tudo que é TI (desenvolvimento, licenciamen
 
 - Registro de marca "AMtech Digital" no INPI: R$ 355–1.115 (protege por 10 anos)
 - Seguro do estabelecimento físico (recomendável com estoque de peças)
-- Sistema de gestão/PDV da loja — o próprio AuraPOS que você já está construindo cobre isso, sem custo adicional de licença de terceiro
+- Sistema de gestão/PDV da loja — o próprio AM Kaixara que você já está construindo cobre isso, sem custo adicional de licença de terceiro
 
 ---
 

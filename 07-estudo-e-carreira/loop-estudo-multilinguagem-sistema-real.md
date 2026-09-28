@@ -57,9 +57,9 @@ const prontoParaProva = estudei && dormiBem; // false — mesmo resultado, sinta
 // A lógica não muda entre linguagens — só a forma de declarar variável muda (bool vs const).
 ```
 
-### Etapa 4 — Aplicação real no AuraPOS
+### Etapa 4 — Aplicação real no AM Kaixara
 
-No fluxo de venda real do AuraPOS, a mesma estrutura decide se uma venda pode ser concluída:
+No fluxo de venda real do AM Kaixara, a mesma estrutura decide se uma venda pode ser concluída:
 
 ```csharp
 // Dentro do SalesController, decidindo se libera a venda
@@ -81,7 +81,7 @@ Isso vira a ficha `fichas/fase-0-logica/ficha-01-como-computador-decide.md` no r
 O documento `[[matematica-e-desenvolvimento-integrado]]` já tem essa resposta pronta, capítulo por capítulo — por exemplo:
 - Capítulo 3 (Algoritmo de Euclides) → aplicação real ainda não identificada num sistema específico, mas conexão forte com recursão (Etapas 1-3 completas, Etapa 4 fica pendente até aparecer uso real)
 - Capítulo 4 (Aritmética Modular/RSA) → Etapa 4 real quando o `aura-vault` entrar em desenvolvimento
-- Capítulo 17 (Geometria Analítica) → Etapa 4 real no Aura Delivery (`ST_Distance` do PostGIS)
+- Capítulo 17 (Geometria Analítica) → Etapa 4 real no AM Rotara (`ST_Distance` do PostGIS)
 - Capítulo 19-20 (Combinatória/Probabilidade) → Etapa 4 real no `aura-analytics` (OR-Tools/Prophet)
 
 ---

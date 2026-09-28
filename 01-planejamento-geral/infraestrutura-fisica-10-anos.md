@@ -22,7 +22,7 @@ status: completo
 | 5 | Produção | Onde os SaaS ficam no ar gerando renda |
 | 6 | Segurança | Protege senhas e acessos de tudo |
 | 7 | Estudos | Matemática, idiomas, currículo pessoal |
-| 8 | Assistência Técnica | Reparo de celular/computador (AuraFix) |
+| 8 | Assistência Técnica | Reparo de celular/computador (AM Consertta) |
 | 9 | Oficina Automotiva | Auto elétrica e som automotivo |
 | 10 | Robótica e IoT | Robôs para casa, empresa e propriedades rurais |
 | 11 | Infoprodutos | Cursos, ebooks, conteúdo pago |
@@ -57,7 +57,7 @@ Espinha dorsal de tudo: apostilas, código-fonte, ISOs da assistência técnica,
 ## Camada 4 — Ambiente de desenvolvimento
 
 Replica em local o que roda em produção, evitando "funciona na minha máquina":
-- Docker Compose padronizado (mesma stack do AuraPOS: .NET 10, PostgreSQL, Next.js)
+- Docker Compose padronizado (mesma stack do AM Kaixara: .NET 10, PostgreSQL, Next.js)
 - CI/CD self-hosted (Gitea Actions) rodando testes a cada push
 
 ## Camada 5 — Produção (hospedagem dos SaaS)
@@ -78,7 +78,7 @@ Aqui não vale self-host total — é onde entra renda de verdade, precisa de up
 - Obsidian + Anki, sincronizados via NAS
 - O sistema de currículo (Topics/Subtopics/Exercises) pode rodar como mais um container na própria infra
 
-## Camada 8 — Assistência Técnica (AuraFix)
+## Camada 8 — Assistência Técnica (AM Consertta)
 
 - Repositório de ISOs no NAS
 - Rede isolada (VLAN da Camada 2) — dispositivo de cliente nunca toca a rede de dev
@@ -109,9 +109,9 @@ Auto elétrica e som automotivo. Kit próprio, separado do resto — não compar
 | 1 | Mês 1–2 | Estação de trabalho + rede básica (Camadas 1 e 2) |
 | 2 | Mês 2–4 | NAS + backup 3-2-1 + gestão documental (Camada 3) |
 | 3 | Mês 3–6 | Ambiente de dev padronizado (Camada 4) |
-| 4 | Mês 6+ | Produção — VPS, AuraPOS, AuraWealth (Camada 5) |
+| 4 | Mês 6+ | Produção — VPS, AM Kaixara, AM Rendara (Camada 5) |
 | Paralelo | Desde o início | Segurança (6) e Estudos (7) |
-| Ao abrir assistência técnica | Sob demanda | VLAN dedicada + AuraFix (Camada 8) |
+| Ao abrir assistência técnica | Sob demanda | VLAN dedicada + AM Consertta (Camada 8) |
 | Ao terminar curso de auto elétrica | Sob demanda | Oficina automotiva (Camada 9) |
 | Ao iniciar projeto de robótica/agro | Sob demanda | Robótica e IoT (Camada 10) |
 | Ao decidir gravar o 1º curso | Sob demanda | Infoprodutos (Camada 11) |

@@ -15,9 +15,9 @@ status: completo
 
 13 sistemas de negócio (ver [[inventario-portfolio-atualizado]]) + 10 serviços compartilhados — todos com Documento de Projeto Final nas 11 seções do [[template-documento-projeto-final|template padrão]]: visão, funcionalidades, RF, interfaces por perfil, RNF, segurança, hardware/distribuição, deploy, modelo de receita, status, pendências.
 
-**Únicos com desenvolvimento ativo:** AuraPOS (Sprint 3-4, rumo a JWT). Todos os outros estão em planejamento completo, sem código.
+**Únicos com desenvolvimento ativo:** AM Kaixara (Sprint 3-4, rumo a JWT). Todos os outros estão em planejamento completo, sem código.
 
-**Sobre READMEs separados por sistema:** a preocupação antiga ("falta verificar se existe README-AuraWealth.md") não se aplica mais — este vault não usa README por sistema, o Documento de Projeto Final de cada um já cumpre esse papel sozinho.
+**Sobre READMEs separados por sistema:** a preocupação antiga ("falta verificar se existe README-AM Rendara.md") não se aplica mais — este vault não usa README por sistema, o Documento de Projeto Final de cada um já cumpre esse papel sozinho.
 
 ---
 
@@ -26,10 +26,10 @@ status: completo
 | Item | Onde está a pendência |
 |---|---|
 | Física básica do livro | Estrutura provisória até você comprar o livro e mostrar o sumário real — ver [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] |
-| `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AgileFlow (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [[revisao-stack-tecnologica]] |
-| Decisão de seguro/responsabilidade em trânsito do AuraFix | Decisão de negócio, não técnica — sinalizada no próprio documento do AuraFix, ainda não fechada |
+| `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [[revisao-stack-tecnologica]] |
+| Decisão de seguro/responsabilidade em trânsito do AM Consertta | Decisão de negócio, não técnica — sinalizada no próprio documento do AM Consertta, ainda não fechada |
 | Vertical de Reprodução & Biotecnologia do AuraVet | Condicionada a uma decisão sua sobre atuação nessa área específica |
-| Certificação CEA/CFP | Pré-requisito pra destravar a camada de consultoria do AuraWealth — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [[plano-mestre-frentes-alan]] |
+| Certificação CEA/CFP | Pré-requisito pra destravar a camada de consultoria do AM Rendara — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [[plano-mestre-frentes-alan]] |
 
 ---
 
@@ -38,15 +38,15 @@ status: completo
 | Componente/módulo | Origem (onde nasceu) | Reaproveitado em | O que precisa ser modificado no destino |
 |---|---|---|---|
 | **Clean Architecture (Domain/Application/Infrastructure/Api) + DDD** | Padrão definido para todo o ecossistema desde o início | Todos os sistemas, sem exceção | Nada estrutural — só as entidades de domínio mudam por sistema |
-| **Autenticação JWT + BCrypt** (`aura-identity`) | AuraPOS | Todos os sistemas do portfólio | Nada além de regras de perfil/permissão específicas de cada sistema |
-| **`tenant_id` + Row-Level Security** | Definido na modularização/comercialização do AuraPOS | Todos os sistemas SaaS do portfólio | Nenhuma mudança de padrão — só a política RLS por tabela em cada sistema novo |
+| **Autenticação JWT + BCrypt** (`aura-identity`) | AM Kaixara | Todos os sistemas do portfólio | Nada além de regras de perfil/permissão específicas de cada sistema |
+| **`tenant_id` + Row-Level Security** | Definido na modularização/comercialização do AM Kaixara | Todos os sistemas SaaS do portfólio | Nenhuma mudança de padrão — só a política RLS por tabela em cada sistema novo |
 | **`aura-licensing`** | Serviço compartilhado, com RF/RNF formal próprio | Todos os sistemas SaaS do portfólio | Grafo de dependência de módulos estendido pra cada sistema novo |
-| **Interfaces trocáveis (`IFonteDeEstoque`, `IEmissorFiscal`, `IFonteDeMovimentacaoBancaria`, `IFonteDeReceita`)** | AuraPOS/AuraWealth | Qualquer sistema que venda produto ou processe pagamento (AuraVet incluído) | AuraVet precisa de uma interface nova pra receita por procedimento/dose |
-| **PostGIS** | Cogitado desde o início como "só onde há geolocalização" | Aura Delivery (rota de entrega), AuraVet (atendimento domiciliar) | Vale desenhar o uso de forma compartilhável entre os dois, mesmo problema de fundo |
+| **Interfaces trocáveis (`IFonteDeEstoque`, `IEmissorFiscal`, `IFonteDeMovimentacaoBancaria`, `IFonteDeReceita`)** | AM Kaixara/AM Rendara | Qualquer sistema que venda produto ou processe pagamento (AuraVet incluído) | AuraVet precisa de uma interface nova pra receita por procedimento/dose |
+| **PostGIS** | Cogitado desde o início como "só onde há geolocalização" | AM Rotara (rota de entrega), AuraVet (atendimento domiciliar) | Vale desenhar o uso de forma compartilhável entre os dois, mesmo problema de fundo |
 | **Cloudflare R2** | Momentos/Cupido (armazenamento de mídia) | AuraVet (laudos, imagens de exame, fotos de internação) | Nenhuma mudança — mesmo provedor, buckets/políticas diferentes |
-| **SignalR (tempo real)** | AuraPOS (dashboard) | AuraVet (status de internação ao vivo) | Nenhuma mudança de tecnologia — só eventos/hubs específicos |
-| **Módulo de Ordem de Serviço** | Assistência técnica → formalizado dentro de [[aurafix-sistema-assistencia-tecnica|AuraFix]] | Base do módulo de atendimento do AuraVet | Já é base de código real, não mais conceitual |
-| **`aura-goals`** | Momentos/Cupido ↔ AuraWealth, com RF/RNF formal próprio | Nenhum outro sistema do momento | Sem uso adicional previsto |
+| **SignalR (tempo real)** | AM Kaixara (dashboard) | AuraVet (status de internação ao vivo) | Nenhuma mudança de tecnologia — só eventos/hubs específicos |
+| **Módulo de Ordem de Serviço** | Assistência técnica → formalizado dentro de [[consertta-sistema-assistencia-tecnica|AM Consertta]] | Base do módulo de atendimento do AuraVet | Já é base de código real, não mais conceitual |
+| **`aura-goals`** | Momentos/Cupido ↔ AM Rendara, com RF/RNF formal próprio | Nenhum outro sistema do momento | Sem uso adicional previsto |
 
 ---
 

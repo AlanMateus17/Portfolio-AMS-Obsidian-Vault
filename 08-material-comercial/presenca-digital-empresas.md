@@ -32,7 +32,7 @@ status: completo
 - **About:** reescrito cobrindo as três frentes (dev, assistência, educação)
 - **Experiência:** 4 cargos — Fundador/Dev, Técnico em Assistência (em estruturação), Professor, Técnico de Reparo
 - **Competências:** inclui Apple e Xiaomi, além do stack técnico
-- **Projetos:** AuraPOS e Aura Delivery
+- **Projetos:** AM Kaixara e AM Rotara
 - Personalizar URL + ativar "Aberto para trabalho"
 
 ## 3. Instagram
@@ -70,7 +70,7 @@ status: completo
 
 **Semana 1 — Base digital:** repositório de perfil no GitHub → README preenchido → repositório `seu-usuario.github.io` → logo do grupo (Canva) → portfólio inicial publicado
 
-**Semana 2 — LinkedIn:** foto/banner → headline → About → 4 experiências → competências → projetos AuraPOS/Delivery → URL personalizada + "Aberto para trabalho"
+**Semana 2 — LinkedIn:** foto/banner → headline → About → 4 experiências → competências → projetos AM Kaixara/Delivery → URL personalizada + "Aberto para trabalho"
 
 **Semana 3 — WhatsApp Business e Instagram:** perfil Business configurado → mensagem de saudação → 5 respostas rápidas → catálogo de serviços → perfil Instagram → bio → 6 destaques → primeiro post
 

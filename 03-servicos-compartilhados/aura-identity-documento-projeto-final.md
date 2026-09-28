@@ -14,7 +14,7 @@ Segue a estrutura fixa do [[template-documento-projeto-final]]. Primeiro dos 4 s
 
 Serviço central de identidade e autenticação, consumido por todos os sistemas do portfólio. Hoje, JWT+BCrypt é implementado de forma independente em 7 sistemas diferentes — a mesma lógica de segurança mais sensível de todo o portfólio, escrita 7 vezes, com 7 chances de erro em vez de uma.
 
-**Diferencial de inovação:** não é só "SSO" no sentido corporativo tradicional — é o que viabiliza de verdade a "conta única de cliente" que o `aura-licensing` hoje só resolve pela metade (ele sabe quais produtos um cliente tem, mas cada produto ainda pede login separado). Com o `aura-identity`, um cliente que compra AuraPOS e AuraWealth faz login uma vez, navega entre os dois sem re-autenticar.
+**Diferencial de inovação:** não é só "SSO" no sentido corporativo tradicional — é o que viabiliza de verdade a "conta única de cliente" que o `aura-licensing` hoje só resolve pela metade (ele sabe quais produtos um cliente tem, mas cada produto ainda pede login separado). Com o `aura-identity`, um cliente que compra AM Kaixara e AM Rendara faz login uma vez, navega entre os dois sem re-autenticar.
 
 ---
 
@@ -74,7 +74,7 @@ Serviço central de identidade e autenticação, consumido por todos os sistemas
 |---|---|---|
 | Alta disponibilidade (próprio, elevado a crítico) | Indisponibilidade do `aura-identity` bloqueia login em **todo** o portfólio simultaneamente | É o segundo SPOF do portfólio, depois do `aura-licensing` — talvez o primeiro em severidade, porque sem login nenhum sistema é usável, mesmo com módulo pago ativo |
 | RNFT-S01/S02 (série de segurança) | Emissão de token e gestão de credencial seguem o mesmo padrão de segurança já formalizado para licenciamento de instalador | Autenticação é a superfície mais sensível de qualquer sistema — não admite padrão inferior ao já estabelecido |
-| RNFT06 (LGPD) | Concentra credencial e dado de identidade de todos os clientes de todos os sistemas | Cumpre obrigação legal — é, depois do AuraWealth e do `aura-licensing`, o terceiro maior alvo de valor para um atacante |
+| RNFT06 (LGPD) | Concentra credencial e dado de identidade de todos os clientes de todos os sistemas | Cumpre obrigação legal — é, depois do AM Rendara e do `aura-licensing`, o terceiro maior alvo de valor para um atacante |
 | Rate limiting agressivo (próprio) | Login e recuperação de senha devem ter limite de tentativa rígido, mais restritivo que qualquer outro endpoint do portfólio | É o alvo natural de ataque de força bruta e credential stuffing, dado que concentra acesso a tudo |
 
 ---
@@ -86,7 +86,7 @@ Serviço central de identidade e autenticação, consumido por todos os sistemas
 | Dados | Concentra credencial (mesmo com hash/salt) de todos os clientes de todos os sistemas — comprometer este serviço é o pior cenário de segurança possível do portfólio inteiro |
 | Rede/API | Cada sistema consumidor autentica com credencial própria pra validar token, nunca compartilhada — mesmo princípio já aplicado ao `aura-licensing` |
 | Isolamento de escopo | Token de um sistema nunca deve ser aceito por outro sistema sem validação explícita de escopo (RF02) |
-| Auditoria externa (RNFT-S06) | **Prioridade máxima absoluta do portfólio inteiro** — acima até do AuraWealth e do `aura-licensing`, porque comprometer o `aura-identity` compromete o acesso a todos os outros |
+| Auditoria externa (RNFT-S06) | **Prioridade máxima absoluta do portfólio inteiro** — acima até do AM Rendara e do `aura-licensing`, porque comprometer o `aura-identity` compromete o acesso a todos os outros |
 
 ---
 
@@ -122,4 +122,4 @@ Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml`, pipe
 1. **Redundância de deploy** — mesma decisão do `aura-licensing`, aqui com urgência ainda maior.
 2. **Política de dois fatores** (RF05) — obrigatório por padrão ou opt-in por tenant, ainda não decidido.
 3. **Painel de administração de conta** (seção 4.3) — ainda sem RF formal, prioridade alta dado o papel central do serviço.
-4. **Ordem de migração dos 7 sistemas que hoje implementam autenticação própria** — o AuraPOS já está em código (Sprint 3-4); migrar um sistema já em desenvolvimento para um serviço central externo é decisão que precisa de plano próprio, não é só "trocar depois".
+4. **Ordem de migração dos 7 sistemas que hoje implementam autenticação própria** — o AM Kaixara já está em código (Sprint 3-4); migrar um sistema já em desenvolvimento para um serviço central externo é decisão que precisa de plano próprio, não é só "trocar depois".

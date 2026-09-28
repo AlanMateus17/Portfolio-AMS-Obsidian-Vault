@@ -25,7 +25,7 @@ Cada linha é um bloco de conteúdo, com: **prioridade** (P0 = bloqueia tudo o r
 | 1 | Passo 1-8: Lógica → C# → API → EF Core → Teste → Frontend → Arquitetura | Agora, sequencial | [[passo-a-passo-mestre-desde-o-inicio]] |
 | 2 | Matemática — Parte I e II do livro (Lógica, Teoria dos Números) | Junto aos Passos 1-5 | [[matematica-e-desenvolvimento-integrado]] |
 | 3 | Inglês — Fase A/B (nivelamento + troca de fonte técnica) | Desde o Passo 1 | [[ingles-espanhol-integrado]], [[metodo-correto-estudo-idiomas]] |
-| 4 | Passo 9-14: Deploy → Performance → Extração de plataforma → Aura Delivery e demais sistemas | Depois do Passo 8 | [[passo-a-passo-mestre-desde-o-inicio]] |
+| 4 | Passo 9-14: Deploy → Performance → Extração de plataforma → AM Rotara e demais sistemas | Depois do Passo 8 | [[passo-a-passo-mestre-desde-o-inicio]] |
 
 **Critério de avanço:** só passa pro próximo item de P0 quando o critério de saída do Passo atual (já definido em cada Passo) estiver cumprido.
 
@@ -37,11 +37,11 @@ Cada linha é um bloco de conteúdo, com: **prioridade** (P0 = bloqueia tudo o r
 |---|---|---|---|
 | **Trilha 42** (29 entregáveis, C#→C/C++) | Depois do Passo 8 | ~10-12 meses | [[trilha-42-circles-oficial-verificado]] |
 | **Matemática avançada** (Partes III-VIII do livro: Estatística, Álgebra, Espaço, Complexos, Contagem) | Distribuída conforme a Trilha 42 e a Fase 7 exigirem (cada capítulo já tem gatilho próprio) | Contínua | [[matematica-e-desenvolvimento-integrado]] |
-| **Python + OR-Tools** (Fase 7) | Quando o Aura Delivery chegar no bloco de roteirização | 5-7 semanas | [[passo-a-passo-mestre-desde-o-inicio]] |
+| **Python + OR-Tools** (Fase 7) | Quando o AM Rotara chegar no bloco de roteirização | 5-7 semanas | [[passo-a-passo-mestre-desde-o-inicio]] |
 | **Pentest/OSCP** (Fase 12) | Depois do Passo 8 (mesmo ponto de entrada da Trilha 42 — rodam em paralelo uma à outra) | 1-2 anos | [[roadmap-seguranca-ofensiva-completo]], [[recursos-links-seguranca-ofensiva]] |
 | **Espanhol** | Depois do Inglês atingir B1-B2 (por volta do Passo 12) | Mais rápido que o inglês | [[ingles-espanhol-integrado]] |
 | **Perfil sênior — itens técnicos** (System Design, Infrastructure as Code) | Depois da Fase 6D (Passo 12) | Pontual, não bloco longo | [[perfil-senior-completo-auditoria]] |
-| **AgileFlow** (GraphQL híbrido via HotChocolate — dentro do .NET, 22º sistema) | Bloco 21B da sequência mestra, depois da Trilha 42 | 2-3 meses | [[agileflow-documento-projeto-final]], [[sequencia-mestra-completa-desde-o-inicio]] |
+| **AM Taskoro** (GraphQL híbrido via HotChocolate — dentro do .NET, 22º sistema) | Bloco 21B da sequência mestra, depois da Trilha 42 | 2-3 meses | [[taskoro-documento-projeto-final]], [[sequencia-mestra-completa-desde-o-inicio]] |
 
 **Como as trilhas P1 convivem entre si:** Trilha 42 e Pentest começam no mesmo ponto (Passo 8) — não precisam ser simultâneas o tempo todo; alterne semana a semana ou bloco a bloco entre elas, conforme o que estiver mais engajante ou com prazo mais apertado no momento.
 
@@ -78,7 +78,7 @@ AGORA (Passos 1-8)
 └── P2: roadmap.sh (auditoria cruzada), Anki
 
 DEPOIS DO PASSO 8 (Passos 9-14 + trilhas longas)
-├── P0: Deploy → Extração de plataforma → Aura Delivery → demais sistemas
+├── P0: Deploy → Extração de plataforma → AM Rotara → demais sistemas
 ├── P1: Trilha 42 (29 entregáveis) — 10-12 meses
 ├── P1: Pentest/OSCP — 1-2 anos
 ├── P1: Espanhol (após Inglês B1-B2)

@@ -12,7 +12,7 @@ Segue a estrutura fixa do [[template-documento-projeto-final]]. Este é o primei
 
 ## 1. Visão do produto
 
-Motor central de licenciamento e cobrança modular, consumido por todos os sistemas do portfólio (AuraPOS, Delivery, AuraWealth, AuraVet, AuraFix, Momentos/Cupido, Loja Virtual). Sabe quais módulos cada `tenant_id` tem ativo, cobra por eles, e aplica penalidade graduada em caso de inadimplência.
+Motor central de licenciamento e cobrança modular, consumido por todos os sistemas do portfólio (AM Kaixara, Delivery, AM Rendara, AuraVet, AM Consertta, Momentos/Cupido, Loja Virtual). Sabe quais módulos cada `tenant_id` tem ativo, cobra por eles, e aplica penalidade graduada em caso de inadimplência.
 
 **Diferencial de inovação:** a maioria dos SaaS pequenos trata licenciamento como on/off binário por produto inteiro. Aqui o licenciamento é **por módulo**, com grafo de dependência (não deixa ativar um módulo sem o pré-requisito técnico dele) — é o que viabiliza toda a estratégia de pacotes comerciais do restante do portfólio. Sem esse motor, nenhum outro sistema consegue vender parte de si mesmo.
 
@@ -36,7 +36,7 @@ Motor central de licenciamento e cobrança modular, consumido por todos os siste
 - Status graduado: ativo → atraso → modo restrito → suspenso → cancelado — nunca corte binário imediato
 
 ### 2.5 Conta única de cliente (adicionado no documento de Distribuição/Segurança)
-- Identidade que sabe quais produtos do portfólio um mesmo cliente possui, viabilizando conexão entre sistemas (ex: AuraPOS + AuraWealth do mesmo dono)
+- Identidade que sabe quais produtos do portfólio um mesmo cliente possui, viabilizando conexão entre sistemas (ex: AM Kaixara + AM Rendara do mesmo dono)
 - Consentimento explícito e credencial de escopo mínimo para cada conexão entre sistemas
 
 ### 2.6 Reconciliação financeira (RNFT-E06)
@@ -91,9 +91,9 @@ Motor central de licenciamento e cobrança modular, consumido por todos os siste
 
 | Categoria | Aplicação específica no aura-licensing |
 |---|---|
-| Dados | Concentra dado de cobrança de todos os clientes de todos os sistemas — é, depois do AuraWealth, o segundo maior alvo de valor para um atacante |
+| Dados | Concentra dado de cobrança de todos os clientes de todos os sistemas — é, depois do AM Rendara, o segundo maior alvo de valor para um atacante |
 | Rede/API | Todo sistema consumidor autentica com credencial própria, nunca compartilhada entre sistemas — comprometer um sistema não deve comprometer o acesso de outro ao `aura-licensing` |
-| Auditoria externa (RNFT-S06) | Prioridade máxima, mesmo nível do AuraWealth — é o SPOF financeiro do portfólio inteiro |
+| Auditoria externa (RNFT-S06) | Prioridade máxima, mesmo nível do AM Rendara — é o SPOF financeiro do portfólio inteiro |
 
 ---
 

@@ -55,22 +55,22 @@ Você não precisa navegar pelas pastas do computador — use os links abaixo. O
 ## 2️⃣ Sistemas de Negócio (13)
 *Consulte só o sistema que você estiver construindo no momento*
 
-- [[aurapos-documento-projeto-final|AuraPOS]] ⭐ *— o primeiro, em desenvolvimento*
-  - [[aurapos-especificacao-tecnica-completa|↳ Especificação técnica completa — modelo de dados, API, fluxos, threat model]]
-  - [[aurapos-frontend-documento-unico|↳ Frontend: Documento Único (Discovery → Teste)]]
-- [[agileflow-documento-projeto-final|AgileFlow]] ⭐ *— 22º sistema, GraphQL híbrido via HotChocolate*
-  - [[agileflow-decisao-stack-portfolio|↳ Decisão de stack, em detalhe]]
-- [[auraarquiteto-documento-projeto-final|AuraArquiteto]] ⭐ *— 23º sistema, diagnóstico por IA*
-- [[aura-delivery-documento-projeto-final|Aura Delivery]]
-- [[aurawealth-documento-projeto-final|AuraWealth]]
-- [[sistema-veterinario-requisitos-completos|AuraVet]]
-- [[aurafix-sistema-assistencia-tecnica|AuraFix]]
-- [[momentos-cupido-documento-projeto-final|Momentos/Cupido]]
-- [[loja-virtual-documento-projeto-final|Loja Virtual]]
-- [[auracondo-documento-projeto-final|AuraCondo]]
-- [[auraobra-documento-projeto-final|AuraObra]]
-- [[auraedu-documento-projeto-final|AuraEdu]]
-- [[auraagenda-documento-projeto-final|AuraAgenda]]
+- [[kaixara-documento-projeto-final|AM Kaixara]] ⭐ *— o primeiro, em desenvolvimento*
+  - [[kaixara-especificacao-tecnica-completa|↳ Especificação técnica completa — modelo de dados, API, fluxos, threat model]]
+  - [[kaixara-frontend-documento-unico|↳ Frontend: Documento Único (Discovery → Teste)]]
+- [[taskoro-documento-projeto-final|AM Taskoro]] ⭐ *— 22º sistema, GraphQL híbrido via HotChocolate*
+  - [[taskoro-decisao-stack-portfolio|↳ Decisão de stack, em detalhe]]
+- [[projeta-documento-projeto-final|AM Projeta]] ⭐ *— 23º sistema, diagnóstico por IA*
+- [[rotara-documento-projeto-final|AM Rotara]]
+- [[rendara-documento-projeto-final|AM Rendara]]
+- [[petara-requisitos-completos|AuraVet]]
+- [[consertta-sistema-assistencia-tecnica|AM Consertta]]
+- [[vynla-documento-projeto-final|Momentos/Cupido]]
+- [[vendra-documento-projeto-final|Loja Virtual]]
+- [[predara-documento-projeto-final|AM Predara]]
+- [[canteira-documento-projeto-final|AM Canteira]]
+- [[saberia-documento-projeto-final|AM Saberia]]
+- [[horaria-documento-projeto-final|AM Horaria]]
 
 ## 3️⃣ Serviços Compartilhados (10)
 *Infraestrutura interna — consulte quando o sistema ativo precisar de um destes*

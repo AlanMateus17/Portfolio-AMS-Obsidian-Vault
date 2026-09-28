@@ -4,21 +4,21 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# Aura Delivery — Documento de Projeto Final
+# AM Rotara — Documento de Projeto Final
 
-> **Nota de reconciliação:** este documento trata o Aura Delivery como o sistema de logística completo (pedido, roteirização, entregador, rastreamento), distinto da "Loja Virtual" (módulo de catálogo/checkout simples, dependente do AuraPOS) — ver seção 11. Segue a estrutura fixa definida no [[template-documento-projeto-final]].
+> **Nota de reconciliação:** este documento trata o AM Rotara como o sistema de logística completo (pedido, roteirização, entregador, rastreamento), distinto da "Loja Virtual" (módulo de catálogo/checkout simples, dependente do AM Kaixara) — ver seção 11. Segue a estrutura fixa definida no [[template-documento-projeto-final]].
 
 ---
 
 ## 1. Visão do produto
 
-Plataforma de logística de entrega multi-tenant, conectada nativamente ao AuraPOS como fonte única de verdade de produto/estoque/pedido.
+Plataforma de logística de entrega multi-tenant, conectada nativamente ao AM Kaixara como fonte única de verdade de produto/estoque/pedido.
 
 **Diferencial de inovação:**
 - **Roteirização real via otimização matemática (OR-Tools), não "entregador mais próximo"** — resolve como problema de roteirização de veículos (VRP), permitindo lote de múltiplas entregas numa rota otimizada
-- **Estoque nunca diverge** — pedido no Delivery debita o mesmo estoque do balcão físico em tempo real, por ser o mesmo dado do AuraPOS, não uma cópia sincronizada por webhook de terceiro
+- **Estoque nunca diverge** — pedido no Delivery debita o mesmo estoque do balcão físico em tempo real, por ser o mesmo dado do AM Kaixara, não uma cópia sincronizada por webhook de terceiro
 - **Comissão pensada para o pequeno lojista** — sem o peso de operação nacional financiada a bilhões (iFood/Rappi historicamente cobram entre 12-27% dependendo do plano), pode se posicionar com comissão menor como diferencial direto
-- **Fidelidade cruzada no ecossistema** — pontos ganhos numa compra futuramente resgatáveis em outro produto Aura (AuraVet, AuraFix), diferencial que nenhuma plataforma isolada do mercado consegue oferecer
+- **Fidelidade cruzada no ecossistema** — pontos ganhos numa compra futuramente resgatáveis em outro produto Aura (AuraVet, AM Consertta), diferencial que nenhuma plataforma isolada do mercado consegue oferecer
 
 ---
 
@@ -26,7 +26,7 @@ Plataforma de logística de entrega multi-tenant, conectada nativamente ao AuraP
 
 ### 2.1 Bloco 1 — MVP (pedido + geolocalização)
 - Cadastro de conta PF/PJ com autenticação JWT (mesma base do resto do ecossistema)
-- Catálogo de pedido conectado ao AuraPOS (mesma fonte de produto/estoque/preço)
+- Catálogo de pedido conectado ao AM Kaixara (mesma fonte de produto/estoque/preço)
 - Geolocalização do endereço de entrega e da loja de origem (PostGIS)
 - Checkout com pagamento online
 
@@ -48,7 +48,7 @@ Plataforma de logística de entrega multi-tenant, conectada nativamente ao AuraP
 | ID | Requisito | Para que serve |
 |---|---|---|
 | RF01 | Cadastro de conta PF/PJ com autenticação JWT | Base de identidade compartilhada com o resto do ecossistema, sem duplicar cadastro |
-| RF02 | Catálogo de pedido conectado ao AuraPOS (mesma fonte de produto/estoque/preço) | Evita divergência de preço/estoque entre canal de venda e operação de entrega |
+| RF02 | Catálogo de pedido conectado ao AM Kaixara (mesma fonte de produto/estoque/preço) | Evita divergência de preço/estoque entre canal de venda e operação de entrega |
 | RF03 | Geolocalização de endereço de entrega e loja de origem | Pré-requisito para cálculo de distância, roteirização e estimativa de tempo |
 | RF04 | Checkout com pagamento online | Permite fechar o pedido sem depender de pagamento na entrega |
 | RF05 | Rastreamento de entregador em tempo real | Reduz ansiedade do cliente e ligação de suporte perguntando "cadê meu pedido" |
@@ -65,8 +65,8 @@ Plataforma de logística de entrega multi-tenant, conectada nativamente ao AuraP
 
 O Delivery tem quatro perfis de usuário reais, e cada um precisa de caminho completo — cadastro, uso do dia a dia, e suporte quando algo dá errado. Um sistema de entrega que só pensa no "pedido feito com sucesso" e não nesses quatro caminhos completos é exatamente o que trava usuário na prática.
 
-### 4.1 Lojista (parcialmente coberto pelo AuraPOS)
-- **Cadastro:** já resolvido via conta AuraPOS existente — não precisa de cadastro duplicado
+### 4.1 Lojista (parcialmente coberto pelo AM Kaixara)
+- **Cadastro:** já resolvido via conta AM Kaixara existente — não precisa de cadastro duplicado
 - **Uso:** painel de gestão de pedido Delivery (aceitar/recusar pedido, tempo estimado de preparo, status), configuração de área de entrega e taxa
 - **Suporte:** canal para contestar cobrança de comissão, reportar problema com entregador específico
 
@@ -96,7 +96,7 @@ Este é o mais importante dos quatro para "ninguém ficar barrado", porque é o 
 | RNFT06 (LGPD) | Dado de cliente e de entregador, incluindo geolocalização — categoria sensível | Cumprir obrigação legal e evitar exposição indevida de localização de pessoa física |
 | RNFT07 (BOLA) | Toda rota que recebe ID de pedido deve validar que o usuário autenticado tem permissão sobre aquele pedido específico | Impede que um cliente veja/altere o pedido de outro só trocando o ID na URL |
 | RNFT09 (idempotência de escrita) | Criação de pedido e confirmação de pagamento devem aceitar chave de idempotência | Evita pedido duplicado se o app reenviar a requisição por instabilidade de rede |
-| RNFT-E01 (concorrência de estoque) | Pedido no Delivery decrementa o mesmo estoque do AuraPOS — mesmo risco de concorrência multicanal já mapeado | Impede vender o mesmo item por dois canais ao mesmo tempo |
+| RNFT-E01 (concorrência de estoque) | Pedido no Delivery decrementa o mesmo estoque do AM Kaixara — mesmo risco de concorrência multicanal já mapeado | Impede vender o mesmo item por dois canais ao mesmo tempo |
 | RNFT-E02 (idempotência de pagamento) | Processa pagamento online | Evita cobrança duplicada em caso de webhook reenviado |
 | RNFT-E03 (fila para picos) | Especialmente relevante em horário de pico de almoço/jantar | Evita que o checkout trave inteiro por lentidão em etapa não crítica (emissão fiscal, notificação) |
 | RNFT-E04 (índice por tenant) | Consultas de pedido/rota devem indexar por `tenant_id` | Evita que consulta de um lojista fique lenta pelo volume de outro |
@@ -113,19 +113,19 @@ Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]
 
 | Categoria | Aplicação específica no Delivery |
 |---|---|
-| Código/SDLC (RNFT-S05) | Scan de dependência automatizado no pipeline, mesmo padrão do AuraPOS |
+| Código/SDLC (RNFT-S05) | Scan de dependência automatizado no pipeline, mesmo padrão do AM Kaixara |
 | Rede/API | Autenticação JWT + rate limiting em endpoints de criação de pedido e atualização de localização (superfície de abuso real: spam de pedido falso, spoofing de localização de entregador) |
 | Dados | Geolocalização tratada como dado sensível (já detalhado na seção 5); retenção limitada — não guardar histórico de rota além do necessário para disputa/suporte |
-| Conexão entre sistemas (RNFT-S03/S04) | Ligação Delivery ↔ AuraPOS de um mesmo cliente segue consentimento explícito e escopo mínimo, mesmo padrão do resto do portfólio |
+| Conexão entre sistemas (RNFT-S03/S04) | Ligação Delivery ↔ AM Kaixara de um mesmo cliente segue consentimento explícito e escopo mínimo, mesmo padrão do resto do portfólio |
 | Auditoria externa (RNFT-S06) | Antes de lançamento público, pentest de escopo definido deve cobrir especificamente o endpoint de atualização de localização e o fluxo de pagamento/split — são os dois pontos de maior superfície de abuso deste sistema em particular |
 
 ---
 
 ## 7. Hardware, instalador e distribuição
 
-**Não aplicável no sentido do AuraPOS/AuraFix.** O Delivery é SaaS puro (backend + apps móveis), sem componente físico de hardware e sem necessidade do modelo de instalador executável. A única distribuição física indireta é o app do entregador/cliente rodando em dispositivo móvel comum (sem hardware dedicado como impressora fiscal ou balança).
+**Não aplicável no sentido do AM Kaixara/AM Consertta.** O Delivery é SaaS puro (backend + apps móveis), sem componente físico de hardware e sem necessidade do modelo de instalador executável. A única distribuição física indireta é o app do entregador/cliente rodando em dispositivo móvel comum (sem hardware dedicado como impressora fiscal ou balança).
 
-Distribuição comercial segue o padrão de pacotes + `aura-licensing`: cliente escolhe entre Delivery isolado, combinado com AuraPOS, ou parte de um combo maior (ver seção 9).
+Distribuição comercial segue o padrão de pacotes + `aura-licensing`: cliente escolhe entre Delivery isolado, combinado com AM Kaixara, ou parte de um combo maior (ver seção 9).
 
 ---
 
@@ -133,7 +133,7 @@ Distribuição comercial segue o padrão de pacotes + `aura-licensing`: cliente 
 
 - Backend: mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-compose.yml` de produção, pipeline GitHub Actions (build → teste → deploy)
 - Apps móveis (entregador/cliente): pipeline de build/distribuição próprio, a definir junto com a decisão de plataforma (PWA vs. nativo) — PWA reaproveita o mesmo pipeline web; nativo exigiria pipeline de loja de aplicativo (Google Play/App Store) separado
-- Deploy em serviço gerenciado (AWS ou Azure), mesma decisão pendente registrada no AuraPOS
+- Deploy em serviço gerenciado (AWS ou Azure), mesma decisão pendente registrada no AM Kaixara
 
 ---
 
@@ -143,14 +143,14 @@ Distribuição comercial segue o padrão de pacotes + `aura-licensing`: cliente 
 |---|---|
 | Comissão por pedido online | Percentual sobre cada venda feita pelo canal Delivery |
 | Taxa de entrega | Repassada ou compartilhada entre lojista e entregador, via split automático (2.3) |
-| Pacote "Integrado" com o AuraPOS | Delivery como módulo adicional dentro de um pacote comercial maior |
+| Pacote "Integrado" com o AM Kaixara | Delivery como módulo adicional dentro de um pacote comercial maior |
 | Delivery standalone | Vendável sozinho para quem só precisa da logística — depende da decisão pendente na seção 11 |
 
 ---
 
 ## 10. Status atual de desenvolvimento
 
-**Nenhum código foi escrito ainda para o Aura Delivery.** Diferente do AuraPOS (Sprint 3-4 em andamento), este sistema está inteiramente em estágio de planejamento — RF/RNF, checklist de execução do MVP e README já existem como documentos, mas nenhuma linha de código do backend ou dos apps foi iniciada. Isso é uma vantagem real neste momento: toda a auditoria de escala/segurança/distribuição pode ser incorporada ao design desde o primeiro commit, sem custo de retrofit como aconteceu no AuraPOS.
+**Nenhum código foi escrito ainda para o AM Rotara.** Diferente do AM Kaixara (Sprint 3-4 em andamento), este sistema está inteiramente em estágio de planejamento — RF/RNF, checklist de execução do MVP e README já existem como documentos, mas nenhuma linha de código do backend ou dos apps foi iniciada. Isso é uma vantagem real neste momento: toda a auditoria de escala/segurança/distribuição pode ser incorporada ao design desde o primeiro commit, sem custo de retrofit como aconteceu no AM Kaixara.
 
 ---
 
@@ -158,7 +158,7 @@ Distribuição comercial segue o padrão de pacotes + `aura-licensing`: cliente 
 
 1. **Resolver a ambiguidade Delivery vs. Loja Virtual** — confirmar que são produtos diferentes, conforme a nota no topo deste documento.
 2. **App nativo vs. PWA** para entregador e cliente final — mesma decisão pendente do AuraVet; vale decidir uma vez para os dois casos, não separadamente.
-3. **Delivery vendável isolado ou só como módulo do AuraPOS** — muda o RF/RNF de "standalone" citado na seção 9.
-4. **AWS vs. Azure** — mesma pendência do AuraPOS, decisão única para todo o portfólio, não por sistema.
+3. **Delivery vendável isolado ou só como módulo do AM Kaixara** — muda o RF/RNF de "standalone" citado na seção 9.
+4. **AWS vs. Azure** — mesma pendência do AM Kaixara, decisão única para todo o portfólio, não por sistema.
 5. **Critério de verificação do entregador no onboarding** (seção 4.2) — decisão de negócio (que nível de checagem de documento é exigido antes de aprovar um entregador) precisa ser tomada antes de formalizar o RF desse fluxo.
-6. **Painel de suporte interno** — RESOLVIDO: o RF10 acima já cobre a necessidade local, mas a visão cruzada entre sistemas (ex: um pedido com problema de estoque compartilhado com o AuraPOS) agora é responsabilidade do `aura-support`, já formalizado como serviço compartilhado.
+6. **Painel de suporte interno** — RESOLVIDO: o RF10 acima já cobre a necessidade local, mas a visão cruzada entre sistemas (ex: um pedido com problema de estoque compartilhado com o AM Kaixara) agora é responsabilidade do `aura-support`, já formalizado como serviço compartilhado.

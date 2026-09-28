@@ -6,13 +6,13 @@ status: completo
 
 # aura-vault — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Décimo serviço compartilhado — nasceu da observação de que AuraWealth, AuraVet, AuraAgenda e AuraObra estavam reimplementando, cada um à sua maneira, o mesmo problema: como proteger e isolar dado de sensibilidade máxima.
+Segue a estrutura fixa do [[template-documento-projeto-final]]. Décimo serviço compartilhado — nasceu da observação de que AM Rendara, AuraVet, AM Horaria e AM Canteira estavam reimplementando, cada um à sua maneira, o mesmo problema: como proteger e isolar dado de sensibilidade máxima.
 
 ---
 
 ## 1. Visão do produto
 
-Serviço central de proteção de dado extra-sensível: criptografia de campo, gestão de chave, controle de acesso reforçado e trilha de auditoria imutável. Consumido hoje por AuraWealth (dado bancário), AuraVet (prontuário clínico veterinário), AuraAgenda (prontuário psicológico) e AuraObra (documento contratual e dado pessoal de alto valor).
+Serviço central de proteção de dado extra-sensível: criptografia de campo, gestão de chave, controle de acesso reforçado e trilha de auditoria imutável. Consumido hoje por AM Rendara (dado bancário), AuraVet (prontuário clínico veterinário), AM Horaria (prontuário psicológico) e AM Canteira (documento contratual e dado pessoal de alto valor).
 
 **Diferencial de inovação:** não é só "criptografar campo" — é reconhecer que cada um desses quatro sistemas tem uma **regra de acesso e retenção legalmente diferente** (LGPD financeiro, sigilo profissional do CFMV, sigilo profissional do CFP, obrigação contratual), e ainda assim compartilhar o mesmo motor técnico. A complexidade de "qual regra se aplica a qual dado" fica centralizada e configurável, em vez de cada sistema decidir sozinho e correr risco de errar de forma diferente.
 
@@ -50,13 +50,13 @@ Serviço central de proteção de dado extra-sensível: criptografia de campo, g
 | RF04 | Registrar todo acesso a dado protegido como evento imutável, via integração com `aura-historico` | Sustenta auditoria e defesa em caso de disputa, sem duplicar motor de histórico |
 | RF05 | Aplicar prazo de retenção e regra de exclusão/anonimização por categoria de dado | Cumpre obrigação legal específica de cada categoria sem depender de controle manual por sistema |
 | RF06 | Suportar procedimento de acesso emergencial formal, sempre auditado, nunca silencioso | Cobre o caso legítimo de exceção (ordem judicial) sem abrir brecha de acesso não controlado |
-| RF07 | Impedir que o `aura-support` acesse conteúdo de dado protegido por categoria restrita (ex: prontuário psicológico), mesmo em diagnóstico de suporte | Formaliza, de forma centralizada, a mesma restrição já identificada individualmente no AuraAgenda — agora vale para qualquer sistema que usar este serviço |
+| RF07 | Impedir que o `aura-support` acesse conteúdo de dado protegido por categoria restrita (ex: prontuário psicológico), mesmo em diagnóstico de suporte | Formaliza, de forma centralizada, a mesma restrição já identificada individualmente no AM Horaria — agora vale para qualquer sistema que usar este serviço |
 
 ---
 
 ## 4. Sistemas e interfaces paralelas por perfil de usuário
 
-### 4.1 Sistema consumidor (AuraWealth, AuraVet, AuraAgenda, AuraObra, e futuros)
+### 4.1 Sistema consumidor (AM Rendara, AuraVet, AM Horaria, AM Canteira, e futuros)
 - **Uso:** solicita criptografia/decriptografia e validação de acesso via API — máquina a máquina
 - Não tem usuário humano direto neste papel
 
@@ -125,7 +125,7 @@ Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml`, pipe
 ## 11. Pendências e decisões em aberto
 
 1. **Escolha do provedor de KMS/HSM** (AWS KMS, Azure Key Vault, HashiCorp Vault) — decisão técnica ainda não tomada.
-2. **Consolidação formal das políticas de retenção por categoria** — hoje cada sistema de origem (AuraWealth, AuraVet, AuraAgenda, AuraObra) descreve sua própria regra em texto; precisa virar configuração formal única dentro deste serviço, sem perder nenhuma nuance legal específica de cada um.
+2. **Consolidação formal das políticas de retenção por categoria** — hoje cada sistema de origem (AM Rendara, AuraVet, AM Horaria, AM Canteira) descreve sua própria regra em texto; precisa virar configuração formal única dentro deste serviço, sem perder nenhuma nuance legal específica de cada um.
 3. **Painel de configuração de política e auditoria** (seção 4.3) — ainda sem RF formal, prioridade alta dado o poder deste serviço.
 4. **Definição precisa do procedimento de break-glass** (RF06) — quem pode acionar, sob qual justificativa documentada, ainda não desenhado com detalhe operacional.
 5. **Ordem de migração dos 4 sistemas que hoje descrevem proteção própria** — nenhum ainda tem código escrito, então a migração aqui é mais simples que a do `aura-identity` (que já lida com um sistema em produção), mas ainda exige planejamento de qual sistema integra primeiro.

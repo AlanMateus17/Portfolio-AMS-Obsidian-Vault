@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraFix — Sistema Central da Assistência Técnica e Loja (Nome provisório)
+# AM Consertta — Sistema Central da Assistência Técnica e Loja (Nome provisório)
 ### Ordem de Serviço + Loja Física (PDV) + Loja Online
 
 > **Nota sobre estrutura:** documento criado antes do [[template-documento-projeto-final]] existir, com numeração própria. Conteúdo equivalente às seções 1, 2, 4, 6, 8-9 do template já existe aqui. As seções 8-10, adicionadas ao final, cobrem perfis de usuário, segurança concreta e pendências — equivalente às seções 3, 5 e 10 do template.
@@ -13,13 +13,13 @@ status: completo
 
 Você pediu "mais um sistema perfeito" — mas a notícia boa é que **isso não é um sistema novo do zero**. É a convergência de três peças que já existem ou já estavam planejadas no seu portfólio, nunca antes juntadas com esse propósito:
 
-| Peça | Situação atual | Papel no AuraFix |
+| Peça | Situação atual | Papel no AM Consertta |
 |---|---|---|
-| **AuraPOS** | Em desenvolvimento ativo (Sprint 3-4) | Vira o motor de PDV/estoque da loja física — reaproveitado quase inteiro, sem reescrever nada de produto/estoque/venda/caixa |
-| **Loja Virtual** | Já tinha documento de visão (e-commerce integrado ao estoque do AuraPOS) | Vira a loja online do AuraFix — é literalmente o produto que você já tinha concebido pra isso, só nunca com a assistência técnica como o caso de uso concreto |
+| **AM Kaixara** | Em desenvolvimento ativo (Sprint 3-4) | Vira o motor de PDV/estoque da loja física — reaproveitado quase inteiro, sem reescrever nada de produto/estoque/venda/caixa |
+| **Loja Virtual** | Já tinha documento de visão (e-commerce integrado ao estoque do AM Kaixara) | Vira a loja online do AM Consertta — é literalmente o produto que você já tinha concebido pra isso, só nunca com a assistência técnica como o caso de uso concreto |
 | **Módulo de Ordem de Serviço** | Só identificado como ideia, nunca formalizado (gap apontado no documento de status do portfólio) | É a única peça genuinamente nova — e ao formalizá-la aqui, você fecha ao mesmo tempo a pendência que travava o módulo de atendimento do AuraVet |
 
-Ou seja: planejar o AuraFix bem feito **resolve duas dívidas do portfólio de uma vez** — dá à assistência técnica o sistema que ela precisa, e entrega ao AuraVet a base de Ordem de Serviço que ele já estava esperando reaproveitar.
+Ou seja: planejar o AM Consertta bem feito **resolve duas dívidas do portfólio de uma vez** — dá à assistência técnica o sistema que ela precisa, e entrega ao AuraVet a base de Ordem de Serviço que ele já estava esperando reaproveitar.
 
 ---
 
@@ -48,20 +48,20 @@ Isso não é só "adicionar uma funcionalidade de frete" — é um módulo novo 
 
 ---
 
-### 1.1 Ordem de Serviço (módulo novo — o core do AuraFix)
+### 1.1 Ordem de Serviço (módulo novo — o core do AM Consertta)
 - Abertura de OS com checklist de recebimento (estado do aparelho, acessórios, senha/padrão informado pelo cliente, fotos de entrada)
 - Termo de responsabilidade digital assinado pelo cliente na abertura (LGPD — autorização de acesso a dados do aparelho)
 - Diagnóstico técnico vinculado à OS, com orçamento gerado a partir do diagnóstico
 - Aprovação do orçamento pelo cliente (digital, com registro de quando e como foi aprovado)
-- Reserva automática de peça no estoque (integração direta com o módulo de estoque do AuraPOS) assim que o orçamento é aprovado
+- Reserva automática de peça no estoque (integração direta com o módulo de estoque do AM Kaixara) assim que o orçamento é aprovado
 - Linha do tempo de status da OS (recebido → em diagnóstico → aguardando aprovação → em reparo → controle de qualidade → pronto → entregue), com notificação automática ao cliente a cada mudança
 - Checklist de controle de qualidade antes da entrega
 - Garantia vinculada à OS (prazo, cobertura, histórico de retorno em garantia)
 - Histórico completo de aparelho por cliente (útil para clientes recorrentes — "esse cliente já trouxe esse iPhone duas vezes")
 
-### 1.2 Loja física (reaproveitando o AuraPOS)
+### 1.2 Loja física (reaproveitando o AM Kaixara)
 - Catálogo de peças, acessórios e aparelhos para revenda
-- PDV completo (já existe no AuraPOS — sem necessidade de recriar)
+- PDV completo (já existe no AM Kaixara — sem necessidade de recriar)
 - Controle de estoque compartilhado entre loja física, loja online e reserva automática de OS (é o mesmo estoque, três portas de saída diferentes)
 - Venda avulsa (sem vínculo com OS) — cliente que só quer comprar capinha, película, cabo
 
@@ -117,7 +117,7 @@ Isso não é só "adicionar uma funcionalidade de frete" — é um módulo novo 
 | RF19 | O sistema deve suportar plano de manutenção preventiva empresarial, garantia estendida como produto à parte, e programa de fidelidade | Formaliza as três fontes de receita recorrente do sistema, além do reparo avulso |
 | RF20 | O sistema deve calcular comissionamento por técnico e relatório de rentabilidade por tipo de serviço | Necessário a partir do primeiro técnico contratado, e dá visibilidade de qual serviço realmente vale a pena priorizar |
 
-*(Requisitos de PDV, estoque, financeiro e loja online seguem os RF/RNF já formalizados do AuraPOS e da Loja Virtual — não precisam ser reescritos aqui, só referenciados.)*
+*(Requisitos de PDV, estoque, financeiro e loja online seguem os RF/RNF já formalizados do AM Kaixara e da Loja Virtual — não precisam ser reescritos aqui, só referenciados.)*
 
 ---
 
@@ -160,17 +160,17 @@ Mesmo stack fixo do restante do ecossistema — a única decisão real aqui é a
 
 | Camada | Tecnologia | Observação |
 |---|---|---|
-| Backend | C#/.NET 10, ASP.NET Core (Controllers), Clean Architecture + DDD | Módulo de OS nasce como novo bounded context, consumindo o mesmo serviço de estoque do AuraPOS em vez de duplicar |
+| Backend | C#/.NET 10, ASP.NET Core (Controllers), Clean Architecture + DDD | Módulo de OS nasce como novo bounded context, consumindo o mesmo serviço de estoque do AM Kaixara em vez de duplicar |
 | Banco de dados | PostgreSQL | Sem necessidade de PostGIS aqui (diferente do AuraVet/Delivery) — não há componente de rota neste sistema |
 | Cache/sessão | Redis | Cache de catálogo compartilhado entre PDV e loja online |
 | Tempo real | SignalR | Status de OS em tempo real (painel interno e notificação ao cliente) |
 | Autenticação | JWT + BCrypt | Mesmo padrão |
-| Frontend loja física/admin | Next.js, TypeScript, Tailwind | Reaproveita componentes já existentes do AuraPOS |
+| Frontend loja física/admin | Next.js, TypeScript, Tailwind | Reaproveita componentes já existentes do AM Kaixara |
 | Frontend loja online | Next.js, TypeScript, Tailwind | Reaproveita o que já foi pensado pra Loja Virtual |
 | Cobrança/licenciamento | `aura-licensing` | Mesmo motor — precisa ter seu RF/RNF formalizado antes (gap já apontado no documento de status) |
 | Frete e rastreio | Integração com API dos Correios e/ou transportadora privada | Novo ponto de integração externa deste sistema — não existia nos outros produtos do portfólio nesse formato |
 | Notificação | WhatsApp Business API | Mesmo padrão usado no AuraVet — agora também cobrindo status de envio, não só de OS |
-| Multi-tenant | `tenant_id` + RLS | Mesmo padrão — relevante se algum dia licenciar o AuraFix para outras assistências técnicas |
+| Multi-tenant | `tenant_id` + RLS | Mesmo padrão — relevante se algum dia licenciar o AM Consertta para outras assistências técnicas |
 
 ---
 
@@ -178,8 +178,8 @@ Mesmo stack fixo do restante do ecossistema — a única decisão real aqui é a
 
 **Incluído:**
 - Abertura, diagnóstico, orçamento, aprovação e acompanhamento de status de OS
-- Reserva automática de peça vinculada ao estoque do AuraPOS
-- PDV físico (reaproveitado do AuraPOS, sem retrabalho)
+- Reserva automática de peça vinculada ao estoque do AM Kaixara
+- PDV físico (reaproveitado do AM Kaixara, sem retrabalho)
 - Loja online básica (catálogo, carrinho, checkout, mesmo estoque)
 - **Módulo de Logística e Envios**: cálculo de frete por CEP, geração de etiqueta/rastreio, conferência de recebimento remoto, notificação automática de status — cobrindo os três fluxos (aparelho para conserto, produto vendido, aparelho devolvido)
 - Notificação automática de status por WhatsApp
@@ -199,7 +199,7 @@ Ao formalizar este documento, dois itens da lista de lacunas do status geral do 
 - **Módulo de Ordem de Serviço**: sai de "ideia identificada" para "RF/RNF formalizado" — o AuraVet agora tem uma base real para reaproveitar, não só conceitual.
 - **Loja Virtual**: ganha um caso de uso concreto e um conjunto de requisitos vindo de um cenário real (assistência técnica), o que ajuda a reduzir a incerteza que a própria Claude tinha sinalizado nesse documento anteriormente.
 
-Um terceiro ponto, que surge só agora: como você quer alcance nacional em **todos** os sistemas que vendem produto físico, o **Módulo de Logística e Envios** não deveria nascer só dentro do AuraFix — ele é candidato natural a virar um serviço compartilhado (nos mesmos moldes do `aura-licensing`), reaproveitável por qualquer sistema do portfólio que precise enviar algo fisicamente: a Loja Virtual (quando vender fora do contexto de assistência técnica) e a loja de produtos do AuraVet (ração, medicamento, acessórios) são os dois candidatos mais óbvios. Vale registrar isso como decisão a tomar antes de codificar — construir o módulo já pensando em ser consumido por mais de um sistema custa pouco a mais agora e evita reescrever depois.
+Um terceiro ponto, que surge só agora: como você quer alcance nacional em **todos** os sistemas que vendem produto físico, o **Módulo de Logística e Envios** não deveria nascer só dentro do AM Consertta — ele é candidato natural a virar um serviço compartilhado (nos mesmos moldes do `aura-licensing`), reaproveitável por qualquer sistema do portfólio que precise enviar algo fisicamente: a Loja Virtual (quando vender fora do contexto de assistência técnica) e a loja de produtos do AuraVet (ração, medicamento, acessórios) são os dois candidatos mais óbvios. Vale registrar isso como decisão a tomar antes de codificar — construir o módulo já pensando em ser consumido por mais de um sistema custa pouco a mais agora e evita reescrever depois.
 
 ---
 
@@ -229,7 +229,7 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 
 ### 8.3 Suporte/Operação interna (mesma lacuna dos outros sistemas)
 - Painel para reatribuir OS entre unidades (relevante quando houver mais de uma bancada, seção 1.6), forçar reembolso, gerenciar disputa de aparelho danificado em trânsito
-- **Ainda não especificado como RF formal** — mesmo ponto cego já identificado no AuraPOS, Delivery e AuraVet; vale resolver isso uma vez, de forma reaproveitável entre os quatro sistemas, em vez de reinventar por sistema
+- **Ainda não especificado como RF formal** — mesmo ponto cego já identificado no AM Kaixara, Delivery e AuraVet; vale resolver isso uma vez, de forma reaproveitável entre os quatro sistemas, em vez de reinventar por sistema
 
 ---
 
@@ -237,12 +237,12 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 
 Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]]) a este sistema:
 
-| Categoria | Aplicação específica no AuraFix |
+| Categoria | Aplicação específica no AM Consertta |
 |---|---|
 | Dados sensíveis | Termo de responsabilidade e dado de acesso ao aparelho (senha/padrão informado pelo cliente) — categoria de dado mais sensível deste sistema, exige tratamento equivalente a credencial, nunca texto plano em log |
 | Logística/envio | Endereço de entrega e código de rastreio não deveriam ficar visíveis além do necessário para as partes envolvidas — mesmo princípio de minimização já aplicado à geolocalização do entregador no Delivery |
 | Conexão entre sistemas (RNFT-S03/S04) | O reaproveitamento do módulo de OS pelo AuraVet precisa seguir o mesmo padrão de escopo mínimo — o AuraVet não deve herdar acesso a dado de cliente da assistência técnica só por reaproveitar o módulo |
-| Auditoria externa (RNFT-S06) | Prioridade alta, mesmo nível do AuraPOS — ambos processam pagamento e têm componente físico/local |
+| Auditoria externa (RNFT-S06) | Prioridade alta, mesmo nível do AM Kaixara — ambos processam pagamento e têm componente físico/local |
 
 ---
 
@@ -250,6 +250,6 @@ Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]
 
 1. **Política de seguro/responsabilidade em trânsito** (já sinalizada na seção 1.0) — decisão de negócio pendente antes de formalizar o RF de envio.
 2. **Provedor de frete/transportadora** — Correios, transportadora privada, ou ambos.
-3. **`aura-logistics` como serviço compartilhado ou módulo interno do AuraFix** — decisão arquitetural sinalizada acima, ainda não fechada.
+3. **`aura-logistics` como serviço compartilhado ou módulo interno do AM Consertta** — decisão arquitetural sinalizada acima, ainda não fechada.
 4. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado.
-5. **Nome definitivo do sistema** — "AuraFix" é provisório.
+5. **Nome definitivo do sistema** — "AM Consertta" é provisório.

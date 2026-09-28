@@ -7,7 +7,7 @@ status: completo
 # Template — Documento de Projeto Final de Sistema
 ### Estrutura fixa, usada em todo sistema do portfólio a partir de agora
 
-Todo "Documento de Projeto Final" segue exatamente estas seções, nesta ordem. Se uma seção não se aplica ao sistema em questão (ex: hardware num sistema sem componente físico), ela **permanece no documento com a justificativa explícita do porquê não se aplica** — nunca é omitida silenciosamente, porque omissão silenciosa foi exatamente o problema identificado no documento do Aura Delivery.
+Todo "Documento de Projeto Final" segue exatamente estas seções, nesta ordem. Se uma seção não se aplica ao sistema em questão (ex: hardware num sistema sem componente físico), ela **permanece no documento com a justificativa explícita do porquê não se aplica** — nunca é omitida silenciosamente, porque omissão silenciosa foi exatamente o problema identificado no documento do AM Rotara.
 
 1. **Visão do produto** — o que é, e o diferencial de inovação em relação ao que já existe no mercado
 2. **Funcionalidades completas (estado final)** — por módulo, cobrindo tudo que o sistema terá quando pronto, não só o MVP
@@ -21,4 +21,4 @@ Todo "Documento de Projeto Final" segue exatamente estas seções, nesta ordem. 
 10. **Status atual de desenvolvimento** — o que já existe em código vs. o que é só planejamento; se nada foi codificado ainda, a seção diz isso explicitamente
 11. **Pendências e decisões em aberto** — tudo que ainda depende de uma escolha sua antes do documento ser considerado fechado
 
-Esse é o padrão. Auditoria de conformidade (data desta atualização): **nenhum dos 5 documentos completos até agora (AuraPOS, Aura Delivery, AuraVet, AuraFix, AuraWealth) estava 100% aderente** — AuraPOS/Delivery/AuraWealth não tinham RF formal nenhum, e AuraVet/AuraFix tinham RF sem coluna de propósito. Todos os 5 precisam de correção, aplicada em sequência.
+Esse é o padrão. Auditoria de conformidade (data desta atualização): **nenhum dos 5 documentos completos até agora (AM Kaixara, AM Rotara, AuraVet, AM Consertta, AM Rendara) estava 100% aderente** — AM Kaixara/Delivery/AM Rendara não tinham RF formal nenhum, e AuraVet/AM Consertta tinham RF sem coluna de propósito. Todos os 5 precisam de correção, aplicada em sequência.

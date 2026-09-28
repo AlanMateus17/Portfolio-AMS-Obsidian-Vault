@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AuraArquiteto — Documento de Projeto Final
+# AM Projeta — Documento de Projeto Final
 ### 23º sistema do portfólio — encontrado numa conversa separada, formalizado agora no padrão canônico dos demais
 
 ---
@@ -79,7 +79,7 @@ Sistema de diagnóstico de setup e geração de arquitetura por IA, escalável �
 
 Este sistema **origina** a série transversal `RNFT-IA01–04` (governança de geração por IA), aplicável a qualquer sistema futuro do portfólio que gere conteúdo pra cliente final via IA — ver [[rnft-ia-governanca-geracao-ia]] pro detalhamento completo de cada item.
 
-| ID | Aplicação no AuraArquiteto | Para que serve |
+| ID | Aplicação no AM Projeta | Para que serve |
 |---|---|---|
 | RNFT-IA01 (validação estrutural / golden file) | Todo relatório gerado por IA passa por comparação de schema contra a Base de Conhecimento antes de ser entregue | Garante que a IA não "alucine" uma estrutura fora do padrão esperado |
 | RNFT-IA02 (QA automático de coerência) | Validação de orçamento, disponibilidade e coerência regional (RF06) roda antes da entrega, nunca depois | Impede que um erro de coerência chegue até o cliente final |
@@ -94,13 +94,13 @@ Este sistema **origina** a série transversal `RNFT-IA01–04` (governança de g
 
 ## 6. Segurança de nível profissional
 
-Proteção de dado de rede/financeiro do cliente via `aura-vault` (100% reaproveitado, mesma camada de isolamento já aplicada a AuraWealth/AuraVet/AuraAgenda/AuraObra). Teste `xUnit` "golden file" comparando estrutura gerada por IA contra o schema esperado da Base de Conhecimento — satisfaz RNFT-IA01.
+Proteção de dado de rede/financeiro do cliente via `aura-vault` (100% reaproveitado, mesma camada de isolamento já aplicada a AM Rendara/AuraVet/AM Horaria/AM Canteira). Teste `xUnit` "golden file" comparando estrutura gerada por IA contra o schema esperado da Base de Conhecimento — satisfaz RNFT-IA01.
 
 ---
 
 ## 7. Hardware, instalador e distribuição
 
-**Config Forge** gera arquivo de configuração pro instalador automatizado do kit físico recomendado — é a única ponte do sistema com hardware real, sem agente local próprio (diferente do AuraPOS).
+**Config Forge** gera arquivo de configuração pro instalador automatizado do kit físico recomendado — é a única ponte do sistema com hardware real, sem agente local próprio (diferente do AM Kaixara).
 
 ---
 
@@ -129,7 +129,7 @@ Padrão do portfólio (Docker, GitHub Actions/Gitea Actions), sem desvio.
 
 ## 11. Pendências e decisões em aberto
 
-1. **Pré-requisito explícito de sequência, já registrado como trava formal no Backlog EPIC-AA01:** não começar antes de `aura-copilot` estar validado com uso real em outro sistema (ex: AuraPOS), e `aura-licensing` já cobrando de verdade em pelo menos um sistema
+1. **Pré-requisito explícito de sequência, já registrado como trava formal no Backlog EPIC-AA01:** não começar antes de `aura-copilot` estar validado com uso real em outro sistema (ex: AM Kaixara), e `aura-licensing` já cobrando de verdade em pelo menos um sistema
 2. **Fase 0 jurídica específica** (CNPJ, contrato, seguro de responsabilidade profissional, LGPD) deve rodar em paralelo à maturação técnica acima, não depois dela
 3. Stack com 4 adições específicas sobre o padrão do portfólio: `DocumentFormat.OpenXml` (geração de `.docx`), `QuestPDF` (PDF), `System.Text.Json` + `FluentValidation` (validação de saída de IA), `Hangfire` ou `Quartz.NET` com armazenamento Redis (job agendado pro follow-up 7/30/90 dias)
 

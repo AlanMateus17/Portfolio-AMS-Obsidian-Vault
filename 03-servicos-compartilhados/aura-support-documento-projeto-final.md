@@ -14,7 +14,7 @@ Segue a estrutura fixa do [[template-documento-projeto-final]]. Terceiro dos 4 s
 
 Painel central de suporte técnico e operação interna, com visão cruzada de todos os tenants de todos os sistemas do portfólio. Resolve o problema que, sistema por sistema, sempre ficava registrado como "lacuna, sem RF formal" — em vez de resolver 9 vezes separadas, resolve uma vez, compartilhado.
 
-**Diferencial de inovação:** diferente de uma ferramenta de suporte genérica (Zendesk, Freshdesk), este painel entende a estrutura específica do ecossistema Aura — sabe que um problema pode envolver mais de um sistema ao mesmo tempo (ex: uma meta compartilhada do `aura-goals` que envolve tanto AuraWealth quanto Momentos/Cupido), o que nenhuma ferramenta de mercado tem contexto pra fazer sem configuração manual extensa.
+**Diferencial de inovação:** diferente de uma ferramenta de suporte genérica (Zendesk, Freshdesk), este painel entende a estrutura específica do ecossistema Aura — sabe que um problema pode envolver mais de um sistema ao mesmo tempo (ex: uma meta compartilhada do `aura-goals` que envolve tanto AM Rendara quanto Momentos/Cupido), o que nenhuma ferramenta de mercado tem contexto pra fazer sem configuração manual extensa.
 
 ---
 
@@ -27,7 +27,7 @@ Painel central de suporte técnico e operação interna, com visão cruzada de t
 - Reatribuir pedido/OS, forçar reembolso, reprocessar sincronização travada — ações que hoje, sem esse painel, exigiriam acesso direto ao banco
 
 ### 2.3 Fila de disputa e moderação
-- Reaproveita o conceito já formalizado no Momentos/Cupido (moderação de conteúdo) e no Aura Delivery (fila de disputa) — generaliza para qualquer sistema que precise de fila de revisão humana
+- Reaproveita o conceito já formalizado no Momentos/Cupido (moderação de conteúdo) e no AM Rotara (fila de disputa) — generaliza para qualquer sistema que precise de fila de revisão humana
 
 ### 2.4 Visão financeira agregada
 - Reaproveita o que já foi apontado como necessário no `aura-licensing` (seção 4.2 daquele documento) — receita recorrente consolidada de todo o portfólio, status de inadimplência agregado
@@ -59,7 +59,7 @@ Painel central de suporte técnico e operação interna, com visão cruzada de t
 - **Suporte:** não se aplica — você é quem presta suporte, não quem recebe
 
 ### 4.2 Futuro funcionário de suporte
-- **Cadastro:** criado por você, com controle de acesso por sistema/tenant (um futuro atendente de suporte do AuraFix não precisa necessariamente ver dado do AuraWealth)
+- **Cadastro:** criado por você, com controle de acesso por sistema/tenant (um futuro atendente de suporte do AM Consertta não precisa necessariamente ver dado do AM Rendara)
 - **Uso:** mesmo painel, com escopo de acesso limitado ao que a função exige
 - **Observação:** este é o primeiro documento do portfólio pensado desde o início para múltiplos operadores internos, diferente dos outros sistemas onde "suporte" ainda significa só você
 

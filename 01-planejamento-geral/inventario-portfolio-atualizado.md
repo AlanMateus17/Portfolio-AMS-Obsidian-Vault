@@ -13,19 +13,19 @@ status: completo
 
 | # | Sistema | Documento | Status |
 |---|---|---|---|
-| 1 | **AuraPOS** | `aurapos-documento-projeto-final.md` | ✅ Completo — único em desenvolvimento ativo (Sprint 3-4) |
-| 2 | **Aura Delivery** | `aura-delivery-documento-projeto-final.md` | ✅ Completo — planejamento, sem código |
-| 3 | **AuraWealth** | `aurawealth-documento-projeto-final.md` | ✅ Completo — planejamento, sem código |
-| 4 | **AuraVet** | `sistema-veterinario-requisitos-completos.md` | ✅ Completo — planejamento, sem código. Tem também `AuraVet-Apresentacao-Comercial.docx` (material comercial pra enviar a clínicas interessadas) |
-| 5 | **AuraFix** | `aurafix-sistema-assistencia-tecnica.md` | ✅ Completo — planejamento, sem código |
-| 6 | **Momentos/Cupido** | `momentos-cupido-documento-projeto-final.md` | ✅ Completo — existe protótipo funcional fora do stack padrão (Node/SQLite), pendência de migração registrada |
-| 7 | **Loja Virtual** | `loja-virtual-documento-projeto-final.md` | ✅ Completo — módulo dependente do AuraPOS, nunca vendido isolado |
-| 8 | **AuraCondo** | `auracondo-documento-projeto-final.md` | ✅ Completo — único sistema com componente de controle de acesso físico |
-| 9 | **AuraObra** | `auraobra-documento-projeto-final.md` | ✅ Completo — maior exposição jurídica do portfólio, recomendação de revisão por advogado registrada |
-| 10 | **Gestão escolar/cursinho (AuraEdu)** | `auraedu-documento-projeto-final.md` | ✅ Completo — o mais pessoal do portfólio, já nasce com as 180 apostilas como conteúdo embutido |
-| 11 | **Agendamento genérico de serviço pessoal (AuraAgenda)** | `auraagenda-documento-projeto-final.md` | ✅ Completo — o módulo de prontuário psicológico tem o requisito de isolamento de dado mais rígido de todo o portfólio |
-| 12 | **AgileFlow** | `agileflow-documento-projeto-final.md` | ✅ Completo — revisado: GraphQL via HotChocolate dentro do .NET (não mais React/Node/GraphQL separado), decisão registrada com o critério de quando um desvio de stack se justifica |
-| 13 | **AuraArquiteto** | `auraarquiteto-documento-projeto-final.md` | ✅ Completo — diagnóstico de setup e geração de arquitetura por IA; encontrado numa conversa separada, formalizado agora; origina a série transversal RNFT-IA01-04 |
+| 1 | **AM Kaixara** | `kaixara-documento-projeto-final.md` | ✅ Completo — único em desenvolvimento ativo (Sprint 3-4) |
+| 2 | **AM Rotara** | `rotara-documento-projeto-final.md` | ✅ Completo — planejamento, sem código |
+| 3 | **AM Rendara** | `rendara-documento-projeto-final.md` | ✅ Completo — planejamento, sem código |
+| 4 | **AuraVet** | `petara-requisitos-completos.md` | ✅ Completo — planejamento, sem código. Tem também `AuraVet-Apresentacao-Comercial.docx` (material comercial pra enviar a clínicas interessadas) |
+| 5 | **AM Consertta** | `consertta-sistema-assistencia-tecnica.md` | ✅ Completo — planejamento, sem código |
+| 6 | **Momentos/Cupido** | `vynla-documento-projeto-final.md` | ✅ Completo — existe protótipo funcional fora do stack padrão (Node/SQLite), pendência de migração registrada |
+| 7 | **Loja Virtual** | `vendra-documento-projeto-final.md` | ✅ Completo — módulo dependente do AM Kaixara, nunca vendido isolado |
+| 8 | **AM Predara** | `predara-documento-projeto-final.md` | ✅ Completo — único sistema com componente de controle de acesso físico |
+| 9 | **AM Canteira** | `canteira-documento-projeto-final.md` | ✅ Completo — maior exposição jurídica do portfólio, recomendação de revisão por advogado registrada |
+| 10 | **Gestão escolar/cursinho (AM Saberia)** | `saberia-documento-projeto-final.md` | ✅ Completo — o mais pessoal do portfólio, já nasce com as 180 apostilas como conteúdo embutido |
+| 11 | **Agendamento genérico de serviço pessoal (AM Horaria)** | `horaria-documento-projeto-final.md` | ✅ Completo — o módulo de prontuário psicológico tem o requisito de isolamento de dado mais rígido de todo o portfólio |
+| 12 | **AM Taskoro** | `taskoro-documento-projeto-final.md` | ✅ Completo — revisado: GraphQL via HotChocolate dentro do .NET (não mais React/Node/GraphQL separado), decisão registrada com o critério de quando um desvio de stack se justifica |
+| 13 | **AM Projeta** | `projeta-documento-projeto-final.md` | ✅ Completo — diagnóstico de setup e geração de arquitetura por IA; encontrado numa conversa separada, formalizado agora; origina a série transversal RNFT-IA01-04 |
 
 **Subtotal: 13 de 13 sistemas de negócio documentados.** Somando os 10 serviços compartilhados (seção 2), o portfólio completo soma **23 itens** — 13 sistemas de negócio + 10 serviços compartilhados, não 23 sistemas de negócio.
 
@@ -36,7 +36,7 @@ status: completo
 | # | Serviço | Documento | Status |
 |---|---|---|---|
 | 1 | **`aura-licensing`** | `aura-licensing-documento-projeto-final.md` | ✅ Completo — motor de cobrança/módulo central, único SPOF do portfólio |
-| 2 | **`aura-goals`** | `aura-goals-documento-projeto-final.md` | ✅ Completo — compartilhado entre AuraWealth e Momentos/Cupido |
+| 2 | **`aura-goals`** | `aura-goals-documento-projeto-final.md` | ✅ Completo — compartilhado entre AM Rendara e Momentos/Cupido |
 | 3 | **`aura-historico`** | `aura-historico-documento-projeto-final.md` | ✅ Completo — Clojure/Datomic, fora do stack .NET padrão |
 | 4 | **`aura-analytics`** | `aura-analytics-documento-projeto-final.md` | ✅ Completo — Python/FastAPI, fora do stack .NET padrão |
 | 5 | **`aura-copilot`** | `aura-copilot-documento-projeto-final.md` | ✅ Completo — o mais em estágio de ideia, várias decisões de provedor ainda pendentes |
@@ -44,7 +44,7 @@ status: completo
 | 7 | **`aura-notifications`** | `aura-notifications-documento-projeto-final.md` | ✅ Completo — elimina duplicação de WhatsApp/push/e-mail em pelo menos 5 sistemas |
 | 8 | **`aura-support`** | `aura-support-documento-projeto-final.md` | ✅ Completo — primeiro sistema do portfólio desenhado desde o início para múltiplos operadores internos |
 | 9 | **`aura-logistics`** | `aura-logistics-documento-projeto-final.md` | ✅ Completo — único serviço compartilhado com dependência física indireta (produto enviado é real) |
-| 10 | **`aura-vault`** | `aura-vault-documento-projeto-final.md` | ✅ Completo — nasceu da análise cruzada de AuraWealth, AuraVet, AuraAgenda e AuraObra reimplementando proteção de dado sensível cada um à sua maneira; junto com o `aura-identity`, é o núcleo de segurança crítica do portfólio |
+| 10 | **`aura-vault`** | `aura-vault-documento-projeto-final.md` | ✅ Completo — nasceu da análise cruzada de AM Rendara, AuraVet, AM Horaria e AM Canteira reimplementando proteção de dado sensível cada um à sua maneira; junto com o `aura-identity`, é o núcleo de segurança crítica do portfólio |
 
 **Subtotal: 10 de 10 serviços compartilhados documentados. Nenhum pendente.**
 
@@ -74,7 +74,7 @@ status: completo
 
 ## 5. Ideias registradas, conscientemente não desenvolvidas
 
-- **Gestão de imobiliária/locação** (proprietário, inquilino, imobiliária) — mencionada durante o planejamento do AuraCondo/AuraObra como segundo lugar de reaproveitamento (OS para manutenção do imóvel, cobrança recorrente de aluguel), mas nunca formalizada. Registrada aqui para não se perder de novo, sem compromisso de desenvolvimento.
+- **Gestão de imobiliária/locação** (proprietário, inquilino, imobiliária) — mencionada durante o planejamento do AM Predara/AM Canteira como segundo lugar de reaproveitamento (OS para manutenção do imóvel, cobrança recorrente de aluguel), mas nunca formalizada. Registrada aqui para não se perder de novo, sem compromisso de desenvolvimento.
 
 ---
 
@@ -93,7 +93,7 @@ status: completo
 | Documentos transversais (regra) | 6 | 0 | 6 |
 | **Portfólio de sistemas/serviços** | **23** | **0** | **23** |
 
-**Portfólio 100% documentado.** Uma ideia registrada sem desenvolvimento (gestão de imobiliária/locação, seção 5) e as decisões-bloqueio já identificadas (migração de stack do Momentos/Cupido, validações jurídicas/éticas do AuraObra/AuraEdu/AuraAgenda, escolhas de fornecedor do `aura-licensing` e agora do `aura-vault`) são o que resta antes de qualquer sistema ir a código com segurança total.
+**Portfólio 100% documentado.** Uma ideia registrada sem desenvolvimento (gestão de imobiliária/locação, seção 5) e as decisões-bloqueio já identificadas (migração de stack do Momentos/Cupido, validações jurídicas/éticas do AM Canteira/AM Saberia/AM Horaria, escolhas de fornecedor do `aura-licensing` e agora do `aura-vault`) são o que resta antes de qualquer sistema ir a código com segurança total.
 
 ---
 
