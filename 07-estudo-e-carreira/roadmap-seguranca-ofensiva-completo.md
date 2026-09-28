@@ -336,3 +336,15 @@ FASE 6 — ESPECIALIZAÇÃO (ongoing): Cloud (CARTP/AWS) + Mobile (eMAPT) + Malw
 ---
 
 *Versão 3.0 — Agosto/2026. Revisão recomendada: anual. Fontes: MITRE ATT&CK, OffSec, SANS, ired.team, adsecurity.org, PortSwigger, OWASP.*
+
+---
+
+## 🔗 Gates com as trilhas Linux e Redes
+
+Este roadmap (os 6 níveis acima) roda entrelaçado com [[trilha-linux-arch-profissional]] e [[trilha-de-redes]]. Cada nível só abre com a fase de Linux correspondente concluída — a base sustenta o ataque.
+
+- Fundamentos Linux + primeiro contato (Bandit) andam juntos; [[trilha-de-redes]] vem cedo, porque destrava tudo
+- Linux F2 → redes para pentest · F3–4 → testar o próprio Aura (OWASP, maior retorno) · F5–6 → escalada de privilégio · F8 → laboratório Kali (Distrobox)
+- Depois: Windows/Active Directory → baixo nível/exploit → metodologia e relatório
+
+**Regra de ouro:** nunca abrir uma fase de segurança sem o gate de Linux fechado. Só teste o que é seu ou o que você tem autorização por escrito para testar (Lei 12.737/2012).

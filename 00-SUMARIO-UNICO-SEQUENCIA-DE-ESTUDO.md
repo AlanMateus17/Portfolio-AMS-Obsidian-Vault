@@ -5,6 +5,28 @@ status: novo
 ---
 
 # 🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre
+
+## 🗺️ Roadmap por fases (execução dos projetos)
+
+A sequência de *execução* das frentes principais, uma por vez. A trilha de *estudo* (Passos, abaixo) roda dentro dela.
+
+| Fase | Quando | Principal | Secundário |
+| --- | --- | --- | --- |
+| 1 | Out–Dez 2026 | ByteSDCoin em sala + revisão de fim de ano | Mini-curso de Lógica + Instagram |
+| 2 | Jan–Mar 2027 | MVP do AM Kaixara (blocos de frontend reusáveis) | 2º infoproduto |
+| 3 | Abr–Jun 2027 | AM Rendara + backend am-mentor | Migração do portfólio |
+| 4 | Jul–Dez 2027 | AM Rotara + AM Taskoro + site Grupo AMtech | Início do freelance |
+| Fila 2028+ | — | Demais sistemas, Instituto AMS completo, certificações de segurança | — |
+
+**Regra de foco:** no máximo 1 principal + 1 secundário por fase. O resto fica em fila, pausado de propósito.
+
+### 🔒 Gate de segurança ↔ Linux
+A parte de segurança ([[roadmap-seguranca-ofensiva-completo]]) só avança com a fase da [[trilha-linux-arch-profissional]] concluída:
+- Linux F1 + Segurança S1 (juntas) → Bandit · faça [[trilha-de-redes]] cedo
+- Linux F2 → S2 (redes p/ pentest) · F3–4 → S3 (testar o próprio Aura) · F5–6 → S4 (escalada) · F8 → S5 (lab Kali) → Windows/AD → baixo nível
+- **Regra de ouro:** nunca abrir uma fase de segurança sem o gate de Linux fechado.
+
+---
 ### Ponto de entrada único. Uma trilha, uma numeração, sem bifurcação.
 
 > **Por que este documento existe:** você tinha 3 documentos tentando ser "a sequência oficial" ([[mapa-mestre-prioridade-total]], [[sequencia-mestra-completa-desde-o-inicio]], [[passo-a-passo-mestre-desde-o-inicio]]), com duas numerações diferentes ("Bloco" e "Passo") que não se encaixavam 1-pra-1. Este arquivo resolve isso: junta a clareza de prioridade do mapa-mestre com o detalhe acionável do passo-a-passo-mestre, numa numeração só (**Passo**), sem repetir o mesmo conteúdo em três lugares.
