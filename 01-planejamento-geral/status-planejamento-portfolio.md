@@ -26,7 +26,7 @@ status: completo
 | Item | Onde está a pendência |
 |---|---|
 | Física básica do livro | Estrutura provisória até você comprar o livro e mostrar o sumário real — ver [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] |
-| `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [[revisao-stack-tecnologica]] |
+| `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [[stack-tecnologica]] |
 | Decisão de seguro/responsabilidade em trânsito do AM Consertta | Decisão de negócio, não técnica — sinalizada no próprio documento do AM Consertta, ainda não fechada |
 | Vertical de Reprodução & Biotecnologia do AuraVet | Condicionada a uma decisão sua sobre atuação nessa área específica |
 | Certificação CEA/CFP | Pré-requisito pra destravar a camada de consultoria do AM Rendara — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [[plano-mestre-frentes-alan]] |

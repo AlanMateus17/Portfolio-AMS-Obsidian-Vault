@@ -42,5 +42,5 @@ Não abre mais uma trilha de linguagem nova — o estudo de GraphQL/HotChocolate
 ## 🔗 Documentos relacionados
 - [[sequencia-mestra-completa-desde-o-inicio]] — onde este sistema entra na ordem real de estudo
 - [[biblioteca-recursos-por-passo]] — recursos oficiais de GraphQL e HotChocolate
-- [[revisao-stack-tecnologica]] — critério geral de quando um desvio de stack é aceito
+- [[stack-tecnologica]] — critério geral de quando um desvio de stack é aceito
 - [[mapa-mestre-prioridade-total]] — posição de prioridade deste sistema

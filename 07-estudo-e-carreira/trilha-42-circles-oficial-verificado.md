@@ -109,6 +109,6 @@ Praticamente igual ao cronograma anterior (10-12 meses), só que agora contando 
 
 ## 🔗 Documentos relacionados
 - [[matematica-e-desenvolvimento-integrado]] — `miniRT` conecta com Geometria Analítica (Parte V); Algoritmo de Euclides (`Libft`) conecta com indução (Parte II)
-- [[stack-consolidada-estudo]] — onde C/C++ desta trilha se encaixa no panorama geral de tecnologia a estudar
+- [[stack-tecnologica]] — onde C/C++ desta trilha se encaixa no panorama geral de tecnologia a estudar
 - [[sequencia-mestra-completa-desde-o-inicio]] — a ordem exata de intercalação com o portfólio próprio, Bloco a Bloco
 - [[integracao-42-roadmap-akita]] — roadmap.sh como auditoria cruzada específica pra C/C++ (roadmap "C" e "C++" no índice geral)

@@ -199,7 +199,7 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 ## 🔗 Documentos relacionados
 - [[kaixara-especificacao-tecnica-completa]] — schema, contrato de API, fluxos de sequência e threat model
 - [[kaixara-frontend-documento-unico]] — plano de frontend completo, do Discovery à Engenharia
-- [[stack-tecnologica-por-sistema]] — detalhamento da stack usada neste sistema
+- [[stack-tecnologica]] — detalhamento da stack usada neste sistema
 - [[passo-a-passo-mestre-desde-o-inicio]] — a sequência de construção que usa o AM Kaixara como base
 
 ---

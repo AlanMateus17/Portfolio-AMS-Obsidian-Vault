@@ -32,7 +32,7 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 | **CTFtime** 🆓 | Agenda de CTFs | Grátis | Todos |
 
 > [!tip] Progressão ideal de labs
-> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente da [[metodologia-aprendizado-cientifica]].
+> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente da [[metodo-de-estudo]].
 
 ---
 
@@ -141,7 +141,7 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 - **Anual:** revisar este roadmap, avaliar próxima certificação
 
 > [!tip] Note-taking
-> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio da [[metodologia-aprendizado-cientifica]]: documentar para reter.
+> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio da [[metodo-de-estudo]]: documentar para reter.
 
 ---
 

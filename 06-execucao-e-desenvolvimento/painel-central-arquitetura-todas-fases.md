@@ -7,7 +7,7 @@ status: novo
 # Painel Central — Arquitetura para Todas as Fases da Carreira
 ### O `aura-status` de hoje, desenhado pra crescer sem reescrever — empresa própria, freelancer, empregado em empresa grande
 
-> Este documento não repete "o que automatizar e quando" — isso já está resolvido em [[ordem-e-sequencia-de-execucao-automacoes]] (quando construir) e [[veredito-clonar-ou-nao-ferramenta-paga]] (construir vs. adotar). Aqui é só uma pergunta: **como desenhar o painel central hoje pra que, daqui a anos, numa empresa grande, ele ainda seja a mesma ferramenta — só com mais fontes de dado plugadas, não reescrita do zero.**
+> Este documento não repete "o que automatizar e quando" — isso já está resolvido em [[automacao-ordem-de-execucao]] (quando construir) e [[veredito-clonar-ou-nao-ferramenta-paga]] (construir vs. adotar). Aqui é só uma pergunta: **como desenhar o painel central hoje pra que, daqui a anos, numa empresa grande, ele ainda seja a mesma ferramenta — só com mais fontes de dado plugadas, não reescrita do zero.**
 
 ---
 
@@ -119,8 +119,8 @@ Cada fase da sua carreira não é um programa novo — é uma ou duas classes no
 ---
 
 ## 🔗 Documentos relacionados
-- [[automacao-total-ambiente-trabalho]] e o código já existente do `aura-status` — o núcleo que este documento estende
+- [[automacao-o-que-e-por-que]] e o código já existente do `aura-status` — o núcleo que este documento estende
 - [[mapa-automacao-por-contexto-profissional]] — o detalhe de cada fase (o que você controla, o que precisa seguir)
 - [[veredito-clonar-ou-nao-ferramenta-paga]] — por que Jira/PagerDuty não precisam ser clonados, só ter uma fonte de leitura no painel
-- [[ordem-e-sequencia-de-execucao-automacoes]] — quando cada fonte da tabela acima realmente entra
+- [[automacao-ordem-de-execucao]] — quando cada fonte da tabela acima realmente entra
 - [[aura-status-documento-projeto-final]], [[aura-queue-documento-projeto-final]], [[aura-secrets-documento-projeto-final]], [[aura-oncall-documento-projeto-final]] — os 4 documentos completos, mesmo padrão dos 23 sistemas de negócio

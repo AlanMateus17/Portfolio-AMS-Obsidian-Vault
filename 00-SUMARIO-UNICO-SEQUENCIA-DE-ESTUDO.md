@@ -80,7 +80,7 @@ Isso não é regra rígida de tempo — é a ordem de troca, sempre a mesma, pra
 
 ## 🧠 Antes de CADA Passo: o mesmo protocolo de 15-30min, sem exceção
 
-Isso vale pra todo Passo da Trilha Principal e todo bloco de qualquer Trilha Paralela. Não é opcional — é o que transforma "eu vi isso uma vez" em "eu sei isso" (detalhe completo e a ciência por trás: [[metodologia-aprendizado-cientifica]]).
+Isso vale pra todo Passo da Trilha Principal e todo bloco de qualquer Trilha Paralela. Não é opcional — é o que transforma "eu vi isso uma vez" em "eu sei isso" (detalhe completo e a ciência por trás: [[metodo-de-estudo]]).
 
 ```
 1. FECHE o material (código, vídeo, livro) — não olhe mais
@@ -95,7 +95,7 @@ Isso vale pra todo Passo da Trilha Principal e todo bloco de qualquer Trilha Par
 
 *(Antes de abrir o editor pra codar o "Desenvolver" de um Passo novo, registre a pasta/repositório no [[00-catalogo-progresso]] — é o que mantém o código sempre rastreável até o Passo que o gerou, sem precisar procurar depois.)*
 
-*(detalhe completo dos dois formatos de artefato: [[metodo-estudo-producao-didatica-simultanea]])*
+*(detalhe completo dos dois formatos de artefato: [[metodo-de-estudo]])*
 
 ---
 
@@ -112,7 +112,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Git, SQL/PostgreSQL (`EXPLAIN ANALYZE`), Docker.
   **Desenvolver:** schema real do AM Kaixara (produto, categoria, estoque, venda) + schema do `aura-licensing`.
   **✅ Pronto quando:** lê um `EXPLAIN ANALYZE` e identifica full scan; ambiente sobe com `docker-compose up`.
-  **🤖 Automação que entra aqui:** pre-commit hook (Gitleaks) + Dependabot + backup agendado de `C:\dev\` — ver [[ordem-e-sequencia-de-execucao-automacoes]].
+  **🤖 Automação que entra aqui:** pre-commit hook (Gitleaks) + Dependabot + backup agendado de `C:\dev\` — ver [[automacao-ordem-de-execucao]].
 
 - [ ] **Passo 3 — C# Fundamentals + Matemática Parte II (início)** *(1-2 semanas)*
   Tipo, classe, coleção, LINQ, nullable reference type, `async/await`, DI + Matemática Cap. 3 (Naturais/Inteiros, Algoritmo de Euclides).
@@ -133,7 +133,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Pirâmide de teste, `Moq`, teste de integração, TDD + Testing Library/Playwright.
   **Desenvolver:** teste do fluxo de venda (unitário + integração) + teste de componente do carrinho + E2E completo. TDD puro no `aura-goals`.
   **✅ Pronto quando:** cobertura real no fluxo de venda, backend e frontend.
-  **🤖 Automação que entra aqui:** CI completo (build + teste a cada push) + CodeQL — ver [[ordem-e-sequencia-de-execucao-automacoes]].
+  **🤖 Automação que entra aqui:** CI completo (build + teste a cada push) + CodeQL — ver [[automacao-ordem-de-execucao]].
 
 - [ ] **Passo 7 — Fechar o AM Kaixara: pagamento e cobrança** *(2-3 semanas)*
   Aplicação do que já foi estudado, sem tópico novo formal.
@@ -156,19 +156,19 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Docker multi-stage, deploy gerenciado, pipeline GitHub Actions, observabilidade.
   **Desenvolver:** deploy real do AM Kaixara — primeiro marco de verdade do portfólio.
   **✅ Pronto quando:** sistema no ar, observável, deploy automático a cada push.
-  **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [[aura-secrets-documento-projeto-final|aura-secrets]] — ver [[ordem-e-sequencia-de-execucao-automacoes]].
+  **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [[aura-secrets-documento-projeto-final|aura-secrets]] — ver [[automacao-ordem-de-execucao]].
 
 - [ ] **Passo 11 — Performance com dado real** *(após meses em produção)*
   `Span<T>`, Garbage Collector, `BenchmarkDotNet` + Matemática Cap. 9 (Estatística Descritiva).
   **Desenvolver:** medir e otimizar o endpoint mais usado, com número real.
   **✅ Pronto quando:** tem "antes e depois" medido de uma otimização real.
-  **🤖 Automação que entra aqui:** teste de carga (k6) — ver [[ordem-e-sequencia-de-execucao-automacoes]].
+  **🤖 Automação que entra aqui:** teste de carga (k6) — ver [[automacao-ordem-de-execucao]].
 
 - [ ] **Passo 12 — Extração da plataforma interna** *(2-3 semanas — ponto de virada do cronograma)*
   Template `dotnet new`, NuGet privado, monorepo vs. polyrepo. Espanhol Fase A começa (Inglês já em B1-B2). Nomear a metodologia ágil já praticada.
   **Desenvolver, extraindo do AM Kaixara pronto:** template Clean Architecture+`tenant_id` → `aura-identity` real → lib de multi-tenancy → CI/CD reutilizável → component library (Storybook) → `aura-notifications` → `aura-support` → primeira apostila piloto (fichas duplas acumuladas) → segurança de frontend + lançamento (CDN, cache, métricas).
   **✅ Pronto quando:** gera a estrutura de um sistema novo com um comando, autenticado, com tema, sem escrever do zero.
-  **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [[ordem-e-sequencia-de-execucao-automacoes]].
+  **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [[automacao-ordem-de-execucao]].
 
 - [ ] **Passo 13 — Segundo sistema: AM Rotara** *(bem mais rápido que o primeiro)*
   Reforço de Geometria Analítica/Estruturas Lineares. No bloco de roteirização: Python + OR-Tools + Matemática Cap. 19-20 (Combinatória, Probabilidade/Bayes).
@@ -203,8 +203,8 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 |---|---|---|
 | **roadmap.sh** — auditoria cruzada | Início de cada Passo grande (3, 8, 9, 10) | [[integracao-42-roadmap-akita]] |
 | **Fábio Akita** (blog/YouTube/podcast) | 1 conteúdo/semana | [[integracao-42-roadmap-akita]] |
-| **Produção didática simultânea** (ficha dupla) | A cada tópico novo de matemática+código | [[metodo-estudo-producao-didatica-simultanea]] |
-| **`aura-status`** — rodar o painel central | Toda segunda-feira (ou depois de qualquer deploy) | [[aura-status-documento-projeto-final]], rotina completa em [[ordem-e-sequencia-de-execucao-automacoes]] |
+| **Produção didática simultânea** (ficha dupla) | A cada tópico novo de matemática+código | [[metodo-de-estudo]] |
+| **`aura-status`** — rodar o painel central | Toda segunda-feira (ou depois de qualquer deploy) | [[aura-status-documento-projeto-final]], rotina completa em [[automacao-ordem-de-execucao]] |
 | **Anki** (repetição espaçada) | Diário, 10-20 min | [[metodo-correto-estudo-idiomas]] |
 
 ---
@@ -230,9 +230,9 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 ## 🔗 Onde cada coisa mora, se você precisar do detalhe fundo (não pro dia a dia)
 
 - [[00-catalogo-progresso]] — onde o código de cada Passo/sistema mora de verdade, local e no GitHub
-- [[metodologia-aprendizado-cientifica]] — a ciência completa por trás do protocolo acima
+- [[metodo-de-estudo]] — a ciência completa por trás do protocolo acima
 - [[passo-a-passo-mestre-desde-o-inicio]] — mesma trilha principal, com texto mais longo por Passo
 - [[mapa-mestre-prioridade-total]] — mesma priorização, no formato original P0/P1/P2/P3
 - [[sequencia-mestra-completa-desde-o-inicio]] — mesma trilha, com a Trilha 42 intercalada bloco a bloco dentro da numeração
 - [[EPIC-01-backlog-passo1-fundamentos]] — as tarefas reais do Passo 1, em User Stories
-- [[plano-automacao-completo]] — o que automatizar em cada Passo, documento único de referência
+- [[automacao-o-que-e-por-que]] — o que automatizar em cada Passo, documento único de referência

@@ -129,5 +129,5 @@ Padrão do portfólio, sem desvio: Docker multi-stage, GitHub Actions, deploy ge
 ## 🔗 Documentos relacionados
 - [[taskoro-decisao-stack-portfolio]] — a decisão de stack em detalhe, com o critério geral de quando aceitar desvio
 - [[sequencia-mestra-completa-desde-o-inicio]] — onde este sistema entra na ordem real de estudo
-- [[revisao-stack-tecnologica]] — critério geral de desvio de stack, aplicado aqui
+- [[stack-tecnologica]] — critério geral de desvio de stack, aplicado aqui
 - [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] — posição deste sistema na trilha de estudo

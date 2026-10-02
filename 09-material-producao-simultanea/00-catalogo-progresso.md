@@ -40,13 +40,13 @@ status: novo
 
 ## Quando já tiver ~10-15 linhas
 
-- As Fichas Duplas viram a primeira apostila piloto (ver [[metodo-estudo-producao-didatica-simultanea]])
+- As Fichas Duplas viram a primeira apostila piloto (ver [[metodo-de-estudo]])
 - Os Registros de Entrevista viram o banco de respostas pra `perfil-senior-completo-auditoria` — revise-os juntos antes de qualquer entrevista real, não estude do zero na hora
 
 ---
 
 ## 🔗 Documentos relacionados
-- [[metodo-estudo-producao-didatica-simultanea]] — o método completo por trás da Ficha Dupla e do Registro de Entrevista
+- [[metodo-de-estudo]] — o método completo por trás da Ficha Dupla e do Registro de Entrevista
 - [[github-estrutura-profissional-autoridade]] — a convenção completa de pasta local, repositório e Organization
 - [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] — a sequência de Passos que gera cada linha deste catálogo
 - [[perfil-senior-completo-auditoria]] — o que a entrevista de verdade cobra, pra calibrar o Registro de Entrevista

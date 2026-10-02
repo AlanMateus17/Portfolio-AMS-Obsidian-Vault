@@ -20,7 +20,7 @@ Continua sendo o único sistema com código em produção-alvo já rodando (Spri
 Continua pendente — decisão de negócio, não técnica, sinalizada no próprio documento do AM Consertta. Precisa ser fechada antes de qualquer código no fluxo de envio.
 
 ### 1.3 Decidir `aura-historico`: manter Clojure/Datomic ou revisar pra Marten (.NET)
-Mesma pergunta que já foi resolvida pro AM Taskoro (GraphQL híbrido), ainda em aberto aqui — ver [[revisao-stack-tecnologica]]. Não bloqueia nada tecnicamente, mas vale decidir antes de chegar no bloco de estudo correspondente, não durante.
+Mesma pergunta que já foi resolvida pro AM Taskoro (GraphQL híbrido), ainda em aberto aqui — ver [[stack-tecnologica]]. Não bloqueia nada tecnicamente, mas vale decidir antes de chegar no bloco de estudo correspondente, não durante.
 
 ---
 

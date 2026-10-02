@@ -322,7 +322,7 @@ FASE 6 — ESPECIALIZAÇÃO (ongoing): Cloud (CARTP/AWS) + Mobile (eMAPT) + Malw
 ```
 
 > [!tip] Regra de ouro
-> Cada técnica aprendida teoricamente deve ser praticada em lab antes de avançar. Plano sem horas de hands-on não forma profissional. Isso é a mesma lógica de prática deliberada da [[metodologia-aprendizado-cientifica]].
+> Cada técnica aprendida teoricamente deve ser praticada em lab antes de avançar. Plano sem horas de hands-on não forma profissional. Isso é a mesma lógica de prática deliberada da [[metodo-de-estudo]].
 
 ---
 

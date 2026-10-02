@@ -281,6 +281,6 @@ Você resolve as três simulações da Sprint 4 (carrinho, inadimplência, ARCA)
 
 ## 🔗 Documentos relacionados
 - [[CARTAO-voce-esta-aqui]] — o resumo diário do que fazer agora
-- [[metodo-estudo-producao-didatica-simultanea]] — como transformar cada User Story em material de aula
+- [[metodo-de-estudo]] — como transformar cada User Story em material de aula
 - [[matematica-e-desenvolvimento-integrado]] — o mapeamento completo do livro contra todas as fases futuras
  

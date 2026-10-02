@@ -86,7 +86,7 @@ Parte do pipeline padrão de cada sistema Aura que o consome — sem pipeline de
 
 ## 10. Status atual de desenvolvimento
 
-Não iniciado — só entra quando 2+ sistemas Aura precisarem se comunicar de fato, ver [[ordem-e-sequencia-de-execucao-automacoes]].
+Não iniciado — só entra quando 2+ sistemas Aura precisarem se comunicar de fato, ver [[automacao-ordem-de-execucao]].
 
 ---
 

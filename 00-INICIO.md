@@ -9,7 +9,7 @@ tipo: home
 
 - 🧭 **[[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO|Sumário Único de Estudo]]** — trilha do dia a dia (comece aqui)
 - 📍 **[[CARTAO-voce-esta-aqui|Você está aqui]]** — o que fazer agora
-- 🧠 **[[metodologia-aprendizado-cientifica|Metodologia de aprendizado]]** — como estudar cada bloco
+- 🧠 **[[metodo-de-estudo|Metodologia de aprendizado]]** — como estudar cada bloco
 - 📚 **[[biblioteca-recursos-por-passo|Biblioteca de recursos por passo]]**
 
 ---
@@ -40,16 +40,16 @@ tipo: home
 - [[rnf-transversais-escala-seguranca-financeira]] · [[distribuicao-licenciamento-seguranca]] · [[rnf-transversais-design-tema]] · [[rnft-ia-governanca-geracao-ia]] · [[auditoria-escalabilidade-seguranca-financeira]]
 
 ## 5️⃣ Stack Tecnológica
-- [[stack-tecnologica-por-sistema]] · [[stack-consolidada-estudo]] · [[revisao-stack-tecnologica]]
+- [[stack-tecnologica]] · [[stack-tecnologica]] · [[stack-tecnologica]]
 
 ## 6️⃣ Execução e Desenvolvimento
 - [[setup-ambiente-trabalho-final]] · [[estrategia-reaproveitamento-ordem-construcao]] · [[ordem-construcao-rf-telas-reaproveitaveis]] · [[github-estrutura-profissional-autoridade]] · [[passo-a-passo-portfolio-vaga-junior|Portfólio para vaga júnior]] ⭐
-- Automação: [[plano-automacao-completo]] · [[automacao-total-ambiente-trabalho]] · [[por-que-automatizar-riscos-e-testes]] · [[ordem-e-sequencia-de-execucao-automacoes]] · [[veredito-clonar-ou-nao-ferramenta-paga]] · [[painel-central-arquitetura-todas-fases]]
+- Automação: [[automacao-o-que-e-por-que]] · [[automacao-o-que-e-por-que]] · [[automacao-o-que-e-por-que]] · [[automacao-ordem-de-execucao]] · [[veredito-clonar-ou-nao-ferramenta-paga]] · [[painel-central-arquitetura-todas-fases]]
 
 ## 7️⃣ Estudo e Carreira
 - 👉 **[[EPIC-01-backlog-passo1-fundamentos|EPIC-01 — tarefas de agora]]** ⭐
 - Trilhas: [[trilha-linux-arch-profissional|🐧 Linux/Arch]] · [[trilha-de-redes|🌐 Redes]] · [[roadmap-seguranca-ofensiva-completo|🛡️ Segurança Ofensiva]] · [[trilha-42-circles-oficial-verificado|École 42]]
-- [[matematica-e-desenvolvimento-integrado]] · [[ingles-espanhol-integrado]] · [[metodo-correto-estudo-idiomas]] · [[loop-estudo-multilinguagem-sistema-real]] · [[integracao-42-roadmap-akita]] · [[metodo-estudo-producao-didatica-simultanea]] · [[perfil-senior-completo-auditoria]]
+- [[matematica-e-desenvolvimento-integrado]] · [[ingles-espanhol-integrado]] · [[metodo-correto-estudo-idiomas]] · [[metodo-de-estudo]] · [[integracao-42-roadmap-akita]] · [[metodo-de-estudo]] · [[perfil-senior-completo-auditoria]]
 
 ## 8️⃣ Material Comercial
 - [[presenca-digital-empresas]]
