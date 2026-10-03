@@ -19,7 +19,7 @@ Cada item tem um selo: **✅ Já coberto** (com referência de onde) ou **🆕 N
 
 | Habilidade | Status |
 |---|---|
-| Clean Architecture, SOLID, Design Patterns | ✅ [[plano-estudos-basico-avancado-entrelacado|Fase 4]] |
+| Clean Architecture, SOLID, Design Patterns | ✅ [Fase 4](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) |
 | Testes (unitário, integração, TDD) | ✅ Fase 2.4 |
 | Design de API madura (versionamento, rate limiting) | ✅ Fase 2.2 |
 | Segurança aplicada (OWASP Top 10) | ✅ Fase 2.2 |
@@ -61,8 +61,8 @@ Diferente de "ter construído 21 sistemas reais" (que você vai ter), **entrevis
 | Habilidade | Status | Quando estudar |
 |---|---|---|
 | Documentação técnica escrita | ✅ Os 41 documentos deste portfólio já são a prova disso — habilidade rara mesmo em sênior de verdade | — |
-| Architecture Decision Records | ✅ [[github-estrutura-profissional-autoridade|já planejado]] | — |
-| Inglês técnico | ✅ [[ingles-espanhol-integrado|plano próprio]] | — |
+| Architecture Decision Records | ✅ [já planejado](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) | — |
+| Inglês técnico | ✅ [plano próprio](ingles-espanhol-integrado.md) | — |
 | Apresentação de portfólio (explicar seu próprio trabalho de forma concisa) | 🆕 Novo — ter 21 sistemas documentados não é o mesmo que saber resumir isso em 2 minutos numa entrevista | Perto de aplicar pra vaga — treinar um "elevator pitch" do ecossistema AMS |
 | Entrevista comportamental (método STAR: Situação, Tarefa, Ação, Resultado) | 🆕 Novo — completamente diferente de entrevista técnica, e empresa grande sempre testa os dois | Mesma fase — perto de aplicar de verdade |
 | Presença técnica pública (blog, LinkedIn, contribuição open source) | 🆕 Novo, mas com base pronta — publicar a documentação curada (já no `github-estrutura-profissional-autoridade`) é o primeiro passo real disso | Junto com a Fase 6D |

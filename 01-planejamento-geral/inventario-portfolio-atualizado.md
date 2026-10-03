@@ -98,6 +98,6 @@ status: completo
 ---
 
 ## 🔗 Documentos relacionados
-- [[passo-a-passo-mestre-desde-o-inicio]] — o plano de execução que usa este inventário como ponto de partida
-- [[plano-mestre-frentes-alan]] — o documento raiz que originou este inventário
-- [[template-documento-projeto-final]] — a estrutura que todo item completo aqui segue
+- [passo-a-passo-mestre-desde-o-inicio](../99-arquivo/passo-a-passo-mestre-desde-o-inicio.md) — o plano de execução que usa este inventário como ponto de partida
+- [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — o documento raiz que originou este inventário
+- [template-documento-projeto-final](template-documento-projeto-final.md) — a estrutura que todo item completo aqui segue

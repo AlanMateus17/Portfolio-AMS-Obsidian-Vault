@@ -6,7 +6,7 @@ status: completo
 
 # aura-licensing — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Este é o primeiro serviço compartilhado do portfólio a receber RF/RNF formal — até agora só existia descrito em arquitetura.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Este é o primeiro serviço compartilhado do portfólio a receber RF/RNF formal — até agora só existia descrito em arquitetura.
 
 ---
 

@@ -53,7 +53,7 @@ Estimativas são projeção, não medição. Do Passo 3-4 em diante, recalibre c
 ```
 1. Livro (papel) → 2. C# → 3. JavaScript → 4. Sistema real → 5. Ficha de aula
 ```
-Expressar a mesma ideia de 4 jeitos = entendeu, não decorou. Nem todo tópico tem Etapa 4 (ex.: Números Complexos) — use o loop completo só nos marcados com conexão real em [[matematica-e-desenvolvimento-integrado]].
+Expressar a mesma ideia de 4 jeitos = entendeu, não decorou. Nem todo tópico tem Etapa 4 (ex.: Números Complexos) — use o loop completo só nos marcados com conexão real em [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md).
 
 **Exemplo — "E"/conjunção:** Etapa 1 tabela-verdade · Etapa 2 `estudei && dormiBem` em C# · Etapa 3 mesmo em JS · Etapa 4 `if (produto.Estoque > 0 && cliente.Ativo && !pedido.Cancelado)` no AM Kaixara · Etapa 5 vira ficha.
 
@@ -86,11 +86,11 @@ TÍTULO · CONTEXTO · DECISÃO (+ alternativa descartada e por quê) · RESULTA
   fichas-duplas/
   registros-entrevista/
 ```
-Cada User Story do EPIC-01 ganha a Task "produzir a ficha dupla", logo após os exercícios. Cada par entra no [[00-catalogo-progresso]].
+Cada User Story do EPIC-01 ganha a Task "produzir a ficha dupla", logo após os exercícios. Cada par entra no [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md).
 
 **Conexões:** AM Saberia RF10 (conteúdo) · Frente Educação (produto vendável) · pipeline de apostila .docx já existente · ordem de ensino ≠ ordem de estudo (abra pela motivação, não pela definição).
 
 ---
 
 ## 🔗 Relacionados
-- [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] · [[00-catalogo-progresso]] · [[EPIC-01-backlog-passo1-fundamentos]] · [[matematica-e-desenvolvimento-integrado]] · [[perfil-senior-completo-auditoria]]
+- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md) · [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md)

@@ -15,7 +15,7 @@ status: novo
 
 ### 1.1 Git — o que você já vai estudar (Passo 2), mais o que falta
 
-Git básico já está no [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] (Passo 2). O que falta é **higiene de segredo**, que nenhum curso de Git básico cobre:
+Git básico já está no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) (Passo 2). O que falta é **higiene de segredo**, que nenhum curso de Git básico cobre:
 
 - **Gitleaks** — scanner de segredo (chave de API, senha, token) de código aberto, escrito em Go, roda como binário único. Detecta 150+ tipos de segredo (AWS, GitHub, Slack, banco de dados) via regex + análise de entropia.
 - **Onde instalar:** (1) hook de pre-commit local — roda em milissegundos, bloqueia segredo antes de virar commit; (2) CI (GitHub Actions/Gitea Actions) — pega o que o hook local não pegou; (3) GitHub push protection — trava no servidor, não depende de disciplina individual.
@@ -29,7 +29,7 @@ Git normal versiona texto bem, mas fica pesado com arquivo binário grande (víd
 **Onde isso te afeta de verdade:**
 - **Momentos/Cupido** — fotos/mídia de usuário, se algum dia entrar teste local com asset real no repo (produção já usa Cloudflare R2, então isso é só pra desenvolvimento/design, não pra dado de cliente)
 - **AM Saberia** — as 180 apostilas em PDF, se ficarem versionadas no mesmo repo do código do sistema (considere um repo separado só de conteúdo, ou LFS, pra não inchar o clone de quem só quer o código)
-- **Infoprodutos (Camada 11 da [[infraestrutura-fisica-10-anos]])** — vídeo bruto de curso gravado NUNCA deveria ir pro Git, nem com LFS — isso é trabalho pro NAS, não pro controle de versão
+- **Infoprodutos (Camada 11 da [infraestrutura-fisica-10-anos](infraestrutura-fisica-10-anos.md))** — vídeo bruto de curso gravado NUNCA deveria ir pro Git, nem com LFS — isso é trabalho pro NAS, não pro controle de versão
 
 **Regra prática:** se o arquivo muda pouco e é grande (PDF final, vídeo), ele não pertence ao Git — nem com LFS. LFS serve pra binário que muda com frequência e precisa de histórico de versão (ex: arquivo de design em edição ativa), não pra armazenamento de mídia finalizada.
 
@@ -77,13 +77,13 @@ Cobertura separada, específica pra: vazamento de dado, ataque hacker, multa por
 
 ## 3. Ferramentas específicas por frente de renda
 
-*(numeração seguindo [[plano-mestre-frentes-alan]])*
+*(numeração seguindo [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md))*
 
 ### Frente 2 — Assistência Técnica
 Já mapeada em `plano-mestre-frentes-alan` (toolkit por nível, software por marca) — nada novo aqui além da seção 2 acima (RC Profissional cobre erro de reparo que danifica aparelho do cliente).
 
 ### Frente 3 — Ecossistema Aura (SaaS)
-Coberto pela seção 1 inteira (Git, Git LFS, Gitleaks, Claude Code) + toda a trilha técnica já no [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]]. Nada a acrescentar em ferramenta nova.
+Coberto pela seção 1 inteira (Git, Git LFS, Gitleaks, Claude Code) + toda a trilha técnica já no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md). Nada a acrescentar em ferramenta nova.
 
 ### Frente 4 — Educação (apostilas, cursos, mentoria)
 
@@ -96,7 +96,7 @@ Coberto pela seção 1 inteira (Git, Git LFS, Gitleaks, Claude Code) + toda a tr
 
 **Recomendação pro seu caso:** como você não depende de afiliado pra começar (público já vem dos seus alunos/redes), e o ticket das apostilas tende a ser baixo-médio, a **Kiwify** tende a compensar mais no início — sem a taxa de player de vídeo, hospedagem de vídeo já inclusa. Reavalie pra Hotmart se decidir escalar via rede de afiliados depois.
 
-Ambas aceitam Pix (liberação em ~2 dias, a mais vantajosa pra você e pro aluno) e nenhuma emite nota fiscal automática — isso continua sendo sua responsabilidade via o CNPJ de [[estrutura-juridica-amtech]].
+Ambas aceitam Pix (liberação em ~2 dias, a mais vantajosa pra você e pro aluno) e nenhuma emite nota fiscal automática — isso continua sendo sua responsabilidade via o CNPJ de [estrutura-juridica-amtech](estrutura-juridica-amtech.md).
 
 ### Frente 5 — Freelance Web Dev
 Já mapeado (WooCommerce + Hostinger + Mercado Pago) — sem ferramenta nova identificada nesta pesquisa além da seção 1 (Git/Gitleaks vale igual pra projeto de cliente).
@@ -107,7 +107,7 @@ Sem ferramenta técnica nova além do que `plano-mestre-frentes-alan` já lista 
 ---
 
 ## 🔗 Documentos relacionados
-- [[setup-ambiente-trabalho-final]] — onde Gitleaks e Git LFS entram no checklist de instalação
-- [[estrutura-juridica-amtech]] — o CNPJ que contrata o seguro desta seção 2
-- [[plano-mestre-frentes-alan]] — as 6 frentes que esta pesquisa cobre uma a uma
-- [[distribuicao-licenciamento-seguranca]] — segurança do *produto* vendido (RNFT-S), diferente da segurança *operacional da empresa* coberta aqui
+- [setup-ambiente-trabalho-final](../06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md) — onde Gitleaks e Git LFS entram no checklist de instalação
+- [estrutura-juridica-amtech](estrutura-juridica-amtech.md) — o CNPJ que contrata o seguro desta seção 2
+- [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — as 6 frentes que esta pesquisa cobre uma a uma
+- [distribuicao-licenciamento-seguranca](../04-documentos-transversais/distribuicao-licenciamento-seguranca.md) — segurança do *produto* vendido (RNFT-S), diferente da segurança *operacional da empresa* coberta aqui

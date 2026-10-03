@@ -6,7 +6,7 @@ status: completo
 
 # aura-support — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Terceiro dos 4 serviços compartilhados pendentes — a lacuna mais validada de toda a auditoria: apareceu em 9 dos 14 documentos de sistema já produzidos.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Terceiro dos 4 serviços compartilhados pendentes — a lacuna mais validada de toda a auditoria: apareceu em 9 dos 14 documentos de sistema já produzidos.
 
 ---
 

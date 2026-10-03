@@ -6,7 +6,7 @@ status: completo
 
 # AM Rotara — Documento de Projeto Final
 
-> **Nota de reconciliação:** este documento trata o AM Rotara como o sistema de logística completo (pedido, roteirização, entregador, rastreamento), distinto da "Loja Virtual" (módulo de catálogo/checkout simples, dependente do AM Kaixara) — ver seção 11. Segue a estrutura fixa definida no [[template-documento-projeto-final]].
+> **Nota de reconciliação:** este documento trata o AM Rotara como o sistema de logística completo (pedido, roteirização, entregador, rastreamento), distinto da "Loja Virtual" (módulo de catálogo/checkout simples, dependente do AM Kaixara) — ver seção 11. Segue a estrutura fixa definida no [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
 
 ---
 
@@ -109,7 +109,7 @@ Este é o mais importante dos quatro para "ninguém ficar barrado", porque é o 
 
 ## 6. Segurança de nível profissional
 
-Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]]) a este sistema:
+Aplicação concreta do checklist geral ([distribuicao-licenciamento-seguranca](../04-documentos-transversais/distribuicao-licenciamento-seguranca.md)) a este sistema:
 
 | Categoria | Aplicação específica no Delivery |
 |---|---|

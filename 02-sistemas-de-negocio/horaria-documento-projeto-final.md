@@ -7,7 +7,7 @@ status: completo
 # AM Horaria — Documento de Projeto Final (Nome provisório)
 ### Sistema de Agendamento Genérico para Serviço Pessoal (salão, clínica, academia, psicólogo)
 
-Segue a estrutura fixa do [[template-documento-projeto-final]].
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
 
 ---
 

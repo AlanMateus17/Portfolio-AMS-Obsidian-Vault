@@ -5,7 +5,7 @@ status: completo
 ---
 
 # aura-status — Documento de Projeto Final
-### O único das 4 ferramentas de automação pessoal com potencial real de virar produto vendável — os outros 3 estão em [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]], como peça de portfólio, não produto
+### O único das 4 ferramentas de automação pessoal com potencial real de virar produto vendável — os outros 3 estão em [aura-queue](aura-queue-documento-projeto-final.md), [aura-secrets](aura-secrets-documento-projeto-final.md) e [aura-oncall](aura-oncall-documento-projeto-final.md), como peça de portfólio, não produto
 
 ---
 
@@ -156,6 +156,6 @@ Núcleo com ~170 linhas já escrito (RF01-RF11), funcionando localmente. RF12-RF
 ---
 
 ## 🔗 Documentos relacionados
-- [[painel-central-arquitetura-todas-fases]] — a arquitetura de fonte plugável
-- [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]] — as outras 3 ferramentas, sem o mesmo potencial comercial
-- [[template-documento-projeto-final]] — o padrão que este documento segue, igual aos 23 sistemas de negócio
+- [painel-central-arquitetura-todas-fases](../06-execucao-e-desenvolvimento/painel-central-arquitetura-todas-fases.md) — a arquitetura de fonte plugável
+- [aura-queue](aura-queue-documento-projeto-final.md), [aura-secrets](aura-secrets-documento-projeto-final.md) e [aura-oncall](aura-oncall-documento-projeto-final.md) — as outras 3 ferramentas, sem o mesmo potencial comercial
+- [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md) — o padrão que este documento segue, igual aos 23 sistemas de negócio

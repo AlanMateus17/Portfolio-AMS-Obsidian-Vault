@@ -45,6 +45,6 @@ Uso interno de IA (ex: sugestão de código, resumo administrativo) não precisa
 ---
 
 ## 🔗 Documentos relacionados
-- [[projeta-documento-projeto-final]] — o sistema que originou esta série
-- [[aura-copilot-documento-projeto-final]] — o serviço compartilhado que esta série governa
-- [[rnf-transversais-escala-seguranca-financeira]], [[rnf-transversais-design-tema]], [[distribuicao-licenciamento-seguranca]] — as demais séries transversais do portfólio
+- [projeta-documento-projeto-final](../02-sistemas-de-negocio/projeta-documento-projeto-final.md) — o sistema que originou esta série
+- [aura-copilot-documento-projeto-final](../03-servicos-compartilhados/aura-copilot-documento-projeto-final.md) — o serviço compartilhado que esta série governa
+- [rnf-transversais-escala-seguranca-financeira](rnf-transversais-escala-seguranca-financeira.md), [rnf-transversais-design-tema](rnf-transversais-design-tema.md), [distribuicao-licenciamento-seguranca](distribuicao-licenciamento-seguranca.md) — as demais séries transversais do portfólio

@@ -74,7 +74,7 @@ Nenhum deploy separado — faz parte do deploy do `aura-notifications`.
 
 ## 9. Modelo de receita
 
-**Nenhum.** Só relevante com mais de uma pessoa respondendo incidente — sozinho, alerta direto no celular via Uptime Kuma já resolve sem escalonamento. PagerDuty e Opsgenie já têm camada gratuita que cobre esse uso de sobra pra quem realmente precisa comprar isso pronto, ver [[veredito-clonar-ou-nao-ferramenta-paga]].
+**Nenhum.** Só relevante com mais de uma pessoa respondendo incidente — sozinho, alerta direto no celular via Uptime Kuma já resolve sem escalonamento. PagerDuty e Opsgenie já têm camada gratuita que cobre esse uso de sobra pra quem realmente precisa comprar isso pronto, ver [veredito-clonar-ou-nao-ferramenta-paga](../06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md).
 
 ---
 
@@ -91,8 +91,8 @@ Não iniciado — só relevante se/quando houver equipe respondendo incidente ju
 ---
 
 ## 🔗 Documentos relacionados
-- [[painel-central-arquitetura-todas-fases]] — a arquitetura de fonte plugável que este documento complementa
-- [[aura-status-documento-projeto-final]] — a única das 4 ferramentas com modelo de receita real
-- [[veredito-clonar-ou-nao-ferramenta-paga]] — por que não clonar PagerDuty/Opsgenie
-- [[aura-notifications-documento-projeto-final]] — o serviço que este documento estende
-- [[template-documento-projeto-final]] — o padrão que este documento segue, igual aos 23 sistemas de negócio
+- [painel-central-arquitetura-todas-fases](../06-execucao-e-desenvolvimento/painel-central-arquitetura-todas-fases.md) — a arquitetura de fonte plugável que este documento complementa
+- [aura-status-documento-projeto-final](aura-status-documento-projeto-final.md) — a única das 4 ferramentas com modelo de receita real
+- [veredito-clonar-ou-nao-ferramenta-paga](../06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md) — por que não clonar PagerDuty/Opsgenie
+- [aura-notifications-documento-projeto-final](../03-servicos-compartilhados/aura-notifications-documento-projeto-final.md) — o serviço que este documento estende
+- [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md) — o padrão que este documento segue, igual aos 23 sistemas de negócio

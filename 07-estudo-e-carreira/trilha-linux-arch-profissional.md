@@ -7,7 +7,7 @@ data: 2026-09-28
 
 # 🐧 Trilha Linux/Arch Profissional
 
-> Base de infraestrutura para dev, segurança e servidores. Cada fase termina com evidência pública (commit, README, post). O que não vira evidência não entra no currículo. Ponto de entrada do dia a dia continua sendo [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]].
+> Base de infraestrutura para dev, segurança e servidores. Cada fase termina com evidência pública (commit, README, post). O que não vira evidência não entra no currículo. Ponto de entrada do dia a dia continua sendo [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md).
 
 **Regra de foco:** uma fase por vez. Repositório único desde o dia 1: `AlanMateus17/dotfiles`, que recebe configs, scripts e notas de todas as fases.
 
@@ -93,7 +93,7 @@ Rodar um sistema do Aura inteiro no Arch, sem Windows.
 - [ ] **Evidência:** `notas/06-seguranca.md`
 
 ## Fase 7 — Projeto autoral: aura-status na Waybar
-Ver documento próprio: [[aura-status-documento-projeto-final]]. O aura-status ganha modo `--waybar` que imprime uma linha JSON; a Waybar mostra o resumo e abre a TUI ao clicar.
+Ver documento próprio: [aura-status-documento-projeto-final](../10-ferramentas-pessoais/aura-status-documento-projeto-final.md). O aura-status ganha modo `--waybar` que imprime uma linha JSON; a Waybar mostra o resumo e abre a TUI ao clicar.
 
 - [ ] `Severidade`, `ResultadoStatus`, `WaybarFormatter` com testes
 - [ ] Modo `--waybar` abaixo de 1s (cache para fontes lentas como a API do GitHub)

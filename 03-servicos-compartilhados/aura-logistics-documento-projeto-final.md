@@ -6,7 +6,7 @@ status: completo
 
 # aura-logistics — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Último dos 4 serviços compartilhados pendentes — já havia sido sinalizado dentro do próprio AM Consertta, agora formalizado como sistema próprio.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Último dos 4 serviços compartilhados pendentes — já havia sido sinalizado dentro do próprio AM Consertta, agora formalizado como sistema próprio.
 
 ---
 

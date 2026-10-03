@@ -7,7 +7,7 @@ status: completo
 # AM Predara — Documento de Projeto Final (Nome provisório)
 ### Sistema de Gestão de Condomínio
 
-Segue a estrutura fixa do [[template-documento-projeto-final]].
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
 
 ---
 

@@ -84,6 +84,6 @@ Diferente das outras trilhas (matemática, pentest), essa é a que **menos exige
 ---
 
 ## 🔗 Documentos relacionados
-- [[metodo-correto-estudo-idiomas]] — o método de estudo (ciência de aquisição de idioma) e o currículo detalhado por nível
-- [[sequencia-mestra-completa-desde-o-inicio]] — Inglês Fase A/B nos Blocos 1 e 4; Espanhol a partir do Bloco 13
-- [[trilha-42-circles-oficial-verificado]] — documentação oficial da 42 e enunciado de projeto costumam estar em inglês; reforço de leitura técnica
+- [metodo-correto-estudo-idiomas](metodo-correto-estudo-idiomas.md) — o método de estudo (ciência de aquisição de idioma) e o currículo detalhado por nível
+- [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — Inglês Fase A/B nos Blocos 1 e 4; Espanhol a partir do Bloco 13
+- [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — documentação oficial da 42 e enunciado de projeto costumam estar em inglês; reforço de leitura técnica

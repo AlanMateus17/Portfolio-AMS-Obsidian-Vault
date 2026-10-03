@@ -7,7 +7,7 @@ status: completo
 # aura-secrets — Documento de Projeto Final
 ### Cofre de segredo mínimo — uso 100% interno, sem modelo de receita por decisão de segurança, não só de mercado (razão explicada na seção 9)
 
-> **Não confundir com [[aura-vault-documento-projeto-final|aura-vault]]**, o 10º serviço compartilhado já existente no portfólio — são coisas diferentes, apesar do nome parecido com a primeira versão deste documento (renomeado de `aura-vault-simples` justamente para evitar essa confusão). `aura-vault` protege **dado sensível de cliente** (prontuário, dado bancário, contrato), com regra legal de retenção e acesso. `aura-secrets` guarda **credencial de infraestrutura** (senha de banco, chave de API externa) que os próprios sistemas usam pra funcionar — problema diferente, nunca o mesmo serviço.
+> **Não confundir com [aura-vault](../03-servicos-compartilhados/aura-vault-documento-projeto-final.md)**, o 10º serviço compartilhado já existente no portfólio — são coisas diferentes, apesar do nome parecido com a primeira versão deste documento (renomeado de `aura-vault-simples` justamente para evitar essa confusão). `aura-vault` protege **dado sensível de cliente** (prontuário, dado bancário, contrato), com regra legal de retenção e acesso. `aura-secrets` guarda **credencial de infraestrutura** (senha de banco, chave de API externa) que os próprios sistemas usam pra funcionar — problema diferente, nunca o mesmo serviço.
 
 ---
 
@@ -79,7 +79,7 @@ Deploy junto da infraestrutura de produção do primeiro sistema Aura que for pr
 
 ## 9. Modelo de receita
 
-**Nenhum, por decisão deliberada de segurança, não só de mercado.** Mesmo que houvesse demanda, vender gerenciamento de segredo malfeito é o tipo de risco que pode custar reputação profissional inteira se der errado — o oposto do que [[seguranca-e-ferramentas-todas-as-frentes]] inteiro defende. Quem precisa de cofre de segredo de verdade já usa HashiCorp Vault (núcleo gratuito) ou AWS Secrets Manager.
+**Nenhum, por decisão deliberada de segurança, não só de mercado.** Mesmo que houvesse demanda, vender gerenciamento de segredo malfeito é o tipo de risco que pode custar reputação profissional inteira se der errado — o oposto do que [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) inteiro defende. Quem precisa de cofre de segredo de verdade já usa HashiCorp Vault (núcleo gratuito) ou AWS Secrets Manager.
 
 ---
 
@@ -97,8 +97,8 @@ Não iniciado — só entra no Passo 10 (primeira produção real), quando exist
 ---
 
 ## 🔗 Documentos relacionados
-- [[painel-central-arquitetura-todas-fases]] — a arquitetura de fonte plugável que este documento complementa
-- [[aura-status-documento-projeto-final]] — a única das 4 ferramentas com modelo de receita real
-- [[veredito-clonar-ou-nao-ferramenta-paga]] — por que não clonar o Vault real
-- [[seguranca-e-ferramentas-todas-as-frentes]] — a base de segurança que este serviço reforça
-- [[template-documento-projeto-final]] — o padrão que este documento segue, igual aos 23 sistemas de negócio
+- [painel-central-arquitetura-todas-fases](../06-execucao-e-desenvolvimento/painel-central-arquitetura-todas-fases.md) — a arquitetura de fonte plugável que este documento complementa
+- [aura-status-documento-projeto-final](aura-status-documento-projeto-final.md) — a única das 4 ferramentas com modelo de receita real
+- [veredito-clonar-ou-nao-ferramenta-paga](../06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md) — por que não clonar o Vault real
+- [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) — a base de segurança que este serviço reforça
+- [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md) — o padrão que este documento segue, igual aos 23 sistemas de negócio

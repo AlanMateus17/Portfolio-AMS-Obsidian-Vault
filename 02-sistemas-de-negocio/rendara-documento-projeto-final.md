@@ -6,7 +6,7 @@ status: completo
 
 # AM Rendara — Documento de Projeto Final
 
-Segue a estrutura fixa definida no [[template-documento-projeto-final]].
+Segue a estrutura fixa definida no [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
 
 ---
 
@@ -137,7 +137,7 @@ O `aura-goals` já foi definido como serviço compartilhado entre AM Rendara e M
 
 | Categoria | Aplicação específica no AM Rendara |
 |---|---|
-| Dados | Criptografia de dado bancário em repouso (AES-256), já definida anteriormente — é o único sistema do portfólio com esse requisito explícito de algoritmo, por ser o de maior sensibilidade. **RESOLVIDO/atualizado:** esse requisito agora é implementado via `aura-vault`, o serviço compartilhado de proteção de dado extra-sensível, em vez de implementação própria isolada — ver [[aura-vault-documento-projeto-final]] |
+| Dados | Criptografia de dado bancário em repouso (AES-256), já definida anteriormente — é o único sistema do portfólio com esse requisito explícito de algoritmo, por ser o de maior sensibilidade. **RESOLVIDO/atualizado:** esse requisito agora é implementado via `aura-vault`, o serviço compartilhado de proteção de dado extra-sensível, em vez de implementação própria isolada — ver [aura-vault-documento-projeto-final](../03-servicos-compartilhados/aura-vault-documento-projeto-final.md) |
 | Rede/API | Auditoria de rota contra BOLA já era requisito próprio antes mesmo da série RNFT transversal existir — mantido e reforçado |
 | Conexão entre sistemas (RNFT-S03/S04) | `FonteReceitaAM Kaixara` só se conecta com consentimento explícito do cliente; credencial de escopo mínimo (só leitura de fechamento de caixa, nunca acesso amplo ao AM Kaixara) |
 | Auditoria externa (RNFT-S06) | Prioridade máxima do portfólio inteiro — é o sistema que processa o dado mais sensível (financeiro) e tem o maior custo de reputação em caso de falha; pentest externo aqui não é opcional antes de qualquer lançamento público |
@@ -180,7 +180,7 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 1. **Validação jurídica do enquadramento como consultoria de valores mobiliários** — trava a formalização definitiva do Relatório de Recomendação (Resolução CVM 19).
 2. **Confirmação de que C-Pro I (pós-reestruturação ANBIMA 2026) é aceito pela CVM no lugar da antiga CEA** — pendência sinalizada anteriormente, ainda não verificada em edital oficial.
 3. **Credenciamento Open Finance junto ao Banco Central** — prazo fora do seu controle; o produto não deve depender dele para lançar (mitigado pela `FonteImportacaoManual`).
-4. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado, com cuidado extra de acesso justificado e logado dado a sensibilidade do dado financeiro (ver seção 5 do [[aura-support-documento-projeto-final]]).
+4. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado, com cuidado extra de acesso justificado e logado dado a sensibilidade do dado financeiro (ver seção 5 do [aura-support-documento-projeto-final](../03-servicos-compartilhados/aura-support-documento-projeto-final.md)).
 5. **Isolamento de rede em produção** — decisão de infraestrutura específica deste sistema, ainda não formalizada (seção 8).
 6. **Comportamento padrão de `FonteReceitaAM Kaixara`** — o que acontece se o cliente desconectar a integração depois de já ter dado histórico importado; ainda não definido.
 7. **RF/RNF formal do `aura-goals`** — reforçado agora pela seção 2.7: ele está no caminho crítico do AM Rendara e do Momentos/Cupido ao mesmo tempo, não é mais só uma pendência de baixa prioridade.

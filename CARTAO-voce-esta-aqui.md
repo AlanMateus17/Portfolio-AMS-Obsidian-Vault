@@ -5,7 +5,7 @@ tipo: dashboard-diario
 
 # 📍 Você Está Aqui
 
-*[[00-INICIO|← Voltar pro Início]]*
+*[← Voltar pro Início](00-INICIO.md)*
 
 **Fase atual:** Passo 1 — Fundamentos (Lógica de Programação + Matemática Básica)
 **Sistema em construção:** nenhum ainda — isso é o alicerce antes do primeiro código do AM Kaixara
@@ -14,7 +14,7 @@ tipo: dashboard-diario
 
 ## ✅ Faça isso hoje, e só isso
 
-1. Abra **[[EPIC-01-backlog-passo1-fundamentos]]**
+1. Abra **[EPIC-01-backlog-passo1-fundamentos](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md)**
 2. Vá em **Sprint 1 → US-01** (ou a próxima User Story não marcada)
 3. Faça as Tasks daquela User Story
 4. Marque o que terminou
@@ -36,7 +36,7 @@ Não precisa abrir mais nenhum outro documento.
 
 ## 🔜 Quando terminar o EPIC-01 inteiro
 
-Abra **[[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]]** → marque o Passo 1 como concluído → siga pro **Passo 2**. Ele te diz exatamente o próximo bloco, na mesma lógica de hoje.
+Abra **[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** → marque o Passo 1 como concluído → siga pro **Passo 2**. Ele te diz exatamente o próximo bloco, na mesma lógica de hoje.
 
 ---
 

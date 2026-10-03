@@ -62,7 +62,7 @@ Não há interface de usuário final — é infraestrutura interna, consumida s�
 
 ## 6. Segurança de nível profissional
 
-Uso exclusivamente interno, sem exposição de rede externa por padrão — roda dentro do mesmo ambiente de produção dos sistemas Aura, protegido pela mesma rede/VLAN já definida em [[infraestrutura-fisica-10-anos]]. Se algum dia precisar de acesso externo, exigiria autenticação própria — não planejado hoje.
+Uso exclusivamente interno, sem exposição de rede externa por padrão — roda dentro do mesmo ambiente de produção dos sistemas Aura, protegido pela mesma rede/VLAN já definida em [infraestrutura-fisica-10-anos](../01-planejamento-geral/infraestrutura-fisica-10-anos.md). Se algum dia precisar de acesso externo, exigiria autenticação própria — não planejado hoje.
 
 ---
 
@@ -80,13 +80,13 @@ Parte do pipeline padrão de cada sistema Aura que o consome — sem pipeline de
 
 ## 9. Modelo de receita
 
-**Nenhum, por decisão deliberada.** Quem precisa de fila de mensagem de verdade já usa RabbitMQ ou Kafka gratuitos e maduros — uma versão "simples" feita por um dev solo não tem diferenciação possível nessa categoria. Detalhe completo da análise em [[veredito-clonar-ou-nao-ferramenta-paga]].
+**Nenhum, por decisão deliberada.** Quem precisa de fila de mensagem de verdade já usa RabbitMQ ou Kafka gratuitos e maduros — uma versão "simples" feita por um dev solo não tem diferenciação possível nessa categoria. Detalhe completo da análise em [veredito-clonar-ou-nao-ferramenta-paga](../06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md).
 
 ---
 
 ## 10. Status atual de desenvolvimento
 
-Não iniciado — só entra quando 2+ sistemas Aura precisarem se comunicar de fato, ver [[automacao-ordem-de-execucao]].
+Não iniciado — só entra quando 2+ sistemas Aura precisarem se comunicar de fato, ver [automacao-ordem-de-execucao](../06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 ---
 
@@ -98,7 +98,7 @@ Não iniciado — só entra quando 2+ sistemas Aura precisarem se comunicar de f
 ---
 
 ## 🔗 Documentos relacionados
-- [[painel-central-arquitetura-todas-fases]] — a arquitetura de fonte plugável que este documento complementa
-- [[aura-status-documento-projeto-final]] — a única das 4 ferramentas com modelo de receita real
-- [[veredito-clonar-ou-nao-ferramenta-paga]] — por que não clonar Kafka
-- [[template-documento-projeto-final]] — o padrão que este documento segue, igual aos 23 sistemas de negócio
+- [painel-central-arquitetura-todas-fases](../06-execucao-e-desenvolvimento/painel-central-arquitetura-todas-fases.md) — a arquitetura de fonte plugável que este documento complementa
+- [aura-status-documento-projeto-final](aura-status-documento-projeto-final.md) — a única das 4 ferramentas com modelo de receita real
+- [veredito-clonar-ou-nao-ferramenta-paga](../06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md) — por que não clonar Kafka
+- [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md) — o padrão que este documento segue, igual aos 23 sistemas de negócio

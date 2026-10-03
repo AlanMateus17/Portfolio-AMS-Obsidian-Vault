@@ -2,7 +2,7 @@
 tags: [estudo, seguranca, pentest, red-team, roadmap, portfolio-ams]
 tipo: estudo
 status: ativo
-companion: "[[recursos-links-seguranca-ofensiva]]"
+companion: "[recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md)"
 ---
 
 # 🛡️ Roadmap Completo — Segurança Ofensiva
@@ -10,7 +10,7 @@ companion: "[[recursos-links-seguranca-ofensiva]]"
 > [!important] Como usar este documento
 > Este é um mapa de conhecimento progressivo em **6 níveis**. Cada nível é pré-requisito do próximo. Os callouts indicam recursos prioritários e erros comuns a evitar.
 >
-> **Integração com o resto do vault:** este roadmap é a versão aprofundada da Fase 12 do [[plano-estudos-basico-avancado-entrelacado]]. O ponto de entrada real na sua sequência é depois do Bloco 8 (arquitetura consolidada), rodando em paralelo — mesma posição da [[trilha-42-circles-oficial-verificado]]. Overlap já mapeado: rede/Linux (NetPractice e Born2beroot da 42), criptografia básica (episódios do Akitando em [[integracao-42-roadmap-akita]]), OWASP defensivo (Fase 2.2). Não reestude o que essas trilhas já cobrem.
+> **Integração com o resto do vault:** este roadmap é a versão aprofundada da Fase 12 do [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md). O ponto de entrada real na sua sequência é depois do Bloco 8 (arquitetura consolidada), rodando em paralelo — mesma posição da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md). Overlap já mapeado: rede/Linux (NetPractice e Born2beroot da 42), criptografia básica (episódios do Akitando em [integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)), OWASP defensivo (Fase 2.2). Não reestude o que essas trilhas já cobrem.
 
 ---
 
@@ -39,7 +39,7 @@ OSCP → eMAPT (Mobile)
 | **GICSP** | SANS | OT/ICS/SCADA security | OSED |
 
 > [!note] Como isso se encaixa na sua trilha já decidida
-> Sua trilha registrada no [[plano-estudos-basico-avancado-entrelacado]] é `CompTIA A+/Network+ → Security+ → CCNA (opcional) → eJPT → OSCP`. As certificações acima (CRTO em diante) são a continuação natural além do OSCP, para quem vai a fundo em red team profissional — não precisa decidir sobre elas agora.
+> Sua trilha registrada no [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) é `CompTIA A+/Network+ → Security+ → CCNA (opcional) → eJPT → OSCP`. As certificações acima (CRTO em diante) são a continuação natural além do OSCP, para quem vai a fundo em red team profissional — não precisa decidir sobre elas agora.
 
 ---
 
@@ -71,7 +71,7 @@ Prioridade: Python ⭐⭐⭐⭐⭐, Bash ⭐⭐⭐⭐⭐, PowerShell ⭐⭐⭐�
 > [!warning] Sequência correta
 > Python + Bash sólidos → antes do OSCP. C básico → antes do CRTO. Assembly → antes do OSED. Não inverta.
 >
-> **Nota de integração:** Python já está na sua Fase 7 (aura-analytics). C e C++ já vêm da [[trilha-42-circles-oficial-verificado]]. C#/.NET é sua stack principal. Ou seja: quase toda a base de linguagem deste nível você já cobre por outras trilhas — aqui é aplicá-las ao contexto ofensivo, não aprender do zero.
+> **Nota de integração:** Python já está na sua Fase 7 (aura-analytics). C e C++ já vêm da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md). C#/.NET é sua stack principal. Ou seja: quase toda a base de linguagem deste nível você já cobre por outras trilhas — aqui é aplicá-las ao contexto ofensivo, não aprender do zero.
 
 ## 0.4 Criptografia Aplicada
 Hashes (MD5, SHA-1/256, bcrypt, NTLM, LM, NetNTLMv1/v2), simétrica (AES CBC/CTR/GCM, DES, RC4, ChaCha20), assimétrica (RSA, ECDSA, DH), PKI/CAs/X.509/CRL/OCSP, TLS 1.2 vs 1.3, DPAPI.
@@ -98,7 +98,7 @@ Hashes (MD5, SHA-1/256, bcrypt, NTLM, LM, NetNTLMv1/v2), simétrica (AES CBC/CTR
 Injeção SQL (UNION/blind/time/error-based → sqlmap, Burp), XSS (Reflected/Stored/DOM → Burp, XSSer), SSRF (metadata 169.254.169.254 → Burp Collaborator), LFI/RFI (path traversal, wrappers PHP → dotdotpwn), XXE, Command Injection (commix), IDOR/BAC (Burp Autorize), Broken Auth (Hydra, Burp Intruder), SSTI (tplmap), Desserialização (ysoserial), File Upload, CSRF, Open Redirect, JWT Attacks (jwt_tool), OAuth 2.0.
 
 > [!tip] Recurso definitivo
-> **PortSwigger Web Academy** — gratuito, labs hands-on para CADA técnica. Resolva todos os labs antes do OSCP. (Já está na sua [[biblioteca-recursos-por-passo]].)
+> **PortSwigger Web Academy** — gratuito, labs hands-on para CADA técnica. Resolva todos os labs antes do OSCP. (Já está na sua [biblioteca-recursos-por-passo](biblioteca-recursos-por-passo.md).)
 
 **Burp Suite:** Proxy, Repeater, Intruder, Scanner (Pro), Decoder, Collaborator, Match and Replace, extensions (AuthMatrix, Autorize, Turbo Intruder, Logger++).
 
@@ -131,7 +131,7 @@ Fingerprinting (wafw00f), encoding bypass (URL simples/duplo, Unicode, HTML enti
 > [!important] Regra de ouro
 > Autorização verbal não tem valor legal no Brasil. Sempre escrito, sempre assinado, sempre guardado.
 >
-> **Conexão:** isso se conecta com a Fase 0 jurídica que o [[projeta-documento-projeto-final]] e o AM Canteira/AM Saberia já preveem — a mesma disciplina de contrato e LGPD vale para prestar serviço de pentest.
+> **Conexão:** isso se conecta com a Fase 0 jurídica que o [projeta-documento-projeto-final](../02-sistemas-de-negocio/projeta-documento-projeto-final.md) e o AM Canteira/AM Saberia já preveem — a mesma disciplina de contrato e LGPD vale para prestar serviço de pentest.
 
 ## 1.9 Relatório de Pentest
 Executive Summary (linguagem de negócio), Escopo/Metodologia, Sumário de Risco (CVSS v3.1), Findings (título, severidade, evidência, impacto, recomendação, referências), Narrativa de Ataque, Roadmap de Remediação, Apêndices. Ferramentas: Sysreptor, Ghostwriter, Dradis, PlexTrac.
@@ -250,7 +250,7 @@ Dependency Confusion, Typosquatting, Compromised Maintainer Account, Build Pipel
 Secrets em env vars, misconfigured `pull_request_target`, artifact poisoning, self-hosted runners sem isolamento, pipeline injection, permissões excessivas de GITHUB_TOKEN, cache poisoning. Ferramentas: Semgrep, actionlint, truffleHog, Gato-X.
 
 > [!note] Conexão direta com seu plano
-> Você vai configurar GitHub Actions (Passo 10-12 e o [[github-estrutura-profissional-autoridade]]). Esta seção é como um atacante ataca exatamente esse pipeline — estude junto, é o lado ofensivo do que você constrói.
+> Você vai configurar GitHub Actions (Passo 10-12 e o [github-estrutura-profissional-autoridade](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md)). Esta seção é como um atacante ataca exatamente esse pipeline — estude junto, é o lado ofensivo do que você constrói.
 
 ## 5.8 macOS Offensive
 Gatekeeper/SIP/TCC/Notarization/XProtect bypass, persistência (LaunchDaemons/Agents, Login Items), TCC bypass, Keychain extraction, LOLBins macOS (osascript, curl, python3, ditto, screencapture), Dylib hijacking, DYLD_INSERT_LIBRARIES.
@@ -273,7 +273,7 @@ Protocolos (Modbus 502, DNP3 20000, Profinet, EtherNet/IP 44818, Siemens S7 102,
 Prompt injection (direct/indirect), jailbreaking, tool call hijacking, adversarial ML (evasão de detectores, model extraction, training data poisoning), LLM como ferramenta ofensiva, testes em sistemas com LLM. Recurso: OWASP Top 10 for LLM Applications.
 
 > [!note] Conexão direta com seu portfólio
-> Você tem o `aura-copilot` (IA function-calling) e o [[projeta-documento-projeto-final]] (geração por IA voltada ao cliente). A série [[rnft-ia-governanca-geracao-ia]] que você já criou é justamente a defesa contra parte disto. Esta seção é o ataque correspondente — os dois lados da mesma moeda.
+> Você tem o `aura-copilot` (IA function-calling) e o [projeta-documento-projeto-final](../02-sistemas-de-negocio/projeta-documento-projeto-final.md) (geração por IA voltada ao cliente). A série [rnft-ia-governanca-geracao-ia](../04-documentos-transversais/rnft-ia-governanca-geracao-ia.md) que você já criou é justamente a defesa contra parte disto. Esta seção é o ataque correspondente — os dois lados da mesma moeda.
 
 ## 6.2 APT Emulation
 Simular threat actor específico com TTPs documentadas. APTs para estudo: APT29 (Midnight Blizzard), APT41, Lazarus, FIN7/CARBANAK, ALPHV/BlackCat. Plataformas: SCYTHE, Vectr.
@@ -306,7 +306,7 @@ SAST (Semgrep, SonarQube), DAST (OWASP ZAP, Burp Enterprise), SCA (Snyk, Dependa
 **Soft Skills e Comunicação Executiva:** apresentar para C-Level (risco financeiro, não CVSS), executive summary, debrief, negociação de escopo, risk quantification (FAIR model).
 
 > [!important] O gargalo real após o nível intermediário
-> Sem soft skills, o profissional fica preso como operador. Isso conecta com o [[perfil-senior-completo-auditoria]] — a mesma comunicação executiva que pesa em qualquer carreira sênior de tecnologia.
+> Sem soft skills, o profissional fica preso como operador. Isso conecta com o [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md) — a mesma comunicação executiva que pesa em qualquer carreira sênior de tecnologia.
 
 ---
 
@@ -322,16 +322,16 @@ FASE 6 — ESPECIALIZAÇÃO (ongoing): Cloud (CARTP/AWS) + Mobile (eMAPT) + Malw
 ```
 
 > [!tip] Regra de ouro
-> Cada técnica aprendida teoricamente deve ser praticada em lab antes de avançar. Plano sem horas de hands-on não forma profissional. Isso é a mesma lógica de prática deliberada da [[metodo-de-estudo]].
+> Cada técnica aprendida teoricamente deve ser praticada em lab antes de avançar. Plano sem horas de hands-on não forma profissional. Isso é a mesma lógica de prática deliberada da [metodo-de-estudo](metodo-de-estudo.md).
 
 ---
 
 ## 🔗 Documentos relacionados
-- [[recursos-links-seguranca-ofensiva]] — companion com todos os links, ferramentas, cursos e certificações verificados
-- [[plano-estudos-basico-avancado-entrelacado]] — a Fase 12 é a versão resumida deste roadmap
-- [[trilha-42-circles-oficial-verificado]] — cobre a base de C/C++, rede (NetPractice) e Linux (Born2beroot)
-- [[integracao-42-roadmap-akita]] — episódios de criptografia/segurança do Akitando
-- [[sequencia-mestra-completa-desde-o-inicio]] — onde a segurança ofensiva entra na ordem geral
+- [recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md) — companion com todos os links, ferramentas, cursos e certificações verificados
+- [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) — a Fase 12 é a versão resumida deste roadmap
+- [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — cobre a base de C/C++, rede (NetPractice) e Linux (Born2beroot)
+- [integracao-42-roadmap-akita](integracao-42-roadmap-akita.md) — episódios de criptografia/segurança do Akitando
+- [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — onde a segurança ofensiva entra na ordem geral
 
 ---
 
@@ -341,9 +341,9 @@ FASE 6 — ESPECIALIZAÇÃO (ongoing): Cloud (CARTP/AWS) + Mobile (eMAPT) + Malw
 
 ## 🔗 Gates com as trilhas Linux e Redes
 
-Este roadmap (os 6 níveis acima) roda entrelaçado com [[trilha-linux-arch-profissional]] e [[trilha-de-redes]]. Cada nível só abre com a fase de Linux correspondente concluída — a base sustenta o ataque.
+Este roadmap (os 6 níveis acima) roda entrelaçado com [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) e [trilha-de-redes](trilha-de-redes.md). Cada nível só abre com a fase de Linux correspondente concluída — a base sustenta o ataque.
 
-- Fundamentos Linux + primeiro contato (Bandit) andam juntos; [[trilha-de-redes]] vem cedo, porque destrava tudo
+- Fundamentos Linux + primeiro contato (Bandit) andam juntos; [trilha-de-redes](trilha-de-redes.md) vem cedo, porque destrava tudo
 - Linux F2 → redes para pentest · F3–4 → testar o próprio Aura (OWASP, maior retorno) · F5–6 → escalada de privilégio · F8 → laboratório Kali (Distrobox)
 - Depois: Windows/Active Directory → baixo nível/exploit → metodologia e relatório
 

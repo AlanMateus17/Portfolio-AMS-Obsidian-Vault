@@ -6,7 +6,7 @@ status: completo
 
 # Momentos/Cupido — Documento de Projeto Final
 
-Segue a estrutura fixa definida no [[template-documento-projeto-final]]. Consolida o PRD de 17 seções já existente, cruzado com o rigor aplicado aos outros 5 sistemas do portfólio.
+Segue a estrutura fixa definida no [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Consolida o PRD de 17 seções já existente, cruzado com o rigor aplicado aos outros 5 sistemas do portfólio.
 
 ---
 

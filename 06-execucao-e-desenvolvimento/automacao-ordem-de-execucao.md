@@ -6,9 +6,9 @@ atualizado: 2026-10-02
 ---
 
 # Automação — Ordem de Construção e Sequência de Execução
-### Irmão do [[automacao-o-que-e-por-que]] — aquele é "o quê/como/por quê", este é "quando"
+### Irmão do [automacao-o-que-e-por-que](automacao-o-que-e-por-que.md) — aquele é "o quê/como/por quê", este é "quando"
 
-## 1. Ordem de construção — amarrada ao Passo do [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]]
+## 1. Ordem de construção — amarrada ao Passo do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
 | Quando (Passo) | O que construir | Por que aqui |
 |---|---|---|
 | Passo 1 | Nenhuma — exercícios como arquivo solto | Git só no Passo 2 |
@@ -46,4 +46,4 @@ atualizado: 2026-10-02
 Segunda (5min): backup rodou? PR do Dependabot? · Início de mês (15min): teste de restauração · Início de mês (5min): custo crescendo? · Após deploy: smoke test + Uptime verde · A cada 3 meses: limites de alerta ainda fazem sentido?
 
 ## 🔗 Relacionados
-- [[automacao-o-que-e-por-que]] · [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]]
+- [automacao-o-que-e-por-que](automacao-o-que-e-por-que.md) · [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)

@@ -13,7 +13,7 @@ status: completo
 
 ## 1. Todos os 23 sistemas/serviços têm planejamento completo
 
-13 sistemas de negócio (ver [[inventario-portfolio-atualizado]]) + 10 serviços compartilhados — todos com Documento de Projeto Final nas 11 seções do [[template-documento-projeto-final|template padrão]]: visão, funcionalidades, RF, interfaces por perfil, RNF, segurança, hardware/distribuição, deploy, modelo de receita, status, pendências.
+13 sistemas de negócio (ver [inventario-portfolio-atualizado](inventario-portfolio-atualizado.md)) + 10 serviços compartilhados — todos com Documento de Projeto Final nas 11 seções do [template padrão](template-documento-projeto-final.md): visão, funcionalidades, RF, interfaces por perfil, RNF, segurança, hardware/distribuição, deploy, modelo de receita, status, pendências.
 
 **Únicos com desenvolvimento ativo:** AM Kaixara (Sprint 3-4, rumo a JWT). Todos os outros estão em planejamento completo, sem código.
 
@@ -25,11 +25,11 @@ status: completo
 
 | Item | Onde está a pendência |
 |---|---|
-| Física básica do livro | Estrutura provisória até você comprar o livro e mostrar o sumário real — ver [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] |
-| `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [[stack-tecnologica]] |
+| Física básica do livro | Estrutura provisória até você comprar o livro e mostrar o sumário real — ver [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) |
+| `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) |
 | Decisão de seguro/responsabilidade em trânsito do AM Consertta | Decisão de negócio, não técnica — sinalizada no próprio documento do AM Consertta, ainda não fechada |
 | Vertical de Reprodução & Biotecnologia do AuraVet | Condicionada a uma decisão sua sobre atuação nessa área específica |
-| Certificação CEA/CFP | Pré-requisito pra destravar a camada de consultoria do AM Rendara — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [[plano-mestre-frentes-alan]] |
+| Certificação CEA/CFP | Pré-requisito pra destravar a camada de consultoria do AM Rendara — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) |
 
 ---
 
@@ -45,12 +45,12 @@ status: completo
 | **PostGIS** | Cogitado desde o início como "só onde há geolocalização" | AM Rotara (rota de entrega), AuraVet (atendimento domiciliar) | Vale desenhar o uso de forma compartilhável entre os dois, mesmo problema de fundo |
 | **Cloudflare R2** | Momentos/Cupido (armazenamento de mídia) | AuraVet (laudos, imagens de exame, fotos de internação) | Nenhuma mudança — mesmo provedor, buckets/políticas diferentes |
 | **SignalR (tempo real)** | AM Kaixara (dashboard) | AuraVet (status de internação ao vivo) | Nenhuma mudança de tecnologia — só eventos/hubs específicos |
-| **Módulo de Ordem de Serviço** | Assistência técnica → formalizado dentro de [[consertta-sistema-assistencia-tecnica|AM Consertta]] | Base do módulo de atendimento do AuraVet | Já é base de código real, não mais conceitual |
+| **Módulo de Ordem de Serviço** | Assistência técnica → formalizado dentro de [AM Consertta](../02-sistemas-de-negocio/consertta-sistema-assistencia-tecnica.md) | Base do módulo de atendimento do AuraVet | Já é base de código real, não mais conceitual |
 | **`aura-goals`** | Momentos/Cupido ↔ AM Rendara, com RF/RNF formal próprio | Nenhum outro sistema do momento | Sem uso adicional previsto |
 
 ---
 
 ## 🔗 Documentos relacionados
-- [[inventario-portfolio-atualizado]] — lista completa dos 23 sistemas/serviços com status
-- [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] — ordem de estudo/desenvolvimento de tudo isso
-- [[plano-mestre-frentes-alan]] — formas de renda de cada frente, incluindo os sistemas deste portfólio
+- [inventario-portfolio-atualizado](inventario-portfolio-atualizado.md) — lista completa dos 23 sistemas/serviços com status
+- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — ordem de estudo/desenvolvimento de tudo isso
+- [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — formas de renda de cada frente, incluindo os sistemas deste portfólio

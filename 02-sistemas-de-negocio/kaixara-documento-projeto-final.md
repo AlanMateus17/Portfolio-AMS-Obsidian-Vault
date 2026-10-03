@@ -130,7 +130,7 @@ Além dos RNF específicos já definidos no documento `requisitos-funcionais-e-n
 
 ## 6. Segurança de nível profissional
 
-Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]]) a este sistema:
+Aplicação concreta do checklist geral ([distribuicao-licenciamento-seguranca](../04-documentos-transversais/distribuicao-licenciamento-seguranca.md)) a este sistema:
 
 | Categoria | Aplicação específica no AM Kaixara |
 |---|---|
@@ -145,7 +145,7 @@ Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]
 
 ## 7. Hardware, instalador e distribuição
 
-O AM Kaixara é o sistema piloto da distribuição híbrida do portfólio (SaaS + instalador executável), detalhada no documento [[distribuicao-licenciamento-seguranca]]. Resumo aplicado aqui:
+O AM Kaixara é o sistema piloto da distribuição híbrida do portfólio (SaaS + instalador executável), detalhada no documento [distribuicao-licenciamento-seguranca](../04-documentos-transversais/distribuicao-licenciamento-seguranca.md). Resumo aplicado aqui:
 - Empacotamento como instalador Windows (MSIX ou WiX — decisão pendente, ver seção 11), contendo o agente local (2.7) já assinado digitalmente (Code Signing/Authenticode)
 - Ativação de licença online na instalação, vinculada ao `tenant_id`, com tolerância offline
 - Painel de configuração pós-compra (web) provisionando o tenant antes mesmo do instalador rodar localmente pela primeira vez
@@ -197,10 +197,10 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 ---
 
 ## 🔗 Documentos relacionados
-- [[kaixara-especificacao-tecnica-completa]] — schema, contrato de API, fluxos de sequência e threat model
-- [[kaixara-frontend-documento-unico]] — plano de frontend completo, do Discovery à Engenharia
-- [[stack-tecnologica]] — detalhamento da stack usada neste sistema
-- [[passo-a-passo-mestre-desde-o-inicio]] — a sequência de construção que usa o AM Kaixara como base
+- [kaixara-especificacao-tecnica-completa](kaixara-especificacao-tecnica-completa.md) — schema, contrato de API, fluxos de sequência e threat model
+- [kaixara-frontend-documento-unico](kaixara-frontend-documento-unico.md) — plano de frontend completo, do Discovery à Engenharia
+- [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) — detalhamento da stack usada neste sistema
+- [passo-a-passo-mestre-desde-o-inicio](../99-arquivo/passo-a-passo-mestre-desde-o-inicio.md) — a sequência de construção que usa o AM Kaixara como base
 
 ---
 
@@ -210,6 +210,6 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 2. **MSIX vs. WiX Toolset** para o instalador — ambos válidos, falta decidir.
 3. **Gateway fiscal terceirizado vs. implementação própria de comunicação com a SEFAZ** — decisão de negócio/custo que trava o início do módulo de NFC-e (seção 2.7).
 4. **Adquirente de cartão (TEF)** — implementação de `ITefService` depende de qual adquirente for escolhido.
-5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado (ver [[aura-support-documento-projeto-final]]), com painel de reprocessamento e correção manual para qualquer tenant do AM Kaixara.
+5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado (ver [aura-support-documento-projeto-final](../03-servicos-compartilhados/aura-support-documento-projeto-final.md)), com painel de reprocessamento e correção manual para qualquer tenant do AM Kaixara.
 6. **Canal formal de suporte ao lojista** (seção 4.2) — WhatsApp Business, ticket ou e-mail; hoje não está formalizado em nenhum RF.
 7. **Certificado de assinatura de código** — precisa ser adquirido de uma autoridade reconhecida antes do primeiro instalador público.

@@ -6,7 +6,7 @@ status: completo
 
 # Loja Virtual — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Este era o documento mais imaturo do portfólio — a própria Claude sinalizou incerteza elevada na conversa em que ele foi criado. Esta versão aplica o mesmo rigor de aprofundamento antes de fechar o documento, em vez de reproduzir a versão rasa anterior.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Este era o documento mais imaturo do portfólio — a própria Claude sinalizou incerteza elevada na conversa em que ele foi criado. Esta versão aplica o mesmo rigor de aprofundamento antes de fechar o documento, em vez de reproduzir a versão rasa anterior.
 
 ---
 

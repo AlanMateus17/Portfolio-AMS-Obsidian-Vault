@@ -7,9 +7,9 @@ atualizado: 2026-10-02
 
 # 🌌 Mapa de Horizonte Longo — Sistemas, Baixo Nível e SO Próprio
 
-> **Camada D do [[00-PLANO-UNIFICADO]].** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
+> **Camada D do [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
 >
-> A parte ofensiva (reverse, exploit, kernel exploitation) é só **nomeada** aqui — o detalhe vive em [[roadmap-seguranca-ofensiva-completo]], não é duplicado.
+> A parte ofensiva (reverse, exploit, kernel exploitation) é só **nomeada** aqui — o detalhe vive em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md), não é duplicado.
 
 ---
 
@@ -42,19 +42,19 @@ OS RESEARCH → AM-OS (SO próprio) · AM Linux (distro própria)
 ## 📚 Blocos por área (nível de currículo — o QUE estudar, não o passo a passo)
 
 ### Fundamentos de estudo
-Terminal Linux/Windows · Git/GitHub · Markdown · leitura de RFC/manual/código-fonte · debugging · método científico · laboratório (virtualização, snapshots, redes isoladas) · escrita técnica · inglês técnico. → já coberto por [[metodo-de-estudo]].
+Terminal Linux/Windows · Git/GitHub · Markdown · leitura de RFC/manual/código-fonte · debugging · método científico · laboratório (virtualização, snapshots, redes isoladas) · escrita técnica · inglês técnico. → já coberto por [metodo-de-estudo](metodo-de-estudo.md).
 
 ### Matemática (profunda)
-Básica → Álgebra → Geometria/Trigonometria → Discreta → Teoria dos Números → Cálculo → Álgebra Linear → Probabilidade/Estatística → (depois) Análise Real, Álgebra Abstrata, Topologia, Análise Complexa, EDO, Teoria da Informação, Teoria da Computação. → [[matematica-e-desenvolvimento-integrado]].
+Básica → Álgebra → Geometria/Trigonometria → Discreta → Teoria dos Números → Cálculo → Álgebra Linear → Probabilidade/Estatística → (depois) Análise Real, Álgebra Abstrata, Topologia, Análise Complexa, EDO, Teoria da Informação, Teoria da Computação. → [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md).
 
 ### Ciência da Computação
 Algoritmos, complexidade (Big-O), recursão, concorrência/paralelismo · estruturas de dados (array, lista, pilha, fila, árvore, heap, hash, grafo, trie) · algoritmos (ordenação, busca, DP, greedy, backtracking, grafos, caminho mínimo, árvore geradora, fluxo).
 
 ### Programação (baixo nível)
-C, C++, Rust, Assembly x86-64/ARM64 · memória, ponteiros, stack/heap, gerência de memória, threads/processos, IPC, sockets, concorrência, async, generics, metaprogramação, FFI. → C/C++ pela [[trilha-42-circles-oficial-verificado]].
+C, C++, Rust, Assembly x86-64/ARM64 · memória, ponteiros, stack/heap, gerência de memória, threads/processos, IPC, sockets, concorrência, async, generics, metaprogramação, FFI. → C/C++ pela [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md).
 
 ### Linux (profundo)
-Fundamentos (FHS, terminal, permissões, processos, shell, Vim) → Arch manual → desktop (Wayland/Hyprland) → server → internals (kernel, syscalls, VFS, memória virtual, drivers) → LFS/BLFS → kernel development. → base prática em [[trilha-linux-arch-profissional]].
+Fundamentos (FHS, terminal, permissões, processos, shell, Vim) → Arch manual → desktop (Wayland/Hyprland) → server → internals (kernel, syscalls, VFS, memória virtual, drivers) → LFS/BLFS → kernel development. → base prática em [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md).
 
 ### Windows / macOS / iOS
 Windows: arquitetura NT, Win32/NT API, registro, NTFS, ACL/SID/tokens, UAC, PowerShell/WMI · Windows Internals · Active Directory.
@@ -62,7 +62,7 @@ macOS: Darwin/XNU/Mach/BSD, launchd, APFS, Keychain, SIP, Gatekeeper, TCC, sandb
 iOS: iBoot, Secure Enclave, entitlements, provisioning, Data Protection, Mach-O, dyld, XPC.
 
 ### Segurança (web · redes · AD · ofensiva)
-Escopo e trilha completos em [[roadmap-seguranca-ofensiva-completo]] e [[recursos-links-seguranca-ofensiva]]. Áreas: segurança web (OWASP), pentest, wireless, AD security, reverse engineering, exploit development, kernel exploitation, malware analysis, forense digital, blue team, cloud security, segurança de containers/k8s, criptografia aplicada, segurança de hardware, IoT/embedded. **Regra permanente:** só em ambientes próprios ou autorizados.
+Escopo e trilha completos em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) e [recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md). Áreas: segurança web (OWASP), pentest, wireless, AD security, reverse engineering, exploit development, kernel exploitation, malware analysis, forense digital, blue team, cloud security, segurança de containers/k8s, criptografia aplicada, segurança de hardware, IoT/embedded. **Regra permanente:** só em ambientes próprios ou autorizados.
 
 ### Sistemas Operacionais (juntar tudo)
 boot/bootloader · kernel · memória virtual · processos/scheduling · interrupts · syscalls · IPC · filesystems · drivers · networking · segurança · userland. Comparar **Linux × Windows NT × XNU**.
@@ -72,7 +72,7 @@ boot/bootloader · kernel · memória virtual · processos/scheduling · interru
 ## 🏗️ Projetos de coroação
 - **AM-OS** — SO próprio: boot → GDT/IDT/interrupts → memória/paging → processos/scheduler → syscalls/user mode → filesystem/VFS → networking → shell → modelo de segurança.
 - **AM Linux** — distro própria, depois do LFS: kernel + bootloader + glibc + systemd + coreutils + stack de rede + gerenciador de pacotes + instalador + ISO.
-- **Homelab físico** — laboratório permanente (Linux/Windows/Apple, AD, Docker, monitoramento), expandindo com Raspberry Pi, mini-PC, switch, NAS, WireGuard. → [[infraestrutura-fisica-10-anos]].
+- **Homelab físico** — laboratório permanente (Linux/Windows/Apple, AD, Docker, monitoramento), expandindo com Raspberry Pi, mini-PC, switch, NAS, WireGuard. → [infraestrutura-fisica-10-anos](../01-planejamento-geral/infraestrutura-fisica-10-anos.md).
 
 Progressão de identidade: **usuário Linux → administrador → desenvolvedor de sistemas → kernel developer → criador de distribuição.**
 

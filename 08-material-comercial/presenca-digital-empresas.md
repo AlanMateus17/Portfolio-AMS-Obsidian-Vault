@@ -87,6 +87,6 @@ status: completo
 ---
 
 ## 🔗 Documentos relacionados
-- [[plano-mestre-frentes-alan]] — as três frentes que esta presença digital representa
-- [[estrutura-juridica-amtech]] — o nome/CNPJ formal por trás da marca "Grupo AMtech Digital"
-- [[github-estrutura-profissional-autoridade]] — o detalhamento técnico do GitHub, complementar à seção 6-7 acima
+- [plano-mestre-frentes-alan](../01-planejamento-geral/plano-mestre-frentes-alan.md) — as três frentes que esta presença digital representa
+- [estrutura-juridica-amtech](../01-planejamento-geral/estrutura-juridica-amtech.md) — o nome/CNPJ formal por trás da marca "Grupo AMtech Digital"
+- [github-estrutura-profissional-autoridade](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) — o detalhamento técnico do GitHub, complementar à seção 6-7 acima

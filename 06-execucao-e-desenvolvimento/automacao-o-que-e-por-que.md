@@ -7,7 +7,7 @@ atualizado: 2026-10-02
 
 # Automação — O Que É, Como Fazer e Por Quê
 
-> **Consolida três documentos antigos** (`plano-automacao-completo`, `automacao-total-ambiente-trabalho`, `por-que-automatizar-riscos-e-testes`) em seis seções. A sequência (quando construir) fica em [[automacao-ordem-de-execucao]]. Os três originais foram para `99-arquivo/`.
+> **Consolida três documentos antigos** (`plano-automacao-completo`, `automacao-total-ambiente-trabalho`, `por-que-automatizar-riscos-e-testes`) em seis seções. A sequência (quando construir) fica em [automacao-ordem-de-execucao](automacao-ordem-de-execucao.md). Os três originais foram para `99-arquivo/`.
 
 > **Regra que governa tudo:** automatize o determinístico e verificável. **Nunca** 100% automático o que envolve dinheiro saindo, mensagem ao cliente sem revisão, ou decisão de arquitetura/negócio — o script prepara, você aprova.
 > **Honesto:** automação não é grátis — cada ferramenta é mais uma que pode quebrar e dar falsa segurança.
@@ -16,7 +16,7 @@ Prioridade: 🟢 já, mesmo sozinho · 🟡 só com produção real · 🔴 só 
 
 ## A. Catálogo — adotar vs. construir
 **A.1 Adotar (grátis):** `dotnet format` · Gitleaks · GitHub Actions · Dependabot · CodeQL (SAST) · GitHub Actions+script (CD) · Terraform (IaC) · Uptime Kuma (monitor) · Grafana Loki (log) · Swagger (doc API) · MkDocs (site doc) · semantic-release (changelog) · k6 (carga) · Claude Code Action (revisão PR) · GitHub Projects (≈Jira) · GitHub Container Registry · RabbitMQ (≈Kafka). A coluna "enterprise" (Jenkins, Snyk, Datadog, Splunk, PagerDuty, HashiCorp Vault, Kafka...) é só pra reconhecer o nome.
-**A.2 Construir (é seu):** `aura-status` — console C#, agrega Git de todos os repos, pasta órfã, backup, catálogo, PRs do Dependabot, timer do Protocolo, Anki, zip-gabaritos. (arquitetura em [[painel-central-arquitetura-todas-fases]])
+**A.2 Construir (é seu):** `aura-status` — console C#, agrega Git de todos os repos, pasta órfã, backup, catálogo, PRs do Dependabot, timer do Protocolo, Anki, zip-gabaritos. (arquitetura em [painel-central-arquitetura-todas-fases](painel-central-arquitetura-todas-fases.md))
 **A.3 Setup conectado:** backup no Task Scheduler, `aura-status` semanal em log, Certbot semanal, Uptime Kuma via Docker `--restart=always`.
 
 ## B. Como fazer (comando real)
@@ -45,4 +45,4 @@ Unitário (xUnit) · Integração (Testcontainers) · Contrato (Pact — crític
 **Começar agora (🟢):** pre-commit (feito) · Dependabot · CI básico · backup do `C:\dev\` · setup em um comando.
 
 ## 🔗 Relacionados
-- [[automacao-ordem-de-execucao]] · [[painel-central-arquitetura-todas-fases]] · [[mapa-automacao-por-contexto-profissional]] · [[seguranca-e-ferramentas-todas-as-frentes]] · [[infraestrutura-fisica-10-anos]] · [[setup-ambiente-trabalho-final]]
+- [automacao-ordem-de-execucao](automacao-ordem-de-execucao.md) · [painel-central-arquitetura-todas-fases](painel-central-arquitetura-todas-fases.md) · [mapa-automacao-por-contexto-profissional](../07-estudo-e-carreira/mapa-automacao-por-contexto-profissional.md) · [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) · [infraestrutura-fisica-10-anos](../01-planejamento-geral/infraestrutura-fisica-10-anos.md) · [setup-ambiente-trabalho-final](setup-ambiente-trabalho-final.md)

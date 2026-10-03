@@ -42,7 +42,7 @@ Siga os **Passos 1 a 10** do `passo-a-passo-mestre-desde-o-inicio` — lógica, 
 | Reserva de estoque (RF11) | Reforça o mesmo raciocínio de concorrência do Tier 1, com mais profundidade |
 | Recibo de venda não-fiscal (RF15, sem a complexidade de emissão fiscal real) | Prova de fluxo de venda ponta a ponta, sem depender de integração externa complexa |
 | Modo offline básico (fila local + sincronização, RF10) | O diferencial mais raro de todos num portfólio júnior — mas é o mais caro de construir; só entre nele se o Tier 1 já estiver 100% sólido |
-| Um ADR documentando a decisão de concorrência | Prova de raciocínio de arquitetura, não só resultado — ver `[[github-estrutura-profissional-autoridade]]` |
+| Um ADR documentando a decisão de concorrência | Prova de raciocínio de arquitetura, não só resultado — ver `[github-estrutura-profissional-autoridade](github-estrutura-profissional-autoridade.md)` |
 
 ### Tier 3 — Mencione como "planejado", não precisa estar funcionando
 
@@ -62,7 +62,7 @@ Emissão fiscal real (NFC-e/SEFAZ), integração TEF com adquirente real, agente
 
 ## Fase 3 — Presença no GitHub, especificamente pra quem recruta
 
-Diferente da estratégia de "empresa" (organização separada, já planejada em `[[github-estrutura-profissional-autoridade]]`), pra busca de vaga o que mais pesa é o **seu perfil pessoal**:
+Diferente da estratégia de "empresa" (organização separada, já planejada em `[github-estrutura-profissional-autoridade](github-estrutura-profissional-autoridade.md)`), pra busca de vaga o que mais pesa é o **seu perfil pessoal**:
 
 1. **Fixe o repositório do AM Kaixara** no topo do seu perfil pessoal (mesmo que o código "de verdade" esteja também replicado na organização)
 2. **Profile README** — quem você é, o que estuda, link pro projeto principal, contato
@@ -74,10 +74,10 @@ Diferente da estratégia de "empresa" (organização separada, já planejada em 
 ## Fase 4 — Prontidão de aplicação (além do código)
 
 1. **Treinar explicar o projeto em 2 minutos**, sem gaguejar — grave você mesmo falando e reescute
-2. **Método STAR** pra pergunta comportamental ("me conte uma vez que você resolveu um problema difícil") — já detalhado em `[[perfil-senior-completo-auditoria]]`
+2. **Método STAR** pra pergunta comportamental ("me conte uma vez que você resolveu um problema difícil") — já detalhado em `[perfil-senior-completo-auditoria](../07-estudo-e-carreira/perfil-senior-completo-auditoria.md)`
 3. **LinkedIn atualizado**, com o mesmo projeto em destaque, e headline clara ("Desenvolvedor Full Stack Júnior | C#/.NET, TypeScript/Next.js")
 4. **Currículo de uma página**, projeto do AM Kaixara com link, sem enumerar os outros 20 sistemas do portfólio de negócio — mesma lógica de foco já discutida
-5. Inglês básico de entrevista, se for aplicar em vaga remota internacional — ver `[[ingles-espanhol-integrado]]`, nível B1-B2 já é suficiente pra maioria das entrevistas júnior
+5. Inglês básico de entrevista, se for aplicar em vaga remota internacional — ver `[ingles-espanhol-integrado](../07-estudo-e-carreira/ingles-espanhol-integrado.md)`, nível B1-B2 já é suficiente pra maioria das entrevistas júnior
 
 ---
 

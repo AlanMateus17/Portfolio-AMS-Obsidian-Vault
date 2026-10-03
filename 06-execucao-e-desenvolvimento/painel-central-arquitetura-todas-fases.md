@@ -7,7 +7,7 @@ status: novo
 # Painel Central — Arquitetura para Todas as Fases da Carreira
 ### O `aura-status` de hoje, desenhado pra crescer sem reescrever — empresa própria, freelancer, empregado em empresa grande
 
-> Este documento não repete "o que automatizar e quando" — isso já está resolvido em [[automacao-ordem-de-execucao]] (quando construir) e [[veredito-clonar-ou-nao-ferramenta-paga]] (construir vs. adotar). Aqui é só uma pergunta: **como desenhar o painel central hoje pra que, daqui a anos, numa empresa grande, ele ainda seja a mesma ferramenta — só com mais fontes de dado plugadas, não reescrita do zero.**
+> Este documento não repete "o que automatizar e quando" — isso já está resolvido em [automacao-ordem-de-execucao](automacao-ordem-de-execucao.md) (quando construir) e [veredito-clonar-ou-nao-ferramenta-paga](veredito-clonar-ou-nao-ferramenta-paga.md) (construir vs. adotar). Aqui é só uma pergunta: **como desenhar o painel central hoje pra que, daqui a anos, numa empresa grande, ele ainda seja a mesma ferramenta — só com mais fontes de dado plugadas, não reescrita do zero.**
 
 ---
 
@@ -26,8 +26,8 @@ São 4 ferramentas, nenhuma nova além do que já desenhamos nesta conversa, e n
 **Somando tudo: entre 700 e 900 linhas, espalhadas ao longo de anos — menor que um único sistema de negócio do seu portfólio.** O AM Kaixara sozinho, com os 15 RF completos, já é maior que essas 4 ferramentas juntas. Não é um segundo portfólio competindo com os 23 sistemas — é uma camada fina, construída aos pedaços, cada pedaço nascendo só quando o problema que resolve existir de verdade.
 
 **Documento de projeto completo, no mesmo padrão dos 23 sistemas, pra cada uma:**
-- [[aura-status-documento-projeto-final]] — o único dos 4 com potencial real de virar produto vendável
-- [[aura-queue-documento-projeto-final|aura-queue]], [[aura-secrets-documento-projeto-final|aura-secrets]] e [[aura-oncall-documento-projeto-final|aura-oncall]] — os outros 3, documentados como peça de portfólio/aprendizado, não como produto — a razão de cada um estar nessa categoria, explicada dentro do próprio documento
+- [aura-status-documento-projeto-final](../10-ferramentas-pessoais/aura-status-documento-projeto-final.md) — o único dos 4 com potencial real de virar produto vendável
+- [aura-queue](../10-ferramentas-pessoais/aura-queue-documento-projeto-final.md), [aura-secrets](../10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md) e [aura-oncall](../10-ferramentas-pessoais/aura-oncall-documento-projeto-final.md) — os outros 3, documentados como peça de portfólio/aprendizado, não como produto — a razão de cada um estar nessa categoria, explicada dentro do próprio documento
 
 ---
 
@@ -114,13 +114,13 @@ Cada fase da sua carreira não é um programa novo — é uma ou duas classes no
 
 ## Por que só o aura-status tem modelo de receita, entre as 4 ferramentas
 
-`aura-status` tem um ângulo que `aura-queue`, `aura-secrets` e `aura-oncall` não têm: **ninguém mais construiu especificamente pra TDAH, com esse desenho de baixa carga cognitiva** — é diferenciação real. Fila de mensagem, cofre de segredo e escalonamento de incidente **já são resolvidos**, de graça, por ferramentas com anos de maturidade — não existe diferenciação possível numa versão "simples" feita por uma pessoa só. Documentar as 4 com o mesmo rigor técnico dos 23 sistemas do portfólio (11 seções completas cada, ver [[aura-queue-documento-projeto-final]], [[aura-secrets-documento-projeto-final]] e [[aura-oncall-documento-projeto-final]]) sem forçar um modelo de receita que não existe é mais útil do que fingir que as 4 são igualmente promissoras.
+`aura-status` tem um ângulo que `aura-queue`, `aura-secrets` e `aura-oncall` não têm: **ninguém mais construiu especificamente pra TDAH, com esse desenho de baixa carga cognitiva** — é diferenciação real. Fila de mensagem, cofre de segredo e escalonamento de incidente **já são resolvidos**, de graça, por ferramentas com anos de maturidade — não existe diferenciação possível numa versão "simples" feita por uma pessoa só. Documentar as 4 com o mesmo rigor técnico dos 23 sistemas do portfólio (11 seções completas cada, ver [aura-queue-documento-projeto-final](../10-ferramentas-pessoais/aura-queue-documento-projeto-final.md), [aura-secrets-documento-projeto-final](../10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md) e [aura-oncall-documento-projeto-final](../10-ferramentas-pessoais/aura-oncall-documento-projeto-final.md)) sem forçar um modelo de receita que não existe é mais útil do que fingir que as 4 são igualmente promissoras.
 
 ---
 
 ## 🔗 Documentos relacionados
-- [[automacao-o-que-e-por-que]] e o código já existente do `aura-status` — o núcleo que este documento estende
-- [[mapa-automacao-por-contexto-profissional]] — o detalhe de cada fase (o que você controla, o que precisa seguir)
-- [[veredito-clonar-ou-nao-ferramenta-paga]] — por que Jira/PagerDuty não precisam ser clonados, só ter uma fonte de leitura no painel
-- [[automacao-ordem-de-execucao]] — quando cada fonte da tabela acima realmente entra
-- [[aura-status-documento-projeto-final]], [[aura-queue-documento-projeto-final]], [[aura-secrets-documento-projeto-final]], [[aura-oncall-documento-projeto-final]] — os 4 documentos completos, mesmo padrão dos 23 sistemas de negócio
+- [automacao-o-que-e-por-que](automacao-o-que-e-por-que.md) e o código já existente do `aura-status` — o núcleo que este documento estende
+- [mapa-automacao-por-contexto-profissional](../07-estudo-e-carreira/mapa-automacao-por-contexto-profissional.md) — o detalhe de cada fase (o que você controla, o que precisa seguir)
+- [veredito-clonar-ou-nao-ferramenta-paga](veredito-clonar-ou-nao-ferramenta-paga.md) — por que Jira/PagerDuty não precisam ser clonados, só ter uma fonte de leitura no painel
+- [automacao-ordem-de-execucao](automacao-ordem-de-execucao.md) — quando cada fonte da tabela acima realmente entra
+- [aura-status-documento-projeto-final](../10-ferramentas-pessoais/aura-status-documento-projeto-final.md), [aura-queue-documento-projeto-final](../10-ferramentas-pessoais/aura-queue-documento-projeto-final.md), [aura-secrets-documento-projeto-final](../10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md), [aura-oncall-documento-projeto-final](../10-ferramentas-pessoais/aura-oncall-documento-projeto-final.md) — os 4 documentos completos, mesmo padrão dos 23 sistemas de negócio

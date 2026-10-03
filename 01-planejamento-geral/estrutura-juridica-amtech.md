@@ -102,11 +102,11 @@ Você decidiu explicitamente manter tudo que é TI (desenvolvimento, licenciamen
 ## 5. Pendências reais
 
 1. **Confirmar com contador:** CNAE principal exato, enquadramento Fator R (III vs V), e se a lista completa de CNAEs secundários precisa estar no contrato social desde a abertura (evita alteração contratual depois)
-2. **Decidir o momento de abrir** — ver [[plano-mestre-frentes-alan]], que trata a formalização do CNPJ de tecnologia como prioridade 2 (depois da assistência técnica MEI, que é mais rápida/barata)
+2. **Decidir o momento de abrir** — ver [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md), que trata a formalização do CNPJ de tecnologia como prioridade 2 (depois da assistência técnica MEI, que é mais rápida/barata)
 3. **Confirmar no seu contrato de professor** se existe cláusula de dedicação exclusiva (improvável em CLT/contrato temporário, mas vale checar antes de abrir)
 
 ---
 
 ## 🔗 Documentos relacionados
-- [[plano-mestre-frentes-alan]] — quando abrir isso em relação às outras frentes, e o cronograma de fases
-- [[status-planejamento-portfolio]] — status geral do portfólio que essa empresa vai comercializar
+- [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — quando abrir isso em relação às outras frentes, e o cronograma de fases
+- [status-planejamento-portfolio](status-planejamento-portfolio.md) — status geral do portfólio que essa empresa vai comercializar

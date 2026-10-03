@@ -77,7 +77,7 @@ Sistema de diagnóstico de setup e geração de arquitetura por IA, escalável �
 
 ## 5. Requisitos Não Funcionais (RNF) — próprios e transversais
 
-Este sistema **origina** a série transversal `RNFT-IA01–04` (governança de geração por IA), aplicável a qualquer sistema futuro do portfólio que gere conteúdo pra cliente final via IA — ver [[rnft-ia-governanca-geracao-ia]] pro detalhamento completo de cada item.
+Este sistema **origina** a série transversal `RNFT-IA01–04` (governança de geração por IA), aplicável a qualquer sistema futuro do portfólio que gere conteúdo pra cliente final via IA — ver [rnft-ia-governanca-geracao-ia](../04-documentos-transversais/rnft-ia-governanca-geracao-ia.md) pro detalhamento completo de cada item.
 
 | ID | Aplicação no AM Projeta | Para que serve |
 |---|---|---|
@@ -136,6 +136,6 @@ Padrão do portfólio (Docker, GitHub Actions/Gitea Actions), sem desvio.
 ---
 
 ## 🔗 Documentos relacionados
-- [[rnft-ia-governanca-geracao-ia]] — a série transversal nova que este sistema origina, reaproveitável por qualquer sistema futuro com IA voltada ao cliente final
-- [[aura-copilot-documento-projeto-final]] — pré-requisito de validação antes do Backlog EPIC-AA01 começar
-- [[inventario-portfolio-atualizado]] — posição deste sistema no portfólio de 23
+- [rnft-ia-governanca-geracao-ia](../04-documentos-transversais/rnft-ia-governanca-geracao-ia.md) — a série transversal nova que este sistema origina, reaproveitável por qualquer sistema futuro com IA voltada ao cliente final
+- [aura-copilot-documento-projeto-final](../03-servicos-compartilhados/aura-copilot-documento-projeto-final.md) — pré-requisito de validação antes do Backlog EPIC-AA01 começar
+- [inventario-portfolio-atualizado](../01-planejamento-geral/inventario-portfolio-atualizado.md) — posição deste sistema no portfólio de 23

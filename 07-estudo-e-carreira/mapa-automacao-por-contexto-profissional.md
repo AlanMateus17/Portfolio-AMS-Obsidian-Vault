@@ -46,7 +46,7 @@ Isso é exatamente o gap que `perfil-senior-completo-auditoria` já identificou 
 ---
 
 ## 🔗 Documentos relacionados
-- [[automacao-o-que-e-por-que]] — o "como" de cada categoria, pro contexto onde você constrói do zero
-- [[automacao-o-que-e-por-que]] — o "por quê" e os riscos, válidos nos três contextos
-- [[automacao-ordem-de-execucao]] — a ordem de construção específica do seu próprio portfólio
-- [[perfil-senior-completo-auditoria]] — onde este mapa se conecta com o que falta pro perfil sênior
+- [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o "como" de cada categoria, pro contexto onde você constrói do zero
+- [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o "por quê" e os riscos, válidos nos três contextos
+- [automacao-ordem-de-execucao](../06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) — a ordem de construção específica do seu próprio portfólio
+- [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md) — onde este mapa se conecta com o que falta pro perfil sênior

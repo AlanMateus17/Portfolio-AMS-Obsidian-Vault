@@ -7,7 +7,7 @@ status: completo
 # AM Consertta — Sistema Central da Assistência Técnica e Loja (Nome provisório)
 ### Ordem de Serviço + Loja Física (PDV) + Loja Online
 
-> **Nota sobre estrutura:** documento criado antes do [[template-documento-projeto-final]] existir, com numeração própria. Conteúdo equivalente às seções 1, 2, 4, 6, 8-9 do template já existe aqui. As seções 8-10, adicionadas ao final, cobrem perfis de usuário, segurança concreta e pendências — equivalente às seções 3, 5 e 10 do template.
+> **Nota sobre estrutura:** documento criado antes do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md) existir, com numeração própria. Conteúdo equivalente às seções 1, 2, 4, 6, 8-9 do template já existe aqui. As seções 8-10, adicionadas ao final, cobrem perfis de usuário, segurança concreta e pendências — equivalente às seções 3, 5 e 10 do template.
 
 ## 0. O insight mais importante antes de qualquer funcionalidade
 
@@ -235,7 +235,7 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 
 ## 11. Segurança de nível profissional
 
-Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]]) a este sistema:
+Aplicação concreta do checklist geral ([distribuicao-licenciamento-seguranca](../04-documentos-transversais/distribuicao-licenciamento-seguranca.md)) a este sistema:
 
 | Categoria | Aplicação específica no AM Consertta |
 |---|---|

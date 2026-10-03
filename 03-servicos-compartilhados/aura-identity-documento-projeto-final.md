@@ -6,7 +6,7 @@ status: completo
 
 # aura-identity — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Primeiro dos 4 serviços compartilhados pendentes, e o de maior prioridade real — fecha a maior evidência de duplicação de código encontrada em toda a auditoria do portfólio.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Primeiro dos 4 serviços compartilhados pendentes, e o de maior prioridade real — fecha a maior evidência de duplicação de código encontrada em toda a auditoria do portfólio.
 
 ---
 

@@ -21,15 +21,15 @@ A sequência de *execução* das frentes principais, uma por vez. A trilha de *e
 **Regra de foco:** no máximo 1 principal + 1 secundário por fase. O resto fica em fila, pausado de propósito.
 
 ### 🔒 Gate de segurança ↔ Linux
-A parte de segurança ([[roadmap-seguranca-ofensiva-completo]]) só avança com a fase da [[trilha-linux-arch-profissional]] concluída:
-- Linux F1 + Segurança S1 (juntas) → Bandit · faça [[trilha-de-redes]] cedo
+A parte de segurança ([roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md)) só avança com a fase da [trilha-linux-arch-profissional](07-estudo-e-carreira/trilha-linux-arch-profissional.md) concluída:
+- Linux F1 + Segurança S1 (juntas) → Bandit · faça [trilha-de-redes](07-estudo-e-carreira/trilha-de-redes.md) cedo
 - Linux F2 → S2 (redes p/ pentest) · F3–4 → S3 (testar o próprio Aura) · F5–6 → S4 (escalada) · F8 → S5 (lab Kali) → Windows/AD → baixo nível
 - **Regra de ouro:** nunca abrir uma fase de segurança sem o gate de Linux fechado.
 
 ---
 ### Ponto de entrada único. Uma trilha, uma numeração, sem bifurcação.
 
-> **Por que este documento existe:** você tinha 3 documentos tentando ser "a sequência oficial" ([[mapa-mestre-prioridade-total]], [[sequencia-mestra-completa-desde-o-inicio]], [[passo-a-passo-mestre-desde-o-inicio]]), com duas numerações diferentes ("Bloco" e "Passo") que não se encaixavam 1-pra-1. Este arquivo resolve isso: junta a clareza de prioridade do mapa-mestre com o detalhe acionável do passo-a-passo-mestre, numa numeração só (**Passo**), sem repetir o mesmo conteúdo em três lugares.
+> **Por que este documento existe:** você tinha 3 documentos tentando ser "a sequência oficial" ([mapa-mestre-prioridade-total](99-arquivo/mapa-mestre-prioridade-total.md), [sequencia-mestra-completa-desde-o-inicio](99-arquivo/sequencia-mestra-completa-desde-o-inicio.md), [passo-a-passo-mestre-desde-o-inicio](99-arquivo/passo-a-passo-mestre-desde-o-inicio.md)), com duas numerações diferentes ("Bloco" e "Passo") que não se encaixavam 1-pra-1. Este arquivo resolve isso: junta a clareza de prioridade do mapa-mestre com o detalhe acionável do passo-a-passo-mestre, numa numeração só (**Passo**), sem repetir o mesmo conteúdo em três lugares.
 >
 > Os três documentos originais continuam existindo no vault — não foram apagados nem alterados — mas a partir de agora você só precisa abrir **este arquivo** no dia a dia. Eles ficam como referência de detalhe profundo, não como algo que você precisa consultar pra saber "o que vem agora".
 
@@ -44,7 +44,7 @@ Quando surgir um assunto novo pra estudar (tecnologia nova, livro novo, trilha q
    - **Cabe dentro de um Passo existente** → vira uma linha a mais em "Estudar" ou "Desenvolver" daquele Passo, sem criar Passo novo.
    - **É grande o bastante pra merecer bloco próprio** → vira um novo Passo, deslocando a numeração dos seguintes.
    - **É longo e contínuo, sem travar a Trilha Principal** → vira uma nova linha na tabela de Trilhas Paralelas, mesmo tratamento da Trilha 42/Pentest.
-3. **Só este arquivo muda.** Os documentos-fonte antigos ([[sequencia-mestra-completa-desde-o-inicio]], [[mapa-mestre-prioridade-total]], [[passo-a-passo-mestre-desde-o-inicio]]) não são mais tocados no dia a dia — se o assunto novo precisar de detalhe profundo, criamos um documento novo só pra ele e linkamos aqui, sem inflar este sumário.
+3. **Só este arquivo muda.** Os documentos-fonte antigos ([sequencia-mestra-completa-desde-o-inicio](99-arquivo/sequencia-mestra-completa-desde-o-inicio.md), [mapa-mestre-prioridade-total](99-arquivo/mapa-mestre-prioridade-total.md), [passo-a-passo-mestre-desde-o-inicio](99-arquivo/passo-a-passo-mestre-desde-o-inicio.md)) não são mais tocados no dia a dia — se o assunto novo precisar de detalhe profundo, criamos um documento novo só pra ele e linkamos aqui, sem inflar este sumário.
 4. Você não precisa reorganizar nada sozinho — só avisar o assunto novo.
 
 ---
@@ -72,7 +72,7 @@ Isso não é regra rígida de tempo — é a ordem de troca, sempre a mesma, pra
 
 ## 📍 Onde você está agora
 
-- [ ] **Passo 1** — em andamento (Sprint 1 do [[EPIC-01-backlog-passo1-fundamentos]], User Story atual)
+- [ ] **Passo 1** — em andamento (Sprint 1 do [EPIC-01-backlog-passo1-fundamentos](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md), User Story atual)
 
 *(atualize esta linha manualmente conforme for avançando — é o seu "você está aqui" permanente)*
 
@@ -80,22 +80,22 @@ Isso não é regra rígida de tempo — é a ordem de troca, sempre a mesma, pra
 
 ## 🧠 Antes de CADA Passo: o mesmo protocolo de 15-30min, sem exceção
 
-Isso vale pra todo Passo da Trilha Principal e todo bloco de qualquer Trilha Paralela. Não é opcional — é o que transforma "eu vi isso uma vez" em "eu sei isso" (detalhe completo e a ciência por trás: [[metodo-de-estudo]]).
+Isso vale pra todo Passo da Trilha Principal e todo bloco de qualquer Trilha Paralela. Não é opcional — é o que transforma "eu vi isso uma vez" em "eu sei isso" (detalhe completo e a ciência por trás: [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md)).
 
 ```
 1. FECHE o material (código, vídeo, livro) — não olhe mais
 2. RECONSTRUA de cabeça: o que esse Passo resolveu, e por quê daquele jeito
 3. ENSINE em 3-5 frases simples, sem jargão — vira Ficha Dupla (curso) e Registro
-   de Entrevista (vaga), os dois no [[00-catalogo-progresso]] — não é opcional,
+   de Entrevista (vaga), os dois no [00-catalogo-progresso](09-material-producao-simultanea/00-catalogo-progresso.md) — não é opcional,
    é o mesmo raciocínio do passo 2, só formatado duas vezes
 4. ANKI: 1-3 cartões do que valeu a pena fixar
 5. REGISTRE quanto tempo o Passo realmente levou, vs. a estimativa abaixo
 6. SÓ ENTÃO marque [x] e avance pro próximo
 ```
 
-*(Antes de abrir o editor pra codar o "Desenvolver" de um Passo novo, registre a pasta/repositório no [[00-catalogo-progresso]] — é o que mantém o código sempre rastreável até o Passo que o gerou, sem precisar procurar depois.)*
+*(Antes de abrir o editor pra codar o "Desenvolver" de um Passo novo, registre a pasta/repositório no [00-catalogo-progresso](09-material-producao-simultanea/00-catalogo-progresso.md) — é o que mantém o código sempre rastreável até o Passo que o gerou, sem precisar procurar depois.)*
 
-*(detalhe completo dos dois formatos de artefato: [[metodo-de-estudo]])*
+*(detalhe completo dos dois formatos de artefato: [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md))*
 
 ---
 
@@ -112,7 +112,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Git, SQL/PostgreSQL (`EXPLAIN ANALYZE`), Docker.
   **Desenvolver:** schema real do AM Kaixara (produto, categoria, estoque, venda) + schema do `aura-licensing`.
   **✅ Pronto quando:** lê um `EXPLAIN ANALYZE` e identifica full scan; ambiente sobe com `docker-compose up`.
-  **🤖 Automação que entra aqui:** pre-commit hook (Gitleaks) + Dependabot + backup agendado de `C:\dev\` — ver [[automacao-ordem-de-execucao]].
+  **🤖 Automação que entra aqui:** pre-commit hook (Gitleaks) + Dependabot + backup agendado de `C:\dev\` — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 3 — C# Fundamentals + Matemática Parte II (início)** *(1-2 semanas)*
   Tipo, classe, coleção, LINQ, nullable reference type, `async/await`, DI + Matemática Cap. 3 (Naturais/Inteiros, Algoritmo de Euclides).
@@ -133,7 +133,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Pirâmide de teste, `Moq`, teste de integração, TDD + Testing Library/Playwright.
   **Desenvolver:** teste do fluxo de venda (unitário + integração) + teste de componente do carrinho + E2E completo. TDD puro no `aura-goals`.
   **✅ Pronto quando:** cobertura real no fluxo de venda, backend e frontend.
-  **🤖 Automação que entra aqui:** CI completo (build + teste a cada push) + CodeQL — ver [[automacao-ordem-de-execucao]].
+  **🤖 Automação que entra aqui:** CI completo (build + teste a cada push) + CodeQL — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 7 — Fechar o AM Kaixara: pagamento e cobrança** *(2-3 semanas)*
   Aplicação do que já foi estudado, sem tópico novo formal.
@@ -156,19 +156,19 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   Docker multi-stage, deploy gerenciado, pipeline GitHub Actions, observabilidade.
   **Desenvolver:** deploy real do AM Kaixara — primeiro marco de verdade do portfólio.
   **✅ Pronto quando:** sistema no ar, observável, deploy automático a cada push.
-  **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [[aura-secrets-documento-projeto-final|aura-secrets]] — ver [[automacao-ordem-de-execucao]].
+  **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [aura-secrets](10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md) — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 11 — Performance com dado real** *(após meses em produção)*
   `Span<T>`, Garbage Collector, `BenchmarkDotNet` + Matemática Cap. 9 (Estatística Descritiva).
   **Desenvolver:** medir e otimizar o endpoint mais usado, com número real.
   **✅ Pronto quando:** tem "antes e depois" medido de uma otimização real.
-  **🤖 Automação que entra aqui:** teste de carga (k6) — ver [[automacao-ordem-de-execucao]].
+  **🤖 Automação que entra aqui:** teste de carga (k6) — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 12 — Extração da plataforma interna** *(2-3 semanas — ponto de virada do cronograma)*
   Template `dotnet new`, NuGet privado, monorepo vs. polyrepo. Espanhol Fase A começa (Inglês já em B1-B2). Nomear a metodologia ágil já praticada.
   **Desenvolver, extraindo do AM Kaixara pronto:** template Clean Architecture+`tenant_id` → `aura-identity` real → lib de multi-tenancy → CI/CD reutilizável → component library (Storybook) → `aura-notifications` → `aura-support` → primeira apostila piloto (fichas duplas acumuladas) → segurança de frontend + lançamento (CDN, cache, métricas).
   **✅ Pronto quando:** gera a estrutura de um sistema novo com um comando, autenticado, com tema, sem escrever do zero.
-  **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [[automacao-ordem-de-execucao]].
+  **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 13 — Segundo sistema: AM Rotara** *(bem mais rápido que o primeiro)*
   Reforço de Geometria Analítica/Estruturas Lineares. No bloco de roteirização: Python + OR-Tools + Matemática Cap. 19-20 (Combinatória, Probabilidade/Bayes).
@@ -187,12 +187,12 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 
 | Trilha | Começa em | Duração estimada | Documento de detalhe |
 |---|---|---|---|
-| **Trilha 42** — Circles 00-06, sua stack primeiro depois nativo C/C++ | Depois do Passo 8 | ~7-12 meses ⚠️ | [[trilha-42-circles-oficial-verificado]] (é a versão corrigida — use esta, não a contagem citada em outros arquivos) |
-| **Pentest/OSCP** | Depois do Passo 8 (mesmo gatilho da Trilha 42) | 1-2 anos | [[roadmap-seguranca-ofensiva-completo]], [[recursos-links-seguranca-ofensiva]] |
-| **Espanhol** | Passo 12 (Inglês já em B1-B2) | Mais rápido que o Inglês | [[ingles-espanhol-integrado]] |
+| **Trilha 42** — Circles 00-06, sua stack primeiro depois nativo C/C++ | Depois do Passo 8 | ~7-12 meses ⚠️ | [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) (é a versão corrigida — use esta, não a contagem citada em outros arquivos) |
+| **Pentest/OSCP** | Depois do Passo 8 (mesmo gatilho da Trilha 42) | 1-2 anos | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md), [recursos-links-seguranca-ofensiva](07-estudo-e-carreira/recursos-links-seguranca-ofensiva.md) |
+| **Espanhol** | Passo 12 (Inglês já em B1-B2) | Mais rápido que o Inglês | [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) |
 | **Python + OR-Tools** | Passo 13, no bloco de roteirização | 5-7 semanas | detalhe dentro do próprio Passo 13 acima |
-| **Perfil sênior** (System Design, IaC) | Depois do Passo 12 | Pontual, não bloco longo | [[perfil-senior-completo-auditoria]] |
-| **AM Taskoro** (GraphQL/HotChocolate híbrido — .NET, 22º sistema) | Passo 14+, quando 2-3 sistemas em produção e Trilha 42 avançada | 2-3 meses (mais rápido que antes — sem stack nova pra aprender) | [[taskoro-documento-projeto-final]] |
+| **Perfil sênior** (System Design, IaC) | Depois do Passo 12 | Pontual, não bloco longo | [perfil-senior-completo-auditoria](07-estudo-e-carreira/perfil-senior-completo-auditoria.md) |
+| **AM Taskoro** (GraphQL/HotChocolate híbrido — .NET, 22º sistema) | Passo 14+, quando 2-3 sistemas em produção e Trilha 42 avançada | 2-3 meses (mais rápido que antes — sem stack nova pra aprender) | [taskoro-documento-projeto-final](02-sistemas-de-negocio/taskoro-documento-projeto-final.md) |
 | **Física básica** | Desde o Passo 1, em paralelo | — | ⚠️ estrutura provisória — trilha só fecha de verdade quando você comprar o livro e eu vir o sumário real |
 
 ---
@@ -201,11 +201,11 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 
 | Hábito | Frequência | Detalhe |
 |---|---|---|
-| **roadmap.sh** — auditoria cruzada | Início de cada Passo grande (3, 8, 9, 10) | [[integracao-42-roadmap-akita]] |
-| **Fábio Akita** (blog/YouTube/podcast) | 1 conteúdo/semana | [[integracao-42-roadmap-akita]] |
-| **Produção didática simultânea** (ficha dupla) | A cada tópico novo de matemática+código | [[metodo-de-estudo]] |
-| **`aura-status`** — rodar o painel central | Toda segunda-feira (ou depois de qualquer deploy) | [[aura-status-documento-projeto-final]], rotina completa em [[automacao-ordem-de-execucao]] |
-| **Anki** (repetição espaçada) | Diário, 10-20 min | [[metodo-correto-estudo-idiomas]] |
+| **roadmap.sh** — auditoria cruzada | Início de cada Passo grande (3, 8, 9, 10) | [integracao-42-roadmap-akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) |
+| **Fábio Akita** (blog/YouTube/podcast) | 1 conteúdo/semana | [integracao-42-roadmap-akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) |
+| **Produção didática simultânea** (ficha dupla) | A cada tópico novo de matemática+código | [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) |
+| **`aura-status`** — rodar o painel central | Toda segunda-feira (ou depois de qualquer deploy) | [aura-status-documento-projeto-final](10-ferramentas-pessoais/aura-status-documento-projeto-final.md), rotina completa em [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) |
+| **Anki** (repetição espaçada) | Diário, 10-20 min | [metodo-correto-estudo-idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) |
 
 ---
 
@@ -222,17 +222,17 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 ## ⚠️ Pendências reais que este sumário não esconde
 
 - **Física:** sem sumário real do livro ainda — quando comprar, me mostre o índice e eu reconstruo essa trilha com precisão.
-- **Contagem de projetos da 42 inconsistente entre documentos-fonte** (você vai ver "29", "25 entregáveis + 5 Exam Rank" e "24" em arquivos diferentes do vault) — [[trilha-42-circles-oficial-verificado]] é o mais recente e corrigido; use ele como fonte de verdade até os outros arquivos serem atualizados.
+- **Contagem de projetos da 42 inconsistente entre documentos-fonte** (você vai ver "29", "25 entregáveis + 5 Exam Rank" e "24" em arquivos diferentes do vault) — [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) é o mais recente e corrigido; use ele como fonte de verdade até os outros arquivos serem atualizados.
 - **`aura-historico` (Clojure/Datomic)** — mesma pergunta que revisou o AM Taskoro ainda em aberto aqui: Event Sourcing com Marten (.NET/PostgreSQL) resolveria o mesmo problema sem sair da stack. Diferente do AM Taskoro, o motivo original parece ser diversificação de paradigma (funcional/imutável), não só resolver o problema — decisão seguinte, sua, não corrigida automaticamente.
 
 ---
 
 ## 🔗 Onde cada coisa mora, se você precisar do detalhe fundo (não pro dia a dia)
 
-- [[00-catalogo-progresso]] — onde o código de cada Passo/sistema mora de verdade, local e no GitHub
-- [[metodo-de-estudo]] — a ciência completa por trás do protocolo acima
-- [[passo-a-passo-mestre-desde-o-inicio]] — mesma trilha principal, com texto mais longo por Passo
-- [[mapa-mestre-prioridade-total]] — mesma priorização, no formato original P0/P1/P2/P3
-- [[sequencia-mestra-completa-desde-o-inicio]] — mesma trilha, com a Trilha 42 intercalada bloco a bloco dentro da numeração
-- [[EPIC-01-backlog-passo1-fundamentos]] — as tarefas reais do Passo 1, em User Stories
-- [[automacao-o-que-e-por-que]] — o que automatizar em cada Passo, documento único de referência
+- [00-catalogo-progresso](09-material-producao-simultanea/00-catalogo-progresso.md) — onde o código de cada Passo/sistema mora de verdade, local e no GitHub
+- [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) — a ciência completa por trás do protocolo acima
+- [passo-a-passo-mestre-desde-o-inicio](99-arquivo/passo-a-passo-mestre-desde-o-inicio.md) — mesma trilha principal, com texto mais longo por Passo
+- [mapa-mestre-prioridade-total](99-arquivo/mapa-mestre-prioridade-total.md) — mesma priorização, no formato original P0/P1/P2/P3
+- [sequencia-mestra-completa-desde-o-inicio](99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — mesma trilha, com a Trilha 42 intercalada bloco a bloco dentro da numeração
+- [EPIC-01-backlog-passo1-fundamentos](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md) — as tarefas reais do Passo 1, em User Stories
+- [automacao-o-que-e-por-que](06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o que automatizar em cada Passo, documento único de referência

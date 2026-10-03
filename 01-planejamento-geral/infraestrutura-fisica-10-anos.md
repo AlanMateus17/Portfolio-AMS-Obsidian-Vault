@@ -7,7 +7,7 @@ status: completo
 # Infraestrutura Física — Arquitetura de 10 Anos
 ### Trazido de uma conversa anterior (13/08/2026) — 11 camadas, cada uma só ativa quando a frente de renda correspondente começar de verdade
 
-> **Critério geral por trás de tudo isso:** tecnologia madura e "chata" (boring tech) — LTS, padrões abertos, pouca dependência de vendor — porque é isso que sobrevive 10 anos só com manutenção, sem precisar reescrever nada. Diferente do [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] (que é sobre o que estudar), este documento é sobre **o que comprar e configurar fisicamente**, e quando.
+> **Critério geral por trás de tudo isso:** tecnologia madura e "chata" (boring tech) — LTS, padrões abertos, pouca dependência de vendor — porque é isso que sobrevive 10 anos só com manutenção, sem precisar reescrever nada. Diferente do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) (que é sobre o que estudar), este documento é sobre **o que comprar e configurar fisicamente**, e quando.
 
 ---
 
@@ -115,7 +115,7 @@ Auto elétrica e som automotivo. Kit próprio, separado do resto — não compar
 | Ao terminar curso de auto elétrica | Sob demanda | Oficina automotiva (Camada 9) |
 | Ao iniciar projeto de robótica/agro | Sob demanda | Robótica e IoT (Camada 10) |
 | Ao decidir gravar o 1º curso | Sob demanda | Infoprodutos (Camada 11) |
-| Antes da 2ª/3ª fonte de renda | Urgente, transversal | Contador + gestão fiscal — ver [[estrutura-juridica-amtech]] |
+| Antes da 2ª/3ª fonte de renda | Urgente, transversal | Contador + gestão fiscal — ver [estrutura-juridica-amtech](estrutura-juridica-amtech.md) |
 
 **Por onde começar de verdade, se a pergunta for "o que eu faço amanhã":** só estação de trabalho (1) → roteador com VLANs básicas (2) → NAS com backup automático (3). As Camadas 9, 10 e 11 só entram quando a frente de renda correspondente estiver prestes a começar — montar bancada de auto elétrica hoje, sem cliente ainda, é dinheiro parado.
 
@@ -134,7 +134,7 @@ Auto elétrica e som automotivo. Kit próprio, separado do resto — não compar
 | Kit de gravação (Camada 11) | R$ 1.200 – 2.500 | Único — só na fase correspondente |
 | VPS de produção | R$ 30 – 80 / mês | Recorrente |
 | Backup em nuvem | R$ 20 – 50 / mês | Recorrente |
-| Contador | R$ 150 – 400 / mês (varia por regime — ver [[estrutura-juridica-amtech]] pro valor atualizado com loja física) | Recorrente |
+| Contador | R$ 150 – 400 / mês (varia por regime — ver [estrutura-juridica-amtech](estrutura-juridica-amtech.md) pro valor atualizado com loja física) | Recorrente |
 
 ---
 
@@ -153,6 +153,6 @@ Montar infraestrutura é divertido e vicia — mas infraestrutura não gera rend
 ---
 
 ## 🔗 Documentos relacionados
-- [[setup-ambiente-trabalho-final]] — a fatia de software desta arquitetura (Camada 4), já em execução no notebook atual
-- [[estrutura-juridica-amtech]] — a gestão fiscal transversal citada na tabela de fases
-- [[plano-mestre-frentes-alan]] — as frentes de renda que disparam cada camada sob demanda
+- [setup-ambiente-trabalho-final](../06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md) — a fatia de software desta arquitetura (Camada 4), já em execução no notebook atual
+- [estrutura-juridica-amtech](estrutura-juridica-amtech.md) — a gestão fiscal transversal citada na tabela de fases
+- [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — as frentes de renda que disparam cada camada sob demanda

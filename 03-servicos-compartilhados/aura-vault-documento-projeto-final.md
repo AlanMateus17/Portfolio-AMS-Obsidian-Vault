@@ -6,7 +6,7 @@ status: completo
 
 # aura-vault — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Décimo serviço compartilhado — nasceu da observação de que AM Rendara, AuraVet, AM Horaria e AM Canteira estavam reimplementando, cada um à sua maneira, o mesmo problema: como proteger e isolar dado de sensibilidade máxima.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Décimo serviço compartilhado — nasceu da observação de que AM Rendara, AuraVet, AM Horaria e AM Canteira estavam reimplementando, cada um à sua maneira, o mesmo problema: como proteger e isolar dado de sensibilidade máxima.
 
 ---
 

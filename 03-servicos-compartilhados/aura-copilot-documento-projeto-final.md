@@ -6,7 +6,7 @@ status: completo
 
 # aura-copilot — Documento de Projeto Final
 
-Segue a estrutura fixa do [[template-documento-projeto-final]]. Este é o serviço mais em estágio de ideia de todo o portfólio — o documento reflete isso com mais pendências que os demais, de propósito, em vez de fingir certeza que não existe.
+Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Este é o serviço mais em estágio de ideia de todo o portfólio — o documento reflete isso com mais pendências que os demais, de propósito, em vez de fingir certeza que não existe.
 
 ---
 

@@ -39,7 +39,7 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 - [ ] Confirmar/instalar .NET SDK 10 (ver alerta 1 acima)
 - [ ] `dotnet-ef` (global tool, pra migration do EF Core)
 - [ ] Extensão C# Dev Kit no VS Code (se for usar VS Code em vez do Visual Studio pra parte do trabalho)
-- [ ] **Gitleaks** (binário + hook de pre-commit) — segredo vazado em commit, especialmente importante usando Claude Code (ver [[seguranca-e-ferramentas-todas-as-frentes]])
+- [ ] **Gitleaks** (binário + hook de pre-commit) — segredo vazado em commit, especialmente importante usando Claude Code (ver [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md))
 - [ ] `git lfs install` — mesmo sem uso imediato, deixa configurado antes de precisar
 - [ ] Claude Code (`npm install -g @anthropic-ai/claude-code` ou instalador nativo — requer Node.js 18+, já confirmado instalado)
 
@@ -85,9 +85,9 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 ---
 
 ## 🔗 Documentos relacionados
-- [[infraestrutura-fisica-10-anos]] — este documento é a fatia de software da Camada 4 dessa arquitetura maior
-- [[seguranca-e-ferramentas-todas-as-frentes]] — Gitleaks, Git LFS e Claude Code, detalhados
-- [[plano-estudos-basico-avancado-entrelacado]] — Fase 12 (Segurança Ofensiva) e Fase 12B (Segurança Defensiva, nova)
-- [[trilha-42-circles-oficial-verificado]] — o que a Camada 4 deste setup sustenta
-- [[rnf-transversais-design-tema|Next.js/Design System]] — o que a Camada 2 deste setup sustenta (não mais o AM Taskoro, que agora é .NET)
-- [[sequencia-mestra-completa-desde-o-inicio]] — onde cada camada entra na ordem real de estudo
+- [infraestrutura-fisica-10-anos](../01-planejamento-geral/infraestrutura-fisica-10-anos.md) — este documento é a fatia de software da Camada 4 dessa arquitetura maior
+- [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) — Gitleaks, Git LFS e Claude Code, detalhados
+- [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) — Fase 12 (Segurança Ofensiva) e Fase 12B (Segurança Defensiva, nova)
+- [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) — o que a Camada 4 deste setup sustenta
+- [Next.js/Design System](../04-documentos-transversais/rnf-transversais-design-tema.md) — o que a Camada 2 deste setup sustenta (não mais o AM Taskoro, que agora é .NET)
+- [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — onde cada camada entra na ordem real de estudo

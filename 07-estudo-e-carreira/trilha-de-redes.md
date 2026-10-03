@@ -7,7 +7,7 @@ data: 2026-09-28
 
 # 🌐 Trilha de Redes
 
-> Base de redes para segurança, servidores e deploy. Pré-requisito da parte de segurança ([[roadmap-seguranca-ofensiva-completo]]) e do homelab ([[trilha-linux-arch-profissional]] Fase 8). Ponto de entrada do dia a dia: [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]].
+> Base de redes para segurança, servidores e deploy. Pré-requisito da parte de segurança ([roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)) e do homelab ([trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) Fase 8). Ponto de entrada do dia a dia: [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md).
 
 **Ritmo:** 6 a 10 semanas em horas livres chegam a um nível sólido. Cada fase termina com algo testável na própria máquina. Ferramentas (todas no Arch): `ip`, `ping`, `traceroute`, `dig`, `ss`, `nmap`, `curl`, Wireshark.
 

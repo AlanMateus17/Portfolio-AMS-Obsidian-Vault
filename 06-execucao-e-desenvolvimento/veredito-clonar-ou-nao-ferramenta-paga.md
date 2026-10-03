@@ -79,6 +79,6 @@ Isso significa **zero projeto novo agora** — os três só entram quando o Pass
 ---
 
 ## 🔗 Documentos relacionados
-- [[automacao-o-que-e-por-que]] — a tabela original de onde cada item desta lista veio
-- [[taskoro-documento-projeto-final]] — o "Jira" que você já está construindo
-- [[automacao-ordem-de-execucao]] — onde os três itens 🟡 entrariam, quando chegar a hora
+- [automacao-o-que-e-por-que](automacao-o-que-e-por-que.md) — a tabela original de onde cada item desta lista veio
+- [taskoro-documento-projeto-final](../02-sistemas-de-negocio/taskoro-documento-projeto-final.md) — o "Jira" que você já está construindo
+- [automacao-ordem-de-execucao](automacao-ordem-de-execucao.md) — onde os três itens 🟡 entrariam, quando chegar a hora

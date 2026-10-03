@@ -2,12 +2,12 @@
 tags: [estudo, seguranca, recursos, links, ferramentas, certificacoes, portfolio-ams]
 tipo: estudo
 status: ativo
-companion: "[[roadmap-seguranca-ofensiva-completo]]"
+companion: "[roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)"
 ---
 
 # 🔗 Recursos e Links — Segurança Ofensiva
 
-> [!important] Companion do [[roadmap-seguranca-ofensiva-completo]]
+> [!important] Companion do [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)
 > Todos os links foram verificados. Priorize sempre fonte oficial. Recurso gratuito marcado com 🆓, pago com 💲.
 
 ---
@@ -32,7 +32,7 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 | **CTFtime** 🆓 | Agenda de CTFs | Grátis | Todos |
 
 > [!tip] Progressão ideal de labs
-> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente da [[metodo-de-estudo]].
+> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente da [metodo-de-estudo](metodo-de-estudo.md).
 
 ---
 
@@ -49,7 +49,7 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 **Mobile:** eMAPT (INE) 💲
 
 > [!note] Sua trilha registrada
-> No [[plano-estudos-basico-avancado-entrelacado]]: `CompTIA A+/Network+ → Security+ → CCNA (opcional) → eJPT → OSCP`. O resto é continuação além do OSCP.
+> No [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md): `CompTIA A+/Network+ → Security+ → CCNA (opcional) → eJPT → OSCP`. O resto é continuação além do OSCP.
 
 ---
 
@@ -116,7 +116,7 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 **Legislação (leitura obrigatória):** Lei 12.737/2012, Marco Civil (12.965/2014), LGPD (13.709/2018) — todas em planalto.gov.br 🆓.
 
 > [!warning] Framework legal
-> Ver seção 1.8 do [[roadmap-seguranca-ofensiva-completo]]. Sem autorização escrita e assinada, teste = crime no Brasil. Isso vale igual para o serviço de pentest como fonte de renda.
+> Ver seção 1.8 do [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md). Sem autorização escrita e assinada, teste = crime no Brasil. Isso vale igual para o serviço de pentest como fonte de renda.
 
 ---
 
@@ -129,7 +129,7 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 **Malware/RE isolado:** Flare-VM + REMnux em rede isolada (host-only), snapshots sempre.
 
 > [!warning] Isolamento obrigatório
-> Malware analysis SEMPRE em VM isolada, rede host-only, snapshot antes. Nunca na máquina principal. Conecta com o `Born2beroot` da [[trilha-42-circles-oficial-verificado]] — a mesma disciplina de VM hardened.
+> Malware analysis SEMPRE em VM isolada, rede host-only, snapshot antes. Nunca na máquina principal. Conecta com o `Born2beroot` da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — a mesma disciplina de VM hardened.
 
 ---
 
@@ -141,15 +141,15 @@ companion: "[[roadmap-seguranca-ofensiva-completo]]"
 - **Anual:** revisar este roadmap, avaliar próxima certificação
 
 > [!tip] Note-taking
-> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio da [[metodo-de-estudo]]: documentar para reter.
+> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio da [metodo-de-estudo](metodo-de-estudo.md): documentar para reter.
 
 ---
 
 ## 🔗 Documentos relacionados
-- [[roadmap-seguranca-ofensiva-completo]] — o roadmap de 6 níveis que este companion suporta
-- [[plano-estudos-basico-avancado-entrelacado]] — Fase 12
-- [[biblioteca-recursos-por-passo]] — recursos gerais de todos os outros passos do plano
-- [[mapa-mestre-prioridade-total]] — onde a segurança ofensiva entra na prioridade geral
+- [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) — o roadmap de 6 níveis que este companion suporta
+- [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) — Fase 12
+- [biblioteca-recursos-por-passo](biblioteca-recursos-por-passo.md) — recursos gerais de todos os outros passos do plano
+- [mapa-mestre-prioridade-total](../99-arquivo/mapa-mestre-prioridade-total.md) — onde a segurança ofensiva entra na prioridade geral
 
 ---
 

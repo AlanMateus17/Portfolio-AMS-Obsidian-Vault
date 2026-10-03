@@ -135,7 +135,7 @@ status: completo
 
 ## Sprint 3 — Matemática Básica, Parte I completa (paralelo aos Sprints 1-2, mesma semana)
 
-> **Segunda correção:** com o sumário exato (via foto, com subtópico) em mãos, o Passo 1 cobre **só a Parte I do livro** (capítulos 1-2, completos) — nada da Parte II entra aqui. A Parte II (Naturais/Inteiros/Aritmética Modular/Racionais/Aplicações Aritméticas/Sequências/Reais) é densa demais pra caber "de raspão" no Passo 1 — ela vira bloco próprio nos Passos 2-6, com destaque para uma conexão forte: o Algoritmo de Euclides (dentro do Capítulo 3) é literalmente um algoritmo recursivo, ótimo pra estudar junto com recursão (US-06). Ver [[matematica-e-desenvolvimento-integrado]] para o mapeamento completo e atualizado.
+> **Segunda correção:** com o sumário exato (via foto, com subtópico) em mãos, o Passo 1 cobre **só a Parte I do livro** (capítulos 1-2, completos) — nada da Parte II entra aqui. A Parte II (Naturais/Inteiros/Aritmética Modular/Racionais/Aplicações Aritméticas/Sequências/Reais) é densa demais pra caber "de raspão" no Passo 1 — ela vira bloco próprio nos Passos 2-6, com destaque para uma conexão forte: o Algoritmo de Euclides (dentro do Capítulo 3) é literalmente um algoritmo recursivo, ótimo pra estudar junto com recursão (US-06). Ver [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) para o mapeamento completo e atualizado.
 
 ### US-08 — Linguagem Matemática (Capítulo 1 completo)
 **Como** estudante de matemática, **quero** dominar a linguagem/notação matemática formal, **para que** eu consiga ler e escrever proposição, símbolo lógico e notação de conjunto corretamente.
@@ -272,7 +272,7 @@ Esta é a resposta direta à segunda parte do seu pedido: tudo que precisa estar
 - [ ] 22. Unidades
 - [ ] Apêndice B — Orientações para estudar matemática
 
-**A Parte II inteira (Capítulos 3-8: Naturais/Inteiros, Aritmética Modular, Racionais, Aplicações Aritméticas, Sequências, Reais) e as demais Partes (III a VII) estão mapeadas por Passo futuro em [[matematica-e-desenvolvimento-integrado]] — não fazem parte do Definition of Done deste Epic, de propósito. Destaque para o Capítulo 3 (Algoritmo de Euclides, indução) e o Capítulo 4 (Aritmética Modular, com aplicação a RSA) — conexões fortes e diretas com recursão (Passo 2-3) e com o `aura-vault` (Passo 9), respectivamente.**
+**A Parte II inteira (Capítulos 3-8: Naturais/Inteiros, Aritmética Modular, Racionais, Aplicações Aritméticas, Sequências, Reais) e as demais Partes (III a VII) estão mapeadas por Passo futuro em [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) — não fazem parte do Definition of Done deste Epic, de propósito. Destaque para o Capítulo 3 (Algoritmo de Euclides, indução) e o Capítulo 4 (Aritmética Modular, com aplicação a RSA) — conexões fortes e diretas com recursão (Passo 2-3) e com o `aura-vault` (Passo 9), respectivamente.**
 
 ## Critério final de "Passo 1 = 100% concluído"
 Você resolve as três simulações da Sprint 4 (carrinho, inadimplência, ARCA) sem consultar nenhum material, explicando em voz alta por que cada linha de código está ali — se travar em qualquer explicação, é sinal de que algum item do checklist acima ainda não está realmente dominado, só "visto".
@@ -280,7 +280,7 @@ Você resolve as três simulações da Sprint 4 (carrinho, inadimplência, ARCA)
 ---
 
 ## 🔗 Documentos relacionados
-- [[CARTAO-voce-esta-aqui]] — o resumo diário do que fazer agora
-- [[metodo-de-estudo]] — como transformar cada User Story em material de aula
-- [[matematica-e-desenvolvimento-integrado]] — o mapeamento completo do livro contra todas as fases futuras
+- [CARTAO-voce-esta-aqui](../CARTAO-voce-esta-aqui.md) — o resumo diário do que fazer agora
+- [metodo-de-estudo](metodo-de-estudo.md) — como transformar cada User Story em material de aula
+- [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) — o mapeamento completo do livro contra todas as fases futuras
  

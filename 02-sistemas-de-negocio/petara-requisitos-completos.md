@@ -7,7 +7,7 @@ status: completo
 # Sistema Veterinário Completo — Funcionalidades, Requisitos e Fontes de Renda
 ### (Nome provisório: AuraVet — ajuste quando definir o nome/marca da clínica)
 
-> **Nota sobre estrutura:** este documento foi criado antes do [[template-documento-projeto-final]] existir, então segue numeração própria (por tipo de conteúdo) em vez das 10 seções fixas do template. Conteúdo equivalente às seções 1, 2, 4, 6, 8-9 do template já existe aqui (funcionalidades, RF/RNF, receita, stack, MVP). As seções 12-14, adicionadas ao final, cobrem o que faltava: perfis de usuário, segurança concreta e pendências — mesmo conteúdo que as seções 3, 5 e 10 do template exigem.
+> **Nota sobre estrutura:** este documento foi criado antes do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md) existir, então segue numeração própria (por tipo de conteúdo) em vez das 10 seções fixas do template. Conteúdo equivalente às seções 1, 2, 4, 6, 8-9 do template já existe aqui (funcionalidades, RF/RNF, receita, stack, MVP). As seções 12-14, adicionadas ao final, cobrem o que faltava: perfis de usuário, segurança concreta e pendências — mesmo conteúdo que as seções 3, 5 e 10 do template exigem.
 
 **Premissa do produto:** não é um "sistema de agenda de clínica". É uma plataforma de gestão + vendas + relacionamento que cobre veterinária de todos os portes (pequeno, médio e grande porte, exóticos/silvestres), do consultório autônomo até uma estrutura de hospital/franquia — e que também funciona como canal de venda de tudo que ela puder oferecer: serviço clínico, produto físico, assinatura e conteúdo.
 
@@ -398,7 +398,7 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 
 ## 15. Segurança de nível profissional
 
-Aplicação concreta do checklist geral ([[distribuicao-licenciamento-seguranca]]) a este sistema:
+Aplicação concreta do checklist geral ([distribuicao-licenciamento-seguranca](../04-documentos-transversais/distribuicao-licenciamento-seguranca.md)) a este sistema:
 
 | Categoria | Aplicação específica no AuraVet |
 |---|---|

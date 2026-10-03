@@ -73,7 +73,7 @@ A versão anterior (`trilha-42-circles-oficial-verificado`) tinha 3 erros reais:
 | 03 | `Philosophers` | `Thread`/`SemaphoreSlim` (mesmo músculo do RNFT-E01) | C, `pthread`/`sem_t` |
 | 03 | `minishell` | `Process.Start` simulando shell | C, `fork`/`execve`/`pipe`/`dup2` |
 | 04 | `NetPractice` | — (infraestrutura) | Configuração de IP/rede |
-| 04 | `miniRT` | C# + SkiaSharp (conecta com Geometria Analítica — ver [[matematica-e-desenvolvimento-integrado]], Parte V) | C + MiniLibX |
+| 04 | `miniRT` | C# + SkiaSharp (conecta com Geometria Analítica — ver [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md), Parte V) | C + MiniLibX |
 | 04 | `CPP Module 00-08` (9 módulos) | — (OOP já dominado via C#) | C++, prática direta de sintaxe |
 | 05 | `ft_containers` | — (STL não tem equivalente direto de "reimplementar" em C#, já que `List<T>`/`Dictionary<K,V>` já são a biblioteca padrão) | C++, reimplementar `vector`/`map`/`stack` — aqui o exercício É a linguagem, não porta de conceito já visto |
 | 05 | `Inception` | — (Docker já dominado na Fase 6D; entra como auditoria de disciplina extra: só Debian, sem tag `latest`) | Mesmo, com a disciplina específica da 42 |
@@ -108,7 +108,7 @@ Praticamente igual ao cronograma anterior (10-12 meses), só que agora contando 
 ---
 
 ## 🔗 Documentos relacionados
-- [[matematica-e-desenvolvimento-integrado]] — `miniRT` conecta com Geometria Analítica (Parte V); Algoritmo de Euclides (`Libft`) conecta com indução (Parte II)
-- [[stack-tecnologica]] — onde C/C++ desta trilha se encaixa no panorama geral de tecnologia a estudar
-- [[sequencia-mestra-completa-desde-o-inicio]] — a ordem exata de intercalação com o portfólio próprio, Bloco a Bloco
-- [[integracao-42-roadmap-akita]] — roadmap.sh como auditoria cruzada específica pra C/C++ (roadmap "C" e "C++" no índice geral)
+- [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) — `miniRT` conecta com Geometria Analítica (Parte V); Algoritmo de Euclides (`Libft`) conecta com indução (Parte II)
+- [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) — onde C/C++ desta trilha se encaixa no panorama geral de tecnologia a estudar
+- [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — a ordem exata de intercalação com o portfólio próprio, Bloco a Bloco
+- [integracao-42-roadmap-akita](integracao-42-roadmap-akita.md) — roadmap.sh como auditoria cruzada específica pra C/C++ (roadmap "C" e "C++" no índice geral)

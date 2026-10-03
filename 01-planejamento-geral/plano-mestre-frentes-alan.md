@@ -92,7 +92,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 **Renda:** modelo de afiliados inspirado em Zola, venda do cartão NFC físico, possíveis assinaturas para recursos premium.
 **Escalabilidade:** alta em tese (B2C digital), mas é a frente com **maior dependência de marketing/aquisição de usuários** — diferente do AM Kaixara, que pode crescer por venda direta local, este precisa de tração de público, o que é um tipo de esforço diferente do que você tem feito até aqui.
 
-**Capital/formalização do conjunto Aura:** baixo capital financeiro, alto capital de tempo. Formalização: **PJ (ME/Simples Nacional)** — SaaS B2B com faturamento recorrente tende a estourar o teto do MEI rápido se dois ou três produtos decolarem juntos, então vale já nascer em ME quando a primeira assinatura for fechada, para não ter que migrar no meio de contratos. Detalhamento completo de CNAE e custo em [[estrutura-juridica-amtech]].
+**Capital/formalização do conjunto Aura:** baixo capital financeiro, alto capital de tempo. Formalização: **PJ (ME/Simples Nacional)** — SaaS B2B com faturamento recorrente tende a estourar o teto do MEI rápido se dois ou três produtos decolarem juntos, então vale já nascer em ME quando a primeira assinatura for fechada, para não ter que migrar no meio de contratos. Detalhamento completo de CNAE e custo em [estrutura-juridica-amtech](estrutura-juridica-amtech.md).
 
 **Prioridade de abertura formal:** **2** — depois da assistência técnica (que é mais rápida/barata de formalizar), mas antes de qualquer outra frente, porque é aqui que está o maior potencial de receita recorrente do grupo todo.
 

@@ -82,11 +82,11 @@ Bun, Hono, Rust, Tauri, gRPC — nenhuma exceção nos 21 documentos.
 5. Function-calling pra IA (sem RAG) — `aura-copilot`.
 6. Acessibilidade web (WCAG) — transversal (RNFT-D04).
 
-**C.5 Fora, por decisão:** mobile nativo (PWA basta); blockchain/Web3 no Aura (ByteSDCoin é projeto educacional à parte — [[projeto-apostas-blockchain-educacional]]).
+**C.5 Fora, por decisão:** mobile nativo (PWA basta); blockchain/Web3 no Aura (ByteSDCoin é projeto educacional à parte — projeto-apostas-blockchain-educacional).
 
 **C.6 Ordem de estudo:** 1) OR-Tools 2) criptografia 3) assinatura eletrônica 4) ML/function-calling 5) acessibilidade (contínua).
 
 ---
 
 ## 🔗 Relacionados
-- [[00-PLANO-UNIFICADO]] · [[inventario-portfolio-atualizado]] · [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] · [[trilha-42-circles-oficial-verificado]] · [[kaixara-documento-projeto-final|AM Kaixara]]
+- [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md) · [inventario-portfolio-atualizado](../01-planejamento-geral/inventario-portfolio-atualizado.md) · [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [AM Kaixara](../02-sistemas-de-negocio/kaixara-documento-projeto-final.md)
