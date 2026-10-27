@@ -123,6 +123,11 @@ AVISO = "<!-- Arquivo GERADO por tools/gerar_docs.py a partir de data/. Edite os
 
 # ---------------------------------------------------------------- geradores
 
+# Camadas cujo diagrama, com um grupo por camada vizinha, quebra o desenho do Mermaid
+# ("Cannot set properties of undefined (setting 'order')"). Conferido com o mmdc 11.
+AGRUPAR_VIZINHOS = {"oper"}
+
+
 def gerar_camada(eco: dict, camada: dict, por_id: dict, saidas: dict, entradas: dict) -> str:
     cid = camada["id"]
     n = num(eco, cid)
@@ -155,12 +160,20 @@ def gerar_camada(eco: dict, camada: dict, por_id: dict, saidas: dict, entradas: 
     for b in blocos:
         linhas.append(f'    n_{b["id"]}["{mm(nome(b))}"]')
     linhas.append("  end")
-    for outra in ordem:
-        if outra in vizinhos:
-            linhas.append(f'  subgraph L_{outra}["{mm(titulo_por_id[outra])}"]')
-            for bid in sorted(vizinhos[outra]):
-                linhas.append(f'    n_{bid}["{mm(nome(por_id[bid]))}"]')
-            linhas.append("  end")
+    if cid in AGRUPAR_VIZINHOS:
+        # um grupo só para os vizinhos: com um grupo por camada o Mermaid (dagre) falha ao desenhar
+        linhas.append('  subgraph L_outras["Outras camadas"]')
+        for outra in ordem:
+            for bid in sorted(vizinhos.get(outra, ())):
+                linhas.append(f'    n_{bid}["{mm(nome(por_id[bid]))} · camada {num(eco, outra):02d}"]')
+        linhas.append("  end")
+    else:
+        for outra in ordem:
+            if outra in vizinhos:
+                linhas.append(f'  subgraph L_{outra}["{mm(titulo_por_id[outra])}"]')
+                for bid in sorted(vizinhos[outra]):
+                    linhas.append(f'    n_{bid}["{mm(nome(por_id[bid]))}"]')
+                linhas.append("  end")
     for de, para, rot in arestas:
         linhas.append(f'  n_{de} -->|"{mm(rot)}"| n_{para}')
     linhas.append(f"  classDef desta fill:#e2ecec,stroke:#0e3a45,color:#13262b")

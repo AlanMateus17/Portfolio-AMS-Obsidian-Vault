@@ -163,7 +163,7 @@ function passa(x){
   if(filtro.etapa && x.etapa!==filtro.etapa) return false;
   if(filtro.trilha && x.trilha!==filtro.trilha) return false;
   if(filtro.ocultar && feitos[x.id]) return false;
-  if(filtro.q){ const h=(x.id+' '+x.titulo+' '+(x.pronto||'')+' '+(x.quando||'')+' '+(x.nota||'')).toLowerCase(); if(!h.includes(filtro.q)) return false; }
+  if(filtro.q){ const h=(x.id+' '+x.titulo+' '+(x.pronto||'')+' '+(x.quando||'')+' '+(x.nota||'')+' '+(x.blocos||[]).map(b=>b.nome).join(' ')).toLowerCase(); if(!h.includes(filtro.q)) return false; }
   return true;
 }
 
@@ -179,6 +179,7 @@ function itemHTML(x){
   const det = [];
   if(x.pronto) det.push(`<div><span class="k">Pronto quando</span>${esc(x.pronto)}</div>`);
   if(x.comando) det.push(`<div><span class="k">Comando</span><div class="cmdrow"><pre class="cmd">${esc(x.comando)}</pre><button class="btn" data-copy="${esc(x.id)}">Copiar</button></div></div>`);
+  if(x.blocos&&x.blocos.length) det.push(`<div><span class="k">Blocos do setup que este passo implanta</span>${x.blocos.map(b=>esc(b.nome)+' <span class="meta" style="display:inline">camada '+String(b.camada).padStart(2,'0')+'</span>').join(' · ')}</div>`);
   if(x.quando) det.push(`<div><span class="k">Quando</span>${esc(x.quando)}</div>`);
   if(x.gatilho) det.push(`<div><span class="k">Gatilho</span>${esc(x.gatilho)}</div>`);
   if(x.nota) det.push(`<div><span class="k">Explicação</span>${esc(x.nota)}</div>`);

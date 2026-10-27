@@ -28,6 +28,10 @@ def add(id, trilha, etapa, titulo, pronto="", quando="", liga=(), nota="", gatil
 
 # ------------------------------------------------------------------ setup (dev-setup)
 im = json.loads((REPO / "data" / "implantacao.json").read_text(encoding="utf-8"))
+eco = json.loads((REPO / "data" / "ecossistema.json").read_text(encoding="utf-8"))
+CAM = {c["id"]: (len(eco["camadas"]) - n, c["titulo"]) for n, c in enumerate(eco["camadas"])}
+BLOCO = {b["id"]: b for b in eco["blocos"]}
+def rotulo(b): return b["rotulo"].replace("|", " ").replace("  ", " ")
 FASE_ETAPA = {**{i: "E0" for i in range(0, 4)}, **{i: "E1" for i in range(4, 14)}, **{i: "E2" for i in range(14, 18)},
               18: "E3", 19: "E3", 20: "E3", 21: "E1", 22: "E3", 23: "E3", 24: "E4", 25: "E5", 26: "E5", 27: "E4",
               28: "E5", 29: "E6", 30: "E5", 31: "E5", 32: "E6", 33: "EC"}
@@ -48,7 +52,8 @@ for i, f in enumerate(im["fases"]):
             nota=" ".join(x for x in [nota, p.get("nota", "")] if x).strip(),
             fonte="dev-setup · docs/implantacao/roteiro.md",
             extra=dict(fase=i, passo=f"{i}.{j}", quem=QUEM[p["quem"]], comando=p.get("comando", ""),
-                       min=p["tempo_min"], precisa=p.get("precisa", []), ofertas=p.get("ofertas", [])))
+                       min=p["tempo_min"], precisa=p.get("precisa", []), ofertas=p.get("ofertas", []),
+                       blocos=[dict(id=b, nome=rotulo(BLOCO[b]), camada=CAM[BLOCO[b]["camada"]][0]) for b in p.get("blocos", [])]))
 
 def fase_ids(*ix):
     return [x for i in ix for x in setup_por_fase[i]]
@@ -219,7 +224,13 @@ for x in itens:
 for x in itens:
     x["liga"] = list(dict.fromkeys(x["liga"] + volta.get(x["id"], [])))
 ordem = {e[0]: n for n, e in enumerate(ETAPAS)}
-json.dump(dict(etapas=[dict(id=a, nome=b, quando=c, objetivo=d) for a, b, c, d in ETAPAS], trilhas=TRILHAS, itens=itens,
+camadas = [dict(n=CAM[c["id"]][0], titulo=c["titulo"], arquivo=f"11-setup-dev-setup/docs/camadas/{CAM[c['id']][0]:02d}-{c['id']}.md",
+                blocos=[dict(id=b["id"], nome=rotulo(b), descricao=b.get("descricao", ""),
+                             passos=[x["id"] for x in itens if any(y["id"] == b["id"] for y in x.get("blocos", []))])
+                        for b in eco["blocos"] if b["camada"] == c["id"]]) for c in sorted(eco["camadas"], key=lambda c: CAM[c["id"]][0])]
+sem = [b["id"] for c in camadas for b in c["blocos"] if not b["passos"]]
+print("blocos:", sum(len(c["blocos"]) for c in camadas), "sem passo:", sem)
+json.dump(dict(etapas=[dict(id=a, nome=b, quando=c, objetivo=d) for a, b, c, d in ETAPAS], trilhas=TRILHAS, itens=itens, camadas=camadas,
                gerado="2026-10-26"), open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 from collections import Counter
 print(len(itens), "itens", Counter(x["trilha"] for x in itens), Counter(x["etapa"] for x in itens))

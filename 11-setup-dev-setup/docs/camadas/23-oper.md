@@ -38,72 +38,40 @@ flowchart LR
     n_opipe["Pipeline de conteúdo"]
     n_acv["Acervo (seus documentos)"]
   end
-  subgraph L_pub["Público e canais"]
-    n_ig["Instagram"]
-    n_li["LinkedIn"]
-    n_ogbp["Google Perfil da Empresa"]
-    n_wa["WhatsApp Business"]
-    n_yt["YouTube"]
-  end
-  subgraph L_mkt["Marketing, automação e medição"]
-    n_aprov["Aprovação no celular"]
-    n_mailer["MailerLite"]
-    n_metrics["Banco de métricas (PostgreSQL)"]
-    n_n8n["n8n"]
-    n_tg["Telegram (avisos)"]
-  end
-  subgraph L_venda["Plataformas de venda e recebimento"]
-    n_crm["CRM simples (planilha)"]
-    n_mp["Mercado Pago"]
-    n_pixa["Pix Automático + gateway (ex.: Asaas)"]
-  end
-  subgraph L_emp["Pessoa física: impostos e finanças"]
-    n_conta["Contador"]
-    n_nfse["Carnê-leão (Receita Federal)"]
-  end
-  subgraph L_prod["Produtos (o que você vende)"]
-    n_curso["Mini-curso Lógica de Programação"]
-    n_livro["Livro Lógica e Máquina"]
-    n_sites["Sites para pequenas empresas"]
-  end
-  subgraph L_neg["Negócios do grupo (Barbacena)"]
-    n_nplan["Planejador do Grupo"]
-    n_nsoft["AMtech Software (projetos e SaaS)"]
-  end
-  subgraph L_cont["Produção de conteúdo"]
-    n_voz["Voz clonada (ElevenLabs)"]
-    n_whis["Whisper (local)"]
-  end
-  subgraph L_nuvem["Nuvem, código e entrega"]
-    n_gdrv["Google Drive (seus documentos)"]
-  end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
-    n_nkaix["AM Kaixara (PDV e cardápio)"]
-  end
-  subgraph L_obs["Observabilidade"]
-    n_graf["Grafana"]
-  end
-  subgraph L_cnt["Containers, Kubernetes e infra como código"]
-    n_docker["Docker + Compose"]
-  end
-  subgraph L_clc["Claude: recursos, conectores e plugins"]
-    n_anth["Claude (assinatura e API)"]
-  end
-  subgraph L_dados["Dados e treino de IA"]
-    n_dset["Seus datasets (só conteúdo seu)"]
-  end
-  subgraph L_ia["Agentes de IA e sandbox"]
-    n_rag["Base de conhecimento (RAG) das suas notas"]
-  end
-  subgraph L_lin["Linux (Ubuntu no WSL2, Arch no 2º disco)"]
-    n_wsl["Ubuntu (WSL2)"]
-  end
-  subgraph L_win["Windows 11, apps e máquinas virtuais"]
-    n_obsd["Obsidian + Git"]
-    n_w11["Windows 11 Home"]
-  end
-  subgraph L_hw["Hardware"]
-    n_nb["Acer Nitro (32 GB, GTX 1650)"]
+  subgraph L_outras["Outras camadas"]
+    n_ig["Instagram · camada 22"]
+    n_li["LinkedIn · camada 22"]
+    n_ogbp["Google Perfil da Empresa · camada 22"]
+    n_wa["WhatsApp Business · camada 22"]
+    n_yt["YouTube · camada 22"]
+    n_aprov["Aprovação no celular · camada 21"]
+    n_mailer["MailerLite · camada 21"]
+    n_metrics["Banco de métricas (PostgreSQL) · camada 21"]
+    n_n8n["n8n · camada 21"]
+    n_tg["Telegram (avisos) · camada 21"]
+    n_crm["CRM simples (planilha) · camada 20"]
+    n_mp["Mercado Pago · camada 20"]
+    n_pixa["Pix Automático + gateway (ex.: Asaas) · camada 20"]
+    n_conta["Contador · camada 19"]
+    n_nfse["Carnê-leão (Receita Federal) · camada 19"]
+    n_curso["Mini-curso Lógica de Programação · camada 17"]
+    n_livro["Livro Lógica e Máquina · camada 17"]
+    n_sites["Sites para pequenas empresas · camada 17"]
+    n_nplan["Planejador do Grupo · camada 16"]
+    n_nsoft["AMtech Software (projetos e SaaS) · camada 16"]
+    n_voz["Voz clonada (ElevenLabs) · camada 13"]
+    n_whis["Whisper (local) · camada 13"]
+    n_gdrv["Google Drive (seus documentos) · camada 12"]
+    n_nkaix["AM Kaixara (PDV e cardápio) · camada 11"]
+    n_graf["Grafana · camada 10"]
+    n_docker["Docker + Compose · camada 09"]
+    n_anth["Claude (assinatura e API) · camada 08"]
+    n_dset["Seus datasets (só conteúdo seu) · camada 06"]
+    n_rag["Base de conhecimento (RAG) das suas notas · camada 05"]
+    n_wsl["Ubuntu (WSL2) · camada 04"]
+    n_obsd["Obsidian + Git · camada 03"]
+    n_w11["Windows 11 Home · camada 03"]
+    n_nb["Acer Nitro (32 GB, GTX 1650) · camada 01"]
   end
   n_ocatal -->|"fila por pontuação"| n_oesteira
   n_ocatal -->|"negócios físicos"| n_nplan

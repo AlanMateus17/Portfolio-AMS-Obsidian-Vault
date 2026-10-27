@@ -10,6 +10,17 @@ atualizado: 2026-10-26
 >
 > **O que fazer primeiro:** siga o [Plano Mestre](../00-PLANO-MESTRE-PASSO-A-PASSO.md) a partir da Etapa 0. Ele manda abrir os documentos daqui quando for a hora.
 
+## Se você não está vendo tudo
+
+| O que acontece | Por quê | O que fazer |
+|---|---|---|
+| No GitHub não aparece esta pasta nem o Plano Mestre | Nada foi publicado ainda: as mudanças estão só no `vault-completo.zip` | Use o zip, ou peça para publicar |
+| No Obsidian não aparecem os arquivos `.html`, `.json`, `.ps1` e `.sh` | O Obsidian só mostra notas, imagens e PDF | Configurações > Arquivos e links > ligue **Detectar todas as extensões de arquivo** |
+| Clicar num `.html` no Obsidian não mostra a página | O Obsidian não abre página interativa | Botão direito > **Abrir no aplicativo padrão** (abre no navegador), ou use a versão publicada no claude.ai |
+| A pasta `.github` não aparece | O Obsidian esconde pastas que começam com ponto | Normal: são só os testes automáticos |
+| Um fluxograma aparece como texto | O modo de leitura não está ligado | Troque para **Modo de leitura** (Ctrl+E). Diagrama largo: role para o lado ou abra a página Fluxogramas |
+| Os 326 blocos não aparecem num lugar só | Eles ficam na página interativa do ecossistema e nas 23 camadas | No [Plano Mestre](../00-PLANO-MESTRE-PASSO-A-PASSO.md), a seção **Todos os blocos do setup** lista os 326, camada por camada, com o passo em que cada um entra |
+
 ## Como usar esta pasta
 
 1. **Para ler e planejar:** abra os documentos abaixo aqui mesmo no Obsidian. Os fluxogramas aparecem desenhados, porque são blocos Mermaid.
@@ -55,6 +66,7 @@ Abra os arquivos `.html` no navegador (botão direito > Abrir no aplicativo padr
 | [Planejador do grupo](docs/negocios/planejador.html) | Planejador do Grupo | Os números dos 9 negócios e os 5 portões |
 | [Lucro por venda](ferramentas/lucro-por-venda.html) | Lucro por Venda | Quanto sobra em cada venda, por plataforma e canal |
 | [Plano Mestre](ferramentas/plano-mestre-ams.html) | Plano Mestre AMS | Os 391 itens dos dois planejamentos, com caixinhas |
+| [Fluxogramas](ferramentas/fluxogramas-setup.html) | Fluxogramas do Setup | Os 68 diagramas dos documentos numa página só |
 
 ## As 23 camadas do setup
 
