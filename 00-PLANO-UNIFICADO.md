@@ -34,7 +34,7 @@ Nada é descartado. O que não serve à aposta de 12 meses vai pra uma **camada 
 | **B — Suporte** | Inglês técnico · Matemática (já é a licenciatura) · **Finanças leves F0–F3** (investimentos, contabilidade, matemática financeira, tributos) · Linux/Redes **só até o nível que o dev usa** · Robótica R1 (puxada pela aula) | ~35% |
 | **C — Paralelas** (uma pesada por vez) | **Finanças F4–F7** · **Dados & IA** · École 42/C-C++ · Segurança ofensiva · Espanhol · Física — começam num gatilho, nunca bloqueiam A | 1 bloco fixo/semana |
 | **D — Horizonte longo** | Reverse · kernel · SO próprio · distro própria — todo o [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) · Finanças quantitativas (F8) · Robótica R4–R5 · Mandarim | **0% agora** |
-| **Formação** (por fora das camadas) | Licenciatura em Matemática (em curso) → **Ciências Econômicas** → Ciência da Computação → Pós Cyber → Pós Arquitetura | Carga da faculdade |
+| **Formação** (por fora das camadas) | Licenciatura em Matemática (em curso) → **Ciências Econômicas** e **faculdade para IA** (CC ou IA), ordem a decidir · certificações do setor de investimentos (CPA, CNPI, CGA, CFA) · sem pós | Carga da faculdade |
 
 - **Trilha diária detalhada (Passos 1-14):** [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — é lá que você marca `[x]` todo dia.
 - **Formação acadêmica e certificações:** [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
@@ -130,7 +130,7 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 | Python · dados · ML · deep learning · LLMs · fine-tuning 8B · MLOps | [trilha-dados-ia](07-estudo-e-carreira/trilha-dados-ia.md) | C |
 | Robótica e IoT (Arduino, ESP32, Raspberry Pi) | [trilha-robotica-iot](07-estudo-e-carreira/trilha-robotica-iot.md) | B (R1) → D |
 | Blockchain (ByteSDCoin: PoA, Besu, criptografia) | estudo puxado pelo projeto — doc do projeto + Lins Cap. 4 (RSA) | por projeto |
-| Ciências Econômicas · Ciência da Computação · pós-graduações · certificações | [formacao-academica](07-estudo-e-carreira/formacao-academica.md) | Formação |
+| Ciências Econômicas · faculdade para IA · certificações de investimento (CPA, CNPI, CGA, CFA, CFP) | [formacao-academica](07-estudo-e-carreira/formacao-academica.md) | Formação |
 | ⚠️ **Física** | **sem doc — falta o índice do livro** | B (futuro) |
 | ~~Desenho · Violão~~ | **removidos em out/2026** | — |
 | ~~Concurso PF/PRF (direito, TAF)~~ | **removido em out/2026** | — |
@@ -146,7 +146,8 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 
 # ⚠️ Decisões que continuam suas (não resolvi sozinho)
 - ~~**Concurso PF/PRF**~~ — **decidido em out/2026: removido do plano.**
-- **Quando matricular na Economia** e se a Ciência da Computação continua como diploma depois dela: [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+- **Pós-graduações** — **decidido em out/2026: removidas.**
+- **Faculdade para IA** (Ciência da Computação EAD ou bacharelado presencial em IA) e **a ordem entre ela e a Economia**: [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
 - **Ordem das Trilhas Paralelas** (Finanças → Dados & IA → 42 → Pentest): sugestão registrada no Sumário, confirme ou troque.
 - **Sócia do Rendara:** o plano dela era CEA, que foi extinta em jan/2026 — o caminho agora é CPA e depois C-Pro I (ou CFP).
 - **Física:** só fecho a trilha com precisão quando você me mostrar o índice do livro.

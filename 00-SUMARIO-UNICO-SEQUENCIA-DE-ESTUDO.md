@@ -24,9 +24,9 @@ A sequência de *execução* das frentes principais, uma por vez. A trilha de *e
 > **Renda extra roda por fora desta tabela, desde já:** aulas particulares, manutenção de PC e sites com manutenção mensal (definidos em out/2026). Elas pagam as contas enquanto as fases andam — ver [00-PLANO-UNIFICADO](00-PLANO-UNIFICADO.md) Eixo 2.
 
 ### 🎓 Formação acadêmica (roda por fora da Trilha Principal)
-ADS ✅ → **Licenciatura em Matemática** (em curso) → **Ciências Econômicas** 🆕 → Ciência da Computação → Pós Cybersecurity → Pós Arquitetura de Software. Quando matricular na Economia, certificações e o que fica só no autodidata: [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+ADS ✅ → **Licenciatura em Matemática** (em curso) → **Ciências Econômicas** 🆕 e **faculdade para IA** (Ciência da Computação ou bacharelado em IA), em ordem a decidir. Sem pós-graduação e sem faculdade de engenharia de software (autodidata). Certificações do setor de investimentos (CPA, CNPI, CGA, CFA) e o que fica só no autodidata: [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
 
-**Removidos do estudo em out/2026:** concurso PF/PRF (e o direito ligado a ele) · desenho · violão.
+**Removidos do estudo em out/2026:** concurso PF/PRF (e o direito ligado a ele) · desenho · violão · pós em Cybersecurity e em Arquitetura de Software.
 
 ### 🔒 Gate de segurança ↔ Linux
 A parte de segurança ([roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md)) só avança com a fase da [trilha-linux-arch-profissional](07-estudo-e-carreira/trilha-linux-arch-profissional.md) concluída:

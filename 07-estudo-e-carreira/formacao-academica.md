@@ -1,57 +1,82 @@
 ---
-tags: [estudo, formacao, portfolio-ams]
+tags: [estudo, formacao, certificacoes, portfolio-ams]
 tipo: trilha
 status: ativo
 atualizado: 2026-10-26
 ---
 
-# 🎓 Formação Acadêmica — Diplomas, Certificações e o Que Fica Só no Autodidata
+# 🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata
 
-> **O que este documento resolve:** separa o que você vai ter como **diploma**, o que vai ter como **certificação** e o que vai **dominar sem papel nenhum**. As faculdades rodam *por fora* da Trilha Principal: elas não viram Passos, mas cada uma alimenta Passos e trilhas específicas (tabela no fim).
+> **Objetivo de carreira (out/2026):** ser **programador sênior** na stack definida (C#/.NET + TypeScript/Next.js, com Python em paralelo), especializado em **IA desenvolvida e treinada do zero** e em **software para administração, empreendedorismo e finanças**, trabalhando no Brasil e principalmente no exterior. No lado financeiro, ter **as certificações do setor de investimentos** para recomendar investimentos e criar os próprios fundos sem barreira regulatória.
 >
-> **Decisão de out/2026:** entra o **bacharelado em Ciências Econômicas**. Saem o **concurso PF/PRF** e os hobbies **desenho e violão** (não são mais estudo planejado).
+> **Decisões de out/2026:** sai o concurso PF/PRF, desenho e violão. **Saem as pós-graduações** (Cybersecurity e Arquitetura). **Engenharia de software é só autodidata**, sem faculdade. Entra a **faculdade de Ciências Econômicas**.
 
 ---
 
-## 🧭 Sequência de diplomas
+## 🧭 Diplomas
 
-| # | Formação | Status | Papel no plano |
+| # | Formação | Status | Papel |
 |---|---|---|---|
-| 1 | **ADS** (tecnólogo) | ✅ concluído | Base de desenvolvimento |
-| 2 | **Licenciatura em Matemática** | 🔄 em curso | Base quantitativa de tudo: dev, IA, economia. Habilita aula de matemática |
-| 3 | **Ciências Econômicas** (bacharelado, EAD reconhecido pelo MEC) | 🆕 planejado | Teoria econômica, econometria, sistema financeiro. Espinha teórica dos sistemas financeiros e do sonho de modelar a economia brasileira |
-| 4 | **Ciência da Computação** | ⏸️ mantido, depois da Economia | Fecha a base formal de computação |
-| 5 | **Pós em Cybersecurity** | ⏸️ mantido | Ordem já decidida: segurança primeiro |
-| 6 | **Pós em Arquitetura de Software** | ⏸️ mantido | Depois da pós de segurança |
-| — | Pós/MBA em Finanças Quantitativas | 🌌 horizonte | Só depois de Economia + Trilha de Dados & IA |
+| 1 | **ADS** (tecnólogo) | ✅ concluído | Já é o **curso superior** que a CVM exige para consultor e gestor |
+| 2 | **Licenciatura em Matemática** | 🔄 em curso | Base quantitativa de tudo: IA, finanças, economia |
+| 3 | **Ciências Econômicas** (bacharelado) | 🆕 planejado | Teoria econômica, econometria, mercado — conhecimento para gestão de fundos e para os sistemas financeiros |
+| 4 | **Faculdade para IA** — Ciência da Computação **ou** bacharelado em IA | ⚠️ escolha pendente (ver abaixo) | Fundamento formal de IA e diploma reconhecido no exterior |
+| — | ~~Pós em Cybersecurity · Pós em Arquitetura de Software~~ | ❌ removidas em out/2026 | Segurança e arquitetura continuam como estudo autodidata |
+| — | ~~Faculdade de Engenharia de Software~~ | ❌ não fará | Currículo estudado por conta própria: [trilha-engenharia-software](trilha-engenharia-software.md) |
 
-### ⏱️ Quando começar a Economia (decisão sua, com os números na mesa)
-Uma graduação EAD pede, em média, algo como **8 a 10 h/semana** (estimativa, confira a carga da instituição escolhida). Duas graduações ao mesmo tempo somam 16–20 h, que é **todo** o tempo de estudo que você tem hoje.
+### Ordem entre Economia e a faculdade de IA
+**Decidir depois**, com uma regra sua: se o desenvolvimento dos sistemas precisar do conhecimento da Economia, ela vem primeiro.
 
-- **Opção A — recomendada:** matricular quando a Licenciatura entrar no último ano **ou** quando a renda extra passar de R$ 1.500/mês por 2 meses (o que vier primeiro). Até lá, a [Trilha de Finanças e Economia](trilha-financas-economia.md) adianta exatamente o que os sistemas precisam agora (contabilidade e matemática financeira).
-- **Opção B:** começar já em 2027/1, junto da Licenciatura. Só funciona se você aceitar que a Trilha Principal anda mais devagar durante esse período.
+O que já dá para dizer sobre essa regra: os sistemas de agora (Kaixara, Caixa da Casa, Rendara) precisam de **contabilidade, matemática financeira e tributos**, e isso vem da [Trilha de Finanças](trilha-financas-economia.md) (F1–F3), não da faculdade de Economia. A Economia passa a ser necessária no painel macroeconômico (F6), na gestão de fundos e nas finanças quantitativas (F8). Reavalie quando chegar no F4.
 
-> A Opção A não é "adiar a Economia": a parte que trava seus sistemas hoje (contabilidade, matemática financeira, tributos) **não é o forte da faculdade de Economia** — é estudo autodidata de qualquer forma. A faculdade entra forte em micro, macro, econometria e teoria monetária, que são a camada seguinte.
+**Tempo:** duas graduações EAD juntas ocupam todo o tempo de estudo de hoje (estimativa de 8–10 h/semana cada). Uma de cada vez.
 
-**Escolha da instituição:** reconhecida pelo MEC, nota 4 ou 5 no conceito de curso, mensalidade que caiba no caixa "verba para estudo" do Caixa da Casa.
+### A faculdade para IA — o que existe no Brasil (pesquisa de out/2026)
 
-### ⚠️ Honestidade sobre a sequência inteira
-Com Licenciatura → Economia → Ciência da Computação em série, a CC só começa daqui a muitos anos. Boa parte do conteúdo dela você já vai dominar pelo autodidata (Trilha Principal + École 42 + [horizonte longo](mapa-horizonte-longo-sistemas.md)). Quando a Economia estiver na metade, reavalie se a CC ainda vale como diploma ou se vira só autodidata.
+| Instituição | Curso | Formato | Observação |
+|---|---|---|---|
+| **UFG** (Goiânia) | Bacharelado em Inteligência Artificial | Presencial, integral, 8 semestres | O primeiro do país (desde 2020) |
+| **UFU** (Uberlândia, MG) | Bacharelado em Inteligência Artificial | Presencial, matutino, 8–12 semestres | Grade com ML supervisionado e não supervisionado, redes profundas, NLP, IA generativa e modelos de linguagem, álgebra linear, cálculo I–II |
+| **UFMS** | Bacharelado em Inteligência Artificial | Presencial | Projeto pedagógico publicado em 2026 |
+| **UFPR** | IA integrada à Engenharia de Software | Bacharelado | — |
+| **UFPB** · **UEL** | Ciência de Dados e IA | 4 anos | — |
+| **PUC-Rio** | Graduação em IA | Privada | — |
+| Cruzeiro do Sul, FMU, Positivo, São Judas e outras | Tecnólogo em IA | **EAD**, ~2 anos | Foco em uso e aplicação; acrescenta pouco a quem já tem ADS |
+
+**Leitura honesta:**
+- **Os bacharelados em IA de verdade são presenciais e públicos** (UFG, UFU, UFMS). Morando em Barbacena e trabalhando à noite, só dão certo se você se mudar.
+- **Em EAD, quase tudo é tecnólogo** de 2 anos. Ele não ensina a treinar modelos em nível internacional e não melhora o seu currículo lá fora em relação ao ADS.
+- **"Nível internacional" em treinar IA não vem de nenhuma graduação sozinha.** Vem de matemática forte (álgebra linear, cálculo, probabilidade, otimização), de implementar redes e transformers do zero e de projetos publicados. Isso está na [Trilha de Dados e IA](trilha-dados-ia.md). Treinar modelos do tamanho dos maiores do mercado exige computação de milhões de dólares; o alcance realista é treinar modelos pequenos do zero e ajustar modelos abertos (8B).
+- **Para trabalhar no exterior**, um **bacharelado em Ciência da Computação** costuma ser o diploma mais reconhecido em processos de visto e de contratação. Existe em EAD reconhecido pelo MEC.
+
+**Recomendação:** Ciência da Computação EAD (bacharelado), se ficar em Barbacena; bacharelado presencial em IA (UFU é o mais perto, em MG), se um dia mudar de cidade. Evite o tecnólogo EAD em IA.
 
 ---
 
-## 🏅 Certificações — o que é obrigatório e para quem
+## 🏅 Certificações do setor de investimentos
 
-| Certificação | Para quê | Quem faz | Quando |
-|---|---|---|---|
-| **CompTIA A+/Network+ → Security+ → (CCNA) → eJPT → OSCP** | Trilha de segurança, já decidida | Você | Depois do Passo 8, ver [roadmap](roadmap-seguranca-ofensiva-completo.md) |
-| **CPA + C-Pro I** (ANBIMA) | Consultoria de investimentos do AM Rendara. **A CEA deixou de existir em jan/2026**; o caminho novo é CPA e depois C-Pro I | Sua sócia | Quando ela começar a estudar — confira o plano de transição na ANBIMA |
-| **CFP** (Planejar) | Planejamento financeiro pessoal | Sua sócia (alternativa) | Opcional |
-| **CNPI** (APIMEC) | Só se algum sistema publicar relatório de recomendação de ativo | Alguém da empresa | Só se esse produto existir |
-| **CPA** (ANBIMA) | Opcional para você: exame de entrada, barato, bom para aprender a estrutura do mercado | Você | Opcional, depois do módulo F5 |
-| **CFA** | Padrão global de análise; não obrigatório no Brasil | — | Horizonte |
+O que cada atividade exige por lei, para você ou para alguém da sua empresa:
 
-> **Regra regulatória que vale pra todo sistema:** vender **software** não exige certificação. **Recomendar ativo** ou **gerir dinheiro de terceiros** exige (CVM). Por isso a consultoria do Rendara fica com a sócia certificada.
+| O que você quer fazer | Regra | O que precisa |
+|---|---|---|
+| Vender **software** financeiro | Nenhuma | Nada |
+| Trabalhar **distribuindo e recomendando investimentos dentro de banco ou corretora** | ANBIMA | **CPA** → **C-Pro R** (relacionamento, suitability) ou **C-Pro I** (técnico, monta carteiras). Desde jan/2026 substituem CPA-10, CPA-20 e CEA |
+| **Recomendar investimentos** de forma independente (consultor) | Resolução CVM 19 | Curso superior (o ADS já serve) + uma certificação aceita pela CVM: **CFP**, **CNPI**, **CGA**, **CFA nível III** (a CEA também estava na lista, mas foi extinta — confira na CVM se o C-Pro I passou a ser aceito) + autorização da CVM |
+| **Publicar relatório** de recomendação de ações | Resolução CVM 20 | **CNPI** (APIMEC) + credenciamento |
+| **Gerir carteiras e fundos** (gestor) | Resolução CVM 21 | Curso superior + **CGA** (ANBIMA; ou **CGE** para FII, FIDC, FIP e fundos de índice) ou **CFA nível III** + morar no Brasil + reputação ilibada + autorização da CVM |
+| **Criar o seu próprio fundo** | CVM 21 + regras de fundos | Uma **gestora (empresa) registrada na CVM**, com você como diretor de gestão certificado, **outra pessoa como diretor de compliance e risco**, políticas internas, e contratos com **administrador fiduciário e custodiante** (instituições separadas) |
+| Trabalhar no **exterior** com investimentos | Mercado global | **CFA** (3 níveis, em inglês) — também é aceito no Brasil para consultor e gestor |
+
+**Caminho sugerido para "nenhuma barreira":**
+1. **CPA** (ANBIMA) — entrada, barata, aprende a estrutura do mercado. Depois do módulo F5.
+2. **CNPI** (APIMEC) — destrava consultor e relatório de análise. Combina com o motor de análise do Rendara.
+3. **CGA** (ANBIMA) — destrava gestor de carteiras e fundos. Depois do F4–F5 e, de preferência, com a faculdade de Economia andando.
+4. **CFA** — o mais difícil e o mais valioso lá fora; vale como meta de longo prazo, junto do inglês avançado.
+5. **CFP** — opcional, se quiser também planejamento financeiro pessoal (caminho da sua sócia).
+
+> **Antes de prestar cada prova, confira na ANBIMA, APIMEC e CVM** quais certificações estão valendo e quais a CVM aceita para cada atividade. A lista mudou em 2022 e a ANBIMA reestruturou as certificações em 2026.
+
+> **Ponto importante:** a faculdade de Economia **não é exigência legal** para nada disso. O que a lei pede é curso superior (o ADS já cumpre) e a certificação. A Economia entra pelo conhecimento, não pela licença.
 
 ---
 
@@ -59,21 +84,11 @@ Com Licenciatura → Economia → Ciência da Computação em série, a CC só c
 
 | Área | Documento |
 |---|---|
-| Engenharia de software (fullstack .NET, arquitetura, sistemas financeiros) | [trilha-engenharia-software](trilha-engenharia-software.md) |
-| Contabilidade, matemática financeira, tributos, mercado, administração | [trilha-financas-economia](trilha-financas-economia.md) |
-| Dados e Inteligência Artificial (até treinar os próprios modelos) | [trilha-dados-ia](trilha-dados-ia.md) |
-| Segurança ofensiva | [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) |
+| Engenharia de software até o nível sênior, para o Brasil e o exterior | [trilha-engenharia-software](trilha-engenharia-software.md) |
+| IA desenvolvida e treinada do zero | [trilha-dados-ia](trilha-dados-ia.md) |
+| Contabilidade, matemática financeira, tributos, mercado, administração, empreendedorismo | [trilha-financas-economia](trilha-financas-economia.md) |
+| Segurança ofensiva (certificações CompTIA → eJPT → OSCP continuam) | [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) |
 | C/C++ (École 42) | [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) |
 | Linux, redes, baixo nível, SO próprio | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [trilha-de-redes](trilha-de-redes.md) · [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md) |
 | Robótica e IoT | [trilha-robotica-iot](trilha-robotica-iot.md) |
-| Idiomas | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
-
----
-
-## 🔗 Como cada faculdade alimenta o resto
-
-| Faculdade | Alimenta |
-|---|---|
-| Licenciatura em Matemática | Matemática de todos os Passos ([matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md)) · álgebra linear, cálculo e probabilidade da Trilha de IA · aulas particulares |
-| Ciências Econômicas | Módulos F6 (economia aplicada) e F8 (quant) · econometria ↔ ML clássico (IA3) · AM Rendara · aura-analytics · painel da economia brasileira |
-| Ciência da Computação | Horizonte longo (SO, compiladores, teoria da computação) |
+| Inglês (essencial para o exterior), espanhol, mandarim | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |

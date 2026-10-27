@@ -58,8 +58,9 @@ atualizado: 2026-10-26
 - **Desenvolver:** previsão de fluxo de caixa no Rendara, comparada contra uma média simples (se não ganhar da média, não vai para produção).
 - **Leitura:** *Hands-On Machine Learning* (Aurélien Géron)
 
-## IA4 — Deep learning
-- [ ] Redes neurais do zero, backpropagation, PyTorch
+## IA4 — Deep learning do zero
+- [ ] Implementar **sem biblioteca**: neurônio, rede de várias camadas, **autograd** (derivada automática) e backpropagation, só com Python e NumPy
+- [ ] Depois, o mesmo em PyTorch
 - [ ] CNN, RNN e **transformers** (a arquitetura dos LLMs)
 - **Desenvolver:** classificador de itens de NFC-e em categorias de gasto para o Caixa da Casa.
 - **Recursos:** *Neural Networks: Zero to Hero* (Andrej Karpathy, gratuito no YouTube) · curso Practical Deep Learning (fast.ai, gratuito)
@@ -71,8 +72,10 @@ atualizado: 2026-10-26
 - [ ] Governança: as regras RNFT-IA01–04 que você já escreveu · segurança (prompt injection — [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) §6.1)
 - **Desenvolver:** tutor do AM Mentor que responde com base nos seus próprios capítulos do *Lógica e Máquina* (RAG), citando a seção de onde tirou a resposta.
 
-## IA6 — Treino e fine-tuning
-- [ ] Como um LLM é treinado (pré-treino, ajuste fino, alinhamento)
+## IA6 — Treinar do zero e fine-tuning
+- [ ] **Tokenizer próprio** (BPE) e **transformer escrito do zero**
+- [ ] **Pré-treinar um modelo pequeno do zero** (dezenas de milhões de parâmetros) com seus textos, numa GPU alugada
+- [ ] Como os grandes modelos são treinados (pré-treino em escala, ajuste fino, alinhamento) — treinar um modelo do tamanho dos maiores do mercado exige computação de milhões de dólares; o alcance realista é o modelo pequeno do zero mais o ajuste fino de modelo aberto
 - [ ] LoRA/QLoRA em modelo aberto de ~8B, no notebook ou em GPU na nuvem
 - [ ] Montar dataset próprio (suas apostilas, exercícios, fichas duplas) com licença e sem dado de aluno
 - **Desenvolver:** modelo 8B ajustado ao seu estilo didático, comparado contra o modelo base num conjunto de perguntas fixo.

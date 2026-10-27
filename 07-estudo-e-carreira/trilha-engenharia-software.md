@@ -65,5 +65,12 @@ Entra **dentro dos Passos** que já constroem o Kaixara e o Rendara — não é 
 
 Hábitos que continuam: roadmap.sh como auditoria e Fábio Akita ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
 
-## 🎓 E a Ciência da Computação?
-O diploma fica para depois da Economia ([formacao-academica](formacao-academica.md)). O conteúdo teórico (compiladores, SO, teoria da computação — os livros de Sipser e Petzold que você já comprou) mora no [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md).
+## 🌍 Sênior para o Brasil e para o exterior
+Não haverá faculdade de engenharia de software: este documento é o currículo. Para ser contratado como sênior, principalmente fora do Brasil, somam-se:
+- **Inglês fluente** (leitura, escrita técnica e entrevista falada) — o maior filtro para vaga no exterior. Meta: C1. Ver [ingles-espanhol-integrado](ingles-espanhol-integrado.md).
+- **Algoritmos e estruturas de dados para entrevista** — exercícios no estilo das entrevistas técnicas internacionais, a partir do Passo 8.
+- **System design** — explicar e desenhar a arquitetura de um sistema grande em 45 minutos; o Aura é o seu material de treino ([perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md)).
+- **Portfólio público em inglês** — README, ADRs e estudos de caso dos sistemas em inglês (Inglês Fase C, Passo 9).
+- **Diploma reconhecido lá fora** — por isso a faculdade para IA (Ciência da Computação ou IA) está em [formacao-academica](formacao-academica.md).
+
+O conteúdo teórico de computação (compiladores, SO, teoria da computação — os livros de Sipser e Petzold que você já comprou) mora no [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md).
