@@ -159,7 +159,7 @@ O sistema é um único motor (capturar → entender → conciliar → calcular �
 
 ### 2.3 Arquitetura de integrações
 
-&#91;embedded content: arquitetura proposta · 5 fontes, 1 núcleo, 3 produtos\]
+![arquitetura proposta · 5 fontes, 1 núcleo, 3 produtos](imagens/plataforma-financeira-contabil-e-tributaria-analise-completa__1.svg)
 
 A IA só lê e explica; todo valor de imposto sai do motor de regras. A pessoa física, em destaque, é o primeiro produto.
 
@@ -291,7 +291,7 @@ Leitura: o escritório vale 50 pessoas físicas. Mas é a pessoa física que pro
 
 Cada fase só começa quando a anterior bate o seu critério. Construir o módulo de empresa antes de ter pessoas físicas pagando é o erro mais caro possível aqui.
 
-&#91;embedded content: roadmap proposto · 4 fases, 3 critérios de passagem\]
+![roadmap proposto · 4 fases, 3 critérios de passagem](imagens/plataforma-financeira-contabil-e-tributaria-analise-completa__2.svg)
 
 Se um critério não for batido, a fase seguinte espera e o produto atual é corrigido; as datas são metas, os critérios não.
 

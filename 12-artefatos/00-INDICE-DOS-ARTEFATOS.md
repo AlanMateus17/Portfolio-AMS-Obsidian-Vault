@@ -11,7 +11,7 @@ atualizado: 2026-10-27
 ## O que ficou de fora e por quê
 
 - **Pendências dos PDIs (dois alunos)**: não foi copiado de propósito. Tem dados de alunos, e dado de aluno não deve ir para um repositório, nem privado. Ele continua no claude.ai.
-- **Blocos embutidos dentro de documentos** (diagramas e quadros interativos colados no meio do texto): a exportação para `.md` troca cada um por uma marca `[embedded content]`. O texto todo veio; para ver esses blocos, abra o link do documento. A coluna "Observação" diz quais documentos têm isso.
+- **Blocos embutidos dentro de documentos** (diagramas, fluxogramas e gráficos colados no meio do texto): os 34 blocos foram recuperados e convertidos em imagem (`documentos/imagens/*.svg`), e cada documento já mostra a imagem no lugar certo. O código original de cada bloco está em `documentos/imagens/fonte-jsx/` (com o script `render.mjs` que gera as imagens), caso queira editar um diagrama no futuro. A coluna "Observação" diz quais documentos têm diagramas.
 - **O que você marcou nas páginas** (caixinhas, filtros): fica guardado no navegador de quem marcou e não vem na cópia. Onde a página guarda no próprio claude.ai, os dados vieram junto na pasta `dados-salvos`.
 - **Os editores** de Design, Design System e Painel: só funcionam dentro do claude.ai. Vieram os arquivos do projeto (telas, tokens, dados).
 
@@ -22,9 +22,9 @@ atualizado: 2026-10-27
 | Artefato | Atualizado | Arquivo aqui | Observação |
 |---|---|---|---|
 | [12 Projetos da Formação — especificações](https://claude.ai/artifact/ATbiqn2Z2m4ZJVXLQ2M3HT) | 2026-09-29 | [abrir](documentos/12-projetos-da-formacao-especificacoes.md) | completo |
-| [AM Rendara — Especificação do MVP](https://claude.ai/artifact/6mbuiQwaDEwZKD1pbjKFj8) | 2026-10-09 | [abrir](documentos/am-rendara-especificacao-do-mvp.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [AM Rendara — Módulo Família: plano do sistema de controle de gastos](https://claude.ai/artifact/XsiZ4y82apiinej4PXQEtN) | 2026-10-09 | [abrir](documentos/am-rendara-modulo-familia-plano-do-sistema-de-controle-de-gastos.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Auditoria do Caixa da Casa (v35)](https://claude.ai/artifact/F1z9dcq5xn3PqJQrNjGh7C) | 2026-10-16 | [abrir](documentos/auditoria-do-caixa-da-casa-v35.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
+| [AM Rendara — Especificação do MVP](https://claude.ai/artifact/6mbuiQwaDEwZKD1pbjKFj8) | 2026-10-09 | [abrir](documentos/am-rendara-especificacao-do-mvp.md) | 1 diagrama(s) incluído(s) como imagem |
+| [AM Rendara — Módulo Família: plano do sistema de controle de gastos](https://claude.ai/artifact/XsiZ4y82apiinej4PXQEtN) | 2026-10-09 | [abrir](documentos/am-rendara-modulo-familia-plano-do-sistema-de-controle-de-gastos.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Auditoria do Caixa da Casa (v35)](https://claude.ai/artifact/F1z9dcq5xn3PqJQrNjGh7C) | 2026-10-16 | [abrir](documentos/auditoria-do-caixa-da-casa-v35.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Aula — Banco de Dados: Conceitos básicos](https://claude.ai/artifact/8VzMoL6zSrPHFAPo7Gvp45) | 2026-10-20 | [abrir](documentos/aula-banco-de-dados-conceitos-basicos.md) | completo |
 | [Aula — Banco de Dados: Conceitos, tipos de banco e primeiros comandos SQL](https://claude.ai/artifact/J8DbDxhAJxeLFLwVUu7KFG) | 2026-10-21 | [abrir](documentos/aula-banco-de-dados-conceitos-tipos-de-banco-e-primeiros-comandos-sql.md) | completo |
 | [Aula — Lab. Hardware: Segurança, medição e diagnóstico no Projeto BSD (3º EMTI)](https://claude.ai/artifact/6Zx9XZicNLnawJMVmS5ccq) | 2026-10-21 | [abrir](documentos/aula-lab-hardware-seguranca-medicao-e-diagnostico-no-projeto-bsd-3o-em.md) | completo |
@@ -36,34 +36,34 @@ atualizado: 2026-10-27
 | [Aulas de Laboratório — Software e Hardware (3º EMTI)](https://claude.ai/artifact/Nr2kRc8U6nYZYfL3PEFXxT) | 2026-10-20 | [abrir](documentos/aulas-de-laboratorio-software-e-hardware-3o-emti.md) | completo |
 | [Banco de Dados — Tabelas para Preencher (Gabarito)](https://claude.ai/artifact/Bks8fcnhJig6RHYAKrvNBA) | 2026-10-21 | [abrir](documentos/banco-de-dados-tabelas-para-preencher-gabarito.md) | completo |
 | [ByteSDCoin — Catálogo de tudo que o sistema vai oferecer](https://claude.ai/artifact/RH5fPyeRGH5b89y577yeco) | 2026-09-23 | [abrir](documentos/bytesdcoin-catalogo-de-tudo-que-o-sistema-vai-oferecer.md) | completo |
-| [Caixa da Casa 2 — auditoria final para produção](https://claude.ai/artifact/WiWZRv29DBaZ4ESdd1WX41) | 2026-10-16 | [abrir](documentos/caixa-da-casa-2-auditoria-final-para-producao.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Caixa da Casa 2 — plano do sistema completo](https://claude.ai/artifact/RfgZQXkUzzDWtZsLd2XXhW) | 2026-10-16 | [abrir](documentos/caixa-da-casa-2-plano-do-sistema-completo.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Casa Inteligente e Setup Automatizado](https://claude.ai/artifact/8rPEfTKPdY5hTw4X9FUJHf) | 2026-10-07 | [abrir](documentos/casa-inteligente-e-setup-automatizado.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Catálogo do HTML — Avaliação da plataforma](https://claude.ai/artifact/1C9m8JMPHCXNhdsp84PUST) | 2026-10-06 | [abrir](documentos/catalogo-do-html-avaliacao-da-plataforma.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Criação de Banco de Dados com MySQL](https://claude.ai/artifact/KednZ94zgZhvDuYeAaHgwK) | 2026-10-05 | [abrir](documentos/criacao-de-banco-de-dados-com-mysql.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
+| [Caixa da Casa 2 — auditoria final para produção](https://claude.ai/artifact/WiWZRv29DBaZ4ESdd1WX41) | 2026-10-16 | [abrir](documentos/caixa-da-casa-2-auditoria-final-para-producao.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Caixa da Casa 2 — plano do sistema completo](https://claude.ai/artifact/RfgZQXkUzzDWtZsLd2XXhW) | 2026-10-16 | [abrir](documentos/caixa-da-casa-2-plano-do-sistema-completo.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Casa Inteligente e Setup Automatizado](https://claude.ai/artifact/8rPEfTKPdY5hTw4X9FUJHf) | 2026-10-07 | [abrir](documentos/casa-inteligente-e-setup-automatizado.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Catálogo do HTML — Avaliação da plataforma](https://claude.ai/artifact/1C9m8JMPHCXNhdsp84PUST) | 2026-10-06 | [abrir](documentos/catalogo-do-html-avaliacao-da-plataforma.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Criação de Banco de Dados com MySQL](https://claude.ai/artifact/KednZ94zgZhvDuYeAaHgwK) | 2026-10-05 | [abrir](documentos/criacao-de-banco-de-dados-com-mysql.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Currículo — Alan Mateus](https://claude.ai/artifact/L52MpUMySpgJ9txSv9u2F2) | 2026-10-20 | [abrir](documentos/curriculo-alan-mateus.md) | completo |
-| [Do Fluxograma ao Código — Atividade dos alunos](https://claude.ai/artifact/QVHnhPKyTyB8VkkcZSbNoq) | 2026-10-26 | [abrir](documentos/do-fluxograma-ao-codigo-atividade-dos-alunos.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Do Fluxograma ao Código — Lista de Exercícios](https://claude.ai/artifact/GeUzi2y5eapyqojkUGUVxN) | 2026-10-26 | [abrir](documentos/do-fluxograma-ao-codigo-lista-de-exercicios.md) | 13 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Do zero ao ar: sua página com HTML, CSS e JavaScript](https://claude.ai/artifact/AZAski19cEv7jP2BvLPNim) | 2026-09-28 | [abrir](documentos/do-zero-ao-ar-sua-pagina-com-html-css-e-javascript.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Exercício: Fluxograma do Preço-Teto (Barsi, Bazin e ARCA)](https://claude.ai/artifact/7vRM7BKaNbYbLQzobqVUiL) | 2026-10-26 | [abrir](documentos/exercicio-fluxograma-do-preco-teto-barsi-bazin-e-arca.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
+| [Do Fluxograma ao Código — Atividade dos alunos](https://claude.ai/artifact/QVHnhPKyTyB8VkkcZSbNoq) | 2026-10-26 | [abrir](documentos/do-fluxograma-ao-codigo-atividade-dos-alunos.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Do Fluxograma ao Código — Lista de Exercícios](https://claude.ai/artifact/GeUzi2y5eapyqojkUGUVxN) | 2026-10-26 | [abrir](documentos/do-fluxograma-ao-codigo-lista-de-exercicios.md) | 13 diagrama(s) incluído(s) como imagem |
+| [Do zero ao ar: sua página com HTML, CSS e JavaScript](https://claude.ai/artifact/AZAski19cEv7jP2BvLPNim) | 2026-09-28 | [abrir](documentos/do-zero-ao-ar-sua-pagina-com-html-css-e-javascript.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Exercício: Fluxograma do Preço-Teto (Barsi, Bazin e ARCA)](https://claude.ai/artifact/7vRM7BKaNbYbLQzobqVUiL) | 2026-10-26 | [abrir](documentos/exercicio-fluxograma-do-preco-teto-barsi-bazin-e-arca.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Gabarito — Lab. Software e Lab. Hardware (Professor)](https://claude.ai/artifact/Anij4auAGRX8yyTFVRuZwe) | 2026-10-27 | [abrir](documentos/gabarito-lab-software-e-lab-hardware-professor.md) | completo |
 | [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](https://claude.ai/artifact/DVWA9kKhYD2JHjXvfzN5C6) | 2026-09-29 | [abrir](documentos/guia-de-terminal-git-github-powershell-e-git-bash.md) | completo |
 | [Painel Geral — Alan](https://claude.ai/artifact/L4YF7cNnLjEMVMvvjWGY6q) | 2026-09-27 | [abrir](documentos/painel-geral-alan.md) | completo |
 | [Planilha Cascata — Lançamento](https://claude.ai/artifact/WvY8ZTrefcwLdHQ2G5rVkn) | 2026-09-25 | [abrir](documentos/planilha-cascata-lancamento.md) | completo |
-| [Plano comercial — venda da plataforma](https://claude.ai/artifact/5rcxvieTze6ymoV3n8Kau4) | 2026-10-06 | [abrir](documentos/plano-comercial-venda-da-plataforma.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
+| [Plano comercial — venda da plataforma](https://claude.ai/artifact/5rcxvieTze6ymoV3n8Kau4) | 2026-10-06 | [abrir](documentos/plano-comercial-venda-da-plataforma.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Plano de Estudos de Espanhol — A1 ao C2](https://claude.ai/artifact/DQYEqUHSwntmZZE3ejhi89) | 2026-10-06 | [abrir](documentos/plano-de-estudos-de-espanhol-a1-ao-c2.md) | completo |
 | [Plano de Estudos de Inglês — 6º ano ao 3º EM](https://claude.ai/artifact/QAXsLGh8QHcsQaoiohD1QY) | 2026-10-06 | [abrir](documentos/plano-de-estudos-de-ingles-6o-ano-ao-3o-em.md) | completo |
-| [Plano de Prioridades — Out/2026 a Dez/2027](https://claude.ai/artifact/FsYYTPqZEQbZSeCmDAe6SP) | 2026-10-06 | [abrir](documentos/plano-de-prioridades-out-2026-a-dez-2027.md) | 2 bloco(s) embutido(s) não exportado(s): abra o link |
+| [Plano de Prioridades — Out/2026 a Dez/2027](https://claude.ai/artifact/FsYYTPqZEQbZSeCmDAe6SP) | 2026-10-06 | [abrir](documentos/plano-de-prioridades-out-2026-a-dez-2027.md) | 2 diagrama(s) incluído(s) como imagem |
 | [Plano Mestre — Checklists de Execução](https://claude.ai/artifact/M8Kxy3ibTQeXcakUYkrkaS) | 2026-09-24 | [abrir](documentos/plano-mestre-checklists-de-execucao.md) | completo |
-| [Plano-Mestre — Alan](https://claude.ai/artifact/UhT636KdypzgWzZuc62DLT) | 2026-09-28 | [abrir](documentos/plano-mestre-alan.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Plataforma de cursos — Especificação funcional v1](https://claude.ai/artifact/UiwX9ypibY6jPPKfbRAZPd) | 2026-10-06 | [abrir](documentos/plataforma-de-cursos-especificacao-funcional-v1.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Plataforma de cursos — Stack profissional](https://claude.ai/artifact/3FQE2685Yqu66gk78yBJFf) | 2026-10-06 | [abrir](documentos/plataforma-de-cursos-stack-profissional.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
-| [Plataforma financeira, contábil e tributária: análise completa](https://claude.ai/artifact/4x2tbppY18tFf1sywmmMTU) | 2026-10-17 | [abrir](documentos/plataforma-financeira-contabil-e-tributaria-analise-completa.md) | 2 bloco(s) embutido(s) não exportado(s): abra o link |
+| [Plano-Mestre — Alan](https://claude.ai/artifact/UhT636KdypzgWzZuc62DLT) | 2026-09-28 | [abrir](documentos/plano-mestre-alan.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Plataforma de cursos — Especificação funcional v1](https://claude.ai/artifact/UiwX9ypibY6jPPKfbRAZPd) | 2026-10-06 | [abrir](documentos/plataforma-de-cursos-especificacao-funcional-v1.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Plataforma de cursos — Stack profissional](https://claude.ai/artifact/3FQE2685Yqu66gk78yBJFf) | 2026-10-06 | [abrir](documentos/plataforma-de-cursos-stack-profissional.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Plataforma financeira, contábil e tributária: análise completa](https://claude.ai/artifact/4x2tbppY18tFf1sywmmMTU) | 2026-10-17 | [abrir](documentos/plataforma-financeira-contabil-e-tributaria-analise-completa.md) | 2 diagrama(s) incluído(s) como imagem |
 | [Professores parceiros — o que falta para atender qualquer área](https://claude.ai/artifact/3FGpuSsYpbszcfAvfpdCwv) | 2026-10-06 | [abrir](documentos/professores-parceiros-o-que-falta-para-atender-qualquer-area.md) | completo |
 | [Resumo para Explicar — 4 Matérias](https://claude.ai/artifact/BbNodhEEECfz3PzfFhsYot) | 2026-10-26 | [abrir](documentos/resumo-para-explicar-4-materias.md) | completo |
-| [Sistema de Controle Financeiro Familiar](https://claude.ai/artifact/4iQiZFQniKVh6c6cYn6Q5F) | 2026-10-09 | [abrir](documentos/sistema-de-controle-financeiro-familiar.md) | 1 bloco(s) embutido(s) não exportado(s): abra o link |
+| [Sistema de Controle Financeiro Familiar](https://claude.ai/artifact/4iQiZFQniKVh6c6cYn6Q5F) | 2026-10-09 | [abrir](documentos/sistema-de-controle-financeiro-familiar.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Tabelas para Preencher — Aluno](https://claude.ai/artifact/EmdinCv7nMi3yiPqRHWsnr) | 2026-10-21 | [abrir](documentos/tabelas-para-preencher-aluno.md) | completo |
-| [Teste BESST da B3: Barsi, Bazin, Buffett e ARCA](https://claude.ai/artifact/KGxLP9HKjU3SjLX8LZbeGG) | 2026-10-26 | [abrir](documentos/teste-besst-da-b3-barsi-bazin-buffett-e-arca) | 1 bloco(s) embutido(s) não exportado(s): abra o link; 2 abas |
+| [Teste BESST da B3: Barsi, Bazin, Buffett e ARCA](https://claude.ai/artifact/KGxLP9HKjU3SjLX8LZbeGG) | 2026-10-26 | [abrir](documentos/teste-besst-da-b3-barsi-bazin-buffett-e-arca) | 1 diagrama(s) incluído(s) como imagem; 2 abas |
 | [Trilha de Cibersegurança e Pentest](https://claude.ai/artifact/M8qhqVbA56CYJKgPj1VZHL) | 2026-09-27 | [abrir](documentos/trilha-de-ciberseguranca-e-pentest.md) | completo |
 | [Trilha de Redes](https://claude.ai/artifact/X6JM1NWUhpqQcrnbZjwvQn) | 2026-09-27 | [abrir](documentos/trilha-de-redes.md) | completo |
 | [Trilha Linux/Arch Profissional](https://claude.ai/artifact/TYhnnW6xFtQtfrc9wbWcjM) | 2026-09-27 | [abrir](documentos/trilha-linux-arch-profissional.md) | completo |

@@ -217,7 +217,7 @@ São cerca de 30 indicadores em seis grupos; os cinco que mais importam no dia a
 
 O sistema cabe inteiro na stack fixa do Aura e reaproveita dois serviços que já existem: aura-copilot para a IA e aura-analytics para os cálculos pesados. Nenhum serviço novo precisa ser inventado.
 
-&#91;embedded content: arquitetura · do documento ao indicador\]
+![arquitetura · do documento ao indicador](imagens/sistema-de-controle-financeiro-familiar__1.svg)
 
 O worker processa cada documento fora da requisição, então o upload responde na hora e o resultado chega ao app por SignalR quando a leitura termina. A IA só entra quando regra e parser não resolvem.
 

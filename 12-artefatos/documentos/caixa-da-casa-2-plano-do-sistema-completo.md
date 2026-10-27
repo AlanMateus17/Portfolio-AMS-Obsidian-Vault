@@ -20,7 +20,7 @@ O v35 continua no ar, com os seus dados, até você aprovar a troca. Antes de co
 
 ## Mapa do sistema
 
-&#91;embedded content: mapa do Caixa da Casa 2 · entradas, cadastros, registro único, cálculo, telas\]
+![mapa do Caixa da Casa 2 · entradas, cadastros, registro único, cálculo, telas](imagens/caixa-da-casa-2-plano-do-sistema-completo__1.svg)
 
 Documentos, lançamentos manuais e importações entram no mesmo registro. Os cadastros descrevem as coisas e geram os lançamentos previstos. As funções de cálculo leem os dois, e as telas só mostram o que elas devolvem.
 

@@ -62,7 +62,7 @@ Tudo acima é gratuito ou código aberto, exceto o que se paga por uso: e-mail, 
 
 ## Arquitetura alvo
 
-&#91;embedded content: arquitetura alvo · um servidor, três serviços externos, três lugares de dados\]
+![arquitetura alvo · um servidor, três serviços externos, três lugares de dados](imagens/plataforma-de-cursos-stack-profissional__1.svg)
 
 O sistema monta as páginas, responde a API e roda as tarefas no mesmo processo. O que é pesado ou regulado (vídeo, pagamento, entrega de e-mail) fica com quem faz só isso.
 

@@ -70,7 +70,7 @@ A ordem dos estudos é exatamente a do `00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md`
 
 Cada trimestre fecha um critério antes de abrir o próximo; os projetos de portfólio são a principal a partir da Fase 2, porque já estão dentro do estudo.
 
-&#91;embedded content: roteiro out/2026–dez/2027 · 4 fases, 1 critério por fase\]
+![roteiro out/2026–dez/2027 · 4 fases, 1 critério por fase](imagens/plano-de-prioridades-out-2026-a-dez-2027__1.svg)
 
 Na Fase 1 a principal fica fora do estudo (os sites) porque os Passos 1–4 ainda não produzem um sistema para mostrar.
 
@@ -78,7 +78,7 @@ Na Fase 1 a principal fica fora do estudo (os sites) porque os Passos 1–4 aind
 
 O estudo gera o conteúdo, o conteúdo grátis atrai, e o Instituto AMS é a única vitrine onde os produtos de ensino são vendidos.
 
-&#91;embedded content: fluxo estudo → conteúdo → Instituto AMS → produtos\]
+![fluxo estudo → conteúdo → Instituto AMS → produtos](imagens/plano-de-prioridades-out-2026-a-dez-2027__2.svg)
 
 - **Instituto AMS é a vitrine, não um sistema novo agora.** Na Fase 2 ele é uma página que apresenta os cursos e leva ao checkout de uma plataforma de infoproduto. Catálogo do HTML e AM Mentor viram cursos dentro dele, cada um com o seu design.
 - **Catálogo do HTML** mantém as duas camadas que você já decidiu: versão grátis no GitHub Pages (atração) e versão completa paga, com os 12 projetos AM. O preço de \~R$ 300 é o que a Fase 2 testa.

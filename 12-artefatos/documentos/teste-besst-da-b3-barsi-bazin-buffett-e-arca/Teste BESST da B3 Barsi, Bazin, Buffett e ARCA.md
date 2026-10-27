@@ -56,7 +56,7 @@ O ARCA não escolhe empresas. Ele divide a carteira em Ações, Real estate, Cai
 
 ## Funil
 
-&#91;embedded content: contagem deste documento · 53 empresas BESST, dados de 26/10/2026\]
+![contagem deste documento · 53 empresas BESST, dados de 26/10/2026](../imagens/teste-besst-da-b3-barsi-bazin-buffett-e-arca__1.svg)
 
 O maior corte acontece no preço do Bazin, onde 29 empresas saem, e no ROE consistente do Buffett, onde mais 8 saem.
 

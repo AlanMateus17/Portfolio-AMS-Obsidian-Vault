@@ -80,7 +80,7 @@ Por que tanta regra? No seu computador, `Foto.jpg` e `foto.jpg` são o mesmo arq
 
 O `index.html` é o chefe: ele chama o CSS, o JavaScript e as imagens, cada um pelo seu **caminho**. Se um caminho estiver errado, aquele arquivo simplesmente não chega, e nenhuma mensagem aparece na tela.
 
-&#91;embedded content: como os arquivos do projeto se ligam\]
+![como os arquivos do projeto se ligam](imagens/do-zero-ao-ar-sua-pagina-com-html-css-e-javascript__1.svg)
 
 Os caminhos são **relativos**: partem da pasta onde está o `index.html`. `css/estilo.css` quer dizer "entre na pasta css e pegue estilo.css".
 

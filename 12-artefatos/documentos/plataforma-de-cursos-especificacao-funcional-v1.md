@@ -16,7 +16,7 @@ Esta especificação **substitui** o documento "Professores parceiros": tudo o q
 
 ## Como se organiza
 
-&#91;embedded content: organização · plataforma, escolas, vitrine e a hierarquia de um curso\]
+![organização · plataforma, escolas, vitrine e a hierarquia de um curso](imagens/plataforma-de-cursos-especificacao-funcional-v1__1.svg)
 
 A conta é da plataforma; cursos, alunos e vendas são da escola. A vitrine é uma janela opcional: a Ana pode deixar os cursos dela só no endereço dela.
 

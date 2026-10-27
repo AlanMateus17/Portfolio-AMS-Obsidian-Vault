@@ -71,7 +71,7 @@ Antes de digitar qualquer comando, desenhe o banco no papel. Mudar um desenho cu
 4. **Descubra os relacionamentos.** Pergunte "quantos?" nos dois sentidos. Uma turma tem vários alunos; um aluno está em uma turma só. Isso é **1 para N**: a chave estrangeira fica no lado N (`id_turma` dentro de `alunos`).
 5. **Resolva o N para N.** Um aluno cursa várias disciplinas e uma disciplina tem vários alunos. Esse caso vira uma tabela no meio, `notas`, que guarda as duas chaves estrangeiras.
 
-&#91;embedded content: modelo do banco escola · 5 tabelas, 4 relacionamentos\]
+![modelo do banco escola · 5 tabelas, 4 relacionamentos](imagens/criacao-de-banco-de-dados-com-mysql__1.svg)
 
 Leia o diagrama pelas setas: cada uma sai da chave estrangeira e aponta para a tabela de onde ela vem. A tabela `notas`, em destaque, é a que une alunos e disciplinas.
 

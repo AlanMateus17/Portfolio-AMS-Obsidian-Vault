@@ -49,7 +49,7 @@ Cada símbolo do fluxograma tem um "par" no Portugol. Use esta tabela como dicio
 
 **Passo 2 — Fluxograma:** veja o desenho logo abaixo.
 
-&#91;embedded content: fluxograma da média do aluno · 1 decisão, 2 saídas\]
+![fluxograma da média do aluno · 1 decisão, 2 saídas](imagens/do-fluxograma-ao-codigo-atividade-dos-alunos__1.svg)
 
 Repare: o losango gera dois caminhos (Sim e Não), e os dois chegam ao mesmo Fim. No código, isso é exatamente o `se ... senao ... fimse`.
 

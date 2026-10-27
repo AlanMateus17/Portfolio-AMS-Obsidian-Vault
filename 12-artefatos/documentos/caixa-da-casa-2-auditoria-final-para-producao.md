@@ -206,7 +206,7 @@ Para resolver o problema de verdade, faltam sobretudo coisas que tiram trabalho 
 
 Recomendo levar o sistema para a stack fixa do Aura, como AM Rendara: .NET 10 com Controllers, PostgreSQL com Row-Level Security por família, Redis, Next.js e Docker. As regras de `src/dominio` são portadas, não reinventadas.
 
-&#91;embedded content: arquitetura proposta · clientes, API, dados e fontes oficiais\]
+![arquitetura proposta · clientes, API, dados e fontes oficiais](imagens/caixa-da-casa-2-auditoria-final-para-producao__1.svg)
 
 Site e app falam só com a API; as fontes oficiais só entram pelo serviço de dados de mercado, nunca direto na tela. Open Finance (fase 3) entra pela API, no lugar da importação de arquivos.
 

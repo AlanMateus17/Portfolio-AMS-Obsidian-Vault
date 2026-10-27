@@ -18,7 +18,7 @@ Quando bater a dúvida "o que eu faço agora?", abra aqui. Este documento manda;
 
 Esta é a sequência que você já tinha definido, agora com as trilhas de hoje encaixadas. A regra: uma frente principal por vez, o resto espera.
 
-&#91;embedded content: roadmap · 4 fases + fila 2028\]
+![roadmap · 4 fases + fila 2028](imagens/plano-mestre-alan__1.svg)
 
 Os critérios da ordem: prazo real (fim do ano letivo primeiro), dinheiro (renda o quanto antes) e o que destrava outros projetos (o AM Kaixara vem cedo porque constrói blocos de frontend que os outros sistemas reusam).
 

@@ -8,7 +8,7 @@ Uso do professor. Cada resposta traz o fluxograma em sequência de blocos, o có
 
 **Fluxograma:** Início → Entrada: ler n1, n2, n3 → Processamento: media ← (n1 + n2 + n3) / 3 → Decisão: media >= 7? → Sim: Saída "Media - APROVADO" / Não: Saída "Media - RECUPERACAO" → Fim.
 
-&#91;embedded content: fluxograma · Sua vez\]
+![fluxograma · Sua vez](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__sua-vez.svg)
 
 ```
 algoritmo "MediaTresNotas"
@@ -40,7 +40,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler c → Processamento: f ← c × 1,8 + 32 → Saída: mostrar f → Fim.
 
-&#91;embedded content: fluxograma · exercício 1\]
+![fluxograma · exercício 1](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex01.svg)
 
 ```
 algoritmo "CelsiusFahrenheit"
@@ -66,7 +66,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler preco, qtd → Processamento: total ← preco × qtd → Saída: mostrar total → Fim.
 
-&#91;embedded content: fluxograma · exercício 2\]
+![fluxograma · exercício 2](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex02.svg)
 
 ```
 algoritmo "Lanchonete"
@@ -92,7 +92,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler minutos → Processamento: horas ← minutos div 60; resto ← minutos mod 60 → Saída: mostrar horas e resto → Fim.
 
-&#91;embedded content: fluxograma · exercício 3\]
+![fluxograma · exercício 3](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex03.svg)
 
 ```
 algoritmo "TempoDeJogo"
@@ -121,7 +121,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler numero → Decisão: numero mod 2 = 0? → Sim: Saída "PAR" / Não: Saída "IMPAR" → Fim.
 
-&#91;embedded content: fluxograma · exercício 4\]
+![fluxograma · exercício 4](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex04.svg)
 
 ```
 algoritmo "ParOuImpar"
@@ -148,7 +148,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler a, b → Decisão 1: a > b? → Sim: Saída "maior é a" / Não: Decisão 2: b > a? → Sim: Saída "maior é b" / Não: Saída "iguais" → Fim.
 
-&#91;embedded content: fluxograma · exercício 5\]
+![fluxograma · exercício 5](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex05.svg)
 
 ```
 algoritmo "MaiorNumero"
@@ -181,7 +181,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler conta → Processamento: desconto ← 0 → Decisão: conta > 100? → Sim: desconto ← conta × 0,10 / Não: segue → Processamento: final ← conta − desconto → Saída: mostrar desconto e final → Fim.
 
-&#91;embedded content: fluxograma · exercício 6\]
+![fluxograma · exercício 6](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex06.svg)
 
 ```
 algoritmo "DescontoRestaurante"
@@ -210,7 +210,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler idade → Decisão 1: idade <= 11? → Sim: Saída "CRIANCA" / Não: Decisão 2: idade <= 17? → Sim: Saída "ADOLESCENTE" / Não: Saída "ADULTO" → Fim.
 
-&#91;embedded content: fluxograma · exercício 7\]
+![fluxograma · exercício 7](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex07.svg)
 
 ```
 algoritmo "FaixaEtaria"
@@ -246,7 +246,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler n → Processamento: i ← 1 → Decisão: i <= 10? → Sim: Saída "n x i = n×i" → Processamento: i ← i + 1 → seta volta para a decisão / Não: Fim.
 
-&#91;embedded content: fluxograma · exercício 8\]
+![fluxograma · exercício 8](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex08.svg)
 
 ```
 algoritmo "Tabuada"
@@ -275,7 +275,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Processamento: soma ← 0 → Entrada: ler num → Decisão: num <> 0? → Sim: Processamento: soma ← soma + num → Entrada: ler num → seta volta para a decisão / Não: Saída: mostrar soma → Fim.
 
-&#91;embedded content: fluxograma · exercício 9\]
+![fluxograma · exercício 9](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex09.svg)
 
 ```
 algoritmo "SomaAteZero"
@@ -306,7 +306,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Processamento: tentativas ← 0; acertou ← falso → Decisão: tentativas < 3 e não acertou? → Sim: Entrada: ler senha → Processamento: tentativas ← tentativas + 1 → Decisão: senha = 1234? → Sim: acertou ← verdadeiro / Não: Saída "Tentativas restantes" → seta volta para a primeira decisão / Não (saiu do laço): Decisão: acertou? → Sim: Saída "Acesso liberado" / Não: Saída "Acesso bloqueado" → Fim.
 
-&#91;embedded content: fluxograma · exercício 10\]
+![fluxograma · exercício 10](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex10.svg)
 
 ```
 algoritmo "SenhaTresTentativas"
@@ -348,7 +348,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Entrada: ler n → Processamento: cont ← 0; i ← 1 → Decisão: i <= n? → Sim: Decisão: n mod i = 0? → Sim: cont ← cont + 1 / Não: segue → i ← i + 1 → seta volta para "i <= n?" / Não (saiu do laço): Decisão: cont = 2? → Sim: Saída "SIM" / Não: Saída "NAO" → Fim.
 
-&#91;embedded content: fluxograma · exercício 11\]
+![fluxograma · exercício 11](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__ex11.svg)
 
 | n | Divisores encontrados | cont | Saída |
 | --- | --- | --- | --- |
@@ -360,7 +360,7 @@ fimalgoritmo
 
 **Fluxograma:** Início → Processamento: subtotal ← 0 → (início do laço) Saída: mostrar cardápio → Entrada: ler codigo → Decisão: codigo = 0? → Sim: sai do laço / Não: Decisão: codigo entre 1 e 3? → Não: Saída "Item invalido" → volta ao cardápio / Sim: Entrada: ler qtd → Decisão: qtd <= 0? → Sim: Saída "Quantidade invalida" → volta ao cardápio / Não: Decisões do preço (1 → 6; 2 → 4; 3 → 5) → Processamento: subtotal ← subtotal + preco × qtd → volta ao cardápio. Depois do laço: Decisão: subtotal = 0? → Sim: Saída "Nenhum item comprado" / Não: desconto ← 0 → Decisão: subtotal > 30? → Sim: desconto ← subtotal × 0,05 → total ← subtotal − desconto → Saída: subtotal, desconto e total → Fim.
 
-&#91;embedded content: fluxograma · desafio da cantina\]
+![fluxograma · desafio da cantina](imagens/do-fluxograma-ao-codigo-lista-de-exercicios__desafio-cantina.svg)
 
 ```
 algoritmo "CaixaCantina"

@@ -232,6 +232,6 @@ Oito números, vistos uma vez por mês no painel do admin (VND-16). As metas ini
 
 ## Cronograma
 
-&#91;embedded content: cronograma comercial · 4 fases e 3 portões\]
+![cronograma comercial · 4 fases e 3 portões](imagens/plano-comercial-venda-da-plataforma__1.svg)
 
 Cada fase só começa quando o portão anterior é cumprido, não numa data. A R2 (professores convidados no Instituto AMS) corre em paralelo aos fundadores e não depende da venda da plataforma.

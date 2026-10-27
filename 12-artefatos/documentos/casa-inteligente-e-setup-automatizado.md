@@ -6,7 +6,7 @@ Oct 7, 2026 · @Alan Mateus
 
 O Raspberry Pi 5 com Home Assistant é o cérebro: todo sensor, lâmpada, ESP32 e até o notebook conversam com ele, e você controla tudo de um lugar só.
 
-&#91;embedded content: arquitetura da casa inteligente · 4 tipos de dispositivo, 1 cérebro, 4 formas de controle\]
+![arquitetura da casa inteligente · 4 tipos de dispositivo, 1 cérebro, 4 formas de controle](imagens/casa-inteligente-e-setup-automatizado__1.svg)
 
 Dispositivos Zigbee falam com o Pi pelo dongle; os ESP32 entram pelo Wi-Fi com ESPHome; o Orange Pi fica ao lado como servidor de experimentos.
 

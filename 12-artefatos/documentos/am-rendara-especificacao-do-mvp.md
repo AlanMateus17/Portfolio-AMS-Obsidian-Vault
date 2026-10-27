@@ -23,7 +23,7 @@ O MVP é o AM Rendara rodando no seu computador: cada pessoa entra com o própri
 
 Três serviços rodam no Docker do seu computador: o site em Next.js, a API em ASP.NET Core (.NET 10, Controllers, Clean Architecture) e o PostgreSQL 16. O mesmo `docker-compose.yml` sobe depois num servidor na nuvem.
 
-&#91;embedded content: arquitetura do MVP · 3 serviços no Docker\]
+![arquitetura do MVP · 3 serviços no Docker](imagens/am-rendara-especificacao-do-mvp__1.svg)
 
 O site repassa as chamadas `/api` para a API, então o navegador fala com um endereço só e o cookie de login funciona. A API usa Dapper sobre Npgsql e abre uma transação por consulta, informando ao banco quem está logado.
 

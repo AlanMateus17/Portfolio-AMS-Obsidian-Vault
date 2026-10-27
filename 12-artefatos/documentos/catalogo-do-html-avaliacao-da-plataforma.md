@@ -6,7 +6,7 @@ A plataforma já tem tudo o que um curso online pago precisa para funcionar — 
 
 ## Como as peças se encaixam
 
-&#91;embedded content: arquitetura · navegador, Caddy, sistema, banco e serviços externos\]
+![arquitetura · navegador, Caddy, sistema, banco e serviços externos](imagens/catalogo-do-html-avaliacao-da-plataforma__1.svg)
 
 Tudo roda num único servidor com Docker. O site público gratuito é gerado à parte (gerar-site-publico.py) e vai para GitHub Pages ou Vercel, sem sistema por trás.
 

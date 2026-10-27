@@ -196,7 +196,7 @@ Sobra **R$ 34,47** em caixa.
 
 O fluxograma de referência está logo abaixo.
 
-&#91;embedded content: fluxograma de referência · 5 decisões, 1 laço\]
+![fluxograma de referência · 5 decisões, 1 laço](imagens/exercicio-fluxograma-do-preco-teto-barsi-bazin-e-arca__1.svg)
 
 Cada empresa passa por no máximo quatro decisões e volta ao laço; o laço termina quando não há mais empresas, e então os contadores são mostrados.
 

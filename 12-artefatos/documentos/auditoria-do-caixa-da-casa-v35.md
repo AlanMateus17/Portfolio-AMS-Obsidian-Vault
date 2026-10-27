@@ -106,7 +106,7 @@ O desempenho hoje está bom: a tela mais lenta, Projeção, desenha em 43 ms com
 
 A proposta tem um registro só para todo dinheiro que entra ou sai, o lançamento, e uma função só que calcula o mês. Todas as telas mostram o resultado dessa função, e nenhuma calcula por conta própria. Com isso, N1 a N8 deixam de ser possíveis pela forma do sistema, e não por cuidado em cada tela.
 
-&#91;embedded content: fluxo de dados proposto · 3 origens, 1 registro, 1 função, 5 telas\]
+![fluxo de dados proposto · 3 origens, 1 registro, 1 função, 5 telas](imagens/auditoria-do-caixa-da-casa-v35__1.svg)
 
 Notas, compromissos e lançamentos manuais viram lançamentos. Só `resumoDoMes()` lê os lançamentos, e as cinco telas mostram o que ela devolve.
 
