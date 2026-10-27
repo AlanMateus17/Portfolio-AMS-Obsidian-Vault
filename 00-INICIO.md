@@ -5,6 +5,8 @@ tipo: home
 
 # 🏠 Portfólio AMS — Índice
 
+> 🧭 **Comece aqui:** [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md)
+
 > Este é o **mapa** do vault. Para o dia a dia, a porta de entrada é o **[Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** — abra ele primeiro. Este índice serve para achar um documento específico quando precisar.
 
 - 🧭 **[Sumário Único de Estudo](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** — trilha do dia a dia (comece aqui)

@@ -7,6 +7,8 @@ atualizado: 2026-10-26
 
 # 🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata
 
+> **Em palavras simples:** aqui está o que você vai ter de **diploma** (faculdades), de **certificado** (provas do mercado de investimentos) e o que vai aprender **sozinho**. Também diz quais certificados a lei exige para recomendar investimentos e criar fundos.
+
 > **Objetivo de carreira (out/2026):** ser **programador sênior** na stack definida (C#/.NET + TypeScript/Next.js, com Python em paralelo), especializado em **IA desenvolvida e treinada do zero** e em **software para administração, empreendedorismo e finanças**, trabalhando no Brasil e principalmente no exterior. No lado financeiro, ter **as certificações do setor de investimentos** para recomendar investimentos e criar os próprios fundos sem barreira regulatória.
 >
 > **Decisões de out/2026:** sai o concurso PF/PRF, desenho e violão. **Saem as pós-graduações** (Cybersecurity e Arquitetura). **Engenharia de software é só autodidata**, sem faculdade. Entra a **faculdade de Ciências Econômicas**.

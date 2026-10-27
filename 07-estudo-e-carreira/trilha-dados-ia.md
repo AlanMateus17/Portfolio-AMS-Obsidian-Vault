@@ -7,6 +7,8 @@ atualizado: 2026-10-26
 
 # 🤖 Trilha de Dados e Inteligência Artificial — Do Python ao Treino dos Próprios Modelos
 
+> **Em palavras simples:** é o caminho para **criar inteligência artificial**, não só usar. Começa por Python e matemática, passa por programas que aprendem com exemplos, e termina com você treinando um modelo pequeno do zero e ajustando um modelo maior com o seu próprio material.
+
 > **Objetivo:** desenvolver IA de verdade, não só consumir API: dados, ML clássico, deep learning, LLMs e fine-tuning de modelos 8B treinados com o seu próprio material, dentro do ecossistema Aura.
 >
 > **Por que ela se encaixa tão bem no seu plano:** IA, econometria e finanças quantitativas usam **a mesma base** — Python, estatística, álgebra linear e cálculo. A Licenciatura, a faculdade de Economia e esta trilha se reforçam; você não está abrindo três frentes, está abrindo uma com três aplicações.

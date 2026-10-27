@@ -7,6 +7,8 @@ atualizado: 2026-10-26
 
 # 🤖 Trilha de Robótica e IoT
 
+> **Em palavras simples:** robótica e IoT são placas pequenas (Arduino, ESP32, Raspberry Pi) com sensores e motores, ligadas à internet. Você começa pelo que usa na escola e, mais tarde, monta casa inteligente, robôs e produtos para vender.
+
 > **Por que existe:** você **dá aula** de Noções de Robótica e está montando o projeto escolar de robótica com o agro — então o começo desta trilha é trabalho, não hobby. O resto (casa inteligente, robôs, produtos para vender) fica com gatilho.
 
 | Módulo | Tema | Status / gatilho | Aplicação |

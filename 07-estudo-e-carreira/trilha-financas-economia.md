@@ -7,6 +7,8 @@ atualizado: 2026-10-26
 
 # 💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico
 
+> **Em palavras simples:** é o estudo de **dinheiro**: como investir, como uma empresa registra o que ganha e gasta (contabilidade), como funcionam juros, impostos, a bolsa e a economia do país. Você aprende para construir sistemas financeiros e para tirar as certificações. Começa leve e vai aprofundando.
+
 > **Objetivo:** ser o engenheiro de software que entende de dinheiro de verdade — contabilidade, tributos, mercado e economia — para construir sistemas financeiros (AM Kaixara, AM Rendara, Caixa da Casa, AM Vendra, aura-analytics) sem depender de alguém para traduzir a regra de negócio, e, no horizonte, modelar a economia brasileira.
 >
 > **Como ela convive com o resto:** os módulos F0–F3 são **leves e começam já**, dentro dos Passos que precisam deles (o caixa do Kaixara precisa de contabilidade no Passo 7, por exemplo). Do F4 em diante, a trilha vira uma **Trilha Paralela** normal, com gatilho. A teoria econômica pesada vem da [faculdade de Economia](formacao-academica.md); esta trilha cobre o que a faculdade **não** ensina bem: contabilidade empresarial, tributação brasileira, mercado na prática e aplicação em código.
@@ -34,6 +36,7 @@ atualizado: 2026-10-26
 - [ ] Métodos que você já segue, aplicados com rigor: **ARCA** (divisão da carteira), **Barsi/BEST** (setores perenes, dividendos), **Bazin** (preço-teto por dividendo), **Graham** (margem de segurança), **Buffett** (vantagem competitiva, valor)
 - [ ] Trilhas da Finclass, na ordem da plataforma
 - [ ] Uma carteira por metodologia (real e simulada) para comparar resultados
+- [ ] **Método próprio:** combinar as avaliações de Barsi, Bazin e Buffett (com a margem de Graham) numa regra sua de onde e quanto investir, seguida à risca — vira o motor do Rendara no F4
 - [ ] Reserva de emergência: 3 → 6 → 12 meses de custo fixo; caixas separados (reserva, segurança, empreendimentos, investir, estudo, lazer)
 - **Leituras:** *O Investidor Inteligente* (Graham) · *Faça Fortuna com Ações* (Décio Bazin) · cartas anuais de Buffett aos acionistas
 - **✅ Pronto quando:** explica, para cada ativo que comprou, qual método justificou a compra e qual seria o gatilho de venda.

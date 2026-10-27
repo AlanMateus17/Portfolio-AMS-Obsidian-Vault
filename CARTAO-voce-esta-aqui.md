@@ -5,6 +5,8 @@ tipo: dashboard-diario
 
 # 📍 Você Está Aqui
 
+> **Primeira vez ou perdido?** Leia o [Guia do Iniciante](00-GUIA-DO-INICIANTE.md): o plano inteiro, em ordem e em palavras simples. Palavras difíceis: [Glossário](00-GLOSSARIO.md).
+
 *[← Voltar pro Início](00-INICIO.md)*
 
 **Fase atual:** Passo 1 — Fundamentos (Lógica de Programação + Matemática Básica)

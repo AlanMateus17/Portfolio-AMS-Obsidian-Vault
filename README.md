@@ -1,5 +1,7 @@
 # 📚 Portfólio AMS — Vault de Planejamento
 
+> 🧭 **Comece aqui:** [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md)
+
 Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech Digital). Navegue clicando abaixo.
 
 ## 🧭 Comece por aqui
