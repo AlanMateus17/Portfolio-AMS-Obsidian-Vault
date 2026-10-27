@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo AMtech Digital (prévia)</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F7F5F0;color:#1A2E33;font-family:'IBM Plex Sans',sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:40px 24px 80px}
+h1,h2{font-family:'Space Grotesk',sans-serif}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#C08A3E;margin-bottom:12px;display:block}
+h1{font-size:2.4rem;color:#0E3A45;line-height:1.15;margin-bottom:16px;max-width:560px}
+p.lead{color:#5B7076;font-size:1.05rem;max-width:520px;margin-bottom:24px}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-size:.9rem;text-decoration:none;margin-right:8px;cursor:pointer;border:none;font-family:inherit}
+.btn-primary{background:#0E3A45;color:#fff}
+.btn-ghost{border:1px solid #DDE3E0;color:#1A2E33;background:transparent}
+h2{font-size:1.5rem;color:#0E3A45;margin:40px 0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #DDE3E0;border-radius:8px;padding:20px}
+.card b{font-family:'Space Grotesk',sans-serif;color:#0E3A45;display:block;margin-bottom:6px}
+.card p{color:#5B7076;font-size:.9rem}
+.badge{font-family:'JetBrains Mono',monospace;font-size:.65rem;background:rgba(192,138,62,.15);color:#8A5A1E;padding:2px 8px;border-radius:4px;margin-left:8px}
+form{max-width:480px;display:flex;flex-direction:column;gap:12px;margin-top:12px}
+input,textarea,select{padding:10px 14px;border:1px solid #DDE3E0;border-radius:6px;font-family:inherit;font-size:.9rem}
+.success{background:#fff;border:1px solid #C08A3E;border-radius:8px;padding:16px;color:#0E3A45;margin-top:12px;display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="tag">GRUPO AMTECH DIGITAL</span>
+  <h1>Sistemas de gestão sob medida, para negócios reais.</h1>
+  <p class="lead">Desenvolvemos software de gestão, prestamos consultoria de TI e cuidamos da manutenção de hardware/software da sua empresa — tudo sob o mesmo teto.</p>
+  <a class="btn btn-primary">Ver produtos</a><a class="btn btn-ghost">Pedir orçamento</a>
+
+  <h2>Produtos</h2>
+  <div class="grid">
+    <div class="card"><b>AM Kaixara <span class="badge">EM BREVE</span></b><p>PDV com controle de estoque e emissão fiscal integrada.</p></div>
+    <div class="card"><b>AM Rotara <span class="badge">EM BREVE</span></b><p>Gestão de pedidos com rastreio em tempo real.</p></div>
+    <div class="card"><b>AM Rendara <span class="badge">EM BREVE</span></b><p>Gestão financeira com rebalanceamento automático.</p></div>
+  </div>
+
+  <h2>Solicitar orçamento</h2>
+  <form id="form" onsubmit="return enviar(event)">
+    <input placeholder="Seu nome" required>
+    <input type="email" placeholder="Seu e-mail" required>
+    <select><option>Tipo de projeto</option><option>Desenvolvimento</option><option>Consultoria</option><option>Manutenção</option></select>
+    <textarea placeholder="Descreva o que você precisa" rows="4" required></textarea>
+    <button class="btn btn-primary" type="submit" style="width:fit-content">Enviar solicitação</button>
+  </form>
+  <div class="success" id="success">Recebemos seu pedido — respondemos em até 2 dias úteis. (simulado nesta prévia — no site real isso vai pra API)</div>
+</div>
+<script>
+function enviar(e){
+  e.preventDefault();
+  document.getElementById('form').style.display='none';
+  document.getElementById('success').style.display='block';
+  return false;
+}
+</script>
+</body>
+</html>

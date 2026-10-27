@@ -1,0 +1,13 @@
+{
+  "description": "Seus 39 contracheques da Secretaria de Educação de MG (mar/2025 a out/2026), exportados do Caixa da Casa 2: bruto, INSS, IR, outros descontos e líquido por vínculo.",
+  "source": {
+    "kind": "file",
+    "name": "contracheques.csv",
+    "url": "/_blob/8cb6d3c7821cab1a09e21f08bd743e7f"
+  },
+  "title": "Contracheques do Estado",
+  "updated": {
+    "at": "2026-10-24T13:49:43Z",
+    "by": "Claude, a partir do Caixa da Casa 2"
+  }
+}

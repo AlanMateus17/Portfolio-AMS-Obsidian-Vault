@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Mateus — Portfólio (prévia v2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0E3A45; --panel:#123F4B; --panel2:#0F323C; --line:#2E6E8E; --line-dim:rgba(46,110,142,.35);
+  --brass:#C08A3E; --paper:#F7F5F0; --muted:#8FA6AB; --run:#5FD3A3; --plan:#5B7076;
+}
+[data-theme="light"]{
+  --bg:#F7F5F0; --panel:#FFFFFF; --panel2:#EFEAE0; --line:#7DA0B0; --line-dim:rgba(46,110,142,.25);
+  --brass:#8A5A1E; --paper:#0E3A45; --muted:#5B7076; --run:#0E8F6E; --plan:#8FA6AB;
+}
+body{
+  background:
+    linear-gradient(var(--line-dim) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(90deg, var(--line-dim) 1px, transparent 1px) 0 0/48px 48px,
+    var(--bg);
+  color:var(--paper); font-family:'IBM Plex Sans',sans-serif; min-height:100vh; padding-bottom:40px; transition:background-color .2s,color .2s;
+}
+.wrap{max-width:900px;margin:0 auto;padding:0 24px}
+.topbar{position:fixed;top:0;left:0;z-index:50;display:flex}
+.topbar button{border:1px solid var(--brass);border-right:none;border-top:none;background:var(--panel);color:var(--brass);font-family:'JetBrains Mono',monospace;font-size:.7rem;padding:10px 16px;cursor:pointer}
+main{padding:70px 24px 0}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--brass);margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.led{width:7px;height:7px;border-radius:50%;background:var(--run);box-shadow:0 0 6px var(--run);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.2rem;line-height:1.15;margin-bottom:18px;max-width:480px}
+p.lead{color:var(--muted);max-width:420px;margin-bottom:24px}
+.btn{display:inline-block;padding:10px 18px;font-family:'JetBrains Mono',monospace;font-size:.8rem;border:1px solid var(--brass);color:var(--brass);text-decoration:none;margin-right:8px;cursor:pointer;background:none}
+.btn:hover{background:var(--brass);color:var(--bg)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .4s ease-out, transform .4s ease-out}
+.reveal.show{opacity:1;transform:translateY(0)}
+.fold{display:flex;align-items:center;gap:10px;margin:32px 0 16px}
+.fold .num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--brass)}
+.fold .line{flex:1;height:1px;background:var(--line-dim)}
+.fold .label{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);text-transform:uppercase}
+.gitlog{font-family:'JetBrains Mono',monospace;font-size:.78rem}
+.gitline{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--line-dim)}
+.gitline .repo{color:var(--brass)}
+.gitline .msg{flex:1;color:var(--paper);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gitline .when{color:var(--muted)}
+canvas{width:100%;border:1px solid var(--line-dim);background:var(--panel2)}
+.caption{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);margin-top:10px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button onclick="setTheme('dark')">☾ BLUEPRINT</button>
+  <button onclick="setTheme('light')">☀ DIAZO</button>
+</div>
+
+<main class="wrap">
+  <p class="tag"><span class="led"></span>ECOSSISTEMA AURA — 13 SISTEMAS EM CONSTRUÇÃO</p>
+  <h1>Arquiteto sistemas multi-tenant, um componente de cada vez.</h1>
+  <p class="lead">Clean Architecture, RLS no PostgreSQL, .NET 10 + Next.js. Professor de TI, construindo em público.</p>
+  <a class="btn">VER OS 13 SISTEMAS</a><a class="btn">CURRÍCULO</a>
+
+  <div class="fold"><span class="num">FL. 02</span><span class="line"></span><span class="label">Atividade</span></div>
+  <div class="reveal" id="gitbox">
+    <p class="gitlog" id="gitstatus">Carregando atividade real do GitHub...</p>
+    <div class="gitlog" id="gitlines"></div>
+  </div>
+
+  <div class="fold"><span class="num">FL. 03</span><span class="line"></span><span class="label">Conceito central</span></div>
+  <div class="reveal">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--brass);margin-bottom:10px">ISOLAMENTO MULTI-TENANT</p>
+    <canvas id="sim" width="1200" height="600"></canvas>
+    <p class="caption">Cada bolinha é uma query real de um tenant diferente. Nenhuma cruza pra linha de outro — isso é RLS na prática.</p>
+  </div>
+</main>
+
+<script>
+function setTheme(t){ document.documentElement.setAttribute('data-theme', t); }
+
+// Revelação por scroll real (equivalente ao Framer Motion whileInView do projeto)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Log de build real — mesma chamada que o Next.js faz de verdade
+fetch('https://api.github.com/users/AlanMateus17/events/public?per_page=6')
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(data => {
+    const eventos = data.filter(e => ['PushEvent','CreateEvent','PullRequestEvent'].includes(e.type)).slice(0,5);
+    document.getElementById('gitstatus').textContent = eventos.length ? '' : 'Sem atividade pública recente.';
+    document.getElementById('gitlines').innerHTML = eventos.map(e => {
+      const repo = (e.repo?.name || '?').replace('AlanMateus17/','');
+      const msg = e.type === 'PushEvent' ? (e.payload?.commits?.[0]?.message?.split('\n')[0] || 'push') : e.type;
+      const mins = Math.floor((Date.now() - new Date(e.created_at)) / 60000);
+      const when = mins < 60 ? `há ${mins}min` : `há ${Math.floor(mins/60)}h`;
+      return `<div class="gitline"><span class="repo">${repo}</span><span class="msg">${msg}</span><span class="when">${when}</span></div>`;
+    }).join('');
+  })
+  .catch(() => { document.getElementById('gitstatus').textContent = 'Não consegui puxar o GitHub agora (limite de requisições sem login).'; });
+
+// Simulação RLS (mesma lógica do componente React real)
+const canvas = document.getElementById('sim');
+const ctx = canvas.getContext('2d');
+const w=600,h=300; ctx.scale(2,2);
+const COLORS=["#C08A3E","#5FD3A3","#DD7F35","#8FA6AB"], NAMES=["Loja A","Loja B","Loja C","Loja D"];
+let particles=[];
+function spawn(t){particles.push({x:20,y:40+t*65,vx:1.6+Math.random()*.6,life:1,tenant:t});}
+setInterval(()=>spawn(Math.floor(Math.random()*4)),500);
+function draw(){
+  ctx.clearRect(0,0,w,h);
+  ctx.strokeStyle="rgba(46,110,142,.4)";ctx.lineWidth=1;
+  for(let i=0;i<4;i++){ctx.beginPath();ctx.moveTo(0,40+i*65);ctx.lineTo(w,40+i*65);ctx.stroke();}
+  ctx.font="9px JetBrains Mono, monospace";
+  NAMES.forEach((n,i)=>{ctx.fillStyle=COLORS[i]+"aa";ctx.fillText(n,6,40+i*65-6);});
+  ctx.strokeStyle="#C08A3E55";ctx.setLineDash([3,3]);
+  ctx.beginPath();ctx.moveTo(w*0.55,10);ctx.lineTo(w*0.55,h-10);ctx.stroke();ctx.setLineDash([]);
+  ctx.fillStyle="#C08A3E";ctx.font="8px JetBrains Mono, monospace";
+  ctx.fillText("RLS: WHERE tenant_id = current_tenant()", w*0.58, 16);
+  particles=particles.filter(p=>p.life>0);
+  particles.forEach(p=>{p.x+=p.vx;p.life-=0.004;ctx.fillStyle=COLORS[p.tenant]+Math.floor(p.life*255).toString(16).padStart(2,'0');ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.fill();});
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>

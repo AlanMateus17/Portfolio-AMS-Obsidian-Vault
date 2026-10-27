@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfólio — 3 direções visuais</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&family=Fraunces:opsz,wght@9..144,300;9..144,900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:sans-serif}
+.switcher{position:sticky;top:0;z-index:50;display:flex;background:#111;padding:10px;gap:8px;justify-content:center;flex-wrap:wrap}
+.switcher button{font-family:'Inter',sans-serif;font-size:.8rem;padding:8px 16px;border-radius:6px;border:1px solid #333;background:#1c1c1c;color:#999;cursor:pointer}
+.switcher button.active{background:#fff;color:#111;border-color:#fff}
+[data-view]{display:none;min-height:100vh}
+[data-view].show{display:block}
+
+/* ===== 1. BLUEPRINT TÉCNICO ===== */
+#blueprint{
+  background:
+    linear-gradient(rgba(46,110,142,.18) 1px, transparent 1px) 0 0/40px 40px,
+    linear-gradient(90deg, rgba(46,110,142,.18) 1px, transparent 1px) 0 0/40px 40px,
+    #0E3A45;
+  color:#F7F5F0; padding:80px 40px; font-family:'IBM Plex Sans',sans-serif;
+}
+#blueprint .wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+#blueprint h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:3.2rem;line-height:1.05;margin-bottom:20px}
+#blueprint .role{font-family:'JetBrains Mono',monospace;color:#C08A3E;font-size:.9rem;margin-bottom:14px;letter-spacing:.02em}
+#blueprint p.lead{color:#B9C9CC;max-width:440px;margin-bottom:28px;font-size:1.02rem}
+#blueprint .btn{display:inline-block;padding:12px 22px;font-family:'JetBrains Mono',monospace;font-size:.85rem;border:1px solid #C08A3E;color:#C08A3E;text-decoration:none}
+#blueprint .btn:hover{background:#C08A3E;color:#0E3A45}
+#blueprint svg{width:100%;height:auto}
+#blueprint .node{fill:#123F4B;stroke:#2E6E8E}
+#blueprint .node.active{stroke:#C08A3E}
+#blueprint .link{stroke:#2E6E8E;stroke-width:1}
+#blueprint text{font-family:'JetBrains Mono',monospace;fill:#B9C9CC;font-size:9px}
+#blueprint .plate{position:absolute}
+
+/* ===== 2. CONSOLE OPERACIONAL ===== */
+#console{background:#0A0A0A;color:#E5E5E0;padding:80px 40px;font-family:'Inter',sans-serif;min-height:100vh}
+#console .wrap{max-width:800px;margin:0 auto}
+#console .boot{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#666;margin-bottom:30px;line-height:1.8}
+#console .boot .ok{color:#39FF88}
+#console h1{font-family:'JetBrains Mono',monospace;font-weight:800;font-size:3rem;letter-spacing:-.02em;margin-bottom:8px}
+#console .sub{color:#999;margin-bottom:36px;max-width:520px}
+#console .procs{border-top:1px solid #222}
+#console .proc{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #222;font-family:'JetBrains Mono',monospace;font-size:.85rem}
+#console .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:10px}
+#console .dot.run{background:#39FF88;box-shadow:0 0 8px #39FF88}
+#console .dot.plan{background:#444}
+#console .tag{color:#FFB454}
+
+/* ===== 3. EDITORIAL OUSADO ===== */
+#editorial{background:#FAFAF7;color:#14110F;padding:70px 6vw;font-family:'Inter',sans-serif;min-height:100vh}
+#editorial .top{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#666;margin-bottom:40px;border-bottom:1px solid #ddd;padding-bottom:16px}
+#editorial h1{font-family:'Fraunces',serif;font-weight:900;font-size:8.5vw;line-height:.92;letter-spacing:-.01em;margin-bottom:30px}
+#editorial .lede{max-width:520px;font-size:1.15rem;color:#3a3733;margin-bottom:50px}
+#editorial .index{border-top:2px solid #14110F}
+#editorial .row{display:flex;gap:24px;align-items:baseline;padding:18px 0;border-bottom:1px solid #ddd}
+#editorial .num{font-family:'Fraunces',serif;font-size:1.4rem;color:#C1440E;width:40px}
+#editorial .name{font-family:'Fraunces',serif;font-weight:900;font-size:1.4rem;flex:1}
+#editorial .meta{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:#888}
+</style>
+</head>
+<body>
+
+<div class="switcher">
+  <button data-t="blueprint" class="active" onclick="show('blueprint')">1 · Blueprint técnico</button>
+  <button data-t="console" onclick="show('console')">2 · Console operacional</button>
+  <button data-t="editorial" onclick="show('editorial')">3 · Editorial ousado</button>
+</div>
+
+<!-- 1 -->
+<section data-view="blueprint" id="blueprint" class="show">
+  <div class="wrap">
+    <div>
+      <p class="role">DESENVOLVEDOR .NET · PROFESSOR DE TI</p>
+      <h1>Construo o ecossistema Aura, sistema por sistema.</h1>
+      <p class="lead">13 sistemas SaaS multi-tenant, arquitetura Clean + DDD, RLS no PostgreSQL. Cada nó abaixo é um sistema real — clique pra ver o estado atual.</p>
+      <a class="btn" href="#">Ver arquitetura completa</a>
+    </div>
+    <svg viewBox="0 0 380 320">
+      <line class="link" x1="190" y1="60" x2="90" y2="150"/>
+      <line class="link" x1="190" y1="60" x2="290" y2="150"/>
+      <line class="link" x1="90" y1="150" x2="190" y2="240"/>
+      <line class="link" x1="290" y1="150" x2="190" y2="240"/>
+      <line class="link" x1="90" y1="150" x2="290" y2="150"/>
+      <circle class="node active" cx="190" cy="60" r="34"/>
+      <circle class="node" cx="90" cy="150" r="28"/>
+      <circle class="node" cx="290" cy="150" r="28"/>
+      <circle class="node" cx="190" cy="240" r="28"/>
+      <text x="190" y="58" text-anchor="middle">KAIXARA</text>
+      <text x="190" y="70" text-anchor="middle" fill="#C08A3E">● dev</text>
+      <text x="90" y="148" text-anchor="middle">ROTARA</text>
+      <text x="90" y="160" text-anchor="middle">○ plan</text>
+      <text x="290" y="148" text-anchor="middle">RENDARA</text>
+      <text x="290" y="160" text-anchor="middle">○ plan</text>
+      <text x="190" y="238" text-anchor="middle">SABERIA</text>
+      <text x="190" y="250" text-anchor="middle">○ plan</text>
+    </svg>
+  </div>
+</section>
+
+<!-- 2 -->
+<section data-view="console" id="console">
+  <div class="wrap">
+    <div class="boot">
+      &gt; booting amtech-portfolio-os v2.6<br>
+      &gt; loading identity... <span class="ok">ok</span><br>
+      &gt; loading 13 systems... <span class="ok">ok</span><br>
+      &gt; ready.
+    </div>
+    <h1>alan@amtech</h1>
+    <p class="sub">Dev .NET/Next.js, professor de TI, construindo 13 sistemas SaaS em produção contínua. Status ao vivo abaixo.</p>
+    <div class="procs">
+      <div class="proc"><span><span class="dot run"></span>am-kaixara</span><span class="tag">running · pdv multi-tenant</span></div>
+      <div class="proc"><span><span class="dot plan"></span>am-rotara</span><span>queued · geolocalização</span></div>
+      <div class="proc"><span><span class="dot plan"></span>am-rendara</span><span>queued · finanças + ARCA</span></div>
+      <div class="proc"><span><span class="dot run"></span>ejpt-track</span><span class="tag">running · red team</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section data-view="editorial" id="editorial">
+  <div class="top"><span>ALAN MATEUS</span><span>AMTECH DIGITAL — VOL. 01</span></div>
+  <h1>Sistemas<br>que ensinam.</h1>
+  <p class="lede">Professor de TI e desenvolvedor construindo um ecossistema de 13 sistemas SaaS em público — cada um documentado como estudo de caso.</p>
+  <div class="index">
+    <div class="row"><span class="num">01</span><span class="name">AM Kaixara</span><span class="meta">EM DESENVOLVIMENTO</span></div>
+    <div class="row"><span class="num">02</span><span class="name">AM Rotara</span><span class="meta">PLANEJADO</span></div>
+    <div class="row"><span class="num">03</span><span class="name">AM Rendara</span><span class="meta">PLANEJADO</span></div>
+  </div>
+</section>
+
+<script>
+function show(v){
+  document.querySelectorAll('[data-view]').forEach(s=>s.classList.remove('show'));
+  document.getElementById(v).classList.add('show');
+  document.querySelectorAll('.switcher button').forEach(b=>b.classList.toggle('active', b.dataset.t===v));
+}
+</script>
+</body>
+</html>

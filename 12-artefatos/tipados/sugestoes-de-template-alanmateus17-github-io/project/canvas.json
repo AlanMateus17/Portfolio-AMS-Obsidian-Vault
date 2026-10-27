@@ -1,0 +1,19 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-25T01:25:00Z"},
+  "title": "Sugestões de template — alanmateus17.github.io",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1280, "h": 1950, "expand": "fill", "title": "Opção 1 — mldangelo personal-site (recomendada)"},
+    "Opcao2.dc.html": {"x": 1360, "y": 0, "w": 1280, "h": 1850, "expand": "fill", "title": "Opção 2 — Magic UI Portfolio (tema escuro Aura)"},
+    "Opcao3.dc.html": {"x": 2720, "y": 0, "w": 1280, "h": 2150, "expand": "fill", "title": "Opção 3 — AstroWind (serviços e loja)"}
+  },
+  "order": ["Main.dc.html", "Opcao2.dc.html", "Opcao3.dc.html"],
+  "notes": {
+    "titulo": {"x": 0, "y": -300, "text": "3 sugestões para alanmateus17.github.io — identidade Grupo AMtech Digital (Aura)", "kind": "title1", "maxW": 4000}
+  },
+  "designSystems": [
+    {"title": "Aura Design System", "namespace": "aura", "artifact": "https://claude.ai/artifact/UwzAhnPAs7qMG2hBj1Ze5w", "version": "1792524789-4fda", "copiedAt": "2026-10-25T02:10:00Z"}
+  ]
+}

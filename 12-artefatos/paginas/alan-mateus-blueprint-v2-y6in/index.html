@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Mateus — Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#0E3A45; --panel:#123F4B; --line:#2E6E8E; --brass:#C08A3E;
+  --paper:#F7F5F0; --muted:#93ADB2; --run:#4FD1A5;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:
+    linear-gradient(var(--line) 1px, transparent 1px) 0 0/44px 44px,
+    linear-gradient(90deg, var(--line) 1px, transparent 1px) 0 0/44px 44px,
+    var(--deep);
+  background-blend-mode:overlay, overlay, normal;
+  background-color:var(--deep);
+  color:var(--paper);
+  font-family:'IBM Plex Sans',sans-serif;
+  min-height:100vh;
+  position:relative;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;
+  background:
+    linear-gradient(rgba(46,110,142,.14) 1px, transparent 1px) 0 0/44px 44px,
+    linear-gradient(90deg, rgba(46,110,142,.14) 1px, transparent 1px) 0 0/44px 44px;
+}
+/* marcas de registro, tipo prancha técnica */
+.reg{position:fixed;width:22px;height:22px;pointer-events:none;opacity:.5}
+.reg::before,.reg::after{content:"";position:absolute;background:var(--muted)}
+.reg::before{left:50%;top:0;width:1px;height:100%;transform:translateX(-50%)}
+.reg::after{top:50%;left:0;height:1px;width:100%;transform:translateY(-50%)}
+.reg.tl{top:20px;left:20px}.reg.tr{top:20px;right:20px}.reg.bl{bottom:20px;left:20px}.reg.br{bottom:20px;right:20px}
+
+header{display:flex;justify-content:space-between;align-items:center;padding:26px 40px;position:relative;z-index:2}
+.wordmark{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.05rem}
+.wordmark span{color:var(--muted);font-weight:400;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.stamp{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted);text-align:right;line-height:1.5}
+
+main{max-width:1180px;margin:0 auto;padding:20px 40px 100px;position:relative;z-index:2}
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:50px;align-items:center;min-height:70vh}
+.role{font-family:'JetBrains Mono',monospace;color:var(--brass);font-size:.85rem;margin-bottom:18px}
+.role::before{content:"◈ "}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:3.4rem;line-height:1.05;margin-bottom:22px}
+p.lead{color:var(--muted);max-width:440px;margin-bottom:32px;font-size:1.05rem;line-height:1.6}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:'JetBrains Mono',monospace;font-size:.82rem;padding:12px 20px;border:1px solid var(--brass);color:var(--brass);text-decoration:none;background:transparent;cursor:pointer}
+.btn:hover{background:var(--brass);color:var(--deep)}
+.btn.ghost{border-color:var(--line);color:var(--paper)}
+.btn.ghost:hover{background:var(--line);color:var(--deep)}
+
+/* diagrama */
+.diagram-wrap{position:relative}
+svg{width:100%;height:auto;overflow:visible}
+.link{stroke:var(--line);stroke-width:1;fill:none}
+.pulse{fill:var(--run)}
+.node{fill:var(--panel);stroke:var(--line);stroke-width:1.5;cursor:pointer;transition:stroke .2s}
+.node:hover, .node.active{stroke:var(--brass);stroke-width:2}
+.node.core{stroke:var(--brass)}
+.label{font-family:'JetBrains Mono',monospace;fill:var(--paper);font-size:10px;pointer-events:none}
+.sub{font-family:'JetBrains Mono',monospace;fill:var(--muted);font-size:8px;pointer-events:none}
+.sub.run{fill:var(--run)}
+
+.detail{
+  margin-top:18px;border:1px solid var(--line);background:rgba(18,63,75,.6);
+  padding:18px 22px;font-family:'JetBrains Mono',monospace;font-size:.82rem;
+  min-height:96px;position:relative;
+}
+.detail::before{content:"// especificação";display:block;color:var(--muted);font-size:.7rem;margin-bottom:10px}
+.detail h3{font-family:'Space Grotesk',sans-serif;color:var(--brass);font-size:1.1rem;margin-bottom:6px}
+.detail p{color:var(--paper);line-height:1.6;margin-bottom:8px}
+.detail .stack{color:var(--muted)}
+
+.strip{display:flex;gap:0;margin-top:70px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{flex:1;padding:22px 24px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat .n{font-family:'Space Grotesk',sans-serif;font-size:1.8rem;color:var(--brass)}
+.stat .l{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--muted);margin-top:4px}
+
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="reg tl"></div><div class="reg tr"></div><div class="reg bl"></div><div class="reg br"></div>
+
+<header>
+  <div class="wordmark">ALAN MATEUS <span>/ AMTECH DIGITAL</span></div>
+  <div class="stamp">FOLHA 01/13<br>REV. 2026.09</div>
+</header>
+
+<main>
+  <div class="hero">
+    <div>
+      <p class="role">DESENVOLVEDOR .NET · PROFESSOR DE TI</p>
+      <h1>Arquitetura viva de 13 sistemas.</h1>
+      <p class="lead">Cada nó ao lado é um sistema real do ecossistema Aura — multi-tenant, isolado por Row-Level Security no PostgreSQL. Clique num nó pra ver a especificação.</p>
+      <div class="actions">
+        <a class="btn" href="#">Ver estudo de caso completo</a>
+        <a class="btn ghost" href="#">Currículo</a>
+      </div>
+    </div>
+
+    <div class="diagram-wrap">
+      <svg viewBox="0 0 460 380" id="diagram">
+        <defs>
+          <path id="p-kr" d="M230,70 L120,170" class="link"/>
+          <path id="p-kd" d="M230,70 L340,170" class="link"/>
+          <path id="p-rs" d="M120,170 L230,280" class="link"/>
+          <path id="p-ds" d="M340,170 L230,280" class="link"/>
+          <path id="p-rd" d="M120,170 L340,170" class="link"/>
+        </defs>
+        <use href="#p-kr"/><use href="#p-kd"/><use href="#p-rs"/><use href="#p-ds"/><use href="#p-rd"/>
+
+        <circle class="pulse" r="3"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#p-kr"/></animateMotion></circle>
+        <circle class="pulse" r="3"><animateMotion dur="3.1s" repeatCount="indefinite" begin="0.5s"><mpath href="#p-kd"/></animateMotion></circle>
+        <circle class="pulse" r="3"><animateMotion dur="2.3s" repeatCount="indefinite" begin="1s"><mpath href="#p-rs"/></animateMotion></circle>
+
+        <g class="node core" data-id="kaixara" onclick="selectNode('kaixara')">
+          <circle cx="230" cy="70" r="38"/>
+        </g>
+        <text class="label" x="230" y="66" text-anchor="middle">KAIXARA</text>
+        <text class="sub run" x="230" y="80" text-anchor="middle">● dev</text>
+
+        <g class="node" data-id="rotara" onclick="selectNode('rotara')">
+          <circle cx="120" cy="170" r="30"/>
+        </g>
+        <text class="label" x="120" y="167" text-anchor="middle">ROTARA</text>
+        <text class="sub" x="120" y="180" text-anchor="middle">○ plan</text>
+
+        <g class="node" data-id="rendara" onclick="selectNode('rendara')">
+          <circle cx="340" cy="170" r="30"/>
+        </g>
+        <text class="label" x="340" y="167" text-anchor="middle">RENDARA</text>
+        <text class="sub" x="340" y="180" text-anchor="middle">○ plan</text>
+
+        <g class="node" data-id="saberia" onclick="selectNode('saberia')">
+          <circle cx="230" cy="280" r="30"/>
+        </g>
+        <text class="label" x="230" y="277" text-anchor="middle">SABERIA</text>
+        <text class="sub" x="230" y="290" text-anchor="middle">○ plan</text>
+      </svg>
+
+      <div class="detail" id="detail">
+        <h3>AM Kaixara</h3>
+        <p>PDV multi-tenant com isolamento por Row-Level Security. API .NET 10 + Next.js, filas via Redis, eventos em tempo real via SignalR.</p>
+        <p class="stack">.NET 10 · PostgreSQL · Redis · SignalR · Next.js</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="strip">
+    <div class="stat"><div class="n">13</div><div class="l">SISTEMAS NO ECOSSISTEMA</div></div>
+    <div class="stat"><div class="n">9</div><div class="l">MATÉRIAS LECIONADAS</div></div>
+    <div class="stat"><div class="n">180</div><div class="l">APOSTILAS PRODUZIDAS</div></div>
+    <div class="stat"><div class="n">eJPT→OSCP</div><div class="l">TRILHA DE SEGURANÇA</div></div>
+  </div>
+</main>
+
+<script>
+const specs = {
+  kaixara:{nome:"AM Kaixara",desc:"PDV multi-tenant com isolamento por Row-Level Security. API .NET 10 + Next.js, filas via Redis, eventos em tempo real via SignalR.",stack:".NET 10 · PostgreSQL · Redis · SignalR · Next.js"},
+  rotara:{nome:"AM Rotara",desc:"Gestão de pedidos com geolocalização e rastreio em tempo real via SignalR, integrado ao mesmo domínio de tenant do Kaixara.",stack:".NET · PostGIS · SignalR · Next.js"},
+  rendara:{nome:"AM Rendara",desc:"Finanças pessoais e empresariais com rebalanceamento automático de carteira via estratégia ARCA.",stack:".NET · PostgreSQL · Next.js"},
+  saberia:{nome:"AM Saberia",desc:"Plataforma educacional com cursos, progresso e certificados — reaproveita o motor de autenticação multi-tenant.",stack:".NET · PostgreSQL · Next.js"}
+};
+function selectNode(id){
+  document.querySelectorAll('.node').forEach(n => n.classList.toggle('active', n.dataset.id === id));
+  const s = specs[id];
+  document.getElementById('detail').innerHTML = `<h3>${s.nome}</h3><p>${s.desc}</p><p class="stack">${s.stack}</p>`;
+}
+</script>
+</body>
+</html>

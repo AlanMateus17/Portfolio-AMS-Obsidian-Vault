@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Mateus — Blog (prévia v2)</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#F2EFE3;color:#201F1B;font-family:'DM Sans',sans-serif;padding:40px 24px 80px}
+.wrap{max-width:680px;margin:0 auto}
+h1,h3{font-family:'Fraunces',serif}
+a{color:inherit}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:#007464;margin-bottom:10px;display:block}
+h1{font-size:2.4rem;color:#0E2E38;margin-bottom:16px}
+p.lead{color:#4B5A54;max-width:520px;margin-bottom:28px}
+.btn{display:inline-block;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:.9rem;margin-right:8px}
+.btn-primary{background:#0E2E38;color:#fff}
+.btn-ghost{border:1px solid #D8D2BE}
+h2{margin:32px 0 16px;font-size:1.5rem;color:#0E2E38}
+.post{background:#fff;border:1px solid #D8D2BE;border-radius:10px;padding:20px;margin-bottom:14px;opacity:0;transform:translateY(14px);transition:opacity .4s ease-out,transform .4s ease-out}
+.post.show{opacity:1;transform:translateY(0)}
+.post .meta{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:#6D6960;text-transform:uppercase;margin-bottom:6px}
+.post h3{font-size:1.15rem;margin-bottom:6px}
+.post p{color:#4B5A54;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="tag">Barbacena, MG — Brasil</span>
+  <h1>Alan Mateus.</h1>
+  <p class="lead">Professor de informática, desenvolvedor fullstack e estudante de segurança ofensiva. Construindo 13 sistemas de gestão em público, documentando cada decisão.</p>
+  <a class="btn btn-primary" href="#">Ver portfólio ↗</a><a class="btn btn-ghost" href="#">Ler o blog</a>
+
+  <h2>Posts recentes</h2>
+  <div class="post" data-i="0">
+    <p class="meta">CARREIRA · 29/08/2026</p>
+    <h3>Bem-vindo ao blog — por que vou construir tudo em público</h3>
+    <p>Este blog começa agora, antes do primeiro sistema estar em produção. Esse é o ponto.</p>
+  </div>
+  <div class="post" data-i="1">
+    <p class="meta">ENSINO · 30/08/2026</p>
+    <h3>Por que este blog existe — e por que o ensino de TI nas escolas está falhando</h3>
+    <p>Aos 9 anos de idade eu decidi que um dia mudaria a realidade da minha família...</p>
+  </div>
+</div>
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const delay = parseInt(e.target.dataset.i) * 80;
+      setTimeout(() => e.target.classList.add('show'), delay);
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('.post').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

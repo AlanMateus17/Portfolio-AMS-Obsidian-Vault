@@ -1,0 +1,14 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {"v": 1, "at": "2026-10-20T19:31:22Z"},
+  "title": "Aura Design System",
+  "namespace": "Aura",
+  "libraries": [],
+  "sections": {},
+  "groups": [],
+  "assetGroups": {},
+  "blobs": {},
+  "docs": {"sections": []},
+  "lastChange": {"by": "Alan Mateus", "at": "2026-10-20T19:31:22Z", "via": "Claude", "note": "Primeira versão: tokens, brand book, Button, Badge, Card e capa."}
+}

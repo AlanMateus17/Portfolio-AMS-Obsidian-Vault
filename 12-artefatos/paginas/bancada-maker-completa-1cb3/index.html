@@ -1,0 +1,281 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Bancada Maker Completa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Archivo:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: bancada de montagem — painel de resumo fixo em cima, lista por categoria como um BOM (bill of materials) */
+:root{
+  --bg:#f3f5f2; --surface:#ffffff; --line:#d5ddd7; --fg:#18231e; --muted:#5c6b63;
+  --mask:#0f5a48; --copper:#b5652a; --copper-soft:#f6e6d8; --mask-soft:#dcefe8;
+  --warn:#9a5b00; --warn-bg:#fff2d6;
+  --f-display:"Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Archivo", system-ui, -apple-system, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1513; --surface:#161f1b; --line:#2a3832; --fg:#e4ece7; --muted:#93a39a;
+  --mask:#5cc6a6; --copper:#e19356; --copper-soft:#3a2516; --mask-soft:#173229;
+  --warn:#f0b452; --warn-bg:#33270f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1513; --surface:#161f1b; --line:#2a3832; --fg:#e4ece7; --muted:#93a39a;
+  --mask:#5cc6a6; --copper:#e19356; --copper-soft:#3a2516; --mask-soft:#173229;
+  --warn:#f0b452; --warn-bg:#33270f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.5;
+  background-image:radial-gradient(var(--line) 1px, transparent 1px);background-size:22px 22px}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:28px 64px;display:grid;gap:24px}
+h1{font-family:var(--f-display);font-size:clamp(28px,5vw,42px);line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1 span{color:var(--copper)}
+.lede{color:var(--muted);max-width:68ch;margin:8px 0 0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:16px}
+.summary{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:grid;gap:12px;box-shadow:0 6px 18px -12px rgba(0,0,0,.35)}
+.stats{display:flex;flex-wrap:wrap;gap:12px 28px}
+.stat{display:grid;gap:2px}
+.stat b{font-family:var(--f-mono);font-size:20px;font-variant-numeric:tabular-nums}
+.stat small{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{font:600 13px var(--f-body);border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:6px 11px;border-radius:999px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--mask);border-color:var(--mask);color:var(--surface)}
+.chip:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+#q{flex:1 1 200px;min-width:0;font:inherit;padding:7px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+.ghost{font:500 13px var(--f-body);background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;padding:4px}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.note{border-left:3px solid var(--copper);padding:4px 0 4px 12px}
+.note h3{font-family:var(--f-display);font-size:15px;margin:0 0 4px}
+.note p{margin:0;color:var(--muted);font-size:14px}
+.note.warn{border-color:var(--warn)}
+section.cat{display:grid;gap:8px}
+.cat h2{font-family:var(--f-display);font-size:20px;margin:8px 0 0;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.cat h2 em{font:400 13px var(--f-mono);color:var(--muted);font-style:normal}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th{font:600 11px var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);background:var(--bg)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr.done td{opacity:.45}
+tr.done .nm{text-decoration:line-through}
+.nm{font-weight:600}
+.spec{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap;font-size:13px}
+.fase{font:600 11px var(--f-mono);padding:2px 7px;border-radius:4px;background:var(--mask-soft);color:var(--mask);white-space:nowrap}
+.fase.f5{background:var(--copper-soft);color:var(--copper)}
+.onde{font-size:12px;color:var(--muted)}
+.opt{font:600 10px var(--f-body);text-transform:uppercase;letter-spacing:.08em;color:var(--warn);background:var(--warn-bg);padding:1px 6px;border-radius:3px;margin-left:6px}
+input[type=checkbox]{width:18px;height:18px;accent-color:var(--mask);cursor:pointer}
+.foot{color:var(--muted);font-size:13px}
+.empty{padding:20px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Bancada Maker <span>Completa</span></h1>
+    <p class="lede">Tudo para ir de casa inteligente e automação do setup até robô aspirador, carro autônomo com voz e manete, e um produto que dá para vender. Organizado em 5 fases: compre a fase 1 primeiro e avance conforme os projetos ficam prontos. Marque o que já comprou; a marcação fica salva neste navegador.</p>
+  </header>
+
+  <div class="panel summary" aria-live="polite">
+    <div class="stats">
+      <div class="stat"><small>Itens visíveis</small><b id="sItens">0</b></div>
+      <div class="stat"><small>Total estimado (faixa)</small><b id="sTotal">—</b></div>
+      <div class="stat"><small>Falta comprar</small><b id="sFalta">—</b></div>
+      <div class="stat"><small>Já marcados</small><b id="sDone">0</b></div>
+    </div>
+    <div class="controls" role="group" aria-label="Filtrar por fase">
+      <button class="chip" data-f="0" aria-pressed="true">Tudo</button>
+      <button class="chip" data-f="1" aria-pressed="false">F1 Bancada</button>
+      <button class="chip" data-f="2" aria-pressed="false">F2 Casa + setup</button>
+      <button class="chip" data-f="3" aria-pressed="false">F3 Carro voz/manete</button>
+      <button class="chip" data-f="4" aria-pressed="false">F4 Autônomo + aspirador</button>
+      <button class="chip" data-f="5" aria-pressed="false">F5 Produto</button>
+      <label class="chip" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="hideOpt"> Esconder opcionais</label>
+    </div>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Buscar componente (ex.: ESP32, LiDAR, motor)" aria-label="Buscar componente">
+      <button class="ghost" id="reset" type="button">Desmarcar tudo</button>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note"><h3>Preços são estimativas</h3><p>Faixas em reais por unidade, de out/2026, entre AliExpress (mínimo) e lojas nacionais (máximo). Confira antes de comprar; câmbio e taxa de importação mudam muito.</p></div>
+    <div class="note"><h3>Onde comprar</h3><p><b>BR</b>: Eletrogate (BH, chega rápido), MakerHero, RoboCore, Usinainfo, Mercado Livre. <b>Ali</b>: AliExpress para volume. <b>Fab</b>: JLCPCB ou PCBWay para placas próprias.</p></div>
+    <div class="note warn"><h3>Para vender um produto</h3><p>Qualquer produto com Wi-Fi, Bluetooth ou rádio precisa de homologação na Anatel para ser vendido no Brasil, mesmo usando módulo já certificado. Isso custa e leva tempo; inclua no plano de negócio.</p></div>
+  </div>
+
+  <main id="list"></main>
+
+  <p class="foot">Itens marcados como <span class="opt" style="margin:0">opcional</span> são upgrades caros: compre só quando o projeto pedir. Os preços multiplicam pela quantidade no total do resumo.</p>
+</div>
+
+<script>
+// [categoria, nome, especificação, qtd, min, max, fase, onde, opcional]
+const D = [
+// ---------- Ferramentas ----------
+["Ferramentas e bancada","Estação de solda","Controle de temperatura, ponta fina (ex.: Hikari HK-939, T12 ou Pinecil)",1,120,450,1,"BR / Ali"],
+["Ferramentas e bancada","Kit solda: estanho, fluxo, malha dessoldadora, sugador","Estanho 0,5 a 0,8 mm com fluxo",1,60,140,1,"BR"],
+["Ferramentas e bancada","Multímetro digital True RMS","Com teste de continuidade e capacitância",1,90,350,1,"BR / Ali"],
+["Ferramentas e bancada","Fonte de bancada regulável","0 a 30 V, 0 a 5 A, com limite de corrente",1,250,550,1,"BR / Ali"],
+["Ferramentas e bancada","Kit de chaves de precisão","Phillips, Torx, Allen, hexagonal",1,40,150,1,"BR"],
+["Ferramentas e bancada","Alicates: corte rente, bico, desencapador","Desencapador automático ajuda muito",1,60,180,1,"BR"],
+["Ferramentas e bancada","Alicate crimpador + kit terminais","Dupont, JST-XH e JST-PH",1,80,200,1,"Ali / BR"],
+["Ferramentas e bancada","Terceira mão com lupa e LED","Ou suporte de PCB",1,40,120,1,"BR"],
+["Ferramentas e bancada","Tapete de silicone antiestático + pulseira ESD","",1,40,100,1,"BR / Ali"],
+["Ferramentas e bancada","Pistola de cola quente + tubos termoretráteis","Kit sortido de termoretrátil",1,40,90,1,"BR"],
+["Ferramentas e bancada","Analisador lógico USB 8 canais","Clone Saleae, usar com PulseView",1,35,90,2,"Ali"],
+["Ferramentas e bancada","Osciloscópio","FNIRSI portátil (básico) ou Rigol DHO800 (profissional)",1,500,2800,4,"Ali / BR"],
+["Ferramentas e bancada","Estação de retrabalho ar quente","Para SMD e placas próprias",1,250,600,5,"BR / Ali"],
+["Ferramentas e bancada","Impressora 3D","Bambu Lab A1 ou Creality K1; essencial para chassis e carcaças de produto",1,2500,4500,3,"BR"],
+["Ferramentas e bancada","Filamento PLA e PETG","PETG para peças que esquentam ou levam esforço",4,90,140,3,"BR"],
+["Ferramentas e bancada","Paquímetro digital","Medir peças para modelar em 3D",1,40,120,3,"BR / Ali"],
+
+// ---------- Placas ----------
+["Placas e cérebros","Arduino Uno R4 WiFi (ou R3 compatível)","Base para aprender e prototipar",2,60,250,1,"BR"],
+["Placas e cérebros","Arduino Mega 2560","Muitos pinos: robôs com vários motores e sensores",1,90,250,3,"BR / Ali"],
+["Placas e cérebros","Arduino Nano (compatível)","Pequeno, para controlar subsistemas",4,25,60,1,"Ali / BR"],
+["Placas e cérebros","ESP32 DevKit V1 (WROOM-32)","Wi-Fi + Bluetooth; base da casa inteligente",8,30,60,1,"Ali / BR"],
+["Placas e cérebros","ESP32-S3 DevKit (N16R8)","Mais memória, USB nativo, IA leve e voz",4,45,110,2,"Ali / BR"],
+["Placas e cérebros","ESP32-C3 / C6 SuperMini","Minúsculo; C6 tem Zigbee/Thread",6,20,50,2,"Ali"],
+["Placas e cérebros","ESP32-CAM com programador","Câmera barata para monitoramento",3,40,80,2,"Ali / BR"],
+["Placas e cérebros","Raspberry Pi Pico 2 W (RP2350)","Microcontrolador barato e preciso para motores",3,40,90,3,"BR / Ali"],
+["Placas e cérebros","STM32 Blue/Black Pill (STM32F411)","Padrão da indústria; bom para produto e controle em tempo real",3,30,70,4,"Ali"],
+["Placas e cérebros","Raspberry Pi 5 8 GB","Cérebro do carro autônomo e servidor Home Assistant",2,750,1100,2,"BR"],
+["Placas e cérebros","Fonte oficial Pi 5 27 W + cooler ativo + case","",2,120,220,2,"BR"],
+["Placas e cérebros","Cartão microSD 64 GB A2 / SSD NVMe + HAT","NVMe deixa o Pi muito mais rápido e durável",2,60,280,2,"BR"],
+["Placas e cérebros","Raspberry Pi Zero 2 W","Pi pequeno para produtos e câmeras",2,150,260,4,"BR"],
+["Placas e cérebros","Raspberry Pi AI HAT+ (Hailo) ou Coral USB","Visão computacional em tempo real no carro autônomo",1,600,1300,4,"BR / Ali",1],
+["Placas e cérebros","NVIDIA Jetson Orin Nano Super","Visão e IA pesadas; só se o Pi 5 não der conta",1,2500,4000,4,"Importado",1],
+
+// ---------- Prototipagem ----------
+["Prototipagem e cabos","Protoboard 830 pontos","",6,10,25,1,"Ali / BR"],
+["Prototipagem e cabos","Jumpers M-M, M-F, F-F (40 de cada)","",4,10,25,1,"Ali / BR"],
+["Prototipagem e cabos","Placas perfuradas sortidas (ilhadas)","Para tirar projeto da protoboard",2,25,60,1,"Ali / BR"],
+["Prototipagem e cabos","Kit resistores 1/4 W (600+ peças)","",1,25,60,1,"Ali / BR"],
+["Prototipagem e cabos","Kit capacitores cerâmicos e eletrolíticos","",1,30,80,1,"Ali / BR"],
+["Prototipagem e cabos","Kit LEDs, botões, diodos, transistores (BC547, 2N2222, MOSFET IRLZ44N)","",1,50,120,1,"Ali / BR"],
+["Prototipagem e cabos","Barras de pinos macho e fêmea + bornes KF301","",1,25,60,1,"Ali"],
+["Prototipagem e cabos","Fio de silicone 22 e 18 AWG (rolos)","Flexível, aguenta calor",1,50,120,1,"Ali / BR"],
+["Prototipagem e cabos","Cabos USB-C e micro USB de dados","",6,10,25,1,"BR"],
+["Prototipagem e cabos","Conectores XT30/XT60 e JST","Bateria e motores",1,30,70,3,"Ali"],
+
+// ---------- Energia ----------
+["Energia","Baterias 18650 de marca (Samsung, LG, Molicel)","Evite as genéricas de “9900 mAh”",12,20,40,3,"BR"],
+["Energia","Suporte 18650 2S e 3S + placa BMS 2S/3S","Proteção obrigatória",3,20,50,3,"Ali / BR"],
+["Energia","Carregador inteligente de 18650 (4 slots)","Ex.: Liitokala ou XTAR",1,90,200,3,"Ali / BR"],
+["Energia","Módulo TP4056 USB-C (carga 1S)","Para produtos pequenos a bateria",6,5,12,2,"Ali"],
+["Energia","Conversor buck LM2596 / MP1584","Abaixa 12 V para 5 V ou 3,3 V",8,8,20,1,"Ali / BR"],
+["Energia","Conversor boost MT3608 / XL6009","",4,8,25,2,"Ali"],
+["Energia","Fontes chaveadas 5 V 3 A e 12 V 5 A","Para automação fixa",3,35,80,2,"BR"],
+["Energia","Monitor de corrente INA219 / INA226","Medir consumo do robô e da bateria",3,15,35,3,"Ali"],
+["Energia","Bateria LiPo 3S 2200 mAh + carregador balanceador","Carro mais rápido",1,250,450,4,"BR",1],
+
+// ---------- Casa inteligente ----------
+["Casa inteligente e setup","Módulo relé 1, 4 e 8 canais (optoacoplado)","Liga lâmpadas, tomadas, ventilador",5,15,60,2,"Ali / BR"],
+["Casa inteligente e setup","Relé de estado sólido SSR 25 A","Carga AC sem barulho e sem desgaste",2,30,60,2,"Ali / BR"],
+["Casa inteligente e setup","Sensor de corrente/energia PZEM-004T","Mede consumo da casa ou do setup",2,50,110,2,"Ali / BR"],
+["Casa inteligente e setup","Fita LED endereçável WS2812B / SK6812 (5 m)","Iluminação do setup reativa",2,70,180,2,"Ali / BR"],
+["Casa inteligente e setup","Sensores DHT22 / BME280 / SHT31","Temperatura, umidade, pressão",4,15,50,2,"Ali / BR"],
+["Casa inteligente e setup","Sensor de presença mmWave LD2410","Detecta pessoa parada; muito melhor que PIR",3,25,60,2,"Ali"],
+["Casa inteligente e setup","Sensor PIR HC-SR501","Movimento simples",4,8,20,2,"Ali / BR"],
+["Casa inteligente e setup","Sensores reed (porta/janela), gás MQ-2, luz BH1750","",6,8,30,2,"Ali / BR"],
+["Casa inteligente e setup","Emissor e receptor infravermelho","Controlar TV, ar-condicionado, som",3,8,20,2,"Ali / BR"],
+["Casa inteligente e setup","Leitor RFID RC522 + teclado matricial","Acesso e automações por cartão",2,15,35,2,"Ali / BR"],
+["Casa inteligente e setup","Fechadura solenoide 12 V + driver MOSFET","",2,30,70,2,"Ali / BR"],
+["Casa inteligente e setup","Dongle Zigbee (Sonoff ZBDongle-E ou SMLIGHT SLZB)","Integra dispositivos Zigbee prontos no Home Assistant",1,120,300,2,"BR / Ali"],
+["Casa inteligente e setup","Displays OLED 0,96\", TFT 2,4\" touch e e-paper","Painéis de status do setup",4,20,90,2,"Ali / BR"],
+["Casa inteligente e setup","Encoder rotativo + teclas mecânicas + RP2040","Macro pad / Stream Deck caseiro",1,60,150,2,"Ali"],
+
+// ---------- Sensores de robô ----------
+["Sensores para robôs","Ultrassônico HC-SR04 / JSN-SR04T","Distância básica",6,8,40,3,"Ali / BR"],
+["Sensores para robôs","Distância laser ToF VL53L0X / VL53L1X","Mais preciso que ultrassom",6,20,60,3,"Ali / BR"],
+["Sensores para robôs","IMU MPU6050 e BNO085","BNO085 dá orientação pronta e estável",3,15,180,3,"Ali / BR"],
+["Sensores para robôs","Sensores de linha TCRT5000 / QTR-8RC","Seguidor de linha e anti-queda do aspirador",8,5,80,3,"Ali / BR"],
+["Sensores para robôs","Microswitch com alavanca (bumper)","Para-choque do aspirador",10,3,8,4,"Ali / BR"],
+["Sensores para robôs","Câmera Raspberry Pi Module 3 (wide)","Visão do carro autônomo",1,180,350,4,"BR"],
+["Sensores para robôs","LiDAR 360° LD19 / LD06 ou RPLIDAR C1","Mapeamento (SLAM) do aspirador e do carro",1,300,700,4,"Ali / BR"],
+["Sensores para robôs","GPS NEO-M8N + bússola","Carro autônomo em área aberta",1,80,180,4,"Ali / BR",1],
+["Sensores para robôs","Fluxo óptico PMW3901","Odometria sem encoder",1,70,150,4,"Ali",1],
+
+// ---------- Motores ----------
+["Motores e mecânica","Kit chassi 4WD com motores TT","Primeiro carro",1,80,180,3,"Ali / BR"],
+["Motores e mecânica","Motores N20 / JGA25-370 com encoder","Encoder é obrigatório para andar reto e mapear",4,40,90,3,"Ali / BR"],
+["Motores e mecânica","Rodas 65 mm, roda boba e rodas omni/mecanum","Mecanum anda de lado",1,60,200,3,"Ali / BR"],
+["Motores e mecânica","Driver TB6612FNG / DRV8833","Mais eficiente que o L298N",4,12,35,3,"Ali / BR"],
+["Motores e mecânica","Driver BTS7960 (43 A)","Motores grandes",2,40,90,4,"Ali / BR",1],
+["Motores e mecânica","Servos SG90 / MG90S / MG996R","Direção, garras, pan-tilt",10,12,50,3,"Ali / BR"],
+["Motores e mecânica","Driver de servos PCA9685 (16 canais)","",2,20,45,3,"Ali / BR"],
+["Motores e mecânica","Motor de passo NEMA 17 + driver TMC2209","Movimento preciso e silencioso",2,60,120,4,"Ali / BR"],
+["Motores e mecânica","Motor brushless pequeno + ESC / turbina 12 V","Sucção do robô aspirador",1,60,180,4,"Ali"],
+["Motores e mecânica","Motor de escova lateral (N20 sem encoder)","Escovas do aspirador",2,15,30,4,"Ali"],
+["Motores e mecânica","Kit parafusos M2, M2,5, M3 + insertos térmicos","Montar peças impressas",1,60,130,3,"Ali"],
+["Motores e mecânica","Rolamentos 608 e eixos","",1,30,80,4,"Ali / BR"],
+
+// ---------- Comunicação, voz, controle ----------
+["Controle, voz e comunicação","Controle PS4 / PS5 / Xbox (Bluetooth)","Pilota o carro via ESP32 com Bluepad32",1,180,400,3,"BR"],
+["Controle, voz e comunicação","Joystick analógico + módulo nRF24L01 PA/LNA","Controle remoto próprio de longo alcance",4,10,35,3,"Ali / BR"],
+["Controle, voz e comunicação","Microfone I2S INMP441","Captura de voz no ESP32",4,12,30,3,"Ali"],
+["Controle, voz e comunicação","Amplificador I2S MAX98357 + alto-falante 3 W","Robô responde por voz",3,15,35,3,"Ali"],
+["Controle, voz e comunicação","ReSpeaker 2-Mic / 4-Mic (Raspberry Pi)","Voz de qualidade no Pi, com Whisper/Piper local",1,80,250,3,"Ali / BR"],
+["Controle, voz e comunicação","Módulo LoRa SX1276 / Heltec LoRa32","Kilômetros de alcance; sensores remotos",2,60,140,4,"Ali / BR"],
+["Controle, voz e comunicação","Módulo 4G SIM7600 / SIM800L","Produto conectado sem Wi-Fi",1,70,250,5,"Ali",1],
+
+// ---------- Produto ----------
+["Produto (vender)","Placas PCB próprias (KiCad + JLCPCB)","5 a 10 placas por pedido; frete à parte",3,40,150,5,"Fab"],
+["Produto (vender)","Montagem SMT na JLCPCB (PCBA)","Placa chega montada; ideal para pequena série",1,300,1200,5,"Fab"],
+["Produto (vender)","Stencil + pasta de solda + placa aquecedora","Montar SMD em casa",1,150,400,5,"Ali"],
+["Produto (vender)","Módulos ESP32-WROOM / ESP32-C3 sem placa (para soldar na PCB)","Módulo certificado facilita a homologação",10,15,35,5,"Ali / LCSC"],
+["Produto (vender)","Caixas plásticas padrão (Patola) ou carcaça impressa","Acabamento profissional",5,15,60,5,"BR"],
+["Produto (vender)","Etiquetadora / adesivos e embalagem","Identidade da marca",1,100,300,5,"BR",1],
+];
+
+const fmt = n => n.toLocaleString("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
+let fase = 0, query = "", hideOpt = false;
+let done = {};
+try { done = JSON.parse(localStorage.getItem("bancada-done") || "{}"); } catch(e){ done = {}; }
+const save = () => { try { localStorage.setItem("bancada-done", JSON.stringify(done)); } catch(e){} };
+const key = r => r[0]+"|"+r[1];
+const faseNome = ["","Bancada","Casa","Carro","Autônomo","Produto"];
+
+function render(){
+  const q = query.trim().toLowerCase();
+  const rows = D.filter(r => (!fase || r[6]===fase) && (!hideOpt || !r[8]) &&
+    (!q || (r[1]+" "+r[2]+" "+r[0]).toLowerCase().includes(q)));
+  const cats = [...new Set(rows.map(r=>r[0]))];
+  const list = document.getElementById("list");
+  if(!rows.length){ list.innerHTML = '<p class="empty panel">Nenhum item com esse filtro. Limpe a busca ou escolha “Tudo”.</p>'; }
+  else list.innerHTML = cats.map(c=>{
+    const rs = rows.filter(r=>r[0]===c);
+    const mn = rs.reduce((s,r)=>s+r[3]*r[4],0), mx = rs.reduce((s,r)=>s+r[3]*r[5],0);
+    return `<section class="cat"><h2>${c}<em>${rs.length} itens · ${fmt(mn)} a ${fmt(mx)}</em></h2>
+    <div class="tbl"><table><thead><tr><th style="width:36px"></th><th>Componente</th><th>Qtd</th><th>Preço un.</th><th>Fase</th><th>Onde</th></tr></thead><tbody>
+    ${rs.map(r=>{const k=key(r),d=!!done[k];return `<tr class="${d?"done":""}">
+      <td><input type="checkbox" data-k="${k.replace(/"/g,"&quot;")}" ${d?"checked":""} aria-label="Comprado: ${r[1].replace(/"/g,"&quot;")}"></td>
+      <td><span class="nm">${r[1]}</span>${r[8]?'<span class="opt">opcional</span>':""}${r[2]?`<span class="spec">${r[2]}</span>`:""}</td>
+      <td class="num">${r[3]}</td>
+      <td class="num">${fmt(r[4])} a ${fmt(r[5])}</td>
+      <td><span class="fase ${r[6]===5?"f5":""}">F${r[6]} ${faseNome[r[6]]}</span></td>
+      <td class="onde">${r[7]}</td></tr>`}).join("")}
+    </tbody></table></div></section>`;
+  }).join("");
+  const sum = (arr,i)=>arr.reduce((s,r)=>s+r[3]*r[i],0);
+  const open = rows.filter(r=>!done[key(r)]);
+  document.getElementById("sItens").textContent = rows.length;
+  document.getElementById("sTotal").textContent = rows.length ? `${fmt(sum(rows,4))} a ${fmt(sum(rows,5))}` : "—";
+  document.getElementById("sFalta").textContent = open.length ? `${fmt(sum(open,4))} a ${fmt(sum(open,5))}` : fmt(0);
+  document.getElementById("sDone").textContent = rows.length - open.length;
+}
+document.getElementById("list").addEventListener("change", e=>{
+  const k = e.target.dataset.k; if(!k) return;
+  if(e.target.checked) done[k]=1; else delete done[k];
+  save(); render();
+});
+document.querySelectorAll(".chip[data-f]").forEach(b=>b.addEventListener("click",()=>{
+  fase = +b.dataset.f;
+  document.querySelectorAll(".chip[data-f]").forEach(x=>x.setAttribute("aria-pressed", x===b));
+  render();
+}));
+document.getElementById("q").addEventListener("input", e=>{ query = e.target.value; render(); });
+document.getElementById("hideOpt").addEventListener("change", e=>{ hideOpt = e.target.checked; render(); });
+document.getElementById("reset").addEventListener("click", ()=>{ done = {}; save(); render(); });
+render();
+</script>
+
+</body></html>

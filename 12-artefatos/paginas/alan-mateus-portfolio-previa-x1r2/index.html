@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Mateus — Portfólio (prévia)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#0E2E38; --brand-mid:#1A5C6E;
+  --accent:#00C2A8; --accent-text:#007464;
+  --accent-security:#DD7F35; --accent-security-text:#8A431A;
+  --marker:#EAAE3D;
+  --bg:#F2EFE3; --bg-alt:#EAE5D4; --surface:#FFFFFF;
+  --text:#201F1B; --text-muted:#4B5A54; --text-light:#6D6960;
+  --border:#D8D2BE;
+  --font-display:'Fraunces',serif; --font-body:'DM Sans',sans-serif; --font-mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.55}
+h1,h2,h3{font-family:var(--font-display)}
+.mono{font-family:var(--font-mono)}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.nav{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);z-index:10}
+.nav-inner{max-width:960px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.logo{font-family:var(--font-display);font-weight:700;color:var(--brand);text-decoration:none;font-size:1.1rem}
+.logo span{font-family:var(--font-body);font-weight:400;color:var(--text-light);font-size:.85rem}
+.links{display:flex;gap:18px;font-family:var(--font-mono);font-size:.85rem;flex-wrap:wrap}
+.links a{text-decoration:none;color:var(--text-muted);cursor:pointer}
+.links a.active{color:var(--accent-text);font-weight:600}
+main{padding:56px 0 96px}
+.badge{display:inline-block;font-family:var(--font-mono);font-size:.8rem;padding:4px 12px;border-radius:999px;background:rgba(0,194,168,.12);color:var(--accent-text)}
+.btn{display:inline-block;padding:10px 20px;border-radius:6px;text-decoration:none;font-size:.9rem;cursor:pointer;border:1px solid var(--border)}
+.btn-primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+.btn-primary:hover{background:var(--brand-mid)}
+.btn-ghost:hover{border-color:var(--brand)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px;box-shadow:0 1px 2px rgba(14,46,56,.06)}
+.card:hover{border-color:var(--brand);cursor:pointer}
+.status-dev{background:rgba(0,194,168,.15);color:var(--accent-text)}
+.status-plan{background:rgba(109,105,96,.12);color:var(--text-light)}
+.status-tag{font-family:var(--font-mono);font-size:.65rem;text-transform:uppercase;padding:2px 8px;border-radius:6px}
+.section-eyebrow{font-family:var(--font-mono);font-size:.8rem;color:var(--accent-text);text-transform:none;margin-bottom:6px}
+.section-eyebrow.sec{color:var(--accent-security-text)}
+.timeline-item{border-left:2px solid var(--border);padding-left:16px;margin-bottom:16px}
+.timeline-item p.label{font-family:var(--font-mono);font-size:.75rem;color:var(--marker);margin:0}
+.timeline-item p.text{font-size:.9rem;color:var(--text-muted);margin:2px 0 0}
+.cv-block{border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:24px}
+.pill{font-family:var(--font-mono);font-size:.75rem;padding:4px 12px;border-radius:999px;background:var(--bg-alt);border:1px solid var(--border);display:inline-block;margin:0 6px 6px 0}
+.terminal{max-width:560px;margin:0 auto;border-radius:10px;overflow:hidden;border:1px solid var(--border);box-shadow:0 4px 16px rgba(14,46,56,.1)}
+.term-top{background:#2A2A2A;padding:8px 14px;display:flex;gap:6px;align-items:center}
+.dot{width:11px;height:11px;border-radius:50%}
+.term-out{background:#1A1A1A;color:#4ADE80;font-family:var(--font-mono);font-size:.85rem;padding:14px;height:260px;overflow-y:auto}
+.term-in{background:#1A1A1A;display:flex;align-items:center;padding:0 14px 14px;color:#4ADE80;font-family:var(--font-mono);font-size:.85rem}
+.term-in input{flex:1;background:transparent;border:0;outline:0;color:#4ADE80;font-family:var(--font-mono);font-size:.85rem}
+footer{border-top:1px solid var(--border);background:var(--bg-alt);padding:40px 0;margin-top:60px}
+.foot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+.foot-grid h4{font-family:var(--font-mono);font-size:.75rem;text-transform:uppercase;color:var(--text-light);margin:0 0 8px}
+.foot-grid ul{list-style:none;padding:0;margin:0;font-size:.9rem}
+.foot-grid li{margin-bottom:6px}
+.foot-grid a{text-decoration:none}
+.foot-grid a:hover{color:var(--accent-text)}
+.notice{background:rgba(234,174,61,.15);border:1px solid var(--marker);border-radius:8px;padding:10px 16px;font-size:.85rem;margin-bottom:28px}
+[data-page]{display:none}
+[data-page].show{display:block}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#home" onclick="go('home')">Alan Mateus <span>| AMtech Digital</span></a>
+    <nav class="links" id="navlinks">
+      <a onclick="go('sobre')" data-l="sobre">Sobre</a>
+      <a onclick="go('portfolio')" data-l="portfolio">Portfólio</a>
+      <a onclick="go('seguranca')" data-l="seguranca">Segurança</a>
+      <a onclick="go('roteiro')" data-l="roteiro">Roteiro</a>
+      <a onclick="go('curriculo')" data-l="curriculo">Currículo</a>
+      <a onclick="go('terminal')" data-l="terminal">~</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div class="notice">Isto é uma <strong>prévia navegável</strong> do projeto Next.js — mesmo conteúdo e visual, mas rodando como página estática só pra teste. O projeto de verdade está no zip que te mandei antes.</div>
+
+<!-- HOME -->
+<section data-page="home" class="show">
+  <p class="mono" style="color:var(--accent-text)">Desenvolvedor · Professor · Red Team em formação</p>
+  <h1 style="font-size:2.6rem;color:var(--brand);margin:8px 0 20px">Alan Mateus</h1>
+  <p style="max-width:600px;color:var(--text-muted);font-size:1.05rem">Construo sistemas em .NET/Next.js, ensino Tecnologia da Informação no EMTI e estou formando o Grupo AMtech Digital — um ecossistema de 13 sistemas SaaS interligados. Aqui fica o registro técnico de tudo isso.</p>
+  <div class="cards" style="margin:28px 0 32px">
+    <div class="card"><p class="mono" style="font-size:.75rem;color:var(--text-light);margin:0 0 4px">CONSTRUINDO</p><p style="margin:0;font-size:.9rem">AuraPOS — sistema de PDV multi-tenant</p></div>
+    <div class="card"><p class="mono" style="font-size:.75rem;color:var(--text-light);margin:0 0 4px">ESTUDANDO</p><p style="margin:0;font-size:.9rem">Akitando #36 · Fase 0 do plano de estudos</p></div>
+    <div class="card"><p class="mono" style="font-size:.75rem;color:var(--text-light);margin:0 0 4px">LENDO</p><p style="margin:0;font-size:.9rem">TCP/IP Illustrated Vol.1 — Stevens</p></div>
+  </div>
+  <a class="btn btn-primary" onclick="go('portfolio')">Ver portfólio</a>
+  <a class="btn btn-ghost" onclick="go('curriculo')">Ver currículo</a>
+  <a class="btn btn-ghost" onclick="go('roteiro')">Roteiro público</a>
+</section>
+
+<!-- SOBRE -->
+<section data-page="sobre">
+  <p class="section-eyebrow">Sobre</p>
+  <h1 style="color:var(--brand)">Quem sou <em style="color:var(--accent-text);font-style:normal">e para onde vou.</em></h1>
+  <p style="color:var(--text-muted)">Esta página ainda está em construção. Em breve, uma apresentação completa sobre quem está por trás deste site.</p>
+  <h2 style="margin-top:40px">Minha trajetória</h2>
+  <div style="margin-top:20px" id="timeline"></div>
+  <div class="notice" style="margin-top:20px">Conteúdo em construção — volte em breve pra conhecer a história completa.</div>
+</section>
+
+<!-- PORTFOLIO -->
+<section data-page="portfolio">
+  <p class="section-eyebrow">Portfólio</p>
+  <h1 style="color:var(--brand)">13 sistemas, um ecossistema.</h1>
+  <p style="color:var(--text-muted);max-width:600px">Cada projeto abaixo faz parte do ecossistema Aura, construído pelo Grupo AMtech Digital.</p>
+  <div class="cards" id="projetos-grid"></div>
+</section>
+
+<!-- SEGURANCA -->
+<section data-page="seguranca">
+  <p class="section-eyebrow sec">Segurança Ofensiva</p>
+  <h1 style="color:var(--brand)">Red Team em formação.</h1>
+  <p style="color:var(--text-muted);max-width:600px">Trilha eJPT → OSCP → CRTO → além. Cada sistema que construo passa por threat modeling.</p>
+  <div class="cards" style="margin-top:24px" id="certs-grid"></div>
+</section>
+
+<!-- ROTEIRO -->
+<section data-page="roteiro">
+  <p class="section-eyebrow">Construindo em público</p>
+  <h1 style="color:var(--brand)">Roteiro público.</h1>
+  <p style="color:var(--text-muted)">Sem prometer prazo fechado — só o que já está andando e o que vem depois, de verdade.</p>
+  <h3 class="mono" style="font-size:.8rem;text-transform:uppercase;color:var(--text-light);margin-top:32px">Agora</h3>
+  <div class="timeline-item"><p class="text"><strong>Passo 1 do plano de estudos</strong> — Lógica de Programação + Matemática Cap. 1-2</p></div>
+  <div class="timeline-item"><p class="text"><strong>AM Kaixara</strong> — arquitetura e fundamentos</p></div>
+</section>
+
+<!-- CURRICULO -->
+<section data-page="curriculo">
+  <div style="margin-bottom:16px"><span class="badge">Aberto a oportunidades</span></div>
+  <h1 style="color:var(--brand);margin-bottom:2px">Alan Mateus</h1>
+  <p style="color:var(--text-muted);margin:0">Desenvolvedor .NET · Professor de TI · Fundador AMtech Digital</p>
+  <p class="mono" style="font-size:.85rem;color:var(--text-light)">Barbacena, MG — Brasil</p>
+  <div id="cv-body" style="margin-top:24px"></div>
+</section>
+
+<!-- TERMINAL -->
+<section data-page="terminal">
+  <div class="terminal">
+    <div class="term-top">
+      <span class="dot" style="background:#e5534b"></span><span class="dot" style="background:#f5bd41"></span><span class="dot" style="background:#61c454"></span>
+      <span class="mono" style="color:#fff9;font-size:.75rem;margin-left:8px">alan@amtech: ~</span>
+    </div>
+    <div class="term-out" id="termOut"><p>Digite 'help' para começar.</p></div>
+    <div class="term-in"><span>$&nbsp;</span><input id="termIn" autocomplete="off"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div><h4>Alan Mateus</h4><p style="font-size:.9rem;color:var(--text-muted)">Barbacena, MG — Brasil<br>alandesouzasilva04@gmail.com</p></div>
+    <div><h4>Este site</h4><ul>
+      <li><a onclick="go('sobre')">Sobre</a></li><li><a onclick="go('portfolio')">Portfólio</a></li>
+      <li><a onclick="go('seguranca')">Segurança</a></li><li><a onclick="go('curriculo')">Currículo</a></li>
+    </ul></div>
+    <div><h4>Ecossistema AMtech</h4><ul>
+      <li>Blog (site separado)</li><li>Instituto AMS (em breve)</li><li>AMtech Digital (em breve)</li>
+    </ul></div>
+  </div>
+</footer>
+
+<script>
+const projetos = [
+  {slug:"kaixara",nome:"AM Kaixara",excerpt:"PDV multi-tenant com RLS. Vendas, estoque, fiscal.",status:"dev",stack:[".NET 10","PostgreSQL","Next.js","Docker","Redis","SignalR"]},
+  {slug:"rotara",nome:"AM Rotara",excerpt:"Gestão de pedidos com geolocalização e rastreio em tempo real.",status:"dev",stack:[".NET","PostGIS","SignalR","Next.js"]},
+  {slug:"rendara",nome:"AM Rendara",excerpt:"Finanças pessoais e empresariais com rebalanceamento ARCA automático.",status:"dev",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"saberia",nome:"AM Saberia",excerpt:"Plataforma educacional — cursos, aulas, progresso e certificados.",status:"plan",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"taskoro",nome:"AM Taskoro",excerpt:"Gestão de projetos Kanban/Scrum/RAD — exceção de stack.",status:"plan",stack:["React","Node.js","GraphQL"]},
+  {slug:"vendra",nome:"AM Vendra",excerpt:"E-commerce completo com catálogo, carrinho e pagamento integrado.",status:"plan",stack:[".NET","Next.js","Stripe"]},
+  {slug:"vynla",nome:"AM Vynla",excerpt:"Plataforma de relacionamentos com timeline, NFC e convites interativos.",status:"plan",stack:[".NET","Next.js","NFC"]},
+  {slug:"canteira",nome:"AM Canteira",excerpt:"Controle de obras e construção civil — cronograma, custos, equipes.",status:"plan",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"consertta",nome:"AM Consertta",excerpt:"Assistência técnica — ordens de serviço, diagnóstico e histórico.",status:"plan",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"horaria",nome:"AM Horaria",excerpt:"Agendamentos online para qualquer tipo de serviço com recorrência.",status:"plan",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"petara",nome:"AM Petara",excerpt:"Clínicas veterinárias — prontuários, agenda, vacinas e lembretes.",status:"plan",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"predara",nome:"AM Predara",excerpt:"Gestão de condomínios — taxas, manutenção, assembleias e comunicados.",status:"plan",stack:[".NET","PostgreSQL","Next.js"]},
+  {slug:"projeta",nome:"AM Projeta",excerpt:"Diagnóstico de sistemas por IA e geração de arquitetura.",status:"plan",stack:[".NET","OpenAI","Next.js"]}
+];
+const statusLabel = {plan:"Planejado",dev:"Em desenvolvimento"};
+document.getElementById('projetos-grid').innerHTML = projetos.map(p => `
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <strong style="color:var(--brand);font-family:var(--font-display)">${p.nome}</strong>
+      <span class="status-tag status-${p.status}">${statusLabel[p.status]}</span>
+    </div>
+    <p style="font-size:.9rem;color:var(--text-muted);margin:4px 0 10px">${p.excerpt}</p>
+    <p class="mono" style="font-size:.75rem;color:var(--text-light);margin:0">${p.stack.join(' · ')}</p>
+  </div>`).join('');
+
+const marcos = ["Marco 1","Marco 2","Marco 3","Marco 4","Hoje"];
+document.getElementById('timeline').innerHTML = marcos.map(m => `
+  <div class="timeline-item"><p class="label">${m}</p><p class="text">Em breve, um marco importante da trajetória vai aparecer aqui.</p></div>`).join('');
+
+const certs = [
+  {nome:"eJPT",sub:"INE — pentest básico e metodologia"},
+  {nome:"OSCP",sub:"OffSec PEN-200 — metodologia completa e AD"},
+  {nome:"CRTO",sub:"Zero-Point Security — C2 e red team"},
+  {nome:"CRTP",sub:"Altered Security — AD kill chain"},
+  {nome:"OSEP",sub:"OffSec PEN-300 — evasion avançada"}
+];
+document.getElementById('certs-grid').innerHTML = certs.map(c => `
+  <div class="card"><strong style="font-family:var(--font-display)">${c.nome}</strong><p style="font-size:.85rem;color:var(--text-muted);margin:4px 0 0">${c.sub}</p></div>`).join('');
+
+const cv = {
+  objetivo:"Oportunidade como Desenvolvedor .NET Júnior ou Estágio em Desenvolvimento — com abertura pra crescer também em segurança ofensiva.",
+  resumo:"Desenvolvedor fullstack com foco em .NET/C# e Next.js, professor de informática no EMTI e fundador do Grupo AMtech Digital. Especializado em sistemas de gestão multi-tenant com Clean Architecture e segurança aplicada. Em formação em segurança ofensiva (trilha eJPT → OSCP).",
+  experiencia:[
+    {cargo:"Fundador & Desenvolvedor Principal",periodo:"2024 — presente",local:"Grupo AMtech Digital · Barbacena, MG",descricao:"Construção de um conjunto de 13 sistemas SaaS. AM Kaixara (em desenvolvimento): PDV multi-tenant com Clean Architecture, RLS no PostgreSQL, API .NET 10 e frontend Next.js."},
+    {cargo:"Professor de Informática — EMTI",periodo:"2025 — presente",local:"Escola Estadual · Barbacena, MG",descricao:"Ensino de 9 matérias de informática. Produção de 180 apostilas e material didático completo."},
+    {cargo:"Técnico em Assistência Técnica",periodo:"2021 — presente",local:"Autônomo · Barbacena, MG",descricao:"Reparo de dispositivos Apple e Xiaomi, notebooks e desktops. Formatação, diagnóstico e recuperação de dados."}
+  ],
+  competencias:[
+    {categoria:"Backend",itens:["C# · .NET 10 · ASP.NET Core","Entity Framework Core","PostgreSQL · Redis","Clean Architecture · DDD"]},
+    {categoria:"Frontend",itens:["Next.js · TypeScript","Tailwind CSS","React Query · Zustand"]},
+    {categoria:"DevOps",itens:["Docker · Docker Compose","GitHub Actions (CI/CD)","Linux (Ubuntu · Debian)"]},
+    {categoria:"Segurança & Outros",itens:["OWASP Top 10 · JWT","Burp Suite · Nmap","Python (automação)"]}
+  ],
+  certificacoes:[["CompTIA A+","planejada"],["CompTIA Network+","planejada"],["CompTIA Security+","planejada"],["CCNA","planejada"],["eJPT","planejada"],["OSCP","planejada"]]
+};
+document.getElementById('cv-body').innerHTML = `
+  <div class="cv-block"><p class="mono section-eyebrow">OBJETIVO</p><p>${cv.objetivo}</p></div>
+  <div class="cv-block"><p class="mono section-eyebrow">RESUMO</p><p>${cv.resumo}</p></div>
+  <div class="cv-block"><p class="mono section-eyebrow">EXPERIÊNCIA</p>${cv.experiencia.map(e=>`
+    <div style="margin-bottom:14px"><strong>${e.cargo}</strong><br><span class="mono" style="font-size:.8rem;color:var(--text-light)">${e.periodo} · ${e.local}</span><p style="font-size:.9rem;color:var(--text-muted);margin:4px 0 0">${e.descricao}</p></div>`).join('')}</div>
+  <div class="cv-block"><p class="mono section-eyebrow">COMPETÊNCIAS TÉCNICAS</p>
+    <div class="cards">${cv.competencias.map(c=>`<div><p class="mono" style="font-size:.75rem;color:var(--text-light);text-transform:uppercase">${c.categoria}</p><ul style="padding-left:18px;margin:4px 0;font-size:.9rem">${c.itens.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('')}</div>
+  </div>
+  <div><p class="mono section-eyebrow">CERTIFICAÇÕES</p>${cv.certificacoes.map(c=>`<span class="pill">${c[0]} · ${c[1]}</span>`).join('')}</div>
+`;
+
+const cmds = {help:"comandos: help, sobre, projetos, contato, clear", sobre:"Alan Mateus — dev .NET/Next.js, professor de TI, fundador do Grupo AMtech Digital.", projetos:"veja /portfolio para os 13 sistemas do ecossistema Aura.", contato:"alandesouzasilva04@gmail.com"};
+const termOut = document.getElementById('termOut');
+document.getElementById('termIn').addEventListener('keydown', e => {
+  if(e.key !== 'Enter') return;
+  const cmd = e.target.value.trim(); if(!cmd) return;
+  if(cmd === 'clear'){ termOut.innerHTML=''; } else {
+    const out = cmds[cmd] ?? `comando não encontrado: ${cmd}`;
+    termOut.innerHTML += `<p>$ ${cmd}</p><p>${out}</p>`;
+  }
+  termOut.scrollTop = termOut.scrollHeight;
+  e.target.value = '';
+});
+
+function go(page){
+  document.querySelectorAll('[data-page]').forEach(s => s.classList.remove('show'));
+  document.querySelector(`[data-page="${page}"]`).classList.add('show');
+  document.querySelectorAll('#navlinks a').forEach(a => a.classList.toggle('active', a.dataset.l === page));
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

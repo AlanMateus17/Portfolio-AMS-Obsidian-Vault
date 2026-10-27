@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Mateus — Blueprint</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0E3A45; --panel:#123F4B; --line:#2E6E8E; --line-dim:rgba(46,110,142,.35);
+  --brass:#C08A3E; --paper:#F7F5F0; --muted:#8FA6AB; --run:#5FD3A3;
+}
+body{
+  background:
+    linear-gradient(var(--line-dim) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(90deg, var(--line-dim) 1px, transparent 1px) 0 0/48px 48px,
+    var(--bg);
+  color:var(--paper); font-family:'IBM Plex Sans',sans-serif; min-height:100vh; padding-bottom:64px;
+}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:28px 32px;font-family:'JetBrains Mono',monospace;font-size:.8rem;border-bottom:1px solid var(--line-dim)}
+nav .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:.01em}
+nav .links{display:flex;gap:28px;color:var(--muted)}
+nav .links a{color:var(--muted);text-decoration:none}
+nav .links a:hover{color:var(--brass)}
+
+.hero{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center;padding:64px 32px 40px;max-width:1180px;margin:0 auto}
+.tag{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--brass);margin-bottom:18px;display:flex;align-items:center;gap:8px}
+.tag .led{width:7px;height:7px;border-radius:50%;background:var(--run);box-shadow:0 0 6px var(--run);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.9rem;line-height:1.08;margin-bottom:22px;max-width:520px}
+.lead{color:var(--muted);max-width:440px;font-size:1.02rem;margin-bottom:30px}
+.cta{display:inline-flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:.85rem;padding:13px 22px;border:1px solid var(--brass);color:var(--brass);text-decoration:none}
+.cta:hover{background:var(--brass);color:var(--bg)}
+
+.schematic{position:relative}
+svg{width:100%;height:auto;overflow:visible}
+.wire{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:400;stroke-dashoffset:400;animation:draw 1.6s ease-out forwards}
+.wire.d1{animation-delay:.1s} .wire.d2{animation-delay:.3s} .wire.d3{animation-delay:.5s} .wire.d4{animation-delay:.7s} .wire.d5{animation-delay:.9s}
+@keyframes draw{to{stroke-dashoffset:0}}
+.chip{fill:var(--panel);stroke:var(--line);stroke-width:1.2;cursor:pointer;transition:stroke .2s}
+.chip:hover, .chip.active{stroke:var(--brass)}
+.pin{stroke:var(--line);stroke-width:1.5}
+.led-dot{opacity:0;animation:fadein .3s forwards}
+.led-dot.d1{animation-delay:1.5s}
+@keyframes fadein{to{opacity:1}}
+text{font-family:'JetBrains Mono',monospace;fill:var(--paper)}
+text.small{fill:var(--muted);font-size:8px}
+text.status-run{fill:var(--run)}
+text.status-plan{fill:var(--muted)}
+
+.callout{position:absolute;background:var(--panel);border:1px solid var(--brass);padding:14px 16px;width:200px;font-family:'IBM Plex Sans',sans-serif;font-size:.8rem;opacity:0;pointer-events:none;transition:opacity .15s;z-index:5}
+.callout.show{opacity:1}
+.callout .cname{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--brass);font-size:.85rem;margin-bottom:6px}
+.callout .cstack{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--muted);margin-top:8px;line-height:1.5}
+
+.titleblock{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--brass);z-index:20}
+.titleblock .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--muted)}
+.titleblock .cell{padding:10px 20px;border-left:1px solid var(--line-dim)}
+.titleblock .cell:first-child{border-left:none}
+.titleblock .cell b{color:var(--paper);display:block;font-size:.75rem;margin-top:2px}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="brand">ALAN MATEUS</span>
+  <div class="links">
+    <a href="#">Sobre</a><a href="#">Portfólio</a><a href="#">Segurança</a><a href="#">Currículo</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div>
+    <p class="tag"><span class="led"></span>ECOSSISTEMA AURA — 13 SISTEMAS EM CONSTRUÇÃO</p>
+    <h1>Arquiteto sistemas multi-tenant, um componente de cada vez.</h1>
+    <p class="lead">Clean Architecture, RLS no PostgreSQL, .NET 10 + Next.js. Cada bloco no esquema ao lado é um sistema real — passe o mouse pra abrir a ficha técnica.</p>
+    <a class="cta" href="#">VER PRANCHA COMPLETA →</a>
+  </div>
+
+  <div class="schematic" id="schematicWrap">
+    <svg viewBox="0 0 460 360" id="svg">
+      <path class="wire d1" d="M230,70 L230,120"/>
+      <path class="wire d2" d="M230,120 L120,175"/>
+      <path class="wire d3" d="M230,120 L340,175"/>
+      <path class="wire d4" d="M120,205 L230,260"/>
+      <path class="wire d5" d="M340,205 L230,260"/>
+      <line class="pin" x1="210" y1="60" x2="210" y2="70"/><line class="pin" x1="250" y1="60" x2="250" y2="70"/>
+
+      <g class="chip-group" data-i="0">
+        <rect class="chip" x="185" y="70" width="90" height="50" rx="2"/>
+        <text x="230" y="92" text-anchor="middle" font-size="10" font-weight="700">KAIXARA</text>
+        <text x="230" y="106" text-anchor="middle" class="small status-run">● em desenvolvimento</text>
+        <circle class="led-dot d1" cx="272" cy="76" r="2.5" fill="#5FD3A3"/>
+      </g>
+
+      <g class="chip-group" data-i="1">
+        <rect class="chip" x="75" y="175" width="90" height="50" rx="2"/>
+        <text x="120" y="197" text-anchor="middle" font-size="10" font-weight="700">ROTARA</text>
+        <text x="120" y="211" text-anchor="middle" class="small status-plan">○ planejado</text>
+      </g>
+
+      <g class="chip-group" data-i="2">
+        <rect class="chip" x="295" y="175" width="90" height="50" rx="2"/>
+        <text x="340" y="197" text-anchor="middle" font-size="10" font-weight="700">RENDARA</text>
+        <text x="340" y="211" text-anchor="middle" class="small status-plan">○ planejado</text>
+      </g>
+
+      <g class="chip-group" data-i="3">
+        <rect class="chip" x="185" y="260" width="90" height="50" rx="2"/>
+        <text x="230" y="282" text-anchor="middle" font-size="10" font-weight="700">SABERIA</text>
+        <text x="230" y="296" text-anchor="middle" class="small status-plan">○ planejado</text>
+      </g>
+    </svg>
+
+    <div class="callout" id="callout">
+      <p class="cname" id="cname"></p>
+      <p id="cexcerpt" style="color:var(--muted)"></p>
+      <p class="cstack" id="cstack"></p>
+    </div>
+  </div>
+</div>
+
+<div class="titleblock">
+  <div class="wrap">
+    <div class="cell">DESENHADO POR<b>Alan Mateus</b></div>
+    <div class="cell">PROJETO<b>Ecossistema Aura</b></div>
+    <div class="cell">REVISÃO<b>v0.3 — set/2026</b></div>
+    <div class="cell">ESCALA<b>13 sistemas</b></div>
+    <div class="cell">STATUS<b style="color:var(--run)">1 em build</b></div>
+  </div>
+</div>
+
+<script>
+const data = [
+  {nome:"AM Kaixara", excerpt:"PDV multi-tenant com RLS.", stack:".NET 10 · PostgreSQL · Next.js"},
+  {nome:"AM Rotara", excerpt:"Pedidos com geolocalização em tempo real.", stack:".NET · PostGIS · SignalR"},
+  {nome:"AM Rendara", excerpt:"Finanças com rebalanceamento ARCA.", stack:".NET · PostgreSQL · Next.js"},
+  {nome:"AM Saberia", excerpt:"Plataforma educacional com certificados.", stack:".NET · PostgreSQL · Next.js"}
+];
+const callout = document.getElementById('callout');
+document.querySelectorAll('.chip-group').forEach(g => {
+  g.addEventListener('mouseenter', () => {
+    const d = data[g.dataset.i];
+    document.getElementById('cname').textContent = d.nome;
+    document.getElementById('cexcerpt').textContent = d.excerpt;
+    document.getElementById('cstack').textContent = d.stack;
+    const rect = g.querySelector('rect').getBoundingClientRect();
+    const wrapRect = document.getElementById('schematicWrap').getBoundingClientRect();
+    callout.style.left = (rect.left - wrapRect.left + rect.width + 14) + 'px';
+    callout.style.top = (rect.top - wrapRect.top) + 'px';
+    callout.classList.add('show');
+    g.querySelector('.chip').classList.add('active');
+  });
+  g.addEventListener('mouseleave', () => {
+    callout.classList.remove('show');
+    g.querySelector('.chip').classList.remove('active');
+  });
+});
+</script>
+</body>
+</html>

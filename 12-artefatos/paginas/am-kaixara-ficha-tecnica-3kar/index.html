@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AM Kaixara — Ficha técnica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0E3A45; --panel:#123F4B; --panel2:#0F323C; --line:#2E6E8E; --line-dim:rgba(46,110,142,.35);
+  --brass:#C08A3E; --paper:#F7F5F0; --muted:#8FA6AB; --run:#5FD3A3; --plan:#5B7076;
+}
+body{
+  background:
+    linear-gradient(var(--line-dim) 1px, transparent 1px) 0 0/48px 48px,
+    linear-gradient(90deg, var(--line-dim) 1px, transparent 1px) 0 0/48px 48px,
+    var(--bg);
+  color:var(--paper); font-family:'IBM Plex Sans',sans-serif; min-height:100vh; padding-bottom:70px;
+}
+.switcher{position:sticky;top:0;z-index:50;display:flex;background:#0A2229;padding:10px;gap:8px;justify-content:center;border-bottom:1px solid var(--line-dim)}
+.switcher button{font-family:'JetBrains Mono',monospace;font-size:.75rem;padding:8px 16px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+.switcher button.active{background:var(--brass);color:var(--bg);border-color:var(--brass)}
+[data-view]{display:none}
+[data-view].show{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+nav.top{display:flex;justify-content:space-between;align-items:center;padding:24px 32px;font-family:'JetBrains Mono',monospace;font-size:.78rem;border-bottom:1px solid var(--line-dim)}
+nav.top .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem}
+nav.top .crumb{color:var(--muted)}
+nav.top .crumb b{color:var(--brass)}
+
+/* ===== INDEX (grid de chips) ===== */
+.index-grid{padding:48px 32px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.chip-card{background:var(--panel);border:1px solid var(--line-dim);padding:0;position:relative;cursor:pointer;transition:border-color .15s}
+.chip-card:hover{border-color:var(--brass)}
+.chip-card .pins-top,.chip-card .pins-bottom{display:flex;justify-content:space-evenly}
+.chip-card .pin{width:1px;height:8px;background:var(--line)}
+.chip-card .body{padding:18px 16px;text-align:center}
+.chip-card .name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:.95rem;margin-bottom:6px}
+.chip-card .status{font-family:'JetBrains Mono',monospace;font-size:.68rem}
+.chip-card .status.run{color:var(--run)}
+.chip-card .status.plan{color:var(--plan)}
+
+/* ===== DETAIL (datasheet) ===== */
+.detail-head{padding:40px 32px 24px;max-width:1180px;margin:0 auto}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--run);border:1px solid var(--run);padding:4px 10px;margin-bottom:16px}
+.badge .led{width:6px;height:6px;border-radius:50%;background:var(--run);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.detail-head h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2.4rem;margin-bottom:10px}
+.detail-head p.excerpt{color:var(--muted);max-width:560px}
+
+.datasheet{max-width:1180px;margin:0 auto;padding:0 32px 40px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.panel{background:var(--panel);border:1px solid var(--line-dim);padding:22px 24px}
+.panel h3{font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.03em;color:var(--brass);margin-bottom:16px;border-bottom:1px solid var(--line-dim);padding-bottom:10px}
+.spec-row{display:flex;justify-content:space-between;font-size:.85rem;padding:8px 0;border-bottom:1px solid rgba(46,110,142,.18)}
+.spec-row span:first-child{color:var(--muted)}
+.spec-row span:last-child{font-family:'JetBrains Mono',monospace;text-align:right}
+
+.mini-svg{width:100%;height:auto}
+.mini-wire{fill:none;stroke:var(--line);stroke-width:1.3}
+.mini-chip{fill:var(--panel2);stroke:var(--line)}
+.mini-chip.hl{stroke:var(--brass)}
+.mini-text{font-family:'JetBrains Mono',monospace;fill:var(--paper);font-size:8px}
+.mini-text.muted{fill:var(--muted)}
+
+.feature-list{list-style:none}
+.feature-list li{display:flex;gap:10px;padding:9px 0;border-bottom:1px solid rgba(46,110,142,.18);font-size:.85rem}
+.feature-list li .pin-num{font-family:'JetBrains Mono',monospace;color:var(--brass);width:24px;flex-shrink:0}
+
+.changelog{width:100%;max-width:1180px;margin:0 auto;padding:0 32px 40px}
+.changelog table{width:100%;border-collapse:collapse;font-size:.82rem}
+.changelog th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--brass);border-bottom:1px solid var(--line);padding:8px 12px}
+.changelog td{padding:10px 12px;border-bottom:1px solid rgba(46,110,142,.18);color:var(--muted)}
+.changelog td.rev{font-family:'JetBrains Mono',monospace;color:var(--paper)}
+
+.titleblock{position:fixed;left:0;right:0;bottom:0;background:var(--panel);border-top:1px solid var(--brass);z-index:20}
+.titleblock .wrap{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--muted)}
+.titleblock .cell{padding:10px 20px;border-left:1px solid var(--line-dim)}
+.titleblock .cell:first-child{border-left:none}
+.titleblock .cell b{color:var(--paper);display:block;font-size:.73rem;margin-top:2px}
+</style>
+</head>
+<body>
+
+<div class="switcher">
+  <button class="active" onclick="show('index')">Índice — 13 sistemas</button>
+  <button onclick="show('detail')">Ficha técnica — AM Kaixara</button>
+</div>
+
+<nav class="top">
+  <span class="brand">ALAN MATEUS</span>
+  <span class="crumb" id="crumb">Portfólio</span>
+</nav>
+
+<!-- INDEX -->
+<section data-view="index" class="show">
+  <div class="index-grid" id="grid"></div>
+</section>
+
+<!-- DETAIL -->
+<section data-view="detail">
+  <div class="detail-head">
+    <span class="badge"><span class="led"></span>EM DESENVOLVIMENTO</span>
+    <h1>AM Kaixara</h1>
+    <p class="excerpt">Sistema de ponto de venda multi-tenant. Isolamento de dados por Row-Level Security no PostgreSQL, API em Clean Architecture, frontend em Next.js.</p>
+  </div>
+
+  <div class="datasheet">
+    <div class="panel">
+      <h3>ESPECIFICAÇÕES</h3>
+      <div class="spec-row"><span>Backend</span><span>.NET 10 · ASP.NET Core</span></div>
+      <div class="spec-row"><span>Banco de dados</span><span>PostgreSQL + RLS</span></div>
+      <div class="spec-row"><span>Cache / fila</span><span>Redis</span></div>
+      <div class="spec-row"><span>Tempo real</span><span>SignalR</span></div>
+      <div class="spec-row"><span>Frontend</span><span>Next.js · TypeScript</span></div>
+      <div class="spec-row"><span>Arquitetura</span><span>Clean Architecture + DDD</span></div>
+      <div class="spec-row"><span>Modelo de tenant</span><span>tenant_id + RLS</span></div>
+    </div>
+
+    <div class="panel">
+      <h3>DIAGRAMA INTERNO</h3>
+      <svg class="mini-svg" viewBox="0 0 320 200">
+        <path class="mini-wire" d="M60,40 L60,90"/>
+        <path class="mini-wire" d="M60,90 L150,90"/>
+        <path class="mini-wire" d="M150,90 L150,40"/>
+        <path class="mini-wire" d="M150,90 L150,140"/>
+        <path class="mini-wire" d="M150,90 L250,90"/>
+        <path class="mini-wire" d="M250,90 L250,40"/>
+        <path class="mini-wire" d="M250,90 L250,140"/>
+
+        <rect class="mini-chip hl" x="20" y="15" width="80" height="25"/>
+        <text class="mini-text" x="60" y="31" text-anchor="middle">NEXT.JS UI</text>
+
+        <rect class="mini-chip hl" x="110" y="15" width="80" height="25"/>
+        <text class="mini-text" x="150" y="31" text-anchor="middle">API .NET 10</text>
+
+        <rect class="mini-chip" x="210" y="15" width="80" height="25"/>
+        <text class="mini-text" x="250" y="31" text-anchor="middle">SIGNALR HUB</text>
+
+        <rect class="mini-chip" x="20" y="75" width="80" height="25"/>
+        <text class="mini-text" x="60" y="91" text-anchor="middle">JWT AUTH</text>
+
+        <rect class="mini-chip hl" x="110" y="125" width="80" height="25"/>
+        <text class="mini-text" x="150" y="141" text-anchor="middle">POSTGRESQL</text>
+        <text class="mini-text muted" x="150" y="152" text-anchor="middle">+ ROW-LEVEL SECURITY</text>
+
+        <rect class="mini-chip" x="210" y="125" width="80" height="25"/>
+        <text class="mini-text" x="250" y="141" text-anchor="middle">REDIS</text>
+      </svg>
+    </div>
+
+    <div class="panel">
+      <h3>FUNCIONALIDADES (PINOUT)</h3>
+      <ul class="feature-list">
+        <li><span class="pin-num">01</span><span>Cadastro de produtos, categorias e variações por tenant</span></li>
+        <li><span class="pin-num">02</span><span>Frente de caixa com atalhos de teclado e leitor de código de barras</span></li>
+        <li><span class="pin-num">03</span><span>Controle de estoque com baixa automática na venda</span></li>
+        <li><span class="pin-num">04</span><span>Isolamento total de dados entre lojas via RLS no PostgreSQL</span></li>
+        <li><span class="pin-num">05</span><span>Emissão fiscal via interface plugável (IEmissorFiscal)</span></li>
+      </ul>
+    </div>
+
+    <div class="panel">
+      <h3>DECISÕES DE ARQUITETURA</h3>
+      <ul class="feature-list">
+        <li><span class="pin-num">→</span><span>RLS em vez de schema-per-tenant: menos overhead operacional pra escalar até centenas de lojas</span></li>
+        <li><span class="pin-num">→</span><span>Clean Architecture: troca de banco/fiscal sem reescrever regra de negócio</span></li>
+        <li><span class="pin-num">→</span><span>SignalR: dashboard de vendas atualiza em tempo real sem polling</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="changelog">
+    <div class="panel">
+      <h3>HISTÓRICO DE REVISÃO</h3>
+      <table>
+        <tr><th>REV</th><th>DATA</th><th>MUDANÇA</th></tr>
+        <tr><td class="rev">v0.3</td><td>set/2026</td><td>Fundamentos da arquitetura Clean + RLS definidos</td></tr>
+        <tr><td class="rev">v0.2</td><td>ago/2026</td><td>Recomeço do zero após revisão do escopo original (AuraPOS)</td></tr>
+        <tr><td class="rev">v0.1</td><td>2024</td><td>Primeira tentativa como AuraPOS</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="titleblock">
+  <div class="wrap" id="tblock">
+    <div class="cell">DESENHADO POR<b>Alan Mateus</b></div>
+    <div class="cell">PROJETO<b id="tb-project">Ecossistema Aura</b></div>
+    <div class="cell">REVISÃO<b>v0.3 — set/2026</b></div>
+    <div class="cell">ESCALA<b id="tb-scale">13 sistemas</b></div>
+    <div class="cell">STATUS<b style="color:var(--run)" id="tb-status">1 em build</b></div>
+  </div>
+</div>
+
+<script>
+const sistemas = [
+  {nome:"AM Kaixara", status:"run"},{nome:"AM Rotara", status:"plan"},{nome:"AM Rendara", status:"plan"},
+  {nome:"AM Saberia", status:"plan"},{nome:"AM Taskoro", status:"plan"},{nome:"AM Vendra", status:"plan"},
+  {nome:"AM Vynla", status:"plan"},{nome:"AM Canteira", status:"plan"},{nome:"AM Consertta", status:"plan"},
+  {nome:"AM Horaria", status:"plan"},{nome:"AM Petara", status:"plan"},{nome:"AM Predara", status:"plan"},
+  {nome:"AM Projeta", status:"plan"}
+];
+document.getElementById('grid').innerHTML = sistemas.map(s => `
+  <div class="chip-card" onclick="show('detail')">
+    <div class="pins-top">${'<div class="pin"></div>'.repeat(5)}</div>
+    <div class="body">
+      <p class="name">${s.nome}</p>
+      <p class="status ${s.status}">${s.status === 'run' ? '● em desenvolvimento' : '○ planejado'}</p>
+    </div>
+    <div class="pins-bottom">${'<div class="pin"></div>'.repeat(5)}</div>
+  </div>`).join('');
+
+function show(v){
+  document.querySelectorAll('[data-view]').forEach(s=>s.classList.remove('show'));
+  document.querySelector(`[data-view="${v}"]`).classList.add('show');
+  document.querySelectorAll('.switcher button').forEach((b,i)=>b.classList.toggle('active', (v==='index'&&i===0)||(v==='detail'&&i===1)));
+  document.getElementById('crumb').innerHTML = v === 'detail' ? 'Portfólio / <b>AM Kaixara</b>' : 'Portfólio';
+}
+</script>
+</body>
+</html>

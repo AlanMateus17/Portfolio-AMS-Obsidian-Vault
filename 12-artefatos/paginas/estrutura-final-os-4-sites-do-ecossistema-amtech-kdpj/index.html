@@ -1,0 +1,194 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}</style><style>:root{color-scheme:light dark;--md-bg:#fff;--md-text:rgba(0,0,0,.8);--md-muted:rgba(0,0,0,.6);--md-fill:rgba(0,0,0,.04);--md-fill-strong:rgba(0,0,0,.06);--md-rule:rgba(0,0,0,.1);--md-rule-strong:rgba(0,0,0,.16);--md-link:hsl(210 100% 45%)}@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){--md-bg:#0d0d0d;--md-text:rgba(255,255,255,.85);--md-muted:rgba(255,255,255,.6);--md-fill:rgba(255,255,255,.06);--md-fill-strong:rgba(255,255,255,.09);--md-rule:rgba(255,255,255,.14);--md-rule-strong:rgba(255,255,255,.22);--md-link:hsl(210 100% 72%)}}:root[data-theme="dark"]{color-scheme:dark;--md-bg:#0d0d0d;--md-text:rgba(255,255,255,.85);--md-muted:rgba(255,255,255,.6);--md-fill:rgba(255,255,255,.06);--md-fill-strong:rgba(255,255,255,.09);--md-rule:rgba(255,255,255,.14);--md-rule-strong:rgba(255,255,255,.22);--md-link:hsl(210 100% 72%)}:root[data-theme="light"]{color-scheme:light}@media print{:root,:root[data-theme="dark"]{color-scheme:light;--md-bg:#fff;--md-text:rgba(0,0,0,.8);--md-muted:rgba(0,0,0,.6);--md-fill:rgba(0,0,0,.04);--md-fill-strong:rgba(0,0,0,.06);--md-rule:rgba(0,0,0,.1);--md-rule-strong:rgba(0,0,0,.16);--md-link:hsl(210 100% 45%)}}body{background:var(--md-bg);color:var(--md-text);max-width:720px;margin:0 auto;padding:32px;display:flex;flex-direction:column;gap:10px;font:14px/1.55 -apple-system,BlinkMacSystemFont,'SF Pro','Segoe UI',sans-serif;overflow-wrap:break-word}body>:first-child{margin-top:0}h1,h2,h3,h4,h5,h6{margin:6px 0 0;line-height:1.25;font-weight:600;text-wrap:balance}h1{font-size:1.35em}h2{font-size:1.15em;color:var(--md-muted)}h3,h4,h5,h6{font-size:1em}p,ul,ol,blockquote,table,pre,hr{margin:0}strong{font-weight:600}a{color:var(--md-link);text-decoration:none}a:hover{text-decoration:underline}ul,ol{display:flex;flex-direction:column;gap:6px;padding-left:22px}ul{list-style:disc}ol{list-style:decimal}:is(li,td,th)>*+:is(p,ul,ol,blockquote){margin-top:6px}blockquote{display:flex;flex-direction:column;gap:10px;border-left:2px solid var(--md-rule);padding-left:10px;color:var(--md-muted)}:not(pre)>code{background:var(--md-fill);padding:1px 3px;border-radius:4px;font:.92em 'SF Mono',ui-monospace,Menlo,Consolas,monospace}a>code{background:none;color:inherit}pre{background:var(--md-fill);padding:10px 12px;border-radius:6px;overflow-x:auto;font:12px/1.5 'SF Mono',ui-monospace,Menlo,Consolas,monospace;margin-block:4px}pre code{background:none;padding:0;font:inherit}table{width:100%;border-collapse:separate;border-spacing:2px;font:inherit}th,td{padding:6px 8px;border-radius:3px;text-align:left;vertical-align:top}th{background:var(--md-fill-strong);font-weight:600}td{background:var(--md-fill)}:is(th,td) :not(pre)>code{background:transparent}hr{border:0;border-top:1px solid var(--md-rule-strong);margin-block:10px}img{max-width:100%;height:auto;border-radius:4px}</style>
+</head><body>
+<h1>Estrutura final — os 4 sites do ecossistema AMtech Digital</h1>
+<p>Este é o estado &quot;completo e perfeito&quot; de cada site, juntando tudo que já foi decidido: design, conteúdo, funcionalidades. Serve como checklist de chegada — o que já existe no código atual está marcado.</p>
+<hr>
+<h2>1. Portfólio pessoal — identidade técnica de Alan Mateus</h2>
+<p><strong>Stack:</strong> Next.js + TypeScript + Tailwind. <strong>Visual:</strong> Blueprint técnico (paleta Aura: <code>#0E3A45</code> / <code>#C08A3E</code> / <code>#F7F5F0</code>, Space Grotesk + IBM Plex Sans + JetBrains Mono).</p>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Conteúdo no estado final</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code> (home)</td>
+<td>Hero com esquema interativo dos 4 sistemas em destaque + simulação ao vivo de isolamento multi-tenant (RLS)</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/sobre</code></td>
+<td>Bio completa, foto, timeline de marcos reais da trajetória (hoje só estrutura, sem texto definitivo)</td>
+<td>🔶 estrutura pronta, texto pendente</td>
+</tr>
+<tr>
+<td><code>/portfolio</code></td>
+<td>Grade dos 13 sistemas como &quot;componentes de circuito&quot;, status visível (dev/planejado)</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/portfolio/[slug]</code></td>
+<td>Ficha técnica por sistema: specs, diagrama interno, <strong>requisitos funcionais e não-funcionais</strong>, funcionalidades, decisões de arquitetura, changelog</td>
+<td>✅ construído (RF/RNF completos só na Kaixara; os outros 12 têm rascunho a validar)</td>
+</tr>
+<tr>
+<td><code>/curriculo</code></td>
+<td>Currículo completo estruturado, com download em PDF/Word/MD</td>
+<td>✅ dados reais migrados; falta gerar os arquivos de download</td>
+</tr>
+<tr>
+<td><code>/seguranca</code></td>
+<td>Trilha de certificações (eJPT → OSCP → CRTO), setup de laboratório, writeups</td>
+<td>✅ construído; writeups reais pendentes conforme a trilha avança</td>
+</tr>
+<tr>
+<td><code>/roteiro</code></td>
+<td>Roadmap público — o que está em andamento e a ordem dos sistemas</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/terminal</code></td>
+<td>Easter egg interativo (comandos: help, sobre, projetos, contato)</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td>Rodapé (todas as páginas)</td>
+<td>&quot;Carimbo de prancha&quot; com metadados do projeto + link pros outros 3 sites</td>
+<td>✅ construído (links ainda apontam pra &quot;#&quot; até os domínios existirem)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pendências reais pro estado perfeito:</strong> foto de perfil, texto definitivo de <code>/sobre</code>, preencher datasheet completo dos outros 12 sistemas conforme saem do papel, gerar os arquivos de currículo pra download, registrar o domínio final e trocar os links do rodapé.</p>
+<hr>
+<h2>2. Blog — conteúdo publicado com regularidade</h2>
+<p><strong>Stack:</strong> Next.js + TypeScript + Tailwind (migrado do Jekyll). <strong>Visual:</strong> paleta cream/verdigris original preservada (Fraunces + DM Sans + JetBrains Mono).</p>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Conteúdo no estado final</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code> (home)</td>
+<td>Intro curta + posts recentes</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/blog</code></td>
+<td>Listagem completa de posts</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/blog/[slug]</code></td>
+<td>Post individual</td>
+<td>✅ construído (2 posts reais; o segundo está resumido — falta colar o texto integral)</td>
+</tr>
+<tr>
+<td><code>/blog/tags</code></td>
+<td>Filtro por tag</td>
+<td>⬜ não construído — só vale a pena com mais volume de posts</td>
+</tr>
+<tr>
+<td><code>/blog/arquivo</code></td>
+<td>Listagem por data</td>
+<td>⬜ não construído, mesmo motivo</td>
+</tr>
+<tr>
+<td><code>/faq</code></td>
+<td>Perguntas sobre comentários, curtidas, newsletter</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/trilha</code></td>
+<td>Progresso de leitura do visitante, salvo no navegador dele</td>
+<td>✅ construído e funcional</td>
+</tr>
+<tr>
+<td><code>/contato</code></td>
+<td>E-mail e LinkedIn</td>
+<td>✅ construído</td>
+</tr>
+<tr>
+<td><code>/privacidade</code></td>
+<td>Texto legal</td>
+<td>🔶 placeholder, falta revisão jurídica de verdade</td>
+</tr>
+<tr>
+<td>Newsletter</td>
+<td>Captura de e-mail segmentada por tema (MailerLite)</td>
+<td>⬜ integração de backend/serviço externo — não é só frontend</td>
+</tr>
+<tr>
+<td>Comentários</td>
+<td>Qualquer visitante comenta; aprovação manual antes de publicar</td>
+<td>⬜ precisa de backend (hoje o Jekyll não tinha isso implementado de verdade, era conceito)</td>
+</tr>
+<tr>
+<td>Rodapé</td>
+<td>Nav cruzada mínima — nunca repete a bio completa do portfólio</td>
+<td>✅ construído</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pendências reais:</strong> texto integral do segundo post, decidir se posts continuam como dado TypeScript ou migram pra MDX/CMS headless quando o volume crescer, revisar texto de privacidade, decidir stack de backend pra newsletter/comentários.</p>
+<hr>
+<h2>3. Grupo AMtech Digital — vitrine comercial da empresa</h2>
+<p><strong>Stack:</strong> ainda não iniciado. <strong>Visual:</strong> a definir — pode herdar o blueprint do portfólio (é a mesma marca-mãe) ou ter identidade institucional própria, mais &quot;corporativa&quot;.</p>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Conteúdo no estado final</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/</code> (home)</td>
+<td>Institucional: o que a AMtech faz, linhas de atuação</td>
+</tr>
+<tr>
+<td><code>/produtos</code></td>
+<td>Os sistemas Aura em tom <strong>comercial</strong> (o que resolve, planos, botão de contratar/demo) — nunca a arquitetura técnica, isso fica no portfólio</td>
+</tr>
+<tr>
+<td><code>/servicos</code></td>
+<td>Freelance, consultoria de TI, manutenção — formulário de orçamento</td>
+</tr>
+<tr>
+<td><code>/equipe</code></td>
+<td>Você + a sócia que assume a consultoria do AuraWealth, bio curta linkando pro portfólio</td>
+</tr>
+<tr>
+<td><code>/contato</code></td>
+<td>Dados comerciais: CNPJ, e-mail, WhatsApp</td>
+</tr>
+<tr>
+<td><code>/termos</code>, <code>/privacidade</code></td>
+<td>Páginas legais — só aqui, não espalhadas pelos outros sites</td>
+</tr>
+<tr>
+<td>Rodapé</td>
+<td>Link pro portfólio pessoal (&quot;conheça o fundador&quot;)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Por que ainda não começou:</strong> combinamos que esse site nasce como landing enxuta (institucional + &quot;em breve&quot;) só depois que o CNPJ (MEI vs. SLU) e ao menos um produto estiverem vendáveis de verdade — caso contrário fica uma vitrine vazia que pede retrabalho quando a papelada mudar.</p>
+<hr>
+<h2>4. AM Mentor (Lógica e Máquina) — sem alterações</h2>
+<p>Continua exatamente como está — não faz parte desta rodada de atualização, por decisão sua desde o início. Fica de fora até você decidir mexer nele.</p>
+<hr>
+<h2>Regras que amarram os 4 (não mudam)</h2>
+<ol>
+<li><strong>Identidade completa</strong> (bio, currículo) — só no portfólio pessoal</li>
+<li><strong>Conteúdo/opinião</strong> — só no blog</li>
+<li><strong>Produto/serviço comercial</strong> — só no site da AMtech</li>
+<li><strong>Cada site linka os outros no rodapé, nenhum duplica o conteúdo do outro</strong></li>
+</ol>
+
+</body></html>
