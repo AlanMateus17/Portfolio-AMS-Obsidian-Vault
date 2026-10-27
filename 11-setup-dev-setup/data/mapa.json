@@ -1,0 +1,372 @@
+{
+ "sistemas": [
+  {
+   "nome": "Windows 11 Home",
+   "origem": "Já instalado",
+   "fase": "ok",
+   "onde": "SSD atual (NVMe 1)",
+   "porque": "Host do dia a dia: apps com janela, GPU, drivers. Também é o que a maioria das empresas usa no notebook do dev .NET."
+  },
+  {
+   "nome": "Ubuntu no WSL2",
+   "origem": "Já instalado",
+   "fase": "ok",
+   "onde": "Dentro do Windows",
+   "porque": "Onde o código roda. Ubuntu é o Linux mais comum em servidores e containers, então é o que mais aparece em vaga."
+  },
+  {
+   "nome": "Arch Linux + Omarchy",
+   "origem": "Seu plano (estilo Akita)",
+   "fase": "f3",
+   "onde": "Pendrive ou SSD USB agora; segundo NVMe depois",
+   "porque": "Primeiro a instalação manual pelo ArchWiki num pendrive ou SSD USB, portátil e sem tocar no Windows; depois no segundo NVMe com boot próprio. Ensina Linux por dentro e vira destaque no currículo."
+  },
+  {
+   "nome": "Kali Linux",
+   "origem": "Trilha de segurança",
+   "fase": "f3",
+   "onde": "Pendrive com persistência e VM (VirtualBox)",
+   "porque": "Caixa de ferramentas de pentest, não sistema do dia a dia. No pendrive você leva o Kali para qualquer máquina sua; na VM você monta laboratório com alvos (Metasploitable, Juice Shop). Sempre só contra alvos seus ou autorizados. Entra com Security+ e eJPT."
+  },
+  {
+   "nome": "Secure Boot e BitLocker",
+   "origem": "Antes de dar boot num pendrive",
+   "fase": "dec",
+   "onde": "Firmware do Nitro (tecla F2) e menu de boot (F12)",
+   "porque": "Kali e a ISO oficial do Arch não dão boot com o Secure Boot ligado. Desligar o Secure Boot muda o que o TPM mede, e o Windows pede a chave de recuperação do BitLocker. Antes: suspenda o BitLocker (manage-bde -protectors -disable C:) e tenha a chave no KeePassXC. Depois: religue o Secure Boot e reative (manage-bde -protectors -enable C:)."
+  },
+  {
+   "nome": "Ubuntu Server / Debian",
+   "origem": "Homelab",
+   "fase": "f2",
+   "onde": "VM agora, NAS ou PC velho depois",
+   "porque": "Servidor sem interface, só SSH. É onde você treina deploy de verdade, proxy reverso, firewall e backup."
+  },
+  {
+   "nome": "Windows Server (avaliação)",
+   "origem": "Sugestão",
+   "fase": "fut",
+   "onde": "VM",
+   "porque": "Active Directory está em quase toda empresa grande e é o alvo principal em pentest corporativo (OSCP cobra AD). A versão de avaliação é gratuita por tempo limitado."
+  },
+  {
+   "nome": "RHEL / Rocky Linux",
+   "origem": "Sugestão",
+   "fase": "fut",
+   "onde": "VM",
+   "porque": "Linux corporativo de banco, governo e indústria. Vale conhecer o básico (dnf, SELinux, systemd) depois de dominar Ubuntu."
+  }
+ ],
+ "nuvens": [
+  {
+   "nome": "Microsoft Azure",
+   "papel": "1º · casa com sua stack",
+   "fase": "f2",
+   "detalhes": [
+    {
+     "k": "Por quê",
+     "v": "A stack do Aura é .NET 10; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft."
+    },
+    {
+     "k": "Certificações",
+     "v": "AZ-900 (fundamentos) e depois AZ-204 (desenvolvedor)."
+    },
+    {
+     "k": "Prática",
+     "v": "Publicar um sistema AM no Azure com Terraform, Key Vault e deploy pelo GitHub Actions."
+    }
+   ]
+  },
+  {
+   "nome": "Amazon Web Services",
+   "papel": "2º · maior mercado",
+   "fase": "f3",
+   "detalhes": [
+    {
+     "k": "Por quê",
+     "v": "Maior fatia do mercado e a nuvem mais usada pelos desenvolvedores. Muitas vagas pedem AWS mesmo em times .NET."
+    },
+    {
+     "k": "Certificações",
+     "v": "Cloud Practitioner e depois Developer Associate."
+    },
+    {
+     "k": "Prática",
+     "v": "Subir o mesmo sistema na AWS (ECS ou App Runner, RDS, S3) e comparar com o Azure. Isso vira post no blog e aula."
+    }
+   ]
+  },
+  {
+   "nome": "Google Cloud",
+   "papel": "3º · só o básico",
+   "fase": "fut",
+   "detalhes": [
+    {
+     "k": "Por quê",
+     "v": "Cresce rápido, puxado por IA e dados, mas aparece menos em vaga .NET no Brasil."
+    },
+    {
+     "k": "Certificação",
+     "v": "Nenhuma por agora; só conhecer os serviços equivalentes."
+    },
+    {
+     "k": "Prática",
+     "v": "Usar quando um projeto de IA ou BigQuery pedir."
+    }
+   ]
+  },
+  {
+   "nome": "Regra de ouro para as três",
+   "papel": "Custo",
+   "fase": "f1",
+   "detalhes": [
+    {
+     "k": "Conta",
+     "v": "Use os níveis gratuitos e crie alerta de orçamento (ex.: US$ 5) no primeiro dia."
+    },
+    {
+     "k": "Infra",
+     "v": "Tudo por código (Terraform/OpenTofu), para destruir com um comando e não esquecer nada ligado."
+    },
+    {
+     "k": "Local",
+     "v": "Azurite simula o Storage do Azure; emuladores evitam gastar enquanto aprende."
+    }
+   ]
+  }
+ ],
+ "mercado": {
+  "nuvem": {
+   "fonte": "Synergy Research, 2º trimestre de 2026",
+   "dados": [
+    {
+     "n": "AWS",
+     "v": 28
+    },
+    {
+     "n": "Microsoft",
+     "v": 20
+    },
+    {
+     "n": "Google",
+     "v": 15
+    }
+   ]
+  },
+  "uso": {
+   "fonte": "Stack Overflow Developer Survey 2026",
+   "dados": [
+    {
+     "n": "Docker",
+     "v": 59.1
+    },
+    {
+     "n": "AWS",
+     "v": 41.8
+    },
+    {
+     "n": "Kubernetes",
+     "v": 26
+    },
+    {
+     "n": "Azure",
+     "v": 25.1
+    },
+    {
+     "n": "Google Cloud",
+     "v": 24.5
+    },
+    {
+     "n": "Terraform",
+     "v": 18.3
+    }
+   ]
+  },
+  "tendencias": [
+   {
+    "t": "Engenharia de IA e agentes",
+    "d": "Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, Microsoft.Extensions.AI, MCP e os agentes do Claude Code."
+   },
+   {
+    "t": "Arquitetura de software",
+    "d": "32% esperam mais demanda por arquitetos. Você já está no caminho certo com Clean Architecture, DDD e ADRs; falta mensageria e sistemas distribuídos."
+   },
+   {
+    "t": "Plataforma e DevOps",
+    "d": "Kubernetes, Terraform, CI/CD e observabilidade aparecem em vaga pleno e sênior. Docker sozinho já é obrigatório."
+   },
+   {
+    "t": "DevSecOps e LGPD",
+    "d": "Segurança dentro do pipeline (CodeQL, Trivy, gitleaks) e cuidado com dados pessoais. Combina com sua pós em cibersegurança."
+   },
+   {
+    "t": "Inglês",
+    "d": "Aparece como diferencial em toda lista de mercado. A documentação de tudo acima está em inglês primeiro."
+   }
+  ]
+ },
+ "roteiro": [
+  {
+   "etapa": "Fundação",
+   "quando": "Agora até dez/2027 · Passos 1 a 8 da trilha de estudo do vault",
+   "o_que": "Terminar o núcleo do setup; C#/.NET, SQL, Python, Git, Docker Compose e testes. Entregar o primeiro sistema AM com CI no GitHub Actions. Isso já atende a maioria das vagas júnior .NET."
+  },
+  {
+   "etapa": "Nuvem Azure",
+   "quando": "Conta e deploy do sistema exemplo com o Passo 5 (≈ abr a jun/2027); produção do AM Kaixara no Passo 10 (≈ 2028)",
+   "o_que": "AZ-900 e deploy do AM Kaixara no Azure com Terraform, Key Vault e OIDC. Começar a observabilidade com OpenTelemetry e Aspire."
+  },
+  {
+   "etapa": "Engenharia de dados",
+   "quando": "Depois do Passo 8 e das Finanças F4–F5 (≈ 2028), 1 noite por semana · IA2 da Trilha de Dados e IA",
+   "o_que": "Data Engineering Zoomcamp usando os seus próprios dados de venda: DuckDB, dbt sobre o banco de métricas, Airflow agendando, PySpark local. Fecha com o painel de lucro lendo modelos dbt testados."
+  },
+  {
+   "etapa": "IA aplicada",
+   "quando": "Depois do Passo 9 e do IA0 (≈ 2028) · IA5 da Trilha de Dados e IA",
+   "o_que": "RAG com pgvector dentro de um sistema AM, um servidor MCP próprio e os agentes do Claude Code."
+  },
+  {
+   "etapa": "IA profunda e treino",
+   "quando": "Depois do IA3 (≈ 2029) · IA4 e IA6 da Trilha de Dados e IA",
+   "o_que": "PyTorch e redes neurais do zero (Zero to Hero, fast.ai), Transformers e o curso de LLM da Hugging Face. Primeiro fine-tuning QLoRA de um 8B no Kaggle com um dataset só seu, avaliação contra o modelo base e o resultado rodando no Ollama. A matemática da licenciatura (álgebra linear, cálculo, probabilidade) entra aqui."
+  },
+  {
+   "etapa": "Linux e segurança",
+   "quando": "Pendrives e Linux em paralelo desde já, 1 a 2 noites por semana; Security+ → eJPT na vez da trilha de Pentest, depois do Passo 8",
+   "o_que": "Kali em pendrive com persistência e em VM para a trilha Security+ → eJPT; Arch instalado num pendrive ou SSD USB, depois no segundo NVMe."
+  },
+  {
+   "etapa": "Distribuído e plataforma",
+   "quando": "2028 · junto do Passo 12 (plataforma interna)",
+   "o_que": "RabbitMQ e Kafka, autenticação OIDC, Kubernetes local (kind). AZ-204."
+  },
+  {
+   "etapa": "Segunda nuvem e sênior",
+   "quando": "2029 em diante · Passos 13 e 14 e a fase sênior",
+   "o_que": "AWS (Cloud Practitioner → Developer Associate), Windows Server/AD para OSCP, homelab com Ubuntu Server."
+  }
+ ],
+ "pecas": [
+  {
+   "nome": "Acervo AMtech",
+   "tipo": "Ferramenta Python",
+   "fase": "f1",
+   "descricao": "Converte todos os seus documentos para o Obsidian, separa pessoais, terceiros e escola, e sugere produtos. Já existe: tools/acervo/acervo.py."
+  },
+  {
+   "nome": "CLAUDE.md padrão do Aura",
+   "tipo": "Contexto do agente",
+   "fase": "f1",
+   "descricao": "Modelo copiado para cada repo: stack, camadas, nomes, tecnologias rejeitadas e como rodar testes."
+  },
+  {
+   "nome": "Subagente revisor-csharp",
+   "tipo": "Agente do Claude Code",
+   "fase": "f1",
+   "descricao": "Caça seus erros recorrentes: PascalCase, throw sem if, atribuição esquecida no construtor."
+  },
+  {
+   "nome": "Skill /commit",
+   "tipo": "Skill do Claude Code",
+   "fase": "f1",
+   "descricao": "Mensagens no padrão Conventional Commits a partir do diff."
+  },
+  {
+   "nome": "dotfiles + install.sh",
+   "tipo": "Repositório",
+   "fase": "f1",
+   "descricao": "Reconstrói o ambiente (WSL agora, Arch depois) com um comando."
+  },
+  {
+   "nome": "Skill /novo-sistema-aura",
+   "tipo": "Skill do Claude Code",
+   "fase": "f2",
+   "descricao": "Esqueleto de sistema AM: solução Clean Arch, Aspire, compose, testes, CLAUDE.md, Actions e Terraform."
+  },
+  {
+   "nome": "Módulos Terraform do Aura",
+   "tipo": "Infra como código",
+   "fase": "f2",
+   "descricao": "Um módulo reaproveitável (app + PostgreSQL + Key Vault) usado por todos os sistemas, primeiro no Azure."
+  },
+  {
+   "nome": "Hooks do Claude Code + Git",
+   "tipo": "Hooks",
+   "fase": "f2",
+   "descricao": "Pós-edição: dotnet format. pre-commit: gitleaks e testes. post-commit: sinal para o aura-status."
+  },
+  {
+   "nome": "aura-mcp",
+   "tipo": "Servidor MCP em C#",
+   "fase": "f3",
+   "descricao": "Expõe ao agente o catálogo dos 13 sistemas, ADRs e o vault. Projeto de portfólio de IA com sua stack."
+  },
+  {
+   "nome": "Subagente arquiteto-aura",
+   "tipo": "Agente do Claude Code",
+   "fase": "f3",
+   "descricao": "Confere Clean Arch/DDD e escreve o rascunho do ADR."
+  },
+  {
+   "nome": "aura-status",
+   "tipo": "Ferramenta C#",
+   "fase": "f2",
+   "descricao": "Painel de repos, backup, Dependabot e estudos. Depois, módulo da Waybar no Arch."
+  },
+  {
+   "nome": "Laboratório de segurança",
+   "tipo": "Repositório + VMs",
+   "fase": "f3",
+   "descricao": "Configuração das VMs e writeups das máquinas resolvidas."
+  },
+  {
+   "nome": "AMtech Dev Edition",
+   "tipo": "Scripts sobre o Omarchy",
+   "fase": "fut",
+   "descricao": "Sua edição do Arch com tema Aura e ambiente .NET."
+  },
+  {
+   "nome": "Pipeline de treino AMtech",
+   "tipo": "Repositório Python",
+   "fase": "f3",
+   "descricao": "Gera o dataset a partir das suas fontes, treina no Kaggle, avalia, registra no MLflow e publica o GGUF no Ollama. Um comando por etapa."
+  },
+  {
+   "nome": "Projeto dbt das métricas",
+   "tipo": "Repositório dbt",
+   "fase": "f2",
+   "descricao": "Modelos de vendas, gastos e publicações com testes; o painel de lucro passa a ler daqui."
+  }
+ ],
+ "fora": [
+  {
+   "item": "Dual boot no SSD atual",
+   "motivo": "Não no SSD do Windows, pelo risco de perder dados. O Arch entra do mesmo jeito: em pendrive agora e no 2º NVMe, com boot próprio, quando você comprar o disco (fase Linux nativo do roteiro)."
+  },
+  {
+   "item": "Kali como sistema principal",
+   "motivo": "Kali é caixa de ferramentas de pentest, não ambiente de dev. Ele entra em pendrive com persistência e em VM (fases Dados, IA e pendrives e Linux nativo)."
+  },
+  {
+   "item": "Treinar um 8B na GTX 1650",
+   "motivo": "A placa tem 4 GB e o QLoRA de 8B pede 6 GB. O treino entra pelo Kaggle e por GPU alugada em 2027, e em casa quando a workstation com GPU chegar (fase Infraestrutura própria)."
+  },
+  {
+   "item": "Mobile nativo (Kotlin, Swift, Flutter)",
+   "motivo": "Abriria outra stack. O app mobile entra em 2028 com .NET MAUI, na mesma linguagem do Aura (fase Distribuído, plataforma e segunda nuvem)."
+  },
+  {
+   "item": "OpenClaw",
+   "motivo": "Histórico sério de instâncias expostas e execução de código não confiável."
+  },
+  {
+   "item": "Bun, Hono, Rust, Tauri, gRPC",
+   "motivo": "Rejeitados por você para o Aura."
+  },
+  {
+   "item": "Postman, IDEs pagas, SaaS pagos",
+   "motivo": "Você prefere open source; Bruno, DBeaver e VS Code cobrem."
+  }
+ ]
+}

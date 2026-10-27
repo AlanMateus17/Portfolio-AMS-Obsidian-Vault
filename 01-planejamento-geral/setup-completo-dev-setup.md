@@ -17,11 +17,13 @@ atualizado: 2026-10-26
 
 ## 1. O que existe no repositório `dev-setup`
 
+> **Agora está tudo dentro deste vault**, na pasta [11-setup-dev-setup](../11-setup-dev-setup/00-INDICE-DO-SETUP.md): os documentos, os 17 fluxogramas, o roteiro passo a passo, as páginas interativas, os dados e os scripts. As datas das fases seguem a trilha de estudo (ver a coluna "Quando").
+
 | Peça | O que é, em palavras simples |
 |---|---|
 | **Mapa do ecossistema** (`ecossistema.json`) | Desenho de tudo: **326 blocos** (cada programa, conta, serviço ou sistema) ligados por **609 conexões**, em **23 camadas** |
-| **Roteiro de implantação** (`implantacao.json`) | A receita, em ordem: **cerca de 34 fases e mais de 240 passos**, cada passo com "pronto quando" e "quem faz" |
-| **Acompanhamento** (`acompanhamento.html`) | A página onde você marca o que já fez. Tem o filtro **"Só o que dá para fazer hoje"** (cerca de 157 passos só com o notebook e contas grátis) |
+| **Roteiro de implantação** (`implantacao.json`) | A receita, em ordem: **34 fases e 253 passos**, cada passo com "pronto quando" e "quem faz" |
+| **Acompanhamento** (`acompanhamento.html`) | A página onde você marca o que já fez. Tem o filtro **"Só o que dá para fazer hoje"** (168 passos só com o notebook e contas grátis) |
 | **Portfólio** (`portfolio.json`) | As **47 ofertas** de renda, pontuadas — detalhadas em [fontes-de-renda-completas](fontes-de-renda-completas.md) |
 | **Negócios** (`negocios.json`) | Os números dos **9 negócios de Barbacena**, com simulador |
 | **Scripts do Windows** | `diagnostico.ps1` (só lê o notebook), instalador, verificador, e o atalho `RODAR-DIAGNOSTICO.cmd` (duplo clique) |
@@ -46,42 +48,42 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** é a lista do que montar primeiro. As primeiras 15 fases (umas 51 horas) usam só o que você já tem. Até a primeira venda do curso são cerca de **75 horas**, umas **15 semanas a 5 horas por semana** (quinta e sexta de manhã).
 
-| Fase | Nome | O que você ganha com ela | Quando |
-|---:|---|---|---|
-| 0 | Diagnóstico | Saber o que o notebook já tem e o que falta (sem instalar nada) | Semana 1 |
-| — | Senhas e contas | Cofre de senhas (KeePassXC), 2FA, recuperação de contas — **nenhuma senha passa pelo Claude** | Semana 1; 5 contas por semana até dez/2026 |
-| 1 | Preparar | Pastas, disco, Windows Update, pontos de restauração | Semana 1 |
-| 2 | Windows | Programas de trabalho instalados pelo script | Semana 1 |
-| 3 | Linux (WSL2) | Ubuntu dentro do Windows, linguagens e ferramentas | Semana 2 |
-| 4 | GitHub e CI | Repositórios, commits assinados, testes automáticos | Semana 2 |
-| 5 | Agentes de IA | Claude Code e assistentes rodando com segurança | Semana 2 |
-| 6 | Backup e segurança | Cópia automática (regra 3-2-1), Defender, criptografia | Semana 3 |
-| 7 | Acervo | Todos os seus documentos organizados no Obsidian | Semanas 3–4 |
-| 8 | Claude e assistentes | Conectores (Drive, Gmail, Agenda) e rotinas | Semana 4 |
-| 9 | Automação e medição | n8n, painel de métricas (Grafana) | Semana 4 |
-| 10 | Pipeline de conteúdo | Gravação → transcrição → peças → aprovação | Semana 5 |
-| 11 | Estúdio | Áudio, câmera, luz, voz clonada (com consentimento seu) | Semana 5 |
-| 12 | Contas, canais e sites | Instagram, YouTube, newsletter, página com afiliados | Semanas 6–7 |
-| 13 | Vendas e finanças no CPF | Agenda com Pix, carnê-leão, Hotmart/Kiwify — **aulas, sites e afiliados já vendem aqui** | Semanas 8–10 |
-| 14 | Vendas medidas | Cada venda cai no painel | Semana 11 |
-| 15 | Teste do núcleo | Conferir tudo de ponta a ponta | Semana 11 |
-| 16 | **Primeira venda** | Mini-curso no ar: gravar 5 aulas, página, isca grátis, pré-venda, venda real | Semanas 12–15 (jan–fev/2027) |
-| 17 | Base dos sistemas AM | Fundação do Kaixara e dos outros | Jan–abr/2027 |
-| 18 | Nuvem e deploy | Azure (antes da AWS), Vercel, VPS | Jan–abr/2027 |
-| 19 | Editora | Produção do livro | Quando o capítulo 1 ficar pronto |
-| 20 | Dados, IA e pendrives | Laboratório de IA; **Arch e Kali em pendrive** (sem dual boot) | Semana 2 em diante e 2027 |
-| 21 | Mais ofertas, uma por vez | As 20 ofertas seguintes, pela pontuação | Fev–dez/2027 |
-| 22 | Marketing pago | Anúncios, só com oferta que já vende | 2027 |
-| 23 | Linux nativo | Arch + Omarchy no dia a dia | 2027, por gatilho |
-| 24 | IA nos sistemas AM | aura-copilot e analytics de verdade | 2027 |
-| 25 | Sistemas AM à venda | Kaixara, Rotara e outros com cliente pagante | 2027, por gatilho |
-| 26 | CNPJ | Abrir a empresa quando a renda justificar | 2027, por gatilho |
-| 27 | Agentes do grupo | Atendente de WhatsApp, orçamentista, cobrador, pós-venda, editor, analista semanal, organizador fiscal, comprador, revisor de oferta | 2027 |
-| 28 | Editora depois do primeiro livro | Kit do professor, adoção por escolas, traduções | Depois do livro |
-| 29 | Distribuído, plataforma e 2ª nuvem | Kubernetes, AWS | 2028 |
-| 30 | Infraestrutura própria | NAS, homelab, servidor (ver [infraestrutura de 10 anos](infraestrutura-fisica-10-anos.md)) | 2028 |
-| 31 | Negócios de Barbacena | Um por vez, pelos 5 portões | Ondas A, B e C |
-| 32 | Estudo contínuo | A [Trilha Principal](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) roda o tempo todo | Sempre |
+| Fase | Nome | O que você ganha com ela | Quando | Primeiro item no Plano Mestre |
+|---|---|---|---|---|
+| 0 | Diagnóstico: o que você já tem | Saber exatamente o que o notebook já tem de hardware, segurança, programas, contas e documentos, e começar o roteiro a partir daí. | Antes de tudo · semana 1 (out/2026) | `S-diag-pasta` |
+| 1 | Preparar | Nada se perde, o hardware está no lugar e as contas estão protegidas antes de mexer na máquina. | Semana 1 · out/2026 | `S-backup-inicial` |
+| 2 | Senhas: recuperar, trocar e guardar | Toda conta com senha única guardada no KeePassXC, verificação em duas etapas nas críticas e um jeito de recuperar tudo se perder o notebook ou o celular. | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026 | `S-keepass` |
+| 3 | Windows | Os programas do setup instalados, o navegador com o Claude e o WSL2 pronto. | Semana 1 · out/2026 | `S-win-simular` |
+| 4 | Linux (WSL2) | O Ubuntu com tudo o que o código precisa, commits assinados e o ambiente versionado. | Semana 2 · nov/2026 | `S-ubuntu-usuario` |
+| 5 | GitHub e CI | O repositório no ar, com testes automáticos verdes a cada envio e o trabalho organizado. | Semana 2 · nov/2026 | `S-repo-criar` |
+| 6 | Agentes de IA | O Claude Code trabalhando dentro da sandbox, com as suas regras, ferramentas e memória. | Semana 2 · nov/2026 | `S-claude-login` |
+| 7 | Backup e segurança | Perder o notebook não faz você perder nada. | Semana 3 · nov/2026 | `S-restic-local` |
+| 8 | Acervo: tudo o que você já tem | Todos os seus documentos convertidos em conhecimento organizado no Obsidian, os pessoais separados e a lista do que dá para vender. | Semanas 3 e 4 · nov/2026 | `S-acervo-copia` |
+| 9 | Claude e assistentes | Cada recurso do Claude e cada assistente com um papel definido no setup. | Semana 4 · nov/2026 | `S-claude-app` |
+| 10 | Automação e medição | n8n, banco de métricas, Grafana e Uptime Kuma rodando. | Semana 4 · nov/2026 | `S-senhas` |
+| 11 | Pipeline de conteúdo | Gravou ou escreveu, as peças aparecem na fila de aprovação. | Semana 5 · nov/2026 | `S-marca` |
+| 12 | Estúdio de conteúdo | Gravar, editar e montar imagens no mesmo padrão toda semana, sem pensar. | Semana 5 · dez/2026 | `S-obs-cenas` |
+| 13 | Contas, canais e sites | Perfis, domínio, e-mail e sites prontos para receber o que o pipeline produz. | Semanas 6 e 7 · dez/2026 | `S-perfis` |
+| 14 | Vendas e finanças no CPF | Cada oferta pode ser vendida, recebida e declarada do jeito certo. | Semanas 8 a 10 · dez/2026 a jan/2027 | `S-govbr` |
+| 15 | Vendas medidas | Cada venda chega sozinha ao banco e aparece no painel de lucro. | Semana 11 · jan/2027 | `S-tunel` |
+| 16 | Teste do núcleo | Os três testes de ponta a ponta passam: daqui em diante, alimentar o sistema já faz tudo sozinho. | Semana 11 · jan/2027 | `S-teste-dev` |
+| 17 | Primeira venda: o mini-curso no ar | A primeira venda real pela internet, com entrega, suporte, imposto e números no painel. | Semanas 12 a 15 · jan a fev/2027 | `S-mc-roteiro` |
+| 18 | Base dos sistemas AM | Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy. | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 | `S-template-aura` |
+| 19 | Nuvem e deploy | As contas de nuvem criadas por código, com custo sob controle. | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) | `S-nuvem-clis` |
+| 20 | Editora | O livro sai de um repositório com CI, pronto para virar PDF, EPUB e impressão. | Quando o capítulo 1 estiver pronto · ⏸ espera: O capítulo 1 e o seu modelo de criação prontos | `S-modelo-metodo` |
+| 21 | Dados, IA e pendrives | O laboratório de dados e de treino no ar, um modelo seu rodando no Ollama e os pendrives de Kali e Arch dando boot. | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) | `S-pendrive-kali` |
+| 22 | Mais ofertas, uma por vez | Cada oferta do portfólio entra na esteira na ordem da pontuação: uma em construção e uma em validação por vez. | Fev a dez/2027, uma oferta por vez · ⏸ espera: A primeira venda do mini-curso aconteceu | `S-of-meu-setup` |
+| 23 | Marketing pago e crescimento | Pôr dinheiro em anúncio só quando a venda orgânica provou a oferta. | A partir de fev/2027 · ⏸ espera: O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar | `S-ads-meta` |
+| 24 | Linux nativo e laboratório completo | Arch com boot próprio, VMs de laboratório e a segurança física em dia. | 2027, conforme cada compra | `S-nvme-arch` |
+| 25 | IA dentro dos sistemas AM | Busca e assistente com os seus dados dentro de um sistema AM. | Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5 | `S-rag-sistema` |
+| 26 | Sistemas AM à venda | Os sistemas viram produto por assinatura. | 2027 · ⏸ espera: O primeiro sistema AM pronto e testado com um cliente | `S-saas` |
+| 27 | CNPJ e formalização | Sair do CPF na hora certa, com nota fiscal e cobrança automáticas. | Quando a renda pedir · ⏸ espera: A renda passou do valor de virada definido com o contador | `S-cnpj` |
+| 28 | Agentes do grupo | Atendimento, orçamento, cobrança e análise rodando com a sua aprovação. | Junto com o primeiro CNPJ · ⏸ espera: Clientes e vendas recorrentes | `S-ag-analista` |
+| 29 | Editora: depois do primeiro livro | O mesmo livro em mais formatos, públicos e idiomas. | Depois do primeiro livro · ⏸ espera: O primeiro livro publicado | `S-grafica` |
+| 30 | Distribuído, plataforma e segunda nuvem | O que pesa em vaga pleno e sênior. | 2028 | `S-mensageria` |
+| 31 | Infraestrutura própria | Servidor em casa e máquina de IA quando o grupo pedir. | 2028, quando o grupo pedir | `S-nas` |
+| 32 | Negócios do grupo em Barbacena | Um negócio por vez, cada um só depois que o anterior passa no portão. | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano · ⏸ espera: Os 5 portões do planejador: negócio anterior se pagando há 3 meses, capital em caixa, alguém de confiança tocando, sistema AM rodando e a sua reserva intacta | `S-planejador-real` |
+| 33 | Estudo contínuo | As trilhas de estudo ligadas ao setup, sem copiar conteúdo de ninguém. | Contínuo, desde a semana 2 | `S-github-education` |
 
 > Os nomes e datas das fases vêm da conversa; a coluna "o que você ganha" é um resumo em linguagem simples feito a partir do nome de cada fase. A numeração exata pode variar em uma posição por causa da fase de senhas, que foi inserida depois. O detalhe de cada passo está no `roteiro.md` e no `acompanhamento.html` do `dev-setup`.
 

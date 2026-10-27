@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>Mapa do Setup AMtech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
+<style>
+/* Layout: abertura com a decisão sobre SOs e nuvem, depois a pilha de camadas (topo = operação e público, base = hardware), gerada dos mesmos dados do diagrama, com pontes, fluxos, mercado, ordem de estudo e cortes. Paleta do Aura Design System. */
+:root{
+  --bg:#F7F5F0; --surface:#FFFFFF; --ink:#13262B; --muted:#5B6B6E; --line:#DCD8CE;
+  --aura:#0E3A45; --gold:#C08A3E; --gold-soft:#F3E7D3; --aura-soft:#E2ECEC;
+  --ok:#2F7A4F; --ok-bg:#E3F1E8; --f1:#9A5B12; --f1-bg:#FBEBD2; --f2:#1E5C8C; --f2-bg:#E1EDF7;
+  --f3:#6B4A92; --f3-bg:#EEE7F6; --fut:#5B6B6E; --fut-bg:#ECEAE4; --cut:#A33A3A; --cut-bg:#F8E3E3;
+  --bar:#0E3A45; --bar2:#C08A3E;
+  --display:"Fraunces",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0B1A1E; --surface:#112429; --ink:#E9EEEC; --muted:#9AAEB0; --line:#24414A;
+  --aura:#7FC4C9; --gold:#D9A85E; --gold-soft:#3A2D18; --aura-soft:#163238;
+  --ok:#7CCB9A; --ok-bg:#16301F; --f1:#E8B46A; --f1-bg:#3A2A12; --f2:#86B9E6; --f2-bg:#152A3D;
+  --f3:#C3A6E6; --f3-bg:#2A2038; --fut:#A9B6B7; --fut-bg:#1E2E32; --cut:#EE9A9A; --cut-bg:#3A1C1C;
+  --bar:#7FC4C9; --bar2:#D9A85E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1A1E; --surface:#112429; --ink:#E9EEEC; --muted:#9AAEB0; --line:#24414A;
+  --aura:#7FC4C9; --gold:#D9A85E; --gold-soft:#3A2D18; --aura-soft:#163238;
+  --ok:#7CCB9A; --ok-bg:#16301F; --f1:#E8B46A; --f1-bg:#3A2A12; --f2:#86B9E6; --f2-bg:#152A3D;
+  --f3:#C3A6E6; --f3-bg:#2A2038; --fut:#A9B6B7; --fut-bg:#1E2E32; --cut:#EE9A9A; --cut-bg:#3A1C1C;
+  --bar:#7FC4C9; --bar2:#D9A85E; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:36px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(28px,6vw,40px);line-height:1.1;margin:0;text-wrap:balance;color:var(--aura)}
+h2{font-family:var(--display);font-weight:600;font-size:24px;margin:0 0 4px;text-wrap:balance;color:var(--aura)}
+h3{text-wrap:balance}
+.lede{color:var(--muted);max-width:64ch;margin:8px 0 0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.filters button{font:500 13px var(--sans);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--aura);border-color:var(--aura);color:var(--bg)}
+.filters button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.badge{font:500 11px var(--mono);letter-spacing:.04em;padding:2px 7px;border-radius:4px;white-space:nowrap;font-style:normal}
+.ok{color:var(--ok);background:var(--ok-bg)} .f1{color:var(--f1);background:var(--f1-bg)} .f2{color:var(--f2);background:var(--f2-bg)}
+.f3{color:var(--f3);background:var(--f3-bg)} .fut{color:var(--fut);background:var(--fut-bg)} .dec{color:var(--cut);background:var(--cut-bg)}
+.src{width:9px;height:9px;border-radius:50%;flex:none;display:inline-block}
+.src.plano,.src.local{background:var(--aura)} .src.sug,.src.remoto{border:1.5px solid var(--gold);background:transparent} .src.criar,.src.fisico{background:var(--gold)}
+.key{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block;margin-left:6px;vertical-align:middle}
+.body .lab{color:var(--muted)}
+.stack{display:flex;flex-direction:column}
+.layer{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.layer header{display:flex;gap:12px;align-items:baseline;padding:14px 16px 10px;border-bottom:1px solid var(--line)}
+.layer .num{font:500 13px var(--mono);color:var(--gold);flex:none}
+.layer h3{margin:0;font-size:17px;font-weight:600}
+.layer .role{margin:2px 0 0;font-size:13px;color:var(--muted)}
+.layer.win header{background:var(--gold-soft)} .layer.lin header{background:var(--aura-soft)}
+.items{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+details.it{background:var(--surface);min-width:0;box-shadow:1px 1px 0 var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:8px;padding:10px 16px}
+summary::-webkit-details-marker{display:none}
+summary .n{font-weight:500;flex:1;min-width:0}
+summary::after{content:"+";font:500 15px var(--mono);color:var(--muted)}
+details[open] summary::after{content:"–"}
+.body{padding:0 16px 14px 33px;font-size:14px;display:flex;flex-direction:column;gap:6px}
+.body b{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted);display:block}
+.bridge{display:flex;gap:10px;align-items:stretch;padding:6px 0 6px 22px}
+.bridge .rail{width:2px;background:repeating-linear-gradient(var(--gold) 0 5px,transparent 5px 9px);flex:none}
+.bridge p{margin:6px 0;font-size:13px;color:var(--muted)}
+.bridge p strong{color:var(--ink);font-weight:500}
+.flows{display:flex;flex-direction:column;gap:14px}
+.flow{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.flow h3{margin:0 0 2px;font-size:16px;font-weight:600}
+.flow .when{font-size:13px;color:var(--muted);margin:0 0 10px}
+.flow ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+.flow li::marker{font-family:var(--mono);color:var(--gold)}
+code{font-family:var(--mono);font-size:.88em;background:var(--aura-soft);padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.card .top{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.card h4{margin:0;font-size:15px;font-weight:600;min-width:0}
+.card .top h4{flex:1}
+.card p{margin:0;font-size:14px}
+.card .kind{font:500 11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:14px}
+.card dt{font:500 11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:3px}
+.card dd{margin:0;min-width:0}
+.note{border-left:3px solid var(--gold);padding:10px 14px;background:var(--surface);font-size:14px;max-width:72ch;border-radius:0}
+.cut{display:grid;grid-template-columns:minmax(0,max-content) minmax(0,1fr);gap:8px 16px;font-size:14px;margin:0}
+.cut dt{font-weight:500}
+.cut dd{margin:0;color:var(--muted)}
+@media(max-width:520px){.cut{grid-template-columns:1fr;gap:0}.cut dd{margin-bottom:8px}}
+.empty{padding:12px 16px;font-size:13px;color:var(--muted)}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.chart h3{margin:0;font-size:15px;font-weight:600}
+.chart .srcline{font-size:12px;color:var(--muted);margin:0}
+.bar{display:grid;grid-template-columns:110px 1fr 46px;gap:8px;align-items:center;font-size:13px}
+.bar .track{height:12px;background:var(--aura-soft);border-radius:3px;overflow:hidden}
+.bar .fill{height:100%;background:var(--bar);border-radius:3px}
+.bar .v{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.road{display:flex;flex-direction:column;gap:0;counter-reset:r}
+.step{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--line)}
+.step:first-child{border-top:0}
+.step .k{font:500 22px var(--display);color:var(--gold);line-height:1}
+.step h3{margin:0;font-size:16px;font-weight:600}
+.step .when{font:500 12px var(--mono);color:var(--muted);margin:2px 0 6px}
+.step p{margin:0;font-size:14px;max-width:68ch}
+</style>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Acer Nitro AN515-45 · Grupo AMtech Digital · versão 3 · out/2026</div>
+    <h1>Mapa do setup</h1>
+    <p class="lede">O setup completo de desenvolvimento, do hardware até a nuvem: o que você já escolheu, o que as empresas grandes pedem hoje e o que está crescendo para os próximos anos. Toque em qualquer item para ver o que ele faz e com quem conversa.</p>
+    <p class="lede"><a href="https://claude.ai/artifact/4Ze2J4Y1oKgAkjuQmbAAG1" target="_top" style="color:var(--aura)">← Ver o diagrama completo do ecossistema</a></p>
+  </header>
+
+  <section>
+    <div class="eyebrow">Sistemas operacionais</div>
+    <h2>Arch, Kali e os outros: sim, mas do jeito certo</h2>
+    <p class="lede">Você deve aprender Arch e Kali. O que eu desaconselhei foi o <em>jeito</em>: particionar o SSD atual em dual boot agora. O risco é perder dados de novo e travar o setup que já funciona. Com o segundo NVMe e máquinas virtuais, você tem todos os sistemas sem esse risco.</p>
+    <div class="grid" style="margin-top:14px" id="os"></div>
+    <p class="note" style="margin-top:14px">O Windows 11 Home não tem o Hyper-V Manager. As VMs rodam no VirtualBox (grátis, inclusive para uso comercial) ou no VMware Workstation Pro (grátis só para uso pessoal). Os dois funcionam com o WSL2 ligado, mas ficam um pouco mais lentos, porque usam a plataforma de hipervisor do Windows. Com 32 GB de RAM, rode no máximo uma ou duas VMs por vez.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Nuvem</div>
+    <h2>Azure primeiro, AWS em seguida, Google Cloud só o básico</h2>
+    <div class="grid" style="margin-top:14px" id="cloud"></div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:12px" aria-label="Legenda e filtros">
+    <div>
+      <div class="eyebrow">A pilha</div>
+      <h2>As camadas do setup</h2>
+    </div>
+    <p class="lede">Gerada a partir de <code>data/ecossistema.json</code>, a mesma fonte do diagrama: as camadas, os blocos e as conexões daqui são sempre os mesmos do <a href="https://claude.ai/artifact/4Ze2J4Y1oKgAkjuQmbAAG1" target="_top" style="color:var(--aura)">diagrama interativo</a>.</p>
+    <div class="legend">
+      <span><i class="src local"></i>Local (no notebook)</span>
+      <span><i class="src remoto"></i>Remoto (nuvem ou serviço)</span>
+      <span><i class="src fisico"></i>Físico</span>
+      <span><i class="key"></i>Precisa de conta</span>
+      <span><i class="badge f1">AGORA</i>Já faz parte</span>
+      <span><i class="badge fut">FUTURO</i>Entra depois</span>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar blocos">
+      <button id="fl-all" data-f="all" aria-pressed="true">Tudo</button>
+      <button id="fl-now" data-f="now" aria-pressed="false">Agora</button>
+      <button id="fl-fut" data-f="fut" aria-pressed="false">Futuro</button>
+      <button id="fl-conta" data-f="conta" aria-pressed="false">Precisa de conta</button>
+      <button id="fl-local" data-f="local" aria-pressed="false">Local</button>
+      <button id="fl-remoto" data-f="remoto" aria-pressed="false">Remoto</button>
+    </div>
+    <div class="stack" id="stack"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Como tudo conversa</div>
+    <h2>Fluxos do dia a dia</h2>
+    <p class="lede" style="margin-bottom:14px">Cada fluxo é uma sequência real: a ordem dos passos é a ordem em que os dados passam pelas camadas.</p>
+    <div class="flows" id="flows"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Mercado</div>
+    <h2>O que está sendo usado e pedido</h2>
+    <p class="lede" style="margin-bottom:14px">Dados recentes que justificam as escolhas acima. Docker e nuvem já são básico; Kubernetes e Terraform separam pleno de júnior; IA aplicada é o que mais cresce.</p>
+    <div class="charts">
+      <div class="chart">
+        <h3>Fatia do mercado de nuvem (receita)</h3>
+        <div id="ch1"></div>
+        <p class="srcline" id="src1"></p>
+      </div>
+      <div class="chart">
+        <h3>Uso entre desenvolvedores</h3>
+        <div id="ch2"></div>
+        <p class="srcline" id="src2"></p>
+      </div>
+    </div>
+    <div class="grid" style="margin-top:12px" id="trends"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Ordem de estudo</div>
+    <h2>Do presente para o futuro, sem abrir tudo de uma vez</h2>
+    <p class="note">Sua aposta de 12 meses é vaga de dev mais renda própria. A ordem abaixo coloca primeiro o que aparece em quase toda vaga .NET e deixa para depois o que só pesa em vagas mais avançadas. Cada etapa termina com algo publicado no GitHub, que é o que o recrutador vê.</p>
+    <div class="road" id="road" style="margin-top:8px"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Peças autorais</div>
+    <h2>Agentes, skills, hooks e ferramentas que você vai criar</h2>
+    <div class="grid" style="margin-top:14px" id="make"></div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Decisões</div>
+    <h2>Decisões: o que entra de outro jeito e o que fica de fora</h2>
+    <p class="lede" style="margin-bottom:6px">Nada do planejamento foi retirado. Os quatro primeiros entram por outro caminho, com passo e data no roteiro; os outros são decisões suas ou de segurança, e voltam se você mudar de ideia.</p>
+    <dl class="cut" style="margin-top:10px" id="cut"></dl>
+  </section>
+</div>
+
+<script>
+const DATA=__DATA__;
+const M=DATA.mapa,E=DATA.eco;
+const OS=M.sistemas.map(s=>[s.nome,s.origem,s.fase,s.onde,s.porque]);
+const CL=M.nuvens.map(n=>[n.nome,n.papel,n.fase,...n.detalhes.map(d=>[d.k,d.v])]);
+const CH1=M.mercado.nuvem.dados.map(d=>[d.n,d.v]);
+const CH2=M.mercado.uso.dados.map(d=>[d.n,d.v]);
+const TR=M.mercado.tendencias.map(x=>[x.t,x.d]);
+const RD=M.roteiro.map(r=>[r.etapa,r.quando,r.o_que]);
+const MK=M.pecas.map(p=>[p.nome,p.tipo,p.fase,p.descricao]);
+const CUT=M.fora.map(f=>[f.item,f.motivo]);
+const ESC=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const NOME=Object.fromEntries(E.blocos.map(x=>[x.id,x.rotulo.replace(/\|/g," ")]));
+const SAI={},ENT={};E.conexoes.forEach(c=>{(SAI[c.de]=SAI[c.de]||[]).push(c);(ENT[c.para]=ENT[c.para]||[]).push(c);});
+const L=E.camadas.map((c,i)=>({id:c.id,n:String(E.camadas.length-i).padStart(2,"0"),t:c.titulo,r:"",c:c.id==="win"?"win":c.id==="lin"?"lin":"",
+  items:E.blocos.filter(x=>x.camada===c.id).map(x=>{
+    const con=[...(SAI[x.id]||[]).map(k=>"→ "+ESC(NOME[k.para])+" <span class=\"lab\">("+ESC(k.rotulo)+")</span>"),...(ENT[x.id]||[]).map(k=>"← "+ESC(NOME[k.de])+" <span class=\"lab\">("+ESC(k.rotulo)+")</span>")];
+    return [ESC(NOME[x.id])+(x.conta?" <span class=\"key\" title=\"Precisa de conta\"></span>":""),x.tipo,x.futuro?"fut":"f1",ESC(x.descricao),con.length?con.join("<br>"):"Ainda sem conexões no desenho.",x.conta,ESC(x.quando||"")];
+  })}));
+const B=Object.fromEntries(E.camadas.filter(c=>c.ponte).map(c=>[c.id,ESC(c.ponte)]));
+const FL=E.fluxos.map(f=>({t:ESC(f.titulo),w:f.passos.length+" passos",s:f.passos.map(p=>"<strong>"+ESC(NOME[p.bloco])+"</strong>: "+ESC(p.descricao))}));
+const lab={ok:"OK",f1:"F1",f2:"F2",f3:"F3",fut:"FUT",dec:"DEC"};const labStack={f1:"AGORA",fut:"FUTURO"};
+document.getElementById("os").innerHTML=OS.map(([n,k,f,w,o])=>`<div class="card"><div class="top"><h4>${n}</h4><span class="badge ${f}">${lab[f]}</span></div><span class="kind">${k}</span><dl><dt>Onde</dt><dd>${w}</dd><dt>Por quê</dt><dd>${o}</dd></dl></div>`).join("");
+document.getElementById("cloud").innerHTML=CL.map(([n,k,f,...r])=>`<div class="card"><div class="top"><h4>${n}</h4><span class="badge ${f}">${lab[f]}</span></div><span class="kind">${k}</span><dl>${r.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join("")}</dl></div>`).join("");
+const st=document.getElementById("stack");
+L.forEach(ly=>{
+  const sec=document.createElement("article");
+  sec.className="layer "+ly.c;
+  sec.innerHTML=`<header><span class="num">${ly.n}</span><div><h3>${ly.t}</h3><p class="role">${ly.items.length} blocos</p></div></header><div class="items"></div><p class="empty" hidden>Nada nesta camada com esse filtro.</p>`;
+  const box=sec.querySelector(".items");
+  ly.items.forEach(([n,src,f,o,c,conta,q])=>{
+    const d=document.createElement("details");d.className="it";d.dataset.f=f;d.dataset.src=src;d.dataset.conta=conta?"1":"";
+    d.innerHTML=`<summary><i class="src ${src}"></i><span class="n">${n}</span><span class="badge ${f}">${labStack[f]}</span></summary><div class="body"><div><b>O que faz</b>${o}</div>${q?`<div><b>Quando entra</b>${q}</div>`:""}<div><b>Conversa com</b>${c}</div></div>`;
+    box.appendChild(d);
+  });
+  st.appendChild(sec);
+  if(B[ly.id]){const b=document.createElement("div");b.className="bridge";b.innerHTML=`<span class="rail" aria-hidden="true"></span><p>${B[ly.id]}</p>`;st.appendChild(b);}
+});
+document.getElementById("flows").innerHTML=FL.map(f=>`<div class="flow"><h3>${f.t}</h3><p class="when">${f.w}</p><ol>${f.s.map(x=>`<li>${x}</li>`).join("")}</ol></div>`).join("");
+const bars=(d,max)=>d.map(([a,v])=>`<div class="bar"><span>${a}</span><span class="track"><span class="fill" style="display:block;width:${(v/max*100).toFixed(1)}%"></span></span><span class="v">${String(v).replace(".",",")}%</span></div>`).join("");
+document.getElementById("ch1").innerHTML=bars(CH1,100);document.getElementById("src1").textContent=M.mercado.nuvem.fonte;document.getElementById("src2").textContent=M.mercado.uso.fonte;
+document.getElementById("ch2").innerHTML=bars(CH2,100);
+document.getElementById("trends").innerHTML=TR.map(([a,b])=>`<div class="card"><h4>${a}</h4><p>${b}</p></div>`).join("");
+document.getElementById("road").innerHTML=RD.map(([a,w,b],i)=>`<div class="step"><span class="k">${i+1}</span><div><h3>${a}</h3><p class="when">${w}</p><p>${b}</p></div></div>`).join("");
+document.getElementById("make").innerHTML=MK.map(([n,k,f,o])=>`<div class="card"><div class="top"><i class="src criar"></i><h4>${n}</h4><span class="badge ${f}">${lab[f]}</span></div><span class="kind">${k}</span><p>${o}</p></div>`).join("");
+document.getElementById("cut").innerHTML=CUT.map(([a,b])=>`<dt>${a}</dt><dd>${b}</dd>`).join("");
+const btns=[...document.querySelectorAll(".filters button")];
+function apply(f){
+  btns.forEach(b=>b.setAttribute("aria-pressed",b.dataset.f===f?"true":"false"));
+  document.querySelectorAll(".layer").forEach(ly=>{
+    let vis=0;
+    ly.querySelectorAll("details.it").forEach(d=>{
+      const p=d.dataset.f,s=d.dataset.src;
+      const show=f==="all"||(f==="now"&&p==="f1")||(f==="fut"&&p==="fut")||(f==="conta"&&d.dataset.conta==="1")||(f==="local"&&s==="local")||(f==="remoto"&&s==="remoto");
+      d.hidden=!show;if(show)vis++;
+    });
+    ly.querySelector(".empty").hidden=vis>0;
+  });
+  try{localStorage.setItem("mapa-filtro",f)}catch(e){}
+}
+btns.forEach(b=>b.addEventListener("click",()=>apply(b.dataset.f)));
+let saved="all";try{saved=localStorage.getItem("mapa-filtro")||"all"}catch(e){}
+apply(btns.some(b=>b.dataset.f===saved)?saved:"all");
+</script>
+</body>
+</html>

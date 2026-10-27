@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "ms-vscode-remote.remote-wsl",
+    "anthropic.claude-code",
+    "editorconfig.editorconfig",
+    "redhat.vscode-yaml",
+    "ms-vscode.powershell",
+    "timonwong.shellcheck",
+    "ms-dotnettools.csdevkit",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "ms-azuretools.vscode-docker",
+    "hashicorp.terraform",
+    "ms-python.python",
+    "james-yu.latex-workshop",
+    "bierner.markdown-mermaid",
+    "ltex-plus.vscode-ltex-plus"
+  ]
+}

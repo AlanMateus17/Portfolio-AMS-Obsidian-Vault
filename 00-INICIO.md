@@ -5,7 +5,7 @@ tipo: home
 
 # 🏠 Portfólio AMS — Índice
 
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md)
+> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup
 
 > Este é o **mapa** do vault. Para o dia a dia, a porta de entrada é o **[Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** — abra ele primeiro. Este índice serve para achar um documento específico quando precisar.
 
@@ -64,4 +64,5 @@ tipo: home
 - [aura-status](10-ferramentas-pessoais/aura-status-documento-projeto-final.md) ⭐ · [aura-queue](10-ferramentas-pessoais/aura-queue-documento-projeto-final.md) · [aura-secrets](10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md) · [aura-oncall](10-ferramentas-pessoais/aura-oncall-documento-projeto-final.md)
 
 ## 🗄️ Arquivo
+- `11-setup-dev-setup/` — o repositório dev-setup inteiro (documentos, 17 fluxogramas, roteiro de 253 passos, páginas e scripts): [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
 - `99-arquivo/` — documentos-mestre antigos, substituídos pelo Sumário Único. Consulta histórica apenas.

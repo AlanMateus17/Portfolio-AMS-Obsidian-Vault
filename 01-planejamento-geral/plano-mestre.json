@@ -3126,10 +3126,10 @@
   {
    "id": "S-template-aura",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Gerar o modelo de sistema com /novo-sistema-aura",
    "pronto": "Sistema exemplo sobe com 'dotnet run' e passa nos testes",
-   "quando": "Setup 18.1 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.1 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-mc-outras",
     "S-auth",
@@ -3150,10 +3150,10 @@
   {
    "id": "S-auth",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Ligar o login: Keycloak no dev e Entra ID na nuvem",
    "pronto": "Usuário de teste entra e só vê os dados da própria empresa",
-   "quando": "Setup 18.2 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.2 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-template-aura",
     "S-observabilidade-dev",
@@ -3173,10 +3173,10 @@
   {
    "id": "S-observabilidade-dev",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Ligar a observabilidade do dev: .NET Aspire, OpenTelemetry, Prometheus, Seq, Mailpit e Caddy",
    "pronto": "Painel do Aspire mostra trace de uma requisição; e-mail de teste cai no Mailpit",
-   "quando": "Setup 18.3 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.3 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-auth",
     "S-sentry",
@@ -3196,10 +3196,10 @@
   {
    "id": "S-sentry",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Criar o projeto no Sentry e ligar no modelo",
    "pronto": "Erro de teste aparece no Sentry",
-   "quando": "Setup 18.4 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.4 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-observabilidade-dev",
     "S-sonar"
@@ -3218,10 +3218,10 @@
   {
    "id": "S-sonar",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Ligar o SonarQube Cloud no repositório do modelo",
    "pronto": "Nota de qualidade aparece no pull request",
-   "quando": "Setup 18.5 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.5 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-sentry",
     "S-ghcr",
@@ -3241,10 +3241,10 @@
   {
    "id": "S-ghcr",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Publicar a imagem Docker da API no GHCR pelo CI",
    "pronto": "Imagem com a tag do commit aparece nos pacotes do GitHub",
-   "quando": "Setup 18.6 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.6 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-sonar",
     "S-templates-venda"
@@ -3263,10 +3263,10 @@
   {
    "id": "S-templates-venda",
    "trilha": "setup",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Separar o que do modelo pode virar template à venda",
    "pronto": "Lista de templates no portfólio de ofertas",
-   "quando": "Setup 18.7 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.7 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-ghcr",
     "S-vaga",
@@ -3291,7 +3291,7 @@
    "etapa": "E4",
    "titulo": "Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — quando o Passo 8 da trilha de estudo estiver feito (≈ jul a dez/2027)",
    "pronto": "10 candidaturas enviadas com o portfólio do sistema exemplo",
-   "quando": "Setup 18.8 · Base dos sistemas AM · Jan a fev/2027",
+   "quando": "Setup 18.8 · Base dos sistemas AM · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-templates-venda",
     "S-nuvem-clis",
@@ -3314,7 +3314,7 @@
    "etapa": "E3",
    "titulo": "Instalar Azure CLI, Terraform, Vercel CLI e Wrangler",
    "pronto": "Termina com 'Pronto'; verificar.sh mostra as quatro ferramentas",
-   "quando": "Setup 19.1 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.1 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-vaga",
     "S-azure-conta",
@@ -3337,7 +3337,7 @@
    "etapa": "E3",
    "titulo": "Criar a conta Azure com alerta de orçamento",
    "pronto": "'az login' entra e o alerta de gasto está ligado",
-   "quando": "Setup 19.2 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.2 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-nuvem-clis",
     "S-terraform-base",
@@ -3360,7 +3360,7 @@
    "etapa": "E3",
    "titulo": "Criar com Terraform o grupo de recursos, o banco e o Key Vault do primeiro sistema",
    "pronto": "'terraform plan' sem diferenças depois do apply",
-   "quando": "Setup 19.3 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.3 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-azure-conta",
     "S-arquivos-nuvem",
@@ -3383,7 +3383,7 @@
    "etapa": "E3",
    "titulo": "Criar o armazenamento de arquivos (R2 da Cloudflare ou Blob)",
    "pronto": "Upload de teste pelo sistema exemplo",
-   "quando": "Setup 19.4 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.4 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-terraform-base",
     "S-email-transacional",
@@ -3406,7 +3406,7 @@
    "etapa": "E3",
    "titulo": "Configurar o e-mail transacional (Resend) com o domínio verificado",
    "pronto": "E-mail de confirmação de conta chega na caixa de entrada, não no spam",
-   "quando": "Setup 19.5 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.5 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-arquivos-nuvem",
     "S-deploy-teste",
@@ -3429,10 +3429,11 @@
    "etapa": "E3",
    "titulo": "Fazer o primeiro deploy do sistema exemplo",
    "pronto": "Sistema no ar com HTTPS, login e erro de teste no Sentry",
-   "quando": "Setup 19.6 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.6 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-email-transacional",
     "S-aura-status",
+    "E-P5",
     "E-P10"
    ],
    "nota": "",
@@ -3452,7 +3453,7 @@
    "etapa": "E3",
    "titulo": "Criar o aura-status: painel de repositórios, backup e Dependabot",
    "pronto": "Painel mostra o estado de todos os repositórios",
-   "quando": "Setup 19.7 · Nuvem e deploy · Fev a abr/2027",
+   "quando": "Setup 19.7 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
    "liga": [
     "S-deploy-teste",
     "S-modelo-metodo",
@@ -3731,7 +3732,7 @@
    "etapa": "E1",
    "titulo": "Gravar o pendrive do Kali com persistência criptografada",
    "pronto": "O Kali abre pelo F12 e um arquivo salvo continua lá depois de reiniciar",
-   "quando": "Setup 21.1 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.1 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-deposito-legal",
     "S-pendrive-arch",
@@ -3754,7 +3755,7 @@
    "etapa": "E1",
    "titulo": "Instalar o Arch num pendrive rápido ou SSD USB, pelo guia oficial",
    "pronto": "O Arch portátil dá boot e abre o terminal com os seus dotfiles",
-   "quando": "Setup 21.2 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.2 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-pendrive-kali",
     "S-gpu-wsl",
@@ -3779,7 +3780,7 @@
    "etapa": "E1",
    "titulo": "Conferir a GPU dentro do Ubuntu",
    "pronto": "Aparece a GTX 1650 com o driver do Windows",
-   "quando": "Setup 21.3 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.3 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-pendrive-arch",
     "S-lab-ia"
@@ -3801,7 +3802,7 @@
    "etapa": "E1",
    "titulo": "Montar o laboratório de dados e de IA",
    "pronto": "Termina com 'Pronto' e mostra a GPU vista pelo PyTorch",
-   "quando": "Setup 21.4 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.4 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-gpu-wsl",
     "S-ollama-8b",
@@ -3824,7 +3825,7 @@
    "etapa": "E1",
    "titulo": "Rodar um modelo 8B no Ollama com parte na GPU",
    "pronto": "'ollama ps' mostra o modelo dividido entre CPU e GPU e ele responde",
-   "quando": "Setup 21.5 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.5 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-lab-ia",
     "S-zoomcamp"
@@ -3846,13 +3847,13 @@
    "etapa": "E5",
    "titulo": "Fazer o Data Engineering Zoomcamp e os cursos de IA, um módulo por semana",
    "pronto": "Módulo 1 entregue no GitHub e anotado no Obsidian",
-   "quando": "Setup 21.6 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.6 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-ollama-8b",
     "S-dbt-metricas",
     "E-ia2"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA). O tempo é só para começar; o curso leva 10 semanas. Para a IA vão as suas anotações, nunca o material do curso.",
+   "nota": "Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5). O tempo é só para começar; o curso leva 10 semanas. Para a IA vão as suas anotações, nunca o material do curso.",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -3869,13 +3870,13 @@
    "etapa": "E5",
    "titulo": "Criar o projeto dbt sobre o banco de métricas",
    "pronto": "'dbt build' verde e o painel de lucro lendo os modelos",
-   "quando": "Setup 21.7 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.7 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-zoomcamp",
     "S-airflow",
     "E-ia2"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA).",
+   "nota": "Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5).",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -3892,13 +3893,13 @@
    "etapa": "E5",
    "titulo": "Subir o Airflow e agendar o dbt todo dia",
    "pronto": "A rotina diária aparece verde no Airflow por 3 dias seguidos",
-   "quando": "Setup 21.8 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.8 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-dbt-metricas",
     "S-contas-ia",
     "E-ia2"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA).",
+   "nota": "Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5).",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -3915,12 +3916,12 @@
    "etapa": "E5",
    "titulo": "Criar as contas do Hugging Face e do Kaggle (e do RunPod, só se precisar)",
    "pronto": "Token do Hugging Face no KeePassXC; Kaggle com telefone verificado para liberar a GPU",
-   "quando": "Setup 21.9 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.9 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-airflow",
     "S-dataset"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA). No RunPod, só crédito pré-pago. Nunca ponha token em notebook público.",
+   "nota": "Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5). No RunPod, só crédito pré-pago. Nunca ponha token em notebook público.",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -3934,16 +3935,16 @@
   {
    "id": "S-dataset",
    "trilha": "setup",
-   "etapa": "E5",
+   "etapa": "E6",
    "titulo": "Montar o primeiro dataset só com conteúdo seu",
    "pronto": "Algumas centenas de pares de pergunta e resposta revisados por você, com conjunto de teste separado",
-   "quando": "Setup 21.10 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.10 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-contas-ia",
     "S-fine-tune",
     "E-ia6"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA). Fontes: suas notas, exercícios, livro e aulas que você gravou. Nada de cursos de terceiros; nada de dados de alunos sem consentimento.",
+   "nota": "Junto do IA6 da Trilha de Dados e IA (treino e fine-tuning). Fontes: suas notas, exercícios, livro e aulas que você gravou. Nada de cursos de terceiros; nada de dados de alunos sem consentimento.",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -3957,16 +3958,16 @@
   {
    "id": "S-fine-tune",
    "trilha": "setup",
-   "etapa": "E5",
+   "etapa": "E6",
    "titulo": "Primeiro fine-tuning QLoRA de um 8B no Kaggle",
    "pronto": "Adaptador salvo no Hugging Face privado e o treino registrado no MLflow",
-   "quando": "Setup 21.11 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.11 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-dataset",
     "S-modelo-no-ollama",
     "E-ia6"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA).",
+   "nota": "Junto do IA6 da Trilha de Dados e IA (treino e fine-tuning).",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -3980,16 +3981,16 @@
   {
    "id": "S-modelo-no-ollama",
    "trilha": "setup",
-   "etapa": "E5",
+   "etapa": "E6",
    "titulo": "Avaliar contra o modelo base e levar o seu modelo para o Ollama",
    "pronto": "O seu modelo ganha do base no conjunto de teste e responde no Ollama do notebook",
-   "quando": "Setup 21.12 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt, Airflow, dataset e treino depois do Passo 8 da trilha de estudo (≈ 2028), junto da Trilha de Dados e IA do vault",
+   "quando": "Setup 21.12 · Dados, IA e pendrives · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)",
    "liga": [
     "S-fine-tune",
     "S-of-meu-setup",
     "E-ia6"
    ],
-   "nota": "Depois do Passo 8 do estudo (Trilha de Dados e IA).",
+   "nota": "Junto do IA6 da Trilha de Dados e IA (treino e fine-tuning).",
    "gatilho": "",
    "fonte": "dev-setup · docs/implantacao/roteiro.md",
    "fase": 21,
@@ -4884,7 +4885,7 @@
    "etapa": "E5",
    "titulo": "RAG com pgvector dentro do primeiro sistema AM",
    "pronto": "O sistema responde perguntas com base nos dados do cliente, citando a origem",
-   "quando": "Setup 25.1 · IA dentro dos sistemas AM · Depois do Passo 9 da trilha de estudo (≈ 2028)",
+   "quando": "Setup 25.1 · IA dentro dos sistemas AM · Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5",
    "liga": [
     "S-mic-camera",
     "S-saas",
@@ -6001,6 +6002,7 @@
     "E-P4",
     "F-f1",
     "F-f2",
+    "S-deploy-teste",
     "E-P6"
    ],
    "nota": "",
@@ -6466,7 +6468,7 @@
   {
    "id": "E-ia5",
    "trilha": "estudo",
-   "etapa": "E6",
+   "etapa": "E5",
    "titulo": "IA5: LLMs aplicados (RAG, function calling, avaliação)",
    "pronto": "Tutor do AM Mentor respondendo com citação do capítulo",
    "quando": "",
@@ -6934,10 +6936,10 @@
   {
    "id": "R-templates",
    "trilha": "renda",
-   "etapa": "E2",
+   "etapa": "E3",
    "titulo": "Templates e código-fonte — Empacotar o primeiro frontend já pronto com documentação",
    "pronto": "Métrica: vendas por template",
-   "quando": "passo 18.7 · Jan a fev/2027",
+   "quando": "passo 18.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6",
    "liga": [
     "S-templates-venda"
    ],

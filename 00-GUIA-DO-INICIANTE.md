@@ -21,7 +21,7 @@ atualizado: 2026-10-26
 2. **O dinheiro de hoje:** R$ 4.900/mês (escola + restaurante). Em 2027, se sair da escola, fica só o restaurante: R$ 2.200.
 3. **A meta:** R$ 7.000 líquidos por mês, com renda feita em casa, até o fim de 2027.
 4. **As rendas que vêm primeiro:** aulas particulares, manutenção de computador, sites com mensalidade e o mini-curso de Lógica. Depois, uma oferta nova por vez. Lista completa: [fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md).
-5. **O setup** (notebook, programas, automações) é a máquina que produz aula, conteúdo e venda: [setup completo](01-planejamento-geral/setup-completo-dev-setup.md).
+5. **O setup** (notebook, programas, automações) é a máquina que produz aula, conteúdo e venda: [setup completo](01-planejamento-geral/setup-completo-dev-setup.md); os documentos, fluxogramas e scripts estão na [pasta do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
 6. **O estudo** segue 14 Passos, um de cada vez: [Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md). Tudo o que um sênior precisa saber está no [currículo](07-estudo-e-carreira/curriculo-dev-senior-completo.md).
 7. **As faculdades:** Licenciatura em Matemática (agora), depois Economia e uma faculdade para IA, uma de cada vez: [formação](07-estudo-e-carreira/formacao-academica.md).
 8. **As certificações de investimento:** CPA → CNPI → CGA → CFA, na ordem: [formação](07-estudo-e-carreira/formacao-academica.md).

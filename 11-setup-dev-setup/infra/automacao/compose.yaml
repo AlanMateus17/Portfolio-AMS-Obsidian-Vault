@@ -1,0 +1,91 @@
+# Stack de automação e medição do setup.
+#   cp .env.example .env && bash gerar-senhas.sh   (cria as senhas no .env)
+#   docker compose up -d
+#   bash ../../scripts/wsl/verificar.sh --servicos
+#
+# Tudo escuta só em 127.0.0.1: nada fica exposto na rede. Webhooks de fora (Hotmart, Kiwify)
+# entram depois por um túnel (Cloudflare Tunnel ou Tailscale Funnel), descrito em docs/implantacao.
+name: amtech
+
+services:
+  metricas-db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: amtech
+      POSTGRES_PASSWORD: ${METRICAS_SENHA:?defina METRICAS_SENHA no .env}
+      POSTGRES_DB: metricas
+      GRAFANA_DB_SENHA: ${GRAFANA_DB_SENHA:?defina GRAFANA_DB_SENHA no .env}
+      TZ: America/Sao_Paulo
+    ports:
+      - "127.0.0.1:5433:5432"
+    volumes:
+      - metricas-dados:/var/lib/postgresql/data
+      - ./sql:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U amtech -d metricas"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:${N8N_VERSAO:-latest}
+    restart: unless-stopped
+    environment:
+      N8N_ENCRYPTION_KEY: ${N8N_CHAVE:?defina N8N_CHAVE no .env}
+      GENERIC_TIMEZONE: America/Sao_Paulo
+      TZ: America/Sao_Paulo
+      N8N_DIAGNOSTICS_ENABLED: "false"
+      WEBHOOK_URL: ${N8N_WEBHOOK_URL:-http://localhost:5678/}
+    ports:
+      - "127.0.0.1:5678:5678"
+    volumes:
+      - n8n-dados:/home/node/.n8n
+      - ${AMTECH_DIR:?defina AMTECH_DIR no .env}:/files
+    depends_on:
+      metricas-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:5678/healthz >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+
+  grafana:
+    image: grafana/grafana-oss:${GRAFANA_VERSAO:-latest}
+    restart: unless-stopped
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_SENHA:?defina GRAFANA_SENHA no .env}
+      GF_USERS_ALLOW_SIGN_UP: "false"
+      GF_ANALYTICS_REPORTING_ENABLED: "false"
+      GRAFANA_DB_SENHA: ${GRAFANA_DB_SENHA}
+      TZ: America/Sao_Paulo
+    ports:
+      - "127.0.0.1:3001:3000"
+    volumes:
+      - grafana-dados:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+    depends_on:
+      metricas-db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:3000/api/health >/dev/null 2>&1 || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+
+  uptime-kuma:
+    image: louislam/uptime-kuma:${KUMA_VERSAO:-1}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3002:3001"
+    volumes:
+      - kuma-dados:/app/data
+
+volumes:
+  metricas-dados:
+  n8n-dados:
+  grafana-dados:
+  kuma-dados:

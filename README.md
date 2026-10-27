@@ -1,6 +1,6 @@
 # 📚 Portfólio AMS — Vault de Planejamento
 
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md)
+> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup
 
 Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech Digital). Navegue clicando abaixo.
 
@@ -119,5 +119,7 @@ Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech 
 - [aura-status — Documento de Projeto Final](10-ferramentas-pessoais/aura-status-documento-projeto-final.md)
 
 ---
+> 🖥️ A pasta `11-setup-dev-setup/` é o repositório dev-setup inteiro: comece pelo [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
+
 > 🗄️ A pasta `99-arquivo/` guarda versões antigas já substituídas.
 

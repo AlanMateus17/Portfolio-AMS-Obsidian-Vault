@@ -1,0 +1,21 @@
+# Extensoes do VS Code do setup. Uma por linha; linhas com # sao comentario.
+# Instale com: powershell -ExecutionPolicy Bypass -File .\scripts\windows\extensoes-vscode.ps1 -Aplicar
+# Base
+ms-vscode-remote.remote-wsl
+anthropic.claude-code
+editorconfig.editorconfig
+redhat.vscode-yaml
+ms-vscode.powershell
+timonwong.shellcheck
+# Sistemas AM (.NET, Next.js, Docker, Terraform)
+ms-dotnettools.csdevkit
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+bradlc.vscode-tailwindcss
+ms-azuretools.vscode-docker
+hashicorp.terraform
+ms-python.python
+# Livro e documentacao (LaTeX, Mermaid, revisao em portugues)
+james-yu.latex-workshop
+bierner.markdown-mermaid
+ltex-plus.vscode-ltex-plus

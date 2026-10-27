@@ -1,0 +1,15 @@
+apiVersion: 1
+datasources:
+  - name: Métricas AMtech
+    uid: metricas
+    type: grafana-postgresql-datasource
+    url: metricas-db:5432
+    user: grafana_leitor
+    isDefault: true
+    jsonData:
+      database: metricas
+      sslmode: disable
+      postgresVersion: 1700
+      timescaledb: false
+    secureJsonData:
+      password: $GRAFANA_DB_SENHA

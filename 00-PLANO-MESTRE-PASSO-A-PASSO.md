@@ -5,7 +5,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 # 🧭 Plano Mestre — tudo em um só passo a passo
 
 > **Este é o único lugar para saber o que fazer a seguir.** Ele junta os dois planejamentos:
-> o **setup** (repositório `dev-setup`, 34 fases) e o **estudo** (este vault, 14 Passos), mais
+> o **setup** (repositório `dev-setup`, 34 fases, hoje dentro deste vault na pasta `11-setup-dev-setup`) e o **estudo** (este vault, 14 Passos), mais
 > as **fontes de renda**, as **finanças da casa**, a **faculdade**, as **certificações** e as **decisões**.
 > São **391 itens**, cada um com um código, o que fazer, como saber que terminou e com quais outros itens ele se liga.
 
@@ -31,11 +31,11 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 |---|---|---|---|
 | [Etapa 0 · Arrumar a base](#e0) | out a início de nov/2026 | Arrumar a base: diagnóstico, senhas, Windows, finanças e o primeiro passo de estudo e de renda. | 35 |
 | [Etapa 1 · Primeiros clientes](#e1) | nov a dez/2026 | Montar o núcleo do setup, terminar os Passos 1 e 2 e fazer entrar o primeiro dinheiro extra. | 82 |
-| [Etapa 2 · Primeira venda de produto](#e2) | jan a fev/2027 | Vender no CPF com tudo medido, lançar o mini-curso e começar C#, TypeScript e Python. | 57 |
-| [Etapa 3 · Rendas crescendo](#e3) | mar a jun/2027 | API, frontend e testes do Kaixara; uma oferta nova por vez; contabilidade e matemática financeira. | 80 |
+| [Etapa 2 · Primeira venda de produto](#e2) | jan a fev/2027 | Vender no CPF com tudo medido, lançar o mini-curso e começar C#, TypeScript e Python. | 49 |
+| [Etapa 3 · Rendas crescendo](#e3) | mar a jun/2027 | API, frontend e testes do Kaixara; uma oferta nova por vez; contabilidade e matemática financeira. | 88 |
 | [Etapa 4 · Bater os R$ 7 mil](#e4) | jul a dez/2027 | Kaixara completo, arquitetura, candidaturas a vagas e a meta de renda. | 21 |
-| [Etapa 5 · Virar sênior e empresa](#e5) | 2028 | Produção, plataforma interna, dados e IA, CNPJ, sistemas à venda e certificações. | 49 |
-| [Etapa 6 · Especialização e expansão](#e6) | 2029 em diante | Segundo e terceiro sistemas, fase sênior, 42, segurança, IA do zero, fundos e negócios físicos. | 52 |
+| [Etapa 5 · Virar sênior e empresa](#e5) | 2028 | Produção, plataforma interna, dados e IA, CNPJ, sistemas à venda e certificações. | 47 |
+| [Etapa 6 · Especialização e expansão](#e6) | 2029 em diante | Segundo e terceiro sistemas, fase sênior, 42, segurança, IA do zero, fundos e negócios físicos. | 54 |
 | [Sempre · Hábitos e rotinas](#ec) | contínuo | O que roda toda semana, do início ao fim. | 15 |
 
 ## A regra do dinheiro (resumo)
@@ -51,11 +51,14 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 |---|---|
 | Passo 2 (Git, SQL, Docker) | Fases 4–5 do setup (Linux/WSL2, GitHub e CI) — o setup é a prática do Passo 2 |
 | Passo 3 (C#, TypeScript) | Bloco paralelo de Python `E-py` |
-| Passo 4–5 (API, EF Core) | Base dos sistemas AM (fase 18) e Finanças F1–F2 `F-f1` |
+| Passo 5 (EF Core) | Finanças F1–F2 `F-f1` |
 | Passo 7 (Kaixara fechado) | Renda do Kaixara, carnê-leão `S-carne-leao`, tributação `F-f3` |
-| Passo 8 (Arquitetura) | Candidatura a vagas `S-vaga`; Dados e IA da fase 21 (Zoomcamp, dbt, Airflow, treino); trilhas paralelas F4 e IA0 |
-| Passo 9 (Ponte técnica) | IA dentro dos sistemas AM (fase 25) |
-| Passo 10 (Produção real) | Nuvem e deploy (fase 19) |
+| Passo 4 a 6 (API, testes) | Base dos sistemas AM (fase 18); conta na nuvem e deploy do sistema exemplo (fase 19) com o Passo 5 |
+| Passo 8 (Arquitetura) | Candidatura a vagas `S-vaga`; destrava as trilhas paralelas (Finanças F4–F5 → Dados e IA → 42 → Pentest) |
+| IA2 da trilha de Dados e IA (≈ 2028) | Zoomcamp, dbt e Airflow da fase 21 |
+| Passo 9 + IA0 (≈ 2028) | IA dentro dos sistemas AM (fase 25), junto do IA5 |
+| IA6 da trilha (≈ 2029) | Dataset, fine-tuning do 8B e modelo no Ollama (fase 21) |
+| Passo 10 (Produção real) | Deploy de produção do AM Kaixara na nuvem montada na fase 19 |
 | Passo 12 (Plataforma interna) | Sistemas AM à venda; espanhol começa |
 | Passo 14 + fase sênior | Rendara, consultoria, fundo; decisão do aura-historico |
 
@@ -580,7 +583,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 
 **Quando:** jan a fev/2027 · **Objetivo:** Vender no CPF com tudo medido, lançar o mini-curso e começar C#, TypeScript e Python.
 
-### 🛠️ Setup (43)
+### 🛠️ Setup (36)
 
 
 **Fase 14 do setup** — Vendas e finanças no CPF
@@ -710,6 +713,69 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `S-mc-outras` **17.8** Publicar o mini-curso também na Kiwify, Eduzz e Udemy · _Você, ~120 min_
   - ✅ Pronto quando: Mini-curso à venda nas quatro plataformas
   - 🔗 Liga com: `S-mc-primeira-venda`, `S-template-aura`, `R-udemy`
+### 📚 Estudo (3)
+
+- [ ] `E-P3` **Passo 3 — C# Fundamentals + TypeScript + Matemática Parte II (início)**
+  - ✅ Pronto quando: entidades compilam sem warning de nulo; Euclides testado.
+  - 🕒 2-3 semanas
+  - 🔗 Liga com: `E-P2`, `E-py`, `E-P4`
+- [ ] `E-py` **Começar o bloco paralelo de Python (1–2 h/semana, refazendo os exercícios de cada Passo)**
+  - ✅ Pronto quando: Exercícios do Passo 3 refeitos em Python e testados com pytest
+  - 🔗 Liga com: `E-P3`, `E-ia0`
+- [ ] `E-fisica` **Comprar o livro de Física básica e mandar o índice para montar a trilha**
+  - ✅ Pronto quando: Trilha de Física escrita no vault
+  - 🔗 Liga com: `E-matematica`
+### 💰 Renda (7)
+
+- [ ] `R-afiliados` **Afiliados (ferramentas, livros, equipamentos que você usa) — Montar a página 'meu setup' com links de afiliado** · ⭐ 16 pts
+  - ✅ Pronto quando: Métrica: comissões por mês
+  - 🕒 passo 14.11 · Semanas 8 a 10 · dez/2026 a jan/2027
+  - 🔗 Liga com: `S-afiliados`
+- [ ] `R-minicurso` **Mini-curso Lógica de Programação — Gravar as 5 primeiras aulas e abrir a pré-venda com a isca grátis** · ⭐ 16 pts
+  - ✅ Pronto quando: Métrica: vendas por semana e conversão da página
+  - 🕒 passo 17.1 · Semanas 12 a 15 · jan a fev/2027
+  - 🔗 Liga com: `S-mc-roteiro`, `R-meta7k`
+- [ ] `R-rendara` **AM Rendara (finanças), começando pela planilha — Vender a planilha do Caixa da Casa antes de construir o sistema** · ⭐ 15 pts
+  - ✅ Pronto quando: Métrica: vendas da planilha
+  - 🕒 passo 14.20 · Semanas 8 a 10 · dez/2026 a jan/2027
+  - 🔗 Liga com: `S-caixa`, `E-P14`, `E-f4`, `E-ia3`, `R-consultoria`
+- [ ] `R-newsletter` **Newsletter (patrocínio e vendas) — Fazer a isca grátis e a sequência de boas-vindas** · ⭐ 15 pts
+  - ✅ Pronto quando: Métrica: inscritos e cliques
+  - 🕒 passo 17.5 · Semanas 12 a 15 · jan a fev/2027
+  - 🔗 Liga com: `S-mc-isca`
+- [ ] `R-udemy` **Versões dos cursos na Udemy (português e inglês) — Publicar o mini-curso depois do lançamento próprio** · ⭐ 15 pts
+  - ✅ Pronto quando: Métrica: vendas e avaliação média
+  - 🕒 passo 17.8 · Semanas 12 a 15 · jan a fev/2027
+  - 🔗 Liga com: `S-mc-outras`
+- [ ] `R-aulas` **Aulas particulares — Publicar a agenda com pagamento antecipado** · ⭐ 13 pts
+  - ✅ Pronto quando: Métrica: horas vendidas por semana
+  - 🕒 passo 14.8 · Semanas 8 a 10 · dez/2026 a jan/2027
+  - 🔗 Liga com: `S-agenda`, `R-msg`, `R-aulasmeta`, `H-ensina`
+- [ ] `R-dio` **Parceria DIO — Publicar 3 artigos e um projeto na DIO** · ⭐ 11 pts
+  - ✅ Pronto quando: Métrica: convite ou resposta
+  - 🕒 passo 14.6 · Semanas 8 a 10 · dez/2026 a jan/2027
+  - 🔗 Liga com: `S-outras-plataformas`
+### 🏦 Finanças pessoais (3)
+
+- [ ] `F-reserva3` **Reserva de emergência de 3 meses de gastos fixos**
+  - ✅ Pronto quando: Valor guardado em caixa separado
+  - 🔗 Liga com: `F-cartao`, `F-consorcio`, `F-acoes`, `F-reserva6`
+- [ ] `F-sairescola` **Decisão: sair da escola só se a renda extra passou de R$ 1.500/mês por 2 meses seguidos**
+  - ✅ Pronto quando: Decisão tomada com os números
+  - 🔗 Liga com: `R-meta7k`
+- [ ] `F-consorcio` **Decidir o lance de R$ 14 mil no consórcio da moto sem furar a reserva**
+  - ✅ Pronto quando: Decisão anotada
+  - 🔗 Liga com: `F-reserva3`
+
+---
+
+## Etapa 3 · Rendas crescendo
+<a id="e3"></a>
+
+**Quando:** mar a jun/2027 · **Objetivo:** API, frontend e testes do Kaixara; uma oferta nova por vez; contabilidade e matemática financeira.
+
+### 🛠️ Setup (55)
+
 
 **Fase 18 do setup** — Base dos sistemas AM
 
@@ -736,73 +802,6 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `S-templates-venda` **18.7** Separar o que do modelo pode virar template à venda · _Você, ~30 min_
   - ✅ Pronto quando: Lista de templates no portfólio de ofertas
   - 🔗 Liga com: `S-ghcr`, `S-vaga`, `R-templates`
-### 📚 Estudo (3)
-
-- [ ] `E-P3` **Passo 3 — C# Fundamentals + TypeScript + Matemática Parte II (início)**
-  - ✅ Pronto quando: entidades compilam sem warning de nulo; Euclides testado.
-  - 🕒 2-3 semanas
-  - 🔗 Liga com: `E-P2`, `E-py`, `E-P4`
-- [ ] `E-py` **Começar o bloco paralelo de Python (1–2 h/semana, refazendo os exercícios de cada Passo)**
-  - ✅ Pronto quando: Exercícios do Passo 3 refeitos em Python e testados com pytest
-  - 🔗 Liga com: `E-P3`, `E-ia0`
-- [ ] `E-fisica` **Comprar o livro de Física básica e mandar o índice para montar a trilha**
-  - ✅ Pronto quando: Trilha de Física escrita no vault
-  - 🔗 Liga com: `E-matematica`
-### 💰 Renda (8)
-
-- [ ] `R-afiliados` **Afiliados (ferramentas, livros, equipamentos que você usa) — Montar a página 'meu setup' com links de afiliado** · ⭐ 16 pts
-  - ✅ Pronto quando: Métrica: comissões por mês
-  - 🕒 passo 14.11 · Semanas 8 a 10 · dez/2026 a jan/2027
-  - 🔗 Liga com: `S-afiliados`
-- [ ] `R-minicurso` **Mini-curso Lógica de Programação — Gravar as 5 primeiras aulas e abrir a pré-venda com a isca grátis** · ⭐ 16 pts
-  - ✅ Pronto quando: Métrica: vendas por semana e conversão da página
-  - 🕒 passo 17.1 · Semanas 12 a 15 · jan a fev/2027
-  - 🔗 Liga com: `S-mc-roteiro`, `R-meta7k`
-- [ ] `R-rendara` **AM Rendara (finanças), começando pela planilha — Vender a planilha do Caixa da Casa antes de construir o sistema** · ⭐ 15 pts
-  - ✅ Pronto quando: Métrica: vendas da planilha
-  - 🕒 passo 14.20 · Semanas 8 a 10 · dez/2026 a jan/2027
-  - 🔗 Liga com: `S-caixa`, `E-P14`, `E-f4`, `E-ia3`, `R-consultoria`
-- [ ] `R-newsletter` **Newsletter (patrocínio e vendas) — Fazer a isca grátis e a sequência de boas-vindas** · ⭐ 15 pts
-  - ✅ Pronto quando: Métrica: inscritos e cliques
-  - 🕒 passo 17.5 · Semanas 12 a 15 · jan a fev/2027
-  - 🔗 Liga com: `S-mc-isca`
-- [ ] `R-udemy` **Versões dos cursos na Udemy (português e inglês) — Publicar o mini-curso depois do lançamento próprio** · ⭐ 15 pts
-  - ✅ Pronto quando: Métrica: vendas e avaliação média
-  - 🕒 passo 17.8 · Semanas 12 a 15 · jan a fev/2027
-  - 🔗 Liga com: `S-mc-outras`
-- [ ] `R-aulas` **Aulas particulares — Publicar a agenda com pagamento antecipado** · ⭐ 13 pts
-  - ✅ Pronto quando: Métrica: horas vendidas por semana
-  - 🕒 passo 14.8 · Semanas 8 a 10 · dez/2026 a jan/2027
-  - 🔗 Liga com: `S-agenda`, `R-msg`, `R-aulasmeta`, `H-ensina`
-- [ ] `R-templates` **Templates e código-fonte — Empacotar o primeiro frontend já pronto com documentação** · ⭐ 13 pts
-  - ✅ Pronto quando: Métrica: vendas por template
-  - 🕒 passo 18.7 · Jan a fev/2027
-  - 🔗 Liga com: `S-templates-venda`
-- [ ] `R-dio` **Parceria DIO — Publicar 3 artigos e um projeto na DIO** · ⭐ 11 pts
-  - ✅ Pronto quando: Métrica: convite ou resposta
-  - 🕒 passo 14.6 · Semanas 8 a 10 · dez/2026 a jan/2027
-  - 🔗 Liga com: `S-outras-plataformas`
-### 🏦 Finanças pessoais (3)
-
-- [ ] `F-reserva3` **Reserva de emergência de 3 meses de gastos fixos**
-  - ✅ Pronto quando: Valor guardado em caixa separado
-  - 🔗 Liga com: `F-cartao`, `F-consorcio`, `F-acoes`, `F-reserva6`
-- [ ] `F-sairescola` **Decisão: sair da escola só se a renda extra passou de R$ 1.500/mês por 2 meses seguidos**
-  - ✅ Pronto quando: Decisão tomada com os números
-  - 🔗 Liga com: `R-meta7k`
-- [ ] `F-consorcio` **Decidir o lance de R$ 14 mil no consórcio da moto sem furar a reserva**
-  - ✅ Pronto quando: Decisão anotada
-  - 🔗 Liga com: `F-reserva3`
-
----
-
-## Etapa 3 · Rendas crescendo
-<a id="e3"></a>
-
-**Quando:** mar a jun/2027 · **Objetivo:** API, frontend e testes do Kaixara; uma oferta nova por vez; contabilidade e matemática financeira.
-
-### 🛠️ Setup (48)
-
 
 **Fase 19 do setup** — Nuvem e deploy
 
@@ -825,7 +824,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
   - 🔗 Liga com: `S-arquivos-nuvem`, `S-deploy-teste`, `E-P10`
 - [ ] `S-deploy-teste` **19.6** Fazer o primeiro deploy do sistema exemplo · _Claude com você, ~60 min_
   - ✅ Pronto quando: Sistema no ar com HTTPS, login e erro de teste no Sentry
-  - 🔗 Liga com: `S-email-transacional`, `S-aura-status`, `E-P10`
+  - 🔗 Liga com: `S-email-transacional`, `S-aura-status`, `E-P5`, `E-P10`
 - [ ] `S-aura-status` **19.7** Criar o aura-status: painel de repositórios, backup e Dependabot · _Claude com você, ~120 min_
   - ✅ Pronto quando: Painel mostra o estado de todos os repositórios
   - 🔗 Liga com: `S-deploy-teste`, `S-modelo-metodo`, `E-P10`
@@ -973,7 +972,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `E-P5` **Passo 5 — EF Core + CRUD molde**
   - ✅ Pronto quando: CRUD funciona com teste de concorrência passando.
   - 🕒 1-2 semanas
-  - 🔗 Liga com: `E-P4`, `F-f1`, `F-f2`, `E-P6`
+  - 🔗 Liga com: `E-P4`, `F-f1`, `F-f2`, `S-deploy-teste`, `E-P6`
 - [ ] `E-P6` **Passo 6 — Teste como disciplina**
   - ✅ Pronto quando: cobertura real no fluxo de venda, backend e frontend.
   - 🕒 1-2 semanas
@@ -987,7 +986,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `E-robotica-r2` **Robótica R2: ESP32, sensores e MQTT**
   - ✅ Pronto quando: Coleta de dados do projeto agro funcionando
   - 🔗 Liga com: `E-robotica-r1`
-### 💰 Renda (22)
+### 💰 Renda (23)
 
 - [ ] `R-aulasprof` **Pacote de aulas prontas para professores de informática — Empacotar uma disciplina que você já leciona (planos, slides, avaliações)** · ⭐ 16 pts
   - ✅ Pronto quando: Métrica: vendas por disciplina
@@ -1025,6 +1024,10 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
   - ✅ Pronto quando: Métrica: receita por mil visualizações
   - 🕒 passo 23.9 · A partir de fev/2027
   - 🔗 Liga com: `S-membros`
+- [ ] `R-templates` **Templates e código-fonte — Empacotar o primeiro frontend já pronto com documentação** · ⭐ 13 pts
+  - ✅ Pronto quando: Métrica: vendas por template
+  - 🕒 passo 18.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6
+  - 🔗 Liga com: `S-templates-venda`
 - [ ] `R-ammentor` **AM Mentor: banco de exercícios com correção — Começar com o Capítulo 1 do livro em YAML** · ⭐ 12 pts
   - ✅ Pronto quando: Métrica: assinantes e exercícios resolvidos
   - 🕒 passo 22.13 · Fev a dez/2027, uma oferta por vez
@@ -1193,39 +1196,27 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 
 **Quando:** 2028 · **Objetivo:** Produção, plataforma interna, dados e IA, CNPJ, sistemas à venda e certificações.
 
-### 🛠️ Setup (29)
+### 🛠️ Setup (26)
 
 
 **Fase 21 do setup** — Dados, IA e pendrives
 
 - [ ] `S-zoomcamp` **21.6** Fazer o Data Engineering Zoomcamp e os cursos de IA, um módulo por semana · _Você, ~60 min_
   - ✅ Pronto quando: Módulo 1 entregue no GitHub e anotado no Obsidian
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA). O tempo é só para começar; o curso leva 10 semanas. Para a IA vão as suas anotações, nunca o material do curso.
+  - 📝 Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5). O tempo é só para começar; o curso leva 10 semanas. Para a IA vão as suas anotações, nunca o material do curso.
   - 🔗 Liga com: `S-ollama-8b`, `S-dbt-metricas`, `E-ia2`
 - [ ] `S-dbt-metricas` **21.7** Criar o projeto dbt sobre o banco de métricas · _Claude com você, ~90 min_
   - ✅ Pronto quando: 'dbt build' verde e o painel de lucro lendo os modelos
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA).
+  - 📝 Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5).
   - 🔗 Liga com: `S-zoomcamp`, `S-airflow`, `E-ia2`
 - [ ] `S-airflow` **21.8** Subir o Airflow e agendar o dbt todo dia · _Claude com você, ~90 min_
   - ✅ Pronto quando: A rotina diária aparece verde no Airflow por 3 dias seguidos
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA).
+  - 📝 Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5).
   - 🔗 Liga com: `S-dbt-metricas`, `S-contas-ia`, `E-ia2`
 - [ ] `S-contas-ia` **21.9** Criar as contas do Hugging Face e do Kaggle (e do RunPod, só se precisar) · _Você, ~30 min_
   - ✅ Pronto quando: Token do Hugging Face no KeePassXC; Kaggle com telefone verificado para liberar a GPU
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA). No RunPod, só crédito pré-pago. Nunca ponha token em notebook público.
+  - 📝 Junto do IA2 da Trilha de Dados e IA (depois do Passo 8 e das Finanças F4–F5). No RunPod, só crédito pré-pago. Nunca ponha token em notebook público.
   - 🔗 Liga com: `S-airflow`, `S-dataset`
-- [ ] `S-dataset` **21.10** Montar o primeiro dataset só com conteúdo seu · _Claude com você, ~120 min_
-  - ✅ Pronto quando: Algumas centenas de pares de pergunta e resposta revisados por você, com conjunto de teste separado
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA). Fontes: suas notas, exercícios, livro e aulas que você gravou. Nada de cursos de terceiros; nada de dados de alunos sem consentimento.
-  - 🔗 Liga com: `S-contas-ia`, `S-fine-tune`, `E-ia6`
-- [ ] `S-fine-tune` **21.11** Primeiro fine-tuning QLoRA de um 8B no Kaggle · _Claude com você, ~180 min_
-  - ✅ Pronto quando: Adaptador salvo no Hugging Face privado e o treino registrado no MLflow
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA).
-  - 🔗 Liga com: `S-dataset`, `S-modelo-no-ollama`, `E-ia6`
-- [ ] `S-modelo-no-ollama` **21.12** Avaliar contra o modelo base e levar o seu modelo para o Ollama · _Claude com você, ~90 min_
-  - ✅ Pronto quando: O seu modelo ganha do base no conjunto de teste e responde no Ollama do notebook
-  - 📝 Depois do Passo 8 do estudo (Trilha de Dados e IA).
-  - 🔗 Liga com: `S-fine-tune`, `S-of-meu-setup`, `E-ia6`
 
 **Fase 25 do setup** — IA dentro dos sistemas AM
 
@@ -1308,7 +1299,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `S-workstation` **31.3** Workstation com GPU para treinar e gerar voz e vídeo em casa · _Você, ~480 min_
   - ✅ Pronto quando: Fine-tuning de 8B rodando local
   - 🔗 Liga com: `S-tailscale`, `S-planejador-real`
-### 📚 Estudo (12)
+### 📚 Estudo (13)
 
 - [ ] `E-P9` **Passo 9 — Ponte técnica pro próximo sistema**
   - ✅ Pronto quando: dashboard atualiza em tempo real sem refresh.
@@ -1347,6 +1338,9 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `E-ia3` **IA3: machine learning clássico**
   - ✅ Pronto quando: Previsão de fluxo de caixa do Rendara melhor que a média simples
   - 🔗 Liga com: `R-rendara`, `E-ia4`
+- [ ] `E-ia5` **IA5: LLMs aplicados (RAG, function calling, avaliação)**
+  - ✅ Pronto quando: Tutor do AM Mentor respondendo com citação do capítulo
+  - 🔗 Liga com: `S-rag-sistema`, `R-ammentor`
 - [ ] `E-espanhol` **Espanhol (começa no Passo 12)**
   - ✅ Pronto quando: B1–B2
   - 🔗 Liga com: `E-P12`, `E-mandarim`
@@ -1391,8 +1385,23 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 
 **Quando:** 2029 em diante · **Objetivo:** Segundo e terceiro sistemas, fase sênior, 42, segurança, IA do zero, fundos e negócios físicos.
 
-### 🛠️ Setup (13)
+### 🛠️ Setup (16)
 
+
+**Fase 21 do setup** — Dados, IA e pendrives
+
+- [ ] `S-dataset` **21.10** Montar o primeiro dataset só com conteúdo seu · _Claude com você, ~120 min_
+  - ✅ Pronto quando: Algumas centenas de pares de pergunta e resposta revisados por você, com conjunto de teste separado
+  - 📝 Junto do IA6 da Trilha de Dados e IA (treino e fine-tuning). Fontes: suas notas, exercícios, livro e aulas que você gravou. Nada de cursos de terceiros; nada de dados de alunos sem consentimento.
+  - 🔗 Liga com: `S-contas-ia`, `S-fine-tune`, `E-ia6`
+- [ ] `S-fine-tune` **21.11** Primeiro fine-tuning QLoRA de um 8B no Kaggle · _Claude com você, ~180 min_
+  - ✅ Pronto quando: Adaptador salvo no Hugging Face privado e o treino registrado no MLflow
+  - 📝 Junto do IA6 da Trilha de Dados e IA (treino e fine-tuning).
+  - 🔗 Liga com: `S-dataset`, `S-modelo-no-ollama`, `E-ia6`
+- [ ] `S-modelo-no-ollama` **21.12** Avaliar contra o modelo base e levar o seu modelo para o Ollama · _Claude com você, ~90 min_
+  - ✅ Pronto quando: O seu modelo ganha do base no conjunto de teste e responde no Ollama do notebook
+  - 📝 Junto do IA6 da Trilha de Dados e IA (treino e fine-tuning).
+  - 🔗 Liga com: `S-fine-tune`, `S-of-meu-setup`, `E-ia6`
 
 **Fase 29 do setup** — Editora: depois do primeiro livro · ⏸ gatilho: O primeiro livro publicado
 
@@ -1438,7 +1447,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `S-neg-c3` **32.8** C3 · Cafeteria · _Você, ~2400 min_
   - ✅ Pronto quando: Cafeteria acima do equilíbrio
   - 🔗 Liga com: `S-neg-c2`, `S-github-education`, `R-cafeteria`
-### 📚 Estudo (13)
+### 📚 Estudo (12)
 
 - [ ] `E-P13` **Passo 13 — Segundo sistema: AM Rotara**
   - ✅ Pronto quando: segundo sistema em produção — meça quanto tempo real foi economizado vs. o primeiro.
@@ -1455,9 +1464,6 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 - [ ] `E-ia4` **IA4: deep learning do zero (autograd sem biblioteca, depois PyTorch)**
   - ✅ Pronto quando: Rede treinada com o seu próprio autograd
   - 🔗 Liga com: `E-ia3`
-- [ ] `E-ia5` **IA5: LLMs aplicados (RAG, function calling, avaliação)**
-  - ✅ Pronto quando: Tutor do AM Mentor respondendo com citação do capítulo
-  - 🔗 Liga com: `S-rag-sistema`, `R-ammentor`
 - [ ] `E-ia6` **IA6: tokenizer e transformer do zero; modelo pequeno pré-treinado; fine-tuning de 8B**
   - ✅ Pronto quando: Modelo próprio comparado contra o modelo base
   - 🔗 Liga com: `S-dataset`, `S-fine-tune`, `S-modelo-no-ollama`, `E-ia7`
@@ -1639,7 +1645,7 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 
 ## Onde está cada coisa
 
-- Setup completo explicado: [[setup-completo-dev-setup]] · roteiro gerado no repo `dev-setup`: `docs/implantacao/roteiro.md`
+- Setup completo explicado: [[setup-completo-dev-setup]] · tudo do dev-setup (documentos, fluxogramas, roteiro, páginas e scripts): [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md) · roteiro passo a passo: [roteiro de implantação](11-setup-dev-setup/docs/implantacao/roteiro.md)
 - Estudo detalhado: [[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO]] · currículo sênior: [[curriculo-dev-senior-completo]]
 - Rendas: [[fontes-de-renda-completas]] · faculdade e certificações: [[formacao-academica]]
 - Palavras difíceis: [[00-GLOSSARIO]] · versão curta: [[00-GUIA-DO-INICIANTE]]

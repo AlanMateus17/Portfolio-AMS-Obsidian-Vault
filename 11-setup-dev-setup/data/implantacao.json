@@ -1,0 +1,3414 @@
+{
+ "fases": [
+  {
+   "id": "f0",
+   "titulo": "Diagnóstico: o que você já tem",
+   "objetivo": "Saber exatamente o que o notebook já tem de hardware, segurança, programas, contas e documentos, e começar o roteiro a partir daí.",
+   "passos": [
+    {
+     "id": "diag-pasta",
+     "titulo": "Extrair o dev-setup.zip e deixar a pasta em C:\\Users\\SEU_USUARIO\\dev-setup",
+     "quem": "voce",
+     "pronto": "Pasta C:\\Users\\SEU_USUARIO\\dev-setup com RODAR-DIAGNOSTICO.cmd e as pastas scripts, data e docs logo dentro dela; nenhuma outra cópia em Downloads",
+     "tempo_min": 5,
+     "blocos": [],
+     "nota": "Botão direito no zip > Extrair tudo. O Windows costuma criar dev-setup\\dev-setup: recorte a pasta de dentro (a que tem a pasta scripts) e cole em C:\\Users\\SEU_USUARIO, a pasta com o seu nome. Apague as cópias que sobraram em Downloads, como \"dev-setup (1)\". Todos os comandos do Windows deste roteiro apontam para esse lugar, então funcionam de qualquer pasta, até da System32 onde o PowerShell de Administrador abre."
+    },
+    {
+     "id": "diag-rodar",
+     "titulo": "Rodar o diagnóstico: botão direito em RODAR-DIAGNOSTICO.cmd > Executar como administrador",
+     "quem": "script",
+     "pronto": "Pasta diagnostico-AAAAMMDD com diagnostico.md: o que você tem e em que passo cada pendência se resolve",
+     "tempo_min": 10,
+     "comando": "powershell -ExecutionPolicy Bypass -File $HOME\\dev-setup\\scripts\\windows\\diagnostico.ps1",
+     "nota": "Somente leitura: não instala nem apaga nada. Em vez do comando, pode clicar com o botão direito em RODAR-DIAGNOSTICO.cmd > Executar como administrador. Se o Windows avisar \"O Windows protegeu o computador\", clique em Mais informações > Executar assim mesmo. Mostra modelo, processador, memória e slots livres, placa de vídeo, discos e saúde, espaço livre, bateria, monitores, Secure Boot, TPM, criptografia, Defender, programas do setup que já tem e que faltam, WSL, Docker, modelos do Ollama e extensões do VS Code.",
+     "blocos": [
+      "diag",
+      "nb"
+     ]
+    },
+    {
+     "id": "inventario",
+     "titulo": "Rodar o inventário de espaço: pastas e arquivos que mais ocupam, programas que iniciam com o Windows",
+     "quem": "script",
+     "pronto": "Pasta inventario-AAAAMMDD gerada; você decidiu o que desinstalar ou mover",
+     "tempo_min": 15,
+     "comando": "powershell -ExecutionPolicy Bypass -File $HOME\\dev-setup\\scripts\\windows\\inventario.ps1",
+     "blocos": [
+      "w11"
+     ]
+    },
+    {
+     "id": "diag-contas",
+     "titulo": "Listar as contas e assinaturas que você já tem, sem anotar senha",
+     "quem": "voce",
+     "pronto": "Nota no Obsidian (ou papel) com quais contas do setup já existem e quais assinaturas você paga",
+     "tempo_min": 30,
+     "nota": "A lista de contas do setup está no ecossistema, em Contas que você precisa ter. Senha nunca vai para nota: só para o KeePassXC, no passo dele.",
+     "blocos": [
+      "w11"
+     ]
+    },
+    {
+     "id": "diag-documentos",
+     "titulo": "Ver quantos documentos você já tem (só a contagem, sem abrir)",
+     "quem": "voce",
+     "pronto": "Você sabe por alto onde estão as aulas, apostilas, provas e projetos (Drive, notebook, pendrives)",
+     "tempo_min": 10,
+     "nota": "A organização de verdade vem na fase Acervo, depois do backup.",
+     "blocos": [
+      "gdrv"
+     ]
+    },
+    {
+     "id": "diag-claude",
+     "titulo": "Mandar a pasta do diagnóstico para o Claude e ajustar o roteiro",
+     "quem": "claude",
+     "pronto": "Passos que você já cumpre marcados no acompanhamento; compras e pendências confirmadas",
+     "tempo_min": 30,
+     "blocos": [
+      "oimpl"
+     ],
+     "nota": "Anexe na conversa os dois arquivos da pasta C:\\Users\\SEU_USUARIO\\dev-setup\\diagnostico-AAAAMMDD: diagnostico.md e diagnostico.json. Eles não têm senha nem documento seu, só hardware e programas."
+    }
+   ],
+   "quando": "Antes de tudo · semana 1 (out/2026)"
+  },
+  {
+   "id": "f1",
+   "titulo": "Preparar",
+   "objetivo": "Nada se perde, o hardware está no lugar e as contas estão protegidas antes de mexer na máquina.",
+   "passos": [
+    {
+     "id": "backup-inicial",
+     "titulo": "Copiar documentos, fotos e projetos para um disco externo",
+     "quem": "voce",
+     "pronto": "Disco externo com a cópia conferida (abra alguns arquivos)",
+     "tempo_min": 60,
+     "blocos": [
+      "ext"
+     ]
+    },
+    {
+     "id": "hardware",
+     "titulo": "Montar a mesa: nobreak, base com cooler, 2º monitor, disco e SSD externos, kits de robótica",
+     "quem": "voce",
+     "pronto": "Notebook no nobreak e na base, 2º monitor funcionando, disco e SSD externos reconhecidos",
+     "tempo_min": 30,
+     "nota": "O que ainda não comprou fica anotado e não trava as próximas fases. O nobreak vem primeiro: protege o notebook e o backup de queda de energia.",
+     "blocos": [
+      "nb",
+      "ups",
+      "cool",
+      "mon",
+      "ext",
+      "ssdext",
+      "cel",
+      "rob"
+     ],
+     "precisa": [
+      "compra"
+     ]
+    },
+    {
+     "id": "windows-update",
+     "titulo": "Atualizar o Windows, os drivers e o NitroSense",
+     "quem": "voce",
+     "pronto": "Windows Update sem pendências",
+     "tempo_min": 40,
+     "blocos": [
+      "w11",
+      "nitro"
+     ]
+    },
+    {
+     "id": "github-2fa",
+     "titulo": "Instalar o app de 2FA no celular e ligar a verificação em duas etapas no GitHub, Google e e-mail",
+     "quem": "voce",
+     "pronto": "2FA ativo nas três contas, com códigos de recuperação impressos",
+     "tempo_min": 30,
+     "blocos": [
+      "tfa"
+     ]
+    }
+   ],
+   "quando": "Semana 1 · out/2026"
+  },
+  {
+   "id": "f2",
+   "titulo": "Senhas: recuperar, trocar e guardar",
+   "objetivo": "Toda conta com senha única guardada no KeePassXC, verificação em duas etapas nas críticas e um jeito de recuperar tudo se perder o notebook ou o celular.",
+   "passos": [
+    {
+     "id": "keepass",
+     "titulo": "Instalar o KeePassXC e criar o cofre com uma senha mestra de 6 palavras",
+     "quem": "voce",
+     "pronto": "Arquivo Cofre.kdbx em Documentos\\Cofre abre com a senha mestra; bloqueio automático depois de 5 minutos parado",
+     "tempo_min": 30,
+     "blocos": [
+      "kee"
+     ],
+     "comando": "winget install --id KeePassXCTeam.KeePassXC -e",
+     "nota": "Gere a senha mestra no próprio KeePassXC (Ferramentas > Gerador de senhas > Frase-senha, 6 palavras) e decore nos primeiros dias. Ela é a única senha que você precisa saber de cor e não pode ser usada em nenhum outro lugar. Não use arquivo-chave: se perder o arquivo, perde o cofre. Ninguém, nem o Claude, precisa ver o cofre ou a senha mestra."
+    },
+    {
+     "id": "senhas-kit",
+     "titulo": "Montar o kit de emergência em papel",
+     "quem": "voce",
+     "pronto": "Envelope guardado em casa (fora da carteira e da mochila) com a senha mestra, a senha do e-mail principal e os códigos de recuperação do Google",
+     "tempo_min": 15,
+     "nota": "É o que salva você se esquecer a senha mestra ou perder o notebook e o celular juntos. Papel, não foto: foto vai para a nuvem do celular.",
+     "blocos": [
+      "kee"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-email",
+     "titulo": "Recuperar e trocar primeiro a senha do e-mail principal (conta Google)",
+     "quem": "voce",
+     "pronto": "Senha nova gerada no KeePassXC; verificação em duas etapas pelo app; telefone e e-mail de recuperação conferidos; códigos de backup salvos no cofre; aparelhos desconhecidos desconectados",
+     "tempo_min": 30,
+     "nota": "Vem antes de tudo porque todo 'Esqueci minha senha' manda o link para esse e-mail: quem controla o e-mail controla as outras contas. Faça em myaccount.google.com > Segurança e rode a Verificação de segurança no fim. Se não lembrar a senha atual, use g.co/recover no notebook e na rede de casa, onde o Google já reconhece você.",
+     "blocos": [
+      "kee",
+      "tfa",
+      "cgws"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-importar",
+     "titulo": "Trazer para o cofre as senhas salvas no Chrome, no Edge e no Google",
+     "quem": "voce",
+     "pronto": "Senhas importadas no KeePassXC (Banco de dados > Importar > CSV); o arquivo CSV apagado de vez; navegadores sem salvar senha",
+     "tempo_min": 30,
+     "nota": "Exporte em chrome://password-manager/settings, edge://wallet/passwords e passwords.google.com. O CSV é a lista de todas as suas senhas em texto puro: importe na hora, apague com Shift+Delete e não deixe em Downloads, no Drive, no e-mail nem no repositório. Não mande esse arquivo para ninguém, nem para o Claude. Só depois de conferir o cofre apague as senhas dos navegadores e desligue 'Oferecer para salvar senhas'.",
+     "blocos": [
+      "kee",
+      "nav"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-relatorio",
+     "titulo": "Ver no KeePassXC quais senhas são fracas, repetidas ou já vazaram",
+     "quem": "voce",
+     "pronto": "Lista, em ordem, das contas para trocar (Banco de dados > Relatórios > Integridade e Have I Been Pwned)",
+     "tempo_min": 15,
+     "nota": "A checagem de vazamento manda só um pedaço do resumo da senha, nunca a senha. Senha que aparece como vazada vai para o topo da lista.",
+     "blocos": [
+      "kee"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-criticas",
+     "titulo": "Trocar as senhas críticas, uma por vez: gov.br, bancos, Microsoft, celular, WhatsApp, GitHub, Meta, Mercado Livre e plataformas de venda",
+     "quem": "voce",
+     "pronto": "Cada conta crítica com senha nova gerada no cofre, verificação em duas etapas ligada e códigos de backup salvos na entrada dela",
+     "tempo_min": 120,
+     "nota": "Para cada uma: gere a senha no KeePassXC (20 caracteres ou mais), troque no site, salve no cofre antes de fechar a página e saia de todos os outros aparelhos. Banco, troque pelo app oficial. No WhatsApp é o PIN da confirmação em duas etapas. A senha de 4 dígitos do cartão não vai para o cofre: essa você decora.",
+     "blocos": [
+      "kee",
+      "tfa",
+      "govbr",
+      "banco",
+      "gh"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-esquecidas",
+     "titulo": "Recuperar as contas cuja senha você esqueceu e fechar as que não usa mais",
+     "quem": "voce",
+     "pronto": "Toda conta da sua lista de contas está no cofre, foi recuperada ou foi excluída",
+     "tempo_min": 60,
+     "nota": "Use 'Esqueci minha senha' com o e-mail já protegido. Se o e-mail ou o telefone de recuperação forem antigos, cada serviço tem um formulário próprio (Meta: 'Precisa de ajuda?' na tela de login; gov.br: pelo app com reconhecimento facial ou pelo banco). Conta parada que guarda dado seu é risco: exclua.",
+     "blocos": [
+      "kee"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-celular",
+     "titulo": "Levar o cofre para o celular (KeePassDX no Android ou KeePassium no iPhone)",
+     "quem": "voce",
+     "pronto": "O cofre abre no celular com a senha mestra; uma senha criada no notebook aparece no celular",
+     "tempo_min": 20,
+     "nota": "Sincronize o arquivo Cofre.kdbx pelo Syncthing, ou pelo Drive (o arquivo vai criptografado). Edite num aparelho de cada vez para não criar cópias em conflito.",
+     "blocos": [
+      "kee",
+      "cel",
+      "syncth"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-navegador",
+     "titulo": "Ligar o KeePassXC-Browser para preencher senha e código no navegador",
+     "quem": "voce",
+     "pronto": "No login de teste, o navegador preenche a senha a partir do cofre",
+     "tempo_min": 15,
+     "nota": "No KeePassXC: Configurações > Integração com navegador, marque o seu navegador e instale a extensão KeePassXC-Browser.",
+     "blocos": [
+      "kee",
+      "nav"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-backup",
+     "titulo": "Pôr o cofre no backup e testar abrir a cópia",
+     "quem": "voce",
+     "pronto": "Cópia do Cofre.kdbx no disco externo abre com a senha mestra; quando o restic entrar, a pasta Documentos\\Cofre está no backup diário",
+     "tempo_min": 15,
+     "nota": "No WSL o caminho é /mnt/c/Users/SEU_USUARIO/Documents/Cofre: acrescente ao comando do restic no passo do backup.",
+     "blocos": [
+      "kee",
+      "ext",
+      "bkp"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-resto",
+     "titulo": "Trocar o resto aos poucos: 5 contas por semana, das mais usadas às menos usadas",
+     "quem": "voce",
+     "pronto": "Relatório de integridade do KeePassXC sem senha fraca, repetida ou vazada",
+     "tempo_min": 20,
+     "blocos": [
+      "kee"
+     ],
+     "ofertas": []
+    },
+    {
+     "id": "senhas-revisao",
+     "titulo": "Marcar a revisão a cada 3 meses: relatório do cofre, aparelhos conectados no Google e códigos de backup",
+     "quem": "voce",
+     "pronto": "Lembrete trimestral no calendário",
+     "tempo_min": 10,
+     "blocos": [
+      "kee"
+     ],
+     "ofertas": []
+    }
+   ],
+   "quando": "Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026"
+  },
+  {
+   "id": "f3",
+   "titulo": "Windows",
+   "objetivo": "Os programas do setup instalados, o navegador com o Claude e o WSL2 pronto.",
+   "passos": [
+    {
+     "id": "win-simular",
+     "titulo": "Ver o que o instalador faria",
+     "quem": "script",
+     "pronto": "Lista de INSTALARIA conferida",
+     "tempo_min": 5,
+     "comando": "powershell -ExecutionPolicy Bypass -File $HOME\\dev-setup\\scripts\\windows\\instalar.ps1",
+     "blocos": [
+      "oinst"
+     ]
+    },
+    {
+     "id": "win-aplicar",
+     "titulo": "Instalar programas, WSL2 com Ubuntu 24.04 e .wslconfig (PowerShell como Administrador)",
+     "quem": "script",
+     "pronto": "Termina com 'Pronto' e sem ERRO; reinicie o Windows",
+     "tempo_min": 60,
+     "comando": "powershell -ExecutionPolicy Bypass -File $HOME\\dev-setup\\scripts\\windows\\instalar.ps1 -Aplicar",
+     "blocos": [
+      "wterm",
+      "vsc",
+      "zip",
+      "ptoys",
+      "pdf",
+      "sharex",
+      "office",
+      "ffox",
+      "obsd",
+      "dbv",
+      "draw",
+      "vbox",
+      "ard",
+      "wslcfg",
+      "obss",
+      "aud",
+      "img",
+      "wshark",
+      "syncth",
+      "anki"
+     ]
+    },
+    {
+     "id": "cripto",
+     "titulo": "Ligar a criptografia do dispositivo e guardar a chave de recuperação no KeePassXC",
+     "quem": "voce",
+     "pronto": "verificar.ps1 como Administrador mostra criptografia OK",
+     "tempo_min": 15,
+     "nota": "No Windows 11 Home a opção se chama Criptografia do dispositivo e depende do hardware. Se não aparecer, anote e siga.",
+     "blocos": [
+      "bitl",
+      "tpm"
+     ]
+    },
+    {
+     "id": "defender",
+     "titulo": "Conferir Defender e Firewall ligados",
+     "quem": "voce",
+     "pronto": "verificar.ps1 como Administrador mostra Defender OK",
+     "tempo_min": 10,
+     "blocos": [
+      "def"
+     ]
+    },
+    {
+     "id": "vscode-ext",
+     "titulo": "Instalar as extensões do VS Code (WSL, Claude Code, .NET, LaTeX, revisão em português)",
+     "quem": "script",
+     "pronto": "Termina com 'Pronto'",
+     "tempo_min": 10,
+     "comando": "powershell -ExecutionPolicy Bypass -File $HOME\\dev-setup\\scripts\\windows\\extensoes-vscode.ps1 -Aplicar",
+     "blocos": [
+      "vsc"
+     ]
+    },
+    {
+     "id": "navegador",
+     "titulo": "Instalar o Claude in Chrome e entrar com a sua conta",
+     "quem": "voce",
+     "pronto": "O painel do Claude abre numa aba do navegador",
+     "tempo_min": 15,
+     "nota": "O uso do computador pelo Claude fica no app do Claude para desktop; ligue só quando for usar e acompanhe o que ele faz.",
+     "blocos": [
+      "nav",
+      "cchr"
+     ]
+    },
+    {
+     "id": "davinci",
+     "titulo": "Instalar o DaVinci Resolve pelo site da Blackmagic (opcional)",
+     "quem": "voce",
+     "pronto": "Abre e reconhece a GPU",
+     "tempo_min": 20,
+     "blocos": [
+      "edit"
+     ]
+    },
+    {
+     "id": "unity-decisao",
+     "titulo": "Decidir se Unity e Cocos ficam para as aulas de robótica",
+     "quem": "voce",
+     "pronto": "Decisão anotada; se ficam, Unity Hub instalado",
+     "tempo_min": 10,
+     "comando": "winget install --id Unity.UnityHub -e",
+     "blocos": [
+      "unity"
+     ]
+    },
+    {
+     "id": "win-verificar",
+     "titulo": "Conferir o Windows",
+     "quem": "script",
+     "pronto": "verificar.ps1 termina com 'Windows pronto'",
+     "tempo_min": 5,
+     "comando": "powershell -ExecutionPolicy Bypass -File $HOME\\dev-setup\\scripts\\windows\\verificar.ps1",
+     "blocos": [
+      "overif"
+     ]
+    }
+   ],
+   "quando": "Semana 1 · out/2026"
+  },
+  {
+   "id": "f4",
+   "titulo": "Linux (WSL2)",
+   "objetivo": "O Ubuntu com tudo o que o código precisa, commits assinados e o ambiente versionado.",
+   "passos": [
+    {
+     "id": "ubuntu-usuario",
+     "titulo": "Abrir 'Ubuntu 24.04' no menu Iniciar e criar seu usuário Linux",
+     "quem": "voce",
+     "pronto": "Prompt do Ubuntu aberto",
+     "tempo_min": 10,
+     "blocos": [
+      "wsl"
+     ]
+    },
+    {
+     "id": "docker-wsl",
+     "titulo": "Ligar o Docker Desktop no Ubuntu: Settings > Resources > WSL integration",
+     "quem": "voce",
+     "pronto": "'docker run hello-world' funciona dentro do Ubuntu",
+     "tempo_min": 5,
+     "blocos": [
+      "docker"
+     ]
+    },
+    {
+     "id": "clonar",
+     "titulo": "Copiar este repositório para ~/dev/dev-setup",
+     "quem": "voce",
+     "pronto": "Pasta ~/dev/dev-setup com os arquivos",
+     "tempo_min": 5,
+     "comando": "mkdir -p ~/dev && cp -r /mnt/c/Users/SEU_USUARIO/dev-setup ~/dev/dev-setup",
+     "nota": "Troque SEU_USUARIO pelo seu usuário do Windows. Depois que o repositório estiver no GitHub, use git clone.",
+     "blocos": []
+    },
+    {
+     "id": "bootstrap",
+     "titulo": "Rodar o preparador do Linux",
+     "quem": "script",
+     "pronto": "Termina com 'Pronto' e sem ERRO",
+     "tempo_min": 40,
+     "comando": "bash scripts/wsl/bootstrap.sh --nome \"Alan Mateus\" --email SEU_EMAIL --com-whisper",
+     "blocos": [
+      "rt",
+      "tex",
+      "sec",
+      "git",
+      "netw",
+      "whis",
+      "tikz",
+      "circ",
+      "oinst"
+     ]
+    },
+    {
+     "id": "wsl-reiniciar",
+     "titulo": "Reiniciar o WSL para o systemd valer (PowerShell)",
+     "quem": "voce",
+     "pronto": "Ubuntu reabre normalmente",
+     "tempo_min": 2,
+     "comando": "wsl --shutdown",
+     "blocos": [
+      "wsl"
+     ]
+    },
+    {
+     "id": "gh-login",
+     "titulo": "Entrar no GitHub pelo terminal e cadastrar a chave SSH para login e assinatura",
+     "quem": "voce",
+     "pronto": "'gh auth status' mostra sua conta",
+     "tempo_min": 10,
+     "comando": "gh auth login && gh ssh-key add ~/.ssh/id_ed25519.pub --type authentication && gh ssh-key add ~/.ssh/id_ed25519.pub --type signing",
+     "blocos": [
+      "git",
+      "sign"
+     ]
+    },
+    {
+     "id": "dotfiles",
+     "titulo": "Guardar os dotfiles (.bashrc, .gitconfig, .tmux.conf) num repositório privado",
+     "quem": "claude",
+     "pronto": "Repositório dotfiles privado; clonar e rodar o script de links recria o terminal",
+     "tempo_min": 30,
+     "nota": "Nunca coloque chaves ou tokens nos dotfiles. O gitleaks do CI confere a cada envio.",
+     "blocos": [
+      "dot"
+     ]
+    },
+    {
+     "id": "obsidian-git",
+     "titulo": "Criar o cofre do Obsidian em ~/dev/notas e ligar o plugin Obsidian Git",
+     "quem": "voce",
+     "pronto": "Cofre aberto no Obsidian com as pastas e modelos; notas vão sozinhas para um repositório privado a cada 10 minutos",
+     "tempo_min": 20,
+     "blocos": [
+      "obsd"
+     ],
+     "comando": "bash scripts/wsl/vault.sh",
+     "nota": "No Obsidian do Windows, abra a pasta \\\\wsl.localhost\\Ubuntu-24.04\\home\\SEU_USUARIO\\dev\\notas."
+    },
+    {
+     "id": "syncthing",
+     "titulo": "Ligar o Syncthing entre o celular e o notebook para as gravações (opcional)",
+     "quem": "voce",
+     "pronto": "Vídeo gravado no celular aparece na pasta Gravacoes do Windows",
+     "tempo_min": 15,
+     "nota": "Para o pipeline pegar, mova o vídeo para ~/AMtech/entrada/aulas. Vídeo com aluno menor de idade só com autorização do responsável.",
+     "blocos": [
+      "syncth",
+      "cel"
+     ]
+    },
+    {
+     "id": "wsl-verificar",
+     "titulo": "Conferir o Linux",
+     "quem": "script",
+     "pronto": "verificar.sh termina com 'WSL pronto'",
+     "tempo_min": 5,
+     "comando": "bash scripts/wsl/verificar.sh",
+     "blocos": [
+      "overif"
+     ]
+    }
+   ],
+   "quando": "Semana 2 · nov/2026"
+  },
+  {
+   "id": "f5",
+   "titulo": "GitHub e CI",
+   "objetivo": "O repositório no ar, com testes automáticos verdes a cada envio e o trabalho organizado.",
+   "passos": [
+    {
+     "id": "repo-criar",
+     "titulo": "Criar o repositório privado e enviar o setup",
+     "quem": "script",
+     "pronto": "Repositório AlanMateus17/dev-setup privado com o código",
+     "tempo_min": 5,
+     "comando": "cd ~/dev/dev-setup && git init -q 2>/dev/null; git add -A && git commit -qm 'chore: setup inicial' ; gh repo create AlanMateus17/dev-setup --private --source . --push",
+     "nota": "Se você usar o zip, o histórico de commits não vem junto; o repositório começa com um commit novo, já assinado.",
+     "blocos": [
+      "gh"
+     ]
+    },
+    {
+     "id": "ci-verde",
+     "titulo": "Conferir o CI no GitHub",
+     "quem": "script",
+     "pronto": "Última execução do workflow 'docs' com sucesso",
+     "tempo_min": 5,
+     "comando": "gh run list --limit 1",
+     "blocos": [
+      "gha"
+     ]
+    },
+    {
+     "id": "protecao-main",
+     "titulo": "Ligar Dependabot e CodeQL e proteger o branch main",
+     "quem": "claude",
+     "pronto": "Dependabot e CodeQL ativos; push direto no main exige CI verde",
+     "tempo_min": 15,
+     "nota": "Peça ao Claude Code no repositório; ele faz pelo gh api com a sua aprovação.",
+     "blocos": [
+      "dbot"
+     ]
+    },
+    {
+     "id": "org",
+     "titulo": "Criar a organização grupo-amtech-digital no GitHub",
+     "quem": "voce",
+     "pronto": "Organização criada, com 2FA obrigatório para membros",
+     "tempo_min": 10,
+     "blocos": [
+      "gh"
+     ]
+    },
+    {
+     "id": "projetos-adr",
+     "titulo": "Criar o GitHub Project do setup e a pasta de decisões (ADRs)",
+     "quem": "claude",
+     "pronto": "Quadro com as fases deste roteiro e docs/adr/0001 registrado",
+     "tempo_min": 20,
+     "nota": "O MkDocs publica a documentação no GitHub Pages quando você quiser tornar algo público; o setup continua privado.",
+     "blocos": [
+      "ghproj"
+     ]
+    }
+   ],
+   "quando": "Semana 2 · nov/2026"
+  },
+  {
+   "id": "f6",
+   "titulo": "Agentes de IA",
+   "objetivo": "O Claude Code trabalhando dentro da sandbox, com as suas regras, ferramentas e memória.",
+   "passos": [
+    {
+     "id": "claude-login",
+     "titulo": "Entrar no Claude Code",
+     "quem": "voce",
+     "pronto": "'claude doctor' sem erros",
+     "tempo_min": 5,
+     "comando": "claude",
+     "blocos": [
+      "cc"
+     ]
+    },
+    {
+     "id": "ai-jail-teste",
+     "titulo": "Testar a sandbox",
+     "quem": "script",
+     "pronto": "Mostra o que seria montado, sem erro",
+     "tempo_min": 2,
+     "comando": "cd ~/dev/dev-setup && ai-jail --dry-run claude",
+     "blocos": [
+      "jail"
+     ]
+    },
+    {
+     "id": "claude-md",
+     "titulo": "Criar o CLAUDE.md padrão do Aura e os comandos /commit e /novo-sistema-aura",
+     "quem": "claude",
+     "pronto": "Arquivos no repositório de cada sistema",
+     "tempo_min": 30,
+     "nota": "Peça ao Claude Code: o conteúdo está em docs/pecas-autorais.md.",
+     "blocos": [
+      "kit"
+     ]
+    },
+    {
+     "id": "ollama-modelo",
+     "titulo": "Baixar um modelo local de 3 a 4B no Ollama",
+     "quem": "voce",
+     "pronto": "verificar.ps1 mostra Ollama OK com 1 modelo",
+     "tempo_min": 15,
+     "comando": "ollama pull <nome do modelo escolhido no catálogo do Ollama>",
+     "blocos": [
+      "oll",
+      "lmods"
+     ]
+    },
+    {
+     "id": "mcp",
+     "titulo": "Ligar os servidores MCP do Claude Code: GitHub e o banco de métricas só para leitura",
+     "quem": "claude",
+     "pronto": "'claude mcp list' mostra os servidores conectados",
+     "tempo_min": 20,
+     "nota": "O banco entra com o usuário leitor do Grafana, que não apaga nada. Tokens ficam no KeePassXC e em variáveis de ambiente, nunca no repositório.",
+     "blocos": [
+      "mcp"
+     ]
+    },
+    {
+     "id": "ai-memory",
+     "titulo": "Ligar o ai-memory para o agente lembrar das decisões entre sessões",
+     "quem": "claude",
+     "pronto": "Uma decisão anotada numa sessão aparece na seguinte",
+     "tempo_min": 15,
+     "blocos": [
+      "mem"
+     ]
+    },
+    {
+     "id": "rag",
+     "titulo": "Montar a base de conhecimento das suas notas (Ollama + pgvector, ou NotebookLM e Projects)",
+     "quem": "claude",
+     "pronto": "Pergunta sobre uma anotação sua volta com a resposta e a nota de origem",
+     "tempo_min": 60,
+     "nota": "Entram só as suas anotações, resumos com suas palavras, exercícios resolvidos e aulas que você gravou. Aulas da Udemy, DIO, Alura e afins não entram.",
+     "blocos": [
+      "rag",
+      "nblm"
+     ]
+    }
+   ],
+   "quando": "Semana 2 · nov/2026"
+  },
+  {
+   "id": "f7",
+   "titulo": "Backup e segurança",
+   "objetivo": "Perder o notebook não faz você perder nada.",
+   "passos": [
+    {
+     "id": "restic-local",
+     "titulo": "Criar o repositório restic no disco externo e o primeiro backup",
+     "quem": "script",
+     "pronto": "'restic snapshots' lista o backup",
+     "tempo_min": 30,
+     "comando": "restic -r /mnt/d/backup-restic init && restic -r /mnt/d/backup-restic backup ~/dev ~/AMtech ~/.config/amtech",
+     "nota": "Troque /mnt/d pela letra do seu disco externo (D: vira /mnt/d). Guarde a senha do repositório no KeePassXC.",
+     "blocos": [
+      "restic",
+      "bkp",
+      "ext"
+     ]
+    },
+    {
+     "id": "restic-nuvem",
+     "titulo": "Criar a cópia fora de casa (Backblaze B2 ou o armazenamento do seu plano Google)",
+     "quem": "voce",
+     "pronto": "Segundo repositório restic com snapshot",
+     "tempo_min": 40,
+     "blocos": [
+      "b2",
+      "bkp"
+     ]
+    },
+    {
+     "id": "restaurar",
+     "titulo": "Testar a restauração de uma pasta",
+     "quem": "voce",
+     "pronto": "Arquivo restaurado abre normalmente",
+     "tempo_min": 15,
+     "blocos": [
+      "bkp"
+     ]
+    },
+    {
+     "id": "agendar-backup",
+     "titulo": "Agendar o backup diário",
+     "quem": "claude",
+     "pronto": "Timer do backup ativo",
+     "tempo_min": 20,
+     "blocos": [
+      "restic"
+     ]
+    }
+   ],
+   "quando": "Semana 3 · nov/2026"
+  },
+  {
+   "id": "f8",
+   "titulo": "Acervo: tudo o que você já tem",
+   "objetivo": "Todos os seus documentos convertidos em conhecimento organizado no Obsidian, os pessoais separados e a lista do que dá para vender.",
+   "passos": [
+    {
+     "id": "acervo-copia",
+     "titulo": "Baixar uma cópia completa do Google Drive pelo Google Takeout",
+     "quem": "voce",
+     "tempo_min": 45,
+     "pronto": "Os zips do Takeout extraídos numa pasta só, por exemplo C:\\Users\\SEU_USUARIO\\Downloads\\Takeout",
+     "nota": "Escolha só o Drive e, em formatos, Google Docs como .docx e Apresentações como .pptx. O Drive para computador mostra os Google Docs como atalhos sem conteúdo, por isso a primeira cópia vem do Takeout. Junte também os arquivos do notebook e dos pendrives na mesma pasta.",
+     "blocos": [
+      "gdrv"
+     ]
+    },
+    {
+     "id": "separar-pessoais",
+     "titulo": "Tirar da pasta os documentos pessoais (contracheques, extratos, IRPF, faturas)",
+     "quem": "voce",
+     "tempo_min": 30,
+     "pronto": "Pasta Pessoal separada, guardada só no backup criptografado",
+     "nota": "O acervo.py também barra esses arquivos pelo nome e pelo conteúdo e lista o que achou, mas tirar antes é mais seguro.",
+     "blocos": [
+      "bkp"
+     ]
+    },
+    {
+     "id": "acervo-simular",
+     "titulo": "Ver o que o acervo faria, sem escrever nada",
+     "quem": "script",
+     "tempo_min": 10,
+     "comando": "uv run tools/acervo/acervo.py --origem /mnt/c/Users/SEU_USUARIO/Downloads/Takeout --simular",
+     "pronto": "Resumo com arquivos lidos, cópias repetidas, pessoais, de terceiros e da escola",
+     "blocos": [
+      "acv"
+     ]
+    },
+    {
+     "id": "acervo-rodar",
+     "titulo": "Converter o acervo para o Obsidian e gerar o relatório de produtos",
+     "quem": "script",
+     "tempo_min": 30,
+     "comando": "uv run tools/acervo/acervo.py --origem /mnt/c/Users/SEU_USUARIO/Downloads/Takeout",
+     "pronto": "30-Acervo no Obsidian com os documentos em Markdown e 40-Produtos/Produtos do acervo.md",
+     "nota": "Roda no notebook; nada é enviado para fora. Pode rodar de novo quando chegarem documentos novos: o que já foi convertido não é refeito.",
+     "blocos": [
+      "acv",
+      "obsd"
+     ]
+    },
+    {
+     "id": "acervo-alertas",
+     "titulo": "Decidir cada alerta: dados de alunos, material de terceiros, material feito para a escola",
+     "quem": "voce",
+     "tempo_min": 90,
+     "pronto": "Cada alerta com decisão anotada: apagar dados, só estudo, reescrever ou vender",
+     "nota": "Material de terceiros (livros, cursos) não vira produto nem treino de IA. Material feito para a escola: confira os direitos antes de vender; o caminho seguro é reescrever do zero, no seu tempo, sem a identidade da escola.",
+     "blocos": [
+      "acv"
+     ]
+    },
+    {
+     "id": "acervo-rag",
+     "titulo": "Indexar o acervo e as suas notas na base de conhecimento",
+     "quem": "claude",
+     "tempo_min": 30,
+     "pronto": "Pergunta sobre um documento antigo volta com a resposta e o arquivo de origem",
+     "blocos": [
+      "rag"
+     ]
+    },
+    {
+     "id": "acervo-produtos",
+     "titulo": "Escolher no relatório os 3 primeiros produtos e levar para o portfólio de ofertas",
+     "quem": "claude",
+     "tempo_min": 60,
+     "pronto": "3 ofertas novas em data/portfolio.json com estágio, preço alvo e próximo passo",
+     "blocos": [
+      "ocatal",
+      "oesteira"
+     ]
+    }
+   ],
+   "quando": "Semanas 3 e 4 · nov/2026"
+  },
+  {
+   "id": "f9",
+   "titulo": "Claude e assistentes",
+   "objetivo": "Cada recurso do Claude e cada assistente com um papel definido no setup.",
+   "passos": [
+    {
+     "id": "claude-app",
+     "titulo": "Organizar o app do Claude: um Project por frente, memória, artefatos, pesquisa e tarefas agendadas",
+     "quem": "voce",
+     "pronto": "Projects AMtech, Instituto, Editora e Setup criados; uma tarefa agendada de teste rodou",
+     "tempo_min": 30,
+     "blocos": [
+      "capp2",
+      "proj",
+      "arts",
+      "resq",
+      "sched"
+     ]
+    },
+    {
+     "id": "conectores",
+     "titulo": "Conferir os conectores: Google, Canva, Figma, MailerLite, Vercel, Microsoft Learn, Upwork, Lovable, Supabase, Cloudflare e vidIQ",
+     "quem": "voce",
+     "pronto": "Cada conector usado responde a um pedido simples; o da Cloudflare trocado pelo Cloudflare API MCP",
+     "tempo_min": 30,
+     "nota": "Notion, monday, GitBook e Stripe ficam de fora: repetem Obsidian, GitHub Projects, MkDocs e as plataformas de curso. Desconecte para não confundir.",
+     "blocos": [
+      "cgws",
+      "ccan",
+      "cml",
+      "cdev",
+      "cupw",
+      "clov",
+      "ccf",
+      "cvid",
+      "cdup"
+     ]
+    },
+    {
+     "id": "plugins",
+     "titulo": "Ligar os plugins: small-business, marketing, engineering, design, finance, Hostinger, Adobe e Cloudinary",
+     "quem": "voce",
+     "pronto": "Os comandos dos plugins aparecem no Claude",
+     "tempo_min": 15,
+     "blocos": [
+      "pbiz",
+      "peng",
+      "pfin",
+      "phst"
+     ]
+    },
+    {
+     "id": "assistentes",
+     "titulo": "Entrar nos outros assistentes (ChatGPT, Gemini, Grok, DeepSeek, Perplexity, Codex, agentes do Google) e anotar quais são pagos",
+     "quem": "voce",
+     "pronto": "Acessos no KeePassXC e assinaturas pagas lançadas na tabela ferramentas do banco de métricas",
+     "tempo_min": 30,
+     "blocos": [
+      "gpt",
+      "gem",
+      "grok",
+      "ds",
+      "perp",
+      "codex",
+      "gcode"
+     ]
+    }
+   ],
+   "quando": "Semana 4 · nov/2026"
+  },
+  {
+   "id": "f10",
+   "titulo": "Automação e medição",
+   "objetivo": "n8n, banco de métricas, Grafana e Uptime Kuma rodando.",
+   "passos": [
+    {
+     "id": "senhas",
+     "titulo": "Gerar as senhas da stack e guardar no KeePassXC",
+     "quem": "script",
+     "pronto": ".env criado com permissão 600",
+     "tempo_min": 5,
+     "comando": "cd infra/automacao && bash gerar-senhas.sh",
+     "blocos": [
+      "n8n"
+     ]
+    },
+    {
+     "id": "subir-stack",
+     "titulo": "Subir a stack",
+     "quem": "script",
+     "pronto": "'docker compose ps' com todos healthy",
+     "tempo_min": 10,
+     "comando": "cd infra/automacao && docker compose up -d",
+     "blocos": [
+      "docker",
+      "n8n",
+      "metrics",
+      "pg"
+     ]
+    },
+    {
+     "id": "servicos-verificar",
+     "titulo": "Conferir os serviços",
+     "quem": "script",
+     "pronto": "verificar.sh --servicos sem FALTA na área servico",
+     "tempo_min": 2,
+     "comando": "bash scripts/wsl/verificar.sh --servicos",
+     "blocos": [
+      "overif"
+     ]
+    },
+    {
+     "id": "grafana-login",
+     "titulo": "Entrar no Grafana (admin) e ver a fonte 'Métricas AMtech' conectada",
+     "quem": "voce",
+     "pronto": "Explore > Métricas AMtech > 'select 1' responde",
+     "tempo_min": 10,
+     "comando": "http://localhost:3001",
+     "blocos": [
+      "graf"
+     ]
+    },
+    {
+     "id": "n8n-conta",
+     "titulo": "Criar a conta do n8n",
+     "quem": "voce",
+     "pronto": "Painel do n8n abre",
+     "tempo_min": 5,
+     "comando": "http://localhost:5678",
+     "blocos": [
+      "n8n"
+     ]
+    },
+    {
+     "id": "kuma-monitores",
+     "titulo": "Cadastrar no Uptime Kuma os monitores do n8n, Grafana e dos sites",
+     "quem": "voce",
+     "pronto": "Monitores verdes; aviso no Telegram configurado",
+     "tempo_min": 15,
+     "comando": "http://localhost:3002",
+     "blocos": [
+      "kuma"
+     ]
+    },
+    {
+     "id": "backup-banco",
+     "titulo": "Pôr o banco de métricas e os fluxos do n8n no backup diário",
+     "quem": "claude",
+     "tempo_min": 45,
+     "pronto": "Dump diário do banco e export dos fluxos em ~/AMtech/backup-dados, copiados pelo restic; uma restauração de teste funcionou",
+     "nota": "Os dados ficam em volumes do Docker, fora das pastas que o restic copia. Sem este passo, perder o notebook leva junto o histórico de vendas.",
+     "blocos": [
+      "metrics",
+      "n8n",
+      "restic"
+     ]
+    },
+    {
+     "id": "postiz-decisao",
+     "titulo": "Decidir: Postiz agora ou agendador nativo das redes",
+     "quem": "voce",
+     "pronto": "Decisão anotada em infra/postiz/README.md",
+     "tempo_min": 10,
+     "blocos": [
+      "postiz"
+     ]
+    }
+   ],
+   "quando": "Semana 4 · nov/2026"
+  },
+  {
+   "id": "f11",
+   "titulo": "Pipeline de conteúdo",
+   "objetivo": "Gravou ou escreveu, as peças aparecem na fila de aprovação.",
+   "passos": [
+    {
+     "id": "marca",
+     "titulo": "Preencher o guia de marca",
+     "quem": "voce",
+     "pronto": "config/marca.md sem colchetes",
+     "tempo_min": 40,
+     "nota": "O Claude pode rascunhar a partir dos documentos de marca e presença; você corrige.",
+     "blocos": [
+      "omarca"
+     ]
+    },
+    {
+     "id": "api-key",
+     "titulo": "Criar a chave da API no console da Anthropic e colocar no conteudo.env",
+     "quem": "voce",
+     "pronto": "ANTHROPIC_API_KEY preenchida em ~/.config/amtech/conteudo.env",
+     "tempo_min": 10,
+     "nota": "A API é cobrada por uso, separada da assinatura do Claude. Defina um limite de gasto mensal no console.",
+     "blocos": [
+      "anth"
+     ]
+    },
+    {
+     "id": "telegram-bot",
+     "titulo": "Criar o bot de aviso no Telegram (opcional)",
+     "quem": "voce",
+     "pronto": "Mensagem de teste chega no celular",
+     "tempo_min": 10,
+     "blocos": [
+      "tg",
+      "aprov"
+     ]
+    },
+    {
+     "id": "simular-pipeline",
+     "titulo": "Testar o caminho sem gastar",
+     "quem": "script",
+     "pronto": "Uma pasta [SIMULADO] aparece em ~/AMtech/fila",
+     "tempo_min": 2,
+     "comando": "echo teste > ~/AMtech/entrada/ideias/teste.txt && touch -d '-2 min' ~/AMtech/entrada/ideias/teste.txt && python3 tools/conteudo/processar.py --uma-vez --simular",
+     "blocos": [
+      "opipe"
+     ]
+    },
+    {
+     "id": "ativar-pipeline",
+     "titulo": "Ligar o timer de 15 minutos",
+     "quem": "script",
+     "pronto": "verificar.sh --servicos mostra o timer OK",
+     "tempo_min": 2,
+     "comando": "bash scripts/wsl/ativar-pipeline.sh",
+     "blocos": [
+      "opipe",
+      "oedit",
+      "ofly"
+     ]
+    },
+    {
+     "id": "primeira-aula",
+     "titulo": "Colocar uma aula gravada de verdade em ~/AMtech/entrada/aulas",
+     "quem": "voce",
+     "pronto": "Peças da aula na fila em até 15 minutos depois de transcrita",
+     "tempo_min": 20,
+     "blocos": [
+      "whis",
+      "ofly"
+     ]
+    }
+   ],
+   "quando": "Semana 5 · nov/2026"
+  },
+  {
+   "id": "f12",
+   "titulo": "Estúdio de conteúdo",
+   "objetivo": "Gravar, editar e montar imagens no mesmo padrão toda semana, sem pensar.",
+   "passos": [
+    {
+     "id": "obs-cenas",
+     "titulo": "Montar no OBS as cenas de aula, tela com rosto e vídeo vertical",
+     "quem": "voce",
+     "pronto": "Gravação de teste de 1 minuto com áudio limpo nas três cenas",
+     "tempo_min": 40,
+     "blocos": [
+      "obss"
+     ]
+    },
+    {
+     "id": "audio-modelo",
+     "titulo": "Criar no Audacity a cadeia de limpeza da sua voz (ruído, compressor, volume)",
+     "quem": "voce",
+     "pronto": "A mesma limpeza aplicada com um clique numa gravação nova",
+     "tempo_min": 20,
+     "blocos": [
+      "aud"
+     ]
+    },
+    {
+     "id": "edicao-modelo",
+     "titulo": "Criar no DaVinci ou Kdenlive o projeto modelo com abertura, legendas e formato vertical",
+     "quem": "voce",
+     "pronto": "Um corte de 30 segundos exportado a partir do modelo",
+     "tempo_min": 40,
+     "blocos": [
+      "edit"
+     ]
+    },
+    {
+     "id": "imagens-modelos",
+     "titulo": "Criar os modelos de capa, carrossel e thumbnail com a sua marca (Canva, Krita ou Inkscape)",
+     "quem": "claude",
+     "pronto": "Três modelos salvos; uma peça da fila montada com eles",
+     "tempo_min": 40,
+     "nota": "O Claude cria os modelos no Canva pelo conector, a partir do config/marca.md.",
+     "blocos": [
+      "img",
+      "ccan"
+     ]
+    },
+    {
+     "id": "voz-clonada",
+     "titulo": "Clonar a sua própria voz na ElevenLabs (opcional, plano pago)",
+     "quem": "voce",
+     "pronto": "Trecho de teste com a sua voz clonada aprovado por você",
+     "tempo_min": 60,
+     "nota": "Só a sua voz, com 30 minutos ou mais de áudio limpo. Avise o público quando a voz for gerada por IA. Voz de outra pessoa, nunca.",
+     "blocos": [
+      "voz"
+     ],
+     "precisa": [
+      "pagamento"
+     ]
+    }
+   ],
+   "quando": "Semana 5 · dez/2026"
+  },
+  {
+   "id": "f13",
+   "titulo": "Contas, canais e sites",
+   "objetivo": "Perfis, domínio, e-mail e sites prontos para receber o que o pipeline produz.",
+   "passos": [
+    {
+     "id": "perfis",
+     "titulo": "Completar Instagram, YouTube, TikTok, LinkedIn e Facebook com a mesma identidade",
+     "quem": "voce",
+     "pronto": "Foto, nome, bio e link iguais nas cinco redes",
+     "tempo_min": 90,
+     "blocos": [
+      "ig",
+      "yt",
+      "tiktok",
+      "li",
+      "facebook",
+      "omarca"
+     ]
+    },
+    {
+     "id": "whatsapp-business",
+     "titulo": "Configurar o WhatsApp Business com catálogo, respostas rápidas e horário",
+     "quem": "voce",
+     "pronto": "Mensagem de teste recebe a saudação automática",
+     "tempo_min": 30,
+     "blocos": [
+      "wa"
+     ]
+    },
+    {
+     "id": "dominio",
+     "titulo": "Registrar o domínio no Registro.br e apontar para a Cloudflare",
+     "quem": "voce",
+     "pronto": "DNS ativo na Cloudflare",
+     "tempo_min": 30,
+     "blocos": [
+      "dom",
+      "cf"
+     ],
+     "precisa": [
+      "pagamento"
+     ]
+    },
+    {
+     "id": "email-prof",
+     "titulo": "Criar o e-mail profissional do domínio",
+     "quem": "voce",
+     "pronto": "Envia e recebe",
+     "tempo_min": 30,
+     "blocos": [
+      "mail"
+     ],
+     "precisa": [
+      "pagamento"
+     ]
+    },
+    {
+     "id": "meta-business",
+     "titulo": "Criar o Gerenciador de Negócios da Meta, o Pixel e a conta de anúncios",
+     "quem": "voce",
+     "pronto": "Pixel instalado na página de vendas",
+     "tempo_min": 40,
+     "blocos": [
+      "mbs",
+      "pixel"
+     ]
+    },
+    {
+     "id": "mailerlite",
+     "titulo": "Montar no MailerLite os grupos, o formulário da isca e a sequência de boas-vindas",
+     "quem": "claude",
+     "pronto": "Inscrição de teste recebe o primeiro e-mail",
+     "tempo_min": 30,
+     "nota": "O Claude faz pelo conector do MailerLite, com a sua aprovação.",
+     "blocos": [
+      "mailer",
+      "isca",
+      "cml"
+     ]
+    },
+    {
+     "id": "site-pessoal",
+     "titulo": "Publicar o site pessoal e blog no GitHub Pages (alanmateus17.github.io)",
+     "quem": "claude",
+     "pronto": "Site no ar com portfólio, blog e formulário da newsletter",
+     "tempo_min": 60,
+     "blocos": [
+      "site",
+      "ghp"
+     ]
+    },
+    {
+     "id": "vercel-pagina",
+     "titulo": "Publicar o site do Instituto AMS com a página de pré-venda na Cloudflare Pages",
+     "quem": "claude",
+     "pronto": "Página no ar com o domínio e o Pixel",
+     "tempo_min": 60,
+     "nota": "Fica na Cloudflare Pages porque o plano grátis do Vercel não permite uso comercial. O Claude publica pelo conector da Cloudflare ou pelo Wrangler.",
+     "blocos": [
+      "inst",
+      "cf"
+     ]
+    },
+    {
+     "id": "site-grupo",
+     "titulo": "Publicar o site do Grupo AMtech e o Catálogo do HTML",
+     "quem": "claude",
+     "pronto": "Os dois sites no ar com domínio e HTTPS",
+     "tempo_min": 90,
+     "blocos": [
+      "amsite",
+      "catal"
+     ],
+     "ofertas": [
+      "catalogo"
+     ]
+    },
+    {
+     "id": "catalogo-alunos",
+     "titulo": "Mostrar o Catálogo do HTML aos alunos e ex-alunos",
+     "quem": "voce",
+     "pronto": "Alunos publicando os próprios sites pelo Catálogo",
+     "tempo_min": 20,
+     "nota": "É material grátis da escola, não venda. Nada de oferecer produto pago a aluno menor de idade; ex-alunos adultos podem seguir as redes.",
+     "blocos": [
+      "alunos"
+     ]
+    },
+    {
+     "id": "umami",
+     "titulo": "Ligar o Umami nos sites",
+     "quem": "claude",
+     "pronto": "Uma visita de teste aparece no painel do Umami",
+     "tempo_min": 20,
+     "blocos": [
+      "umami"
+     ]
+    },
+    {
+     "id": "search-console",
+     "titulo": "Ligar o Google Search Console no domínio e enviar o sitemap de cada site",
+     "quem": "voce",
+     "pronto": "Propriedade verificada e sitemaps lidos",
+     "tempo_min": 10,
+     "blocos": [
+      "gsc",
+      "seo"
+     ]
+    },
+    {
+     "id": "hostinger",
+     "titulo": "Separar na Hostinger o espaço dos sites de clientes",
+     "quem": "claude",
+     "pronto": "Auditoria da Hostinger sem pendências e um site modelo pronto para copiar",
+     "tempo_min": 30,
+     "nota": "O Claude faz a auditoria pelo plugin da Hostinger e aponta o que precisa de atenção.",
+     "blocos": [
+      "hostg",
+      "sites"
+     ],
+     "ofertas": [
+      "sites"
+     ]
+    }
+   ],
+   "quando": "Semanas 6 e 7 · dez/2026"
+  },
+  {
+   "id": "f14",
+   "titulo": "Vendas e finanças no CPF",
+   "objetivo": "Cada oferta pode ser vendida, recebida e declarada do jeito certo.",
+   "passos": [
+    {
+     "id": "govbr",
+     "titulo": "Subir a conta gov.br para prata ou ouro",
+     "quem": "voce",
+     "pronto": "Nível prata ou ouro aparece no app gov.br",
+     "tempo_min": 20,
+     "blocos": [
+      "govbr"
+     ]
+    },
+    {
+     "id": "banco",
+     "titulo": "Abrir a conta bancária separada para o que você vende (no CPF)",
+     "quem": "voce",
+     "pronto": "Conta aberta; todas as plataformas vão pagar nela",
+     "tempo_min": 30,
+     "blocos": [
+      "banco"
+     ]
+    },
+    {
+     "id": "contador",
+     "titulo": "Fazer a consulta com o contador: carnê-leão e a partir de que renda abrir CNPJ",
+     "quem": "voce",
+     "pronto": "Regras do carnê-leão anotadas e o valor de virada para o CNPJ definido",
+     "tempo_min": 60,
+     "blocos": [
+      "conta"
+     ],
+     "precisa": [
+      "pagamento"
+     ]
+    },
+    {
+     "id": "legal",
+     "titulo": "Publicar termos de uso e política de privacidade (LGPD) e ter o contrato padrão de serviço",
+     "quem": "claude",
+     "pronto": "Links de termos e privacidade no rodapé de todos os sites; contrato em modelo editável",
+     "tempo_min": 60,
+     "nota": "O Claude rascunha; antes de usar, peça para o contador ou um advogado revisar. Isto vem antes de coletar e-mail ou vender.",
+     "blocos": [
+      "legal"
+     ]
+    },
+    {
+     "id": "plataformas",
+     "titulo": "Criar as contas da Hotmart e da Kiwify no CPF e cadastrar o mini-curso",
+     "quem": "voce",
+     "pronto": "Produto em rascunho nas duas",
+     "tempo_min": 60,
+     "blocos": [
+      "hotm",
+      "kiwi",
+      "curso"
+     ]
+    },
+    {
+     "id": "outras-plataformas",
+     "titulo": "Abrir as contas na Eduzz e na Udemy e publicar artigos e projetos na DIO",
+     "quem": "voce",
+     "pronto": "Contas aprovadas; formulário fiscal da Udemy enviado; primeiro artigo publicado na DIO",
+     "tempo_min": 60,
+     "nota": "Na Udemy o recebimento é por PayPal ou Payoneer e vai para o carnê-leão como renda do exterior.",
+     "blocos": [
+      "eduzz",
+      "udemy",
+      "dio"
+     ],
+     "ofertas": [
+      "dio"
+     ]
+    },
+    {
+     "id": "mercado-pago",
+     "titulo": "Ativar o Mercado Pago para Pix e cartão das aulas e dos sites",
+     "quem": "voce",
+     "pronto": "Link de pagamento de teste pago e estornado",
+     "tempo_min": 20,
+     "blocos": [
+      "mp"
+     ]
+    },
+    {
+     "id": "agenda",
+     "titulo": "Criar a agenda online no Cal.com com pagamento para as aulas particulares",
+     "quem": "voce",
+     "pronto": "Horário de teste marcado e cobrado",
+     "tempo_min": 30,
+     "blocos": [
+      "agenda",
+      "aulas"
+     ],
+     "ofertas": [
+      "aulas"
+     ]
+    },
+    {
+     "id": "crm",
+     "titulo": "Criar o CRM em planilha com origem e consentimento de cada cliente",
+     "quem": "claude",
+     "pronto": "Planilha com colunas de oferta, origem, consentimento LGPD e próximo passo",
+     "tempo_min": 30,
+     "blocos": [
+      "crm",
+      "ocrm"
+     ]
+    },
+    {
+     "id": "comunidade",
+     "titulo": "Abrir a comunidade dos alunos (Discord ou grupo)",
+     "quem": "voce",
+     "pronto": "Regras publicadas e convite automático na compra",
+     "tempo_min": 30,
+     "blocos": [
+      "comu"
+     ]
+    },
+    {
+     "id": "afiliados",
+     "titulo": "Entrar nos programas de afiliados (Amazon, Hotmart) e criar a lista de links",
+     "quem": "voce",
+     "pronto": "Links de afiliado com UTM numa nota do Obsidian",
+     "tempo_min": 30,
+     "blocos": [
+      "afil"
+     ],
+     "ofertas": [
+      "afiliados"
+     ]
+    },
+    {
+     "id": "utm",
+     "titulo": "Adotar o padrão de UTM em todo link",
+     "quem": "claude",
+     "pronto": "Gerador de links com UTM salvo e usado no primeiro post",
+     "tempo_min": 15,
+     "blocos": [
+      "utm"
+     ]
+    },
+    {
+     "id": "calc-regras",
+     "titulo": "Calcular o lucro por venda de cada oferta e definir as regras de corte dos anúncios",
+     "quem": "voce",
+     "pronto": "CPA de empate e CPA da margem anotados para cada oferta ativa",
+     "tempo_min": 30,
+     "blocos": [
+      "calc",
+      "regras"
+     ]
+    },
+    {
+     "id": "ofertas",
+     "titulo": "Revisar o portfólio de ofertas: estágio, próximo passo e padrão de qualidade",
+     "quem": "claude",
+     "pronto": "Uma oferta em construção e uma em validação, cada uma com o checklist de pronto",
+     "tempo_min": 45,
+     "nota": "O Claude cria o comando /revisar-oferta, que confere um lançamento contra o padrão de qualidade antes de ir ao ar.",
+     "blocos": [
+      "ocatal",
+      "oesteira",
+      "oqual",
+      "orevo"
+     ]
+    },
+    {
+     "id": "avaliacoes",
+     "titulo": "Ligar a pergunta de satisfação depois de cada compra ou serviço e o pedido de avaliação no Google",
+     "quem": "claude",
+     "pronto": "Compra de teste recebe a pergunta por e-mail",
+     "tempo_min": 30,
+     "blocos": [
+      "oaval"
+     ]
+    },
+    {
+     "id": "prospeccao",
+     "titulo": "Montar a lista de parceiros e a primeira mensagem de prospecção",
+     "quem": "claude",
+     "pronto": "10 parceiros qualificados e a mensagem revisada por você",
+     "tempo_min": 45,
+     "nota": "O Claude busca e qualifica; quem envia é você.",
+     "blocos": [
+      "prosp"
+     ]
+    },
+    {
+     "id": "inpi",
+     "titulo": "Pesquisar e pedir o registro das marcas no INPI",
+     "quem": "voce",
+     "pronto": "Pesquisa sem conflito e pedido protocolado (ou decisão de esperar, anotada)",
+     "tempo_min": 60,
+     "blocos": [
+      "inpi"
+     ],
+     "precisa": [
+      "pagamento"
+     ]
+    },
+    {
+     "id": "carne-leao",
+     "titulo": "Fazer o primeiro carnê-leão do mês e marcar o lembrete mensal",
+     "quem": "voce",
+     "pronto": "DARF gerado (ou mês sem receita registrado) e lembrete todo dia 20",
+     "tempo_min": 30,
+     "blocos": [
+      "nfse"
+     ]
+    },
+    {
+     "id": "irpf",
+     "titulo": "Separar a pasta da declaração anual do IR",
+     "quem": "voce",
+     "pronto": "Pasta com informes e carnês do ano, guardada no backup",
+     "tempo_min": 15,
+     "blocos": [
+      "irpf"
+     ]
+    },
+    {
+     "id": "caixa",
+     "titulo": "Começar o Caixa da Casa numa planilha até o sistema AM Rendara existir",
+     "quem": "claude",
+     "pronto": "Entradas e saídas do mês lançadas, separando casa e vendas",
+     "tempo_min": 30,
+     "blocos": [
+      "caixa"
+     ],
+     "ofertas": [
+      "rendara"
+     ]
+    }
+   ],
+   "quando": "Semanas 8 a 10 · dez/2026 a jan/2027"
+  },
+  {
+   "id": "f15",
+   "titulo": "Vendas medidas",
+   "objetivo": "Cada venda chega sozinha ao banco e aparece no painel de lucro.",
+   "passos": [
+    {
+     "id": "tunel",
+     "titulo": "Criar o túnel público para os webhooks (Cloudflare Tunnel) e preencher N8N_WEBHOOK_URL",
+     "quem": "voce",
+     "pronto": "https://n8n.seu-dominio responde fora de casa",
+     "tempo_min": 40,
+     "nota": "Só o caminho de webhook precisa ficar público; o painel do n8n fica protegido.",
+     "blocos": [
+      "cf",
+      "hooks"
+     ],
+     "precisa": [
+      "pagamento"
+     ]
+    },
+    {
+     "id": "fluxo-vendas",
+     "titulo": "Criar no n8n o fluxo: webhook Hotmart, Kiwify e Eduzz → tabela vendas",
+     "quem": "claude",
+     "pronto": "Venda de teste aparece na tabela vendas",
+     "tempo_min": 60,
+     "nota": "O Claude monta o fluxo com você no n8n; a tabela já tem a trava contra venda duplicada.",
+     "blocos": [
+      "hooks"
+     ]
+    },
+    {
+     "id": "gastos",
+     "titulo": "Lançar os gastos de anúncio (manual no começo, depois pela API de cada rede)",
+     "quem": "voce",
+     "pronto": "Tabela gastos com a primeira campanha",
+     "tempo_min": 15,
+     "blocos": [
+      "metrics"
+     ]
+    },
+    {
+     "id": "painel-lucro",
+     "titulo": "Montar o painel de lucro no Grafana sobre a view lucro_por_produto_mes",
+     "quem": "claude",
+     "pronto": "Painel mostra receita, anúncio, lucro e CPA por produto",
+     "tempo_min": 45,
+     "blocos": [
+      "painel",
+      "graf"
+     ]
+    }
+   ],
+   "quando": "Semana 11 · jan/2027"
+  },
+  {
+   "id": "f16",
+   "titulo": "Teste do núcleo",
+   "objetivo": "Os três testes de ponta a ponta passam: daqui em diante, alimentar o sistema já faz tudo sozinho.",
+   "passos": [
+    {
+     "id": "teste-dev",
+     "titulo": "Dev: mudar algo num repositório, commit assinado, push, CI verde",
+     "quem": "voce",
+     "pronto": "Selo Verified no commit e CI verde",
+     "tempo_min": 15,
+     "blocos": [
+      "sign",
+      "gha"
+     ]
+    },
+    {
+     "id": "teste-conteudo",
+     "titulo": "Conteúdo: arquivo na entrada → peças na fila → aviso no Telegram",
+     "quem": "voce",
+     "pronto": "Pasta nova na fila e mensagem no celular",
+     "tempo_min": 20,
+     "blocos": [
+      "opipe"
+     ]
+    },
+    {
+     "id": "teste-venda",
+     "titulo": "Venda: compra de teste na Hotmart → linha na tabela vendas → painel de lucro",
+     "quem": "voce",
+     "pronto": "Venda de teste no Grafana",
+     "tempo_min": 20,
+     "blocos": [
+      "hooks",
+      "painel"
+     ]
+    },
+    {
+     "id": "tudo-verde",
+     "titulo": "Rodar os três verificadores juntos",
+     "quem": "script",
+     "pronto": "verificar.ps1, verificar.sh e verificar.sh --servicos sem FALTA",
+     "tempo_min": 5,
+     "blocos": [
+      "overif",
+      "oimpl"
+     ]
+    }
+   ],
+   "quando": "Semana 11 · jan/2027"
+  },
+  {
+   "id": "f17",
+   "titulo": "Primeira venda: o mini-curso no ar",
+   "objetivo": "A primeira venda real pela internet, com entrega, suporte, imposto e números no painel.",
+   "passos": [
+    {
+     "id": "mc-roteiro",
+     "titulo": "Fechar o roteiro das 5 primeiras aulas do mini-curso a partir do acervo",
+     "quem": "claude",
+     "pronto": "5 aulas com objetivo, exemplo e exercício, no Obsidian",
+     "tempo_min": 120,
+     "blocos": [
+      "curso"
+     ],
+     "ofertas": [
+      "minicurso"
+     ]
+    },
+    {
+     "id": "mc-gravar",
+     "titulo": "Gravar e editar as 5 aulas",
+     "quem": "voce",
+     "pronto": "5 vídeos finais exportados no modelo do estúdio",
+     "tempo_min": 600,
+     "blocos": [
+      "obss",
+      "edit"
+     ],
+     "ofertas": [
+      "minicurso"
+     ]
+    },
+    {
+     "id": "mc-hotmart",
+     "titulo": "Subir as aulas na Hotmart com preço e garantia de 7 dias",
+     "quem": "voce",
+     "pronto": "Produto aprovado na Hotmart, com checkout funcionando",
+     "tempo_min": 120,
+     "nota": "A garantia de 7 dias é o direito de arrependimento do Código de Defesa do Consumidor para compra pela internet.",
+     "blocos": [
+      "hotm"
+     ],
+     "ofertas": [
+      "minicurso"
+     ]
+    },
+    {
+     "id": "mc-pagina",
+     "titulo": "Página de vendas no Instituto AMS: promessa, conteúdo, preço e garantia",
+     "quem": "claude",
+     "pronto": "Página no ar levando ao checkout, com Pixel e UTM",
+     "tempo_min": 120,
+     "nota": "Sem depoimento inventado: só depoimentos reais, com autorização, quando existirem.",
+     "blocos": [
+      "inst",
+      "pixel",
+      "utm"
+     ],
+     "ofertas": [
+      "minicurso"
+     ]
+    },
+    {
+     "id": "mc-isca",
+     "titulo": "Isca grátis (aula 1) com a sequência de e-mails que leva à venda",
+     "quem": "claude",
+     "pronto": "Inscrição de teste recebe os 5 e-mails e o último leva ao checkout",
+     "tempo_min": 90,
+     "blocos": [
+      "isca",
+      "mailer"
+     ],
+     "ofertas": [
+      "minicurso",
+      "newsletter"
+     ]
+    },
+    {
+     "id": "mc-lancar",
+     "titulo": "Abrir a pré-venda: lista de e-mail, Instagram, WhatsApp e LinkedIn",
+     "quem": "voce",
+     "pronto": "Lançamento publicado em todos os canais, com UTM",
+     "tempo_min": 120,
+     "blocos": [
+      "ig",
+      "wa",
+      "li"
+     ],
+     "ofertas": [
+      "minicurso"
+     ]
+    },
+    {
+     "id": "mc-primeira-venda",
+     "titulo": "Primeira venda real: acesso, suporte, painel e carnê-leão",
+     "quem": "voce",
+     "pronto": "Venda paga, aluno com acesso, dúvida respondida em até 24 h, linha na tabela vendas e venda lançada no carnê-leão",
+     "tempo_min": 60,
+     "blocos": [
+      "hotm",
+      "hooks",
+      "nfse"
+     ],
+     "ofertas": [
+      "minicurso"
+     ]
+    },
+    {
+     "id": "mc-outras",
+     "titulo": "Publicar o mini-curso também na Kiwify, Eduzz e Udemy",
+     "quem": "voce",
+     "pronto": "Mini-curso à venda nas quatro plataformas",
+     "tempo_min": 120,
+     "blocos": [
+      "kiwi",
+      "eduzz",
+      "udemy"
+     ],
+     "ofertas": [
+      "minicurso",
+      "udemy"
+     ]
+    }
+   ],
+   "quando": "Semanas 12 a 15 · jan a fev/2027"
+  },
+  {
+   "id": "f18",
+   "titulo": "Base dos sistemas AM",
+   "objetivo": "Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy.",
+   "passos": [
+    {
+     "id": "template-aura",
+     "titulo": "Gerar o modelo de sistema com /novo-sistema-aura",
+     "quem": "claude",
+     "pronto": "Sistema exemplo sobe com 'dotnet run' e passa nos testes",
+     "tempo_min": 120,
+     "nota": "Clean Architecture + DDD, EF Core com Npgsql, multi-tenant com RLS, SignalR com Redis, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com xUnit, Playwright e k6.",
+     "blocos": [
+      "clean",
+      "ef",
+      "sig",
+      "rls",
+      "api",
+      "front",
+      "oapi",
+      "story",
+      "pg",
+      "redis",
+      "tests"
+     ]
+    },
+    {
+     "id": "auth",
+     "titulo": "Ligar o login: Keycloak no dev e Entra ID na nuvem",
+     "quem": "claude",
+     "pronto": "Usuário de teste entra e só vê os dados da própria empresa",
+     "tempo_min": 60,
+     "blocos": [
+      "auth"
+     ]
+    },
+    {
+     "id": "observabilidade-dev",
+     "titulo": "Ligar a observabilidade do dev: .NET Aspire, OpenTelemetry, Prometheus, Seq, Mailpit e Caddy",
+     "quem": "claude",
+     "pronto": "Painel do Aspire mostra trace de uma requisição; e-mail de teste cai no Mailpit",
+     "tempo_min": 60,
+     "blocos": [
+      "aspire",
+      "otel",
+      "prom",
+      "seq",
+      "mailp",
+      "caddy"
+     ]
+    },
+    {
+     "id": "sentry",
+     "titulo": "Criar o projeto no Sentry e ligar no modelo",
+     "quem": "voce",
+     "pronto": "Erro de teste aparece no Sentry",
+     "tempo_min": 20,
+     "blocos": [
+      "sentry"
+     ]
+    },
+    {
+     "id": "sonar",
+     "titulo": "Ligar o SonarQube Cloud no repositório do modelo",
+     "quem": "voce",
+     "pronto": "Nota de qualidade aparece no pull request",
+     "tempo_min": 20,
+     "nota": "O plano grátis cobre repositório público; confira o limite para privado antes de ligar.",
+     "blocos": [
+      "sonar"
+     ]
+    },
+    {
+     "id": "ghcr",
+     "titulo": "Publicar a imagem Docker da API no GHCR pelo CI",
+     "quem": "claude",
+     "pronto": "Imagem com a tag do commit aparece nos pacotes do GitHub",
+     "tempo_min": 30,
+     "blocos": [
+      "ghcr"
+     ]
+    },
+    {
+     "id": "templates-venda",
+     "titulo": "Separar o que do modelo pode virar template à venda",
+     "quem": "voce",
+     "pronto": "Lista de templates no portfólio de ofertas",
+     "tempo_min": 30,
+     "blocos": [
+      "tmpl"
+     ],
+     "ofertas": [
+      "templates"
+     ]
+    },
+    {
+     "id": "vaga",
+     "titulo": "Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — quando o Passo 8 da trilha de estudo estiver feito (≈ jul a dez/2027)",
+     "quem": "voce",
+     "pronto": "10 candidaturas enviadas com o portfólio do sistema exemplo",
+     "tempo_min": 120,
+     "blocos": [
+      "recr"
+     ]
+    }
+   ],
+   "quando": "Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6"
+  },
+  {
+   "id": "f19",
+   "titulo": "Nuvem e deploy",
+   "objetivo": "As contas de nuvem criadas por código, com custo sob controle.",
+   "passos": [
+    {
+     "id": "nuvem-clis",
+     "titulo": "Instalar Azure CLI, Terraform, Vercel CLI e Wrangler",
+     "quem": "script",
+     "pronto": "Termina com 'Pronto'; verificar.sh mostra as quatro ferramentas",
+     "tempo_min": 15,
+     "comando": "bash scripts/wsl/nuvem.sh",
+     "blocos": [
+      "clis",
+      "tf"
+     ]
+    },
+    {
+     "id": "azure-conta",
+     "titulo": "Criar a conta Azure com alerta de orçamento",
+     "quem": "voce",
+     "pronto": "'az login' entra e o alerta de gasto está ligado",
+     "tempo_min": 30,
+     "nota": "Ligue o alerta antes de criar qualquer recurso. O Microsoft Learn do conector ajuda a escolher o serviço mais barato.",
+     "blocos": [
+      "azure"
+     ]
+    },
+    {
+     "id": "terraform-base",
+     "titulo": "Criar com Terraform o grupo de recursos, o banco e o Key Vault do primeiro sistema",
+     "quem": "claude",
+     "pronto": "'terraform plan' sem diferenças depois do apply",
+     "tempo_min": 90,
+     "blocos": [
+      "tf",
+      "azure"
+     ]
+    },
+    {
+     "id": "arquivos-nuvem",
+     "titulo": "Criar o armazenamento de arquivos (R2 da Cloudflare ou Blob)",
+     "quem": "claude",
+     "pronto": "Upload de teste pelo sistema exemplo",
+     "tempo_min": 30,
+     "blocos": [
+      "blob"
+     ]
+    },
+    {
+     "id": "email-transacional",
+     "titulo": "Configurar o e-mail transacional (Resend) com o domínio verificado",
+     "quem": "voce",
+     "pronto": "E-mail de confirmação de conta chega na caixa de entrada, não no spam",
+     "tempo_min": 30,
+     "blocos": [
+      "tmail"
+     ]
+    },
+    {
+     "id": "deploy-teste",
+     "titulo": "Fazer o primeiro deploy do sistema exemplo",
+     "quem": "claude",
+     "pronto": "Sistema no ar com HTTPS, login e erro de teste no Sentry",
+     "tempo_min": 60,
+     "blocos": [
+      "vercel",
+      "azure",
+      "cf"
+     ]
+    },
+    {
+     "id": "aura-status",
+     "titulo": "Criar o aura-status: painel de repositórios, backup e Dependabot",
+     "quem": "claude",
+     "pronto": "Painel mostra o estado de todos os repositórios",
+     "tempo_min": 120,
+     "blocos": [
+      "status"
+     ]
+    }
+   ],
+   "quando": "Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)"
+  },
+  {
+   "id": "f20",
+   "titulo": "Editora",
+   "objetivo": "O livro sai de um repositório com CI, pronto para virar PDF, EPUB e impressão.",
+   "passos": [
+    {
+     "id": "modelo-metodo",
+     "titulo": "Entregar o seu modelo de criação e o seu método passo a passo",
+     "quem": "voce",
+     "pronto": "metodo.yaml com cada etapa, entrada, saída e critério de conclusão; template de capítulo pronto",
+     "tempo_min": 120,
+     "blocos": [
+      "modelo",
+      "metodo",
+      "projcap",
+      "prereq"
+     ]
+    },
+    {
+     "id": "livro-repo",
+     "titulo": "Criar o repositório do livro com fonte única, classe LaTeX, exercícios em YAML e CI",
+     "quem": "claude",
+     "pronto": "Um push gera PDF, EPUB e o gabarito sem erro",
+     "tempo_min": 120,
+     "nota": "Depende do capítulo 1 e do seu modelo. O conteúdo é seu; nada de material de terceiros.",
+     "blocos": [
+      "brepo",
+      "fonte",
+      "bcls",
+      "exyaml",
+      "bci",
+      "lint",
+      "errata",
+      "livro"
+     ],
+     "precisa": [
+      "conteudo"
+     ]
+    },
+    {
+     "id": "editora-imagens",
+     "titulo": "Construir o pipeline de imagens do livro: busca nos acervos, filtro de licença, folha de contato e créditos",
+     "quem": "claude",
+     "pronto": "Uma figura do capítulo 1 sai com licença conferida, ficha e crédito; o build falha se faltar ficha",
+     "tempo_min": 240,
+     "blocos": [
+      "acervos",
+      "buscaimg",
+      "licenca",
+      "contato",
+      "creditos"
+     ]
+    },
+    {
+     "id": "editora-figuras",
+     "titulo": "Figuras, tabelas e texto alternativo gerados por código",
+     "quem": "claude",
+     "pronto": "Gráficos e tabelas do capítulo 1 gerados no build, com texto alternativo revisado por você",
+     "tempo_min": 180,
+     "blocos": [
+      "figcod",
+      "gerad",
+      "alt"
+     ]
+    },
+    {
+     "id": "editora-agentes",
+     "titulo": "Criar os agentes da editora: revisor técnico, gabarito, leitor iniciante e consistência",
+     "quem": "claude",
+     "pronto": "Os agentes apontam problemas reais no capítulo 1 e você corrige",
+     "tempo_min": 180,
+     "blocos": [
+      "bagentes"
+     ]
+    },
+    {
+     "id": "editais",
+     "titulo": "Montar a matriz de editais e o quadro de referências",
+     "quem": "claude",
+     "pronto": "Cada tópico dos editais ligado a um capítulo; lacunas listadas",
+     "tempo_min": 60,
+     "blocos": [
+      "editais",
+      "refs"
+     ]
+    },
+    {
+     "id": "selo",
+     "titulo": "Definir o selo Editora AMS Silva (nome, logo e uso no CPF)",
+     "quem": "voce",
+     "pronto": "Logo aprovado e aplicado na classe LaTeX",
+     "tempo_min": 30,
+     "blocos": [
+      "selo"
+     ]
+    },
+    {
+     "id": "isbn-ficha",
+     "titulo": "Comprar os ISBNs na CBL e pedir a ficha catalográfica",
+     "quem": "voce",
+     "pronto": "ISBN do impresso e do ebook, código de barras e ficha no verso da folha de rosto",
+     "tempo_min": 60,
+     "blocos": [
+      "isbn",
+      "ficha"
+     ],
+     "precisa": [
+      "pagamento",
+      "conteudo"
+     ]
+    },
+    {
+     "id": "beta",
+     "titulo": "Escolher 3 a 5 leitores beta e um revisor técnico",
+     "quem": "voce",
+     "pronto": "Nomes confirmados e formulário de retorno pronto",
+     "tempo_min": 30,
+     "blocos": [
+      "beta"
+     ],
+     "precisa": [
+      "conteudo"
+     ]
+    },
+    {
+     "id": "kdp",
+     "titulo": "Criar a conta no Amazon KDP e cadastrar o livro em rascunho",
+     "quem": "voce",
+     "pronto": "Livro em rascunho com capa, preço e prévia conferida",
+     "tempo_min": 60,
+     "blocos": [
+      "kdp"
+     ],
+     "precisa": [
+      "conteudo"
+     ],
+     "ofertas": [
+      "livro"
+     ]
+    },
+    {
+     "id": "deposito-legal",
+     "titulo": "Enviar o depósito legal à Biblioteca Nacional até 30 dias depois de publicar",
+     "quem": "voce",
+     "pronto": "Comprovante de envio guardado",
+     "tempo_min": 30,
+     "blocos": [
+      "deplegal"
+     ],
+     "precisa": [
+      "conteudo"
+     ]
+    }
+   ],
+   "quando": "Quando o capítulo 1 estiver pronto",
+   "gatilho": "O capítulo 1 e o seu modelo de criação prontos"
+  },
+  {
+   "id": "f21",
+   "titulo": "Dados, IA e pendrives",
+   "objetivo": "O laboratório de dados e de treino no ar, um modelo seu rodando no Ollama e os pendrives de Kali e Arch dando boot.",
+   "passos": [
+    {
+     "id": "pendrive-kali",
+     "titulo": "Gravar o pendrive do Kali com persistência criptografada",
+     "quem": "voce",
+     "tempo_min": 90,
+     "comando": "winget install --id Rufus.Rufus -e",
+     "pronto": "O Kali abre pelo F12 e um arquivo salvo continua lá depois de reiniciar",
+     "nota": "Siga kali.org/docs/usb. Antes do primeiro boot: suspenda o BitLocker, desligue o Secure Boot e, ao voltar ao Windows, religue o Secure Boot e reative o BitLocker (veja Secure Boot e BitLocker no mapa). Só contra alvos seus ou autorizados.",
+     "blocos": [
+      "pkali",
+      "rufus"
+     ]
+    },
+    {
+     "id": "pendrive-arch",
+     "titulo": "Instalar o Arch num pendrive rápido ou SSD USB, pelo guia oficial",
+     "quem": "voce",
+     "tempo_min": 180,
+     "pronto": "O Arch portátil dá boot e abre o terminal com os seus dotfiles",
+     "nota": "Use um pendrive para a ISO e outro (64 GB ou mais, USB 3) ou um SSD USB como disco do sistema. Mesmo cuidado com Secure Boot e BitLocker.",
+     "blocos": [
+      "parch"
+     ],
+     "precisa": [
+      "compra"
+     ]
+    },
+    {
+     "id": "gpu-wsl",
+     "titulo": "Conferir a GPU dentro do Ubuntu",
+     "quem": "script",
+     "tempo_min": 5,
+     "comando": "nvidia-smi",
+     "pronto": "Aparece a GTX 1650 com o driver do Windows",
+     "blocos": [
+      "torch"
+     ]
+    },
+    {
+     "id": "lab-ia",
+     "titulo": "Montar o laboratório de dados e de IA",
+     "quem": "script",
+     "tempo_min": 30,
+     "comando": "bash scripts/wsl/lab-ia.sh",
+     "pronto": "Termina com 'Pronto' e mostra a GPU vista pelo PyTorch",
+     "blocos": [
+      "pyds",
+      "duck",
+      "spark",
+      "torch",
+      "mlflow",
+      "gguf"
+     ]
+    },
+    {
+     "id": "ollama-8b",
+     "titulo": "Rodar um modelo 8B no Ollama com parte na GPU",
+     "quem": "voce",
+     "tempo_min": 15,
+     "comando": "ollama run llama3.1:8b",
+     "pronto": "'ollama ps' mostra o modelo dividido entre CPU e GPU e ele responde",
+     "nota": "Mais lento que um 3B ou 4B, que cabem inteiros na placa. Use o 8B quando a qualidade importar mais que a velocidade.",
+     "blocos": [
+      "lmods",
+      "oll"
+     ]
+    },
+    {
+     "id": "zoomcamp",
+     "titulo": "Fazer o Data Engineering Zoomcamp e os cursos de IA, um módulo por semana",
+     "quem": "voce",
+     "tempo_min": 60,
+     "pronto": "Módulo 1 entregue no GitHub e anotado no Obsidian",
+     "nota": "O tempo é só para começar; o curso leva 10 semanas. Para a IA vão as suas anotações, nunca o material do curso.",
+     "blocos": [
+      "dez"
+     ]
+    },
+    {
+     "id": "dbt-metricas",
+     "titulo": "Criar o projeto dbt sobre o banco de métricas",
+     "quem": "claude",
+     "tempo_min": 90,
+     "pronto": "'dbt build' verde e o painel de lucro lendo os modelos",
+     "blocos": [
+      "dbt"
+     ]
+    },
+    {
+     "id": "airflow",
+     "titulo": "Subir o Airflow e agendar o dbt todo dia",
+     "quem": "claude",
+     "tempo_min": 90,
+     "pronto": "A rotina diária aparece verde no Airflow por 3 dias seguidos",
+     "blocos": [
+      "orq"
+     ]
+    },
+    {
+     "id": "contas-ia",
+     "titulo": "Criar as contas do Hugging Face e do Kaggle (e do RunPod, só se precisar)",
+     "quem": "voce",
+     "tempo_min": 30,
+     "pronto": "Token do Hugging Face no KeePassXC; Kaggle com telefone verificado para liberar a GPU",
+     "nota": "No RunPod, só crédito pré-pago. Nunca ponha token em notebook público.",
+     "blocos": [
+      "hf",
+      "kgl",
+      "gpuh"
+     ]
+    },
+    {
+     "id": "dataset",
+     "titulo": "Montar o primeiro dataset só com conteúdo seu",
+     "quem": "claude",
+     "tempo_min": 120,
+     "pronto": "Algumas centenas de pares de pergunta e resposta revisados por você, com conjunto de teste separado",
+     "nota": "Fontes: suas notas, exercícios, livro e aulas que você gravou. Nada de cursos de terceiros; nada de dados de alunos sem consentimento.",
+     "blocos": [
+      "dset",
+      "evals"
+     ]
+    },
+    {
+     "id": "fine-tune",
+     "titulo": "Primeiro fine-tuning QLoRA de um 8B no Kaggle",
+     "quem": "claude",
+     "tempo_min": 180,
+     "pronto": "Adaptador salvo no Hugging Face privado e o treino registrado no MLflow",
+     "blocos": [
+      "unsl",
+      "kgl"
+     ]
+    },
+    {
+     "id": "modelo-no-ollama",
+     "titulo": "Avaliar contra o modelo base e levar o seu modelo para o Ollama",
+     "quem": "claude",
+     "tempo_min": 90,
+     "pronto": "O seu modelo ganha do base no conjunto de teste e responde no Ollama do notebook",
+     "blocos": [
+      "evals",
+      "gguf",
+      "oll"
+     ]
+    }
+   ],
+   "quando": "Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)"
+  },
+  {
+   "id": "f22",
+   "titulo": "Mais ofertas, uma por vez",
+   "objetivo": "Cada oferta do portfólio entra na esteira na ordem da pontuação: uma em construção e uma em validação por vez.",
+   "passos": [
+    {
+     "id": "of-meu-setup",
+     "titulo": "Página 'meu setup' com links de afiliado",
+     "quem": "claude",
+     "pronto": "Página publicada com links marcados com UTM",
+     "tempo_min": 90,
+     "blocos": [
+      "site",
+      "afil"
+     ],
+     "ofertas": [
+      "afiliados"
+     ]
+    },
+    {
+     "id": "of-catalogo",
+     "titulo": "Pôr no Catálogo do HTML a chamada para o mini-curso e para a newsletter",
+     "quem": "claude",
+     "pronto": "Chamadas no ar, medidas por UTM",
+     "tempo_min": 30,
+     "blocos": [
+      "catal"
+     ],
+     "ofertas": [
+      "catalogo"
+     ]
+    },
+    {
+     "id": "of-aulasprof",
+     "titulo": "Kit de aulas prontas para professores: uma disciplina que você já leciona",
+     "quem": "voce",
+     "pronto": "Kit de 1 disciplina (planos, slides, avaliações) à venda",
+     "tempo_min": 600,
+     "nota": "Material feito para a escola: reescreva do zero, no seu tempo e sem a identidade da escola, ou confirme os direitos.",
+     "blocos": [
+      "acv",
+      "hotm"
+     ],
+     "ofertas": [
+      "aulasprof"
+     ]
+    },
+    {
+     "id": "of-planilha",
+     "titulo": "Vender a planilha do Caixa da Casa antes de construir o AM Rendara",
+     "quem": "voce",
+     "pronto": "10 planilhas vendidas",
+     "tempo_min": 180,
+     "blocos": [
+      "caixa",
+      "hotm"
+     ],
+     "ofertas": [
+      "rendara"
+     ]
+    },
+    {
+     "id": "of-automacao",
+     "titulo": "Automação com IA para pequenos negócios: 1 implantação grátis em troca de caso",
+     "quem": "claude",
+     "pronto": "Um negócio usando a automação e um caso escrito com autorização",
+     "tempo_min": 600,
+     "blocos": [
+      "n8n",
+      "oatend"
+     ],
+     "ofertas": [
+      "automacaoia"
+     ]
+    },
+    {
+     "id": "of-simulados",
+     "titulo": "Banco de questões para concursos: 50 questões comentadas grátis para medir a procura",
+     "quem": "voce",
+     "pronto": "50 questões publicadas e a procura medida",
+     "tempo_min": 480,
+     "blocos": [
+      "exyaml"
+     ],
+     "ofertas": [
+      "simulados"
+     ]
+    },
+    {
+     "id": "of-anki",
+     "titulo": "Baralhos Anki de TI e concursos: o primeiro, do capítulo 1",
+     "quem": "voce",
+     "pronto": "Primeiro baralho à venda",
+     "tempo_min": 180,
+     "blocos": [
+      "anki",
+      "exyaml"
+     ],
+     "ofertas": [
+      "anki"
+     ]
+    },
+    {
+     "id": "of-newsletter",
+     "titulo": "Newsletter com patrocínio e vendas",
+     "quem": "voce",
+     "pronto": "Edição semanal por 8 semanas e o primeiro patrocinador",
+     "tempo_min": 120,
+     "blocos": [
+      "mailer"
+     ],
+     "ofertas": [
+      "newsletter"
+     ]
+    },
+    {
+     "id": "of-agencia",
+     "titulo": "Presença digital para comércio local, oferecida a 5 clientes de sites",
+     "quem": "voce",
+     "pronto": "Primeiro cliente mensal",
+     "tempo_min": 240,
+     "blocos": [
+      "ogbp",
+      "sites"
+     ],
+     "ofertas": [
+      "agencialocal"
+     ]
+    },
+    {
+     "id": "of-sites",
+     "titulo": "Sites: 3 pacotes fixos com preço público",
+     "quem": "voce",
+     "pronto": "Pacotes publicados e primeiro cliente fechado",
+     "tempo_min": 180,
+     "blocos": [
+      "sites",
+      "hostg"
+     ],
+     "ofertas": [
+      "sites"
+     ]
+    },
+    {
+     "id": "of-remoto",
+     "titulo": "Suporte remoto com plano mensal para empresas",
+     "quem": "voce",
+     "pronto": "3 empresas no plano mensal",
+     "tempo_min": 240,
+     "blocos": [
+      "tail"
+     ],
+     "ofertas": [
+      "remoto"
+     ]
+    },
+    {
+     "id": "of-consultoria",
+     "titulo": "Implantação de ficha técnica e engenharia de cardápio para restaurantes",
+     "quem": "voce",
+     "pronto": "Um estudo de caso, com autorização do dono",
+     "tempo_min": 480,
+     "blocos": [
+      "nkaix"
+     ],
+     "ofertas": [
+      "consultoriaresto"
+     ]
+    },
+    {
+     "id": "of-ammentor",
+     "titulo": "AM Mentor: banco de exercícios com correção, começando pelo capítulo 1",
+     "quem": "claude",
+     "pronto": "Primeiros alunos usando",
+     "tempo_min": 1200,
+     "blocos": [
+      "exyaml"
+     ],
+     "ofertas": [
+      "ammentor"
+     ]
+    },
+    {
+     "id": "of-dark",
+     "titulo": "Canais sem rosto: 3 vídeos por semana por 8 semanas e medir",
+     "quem": "voce",
+     "pronto": "24 vídeos publicados e o resultado medido",
+     "tempo_min": 1200,
+     "blocos": [
+      "oedit",
+      "yt"
+     ],
+     "ofertas": [
+      "dark"
+     ]
+    },
+    {
+     "id": "of-comunidade",
+     "titulo": "Comunidade paga do Instituto AMS",
+     "quem": "voce",
+     "pronto": "Comunidade aberta com os primeiros assinantes",
+     "tempo_min": 240,
+     "nota": "Só com 200 alunos pagantes.",
+     "blocos": [
+      "comu"
+     ],
+     "ofertas": [
+      "comunidade"
+     ]
+    },
+    {
+     "id": "of-oficinas",
+     "titulo": "Oficinas de robótica e programação para escolas: plano de 8 encontros",
+     "quem": "voce",
+     "pronto": "Primeira escola contratando",
+     "tempo_min": 600,
+     "blocos": [
+      "rob",
+      "ard"
+     ],
+     "ofertas": [
+      "oficinas"
+     ]
+    },
+    {
+     "id": "of-encomenda",
+     "titulo": "Sistemas sob encomenda, com 50% de entrada",
+     "quem": "voce",
+     "pronto": "Primeiro contrato assinado",
+     "tempo_min": 240,
+     "blocos": [
+      "api",
+      "front"
+     ],
+     "ofertas": [
+      "encomenda"
+     ]
+    },
+    {
+     "id": "of-aulasushi",
+     "titulo": "Aula de sushi e sushiman para eventos: 2 eventos de teste",
+     "quem": "voce",
+     "pronto": "2 eventos pagos, com as regras sanitárias conferidas",
+     "tempo_min": 240,
+     "blocos": [
+      "agenda"
+     ],
+     "ofertas": [
+      "aulasushi"
+     ]
+    },
+    {
+     "id": "of-workshop",
+     "titulo": "Workshop presencial para pequenos empresários: piloto com 10 vagas",
+     "quem": "voce",
+     "pronto": "Piloto realizado com 10 inscritos pagantes",
+     "tempo_min": 480,
+     "blocos": [
+      "agenda",
+      "mp"
+     ],
+     "ofertas": [
+      "workshop"
+     ]
+    },
+    {
+     "id": "of-pausadas",
+     "titulo": "Revisar a cada trimestre as ofertas pausadas (AM Taskoro)",
+     "quem": "voce",
+     "pronto": "Decisão anotada: retomar ou manter pausada",
+     "tempo_min": 30,
+     "blocos": [
+      "ocatal"
+     ],
+     "ofertas": [
+      "taskoro"
+     ]
+    }
+   ],
+   "quando": "Fev a dez/2027, uma oferta por vez",
+   "gatilho": "A primeira venda do mini-curso aconteceu"
+  },
+  {
+   "id": "f23",
+   "titulo": "Marketing pago e crescimento",
+   "objetivo": "Pôr dinheiro em anúncio só quando a venda orgânica provou a oferta.",
+   "passos": [
+    {
+     "id": "ads-meta",
+     "titulo": "Primeira campanha na Meta com orçamento de teste",
+     "quem": "voce",
+     "pronto": "Campanha com CPA abaixo do de empate por 2 semanas",
+     "tempo_min": 120,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "ads"
+     ]
+    },
+    {
+     "id": "ads-google-tiktok",
+     "titulo": "Google e YouTube Ads, depois TikTok Ads",
+     "quem": "voce",
+     "pronto": "Cada canal com a primeira campanha medida no painel",
+     "tempo_min": 180,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "gads",
+      "ttads"
+     ]
+    },
+    {
+     "id": "ads-outros",
+     "titulo": "Kwai, Pinterest, LinkedIn, Spotify e mídia nativa, um por vez",
+     "quem": "voce",
+     "pronto": "Cada canal testado e mantido ou cortado pelas regras",
+     "tempo_min": 240,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "kwaiads",
+      "pinads",
+      "liads",
+      "spotads",
+      "nativo"
+     ]
+    },
+    {
+     "id": "influenciadores",
+     "titulo": "Influenciadores e newsletters parceiras com cupom",
+     "quem": "voce",
+     "pronto": "Primeira parceria medida por cupom e UTM",
+     "tempo_min": 120,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "infl"
+     ]
+    },
+    {
+     "id": "afiliados-proprios",
+     "titulo": "Abrir o programa de afiliados do mini-curso",
+     "quem": "voce",
+     "pronto": "Primeiro afiliado vendendo",
+     "tempo_min": 60,
+     "blocos": [
+      "afprog"
+     ]
+    },
+    {
+     "id": "horario",
+     "titulo": "Ligar o algoritmo de horário com 3 meses de dados de publicação",
+     "quem": "claude",
+     "pronto": "80% dos posts nas melhores faixas, 20% testando",
+     "tempo_min": 120,
+     "blocos": [
+      "horario"
+     ]
+    },
+    {
+     "id": "build-in-public",
+     "titulo": "Canal build in public: um vídeo por semana das decisões reais",
+     "quem": "voce",
+     "pronto": "4 vídeos seguidos publicados",
+     "tempo_min": 60,
+     "blocos": [
+      "obuild"
+     ],
+     "ofertas": [
+      "buildpublic"
+     ]
+    },
+    {
+     "id": "dublagem",
+     "titulo": "Dublar os melhores vídeos para outros idiomas",
+     "quem": "voce",
+     "pronto": "Um vídeo com faixa de áudio em inglês ou espanhol",
+     "tempo_min": 120,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "dub"
+     ]
+    },
+    {
+     "id": "membros",
+     "titulo": "Membros do YouTube quando o canal for elegível",
+     "quem": "voce",
+     "pronto": "Assinatura de membros ativa",
+     "tempo_min": 30,
+     "blocos": [
+      "ytm"
+     ],
+     "ofertas": [
+      "monetizacao"
+     ]
+    },
+    {
+     "id": "formacao",
+     "titulo": "Primeira formação completa (TI, Matemática ou Finanças)",
+     "quem": "voce",
+     "pronto": "Formação gravada e à venda",
+     "tempo_min": 1200,
+     "blocos": [
+      "form"
+     ],
+     "ofertas": [
+      "formti",
+      "formmat",
+      "financas"
+     ]
+    }
+   ],
+   "quando": "A partir de fev/2027",
+   "gatilho": "O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar"
+  },
+  {
+   "id": "f24",
+   "titulo": "Linux nativo e laboratório completo",
+   "objetivo": "Arch com boot próprio, VMs de laboratório e a segurança física em dia.",
+   "passos": [
+    {
+     "id": "nvme-arch",
+     "titulo": "Instalar o 2º NVMe e o Arch + Omarchy com boot próprio",
+     "quem": "voce",
+     "pronto": "Escolha entre Windows e Arch ao ligar, cada um no seu disco",
+     "tempo_min": 300,
+     "precisa": [
+      "compra"
+     ],
+     "blocos": [
+      "nvme",
+      "arch",
+      "boot"
+     ]
+    },
+    {
+     "id": "neovim",
+     "titulo": "Aprender o Neovim aos poucos",
+     "quem": "voce",
+     "pronto": "Uma semana editando só no Neovim",
+     "tempo_min": 300,
+     "blocos": [
+      "nvim"
+     ]
+    },
+    {
+     "id": "vms-lab",
+     "titulo": "Montar as VMs do laboratório: Kali, Arch, Ubuntu Server, Windows Server e Rocky",
+     "quem": "voce",
+     "pronto": "Duas VMs numa rede isolada, atacante e alvo",
+     "tempo_min": 300,
+     "blocos": [
+      "vms"
+     ]
+    },
+    {
+     "id": "ssd-sata",
+     "titulo": "SSD SATA na baia livre para as VMs",
+     "quem": "voce",
+     "pronto": "VMs rodando do SSD novo",
+     "tempo_min": 60,
+     "precisa": [
+      "compra"
+     ],
+     "blocos": [
+      "sata"
+     ]
+    },
+    {
+     "id": "yubikey",
+     "titulo": "Chave física no GitHub, Google e Microsoft",
+     "quem": "voce",
+     "pronto": "Login com a chave nas três contas",
+     "tempo_min": 60,
+     "precisa": [
+      "compra"
+     ],
+     "blocos": [
+      "ykey"
+     ]
+    },
+    {
+     "id": "mic-camera",
+     "titulo": "Microfone e câmera",
+     "quem": "voce",
+     "pronto": "Gravação de teste com áudio limpo sem pós-produção",
+     "tempo_min": 60,
+     "precisa": [
+      "compra"
+     ],
+     "blocos": [
+      "mic"
+     ]
+    }
+   ],
+   "quando": "2027, conforme cada compra"
+  },
+  {
+   "id": "f25",
+   "titulo": "IA dentro dos sistemas AM",
+   "objetivo": "Busca e assistente com os seus dados dentro de um sistema AM.",
+   "passos": [
+    {
+     "id": "rag-sistema",
+     "titulo": "RAG com pgvector dentro do primeiro sistema AM",
+     "quem": "claude",
+     "pronto": "O sistema responde perguntas com base nos dados do cliente, citando a origem",
+     "tempo_min": 480,
+     "blocos": [
+      "ai"
+     ]
+    }
+   ],
+   "quando": "Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5"
+  },
+  {
+   "id": "f26",
+   "titulo": "Sistemas AM à venda",
+   "objetivo": "Os sistemas viram produto por assinatura.",
+   "passos": [
+    {
+     "id": "saas",
+     "titulo": "Lançar o primeiro sistema AM como SaaS, com cobrança por módulo",
+     "quem": "claude",
+     "pronto": "Primeiro cliente pagando por assinatura",
+     "tempo_min": 600,
+     "blocos": [
+      "saas",
+      "lic"
+     ]
+    },
+    {
+     "id": "kaixara",
+     "titulo": "AM Kaixara: PDV, cardápio, fichas técnicas e estoque",
+     "quem": "claude",
+     "pronto": "Rodando num negócio real",
+     "tempo_min": 2400,
+     "blocos": [
+      "nkaix"
+     ],
+     "ofertas": [
+      "kaixara"
+     ]
+    },
+    {
+     "id": "rotara",
+     "titulo": "AM Rotara: pedidos, rotas e mapas",
+     "quem": "claude",
+     "pronto": "Entregas rastreadas no mapa em tempo real",
+     "tempo_min": 2400,
+     "blocos": [
+      "nrot",
+      "gis"
+     ],
+     "ofertas": [
+      "rotara"
+     ]
+    },
+    {
+     "id": "servicos-aura",
+     "titulo": "Serviços aura- compartilhados, só quando um sistema precisar",
+     "quem": "claude",
+     "pronto": "Um serviço compartilhado usado por dois sistemas",
+     "tempo_min": 600,
+     "blocos": [
+      "shared",
+      "datomic"
+     ]
+    },
+    {
+     "id": "whitelabel",
+     "titulo": "App de delivery com a marca do restaurante (white-label)",
+     "quem": "claude",
+     "pronto": "Primeiro restaurante usando o app com a marca dele",
+     "tempo_min": 1200,
+     "nota": "Comece oferecendo a 3 restaurantes que pagam 23% ao iFood.",
+     "blocos": [
+      "nrot"
+     ],
+     "ofertas": [
+      "whitelabel"
+     ]
+    }
+   ],
+   "quando": "2027",
+   "gatilho": "O primeiro sistema AM pronto e testado com um cliente"
+  },
+  {
+   "id": "f27",
+   "titulo": "CNPJ e formalização",
+   "objetivo": "Sair do CPF na hora certa, com nota fiscal e cobrança automáticas.",
+   "passos": [
+    {
+     "id": "cnpj",
+     "titulo": "Abrir a AMtech Tecnologia (ME no Simples, sócio único)",
+     "quem": "voce",
+     "pronto": "CNPJ ativo, conta PJ aberta e contador contratado",
+     "tempo_min": 240,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "cnpj",
+      "ncnpj"
+     ]
+    },
+    {
+     "id": "ecnpj",
+     "titulo": "Certificado digital e-CNPJ",
+     "quem": "voce",
+     "pronto": "Certificado instalado e guardado no KeePassXC",
+     "tempo_min": 60,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "ecnpj"
+     ]
+    },
+    {
+     "id": "nfse-api",
+     "titulo": "Nota fiscal automática pela API de NFS-e",
+     "quem": "claude",
+     "pronto": "Venda de teste emite nota sozinha",
+     "tempo_min": 240,
+     "blocos": [
+      "nfapi"
+     ]
+    },
+    {
+     "id": "pix-automatico",
+     "titulo": "Cobrança recorrente por Pix Automático",
+     "quem": "claude",
+     "pronto": "Assinatura de teste cobrada por Pix",
+     "tempo_min": 240,
+     "blocos": [
+      "pixa"
+     ]
+    }
+   ],
+   "quando": "Quando a renda pedir",
+   "gatilho": "A renda passou do valor de virada definido com o contador"
+  },
+  {
+   "id": "f28",
+   "titulo": "Agentes do grupo",
+   "objetivo": "Atendimento, orçamento, cobrança e análise rodando com a sua aprovação.",
+   "passos": [
+    {
+     "id": "ag-analista",
+     "titulo": "Analista semanal: o que funcionou e o que mudar",
+     "quem": "claude",
+     "pronto": "Relatório toda segunda no Telegram",
+     "tempo_min": 120,
+     "blocos": [
+      "oanal"
+     ]
+    },
+    {
+     "id": "ag-atendente",
+     "titulo": "Atendente do WhatsApp com passagem para você",
+     "quem": "claude",
+     "pronto": "Dúvida comum respondida sozinha; o resto chega para você",
+     "tempo_min": 240,
+     "blocos": [
+      "oatend"
+     ]
+    },
+    {
+     "id": "ag-orcamento",
+     "titulo": "Orçamentista de sites e sistemas",
+     "quem": "claude",
+     "pronto": "Rascunho de orçamento em 5 minutos, revisado por você",
+     "tempo_min": 180,
+     "blocos": [
+      "oorc"
+     ]
+    },
+    {
+     "id": "ag-cobranca",
+     "titulo": "Cobrador educado (lembrete antes e depois do vencimento)",
+     "quem": "claude",
+     "pronto": "Atraso cai pela metade",
+     "tempo_min": 120,
+     "blocos": [
+      "ocob"
+     ]
+    },
+    {
+     "id": "ag-posvenda",
+     "titulo": "Pós-venda: NPS e pedido de avaliação",
+     "quem": "claude",
+     "pronto": "NPS medido em cada venda",
+     "tempo_min": 120,
+     "blocos": [
+      "opos"
+     ]
+    },
+    {
+     "id": "ag-fiscal",
+     "titulo": "Organizador fiscal para o contador",
+     "quem": "claude",
+     "pronto": "Pasta do mês pronta no dia 5",
+     "tempo_min": 120,
+     "blocos": [
+      "ofisc"
+     ]
+    },
+    {
+     "id": "ag-comprador",
+     "titulo": "Comprador com estoque mínimo",
+     "quem": "claude",
+     "pronto": "Pedido de reposição sugerido antes de faltar",
+     "tempo_min": 180,
+     "blocos": [
+      "ocomp"
+     ]
+    }
+   ],
+   "quando": "Junto com o primeiro CNPJ",
+   "gatilho": "Clientes e vendas recorrentes"
+  },
+  {
+   "id": "f29",
+   "titulo": "Editora: depois do primeiro livro",
+   "objetivo": "O mesmo livro em mais formatos, públicos e idiomas.",
+   "passos": [
+    {
+     "id": "grafica",
+     "titulo": "Gráfica sob demanda no Brasil",
+     "quem": "voce",
+     "pronto": "Cópia de prova aprovada",
+     "tempo_min": 120,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "pod"
+     ]
+    },
+    {
+     "id": "kit-especial",
+     "titulo": "Kit edição especial",
+     "quem": "voce",
+     "pronto": "Primeira tiragem vendida",
+     "tempo_min": 240,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "bkit"
+     ],
+     "ofertas": [
+      "kitlivro"
+     ]
+    },
+    {
+     "id": "curso-secao",
+     "titulo": "Curso por seção do livro, com animações",
+     "quem": "voce",
+     "pronto": "Primeira seção gravada e à venda",
+     "tempo_min": 1200,
+     "blocos": [
+      "bcurso",
+      "manim"
+     ]
+    },
+    {
+     "id": "edicao-professor",
+     "titulo": "Edição do professor com licença para escolas",
+     "quem": "claude",
+     "pronto": "Primeira escola licenciada",
+     "tempo_min": 600,
+     "blocos": [
+      "prof"
+     ],
+     "ofertas": [
+      "adocao"
+     ]
+    },
+    {
+     "id": "traducoes",
+     "titulo": "Traduções para espanhol e inglês",
+     "quem": "claude",
+     "pronto": "Primeiro volume traduzido e revisado",
+     "tempo_min": 1200,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "trad"
+     ],
+     "ofertas": [
+      "traducao"
+     ]
+    }
+   ],
+   "quando": "Depois do primeiro livro",
+   "gatilho": "O primeiro livro publicado"
+  },
+  {
+   "id": "f30",
+   "titulo": "Distribuído, plataforma e segunda nuvem",
+   "objetivo": "O que pesa em vaga pleno e sênior.",
+   "passos": [
+    {
+     "id": "mensageria",
+     "titulo": "RabbitMQ e depois Kafka entre dois sistemas AM",
+     "quem": "claude",
+     "pronto": "Evento de um sistema chega no outro sem chamada direta",
+     "tempo_min": 600,
+     "blocos": [
+      "rmq",
+      "kafka"
+     ]
+    },
+    {
+     "id": "kubernetes",
+     "titulo": "Kubernetes local com kind, kubectl, Helm e k9s",
+     "quem": "voce",
+     "pronto": "Um sistema AM rodando no cluster local",
+     "tempo_min": 600,
+     "blocos": [
+      "kind",
+      "k8st"
+     ]
+    },
+    {
+     "id": "loki-tempo",
+     "titulo": "Logs e rastreamento com Loki e Tempo no Grafana",
+     "quem": "claude",
+     "pronto": "Uma requisição seguida de ponta a ponta",
+     "tempo_min": 240,
+     "blocos": [
+      "loki"
+     ]
+    },
+    {
+     "id": "aws",
+     "titulo": "AWS: Cloud Practitioner e o mesmo sistema rodando lá",
+     "quem": "voce",
+     "pronto": "Certificação e post comparando Azure e AWS",
+     "tempo_min": 1200,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "aws"
+     ]
+    },
+    {
+     "id": "gcp",
+     "titulo": "Google Cloud só o básico, quando um projeto de IA ou dados pedir",
+     "quem": "voce",
+     "pronto": "Um serviço usado num projeto real",
+     "tempo_min": 300,
+     "blocos": [
+      "gcp"
+     ]
+    },
+    {
+     "id": "mobile",
+     "titulo": "App mobile dos sistemas AM com .NET MAUI",
+     "quem": "claude",
+     "pronto": "App publicado para teste interno",
+     "tempo_min": 1200,
+     "blocos": [
+      "mobile"
+     ]
+    }
+   ],
+   "quando": "2028"
+  },
+  {
+   "id": "f31",
+   "titulo": "Infraestrutura própria",
+   "objetivo": "Servidor em casa e máquina de IA quando o grupo pedir.",
+   "passos": [
+    {
+     "id": "nas",
+     "titulo": "Servidor caseiro com backup local e os serviços 24 horas",
+     "quem": "voce",
+     "pronto": "n8n, banco e painel rodando no servidor; notebook livre",
+     "tempo_min": 480,
+     "precisa": [
+      "compra"
+     ],
+     "blocos": [
+      "nas"
+     ]
+    },
+    {
+     "id": "tailscale",
+     "titulo": "Tailscale entre notebook, celular e servidor",
+     "quem": "voce",
+     "pronto": "Acesso ao servidor de fora de casa sem abrir porta",
+     "tempo_min": 60,
+     "blocos": [
+      "tail"
+     ]
+    },
+    {
+     "id": "workstation",
+     "titulo": "Workstation com GPU para treinar e gerar voz e vídeo em casa",
+     "quem": "voce",
+     "pronto": "Fine-tuning de 8B rodando local",
+     "tempo_min": 480,
+     "precisa": [
+      "compra"
+     ],
+     "blocos": [
+      "ws"
+     ]
+    }
+   ],
+   "quando": "2028, quando o grupo pedir"
+  },
+  {
+   "id": "f32",
+   "titulo": "Negócios do grupo em Barbacena",
+   "objetivo": "Um negócio por vez, cada um só depois que o anterior passa no portão.",
+   "passos": [
+    {
+     "id": "planejador-real",
+     "titulo": "Planejador do grupo com os números reais",
+     "quem": "claude",
+     "pronto": "Capital mínimo e portões calculados com os seus dados",
+     "tempo_min": 120,
+     "blocos": [
+      "nplan"
+     ]
+    },
+    {
+     "id": "neg-a1",
+     "titulo": "A1 · AMtech Software",
+     "quem": "voce",
+     "pronto": "3 meses seguidos com lucro e 10 clientes pagantes",
+     "tempo_min": 2400,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "nsoft"
+     ]
+    },
+    {
+     "id": "neg-a2",
+     "titulo": "A2 · Loja AMtech, peças sob encomenda, ponto de retirada e Maker",
+     "quem": "voce",
+     "pronto": "Loja acima do equilíbrio por 3 meses e técnico que abre e fecha sem você",
+     "tempo_min": 4800,
+     "precisa": [
+      "compra",
+      "pagamento"
+     ],
+     "blocos": [
+      "nloja",
+      "npecas",
+      "nponto",
+      "nmaker",
+      "nanatel",
+      "ogbp"
+     ],
+     "ofertas": [
+      "assist",
+      "pecas",
+      "ponto",
+      "maker"
+     ]
+    },
+    {
+     "id": "neg-b1",
+     "titulo": "B1 · AM Entregas e Mercado Envios Flex",
+     "quem": "voce",
+     "pronto": "1.000 entregas por mês e 5 contratos fixos",
+     "tempo_min": 4800,
+     "precisa": [
+      "compra",
+      "pagamento"
+     ],
+     "blocos": [
+      "nentr",
+      "nflex"
+     ],
+     "ofertas": [
+      "entregas"
+     ]
+    },
+    {
+     "id": "neg-b2",
+     "titulo": "B2 · AM Delivery",
+     "quem": "voce",
+     "pronto": "20 lojistas ativos e 1.500 pedidos por mês",
+     "tempo_min": 4800,
+     "precisa": [
+      "pagamento"
+     ],
+     "blocos": [
+      "ndeliv"
+     ],
+     "ofertas": [
+      "delivery",
+      "licencadelivery"
+     ]
+    },
+    {
+     "id": "neg-c1",
+     "titulo": "C1 · Sushi, delivery primeiro",
+     "quem": "voce",
+     "pronto": "Lucro por 3 meses e sushiman que toca a noite sem você",
+     "tempo_min": 4800,
+     "precisa": [
+      "compra",
+      "pagamento"
+     ],
+     "blocos": [
+      "nsushi",
+      "nvisa",
+      "nifood"
+     ],
+     "ofertas": [
+      "sushi"
+     ]
+    },
+    {
+     "id": "neg-c2",
+     "titulo": "C2 · Padaria com café da manhã e almoço",
+     "quem": "voce",
+     "pronto": "Gerente no comando e CMV dentro da meta por 3 meses",
+     "tempo_min": 4800,
+     "precisa": [
+      "compra",
+      "pagamento"
+     ],
+     "blocos": [
+      "npad"
+     ],
+     "ofertas": [
+      "padaria"
+     ]
+    },
+    {
+     "id": "neg-c3",
+     "titulo": "C3 · Cafeteria",
+     "quem": "voce",
+     "pronto": "Cafeteria acima do equilíbrio",
+     "tempo_min": 2400,
+     "precisa": [
+      "compra",
+      "pagamento"
+     ],
+     "blocos": [
+      "ncafe"
+     ],
+     "ofertas": [
+      "cafeteria"
+     ]
+    }
+   ],
+   "quando": "Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano",
+   "gatilho": "Os 5 portões do planejador: negócio anterior se pagando há 3 meses, capital em caixa, alguém de confiança tocando, sistema AM rodando e a sua reserva intacta"
+  },
+  {
+   "id": "f33",
+   "titulo": "Estudo contínuo",
+   "objetivo": "As trilhas de estudo ligadas ao setup, sem copiar conteúdo de ninguém.",
+   "passos": [
+    {
+     "id": "github-education",
+     "titulo": "Pedir o GitHub Education como professor e ligar o Copilot",
+     "quem": "voce",
+     "pronto": "Benefícios aprovados e Copilot ativo no VS Code",
+     "tempo_min": 20,
+     "blocos": [
+      "ghed",
+      "copi"
+     ]
+    },
+    {
+     "id": "trilhas",
+     "titulo": "Montar as trilhas: Microsoft Learn, AWS Skill Builder, roadmap.sh e laboratórios do TryHackMe",
+     "quem": "voce",
+     "pronto": "Uma trilha de cada em andamento, anotada no Obsidian",
+     "tempo_min": 30,
+     "blocos": [
+      "learn",
+      "road",
+      "thm"
+     ]
+    },
+    {
+     "id": "plataformas-aluno",
+     "titulo": "Organizar as contas de aluno (Alura, Rocketseat, DIO, Udemy)",
+     "quem": "voce",
+     "pronto": "Acessos no KeePassXC e cursos em andamento listados no Obsidian",
+     "tempo_min": 15,
+     "nota": "A licença é para assistir e estudar. Para a IA vão só as suas anotações e os seus projetos.",
+     "blocos": [
+      "plat"
+     ]
+    },
+    {
+     "id": "anki",
+     "titulo": "Criar os baralhos do Anki (comandos, conceitos, certificações)",
+     "quem": "voce",
+     "pronto": "Revisão do dia feita no notebook e no celular",
+     "tempo_min": 20,
+     "blocos": [
+      "anki"
+     ]
+    }
+   ],
+   "quando": "Contínuo, desde a semana 2"
+  }
+ ]
+}

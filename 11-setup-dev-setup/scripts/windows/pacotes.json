@@ -1,0 +1,190 @@
+{
+  "observacao": "IDs conferidos no repositório oficial do winget (microsoft/winget-pkgs) em 21/10/2026 (Wireshark e Unity.UnityHub em 23/10/2026; o Unity Hub fica fora daqui e só entra se você decidir, pelo passo do roteiro). O DaVinci Resolve não está no winget: baixe no site da Blackmagic.",
+  "grupos": [
+    {
+      "nome": "Base e terminal",
+      "pacotes": [
+        {
+          "id": "Microsoft.WindowsTerminal",
+          "nome": "Windows Terminal",
+          "obrigatorio": true
+        },
+        {
+          "id": "Microsoft.PowerShell",
+          "nome": "PowerShell 7",
+          "obrigatorio": true
+        },
+        {
+          "id": "Git.Git",
+          "nome": "Git for Windows",
+          "obrigatorio": true
+        },
+        {
+          "id": "GitHub.cli",
+          "nome": "GitHub CLI",
+          "obrigatorio": true
+        },
+        {
+          "id": "Microsoft.VisualStudioCode",
+          "nome": "VS Code",
+          "obrigatorio": true
+        },
+        {
+          "id": "Docker.DockerDesktop",
+          "nome": "Docker Desktop",
+          "obrigatorio": true
+        },
+        {
+          "id": "7zip.7zip",
+          "nome": "7-Zip",
+          "obrigatorio": true
+        },
+        {
+          "id": "Microsoft.PowerToys",
+          "nome": "PowerToys",
+          "obrigatorio": false
+        }
+      ]
+    },
+    {
+      "nome": "Segurança e rede",
+      "pacotes": [
+        {
+          "id": "KeePassXCTeam.KeePassXC",
+          "nome": "KeePassXC",
+          "obrigatorio": true
+        },
+        {
+          "id": "Yubico.Authenticator",
+          "nome": "Yubico Authenticator",
+          "obrigatorio": false
+        },
+        {
+          "id": "Tailscale.Tailscale",
+          "nome": "Tailscale",
+          "obrigatorio": false
+        },
+        {
+          "id": "Syncthing.Syncthing",
+          "nome": "Syncthing",
+          "obrigatorio": false
+        },
+        {
+          "id": "WiresharkFoundation.Wireshark",
+          "nome": "Wireshark",
+          "obrigatorio": false
+        },
+        {
+          "id": "Rufus.Rufus",
+          "nome": "Rufus (pendrives do Kali e do Arch)",
+          "obrigatorio": false
+        }
+      ]
+    },
+    {
+      "nome": "Desenvolvimento",
+      "pacotes": [
+        {
+          "id": "DBeaver.DBeaver.Community",
+          "nome": "DBeaver Community",
+          "obrigatorio": true
+        },
+        {
+          "id": "Bruno.Bruno",
+          "nome": "Bruno (testar APIs)",
+          "obrigatorio": true
+        },
+        {
+          "id": "JGraph.Draw",
+          "nome": "draw.io",
+          "obrigatorio": false
+        },
+        {
+          "id": "Oracle.VirtualBox",
+          "nome": "VirtualBox (Arch, Kali e servidores em VM)",
+          "obrigatorio": false
+        },
+        {
+          "id": "ArduinoSA.IDE.stable",
+          "nome": "Arduino IDE 2",
+          "obrigatorio": false
+        },
+        {
+          "id": "Ollama.Ollama",
+          "nome": "Ollama (IA local na GTX 1650)",
+          "obrigatorio": false
+        }
+      ]
+    },
+    {
+      "nome": "Estudo e documentos",
+      "pacotes": [
+        {
+          "id": "Obsidian.Obsidian",
+          "nome": "Obsidian",
+          "obrigatorio": true
+        },
+        {
+          "id": "Anki.Anki",
+          "nome": "Anki",
+          "obrigatorio": true
+        },
+        {
+          "id": "SumatraPDF.SumatraPDF",
+          "nome": "SumatraPDF",
+          "obrigatorio": false
+        },
+        {
+          "id": "TheDocumentFoundation.LibreOffice",
+          "nome": "LibreOffice",
+          "obrigatorio": false
+        },
+        {
+          "id": "Mozilla.Firefox",
+          "nome": "Firefox",
+          "obrigatorio": false
+        }
+      ]
+    },
+    {
+      "nome": "Conteúdo",
+      "pacotes": [
+        {
+          "id": "OBSProject.OBSStudio",
+          "nome": "OBS Studio",
+          "obrigatorio": true
+        },
+        {
+          "id": "Audacity.Audacity",
+          "nome": "Audacity",
+          "obrigatorio": true
+        },
+        {
+          "id": "KDE.Kdenlive",
+          "nome": "Kdenlive",
+          "obrigatorio": false
+        },
+        {
+          "id": "KDE.Krita",
+          "nome": "Krita",
+          "obrigatorio": false
+        },
+        {
+          "id": "Inkscape.Inkscape",
+          "nome": "Inkscape",
+          "obrigatorio": false
+        },
+        {
+          "id": "ShareX.ShareX",
+          "nome": "ShareX",
+          "obrigatorio": false
+        },
+        {
+          "id": "Telegram.TelegramDesktop",
+          "nome": "Telegram (aprovação dos posts)",
+          "obrigatorio": false
+        }
+      ]
+    }
+  ]
+}

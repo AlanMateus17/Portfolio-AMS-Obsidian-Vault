@@ -1,0 +1,179 @@
+<title>Implantação AMtech</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600&display=swap">
+<style>
+/* Layout: lista de verificação da implantação; no topo o progresso e o próximo passo; abaixo as fases em ordem, cada passo com quem faz, comando para copiar e o critério de pronto. Tokens do Aura Design System. */
+:root{
+  --paper:#F7F5F0; --surface:#FFFFFF; --ink:#13262B; --muted:#5B6B6E; --line:#DCD8CE;
+  --aura:#0E3A45; --on-aura:#F7F5F0; --gold:#C08A3E; --gold-ink:#8A5E22; --aura-tint:#E2ECEC; --gold-tint:#F3E7D3;
+  --ok:#2F7A4F; --ok-tint:#E3F1E8; --code:#EFEDE6;
+  --display:"Fraunces",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0B1A1E; --surface:#112429; --ink:#E9EEEC; --muted:#9AAEB0; --line:#24414A;
+  --aura:#7FC4C9; --on-aura:#0B1A1E; --gold:#D9A85E; --gold-ink:#E3B877; --aura-tint:#163238; --gold-tint:#3A2D18;
+  --ok:#7CCB9A; --ok-tint:#16301F; --code:#0F2126; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0B1A1E; --surface:#112429; --ink:#E9EEEC; --muted:#9AAEB0; --line:#24414A;
+  --aura:#7FC4C9; --on-aura:#0B1A1E; --gold:#D9A85E; --gold-ink:#E3B877; --aura-tint:#163238; --gold-tint:#3A2D18;
+  --ok:#7CCB9A; --ok-tint:#16301F; --code:#0F2126; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.55 var(--sans);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 64px}
+.wrap{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--gold-ink)}
+h1{margin:4px 0 0;font:600 clamp(28px,6vw,40px)/1.1 var(--display);color:var(--aura);text-wrap:balance}
+h2{margin:0;font:600 20px/1.25 var(--display);color:var(--aura);text-wrap:balance}
+p{margin:0}
+.lede{color:var(--muted);max-width:70ch}
+.status{font-size:13px;color:var(--muted)}
+.progress{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.prow{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
+.big{font:600 28px/1 var(--mono);color:var(--aura);font-variant-numeric:tabular-nums}
+.bar{height:8px;border-radius:4px;background:var(--aura-tint);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--aura);transition:width .3s}
+.next{border-left:3px solid var(--gold);background:var(--gold-tint);padding:10px 14px;display:flex;flex-direction:column;gap:4px}
+.next b{font:500 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--gold-ink)}
+.next a{color:var(--ink);font-weight:600;text-decoration:none}
+.next a:hover{text-decoration:underline}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 13px var(--sans);padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;min-height:32px}
+.chip[aria-pressed="true"]{background:var(--aura);border-color:var(--aura);color:var(--on-aura)}
+.chip:focus-visible,input:focus-visible,summary:focus-visible,.copy:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+details.fase{background:var(--surface);border:1px solid var(--line);border-radius:12px}
+details.fase>summary{list-style:none;cursor:pointer;padding:14px 16px;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 12px;align-items:baseline}
+details.fase>summary::-webkit-details-marker{display:none}
+.fnum{font:600 14px var(--mono);color:var(--gold-ink)}
+.fobj{grid-column:2/3;font-size:13px;color:var(--muted)}
+.fquando{grid-column:2/4;font-size:12px;color:var(--gold-ink)}
+.fquando b{font-weight:600}
+.fcount{font:500 13px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.fcount.done{color:var(--ok)}
+.passos{list-style:none;margin:0;padding:0 0 6px}
+.passo{display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 10px;padding:12px 16px;border-top:1px solid var(--line)}
+.passo input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--aura);cursor:pointer}
+.passo.feito .ptit{text-decoration:line-through;color:var(--muted)}
+.ptit{font-weight:600}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px;color:var(--muted)}
+.quem{font:500 11px var(--mono);padding:1px 7px;border-radius:4px;background:var(--aura-tint);color:var(--ink)}
+.quem.voce{background:var(--gold-tint);color:var(--gold-ink)}
+.prec{font:500 11px var(--mono);padding:1px 7px;border-radius:4px;border:1px dashed var(--muted);color:var(--muted)}
+.cmd{display:flex;gap:8px;align-items:flex-start;background:var(--code);border-radius:8px;padding:8px 10px;margin-top:6px;min-width:0}
+.cmd code{font:400 13px/1.5 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere;flex:1;min-width:0}
+.copy{font:500 12px var(--sans);border:1px solid var(--line);background:var(--surface);color:var(--aura);border-radius:6px;padding:3px 8px;cursor:pointer;flex:none}
+.pronto{font-size:14px;margin-top:6px}
+.pronto span{font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ok)}
+.nota{font-size:13px;color:var(--muted);margin-top:4px}
+.corpo{grid-column:2/3;min-width:0}
+.implanta{font-size:12px;color:var(--muted);margin-top:4px}
+.implanta span{font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--aura)}
+.cob{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.cob h2{font-size:17px}
+.cob details{border-top:1px solid var(--line);padding-top:8px}
+.cob summary{cursor:pointer;font-weight:600}
+.cob dl{margin:8px 0 0;display:grid;gap:6px}
+.cob dt{font-weight:600;font-size:14px}
+.cob dt a{color:var(--aura);font-family:var(--mono);font-size:13px}
+.cob dd{margin:0 0 4px;font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header style="display:flex;flex-direction:column;gap:8px">
+    <div class="eyebrow">Grupo AMtech Digital · do notebook ao primeiro post</div>
+    <h1>Implantação AMtech</h1>
+    <p class="lede">Cada passo para deixar o setup funcionando, na ordem certa. Marque o que terminar: o progresso fica salvo. O critério de pronto diz como conferir; os verificadores dos scripts confirmam por você.</p>
+    <p class="status" id="st">Carregando…</p>
+  </header>
+
+  <section class="progress" aria-label="Progresso">
+    <div class="prow"><span class="big" id="pct">0%</span><span id="resumo"></span></div>
+    <div class="bar" aria-hidden="true"><i id="barra" style="width:0%"></i></div>
+    <div class="next" id="proximo"></div>
+  </section>
+
+  <div class="filters" role="group" aria-label="Filtros">
+    <button class="chip" id="fMeus" aria-pressed="false">Só o que é meu</button>
+    <button class="chip" id="fFeitos" aria-pressed="false">Esconder feitos</button>
+    <button class="chip" id="fHoje" aria-pressed="false">Só o que dá para fazer hoje</button>
+  </div>
+
+  <div id="fases" style="display:flex;flex-direction:column;gap:12px"></div>
+
+  <section class="cob" id="cob" aria-labelledby="cobt"></section>
+</div>
+
+<script>
+const D=__DATA__;
+const QUEM={voce:"Você",script:"Script",claude:"Claude com você"};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const todos=D.fases.flatMap((f,i)=>f.passos.map((p,j)=>({...p,fase:f,fi:i,num:`${i}.${j+1}`})));
+let feitos={};let db=null;let soMeus=false,escFeitos=false,soHoje=false;let readOnly=false;
+try{const s=JSON.parse(localStorage.getItem("impl-filtros")||"{}");soMeus=!!s.soMeus;escFeitos=!!s.escFeitos;soHoje=!!s.soHoje;}catch(e){}
+try{feitos=JSON.parse(localStorage.getItem("impl-feitos")||"{}");}catch(e){feitos={};}
+const hm=m=>{const h=Math.floor(m/60),r=m%60;return h?`${h} h ${String(r).padStart(2,"0")}`:`${r} min`;};
+
+function render(){
+  const total=todos.length, ok=todos.filter(p=>feitos[p.id]).length;
+  const rest=todos.filter(p=>!feitos[p.id]).reduce((s,p)=>s+p.tempo_min,0);
+  $("pct").textContent=Math.round(ok/total*100)+"%";
+  $("resumo").textContent=`${ok} de ${total} passos · faltam cerca de ${hm(rest)}`;
+  $("barra").style.width=(ok/total*100).toFixed(1)+"%";
+  const prox=todos.find(p=>!feitos[p.id]);
+  $("proximo").innerHTML=prox?`<b>Próximo passo · fase ${prox.fi} · ${esc(QUEM[prox.quem])}</b><a href="#p-${prox.id}">${prox.num} ${esc(prox.titulo)}</a>`:`<b>Tudo pronto</b><span>Todas as fases concluídas. O setup inteiro está no ar.</span>`;
+  $("fMeus").setAttribute("aria-pressed",soMeus);$("fFeitos").setAttribute("aria-pressed",escFeitos);$("fHoje").setAttribute("aria-pressed",soHoje);
+  const abertas=new Set([...document.querySelectorAll("details.fase[open]")].map(d=>d.id));
+  const primeira=prox?prox.fase.id:null;
+  $("fases").innerHTML=D.fases.map((f,i)=>{
+    const ps=f.passos.filter(p=>(!soMeus||p.quem==="voce")&&(!escFeitos||!feitos[p.id])&&(!soHoje||p.hoje));
+    const n=f.passos.filter(p=>feitos[p.id]).length;const done=n===f.passos.length;
+    const aberto=abertas.size?abertas.has("f-"+f.id):f.id===primeira;
+    return `<details class="fase" id="f-${f.id}" ${aberto?"open":""}><summary><span class="fnum">${i}</span><h2>${esc(f.titulo)}</h2><span class="fcount${done?" done":""}">${n}/${f.passos.length}</span><span class="fobj">${esc(f.objetivo)}</span><span class="fquando"><b>Quando:</b> ${esc(f.quando)}${f.gatilho?` · <b>começa quando:</b> ${esc(f.gatilho)}`:""}</span></summary>
+      <ul class="passos">${ps.map(p=>{const num=`${i}.${f.passos.indexOf(p)+1}`;return `<li class="passo${feitos[p.id]?" feito":""}" id="p-${p.id}">
+        <input type="checkbox" id="c-${p.id}" data-id="${p.id}" ${feitos[p.id]?"checked":""} ${readOnly?"disabled":""} aria-label="Marcar ${esc(p.titulo)} como feito">
+        <div class="corpo"><label for="c-${p.id}" class="ptit">${num} ${esc(p.titulo)}</label>
+        <div class="meta"><span class="quem ${p.quem}">${esc(QUEM[p.quem])}</span><span>${hm(p.tempo_min)}</span>${(p.precisa||[]).map(x=>`<span class="prec">Precisa ${esc(D.precisa[x])}</span>`).join("")}</div>
+        ${p.comando?`<div class="cmd"><code id="k-${p.id}">${esc(p.comando)}</code><button class="copy" data-copy="${p.id}">Copiar</button></div>`:""}
+        <p class="pronto"><span>Pronto quando</span> ${esc(p.pronto)}</p>
+        ${p.nota?`<p class="nota">${esc(p.nota)}</p>`:""}
+        ${p.ofertas.length?`<p class="implanta"><span>Oferta</span> ${esc(p.ofertas.join(" · "))}</p>`:""}
+        ${p.implanta.length?`<p class="implanta"><span>Implanta</span> ${esc(p.implanta.join(" · "))}</p>`:""}</div></li>`;}).join("")||'<li class="passo"><span></span><span class="nota">Nada aqui com esses filtros.</span></li>'}</ul></details>`;
+  }).join("");
+}
+document.addEventListener("change",async e=>{
+  const c=e.target.closest("input[data-id]");if(!c)return;
+  const id=c.dataset.id;feitos[id]=c.checked;if(!c.checked)delete feitos[id];
+  try{localStorage.setItem("impl-feitos",JSON.stringify(feitos));}catch(err){}
+  render();
+  if(db){try{await db.collection("progresso").doc(id).set({feito:c.checked,em:Date.now()});}catch(err){$("st").textContent="Não foi possível salvar agora; a marcação ficou só neste aparelho.";}}
+});
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-copy]");if(!b)return;
+  const t=$("k-"+b.dataset.copy).textContent;
+  navigator.clipboard.writeText(t).then(()=>{b.textContent="Copiado";setTimeout(()=>b.textContent="Copiar",1500);}).catch(()=>{const r=document.createRange();r.selectNodeContents($("k-"+b.dataset.copy));const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="Selecionado";});
+});
+$("fMeus").onclick=()=>{soMeus=!soMeus;salvarFiltros();render();};
+$("fFeitos").onclick=()=>{escFeitos=!escFeitos;salvarFiltros();render();};
+$("fHoje").onclick=()=>{soHoje=!soHoje;salvarFiltros();render();};
+function salvarFiltros(){try{localStorage.setItem("impl-filtros",JSON.stringify({soMeus,escFeitos,soHoje}));}catch(e){}}
+function renderCob(){
+  $("cob").innerHTML=`<h2 id="cobt">Quando entra cada bloco</h2>
+  <p class="nota">Todos os ${D.total_blocos} blocos do mapa do setup, de todas as camadas, estão em algum passo acima. O número é o passo; toque nele para ir até lá.</p>
+  ${D.camadas.map(c=>`<details><summary>${esc(c.t)} (${c.b.length})</summary><dl>${c.b.map(([n,ps,q])=>`<dt>${esc(n)} · ${ps.map(([n,id])=>`<a href="#p-${id}" data-ir="${id}">${n}</a>`).join(", ")}</dt><dd>${esc(q)}</dd>`).join("")}</dl></details>`).join("")}`;
+}
+document.addEventListener("click",e=>{const a=e.target.closest("[data-ir]");if(!a)return;e.preventDefault();
+  if(soMeus||escFeitos||soHoje){soMeus=escFeitos=soHoje=false;salvarFiltros();render();}
+  const el=$("p-"+a.dataset.ir);if(!el)return;const det=el.closest("details");if(det)det.open=true;el.scrollIntoView({block:"center",behavior:"smooth"});});
+render();renderCob();
+$("st").textContent="O progresso fica salvo neste navegador.";
+(async()=>{
+  try{db=window.claude?await window.claude.use("db"):null;}catch(e){db=null;}
+  try{const u=window.claude?await window.claude.use("user"):null;const can=u?await u.can("data.write"):null;if(can===false){readOnly=true;render();}}catch(e){}
+  if(!db)return;
+  $("st").textContent=readOnly?"Somente leitura.":"O progresso fica salvo no artefato e aparece igual no celular e no notebook.";
+  db.collection("progresso").onSnapshot(s=>{const n={};s.docs.forEach(d=>{const v=d.data();if(v&&v.feito)n[d.id]=true;});feitos=n;try{localStorage.setItem("impl-feitos",JSON.stringify(feitos));}catch(e){}render();},()=>{$("st").textContent="A conexão com o armazenamento caiu. Recarregue a página.";});
+})();
+</script>

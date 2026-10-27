@@ -1,0 +1,1614 @@
+{
+ "frentes": {
+  "educacao": "Instituto AMS e infoprodutos",
+  "editora": "Editora AMS Silva",
+  "software": "AMtech Software",
+  "servicos": "Serviços locais e B2B",
+  "fisico": "Negócios físicos",
+  "midia": "Conteúdo e mídia"
+ },
+ "ofertas": [
+  {
+   "id": "minicurso",
+   "nome": "Mini-curso Lógica de Programação",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "construcao",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "Instagram",
+    "YouTube",
+    "Hotmart",
+    "Kiwify",
+    "Udemy"
+   ],
+   "automatico": [
+    "checkout e entrega",
+    "e-mails de boas-vindas",
+    "cortes para redes",
+    "legendas"
+   ],
+   "humano": [
+    "gravar as aulas",
+    "responder dúvidas"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Gravar as 5 primeiras aulas e abrir a pré-venda com a isca grátis",
+   "metrica": "vendas por semana e conversão da página",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": "../marketing/README.md",
+   "nova": false
+  },
+  {
+   "id": "formti",
+   "nome": "Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas)",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "venda única ou assinatura",
+   "escala": "digital",
+   "canais": [
+    "Instituto AMS",
+    "Udemy",
+    "Hotmart"
+   ],
+   "automatico": [
+    "entrega",
+    "certificado",
+    "trilha por e-mail"
+   ],
+   "humano": [
+    "roteiro e gravação"
+   ],
+   "deriva_de": [
+    "minicurso"
+   ],
+   "proximo_passo": "Só depois do mini-curso vender 100 cópias",
+   "metrica": "alunos ativos e conclusão",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 5,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "formmat",
+   "nome": "Formação em Matemática",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "Instituto AMS",
+    "YouTube"
+   ],
+   "automatico": [
+    "entrega",
+    "exercícios corrigidos"
+   ],
+   "humano": [
+    "gravação"
+   ],
+   "deriva_de": [
+    "livro"
+   ],
+   "proximo_passo": "Usar os capítulos de matemática do livro como base",
+   "metrica": "vendas",
+   "nota": {
+    "sinergia": 4,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 5,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "financas",
+   "nome": "Curso de finanças pessoais (conteúdo próprio)",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "Instagram",
+    "Hotmart"
+   ],
+   "automatico": [
+    "entrega",
+    "planilha incluída"
+   ],
+   "humano": [
+    "roteiro"
+   ],
+   "deriva_de": [
+    "rendara"
+   ],
+   "proximo_passo": "Validar com a planilha do Caixa da Casa antes do curso",
+   "metrica": "vendas da planilha",
+   "nota": {
+    "sinergia": 3,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 4,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "aulas",
+   "nome": "Aulas particulares",
+   "frente": "educacao",
+   "tipo": "serviço",
+   "estagio": "validacao",
+   "receita": "por hora",
+   "escala": "local",
+   "canais": [
+    "WhatsApp",
+    "Cal.com",
+    "Instagram"
+   ],
+   "automatico": [
+    "agenda e pagamento",
+    "lembrete",
+    "material da aula"
+   ],
+   "humano": [
+    "dar a aula"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Publicar a agenda com pagamento antecipado",
+   "metrica": "horas vendidas por semana",
+   "nota": {
+    "sinergia": 5,
+    "escala": 1,
+    "demanda": 4,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "templates",
+   "nome": "Templates e código-fonte",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "validacao",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "GitHub",
+    "Hotmart",
+    "Gumroad"
+   ],
+   "automatico": [
+    "entrega do arquivo",
+    "licença",
+    "atualizações"
+   ],
+   "humano": [
+    "construir o template"
+   ],
+   "deriva_de": [
+    "sites"
+   ],
+   "proximo_passo": "Empacotar o primeiro frontend já pronto com documentação",
+   "metrica": "vendas por template",
+   "nota": {
+    "sinergia": 4,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "catalogo",
+   "nome": "Catálogo do HTML (gratuito)",
+   "frente": "educacao",
+   "tipo": "isca",
+   "estagio": "lancado",
+   "receita": "nenhuma direta: gera público",
+   "escala": "digital",
+   "canais": [
+    "GitHub Pages",
+    "alunos"
+   ],
+   "automatico": [
+    "publicação"
+   ],
+   "humano": [
+    "conteúdo"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Pôr chamada para o mini-curso e para a newsletter",
+   "metrica": "visitas e inscritos vindos dele",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "ammentor",
+   "nome": "AM Mentor: banco de exercícios com correção",
+   "frente": "educacao",
+   "tipo": "assinatura",
+   "estagio": "ideia",
+   "receita": "recorrente",
+   "escala": "digital",
+   "canais": [
+    "Instituto AMS",
+    "escolas"
+   ],
+   "automatico": [
+    "correção automática",
+    "ranking",
+    "relatórios"
+   ],
+   "humano": [
+    "curadoria das questões"
+   ],
+   "deriva_de": [
+    "livro"
+   ],
+   "proximo_passo": "Começar com o Capítulo 1 do livro em YAML",
+   "metrica": "assinantes e exercícios resolvidos",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 4,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "udemy",
+   "nome": "Versões dos cursos na Udemy (português e inglês)",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "participação por venda",
+   "escala": "digital",
+   "canais": [
+    "Udemy"
+   ],
+   "automatico": [
+    "dublagem por IA",
+    "legendas"
+   ],
+   "humano": [
+    "revisão"
+   ],
+   "deriva_de": [
+    "minicurso"
+   ],
+   "proximo_passo": "Publicar o mini-curso depois do lançamento próprio",
+   "metrica": "vendas e avaliação média",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "dio",
+   "nome": "Parceria DIO",
+   "frente": "educacao",
+   "tipo": "parceria",
+   "estagio": "ideia",
+   "receita": "parceria",
+   "escala": "digital",
+   "canais": [
+    "DIO"
+   ],
+   "automatico": [],
+   "humano": [
+    "artigos e projetos"
+   ],
+   "deriva_de": [
+    "minicurso"
+   ],
+   "proximo_passo": "Publicar 3 artigos e um projeto na DIO",
+   "metrica": "convite ou resposta",
+   "nota": {
+    "sinergia": 4,
+    "escala": 4,
+    "demanda": 2,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "aulasprof",
+   "nome": "Pacote de aulas prontas para professores de informática",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "venda única ou assinatura",
+   "escala": "digital",
+   "canais": [
+    "Instagram",
+    "grupos de professores",
+    "Hotmart"
+   ],
+   "automatico": [
+    "entrega",
+    "atualização anual"
+   ],
+   "humano": [
+    "revisar as aulas que você já dá"
+   ],
+   "deriva_de": [
+    "aulas"
+   ],
+   "proximo_passo": "Empacotar uma disciplina que você já leciona (planos, slides, avaliações)",
+   "metrica": "vendas por disciplina",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "simulados",
+   "nome": "Banco de questões de TI para concursos (PF, PRF, Forças Armadas)",
+   "frente": "educacao",
+   "tipo": "assinatura",
+   "estagio": "ideia",
+   "receita": "recorrente",
+   "escala": "digital",
+   "canais": [
+    "Instagram",
+    "YouTube",
+    "Telegram"
+   ],
+   "automatico": [
+    "correção",
+    "estatística por assunto"
+   ],
+   "humano": [
+    "curadoria"
+   ],
+   "deriva_de": [
+    "livro",
+    "ammentor"
+   ],
+   "proximo_passo": "Publicar 50 questões comentadas grátis e medir a procura",
+   "metrica": "assinantes",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 3,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "anki",
+   "nome": "Baralhos Anki de TI e concursos",
+   "frente": "educacao",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "Hotmart",
+    "Telegram"
+   ],
+   "automatico": [
+    "geração a partir do YAML do livro"
+   ],
+   "humano": [
+    "revisão"
+   ],
+   "deriva_de": [
+    "livro"
+   ],
+   "proximo_passo": "Gerar o primeiro baralho do Capítulo 1",
+   "metrica": "vendas",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 2,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "comunidade",
+   "nome": "Comunidade paga do Instituto AMS",
+   "frente": "educacao",
+   "tipo": "assinatura",
+   "estagio": "ideia",
+   "receita": "recorrente",
+   "escala": "digital",
+   "canais": [
+    "Discord",
+    "Instituto AMS"
+   ],
+   "automatico": [
+    "acesso e cobrança",
+    "boas-vindas"
+   ],
+   "humano": [
+    "presença semanal ao vivo"
+   ],
+   "deriva_de": [
+    "minicurso",
+    "formti"
+   ],
+   "proximo_passo": "Só com 200 alunos pagantes",
+   "metrica": "membros e cancelamento",
+   "nota": {
+    "sinergia": 4,
+    "escala": 4,
+    "demanda": 3,
+    "esforco": 3,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "workshop",
+   "nome": "Workshops presenciais para pequenos empresários (IA, planilhas, presença digital)",
+   "frente": "educacao",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "ingresso",
+   "escala": "local",
+   "canais": [
+    "Instagram",
+    "Sebrae local",
+    "associação comercial"
+   ],
+   "automatico": [
+    "inscrição e pagamento",
+    "certificado"
+   ],
+   "humano": [
+    "dar o workshop"
+   ],
+   "deriva_de": [
+    "automacaoia"
+   ],
+   "proximo_passo": "Fazer um piloto com 10 vagas",
+   "metrica": "ingressos vendidos e clientes gerados",
+   "nota": {
+    "sinergia": 4,
+    "escala": 2,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "livro",
+   "nome": "Livro Lógica e Máquina",
+   "frente": "editora",
+   "tipo": "livro",
+   "estagio": "construcao",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "Amazon KDP",
+    "Hotmart",
+    "site"
+   ],
+   "automatico": [
+    "compilação",
+    "gabaritos",
+    "revisão automática",
+    "EPUB e PDF"
+   ],
+   "humano": [
+    "escrever",
+    "decidir"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Entregar o Capítulo 1 para avaliação",
+   "metrica": "capítulos prontos e leitores beta",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 5,
+    "capital": 2
+   },
+   "doc": "../editora/README.md",
+   "nova": false
+  },
+  {
+   "id": "kitlivro",
+   "nome": "Kit do livro e edição do professor",
+   "frente": "editora",
+   "tipo": "infoproduto",
+   "estagio": "ideia",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "escolas",
+    "professores"
+   ],
+   "automatico": [
+    "gerado do mesmo repositório"
+   ],
+   "humano": [
+    "revisão"
+   ],
+   "deriva_de": [
+    "livro"
+   ],
+   "proximo_passo": "Depois do volume 1",
+   "metrica": "adoções",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "adocao",
+   "nome": "Adoção do livro por escolas",
+   "frente": "editora",
+   "tipo": "licença",
+   "estagio": "ideia",
+   "receita": "licença por aluno",
+   "escala": "produtizado",
+   "canais": [
+    "escolas",
+    "secretarias"
+   ],
+   "automatico": [
+    "material do professor gerado"
+   ],
+   "humano": [
+    "venda B2B"
+   ],
+   "deriva_de": [
+    "livro",
+    "kitlivro"
+   ],
+   "proximo_passo": "Piloto na sua própria escola, se permitido",
+   "metrica": "escolas e alunos",
+   "nota": {
+    "sinergia": 5,
+    "escala": 4,
+    "demanda": 3,
+    "esforco": 3,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "traducao",
+   "nome": "Traduções do livro",
+   "frente": "editora",
+   "tipo": "livro",
+   "estagio": "ideia",
+   "receita": "venda única",
+   "escala": "digital",
+   "canais": [
+    "Amazon KDP"
+   ],
+   "automatico": [
+    "tradução assistida por IA"
+   ],
+   "humano": [
+    "revisão por tradutor humano"
+   ],
+   "deriva_de": [
+    "livro"
+   ],
+   "proximo_passo": "Depois de 500 cópias em português",
+   "metrica": "vendas fora do Brasil",
+   "nota": {
+    "sinergia": 4,
+    "escala": 5,
+    "demanda": 2,
+    "esforco": 4,
+    "capital": 3
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "sites",
+   "nome": "Sites e lojas para pequenas empresas",
+   "frente": "software",
+   "tipo": "serviço",
+   "estagio": "validacao",
+   "receita": "projeto + mensalidade",
+   "escala": "produtizado",
+   "canais": [
+    "Instagram",
+    "Google",
+    "indicação",
+    "Upwork"
+   ],
+   "automatico": [
+    "proposta a partir do modelo",
+    "deploy",
+    "relatório mensal"
+   ],
+   "humano": [
+    "reunião e ajustes"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Criar 3 pacotes fixos com preço público",
+   "metrica": "contratos por mês",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 4,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": "../negocios/01-software-house.md",
+   "nova": false
+  },
+  {
+   "id": "encomenda",
+   "nome": "Sistemas sob encomenda",
+   "frente": "software",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "projeto",
+   "escala": "produtizado",
+   "canais": [
+    "indicação",
+    "LinkedIn",
+    "Upwork"
+   ],
+   "automatico": [
+    "CI/CD",
+    "testes",
+    "documentação"
+   ],
+   "humano": [
+    "descoberta e arquitetura"
+   ],
+   "deriva_de": [
+    "sites"
+   ],
+   "proximo_passo": "Primeiro cliente via loja ou indicação, com 50% de entrada",
+   "metrica": "margem por projeto",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 3,
+    "esforco": 4,
+    "capital": 1
+   },
+   "doc": "../negocios/01-software-house.md",
+   "nova": false
+  },
+  {
+   "id": "kaixara",
+   "nome": "AM Kaixara (PDV, ficha técnica, cardápio)",
+   "frente": "software",
+   "tipo": "SaaS",
+   "estagio": "construcao",
+   "receita": "recorrente",
+   "escala": "digital",
+   "canais": [
+    "restaurantes da cidade",
+    "loja"
+   ],
+   "automatico": [
+    "onboarding",
+    "cobrança Pix Automático",
+    "suporte de primeiro nível"
+   ],
+   "humano": [
+    "vendas iniciais"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Rodar primeiro num cliente piloto pagante",
+   "metrica": "MRR e cancelamento",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 5,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "rotara",
+   "nome": "AM Rotara (pedidos e entregas)",
+   "frente": "software",
+   "tipo": "SaaS",
+   "estagio": "ideia",
+   "receita": "recorrente",
+   "escala": "digital",
+   "canais": [
+    "AM Entregas",
+    "lojistas"
+   ],
+   "automatico": [
+    "roteirização",
+    "repasse",
+    "notificações"
+   ],
+   "humano": [
+    "suporte"
+   ],
+   "deriva_de": [
+    "kaixara"
+   ],
+   "proximo_passo": "Nasce junto com a AM Entregas",
+   "metrica": "entregas roteirizadas",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 5,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "rendara",
+   "nome": "AM Rendara (finanças), começando pela planilha",
+   "frente": "software",
+   "tipo": "SaaS",
+   "estagio": "validacao",
+   "receita": "venda única, depois recorrente",
+   "escala": "digital",
+   "canais": [
+    "Instagram",
+    "Hotmart"
+   ],
+   "automatico": [
+    "planilha → sistema"
+   ],
+   "humano": [
+    "suporte"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Vender a planilha do Caixa da Casa antes de construir o sistema",
+   "metrica": "vendas da planilha",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "taskoro",
+   "nome": "AM Taskoro (gestão de projetos ágeis)",
+   "frente": "software",
+   "tipo": "SaaS",
+   "estagio": "pausado",
+   "receita": "recorrente",
+   "escala": "digital",
+   "canais": [
+    "portfólio"
+   ],
+   "automatico": [],
+   "humano": [],
+   "deriva_de": [],
+   "proximo_passo": "Fica como projeto de portfólio até o Kaixara ter clientes",
+   "metrica": "—",
+   "nota": {
+    "sinergia": 3,
+    "escala": 5,
+    "demanda": 2,
+    "esforco": 5,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "whitelabel",
+   "nome": "App de delivery com a marca do restaurante (white-label)",
+   "frente": "software",
+   "tipo": "SaaS",
+   "estagio": "ideia",
+   "receita": "mensalidade",
+   "escala": "digital",
+   "canais": [
+    "restaurantes",
+    "outras cidades"
+   ],
+   "automatico": [
+    "provisionamento automático"
+   ],
+   "humano": [
+    "venda"
+   ],
+   "deriva_de": [
+    "delivery",
+    "rotara"
+   ],
+   "proximo_passo": "Oferecer a 3 restaurantes que pagam 23% ao iFood",
+   "metrica": "lojas ativas",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 4,
+    "esforco": 3,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "licencadelivery",
+   "nome": "Licença do AM Delivery para outras cidades",
+   "frente": "software",
+   "tipo": "licença",
+   "estagio": "ideia",
+   "receita": "licença + royalties",
+   "escala": "produtizado",
+   "canais": [
+    "empreendedores de cidades pequenas"
+   ],
+   "automatico": [
+    "instância por cidade"
+   ],
+   "humano": [
+    "contrato e treinamento"
+   ],
+   "deriva_de": [
+    "delivery",
+    "whitelabel"
+   ],
+   "proximo_passo": "Só depois de Barbacena dar lucro por 6 meses",
+   "metrica": "cidades licenciadas",
+   "nota": {
+    "sinergia": 5,
+    "escala": 4,
+    "demanda": 3,
+    "esforco": 4,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "assist",
+   "nome": "Assistência técnica",
+   "frente": "servicos",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "por serviço",
+   "escala": "local",
+   "canais": [
+    "Google Perfil",
+    "WhatsApp",
+    "loja"
+   ],
+   "automatico": [
+    "ordem de serviço",
+    "aviso de pronto",
+    "pesquisa de satisfação"
+   ],
+   "humano": [
+    "diagnóstico e reparo"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Começar atendendo em casa e por agendamento antes de alugar a loja",
+   "metrica": "serviços por semana e retorno em garantia",
+   "nota": {
+    "sinergia": 5,
+    "escala": 2,
+    "demanda": 4,
+    "esforco": 2,
+    "capital": 2
+   },
+   "doc": "../negocios/02-assistencia-e-pecas.md",
+   "nova": false
+  },
+  {
+   "id": "remoto",
+   "nome": "Suporte remoto e planos mensais para empresas",
+   "frente": "servicos",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "recorrente",
+   "escala": "produtizado",
+   "canais": [
+    "empresas da cidade",
+    "WhatsApp"
+   ],
+   "automatico": [
+    "monitoramento",
+    "backup",
+    "alertas"
+   ],
+   "humano": [
+    "atendimento"
+   ],
+   "deriva_de": [
+    "assist"
+   ],
+   "proximo_passo": "Fechar 3 empresas com o plano de R$ 250",
+   "metrica": "contratos ativos",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 4,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "pecas",
+   "nome": "Peças e acessórios sem estoque",
+   "frente": "servicos",
+   "tipo": "comércio",
+   "estagio": "ideia",
+   "receita": "margem por venda",
+   "escala": "local",
+   "canais": [
+    "loja",
+    "Mercado Livre",
+    "Shopee"
+   ],
+   "automatico": [
+    "anúncio",
+    "pedido ao fornecedor"
+   ],
+   "humano": [
+    "conferir peça"
+   ],
+   "deriva_de": [
+    "assist"
+   ],
+   "proximo_passo": "Só junto com a assistência",
+   "metrica": "margem por pedido",
+   "nota": {
+    "sinergia": 4,
+    "escala": 3,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": "../negocios/02-assistencia-e-pecas.md",
+   "nova": false
+  },
+  {
+   "id": "automacaoia",
+   "nome": "Automação com IA para pequenos negócios (WhatsApp, n8n, agenda)",
+   "frente": "servicos",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "projeto + mensalidade",
+   "escala": "produtizado",
+   "canais": [
+    "Instagram",
+    "workshops",
+    "indicação"
+   ],
+   "automatico": [
+    "fluxos reaproveitados",
+    "monitoramento"
+   ],
+   "humano": [
+    "diagnóstico e implantação"
+   ],
+   "deriva_de": [
+    "sites"
+   ],
+   "proximo_passo": "Implantar de graça em um negócio conhecido em troca de caso e depoimento",
+   "metrica": "contratos e horas por implantação",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 5,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "agencialocal",
+   "nome": "Presença digital para comércio local (Google Perfil, redes, avaliações)",
+   "frente": "servicos",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "mensalidade",
+   "escala": "produtizado",
+   "canais": [
+    "comércio de Barbacena"
+   ],
+   "automatico": [
+    "agendamento de posts",
+    "relatório mensal",
+    "pedido de avaliação"
+   ],
+   "humano": [
+    "fotos e estratégia"
+   ],
+   "deriva_de": [
+    "sites",
+    "automacaoia"
+   ],
+   "proximo_passo": "Oferecer a 5 clientes de sites como complemento",
+   "metrica": "clientes ativos",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 4,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "consultoriaresto",
+   "nome": "Implantação de ficha técnica e engenharia de cardápio",
+   "frente": "servicos",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "projeto",
+   "escala": "produtizado",
+   "canais": [
+    "restaurantes da cidade"
+   ],
+   "automatico": [
+    "relatórios do Kaixara"
+   ],
+   "humano": [
+    "visita e treinamento"
+   ],
+   "deriva_de": [
+    "kaixara"
+   ],
+   "proximo_passo": "Usar o restaurante onde você trabalha como estudo de caso, se o dono aceitar",
+   "metrica": "contratos",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "maker",
+   "nome": "AMtech Maker (robótica e automação)",
+   "frente": "servicos",
+   "tipo": "produto e serviço",
+   "estagio": "ideia",
+   "receita": "venda e projeto",
+   "escala": "produtizado",
+   "canais": [
+    "escolas",
+    "feiras",
+    "Mercado Livre"
+   ],
+   "automatico": [
+    "firmware versionado",
+    "manual gerado"
+   ],
+   "humano": [
+    "montagem e instalação"
+   ],
+   "deriva_de": [
+    "assist"
+   ],
+   "proximo_passo": "Primeiro kit sem rádio testado com seus alunos",
+   "metrica": "kits vendidos",
+   "nota": {
+    "sinergia": 5,
+    "escala": 3,
+    "demanda": 3,
+    "esforco": 3,
+    "capital": 2
+   },
+   "doc": "../negocios/03-produtos-proprios.md",
+   "nova": false
+  },
+  {
+   "id": "oficinas",
+   "nome": "Oficinas de robótica e programação para escolas",
+   "frente": "servicos",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "por turma",
+   "escala": "produtizado",
+   "canais": [
+    "escolas particulares",
+    "prefeituras"
+   ],
+   "automatico": [
+    "material gerado",
+    "certificados"
+   ],
+   "humano": [
+    "dar a oficina"
+   ],
+   "deriva_de": [
+    "maker"
+   ],
+   "proximo_passo": "Montar o plano de 8 encontros com o kit",
+   "metrica": "turmas vendidas",
+   "nota": {
+    "sinergia": 5,
+    "escala": 2,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 2
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "ponto",
+   "nome": "Ponto de retirada (Shopee e Mercado Livre)",
+   "frente": "fisico",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "por pacote",
+   "escala": "local",
+   "canais": [
+    "apps dos marketplaces"
+   ],
+   "automatico": [
+    "registro de pacotes"
+   ],
+   "humano": [
+    "atendimento"
+   ],
+   "deriva_de": [
+    "assist"
+   ],
+   "proximo_passo": "Junto com a loja",
+   "metrica": "conversão de retiradas em vendas",
+   "nota": {
+    "sinergia": 4,
+    "escala": 1,
+    "demanda": 3,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": "../negocios/04-ponto-de-retirada.md",
+   "nova": false
+  },
+  {
+   "id": "entregas",
+   "nome": "AM Entregas",
+   "frente": "fisico",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "por entrega",
+   "escala": "local",
+   "canais": [
+    "empresas",
+    "vendedores Flex"
+   ],
+   "automatico": [
+    "roteirização",
+    "repasse",
+    "comprovante"
+   ],
+   "humano": [
+    "despacho"
+   ],
+   "deriva_de": [
+    "ponto",
+    "rotara"
+   ],
+   "proximo_passo": "Fase B, depois do portão da loja",
+   "metrica": "entregas por rota",
+   "nota": {
+    "sinergia": 4,
+    "escala": 2,
+    "demanda": 3,
+    "esforco": 4,
+    "capital": 3
+   },
+   "doc": "../negocios/05-logistica-e-entregas.md",
+   "nova": false
+  },
+  {
+   "id": "delivery",
+   "nome": "AM Delivery",
+   "frente": "fisico",
+   "tipo": "plataforma",
+   "estagio": "ideia",
+   "receita": "comissão",
+   "escala": "local",
+   "canais": [
+    "app",
+    "WhatsApp"
+   ],
+   "automatico": [
+    "pedido",
+    "pagamento com split",
+    "notificações"
+   ],
+   "humano": [
+    "comercial com lojistas"
+   ],
+   "deriva_de": [
+    "entregas",
+    "rotara"
+   ],
+   "proximo_passo": "Fase B2",
+   "metrica": "pedidos por lojista",
+   "nota": {
+    "sinergia": 4,
+    "escala": 3,
+    "demanda": 3,
+    "esforco": 5,
+    "capital": 4
+   },
+   "doc": "../negocios/06-delivery-multiempresas.md",
+   "nova": false
+  },
+  {
+   "id": "sushi",
+   "nome": "Sushi (delivery)",
+   "frente": "fisico",
+   "tipo": "restaurante",
+   "estagio": "ideia",
+   "receita": "por pedido",
+   "escala": "local",
+   "canais": [
+    "app próprio",
+    "iFood",
+    "Instagram"
+   ],
+   "automatico": [
+    "pedido",
+    "cardápio",
+    "ficha técnica",
+    "previsão"
+   ],
+   "humano": [
+    "cozinha"
+   ],
+   "deriva_de": [
+    "kaixara",
+    "delivery"
+   ],
+   "proximo_passo": "Fase C1",
+   "metrica": "pedidos por noite e CMV",
+   "nota": {
+    "sinergia": 4,
+    "escala": 1,
+    "demanda": 4,
+    "esforco": 4,
+    "capital": 5
+   },
+   "doc": "../negocios/07-sushi.md",
+   "nova": false
+  },
+  {
+   "id": "aulasushi",
+   "nome": "Aula de sushi e sushiman para eventos",
+   "frente": "fisico",
+   "tipo": "serviço",
+   "estagio": "ideia",
+   "receita": "por evento",
+   "escala": "local",
+   "canais": [
+    "Instagram",
+    "indicação"
+   ],
+   "automatico": [
+    "agenda e sinal"
+   ],
+   "humano": [
+    "preparo no local"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Testar 2 eventos com amigos pagantes; confirme as regras sanitárias para preparo na casa do cliente",
+   "metrica": "eventos por mês e pedidos de 'quando abre o restaurante?'",
+   "nota": {
+    "sinergia": 4,
+    "escala": 1,
+    "demanda": 3,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "cafeteria",
+   "nome": "Cafeteria",
+   "frente": "fisico",
+   "tipo": "restaurante",
+   "estagio": "ideia",
+   "receita": "por venda",
+   "escala": "local",
+   "canais": [
+    "balcão",
+    "Instagram"
+   ],
+   "automatico": [
+    "PDV",
+    "fidelidade"
+   ],
+   "humano": [
+    "atendimento"
+   ],
+   "deriva_de": [
+    "padaria"
+   ],
+   "proximo_passo": "Fase C3, dentro da padaria",
+   "metrica": "ticket médio",
+   "nota": {
+    "sinergia": 3,
+    "escala": 1,
+    "demanda": 3,
+    "esforco": 3,
+    "capital": 4
+   },
+   "doc": "../negocios/08-cafeteria.md",
+   "nova": false
+  },
+  {
+   "id": "padaria",
+   "nome": "Padaria com café da manhã e almoço",
+   "frente": "fisico",
+   "tipo": "restaurante",
+   "estagio": "ideia",
+   "receita": "por venda",
+   "escala": "local",
+   "canais": [
+    "balcão",
+    "marmitas",
+    "Google Perfil"
+   ],
+   "automatico": [
+    "PDV",
+    "previsão de produção"
+   ],
+   "humano": [
+    "gerente e equipe"
+   ],
+   "deriva_de": [
+    "kaixara"
+   ],
+   "proximo_passo": "Fase C2",
+   "metrica": "CMV e perdas",
+   "nota": {
+    "sinergia": 3,
+    "escala": 1,
+    "demanda": 4,
+    "esforco": 5,
+    "capital": 5
+   },
+   "doc": "../negocios/09-padaria-e-almoco.md",
+   "nova": false
+  },
+  {
+   "id": "dark",
+   "nome": "Canais sem rosto (YouTube, TikTok, Instagram, Facebook)",
+   "frente": "midia",
+   "tipo": "mídia",
+   "estagio": "construcao",
+   "receita": "anúncios e tráfego para produtos",
+   "escala": "digital",
+   "canais": [
+    "YouTube",
+    "TikTok",
+    "Instagram",
+    "Facebook"
+   ],
+   "automatico": [
+    "roteiro assistido",
+    "voz clonada",
+    "corte",
+    "agendamento no melhor horário"
+   ],
+   "humano": [
+    "aprovar e revisar"
+   ],
+   "deriva_de": [
+    "minicurso"
+   ],
+   "proximo_passo": "Publicar 3 vídeos por semana por 8 semanas e medir",
+   "metrica": "retenção e cliques para os produtos",
+   "nota": {
+    "sinergia": 4,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 3,
+    "capital": 1
+   },
+   "doc": "../marketing/README.md",
+   "nova": false
+  },
+  {
+   "id": "buildpublic",
+   "nome": "Canal com rosto: construindo o Grupo AMtech em público",
+   "frente": "midia",
+   "tipo": "mídia",
+   "estagio": "ideia",
+   "receita": "anúncios, patrocínio e confiança",
+   "escala": "digital",
+   "canais": [
+    "YouTube",
+    "Instagram",
+    "LinkedIn"
+   ],
+   "automatico": [
+    "cortes automáticos",
+    "legendas"
+   ],
+   "humano": [
+    "gravar sua rotina e decisões"
+   ],
+   "deriva_de": [
+    "dark"
+   ],
+   "proximo_passo": "Gravar 1 vídeo por semana mostrando uma decisão real (números do planejador, setup, aula)",
+   "metrica": "inscritos e vendas atribuídas",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": true
+  },
+  {
+   "id": "newsletter",
+   "nome": "Newsletter (patrocínio e vendas)",
+   "frente": "midia",
+   "tipo": "mídia",
+   "estagio": "validacao",
+   "receita": "patrocínio e vendas",
+   "escala": "digital",
+   "canais": [
+    "MailerLite",
+    "site"
+   ],
+   "automatico": [
+    "envio",
+    "segmentação",
+    "sequências"
+   ],
+   "humano": [
+    "escrever 1 edição por semana"
+   ],
+   "deriva_de": [],
+   "proximo_passo": "Fazer a isca grátis e a sequência de boas-vindas",
+   "metrica": "inscritos e cliques",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 2,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "afiliados",
+   "nome": "Afiliados (ferramentas, livros, equipamentos que você usa)",
+   "frente": "midia",
+   "tipo": "mídia",
+   "estagio": "validacao",
+   "receita": "comissão",
+   "escala": "digital",
+   "canais": [
+    "blog",
+    "YouTube",
+    "Instagram"
+   ],
+   "automatico": [
+    "links rastreados",
+    "página de recomendações"
+   ],
+   "humano": [
+    "testar de verdade"
+   ],
+   "deriva_de": [
+    "dark",
+    "buildpublic"
+   ],
+   "proximo_passo": "Montar a página 'meu setup' com links de afiliado",
+   "metrica": "comissões por mês",
+   "nota": {
+    "sinergia": 5,
+    "escala": 5,
+    "demanda": 3,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  },
+  {
+   "id": "monetizacao",
+   "nome": "Monetização das plataformas (YouTube, Instagram)",
+   "frente": "midia",
+   "tipo": "mídia",
+   "estagio": "ideia",
+   "receita": "anúncios",
+   "escala": "digital",
+   "canais": [
+    "YouTube",
+    "Instagram"
+   ],
+   "automatico": [],
+   "humano": [],
+   "deriva_de": [
+    "dark",
+    "buildpublic"
+   ],
+   "proximo_passo": "Consequência dos canais; não é meta em si",
+   "metrica": "receita por mil visualizações",
+   "nota": {
+    "sinergia": 4,
+    "escala": 5,
+    "demanda": 2,
+    "esforco": 1,
+    "capital": 1
+   },
+   "doc": null,
+   "nova": false
+  }
+ ]
+}

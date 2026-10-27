@@ -1,0 +1,922 @@
+{
+  "premissas": {
+    "data": "2026-10-21",
+    "cidade": "Barbacena (MG), 129.757 habitantes (IBGE, estimativa)",
+    "salario_minimo": 1621,
+    "encargos": 1.4,
+    "encargos_obs": "Salário × 1,4 cobre FGTS, 13º, férias + 1/3, vale-transporte e provisão de rescisão em empresa do Simples (anexos I a III). Estimativa; o contador calcula o valor real pela convenção coletiva.",
+    "reserva_meses": 3,
+    "rampa_meses": 6,
+    "rampa_inicio": 0.35,
+    "rampa_obs": "Rampa: no 1º mês o negócio fatura uma fração do alvo e cresce em linha reta até 100% no último mês da rampa. Os custos fixos são cheios desde o 1º mês.",
+    "aviso": "Valores de referência para Barbacena em outubro de 2026, montados a partir de anúncios de aluguel, tabelas públicas e médias de mercado. Troque cada linha por orçamento real antes de assinar qualquer contrato.",
+    "variavel_obs": "O custo variável de cada fonte já soma CMV (insumos pela ficha técnica), embalagem, taxa de cartão (média de 2,5%), comissão do app quando houver e 3% de perdas e quebras nos negócios de comida."
+  },
+  "negocios": [
+    {
+      "id": "software",
+      "nome": "AMtech Software (projetos, SaaS e plataformas)",
+      "cluster": "A",
+      "doc": "01-software-house.md",
+      "rampa_meses": 9,
+      "rampa_inicio": 0.25,
+      "prolabore": 3600,
+      "investimento": [
+        {
+          "item": "Abertura do CNPJ, inscrição municipal e alvará (via contador)",
+          "valor": 1500
+        },
+        {
+          "item": "Certificado digital e-CNPJ A1",
+          "valor": 220
+        },
+        {
+          "item": "Domínio, e-mail profissional e site (1º ano)",
+          "valor": 480
+        },
+        {
+          "item": "Contrato padrão, termos e política de privacidade (revisão jurídica)",
+          "valor": 900
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Contador (serviços, Simples)",
+          "valor": 400
+        },
+        {
+          "item": "Nuvem (Azure/VPS) dos SaaS em produção",
+          "valor": 300
+        },
+        {
+          "item": "Ferramentas da empresa (repositórios, e-mail, monitoramento)",
+          "valor": 200
+        },
+        {
+          "item": "API de nota fiscal (NFS-e)",
+          "valor": 60
+        },
+        {
+          "item": "Marketing (anúncios locais e conteúdo)",
+          "valor": 400
+        }
+      ],
+      "equipe": [],
+      "fontes": [
+        {
+          "nome": "Sistemas sob encomenda",
+          "qtd": 1,
+          "ticket": 4500,
+          "variavel": 0.1,
+          "anexo": "III/V"
+        },
+        {
+          "nome": "Sites e lojas para pequenas empresas",
+          "qtd": 2,
+          "ticket": 1500,
+          "variavel": 0.05,
+          "anexo": "III/V"
+        },
+        {
+          "nome": "SaaS AM (assinaturas)",
+          "qtd": 25,
+          "ticket": 149,
+          "variavel": 0.08,
+          "anexo": "III/V"
+        },
+        {
+          "nome": "Manutenção e hospedagem mensal",
+          "qtd": 6,
+          "ticket": 250,
+          "variavel": 0.1,
+          "anexo": "III/V"
+        }
+      ],
+      "alertas": [
+        "Pró-labore de R$ 3.600 mantém o Fator R em 28% ou mais e a empresa no Anexo III (6%). Sem ele, cai no Anexo V (15,5%). O pró-labore é seu: entra como custo, mas é a sua renda."
+      ]
+    },
+    {
+      "id": "loja",
+      "nome": "Loja AMtech (assistência, peças sem estoque e ponto de retirada)",
+      "cluster": "A",
+      "doc": "02-assistencia-e-pecas.md",
+      "rampa_meses": 8,
+      "investimento": [
+        {
+          "item": "Caução e 1º aluguel (loja de 30 a 50 m², R$ 1.800)",
+          "valor": 3600
+        },
+        {
+          "item": "Pintura, fachada e elétrica",
+          "valor": 4000
+        },
+        {
+          "item": "Balcão e prateleiras numeradas para pacotes",
+          "valor": 3500
+        },
+        {
+          "item": "Bancada e ferramentas (estação de retrabalho, solda, multímetro, fonte, ultrassom, kit ESD)",
+          "valor": 4500
+        },
+        {
+          "item": "Computador do balcão, leitor de código de barras e impressora de etiquetas",
+          "valor": 2500
+        },
+        {
+          "item": "Câmeras e alarme",
+          "valor": 1200
+        },
+        {
+          "item": "Mostruário de giro rápido (cabos, carregadores, SSD, mouses)",
+          "valor": 3000
+        },
+        {
+          "item": "Licenças, bombeiros (processo simplificado) e extintores",
+          "valor": 2400
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Aluguel",
+          "valor": 1800
+        },
+        {
+          "item": "IPTU e taxas",
+          "valor": 150
+        },
+        {
+          "item": "Energia",
+          "valor": 300
+        },
+        {
+          "item": "Internet",
+          "valor": 130
+        },
+        {
+          "item": "Contador (comércio + serviços)",
+          "valor": 500
+        },
+        {
+          "item": "Marketing local (Google Perfil, anúncios, panfletos)",
+          "valor": 400
+        },
+        {
+          "item": "Seguro do ponto e monitoramento",
+          "valor": 220
+        },
+        {
+          "item": "Limpeza e consumo",
+          "valor": 200
+        }
+      ],
+      "equipe": [
+        {
+          "cargo": "Técnico-atendente (abre a loja de segunda a sábado)",
+          "salario": 2000,
+          "qtd": 1
+        },
+        {
+          "cargo": "Auxiliar de meio período (sábado e horário de almoço)",
+          "salario": 900,
+          "qtd": 1
+        }
+      ],
+      "fontes": [
+        {
+          "nome": "Serviços técnicos (formatação, limpeza, reparo, upgrade)",
+          "qtd": 70,
+          "ticket": 160,
+          "variavel": 0.12,
+          "anexo": "III"
+        },
+        {
+          "nome": "Peças e acessórios sob encomenda (sem estoque)",
+          "qtd": 60,
+          "ticket": 220,
+          "variavel": 0.78,
+          "anexo": "I"
+        },
+        {
+          "nome": "Mostruário de giro rápido",
+          "qtd": 80,
+          "ticket": 45,
+          "variavel": 0.62,
+          "anexo": "I"
+        },
+        {
+          "nome": "Ponto de retirada Shopee (R$ 0,70 a 0,60 por pacote)",
+          "qtd": 1200,
+          "ticket": 0.62,
+          "variavel": 0,
+          "anexo": "III"
+        },
+        {
+          "nome": "Agência Mercado Livre (valor a confirmar na proposta)",
+          "qtd": 800,
+          "ticket": 0.5,
+          "variavel": 0,
+          "anexo": "III"
+        }
+      ],
+      "alertas": [
+        "Os pacotes rendem pouco sozinhos (cerca de R$ 1.140 por mês aqui). O ganho real é o movimento: cada retirada é um cliente dentro da loja."
+      ]
+    },
+    {
+      "id": "produtos",
+      "nome": "AMtech Maker (robótica e automação próprias)",
+      "cluster": "A",
+      "doc": "03-produtos-proprios.md",
+      "rampa_meses": 12,
+      "rampa_inicio": 0.2,
+      "investimento": [
+        {
+          "item": "Impressora 3D e filamentos",
+          "valor": 3500
+        },
+        {
+          "item": "Componentes para protótipos e primeiro lote",
+          "valor": 3500
+        },
+        {
+          "item": "Fotos, embalagem e manual dos kits",
+          "valor": 900
+        },
+        {
+          "item": "Registro de marca no INPI (uma classe)",
+          "valor": 450
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Marketing e conteúdo dos kits",
+          "valor": 400
+        },
+        {
+          "item": "Loja virtual e anúncios em marketplaces",
+          "valor": 100
+        }
+      ],
+      "equipe": [],
+      "fontes": [
+        {
+          "nome": "Kits de robótica educacional sem rádio",
+          "qtd": 20,
+          "ticket": 290,
+          "variavel": 0.55,
+          "anexo": "II"
+        },
+        {
+          "nome": "Automação residencial (instalação com aparelhos homologados)",
+          "qtd": 3,
+          "ticket": 1200,
+          "variavel": 0.6,
+          "anexo": "III"
+        },
+        {
+          "nome": "Automação rural (irrigação, caixa d'água, sensores)",
+          "qtd": 1,
+          "ticket": 2500,
+          "variavel": 0.62,
+          "anexo": "III"
+        },
+        {
+          "nome": "Oficinas e kits para escolas",
+          "qtd": 1,
+          "ticket": 3000,
+          "variavel": 0.5,
+          "anexo": "III"
+        }
+      ],
+      "alertas": [
+        "Roda dentro da Loja AMtech e do mesmo CNPJ: usa a bancada e o técnico dela. A mão de obra das instalações já está no custo variável (paga por serviço).",
+        "Produto próprio com Wi-Fi ou Bluetooth só depois da homologação na Anatel; o orçamento sai com um organismo certificador."
+      ]
+    },
+    {
+      "id": "entregas",
+      "nome": "AM Entregas (motofrete, carro e logística de marketplaces)",
+      "cluster": "B",
+      "doc": "05-logistica-e-entregas.md",
+      "rampa_meses": 10,
+      "rampa_inicio": 0.2,
+      "investimento": [
+        {
+          "item": "Abertura do CNPJ de logística e licenças",
+          "valor": 1800
+        },
+        {
+          "item": "Caução e 1º aluguel (sala de 25 m², base de despacho)",
+          "valor": 2400
+        },
+        {
+          "item": "Baús e bags com a marca (10 unidades, em comodato)",
+          "valor": 2500
+        },
+        {
+          "item": "Celular de despacho, impressora de etiquetas e móveis",
+          "valor": 2500
+        },
+        {
+          "item": "Lançamento: visitas comerciais, adesivos, panfletos",
+          "valor": 3000
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Sala de despacho",
+          "valor": 1200
+        },
+        {
+          "item": "Contador",
+          "valor": 500
+        },
+        {
+          "item": "Nuvem, mapas e WhatsApp Business API (AM Rotara)",
+          "valor": 450
+        },
+        {
+          "item": "Seguro de carga e responsabilidade civil",
+          "valor": 300
+        },
+        {
+          "item": "Telefone e internet",
+          "valor": 200
+        },
+        {
+          "item": "Marketing B2B",
+          "valor": 500
+        }
+      ],
+      "equipe": [
+        {
+          "cargo": "Despachante (turno de 8h às 17h)",
+          "salario": 2000,
+          "qtd": 1
+        }
+      ],
+      "fontes": [
+        {
+          "nome": "Entregas avulsas para empresas (farmácias, laboratórios, autopeças, cartórios)",
+          "qtd": 1200,
+          "ticket": 10,
+          "variavel": 0.7,
+          "anexo": "III"
+        },
+        {
+          "nome": "Mercado Envios Flex para vendedores locais",
+          "qtd": 900,
+          "ticket": 11,
+          "variavel": 0.56,
+          "anexo": "III"
+        },
+        {
+          "nome": "Coleta nos vendedores e entrega nas agências",
+          "qtd": 120,
+          "ticket": 35,
+          "variavel": 0.5,
+          "anexo": "III"
+        },
+        {
+          "nome": "Rotas fixas por contrato (carro, mensal)",
+          "qtd": 2,
+          "ticket": 2800,
+          "variavel": 0.72,
+          "anexo": "III"
+        }
+      ],
+      "alertas": [
+        "Entregadores MEI com rota, horário e uniforme impostos podem virar vínculo de emprego na Justiça do Trabalho. O contrato e a operação precisam ser desenhados com advogado."
+      ]
+    },
+    {
+      "id": "delivery",
+      "nome": "AM Delivery (app de pedidos de várias empresas)",
+      "cluster": "B",
+      "doc": "06-delivery-multiempresas.md",
+      "rampa_meses": 12,
+      "rampa_inicio": 0.1,
+      "investimento": [
+        {
+          "item": "Publicação nas lojas de apps (Apple e Google)",
+          "valor": 700
+        },
+        {
+          "item": "Cupons de lançamento para os primeiros clientes",
+          "valor": 8000
+        },
+        {
+          "item": "Equipe comercial de lançamento (2 meses de visitas)",
+          "valor": 4000
+        },
+        {
+          "item": "Material dos lojistas (displays, adesivos, QR code)",
+          "valor": 1500
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Nuvem, mapas, notificações e SMS",
+          "valor": 700
+        },
+        {
+          "item": "Marketing contínuo (anúncios, cupons, influenciadores locais)",
+          "valor": 2500
+        },
+        {
+          "item": "Contador (incremental, mesmo CNPJ da AM Entregas)",
+          "valor": 200
+        }
+      ],
+      "equipe": [
+        {
+          "cargo": "Suporte e despacho noturno (18h às 23h)",
+          "salario": 1800,
+          "qtd": 1
+        },
+        {
+          "cargo": "Comercial (cadastra e cuida dos lojistas)",
+          "salario": 2000,
+          "qtd": 1
+        }
+      ],
+      "fontes": [
+        {
+          "nome": "Comissão dos lojistas (8% do pedido; pagamento repassado à parte)",
+          "qtd": 3000,
+          "ticket": 4.4,
+          "variavel": 0.05,
+          "anexo": "III"
+        },
+        {
+          "nome": "Taxa de entrega paga pelo cliente",
+          "qtd": 3000,
+          "ticket": 7.5,
+          "variavel": 0.85,
+          "anexo": "III"
+        },
+        {
+          "nome": "Destaque pago no app (lojistas)",
+          "qtd": 15,
+          "ticket": 120,
+          "variavel": 0,
+          "anexo": "III"
+        }
+      ],
+      "alertas": [
+        "3.000 pedidos por mês exige cerca de 40 lojistas ativos. Concorre com o iFood (12% a 23% de comissão), que já tem os clientes: o plano começa pelos restaurantes do grupo e pelos lojistas que pagam caro no iFood."
+      ]
+    },
+    {
+      "id": "sushi",
+      "nome": "Sushi (delivery primeiro, balcão de retirada)",
+      "cluster": "C",
+      "doc": "07-sushi.md",
+      "rampa_meses": 6,
+      "investimento": [
+        {
+          "item": "Caução e 1º aluguel (40 a 50 m², R$ 2.200)",
+          "valor": 4400
+        },
+        {
+          "item": "Reforma da cozinha nas regras da RDC 216 (piso, azulejo, ralo sifonado, tela, pia de mãos)",
+          "valor": 18000
+        },
+        {
+          "item": "Exaustão e coifa",
+          "valor": 6000
+        },
+        {
+          "item": "Vitrine refrigerada de sushi",
+          "valor": 4500
+        },
+        {
+          "item": "Geladeira e freezer industriais",
+          "valor": 8000
+        },
+        {
+          "item": "Panela de arroz industrial, fritadeira e seladora",
+          "valor": 3900
+        },
+        {
+          "item": "Mesas de inox, facas e utensílios",
+          "valor": 5500
+        },
+        {
+          "item": "Ar-condicionado da área de manipulação",
+          "valor": 3000
+        },
+        {
+          "item": "Projeto, alvarás, bombeiros e vigilância sanitária",
+          "valor": 4000
+        },
+        {
+          "item": "Estoque inicial e embalagens",
+          "valor": 4000
+        },
+        {
+          "item": "Lançamento (fotos, anúncios, degustação)",
+          "valor": 4000
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Aluguel",
+          "valor": 2200
+        },
+        {
+          "item": "Energia (refrigeração 24 h)",
+          "valor": 1200
+        },
+        {
+          "item": "Gás e água",
+          "valor": 500
+        },
+        {
+          "item": "Internet",
+          "valor": 130
+        },
+        {
+          "item": "Contador (restaurante)",
+          "valor": 600
+        },
+        {
+          "item": "Controle de pragas, manutenção e análise da água",
+          "valor": 250
+        },
+        {
+          "item": "Marketing",
+          "valor": 1000
+        },
+        {
+          "item": "Uniformes, EPI e limpeza",
+          "valor": 300
+        },
+        {
+          "item": "Manutenção de equipamentos e reposição de utensílios",
+          "valor": 300
+        }
+      ],
+      "equipe": [
+        {
+          "cargo": "Sushiman auxiliar",
+          "salario": 2400,
+          "qtd": 1
+        },
+        {
+          "cargo": "Auxiliar de cozinha",
+          "salario": 1800,
+          "qtd": 2
+        },
+        {
+          "cargo": "Atendente e caixa",
+          "salario": 1800,
+          "qtd": 1
+        }
+      ],
+      "fontes": [
+        {
+          "nome": "Delivery próprio (app e WhatsApp, entrega AM Entregas)",
+          "qtd": 450,
+          "ticket": 90,
+          "variavel": 0.43,
+          "anexo": "I"
+        },
+        {
+          "nome": "iFood (plano Entrega: 23% + 3,2%)",
+          "qtd": 200,
+          "ticket": 95,
+          "variavel": 0.665,
+          "anexo": "I"
+        },
+        {
+          "nome": "Balcão e retirada",
+          "qtd": 120,
+          "ticket": 80,
+          "variavel": 0.39,
+          "anexo": "I"
+        },
+        {
+          "nome": "Festas e eventos (barca, sushiman em casa)",
+          "qtd": 3,
+          "ticket": 1200,
+          "variavel": 0.43,
+          "anexo": "I"
+        }
+      ],
+      "alertas": [
+        "O cenário conta com você como sushiman principal sem pró-labore. Se não puder estar lá de quarta a domingo à noite, some um sushiman de R$ 3.000 (custo de cerca de R$ 4.200)."
+      ]
+    },
+    {
+      "id": "cafeteria",
+      "nome": "Cafeteria (cafés especiais de Minas)",
+      "cluster": "C",
+      "doc": "08-cafeteria.md",
+      "rampa_meses": 6,
+      "investimento": [
+        {
+          "item": "Caução e 1º aluguel (30 a 40 m², R$ 2.000)",
+          "valor": 4000
+        },
+        {
+          "item": "Reforma e balcão",
+          "valor": 12000
+        },
+        {
+          "item": "Máquina de espresso 2 grupos (seminova) e moedor",
+          "valor": 23000
+        },
+        {
+          "item": "Filtro de água, liquidificador e utensílios",
+          "valor": 3300
+        },
+        {
+          "item": "Geladeira expositora e vitrine de doces",
+          "valor": 8500
+        },
+        {
+          "item": "Forno elétrico (pão de queijo e assados)",
+          "valor": 3500
+        },
+        {
+          "item": "Mesas e cadeiras (6 mesas)",
+          "valor": 5000
+        },
+        {
+          "item": "Licenças, bombeiros e vigilância sanitária",
+          "valor": 3500
+        },
+        {
+          "item": "Estoque inicial",
+          "valor": 2500
+        },
+        {
+          "item": "Lançamento",
+          "valor": 3000
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Aluguel",
+          "valor": 2000
+        },
+        {
+          "item": "Energia",
+          "valor": 700
+        },
+        {
+          "item": "Água e internet",
+          "valor": 280
+        },
+        {
+          "item": "Contador",
+          "valor": 550
+        },
+        {
+          "item": "Manutenção da máquina e controle de pragas",
+          "valor": 300
+        },
+        {
+          "item": "Marketing",
+          "valor": 600
+        },
+        {
+          "item": "Música ambiente (ECAD) e limpeza",
+          "valor": 350
+        }
+      ],
+      "equipe": [
+        {
+          "cargo": "Barista líder (encarregada)",
+          "salario": 2400,
+          "qtd": 1
+        },
+        {
+          "cargo": "Barista",
+          "salario": 2000,
+          "qtd": 1
+        },
+        {
+          "cargo": "Atendente",
+          "salario": 1800,
+          "qtd": 2
+        }
+      ],
+      "fontes": [
+        {
+          "nome": "Balcão e mesas (café + salgado ou doce)",
+          "qtd": 1500,
+          "ticket": 24,
+          "variavel": 0.355,
+          "anexo": "I"
+        },
+        {
+          "nome": "Delivery próprio",
+          "qtd": 250,
+          "ticket": 35,
+          "variavel": 0.39,
+          "anexo": "I"
+        },
+        {
+          "nome": "Coffee break para empresas e eventos",
+          "qtd": 4,
+          "ticket": 800,
+          "variavel": 0.48,
+          "anexo": "I"
+        },
+        {
+          "nome": "Café em grão e presentes (marca própria)",
+          "qtd": 120,
+          "ticket": 45,
+          "variavel": 0.57,
+          "anexo": "I"
+        }
+      ],
+      "alertas": [
+        "Dentro da padaria, a cafeteria dispensa aluguel, reforma, contador e boa parte da equipe: o investimento cai para cerca de R$ 30 mil."
+      ]
+    },
+    {
+      "id": "padaria",
+      "nome": "Padaria com café da manhã e almoço",
+      "cluster": "C",
+      "doc": "09-padaria-e-almoco.md",
+      "rampa_meses": 8,
+      "investimento": [
+        {
+          "item": "Caução e 1º aluguel (100 a 120 m², R$ 4.200)",
+          "valor": 8400
+        },
+        {
+          "item": "Reforma de cozinha, produção e salão",
+          "valor": 40000
+        },
+        {
+          "item": "Exaustão e coifa",
+          "valor": 12000
+        },
+        {
+          "item": "Forno turbo a gás e batedeira planetária",
+          "valor": 17500
+        },
+        {
+          "item": "Fogão industrial, mesas de inox e utensílios",
+          "valor": 13500
+        },
+        {
+          "item": "Freezers e geladeiras (massa congelada e cozinha)",
+          "valor": 12000
+        },
+        {
+          "item": "Vitrine refrigerada, estufa e balcão",
+          "valor": 14000
+        },
+        {
+          "item": "Balcão térmico de self-service e balança aferida",
+          "valor": 13800
+        },
+        {
+          "item": "Mesas e cadeiras (12 mesas)",
+          "valor": 9000
+        },
+        {
+          "item": "Dois caixas (PDV)",
+          "valor": 3000
+        },
+        {
+          "item": "Projeto, alvarás, bombeiros e vigilância sanitária",
+          "valor": 7000
+        },
+        {
+          "item": "Estoque inicial",
+          "valor": 8000
+        },
+        {
+          "item": "Lançamento",
+          "valor": 6000
+        }
+      ],
+      "fixos": [
+        {
+          "item": "Aluguel",
+          "valor": 4200
+        },
+        {
+          "item": "IPTU",
+          "valor": 250
+        },
+        {
+          "item": "Energia",
+          "valor": 2200
+        },
+        {
+          "item": "Gás",
+          "valor": 900
+        },
+        {
+          "item": "Água e internet",
+          "valor": 580
+        },
+        {
+          "item": "Contador",
+          "valor": 800
+        },
+        {
+          "item": "Controle de pragas e manutenção",
+          "valor": 400
+        },
+        {
+          "item": "Marketing",
+          "valor": 1200
+        },
+        {
+          "item": "ECAD, seguro e limpeza",
+          "valor": 750
+        },
+        {
+          "item": "Manutenção de equipamentos e reposição",
+          "valor": 600
+        }
+      ],
+      "equipe": [
+        {
+          "cargo": "Gerente da casa",
+          "salario": 3500,
+          "qtd": 1
+        },
+        {
+          "cargo": "Cozinheira",
+          "salario": 2300,
+          "qtd": 2
+        },
+        {
+          "cargo": "Auxiliar de cozinha",
+          "salario": 1800,
+          "qtd": 2
+        },
+        {
+          "cargo": "Padeiro-confeiteiro (finalização)",
+          "salario": 2200,
+          "qtd": 2
+        },
+        {
+          "cargo": "Balconista",
+          "salario": 1800,
+          "qtd": 3
+        },
+        {
+          "cargo": "Caixa",
+          "salario": 1800,
+          "qtd": 2
+        },
+        {
+          "cargo": "Auxiliar de limpeza",
+          "salario": 1700,
+          "qtd": 1
+        }
+      ],
+      "fontes": [
+        {
+          "nome": "Padaria de balcão (pães, pão de queijo, frios)",
+          "qtd": 6000,
+          "ticket": 14,
+          "variavel": 0.4,
+          "anexo": "I"
+        },
+        {
+          "nome": "Café da manhã mineiro (combo ou buffet)",
+          "qtd": 1000,
+          "ticket": 28,
+          "variavel": 0.36,
+          "anexo": "I"
+        },
+        {
+          "nome": "Almoço por quilo e prato executivo",
+          "qtd": 2200,
+          "ticket": 32,
+          "variavel": 0.44,
+          "anexo": "I"
+        },
+        {
+          "nome": "Marmitas e almoço para empresas",
+          "qtd": 800,
+          "ticket": 24,
+          "variavel": 0.48,
+          "anexo": "I"
+        },
+        {
+          "nome": "Encomendas (bolos, salgados de festa, coffee break)",
+          "qtd": 30,
+          "ticket": 250,
+          "variavel": 0.43,
+          "anexo": "I"
+        }
+      ],
+      "alertas": [
+        "Começa com massa congelada de fornecedor (padaria de finalização): dispensa masseira, modeladora, cilindro, câmara de fermentação e padeiro de madrugada. Produção própria vem depois, com o caixa da operação."
+      ]
+    }
+  ]
+}
