@@ -6,6 +6,7 @@ tipo: dashboard-diario
 # 📍 Você Está Aqui
 
 > **Primeira vez ou perdido?** Leia o [Guia do Iniciante](00-GUIA-DO-INICIANTE.md): o plano inteiro, em ordem e em palavras simples. Palavras difíceis: [Glossário](00-GLOSSARIO.md).
+> **O que fazer agora, item por item:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos**.
 
 *[← Voltar pro Início](00-INICIO.md)*
 

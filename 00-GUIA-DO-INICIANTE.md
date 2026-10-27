@@ -9,6 +9,8 @@ atualizado: 2026-10-26
 
 > **Para quem é este documento:** para você, lendo como se não soubesse nada do plano. Ele junta **estudo, setup, rendas, finanças, faculdades e certificações** num caminho só, com etapas numeradas. Cada palavra técnica tem explicação no [Glossário](00-GLOSSARIO.md).
 >
+> **Lista completa de itens:** este guia é o resumo. Todos os 391 itens (os 253 passos do setup, os 14 Passos de estudo, as trilhas, as rendas, as finanças, a faculdade e as certificações), cada um com código, “pronto quando” e ligações, estão no [Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md).
+>
 > **Como usar:** abra só este guia e o [Cartão "Você está aqui"](CARTAO-voce-esta-aqui.md). Faça a etapa atual, marque `[x]`, passe para a próxima. Os outros 100 arquivos do vault são **material de consulta**: você só abre quando uma etapa manda abrir.
 
 ---

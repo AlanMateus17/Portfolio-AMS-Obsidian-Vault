@@ -7,6 +7,8 @@ atualizado: 2026-10-26
 
 # 🖥️ O Setup Completo — Projeto e Planejamento
 
+> Todos os passos do setup estão no [Plano Mestre](../00-PLANO-MESTRE-PASSO-A-PASSO.md) com códigos `S-…`, distribuídos nas mesmas etapas do estudo.
+
 > **Em palavras simples:** "setup" é tudo o que você usa para trabalhar: o notebook, os programas, as contas, as automações e os sistemas que fazem o trabalho repetitivo por você. O seu setup foi planejado para **três coisas ao mesmo tempo**: estudar para ser dev sênior, produzir conteúdo e aulas, e **vender** (cursos, sites, serviços). Ele está documentado num repositório privado chamado **`dev-setup`**, com scripts que instalam e conferem tudo.
 >
 > **De onde veio este resumo:** da conversa "Arquitetura e ferramentas do setup" (até 24/10/2026). O `dev-setup` é privado e não pôde ser aberto nesta revisão; **ele é a fonte oficial** — quando os números divergirem, vale o repositório.

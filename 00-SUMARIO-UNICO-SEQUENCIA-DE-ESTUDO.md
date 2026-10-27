@@ -7,7 +7,7 @@ atualizado: 2026-10-26
 
 # 🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre
 
-> **Em palavras simples:** esta é a lista do que **estudar**, em ordem. São 14 Passos; cada um junta programação, matemática e inglês, e termina com um projeto real (o AM Kaixara é o primeiro). Você nunca escolhe o que estudar: é sempre o próximo Passo sem `[x]`. Palavras difíceis: [Glossário](00-GLOSSARIO.md). O caminho completo (estudo + setup + rendas): [Guia do Iniciante](00-GUIA-DO-INICIANTE.md).
+> **Em palavras simples:** esta é a lista do que **estudar**, em ordem. São 14 Passos; cada um junta programação, matemática e inglês, e termina com um projeto real (o AM Kaixara é o primeiro). Você nunca escolhe o que estudar: é sempre o próximo Passo sem `[x]`. Palavras difíceis: [Glossário](00-GLOSSARIO.md). O caminho completo (estudo + setup + rendas): [Guia do Iniciante](00-GUIA-DO-INICIANTE.md). Cada Passo aparece no [Plano Mestre](00-PLANO-MESTRE-PASSO-A-PASSO.md) com o código `E-P1` a `E-P14`, ligado aos passos do setup que ele destrava.
 
 ## 🗺️ Roadmap por fases (execução dos projetos)
 

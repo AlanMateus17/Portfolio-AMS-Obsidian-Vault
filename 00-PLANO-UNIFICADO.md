@@ -7,7 +7,7 @@ atualizado: 2026-10-26
 
 # 🎯 Plano Unificado AMS — O Mapa de Tudo
 
-> **Em palavras simples:** este é o **mapa** de tudo: o que você estuda, como ganha dinheiro, quais projetos tem e onde cada coisa está escrita. Ele não diz o que fazer hoje; quem diz é o [Guia do Iniciante](00-GUIA-DO-INICIANTE.md).
+> **Em palavras simples:** este é o **mapa** de tudo: o que você estuda, como ganha dinheiro, quais projetos tem e onde cada coisa está escrita. Ele não diz o que fazer hoje; quem diz é o [Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) (versão curta: [Guia do Iniciante](00-GUIA-DO-INICIANTE.md)).
 
 > **O que este documento é:** o mapa único dos **dois eixos** da sua vida de projeto — o que você **estuda** e como você **gera renda** — mais a lista de projetos/ativos e uma **tabela de cobertura** que prova que nada ficou de fora.
 > **O que ele NÃO é:** não reescreve nenhum documento. Cada área aponta pro doc que já existe no vault — todos preservados. Para o passo a passo diário de estudo, a porta continua sendo o [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md).
