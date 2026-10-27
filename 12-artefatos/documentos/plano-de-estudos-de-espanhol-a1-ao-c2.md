@@ -354,3 +354,16 @@ Estes 42 verbos concentram as irregularidades mais usadas. Decore as formas da 1
 | venir | vengo | vine / vino | venido | venga | vir |
 | ver | veo | vi / vio | visto | vea | ver |
 | volver | vuelvo | volví / volvió | vuelto | vuelva | voltar |
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
+- [Inglês e Espanhol — Integrados ao Desenvolvimento, Não Empilhados](../../07-estudo-e-carreira/ingles-espanhol-integrado.md)
+- [Como Estudar Inglês e Espanhol Corretamente — Método e Currículo Completo](../../07-estudo-e-carreira/metodo-correto-estudo-idiomas.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

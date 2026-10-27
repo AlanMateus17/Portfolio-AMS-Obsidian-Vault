@@ -91,3 +91,15 @@ Progressão de identidade: **usuário Linux → administrador → desenvolvedor 
 | Homelab físico | quando houver renda extra pra hardware |
 
 > **Padrão de toda a Camada D:** cada bloco termina em **laboratório + projeto + documentação + evidência**, igual aos sistemas Aura — nunca em "assisti a um curso".
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Trilha Linux/Arch Profissional](../12-artefatos/documentos/trilha-linux-arch-profissional.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -624,3 +624,16 @@ Estes 129 verbos cobrem quase todo o uso real. Decore as três formas juntas, em
 | win | won | won | vencer |
 | withdraw | withdrew | withdrawn | retirar, sacar |
 | write | wrote | written | escrever |
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
+- [Inglês e Espanhol — Integrados ao Desenvolvimento, Não Empilhados](../../07-estudo-e-carreira/ingles-espanhol-integrado.md)
+- [Como Estudar Inglês e Espanhol Corretamente — Método e Currículo Completo](../../07-estudo-e-carreira/metodo-correto-estudo-idiomas.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

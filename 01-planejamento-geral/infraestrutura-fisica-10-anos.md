@@ -156,3 +156,16 @@ Montar infraestrutura é divertido e vicia — mas infraestrutura não gera rend
 - [setup-ambiente-trabalho-final](../06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md) — a fatia de software desta arquitetura (Camada 4), já em execução no notebook atual
 - [estrutura-juridica-amtech](estrutura-juridica-amtech.md) — a gestão fiscal transversal citada na tabela de fases
 - [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — as frentes de renda que disparam cada camada sob demanda
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Bancada Maker Completa](../12-artefatos/paginas/bancada-maker-completa-1cb3/index.html) · página interativa · [sobre](../12-artefatos/paginas/bancada-maker-completa-1cb3/LEIA-ME.md)
+- [Casa Inteligente e Setup Automatizado](../12-artefatos/documentos/casa-inteligente-e-setup-automatizado.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

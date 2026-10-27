@@ -101,3 +101,19 @@ status: completo
 - [passo-a-passo-mestre-desde-o-inicio](../99-arquivo/passo-a-passo-mestre-desde-o-inicio.md) — o plano de execução que usa este inventário como ponto de partida
 - [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — o documento raiz que originou este inventário
 - [template-documento-projeto-final](template-documento-projeto-final.md) — a estrutura que todo item completo aqui segue
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Ecossistema AMtech (versão de 27/10)](../12-artefatos/paginas/ecossistema-amtech-4ze2/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-4ze2/LEIA-ME.md)
+- [Ecossistema AMtech (versão de 21/10)](../12-artefatos/paginas/ecossistema-amtech-lf3a/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-lf3a/LEIA-ME.md)
+- [Simulação de isolamento multi-tenant](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/index.html) · página interativa · [sobre](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/LEIA-ME.md)
+- [Checklist de completude — os 4 sistemas](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/index.html) · página interativa · [sobre](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/LEIA-ME.md)
+- [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

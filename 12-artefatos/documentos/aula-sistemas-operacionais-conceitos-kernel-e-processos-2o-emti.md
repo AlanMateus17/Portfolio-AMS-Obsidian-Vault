@@ -116,3 +116,13 @@ Desenhe 4 caixas empilhadas, de cima para baixo: **Usuário → Aplicativos → 
 16. O que é escalonamento? E multitarefa?
 17. Como ver os processos no Windows? E no Linux?
 18. **Desafio:** O computador mostrou a tela azul. Usando os Blocos D e E, explique em qual modo o erro aconteceu e por que o sistema inteiro parou, e não só um programa.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

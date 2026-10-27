@@ -76,3 +76,13 @@ Anote embaixo: "Os códigos mudam de fabricante para fabricante. Sempre confira 
 11. Escreva, na ordem, os 5 passos do método de diagnóstico.
 12. Por que é importante consultar o manual da placa-mãe ao ouvir os bipes?
 13. **Desafio:** Um cliente diz: "Meu PC liga, faz barulho de ventoinha, dá 1 bipe longo e 3 curtos e a tela fica preta." Descreva o que você testaria e em que ordem.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

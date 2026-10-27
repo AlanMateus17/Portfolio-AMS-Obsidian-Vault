@@ -1,6 +1,6 @@
 # 📚 Portfólio AMS — Vault de Planejamento
 
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — 84 documentos, páginas e projetos copiados
+> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
 
 Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech Digital). Navegue clicando abaixo.
 
@@ -121,7 +121,11 @@ Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech 
 ---
 > 🖥️ A pasta `11-setup-dev-setup/` é o repositório dev-setup inteiro: comece pelo [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
 >
-> 🗂️ A pasta `12-artefatos/` tem o conteúdo de todos os artefatos do claude.ai: comece pelo [índice dos artefatos](12-artefatos/00-INDICE-DOS-ARTEFATOS.md).
+> 🗂️ A pasta `12-artefatos/` tem o conteúdo de todos os 85 artefatos do claude.ai: comece pelo [índice dos artefatos](12-artefatos/00-INDICE-DOS-ARTEFATOS.md). O [mapa de conexões](12-artefatos/01-MAPA-DE-CONEXOES.md) mostra em que parte do plano cada artefato entra.
+>
+> 🏫 Aulas, listas, gabaritos e o projeto ByteSDCoin estão reunidos em [Trabalho na escola (EMTI)](01-planejamento-geral/docencia-escola-emti.md).
+>
+> 🧠 A pasta `13-memoria-do-claude/` é uma cópia do que o Claude anotou sobre seus planos e decisões: [o que está lá](13-memoria-do-claude/00-LEIA-ME.md).
 
-> 🗄️ A pasta `99-arquivo/` guarda versões antigas já substituídas.
+> 🗄️ A pasta `99-arquivo/` guarda [versões antigas já substituídas](99-arquivo/00-LEIA-ME.md), os [pacotes originais que você enviou](99-arquivo/versoes-anteriores/LEIA-ME.md) e as [conversas guardadas](99-arquivo/conversas/LEIA-ME.md).
 

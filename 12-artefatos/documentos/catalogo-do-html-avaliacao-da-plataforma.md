@@ -154,3 +154,15 @@ Vender antes de enfeitar: primeiro o que bloqueia o lançamento, depois o que me
 - [ ] Testar o Bunny com conta real e gravar os vídeos do módulo 1
 - [ ] SEO e sitemap no site público
 - [ ] E-mails automáticos e painel de métricas
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💰 Todas as Fontes de Renda — O Catálogo Completo](../../01-planejamento-geral/fontes-de-renda-completas.md)
+- [O que fazer agora — Ação imediata no portfólio](../../01-planejamento-geral/acao-imediata-portfolio.md)
+- [AM Saberia — Documento de Projeto Final (Nome provisório)](../../02-sistemas-de-negocio/saberia-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

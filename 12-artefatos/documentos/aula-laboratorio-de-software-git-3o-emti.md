@@ -68,3 +68,13 @@ Desenhe 3 caixas lado a lado com setas: Trabalho → (git add) → Staging → (
 10. Escreva os comandos, na ordem, para: criar o repositório, adicionar o arquivo index.html, salvar uma versão com a mensagem "Primeira versão do site" e enviar para o GitHub.
 11. Qual das mensagens de commit é melhor? Justifique: (a) "mudanças" (b) "Corrige cor do botão de login".
 12. **Desafio:** Um colega editou o arquivo style.css e digitou git commit -m "ajusta cores", mas o arquivo não entrou no commit. O que ele esqueceu de fazer?
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

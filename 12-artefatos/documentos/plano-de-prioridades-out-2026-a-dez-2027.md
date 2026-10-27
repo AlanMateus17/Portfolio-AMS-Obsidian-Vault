@@ -129,3 +129,16 @@ Nada aqui foi cancelado; só não recebe tempo até 2028 ou até o gatilho indic
 - **Duas metas de renda diferentes.** O replanejamento fala em R$ 7 mil líquidos/mês; os planos de infoprodutos e do Catálogo falam em R$ 10 mil. Este plano usa R$ 7 mil como meta de 2027.
 - **Concurso PF/PRF e TAF ficaram de fora desta lista.** Antes eram "extra" com tempo reduzido. Decida se congelam de vez ou se mantêm um mínimo — nesta agenda, não sobra espaço para os dois além do que está aqui.
 - **As janelas são estimativas.** Ao fim de cada fase, compare com o tempo real registrado e empurre as datas, não o foco.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🧭 Plano Mestre — tudo em um só passo a passo](../../00-PLANO-MESTRE-PASSO-A-PASSO.md)
+- [🎯 Plano Unificado AMS — O Mapa de Tudo](../../00-PLANO-UNIFICADO.md)
+- [Plano Mestre — Frentes de Estudo, Negócio e Renda](../../01-planejamento-geral/plano-mestre-frentes-alan.md)
+- [Status de Planejamento do Portfólio — o que já existe, o que falta, e o que se reaproveita de onde](../../01-planejamento-geral/status-planejamento-portfolio.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

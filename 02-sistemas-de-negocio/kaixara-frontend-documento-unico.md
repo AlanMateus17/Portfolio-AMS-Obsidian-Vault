@@ -522,3 +522,24 @@ O frontend do AM Kaixara está pronto pra apresentação quando, e só quando:
 Substitui a necessidade de navegar entre 5 documentos separados — o raciocínio é linear, do problema até o lançamento, com as correções dentro do fluxo principal, cobrindo agora as **11 etapas completas**, cada uma com checklist de execução próprio, fechando com o Definition of Done acima.
 
 **Pendência real que nenhum checklist substitui:** a validação de persona com gente real (1.5/checklist da Etapa 1) — é o único item que depende de sair do documento e conversar com alguém de verdade antes de tratar o sistema como "descentemente" fundamentado, não só bem planejado no papel.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+**Design e tema**
+
+- [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
+- [Portfólio — 3 direções visuais](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/LEIA-ME.md)
+
+**AM Kaixara**
+
+- [AM Kaixara](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
+- [AM Kaixara — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
+- [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

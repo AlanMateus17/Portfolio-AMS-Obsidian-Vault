@@ -385,3 +385,16 @@ Tudo o que foi decidido na conversa está neste documento ou na planilha. Não h
 | Planilha\_Cascata.xlsx | O produto à venda: versão genérica para o Google Sheets, com diagnóstico, orçamento, dívidas, reserva e 4 classes | Publicar uma vez; atualizar só quando melhorar o produto |
 | Planilha Cascata — Lançamento | Oferta, página de vendas, como publicar, cronograma da pré-venda, números de validação | Durante os 14 dias de lançamento |
 | Agenda do celular | Compromissos com horário: escola, restaurante, reuniões, blocos fixos | Todo dia, com lembrete |
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🧭 Plano Mestre — tudo em um só passo a passo](../../00-PLANO-MESTRE-PASSO-A-PASSO.md)
+- [🎯 Plano Unificado AMS — O Mapa de Tudo](../../00-PLANO-UNIFICADO.md)
+- [Plano Mestre — Frentes de Estudo, Negócio e Renda](../../01-planejamento-geral/plano-mestre-frentes-alan.md)
+- [Status de Planejamento do Portfólio — o que já existe, o que falta, e o que se reaproveita de onde](../../01-planejamento-geral/status-planejamento-portfolio.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -76,3 +76,13 @@ Respostas de acordo com os Blocos D, E, F e G da aula de Banco de Dados. As resp
 - Aceite true/false escrito como TRUE/FALSE, 1/0 ou verdadeiro/falso.
 - Datas: cobre o formato ano-mês-dia, que é o formato do tipo DATE. Se o aluno escrever dia/mês/ano, aponte o erro.
 - Escola: o nome também poderia ser único, mas o código é a melhor chave primária porque é um número que não muda.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

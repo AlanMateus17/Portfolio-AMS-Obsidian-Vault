@@ -178,3 +178,16 @@ Qualquer sistema que seguir essa nomenclatura de variável herda automaticamente
 ## Nota final sobre "perfeição"
 
 Estes 7 requisitos reduzem o risco de qualidade de experiência a próximo de zero, mas não eliminam a necessidade de disciplina contínua — o RNFT-D06 e o D07 são processo, não configuração que se define uma vez e esquece. A garantia real não vem de nenhum requisito isolado, vem do conjunto sendo seguido em todo sistema novo, desde a primeira tela.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
+- [Portfólio — 3 direções visuais](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

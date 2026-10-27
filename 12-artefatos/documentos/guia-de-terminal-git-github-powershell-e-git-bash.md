@@ -605,3 +605,19 @@ Os comandos mais usados, organizados pela pergunta que você está fazendo no mo
 | Sair de uma tela do Git | `q` |
 
 **Três hábitos que evitam a maioria dos problemas:** rodar `git status` antes de qualquer comando; `git pull` antes de começar a trabalhar; commits pequenos, com um assunto cada.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🖥️ O Setup Completo — Projeto e Planejamento](../../01-planejamento-geral/setup-completo-dev-setup.md)
+- [Setup do Ambiente de Trabalho — Versão Final Consolidada](../../06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md)
+- [🖥️ Setup completo (dev-setup) dentro do vault](../../11-setup-dev-setup/00-INDICE-DO-SETUP.md)
+- [Passo a Passo Mestre — Portfólio para Vaga Júnior](../../06-execucao-e-desenvolvimento/passo-a-passo-portfolio-vaga-junior.md)
+- [🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas](../../07-estudo-e-carreira/curriculo-dev-senior-completo.md)
+- [Perfil de Desenvolvedor Sênior Completo — Auditoria Contra o Que Já Existe](../../07-estudo-e-carreira/perfil-senior-completo-auditoria.md)
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

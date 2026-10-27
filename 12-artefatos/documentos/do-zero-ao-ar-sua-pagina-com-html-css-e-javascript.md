@@ -475,3 +475,13 @@ Cada linha desta tabela tem um painel **Ver código** com o código pronto, ao l
 | Carrossel | seção 10, exemplo 19 | 16 | PARTE 19 |
 | Botão de voltar ao topo | fim do `body` | 18 | PARTE 5 |
 | Rodapé com ano automático | `footer` | 19 | PARTE 30 |
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

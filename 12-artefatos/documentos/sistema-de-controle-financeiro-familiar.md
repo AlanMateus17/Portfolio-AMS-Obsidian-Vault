@@ -259,3 +259,15 @@ O MVP é o que já gera valor com uma nota por semana: ler o PDF da SEF-MG, clas
 - [ ] Quem mais da família vai usar e lançar notas (acesso por pessoa ou um só operador)?
 - [ ] Categorias: começar com uma árvore própria ou espelhar os grupos do IPCA para facilitar a comparação?
 - [ ] Módulo dentro do AM Rendara ou ferramenta pessoal com prefixo aura- antes de virar produto?
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Rendara — Documento de Projeto Final](../../02-sistemas-de-negocio/rendara-documento-projeto-final.md)
+- [💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico](../../07-estudo-e-carreira/trilha-financas-economia.md)
+- [🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata](../../07-estudo-e-carreira/formacao-academica.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

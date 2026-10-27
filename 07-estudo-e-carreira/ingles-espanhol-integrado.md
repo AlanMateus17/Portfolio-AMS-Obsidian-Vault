@@ -87,3 +87,16 @@ Diferente das outras trilhas (matemática, pentest), essa é a que **menos exige
 - [metodo-correto-estudo-idiomas](metodo-correto-estudo-idiomas.md) — o método de estudo (ciência de aquisição de idioma) e o currículo detalhado por nível
 - [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — Inglês Fase A/B nos Blocos 1 e 4; Espanhol a partir do Bloco 13
 - [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — documentação oficial da 42 e enunciado de projeto costumam estar em inglês; reforço de leitura técnica
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Plano de Estudos de Inglês — 6º ano ao 3º EM](../12-artefatos/documentos/plano-de-estudos-de-ingles-6o-ano-ao-3o-em.md)
+- [Plano de Estudos de Espanhol — A1 ao C2](../12-artefatos/documentos/plano-de-estudos-de-espanhol-a1-ao-c2.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

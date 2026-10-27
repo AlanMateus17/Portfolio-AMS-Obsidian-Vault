@@ -242,3 +242,14 @@ Antes de comprar, confirme estes pontos:
 Este documento aplica regras de métodos de investimento a dados públicos. Não é recomendação de compra ou venda.
 
 Todos os dados, fontes, datas e o passo a passo de cada conta: Dados e cálculos
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico](../../../07-estudo-e-carreira/trilha-financas-economia.md)
+- [🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata](../../../07-estudo-e-carreira/formacao-academica.md)
+
+🗂️ Voltar ao [índice dos artefatos](../../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -297,3 +297,15 @@ São oito fases, construídas em várias sessões. Cada fase termina publicada n
 - [ ] A divisão da casa usa a renda real do mês (proposta) ou um valor combinado entre vocês?
 - [ ] Aceitar que, por enquanto, o sistema atende só a sua família (artefato), deixando o SaaS para depois?
 - [ ] Combinar com a Claudia que, na troca, ela abre o sistema uma vez para converter os dados dela.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Rendara — Documento de Projeto Final](../../02-sistemas-de-negocio/rendara-documento-projeto-final.md)
+- [💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico](../../07-estudo-e-carreira/trilha-financas-economia.md)
+- [🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata](../../07-estudo-e-carreira/formacao-academica.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

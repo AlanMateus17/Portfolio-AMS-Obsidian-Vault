@@ -244,3 +244,24 @@ Os números de cada negócio (investimento, custos fixos, equipe, receita-alvo, 
 - Divisão planejada para dez/2027: aulas particulares R$ 2.800 · sites com manutenção R$ 1.500 (cresce todo mês) · infoprodutos R$ 500+.
 
 🔗 Setup que sustenta tudo isso: [setup-completo-dev-setup](setup-completo-dev-setup.md) · Plano geral: [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md) · Passo a passo: [00-GUIA-DO-INICIANTE](../00-GUIA-DO-INICIANTE.md)
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
+- [Planilha Cascata — Lançamento](../12-artefatos/documentos/planilha-cascata-lancamento.md)
+- [Plano comercial — venda da plataforma](../12-artefatos/documentos/plano-comercial-venda-da-plataforma.md)
+- [Catálogo do HTML](../12-artefatos/paginas/catalogo-do-html-gqyu/index.html) · página interativa · [sobre](../12-artefatos/paginas/catalogo-do-html-gqyu/LEIA-ME.md)
+- [Catálogo do HTML — Avaliação da plataforma](../12-artefatos/documentos/catalogo-do-html-avaliacao-da-plataforma.md)
+- [12 Projetos da Formação — especificações](../12-artefatos/documentos/12-projetos-da-formacao-especificacoes.md)
+- [Professores parceiros — o que falta para atender qualquer área](../12-artefatos/documentos/professores-parceiros-o-que-falta-para-atender-qualquer-area.md)
+- [Plataforma de cursos — Especificação funcional v1](../12-artefatos/documentos/plataforma-de-cursos-especificacao-funcional-v1.md)
+- [Planejador do Grupo](../12-artefatos/paginas/planejador-do-grupo-wvwo/index.html) · página interativa · [sobre](../12-artefatos/paginas/planejador-do-grupo-wvwo/LEIA-ME.md)
+- [Plataforma financeira, contábil e tributária: análise completa](../12-artefatos/documentos/plataforma-financeira-contabil-e-tributaria-analise-completa.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

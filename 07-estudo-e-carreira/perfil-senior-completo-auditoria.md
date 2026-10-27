@@ -95,3 +95,18 @@ Kubernetes e Kafka ficam deliberadamente como "só se a necessidade real aparece
 ## Honestidade final
 
 Isso confirma algo importante: você não está tão atrás quanto a sensação de "quero ser perfeito" faz parecer. A maior parte do que separa um perfil júnior de um sênior de verdade — pensar em decisão de arquitetura com trade-off, documentar o porquê, entender regulação do domínio — **você já está fazendo**, só nunca tinha sido nomeado dessa forma. O que falta é pontual, não é recomeçar nada.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
+- [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
+- [12 Projetos da Formação — especificações](../12-artefatos/documentos/12-projetos-da-formacao-especificacoes.md)
+- [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -111,3 +111,21 @@ Cada camada tem o diagrama dela e diz, bloco por bloco, em que passo do roteiro 
 | `tools/` | Os geradores dos documentos, o acervo, o pipeline de conteúdo, o planejador financeiro e o Plano Mestre, cada um com testes |
 | `ferramentas/` | Cópias das páginas Lucro por Venda e Plano Mestre, que não saem dos geradores |
 | `.github/workflows/` | Os testes automáticos. Dentro do vault eles não rodam sozinhos: só rodam quando o `dev-setup` está no próprio repositório dele |
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Fluxogramas do Setup](../12-artefatos/paginas/fluxogramas-do-setup-vbdz/index.html) · página interativa · [sobre](../12-artefatos/paginas/fluxogramas-do-setup-vbdz/LEIA-ME.md)
+- [Mapa do Setup AMtech](../12-artefatos/paginas/mapa-do-setup-amtech-btuy/index.html) · página interativa · [sobre](../12-artefatos/paginas/mapa-do-setup-amtech-btuy/LEIA-ME.md)
+- [Implantação AMtech](../12-artefatos/paginas/implantacao-amtech-cj27/index.html) · página interativa · [sobre](../12-artefatos/paginas/implantacao-amtech-cj27/LEIA-ME.md)
+- [Repositório dev-setup (versão de 23/10)](../12-artefatos/paginas/repositorio-dev-setup-k9wt/index.html) · página interativa · [sobre](../12-artefatos/paginas/repositorio-dev-setup-k9wt/LEIA-ME.md)
+- [Repositório dev-setup (versão de 21/10)](../12-artefatos/paginas/repositorio-dev-setup-ria4/index.html) · página interativa · [sobre](../12-artefatos/paginas/repositorio-dev-setup-ria4/LEIA-ME.md)
+- [Casa Inteligente e Setup Automatizado](../12-artefatos/documentos/casa-inteligente-e-setup-automatizado.md)
+- [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -422,3 +422,13 @@ fimalgoritmo
 | 4 | 0 | 0,00 | — | Nenhum item comprado |
 
 **Para o professor:** aceite `escolha ... caso` no lugar dos `se` do preço, ou `enquanto` no lugar de `repita`, desde que o código 0 encerre sem pedir quantidade.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

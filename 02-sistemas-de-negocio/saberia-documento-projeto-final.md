@@ -158,3 +158,21 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 2. **Provedor de videoaula síncrona** — solução própria vs. integração com Zoom/Google Meet, ainda não decidido.
 3. **Prazo formal de retenção de histórico acadêmico** — precisa de definição mais precisa que "muito longo prazo".
 4. **Provedor de gateway de pagamento** — mesma pendência transversal do restante do portfólio.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Plataforma de cursos — Especificação funcional v1](../12-artefatos/documentos/plataforma-de-cursos-especificacao-funcional-v1.md)
+- [Plataforma de cursos — Stack profissional](../12-artefatos/documentos/plataforma-de-cursos-stack-profissional.md)
+- [Plano comercial — venda da plataforma](../12-artefatos/documentos/plano-comercial-venda-da-plataforma.md)
+- [Professores parceiros — o que falta para atender qualquer área](../12-artefatos/documentos/professores-parceiros-o-que-falta-para-atender-qualquer-area.md)
+- [Catálogo do HTML](../12-artefatos/paginas/catalogo-do-html-gqyu/index.html) · página interativa · [sobre](../12-artefatos/paginas/catalogo-do-html-gqyu/LEIA-ME.md)
+- [Catálogo do HTML — Avaliação da plataforma](../12-artefatos/documentos/catalogo-do-html-avaliacao-da-plataforma.md)
+- [12 Projetos da Formação — especificações](../12-artefatos/documentos/12-projetos-da-formacao-especificacoes.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

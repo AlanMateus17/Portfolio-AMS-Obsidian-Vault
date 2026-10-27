@@ -167,3 +167,13 @@ Este desafio junta os três níveis: sequência, decisão e repetição. Desenhe
 - [ ] Declarei todas as variáveis em `var` com o tipo certo (inteiro, real, caractere)
 - [ ] O teste de mesa deu o mesmo resultado que o programa no VisuAlg
 - [ ] Testei os valores de limite (ex.: exatamente 6, exatamente 100, exatamente 18)
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

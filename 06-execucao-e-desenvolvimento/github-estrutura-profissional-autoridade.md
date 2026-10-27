@@ -126,3 +126,29 @@ Isso é o que dá autoridade de verdade, mais do que qualquer configuração de 
 3. Publicar `aura-docs` via GitHub Pages — pode ser feito com o material que já existe, sem esperar mais nenhum sistema avançar
 4. A partir da próxima decisão real tomada (ex: gateway de pagamento), já registrar como ADR — hábito novo, começa no próximo, não precisa retroagir todas as pendências antigas de uma vez
 5. GitHub Project só quando o EPIC-01 estiver ativo — não vale montar quadro Kanban antes de ter tarefa rodando nele
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Alan Mateus — Blog (prévia)](../12-artefatos/paginas/alan-mateus-blog-previa-udiv/index.html) · página interativa · [sobre](../12-artefatos/paginas/alan-mateus-blog-previa-udiv/LEIA-ME.md)
+- [Blog — prévia v2](../12-artefatos/paginas/blog-previa-v2-dyfc/index.html) · página interativa · [sobre](../12-artefatos/paginas/blog-previa-v2-dyfc/LEIA-ME.md)
+- [Alan Mateus — Blueprint (v2)](../12-artefatos/paginas/alan-mateus-blueprint-v2-y6in/index.html) · página interativa · [sobre](../12-artefatos/paginas/alan-mateus-blueprint-v2-y6in/LEIA-ME.md)
+- [Alan Mateus — Blueprint v2](../12-artefatos/paginas/alan-mateus-blueprint-v2-948m/index.html) · página interativa · [sobre](../12-artefatos/paginas/alan-mateus-blueprint-v2-948m/LEIA-ME.md)
+- [Alan Mateus — Portfólio (prévia)](../12-artefatos/paginas/alan-mateus-portfolio-previa-x1r2/index.html) · página interativa · [sobre](../12-artefatos/paginas/alan-mateus-portfolio-previa-x1r2/LEIA-ME.md)
+- [Portfólio — prévia v2](../12-artefatos/paginas/portfolio-previa-v2-ufua/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-previa-v2-ufua/LEIA-ME.md)
+- [Portfólio — 3 direções visuais](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/LEIA-ME.md)
+- [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
+- [Grupo AMtech Digital — prévia](../12-artefatos/paginas/grupo-amtech-digital-previa-luby/index.html) · página interativa · [sobre](../12-artefatos/paginas/grupo-amtech-digital-previa-luby/LEIA-ME.md)
+- [Ecossistema de Sites — Grupo AMtech Digital](../12-artefatos/paginas/ecossistema-de-sites-grupo-amtech-digital-ued6/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-de-sites-grupo-amtech-digital-ued6/LEIA-ME.md)
+- [Estrutura final — os 4 sites do ecossistema AMtech](../12-artefatos/paginas/estrutura-final-os-4-sites-do-ecossistema-amtech-kdpj/index.html) · página interativa · [sobre](../12-artefatos/paginas/estrutura-final-os-4-sites-do-ecossistema-amtech-kdpj/LEIA-ME.md)
+- [RF/RNF expandido — os 4 sites](../12-artefatos/paginas/rf-rnf-expandido-os-4-sites-xzd5/index.html) · página interativa · [sobre](../12-artefatos/paginas/rf-rnf-expandido-os-4-sites-xzd5/LEIA-ME.md)
+- [Checklist de completude — os 4 sistemas](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/index.html) · página interativa · [sobre](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/LEIA-ME.md)
+- [Sugestões de template — alanmateus17.github.io (Design)](../12-artefatos/tipados/sugestoes-de-template-alanmateus17-github-io) · projeto (design/painel) · [sobre](../12-artefatos/tipados/sugestoes-de-template-alanmateus17-github-io/LEIA-ME.md)
+- [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

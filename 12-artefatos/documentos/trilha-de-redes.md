@@ -106,3 +106,15 @@ Fechar o ciclo aplicando tudo no que você já constrói.
 - **Rede de aplicações:** configuro rede de containers Docker e proxy reverso com HTTPS para deploy seguro.
 
 **Onde encaixa:** esta trilha é pré-requisito da Fase S2 (segurança) e da Fase 8 (homelab) da Trilha Linux. Faça-a cedo; ela destrava as outras duas.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
+- [🌐 Trilha de Redes](../../07-estudo-e-carreira/trilha-de-redes.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

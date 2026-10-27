@@ -239,3 +239,14 @@ Encontrei estas diferenças entre fontes ao revisar. Nenhuma delas muda quem pas
 | Banestes (BEES3) | Preço | R$ 10,00 (SI) | R$ 10,15 (DM, 23/10) |
 | CEB (CEBR6) | Preço | R$ 26,00 (SI) | R$ 28,40 (DM, 07/10) |
 | Wiz (WIZC3) | Lucro usado no crescimento | Lucro consolidado (DM) | O lucro dos controladores é menor (R$ 53,6 mi no 2T26 contra R$ 101 mi consolidado ajustado). Não muda nada: a Wiz para no qualitativo |
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico](../../../07-estudo-e-carreira/trilha-financas-economia.md)
+- [🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata](../../../07-estudo-e-carreira/formacao-academica.md)
+
+🗂️ Voltar ao [índice dos artefatos](../../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

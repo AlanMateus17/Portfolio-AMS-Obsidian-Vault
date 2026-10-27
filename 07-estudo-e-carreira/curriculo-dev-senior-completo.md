@@ -407,3 +407,18 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Entrevista | *System Design Interview* (Alex Xu) |
 
 Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, ASP.NET Core, React, PostgreSQL, Docker, System Design e Software Architect ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
+- [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
+- [12 Projetos da Formação — especificações](../12-artefatos/documentos/12-projetos-da-formacao-especificacoes.md)
+- [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

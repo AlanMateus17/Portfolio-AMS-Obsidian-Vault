@@ -348,3 +348,15 @@ Este roadmap (os 6 níveis acima) roda entrelaçado com [trilha-linux-arch-profi
 - Depois: Windows/Active Directory → baixo nível/exploit → metodologia e relatório
 
 **Regra de ouro:** nunca abrir uma fase de segurança sem o gate de Linux fechado. Só teste o que é seu ou o que você tem autorização por escrito para testar (Lei 12.737/2012).
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Trilha de Cibersegurança e Pentest](../12-artefatos/documentos/trilha-de-ciberseguranca-e-pentest.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

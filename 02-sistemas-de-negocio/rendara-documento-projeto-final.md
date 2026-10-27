@@ -186,3 +186,25 @@ Mesmo padrão do restante do ecossistema — Dockerfile multi-stage, `docker-com
 7. **RF/RNF formal do `aura-goals`** — reforçado agora pela seção 2.7: ele está no caminho crítico do AM Rendara e do Momentos/Cupido ao mesmo tempo, não é mais só uma pendência de baixa prioridade.
 8. **Padronizar `FonteReceitaAM Consertta` e `FonteReceitaAuraVet`** — precisam ser especificadas formalmente quando esses dois sistemas avançarem além do estágio atual de planejamento, seguindo o mesmo contrato de interface do `FonteReceitaAM Kaixara`.
 9. **Regra de visibilidade da meta compartilhada** (seção 2.7) — precisa ficar claro para o usuário, na interface, que só a meta atravessa os dois sistemas, nunca o extrato — isso é tanto decisão de produto quanto de confiança do usuário, vale validar com ele antes de formalizar o RF.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [AM Rendara — Especificação do MVP](../12-artefatos/documentos/am-rendara-especificacao-do-mvp.md)
+- [AM Rendara — Módulo Família: plano do sistema de controle de gastos](../12-artefatos/documentos/am-rendara-modulo-familia-plano-do-sistema-de-controle-de-gastos.md)
+- [Sistema de Controle Financeiro Familiar](../12-artefatos/documentos/sistema-de-controle-financeiro-familiar.md)
+- [Plataforma financeira, contábil e tributária: análise completa](../12-artefatos/documentos/plataforma-financeira-contabil-e-tributaria-analise-completa.md)
+- [Caixa da Casa](../12-artefatos/paginas/caixa-da-casa-4fjg/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-4fjg/LEIA-ME.md)
+- [Caixa da Casa – teste](../12-artefatos/paginas/caixa-da-casa-teste-yud3/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-teste-yud3/LEIA-ME.md)
+- [Caixa da Casa 2 (versão de 17/10) · cópia 5hzp](../12-artefatos/paginas/caixa-da-casa-2-5hzp/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-2-5hzp/LEIA-ME.md)
+- [Caixa da Casa 2 (versão de 17/10) · cópia t7mj](../12-artefatos/paginas/caixa-da-casa-2-t7mj/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-2-t7mj/LEIA-ME.md)
+- [Caixa da Casa 2 — plano do sistema completo](../12-artefatos/documentos/caixa-da-casa-2-plano-do-sistema-completo.md)
+- [Caixa da Casa 2 — auditoria final para produção](../12-artefatos/documentos/caixa-da-casa-2-auditoria-final-para-producao.md)
+- [Auditoria do Caixa da Casa (v35)](../12-artefatos/documentos/auditoria-do-caixa-da-casa-v35.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

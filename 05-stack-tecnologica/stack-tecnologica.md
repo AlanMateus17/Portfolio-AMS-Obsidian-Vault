@@ -90,3 +90,19 @@ Bun, Hono, Rust, Tauri, gRPC — nenhuma exceção nos 21 documentos.
 
 ## 🔗 Relacionados
 - [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md) · [inventario-portfolio-atualizado](../01-planejamento-geral/inventario-portfolio-atualizado.md) · [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [AM Kaixara](../02-sistemas-de-negocio/kaixara-documento-projeto-final.md)
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Ecossistema AMtech (versão de 27/10)](../12-artefatos/paginas/ecossistema-amtech-4ze2/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-4ze2/LEIA-ME.md)
+- [Ecossistema AMtech (versão de 21/10)](../12-artefatos/paginas/ecossistema-amtech-lf3a/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-lf3a/LEIA-ME.md)
+- [Simulação de isolamento multi-tenant](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/index.html) · página interativa · [sobre](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/LEIA-ME.md)
+- [Checklist de completude — os 4 sistemas](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/index.html) · página interativa · [sobre](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/LEIA-ME.md)
+- [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

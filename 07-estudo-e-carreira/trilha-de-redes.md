@@ -74,3 +74,15 @@ Amarra tudo: o que acontece do Enter até a página carregar. Saber contar isso 
 - Practical Networking; Professor Messer (trilha Network+)
 - Wireshark com capturas próprias
 - Certificação opcional: CompTIA Network+ (confira preço e formato atuais)
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Trilha de Redes](../12-artefatos/documentos/trilha-de-redes.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -201,3 +201,14 @@ O fluxograma de referência está logo abaixo.
 Cada empresa passa por no máximo quatro decisões e volta ao laço; o laço termina quando não há mais empresas, e então os contadores são mostrados.
 
 Fontes dos dividendos: [Status Invest](https://statusinvest.com.br/acoes/taee11), [Visno](https://visnoinvest.com.br/stocks/ITUB4/dividends), [Suno](https://www.suno.com.br/noticias/bancos-ou-eletricas-qual-setor-paga-mais-dividendos-mt/), [Meus Dividendos](https://www.meusdividendos.com/acao/BBSE3) e [Investidor10](https://investidor10.com.br/acoes/cple3/). As fontes divergem em alguns valores; para a aula, vale o que está na tabela de dados.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico](../../07-estudo-e-carreira/trilha-financas-economia.md)
+- [🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata](../../07-estudo-e-carreira/formacao-academica.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -208,3 +208,13 @@ O maior risco não é técnico: é a família parar de lançar os gastos. Um sis
 - **Rateio por renda pode gerar atrito** se a regra não for combinada antes. O sistema calcula; o acordo é entre as pessoas.
 - **Dados sensíveis:** renda e gastos de várias pessoas. Cada pessoa vê os próprios gastos pessoais; a casa vê só o que é geral e as cotas.
 - **IA na extração** precisa seguir a governança RNFT-IA do Aura: o usuário confirma antes de um dado extraído virar lançamento definitivo.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Rendara — Documento de Projeto Final](../../02-sistemas-de-negocio/rendara-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -348,3 +348,13 @@ A maioria dos erros de iniciante vem de ordem errada ou de digitação. Antes de
 | Acentos aparecem como `Ã©` | Banco criado sem `utf8mb4` | Recrie com `CHARACTER SET utf8mb4` |
 
 **Dica:** texto e data vão entre aspas simples (`'Ana'`, `'2010-03-15'`); números, não (`8.5`). O separador decimal no SQL é o ponto.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -275,3 +275,20 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 - [sequencia-mestra-completa-desde-o-inicio](99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — mesma trilha, com a Trilha 42 intercalada bloco a bloco dentro da numeração
 - [EPIC-01-backlog-passo1-fundamentos](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md) — as tarefas reais do Passo 1, em User Stories
 - [automacao-o-que-e-por-que](06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o que automatizar em cada Passo, documento único de referência
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Revisão do Vault de Estudos](12-artefatos/paginas/revisao-do-vault-de-estudos-udq7/index.html) · página interativa · [sobre](12-artefatos/paginas/revisao-do-vault-de-estudos-udq7/LEIA-ME.md)
+- [Plano de Estudos de Inglês — 6º ano ao 3º EM](12-artefatos/documentos/plano-de-estudos-de-ingles-6o-ano-ao-3o-em.md)
+- [Plano de Estudos de Espanhol — A1 ao C2](12-artefatos/documentos/plano-de-estudos-de-espanhol-a1-ao-c2.md)
+- [Trilha de Redes](12-artefatos/documentos/trilha-de-redes.md)
+- [Trilha Linux/Arch Profissional](12-artefatos/documentos/trilha-linux-arch-profissional.md)
+- [Trilha de Cibersegurança e Pentest](12-artefatos/documentos/trilha-de-ciberseguranca-e-pentest.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -183,3 +183,17 @@ Ser "o profissional mais perfeito em design de software" inclui saber a hora cer
 - **API Gateway/BFF dedicado** — hoje o frontend consome a API diretamente; isso só vira necessidade real se mais de um tipo de cliente (mobile nativo, integração de terceiro) precisar de agregação diferente
 
 Documentar esses cinco agora seria o mesmo erro já corrigido antes nesta conversa com Clojure/Datomic — sofisticação sem problema real por trás ainda.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [AM Kaixara](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
+- [AM Kaixara — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
+- [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -130,3 +130,21 @@ atualizado: 2026-10-26
 - [aura-status](../10-ferramentas-pessoais/aura-status-documento-projeto-final.md) — o painel que mostra o estado de tudo
 - [fontes-de-renda-completas](fontes-de-renda-completas.md) — o que o setup vende
 - [trilha-robotica-iot](../07-estudo-e-carreira/trilha-robotica-iot.md) — casa inteligente e bancada maker (lista de 98 itens, de R$ 16,5 mil a R$ 39 mil, em 5 fases)
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Fluxogramas do Setup](../12-artefatos/paginas/fluxogramas-do-setup-vbdz/index.html) · página interativa · [sobre](../12-artefatos/paginas/fluxogramas-do-setup-vbdz/LEIA-ME.md)
+- [Mapa do Setup AMtech](../12-artefatos/paginas/mapa-do-setup-amtech-btuy/index.html) · página interativa · [sobre](../12-artefatos/paginas/mapa-do-setup-amtech-btuy/LEIA-ME.md)
+- [Implantação AMtech](../12-artefatos/paginas/implantacao-amtech-cj27/index.html) · página interativa · [sobre](../12-artefatos/paginas/implantacao-amtech-cj27/LEIA-ME.md)
+- [Repositório dev-setup (versão de 23/10)](../12-artefatos/paginas/repositorio-dev-setup-k9wt/index.html) · página interativa · [sobre](../12-artefatos/paginas/repositorio-dev-setup-k9wt/LEIA-ME.md)
+- [Repositório dev-setup (versão de 21/10)](../12-artefatos/paginas/repositorio-dev-setup-ria4/index.html) · página interativa · [sobre](../12-artefatos/paginas/repositorio-dev-setup-ria4/LEIA-ME.md)
+- [Casa Inteligente e Setup Automatizado](../12-artefatos/documentos/casa-inteligente-e-setup-automatizado.md)
+- [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

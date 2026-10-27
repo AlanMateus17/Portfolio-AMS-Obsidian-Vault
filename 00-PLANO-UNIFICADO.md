@@ -159,3 +159,23 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 - **Física:** só fecho a trilha com precisão quando você me mostrar o índice do livro.
 - **`aura-historico` (Clojure/Datomic)** e contagem de projetos da 42: pendências herdadas, detalhadas no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md).
 - **Cluster educação:** confirmar a ordem do funil (mini-curso → catálogo → instituto → livro) é decisão sua.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Plano de Prioridades — Out/2026 a Dez/2027](12-artefatos/documentos/plano-de-prioridades-out-2026-a-dez-2027.md)
+- [Plano-Mestre — Alan](12-artefatos/documentos/plano-mestre-alan.md)
+- [Plano Mestre — Checklists de Execução](12-artefatos/documentos/plano-mestre-checklists-de-execucao.md)
+- [Painel Geral — Alan](12-artefatos/documentos/painel-geral-alan.md)
+- [Plano Mestre AMS](12-artefatos/paginas/plano-mestre-ams-mc6o/index.html) · página interativa · [sobre](12-artefatos/paginas/plano-mestre-ams-mc6o/LEIA-ME.md)
+- [Auditoria do Plano AMS](12-artefatos/paginas/auditoria-do-plano-ams-ggul/index.html) · página interativa · [sobre](12-artefatos/paginas/auditoria-do-plano-ams-ggul/LEIA-ME.md)
+- [Planejador do Grupo](12-artefatos/paginas/planejador-do-grupo-wvwo/index.html) · página interativa · [sobre](12-artefatos/paginas/planejador-do-grupo-wvwo/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->
+
+🏫 Material das aulas e projetos da escola: [Trabalho na escola (EMTI)](01-planejamento-geral/docencia-escola-emti.md) · 🗺️ [Mapa de conexões plano ↔ artefatos](12-artefatos/01-MAPA-DE-CONEXOES.md)

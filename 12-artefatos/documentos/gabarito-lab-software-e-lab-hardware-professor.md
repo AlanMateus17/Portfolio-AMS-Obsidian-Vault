@@ -127,3 +127,13 @@ Sugestão de correção: cita o fsck = 1/3; cita a restauração do backup = 1/3
 3. **Medições:** tensões da fonte com o multímetro em VDC; consumo com wattímetro em repouso e sob estresse; conferir se a fonte suporta o consumo + 20%; anotar em docs/HARDWARE\_SETUP.md. (B e C)
 
 Sugestão de correção: bancada segura = 1/3; sequência de montagem (pelo menos CPU primeiro, espaçadores e GPU por último) = 1/3; medições em repouso e sob estresse = 1/3.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

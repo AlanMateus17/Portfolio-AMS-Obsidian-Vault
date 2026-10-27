@@ -147,3 +147,14 @@ A planilha é o teste barato do AM Rendara. Com 30 vendas em 60 dias, você tem 
 - Mantenha o aviso "material educativo, não é recomendação" na página e na aba Guia.
 - Emita nota das vendas quando a empresa estiver aberta; até lá, pergunte ao contador como declarar.
 - Os dados que o comprador preenche ficam na conta Google dele. Você não tem acesso, e isso pode ser dito na página.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💰 Todas as Fontes de Renda — O Catálogo Completo](../../01-planejamento-geral/fontes-de-renda-completas.md)
+- [O que fazer agora — Ação imediata no portfólio](../../01-planejamento-geral/acao-imediata-portfolio.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

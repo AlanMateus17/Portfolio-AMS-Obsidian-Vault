@@ -125,3 +125,16 @@ Só isto. Nada do resto do documento importa até estes estarem andando.
 - [ ] **Pendência:** me mandar o endereço do repositório de estudos + confirmar os cortes acima
 
 Uma coisa de cada vez. Terminou? Volte ao topo e pegue o próximo item da Fase 1.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🧭 Plano Mestre — tudo em um só passo a passo](../../00-PLANO-MESTRE-PASSO-A-PASSO.md)
+- [🎯 Plano Unificado AMS — O Mapa de Tudo](../../00-PLANO-UNIFICADO.md)
+- [Plano Mestre — Frentes de Estudo, Negócio e Renda](../../01-planejamento-geral/plano-mestre-frentes-alan.md)
+- [Status de Planejamento do Portfólio — o que já existe, o que falta, e o que se reaproveita de onde](../../01-planejamento-geral/status-planejamento-portfolio.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

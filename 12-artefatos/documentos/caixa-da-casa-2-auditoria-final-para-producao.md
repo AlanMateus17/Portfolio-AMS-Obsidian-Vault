@@ -235,3 +235,13 @@ Como portar sem perder o que já foi validado: transformar os casos dos testes a
 - [Séries do Banco Central: como consultar o SGS (TabNews)](https://www.tabnews.com.br/SidneyBissoli/series-do-banco-central-como-consultar-o-sgs-a-focus-e-a-ptax-sem-cair-nas-armadilhas)
 - [Guia de APIs da bolsa brasileira 2026 (brapi)](https://brapi.dev/blog/api-bolsa-de-valores-brasil-guia-desenvolvedores-2026)
 - [Custos de Open Finance para app de finanças pessoais (TabNews, maio de 2026)](https://www.tabnews.com.br/GuilhermeVieira/estou-desenvolvendo-um-app-de-financas-pessoais-e-nao-consigo-pagar-o-open-finance-pluggy-r2-5k-mes-belvo-r6k-mes-tecnospeed-r1-5k-de-entrada-r540)
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Rendara — Documento de Projeto Final](../../02-sistemas-de-negocio/rendara-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

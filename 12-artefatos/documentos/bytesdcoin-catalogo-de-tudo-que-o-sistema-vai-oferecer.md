@@ -231,3 +231,13 @@ São 83 itens no total. Construir todos levaria anos, então a sugestão abaixo 
 Na Fase 4, o item C5 (estrutura jurídica) vem antes de qualquer outro item da terceira criptomoeda.
 
 **Contagem por seção:** Alunos 13 · Professores 9 · Escola 6 · Secretaria 5 · Projeto Integrador 8 · Infraestrutura 11 · Robótica, sessões e avaliações 6 · Outros públicos 8 · Rede pública 7 · Segurança 10.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -6,18 +6,19 @@ atualizado: 2026-10-27
 
 # 🗂️ Todos os artefatos do claude.ai
 
-> **Em palavras simples:** aqui está o conteúdo de todos os artefatos que você tem no claude.ai (84 de 85), copiado para o repositório. Os documentos viraram notas `.md` (abrem no Obsidian). As páginas interativas são `.html` (abra no navegador). Os artefatos de design, design system e painel trouxeram os arquivos do projeto.
+> **Em palavras simples:** aqui está o conteúdo de todos os artefatos que você tem no claude.ai (85 de 85, nenhum de fora), copiado para o repositório. Os documentos viraram notas `.md` (abrem no Obsidian). As páginas interativas são `.html` (abra no navegador). Os artefatos de design, design system e painel trouxeram os arquivos do projeto.
 
-## O que ficou de fora e por quê
+🗺️ **Em que parte do plano cada artefato entra:** veja o [mapa de conexões](01-MAPA-DE-CONEXOES.md). Cada documento também tem, no final, a seção "Onde isto entra no plano", e cada página e projeto tem um `LEIA-ME.md` com o mesmo.
 
-- **Pendências dos PDIs (dois alunos)**: não foi copiado de propósito. Tem dados de alunos, e dado de aluno não deve ir para um repositório, nem privado. Ele continua no claude.ai.
+## O que não vem numa cópia e como foi resolvido
+
 - **Blocos embutidos dentro de documentos** (diagramas, fluxogramas e gráficos colados no meio do texto): os 34 blocos foram recuperados e convertidos em imagem (`documentos/imagens/*.svg`), e cada documento já mostra a imagem no lugar certo. O código original de cada bloco está em `documentos/imagens/fonte-jsx/` (com o script `render.mjs` que gera as imagens), caso queira editar um diagrama no futuro. A coluna "Observação" diz quais documentos têm diagramas.
 - **O que você marcou nas páginas** (caixinhas, filtros): fica guardado no navegador de quem marcou e não vem na cópia. Onde a página guarda no próprio claude.ai, os dados vieram junto na pasta `dados-salvos`.
 - **Os editores** de Design, Design System e Painel: só funcionam dentro do claude.ai. Vieram os arquivos do projeto (telas, tokens, dados).
 
-> ⚠️ O currículo tem seu telefone e e-mail, e o painel "Meu progresso financeiro" tem seus contracheques. Tudo bem enquanto o repositório for **privado**. Se um dia deixar público, apague esses dois antes.
+> ⚠️ O currículo tem seu telefone e e-mail, o painel "Meu progresso financeiro" tem seus contracheques e as "Pendências dos PDIs" têm nomes de alunos (menores de idade) e de professores. Tudo bem enquanto o repositório for **privado** e só você tiver acesso. Se um dia deixar público ou convidar alguém, apague esses três antes (dado de aluno é protegido pela LGPD).
 
-## Documentos (46)
+## Documentos (47)
 
 | Artefato | Atualizado | Arquivo aqui | Observação |
 |---|---|---|---|
@@ -56,6 +57,7 @@ atualizado: 2026-10-27
 | [Plano de Prioridades — Out/2026 a Dez/2027](https://claude.ai/artifact/FsYYTPqZEQbZSeCmDAe6SP) | 2026-10-06 | [abrir](documentos/plano-de-prioridades-out-2026-a-dez-2027.md) | 2 diagrama(s) incluído(s) como imagem |
 | [Plano Mestre — Checklists de Execução](https://claude.ai/artifact/M8Kxy3ibTQeXcakUYkrkaS) | 2026-09-24 | [abrir](documentos/plano-mestre-checklists-de-execucao.md) | completo |
 | [Plano-Mestre — Alan](https://claude.ai/artifact/UhT636KdypzgWzZuc62DLT) | 2026-09-28 | [abrir](documentos/plano-mestre-alan.md) | 1 diagrama(s) incluído(s) como imagem |
+| [Pendências dos PDIs – Bruno e Josué](https://claude.ai/artifact/N3LeJ71ZKbo8WZRU8QZAWw) | 2026-10-26 | [abrir](documentos/pendencias-dos-pdis-bruno-e-josue.md) | completo; ⚠️ tem nomes de alunos e de professores |
 | [Plataforma de cursos — Especificação funcional v1](https://claude.ai/artifact/UiwX9ypibY6jPPKfbRAZPd) | 2026-10-06 | [abrir](documentos/plataforma-de-cursos-especificacao-funcional-v1.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Plataforma de cursos — Stack profissional](https://claude.ai/artifact/3FQE2685Yqu66gk78yBJFf) | 2026-10-06 | [abrir](documentos/plataforma-de-cursos-stack-profissional.md) | 1 diagrama(s) incluído(s) como imagem |
 | [Plataforma financeira, contábil e tributária: análise completa](https://claude.ai/artifact/4x2tbppY18tFf1sywmmMTU) | 2026-10-17 | [abrir](documentos/plataforma-financeira-contabil-e-tributaria-analise-completa.md) | 2 diagrama(s) incluído(s) como imagem |

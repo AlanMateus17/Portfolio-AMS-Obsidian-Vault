@@ -94,3 +94,15 @@ Este documento não pertence a um sistema específico. Ele existe para ser **ref
 | Loja Virtual | Sim | Sim | Sim | Sim | Sim | Reporta dados, não é dono |
 | Momentos/Cupido | Não se aplica (sem estoque físico) | Sim (assinatura) | Opcional | Sim | Sim | Reporta dados, não é dono |
 | `aura-licensing` | Não se aplica | Sim — crítico, é o motor central | Opcional | Sim | Sim | **Dono do requisito** |
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Simulação de isolamento multi-tenant](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/index.html) · página interativa · [sobre](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

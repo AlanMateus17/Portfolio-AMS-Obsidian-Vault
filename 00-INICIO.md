@@ -5,7 +5,7 @@ tipo: home
 
 # 🏠 Portfólio AMS — Índice
 
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — 84 documentos, páginas e projetos copiados
+> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
 
 > Este é o **mapa** do vault. Para o dia a dia, a porta de entrada é o **[Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** — abra ele primeiro. Este índice serve para achar um documento específico quando precisar.
 
@@ -54,6 +54,9 @@ tipo: home
 - 🆕 **Formação e novas trilhas (out/2026):** [🎓 Formação acadêmica](07-estudo-e-carreira/formacao-academica.md) · [💹 Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md) · [🤖 Dados e IA](07-estudo-e-carreira/trilha-dados-ia.md) · [🏗️ Engenharia de Software](07-estudo-e-carreira/trilha-engenharia-software.md) · [🧭 Currículo do Dev Sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) · [🔧 Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md)
 - [matematica-e-desenvolvimento-integrado](07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) · [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [metodo-correto-estudo-idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) · [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) · [integracao-42-roadmap-akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) · [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) · [perfil-senior-completo-auditoria](07-estudo-e-carreira/perfil-senior-completo-auditoria.md)
 
+## 🏫 Escola
+- [Trabalho na escola (EMTI): aulas, atividades e projetos](01-planejamento-geral/docencia-escola-emti.md)
+
 ## 8️⃣ Material Comercial
 - [presenca-digital-empresas](08-material-comercial/presenca-digital-empresas.md)
 
@@ -65,5 +68,6 @@ tipo: home
 
 ## 🗄️ Arquivo
 - `11-setup-dev-setup/` — o repositório dev-setup inteiro (documentos, 17 fluxogramas, roteiro de 253 passos, páginas e scripts): [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
-- `12-artefatos/` — o conteúdo de todos os artefatos do claude.ai (documentos, páginas, design e painel): [índice dos artefatos](12-artefatos/00-INDICE-DOS-ARTEFATOS.md).
-- `99-arquivo/` — documentos-mestre antigos, substituídos pelo Sumário Único. Consulta histórica apenas.
+- `12-artefatos/` — o conteúdo de todos os 85 artefatos do claude.ai (documentos, páginas, design e painel): [índice dos artefatos](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões com o plano](12-artefatos/01-MAPA-DE-CONEXOES.md).
+- `13-memoria-do-claude/` — cópia do que o Claude anotou sobre seus planos e decisões: [o que está lá](13-memoria-do-claude/00-LEIA-ME.md).
+- `99-arquivo/` — [documentos-mestre antigos](99-arquivo/00-LEIA-ME.md), substituídos pelo Sumário Único. Consulta histórica apenas. Tem também os [pacotes originais que você enviou](99-arquivo/versoes-anteriores/LEIA-ME.md) e as [conversas guardadas](99-arquivo/conversas/LEIA-ME.md).

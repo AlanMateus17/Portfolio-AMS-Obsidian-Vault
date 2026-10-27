@@ -139,3 +139,13 @@ SELECT apelido FROM carteiras WHERE saldo_primes > 100000;
 16. Escreva o comando que insere a carteira 2 (BSD7f2, saldo 120000, ativa).
 17. Escreva o comando que mostra o apelido das carteiras com saldo maior que 100000.
 18. **Desafio:** Crie no caderno uma tabela apostas com 4 campos (id, carteira\_id, valor\_primes, resultado). Escreva o tipo de cada campo, indique a chave primária, escreva o CREATE TABLE e um INSERT com uma aposta.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

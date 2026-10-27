@@ -81,3 +81,13 @@ Desenhe 4 caixas empilhadas, de cima para baixo: **Usuário → Aplicativos → 
 13. Como ver os processos em execução no Windows? E no Linux?
 14. O Google Chrome é um sistema operacional? Justifique.
 15. **Desafio:** Usando a analogia do maestro, explique o papel do sistema operacional e dê um exemplo de multitarefa do seu dia a dia.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -22,3 +22,16 @@ atualizado: 2026-10-26
 **Regra:** cada módulo fecha com um projeto funcionando e documentado — o mesmo padrão dos sistemas Aura. O que for montado com alunos vira material de aula e conteúdo.
 
 🔗 Projetos ligados: projeto de robótica agro (escola) · ByteSDCoin (tabuleiro de xadrez robótico) · infraestrutura de 10 anos ([infraestrutura-fisica-10-anos](../01-planejamento-geral/infraestrutura-fisica-10-anos.md), camada robótica/IoT).
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Bancada Maker Completa](../12-artefatos/paginas/bancada-maker-completa-1cb3/index.html) · página interativa · [sobre](../12-artefatos/paginas/bancada-maker-completa-1cb3/LEIA-ME.md)
+- [Casa Inteligente e Setup Automatizado](../12-artefatos/documentos/casa-inteligente-e-setup-automatizado.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

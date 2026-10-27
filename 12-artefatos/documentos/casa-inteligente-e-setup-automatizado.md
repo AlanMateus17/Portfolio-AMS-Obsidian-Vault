@@ -135,3 +135,17 @@ Comece pelo cérebro e por poucos sensores: em um mês você já tem automaçõe
 - **Orange Pi:** é mais potente e mais barato que o Pi, mas o Home Assistant OS não tem suporte oficial nele. Use o Raspberry Pi como cérebro da casa e o Orange Pi para experimentar.
 - **Detector de fumaça e gás:** o sistema só envia o alerta. A proteção real é o detector certificado.
 - **Câmeras:** não aponte para áreas dos vizinhos ou da rua, e deixe as gravações no servidor de casa, não na nuvem do fabricante.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🖥️ O Setup Completo — Projeto e Planejamento](../../01-planejamento-geral/setup-completo-dev-setup.md)
+- [Setup do Ambiente de Trabalho — Versão Final Consolidada](../../06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md)
+- [🖥️ Setup completo (dev-setup) dentro do vault](../../11-setup-dev-setup/00-INDICE-DO-SETUP.md)
+- [Infraestrutura Física — Arquitetura de 10 Anos](../../01-planejamento-geral/infraestrutura-fisica-10-anos.md)
+- [🤖 Trilha de Robótica e IoT](../../07-estudo-e-carreira/trilha-robotica-iot.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

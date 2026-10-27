@@ -105,3 +105,16 @@ Isso confirma o que o documento anterior já dizia: o bloco de tempo genuinament
 **Inglês:** input compreensível técnico (você já entende o conteúdo, só troca o idioma) + repetição espaçada pro vocabulário + shadowing pra fala, com produção real (ADR, commit) entrando a partir do nível B2.
 
 **Espanhol:** mesma lógica, mais rápida por causa da proximidade com português, com atenção extra deliberada aos falsos cognatos desde o primeiro dia pra não automatizar erro.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Plano de Estudos de Inglês — 6º ano ao 3º EM](../12-artefatos/documentos/plano-de-estudos-de-ingles-6o-ano-ao-3o-em.md)
+- [Plano de Estudos de Espanhol — A1 ao C2](../12-artefatos/documentos/plano-de-estudos-de-espanhol-a1-ao-c2.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

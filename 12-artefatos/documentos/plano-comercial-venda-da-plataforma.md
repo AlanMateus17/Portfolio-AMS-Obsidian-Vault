@@ -235,3 +235,15 @@ Oito números, vistos uma vez por mês no painel do admin (VND-16). As metas ini
 ![cronograma comercial · 4 fases e 3 portões](imagens/plano-comercial-venda-da-plataforma__1.svg)
 
 Cada fase só começa quando o portão anterior é cumprido, não numa data. A R2 (professores convidados no Instituto AMS) corre em paralelo aos fundadores e não depende da venda da plataforma.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💰 Todas as Fontes de Renda — O Catálogo Completo](../../01-planejamento-geral/fontes-de-renda-completas.md)
+- [O que fazer agora — Ação imediata no portfólio](../../01-planejamento-geral/acao-imediata-portfolio.md)
+- [AM Saberia — Documento de Projeto Final (Nome provisório)](../../02-sistemas-de-negocio/saberia-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -130,3 +130,15 @@ Dá para começar sem o NAS: PC velho, Raspberry Pi ou VM sempre ligada.
 - [ ] Restaurar arquivo do backup (não só do snapshot)
 - [ ] Explicar cada linha do `fstab`, do `hyprland.conf` e dos scripts
 - [ ] 3 repositórios públicos, documentados, com commits recentes
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Trilha Linux/Arch Profissional](../12-artefatos/documentos/trilha-linux-arch-profissional.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

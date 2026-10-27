@@ -189,3 +189,13 @@ Cinco fases, cada uma termina com o sistema funcionando e testado. Em paralelo, 
 
 - [PostgreSQL — versões suportadas e 19 Beta 4](https://www.postgresql.org/)
 - [.NET — política de suporte (LTS e STS)](https://dotnet.microsoft.com/en-us/platform/support/policy/dotnet-core)
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Saberia — Documento de Projeto Final (Nome provisório)](../../02-sistemas-de-negocio/saberia-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

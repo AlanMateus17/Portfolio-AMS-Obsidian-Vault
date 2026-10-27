@@ -77,3 +77,15 @@ Não é uma lista de "features" — é uma lista de **requisitos não funcionais
 3. Os demais sistemas (ainda em papel) simplesmente herdam esse documento transversal por referência, sem precisar reescrever nada
 
 Quer que eu já monte esse documento de RNF transversal agora, no mesmo padrão dos outros (com IDs formais), para você plugar em cada sistema?
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Simulação de isolamento multi-tenant](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/index.html) · página interativa · [sobre](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

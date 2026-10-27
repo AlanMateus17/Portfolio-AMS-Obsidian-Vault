@@ -908,3 +908,18 @@ O aluno recebe o enunciado acima e vê o sistema pronto funcionando, mas nunca o
 ### Por que isso é suficiente para fazer do zero
 
 Cada projeto só usa o que os módulos anteriores ensinaram, os marcos dizem por onde começar e em que ordem seguir, as perguntas-guia apontam as armadilhas antes de o aluno cair nelas, e os casos de teste dizem exatamente quando terminou. O que falta é justamente o que ele precisa aprender a fazer: transformar um enunciado em código.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💰 Todas as Fontes de Renda — O Catálogo Completo](../../01-planejamento-geral/fontes-de-renda-completas.md)
+- [O que fazer agora — Ação imediata no portfólio](../../01-planejamento-geral/acao-imediata-portfolio.md)
+- [AM Saberia — Documento de Projeto Final (Nome provisório)](../../02-sistemas-de-negocio/saberia-documento-projeto-final.md)
+- [Passo a Passo Mestre — Portfólio para Vaga Júnior](../../06-execucao-e-desenvolvimento/passo-a-passo-portfolio-vaga-junior.md)
+- [🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas](../../07-estudo-e-carreira/curriculo-dev-senior-completo.md)
+- [Perfil de Desenvolvedor Sênior Completo — Auditoria Contra o Que Já Existe](../../07-estudo-e-carreira/perfil-senior-completo-auditoria.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

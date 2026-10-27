@@ -89,3 +89,13 @@ Cada campo tem um tipo, que diz que tipo de valor ele aceita.
 12. Por que o telefone deve ser guardado como VARCHAR e não como INT?
 13. Usando a analogia do arquivo de aço, explique o que é tabela, registro e campo.
 14. **Desafio:** Crie no caderno uma tabela chamada Produtos com 4 campos. Escreva o tipo de dado de cada campo, indique qual é a chave primária e preencha 2 registros.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

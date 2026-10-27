@@ -97,3 +97,19 @@ Sem essa extração, o AM Rotara provavelmente custaria quase o mesmo tempo de e
 Com a extração feita, o AM Rotara herda tudo isso pronto — o tempo dele fica concentrado só no que é genuinamente novo dele (PostGIS, roteirização, SignalR de pedido). O terceiro sistema (AM Rendara ou o que vier depois) herda ainda mais, porque a biblioteca de concorrência e o `aura-support` já existem também.
 
 **Isso é o que "desenvolver todos ao mesmo tempo" significa de verdade para quem trabalha sozinho: não é simultaneidade, é aceleração composta** — cada sistema deixando o próximo mais barato, não porque fica mais fácil, mas porque menos coisa precisa ser reconstruída.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Ecossistema AMtech (versão de 27/10)](../12-artefatos/paginas/ecossistema-amtech-4ze2/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-4ze2/LEIA-ME.md)
+- [Ecossistema AMtech (versão de 21/10)](../12-artefatos/paginas/ecossistema-amtech-lf3a/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-lf3a/LEIA-ME.md)
+- [Simulação de isolamento multi-tenant](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/index.html) · página interativa · [sobre](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/LEIA-ME.md)
+- [Checklist de completude — os 4 sistemas](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/index.html) · página interativa · [sobre](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/LEIA-ME.md)
+- [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

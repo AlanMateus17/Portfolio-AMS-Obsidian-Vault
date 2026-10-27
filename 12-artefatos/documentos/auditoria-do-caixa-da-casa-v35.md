@@ -168,3 +168,13 @@ A reconstrução acontece ao lado do sistema atual. O v35 continua no ar e com o
 - [ ] "Sobra" deve descontar a sua parte pela regra ou o que você de fato pagou da casa? A proposta é mostrar a primeira como sobra e a diferença como "a acertar com a Claudia".
 - [ ] Decidido: todos os módulos ficam no mesmo sistema.
 - [ ] Decidido: reconstruir num sistema novo, sem v36 sobre o v35.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Rendara — Documento de Projeto Final](../../02-sistemas-de-negocio/rendara-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

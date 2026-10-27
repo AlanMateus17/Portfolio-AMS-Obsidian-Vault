@@ -80,3 +80,13 @@ Um resumo por matéria, com o que é mais importante falar em sala. Cada um segu
 **Frase para fechar:** "Cada informação em um lugar só: mudou a sala da turma, muda uma linha, não trinta."
 
 **Pergunta rápida para a turma:** "Por que o nome do aluno não pode ser a chave primária?" (pode se repetir)
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

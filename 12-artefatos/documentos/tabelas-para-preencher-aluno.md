@@ -73,3 +73,13 @@ Para cada tabela: (a) escreva o tipo de dado de cada campo e marque qual é a ch
 | ...... | ............ | ............ | ...... | ............ | ...... |
 
 **(c)** Quantos registros e quantos campos tem a tabela Escola que você preencheu? ....................................................................
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🏫 Trabalho na escola (EMTI): aulas, atividades e projetos](../../01-planejamento-geral/docencia-escola-emti.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

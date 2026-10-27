@@ -94,3 +94,20 @@ Cada User Story do EPIC-01 ganha a Task "produzir a ficha dupla", logo após os 
 
 ## 🔗 Relacionados
 - [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md) · [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md)
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Revisão do Vault de Estudos](../12-artefatos/paginas/revisao-do-vault-de-estudos-udq7/index.html) · página interativa · [sobre](../12-artefatos/paginas/revisao-do-vault-de-estudos-udq7/LEIA-ME.md)
+- [Plano de Estudos de Inglês — 6º ano ao 3º EM](../12-artefatos/documentos/plano-de-estudos-de-ingles-6o-ano-ao-3o-em.md)
+- [Plano de Estudos de Espanhol — A1 ao C2](../12-artefatos/documentos/plano-de-estudos-de-espanhol-a1-ao-c2.md)
+- [Trilha de Redes](../12-artefatos/documentos/trilha-de-redes.md)
+- [Trilha Linux/Arch Profissional](../12-artefatos/documentos/trilha-linux-arch-profissional.md)
+- [Trilha de Cibersegurança e Pentest](../12-artefatos/documentos/trilha-de-ciberseguranca-e-pentest.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

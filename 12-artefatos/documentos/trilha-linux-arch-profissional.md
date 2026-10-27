@@ -241,3 +241,16 @@ Você domina o assunto com profissionalismo quando consegue fazer tudo abaixo se
 - [ ] Explicar cada linha do seu `fstab`, do `hyprland.conf` e dos seus scripts
 - [ ] Ensinar o laboratório de instalação para uma turma e resolver os erros dos alunos na hora
 - [ ] Ter 3 repositórios públicos, documentados e com commits recentes que provam tudo isso
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
+- [🐧 Trilha Linux/Arch Profissional](../../07-estudo-e-carreira/trilha-linux-arch-profissional.md)
+- [🌌 Mapa de Horizonte Longo — Sistemas, Baixo Nível e SO Próprio](../../07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

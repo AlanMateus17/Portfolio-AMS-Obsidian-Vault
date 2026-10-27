@@ -110,3 +110,17 @@ Você decidiu explicitamente manter tudo que é TI (desenvolvimento, licenciamen
 ## 🔗 Documentos relacionados
 - [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — quando abrir isso em relação às outras frentes, e o cronograma de fases
 - [status-planejamento-portfolio](status-planejamento-portfolio.md) — status geral do portfólio que essa empresa vai comercializar
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Planejador do Grupo](../12-artefatos/paginas/planejador-do-grupo-wvwo/index.html) · página interativa · [sobre](../12-artefatos/paginas/planejador-do-grupo-wvwo/LEIA-ME.md)
+- [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
+- [Grupo AMtech Digital — prévia](../12-artefatos/paginas/grupo-amtech-digital-previa-luby/index.html) · página interativa · [sobre](../12-artefatos/paginas/grupo-amtech-digital-previa-luby/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

@@ -708,3 +708,15 @@ Duas travam a R1: o nome e o gateway. As demais precisam estar decididas antes d
 | Quem paga o vídeo da escola própria | Incluído até um limite, ou a escola conecta a própria conta Bunny | Incluído até um limite, excedente cobrado | R3 |
 | Aluno compartilhado entre escolas | O aluno de uma escola aparece como "já tem conta" em outra | Sim (uma conta por pessoa), mas cada escola só vê os próprios alunos | R3 |
 |  |  |  |  |
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [💰 Todas as Fontes de Renda — O Catálogo Completo](../../01-planejamento-geral/fontes-de-renda-completas.md)
+- [O que fazer agora — Ação imediata no portfólio](../../01-planejamento-geral/acao-imediata-portfolio.md)
+- [AM Saberia — Documento de Projeto Final (Nome provisório)](../../02-sistemas-de-negocio/saberia-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

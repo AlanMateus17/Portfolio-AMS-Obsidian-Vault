@@ -205,3 +205,23 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 A ordem não segue "maior potencial primeiro" — segue **tempo até o primeiro real (caixa) vs seu tempo disponível (9h/semana)**. Assistência técnica entra primeiro porque de todas as frentes é a que menos depende de você ter tempo de desenvolvimento sobrando: uma vez formalizada e com ferramenta básica, ela gera caixa por conta própria. O Aura entra em segundo lugar não porque tem menos potencial — pelo contrário, é a maior aposta de longo prazo — mas porque o tempo de maturação até o primeiro cliente pagante é mais longo, então ela precisa começar a rodar em paralelo desde já, sem esperar a assistência técnica "terminar" (ela nunca termina, é operação contínua).
 
 As frentes de menor prioridade (freela, dropship) não são descartadas — são tratadas como **oportunistas**: você aproveita se aparecer, mas não investe prospecção ativa nelas, porque cada hora ali é uma hora a menos no AM Kaixara, que é onde está o maior efeito composto (uma vez pronto, o produto vende pra mais um cliente sem custo adicional de desenvolvimento — o que nenhuma das outras frentes, exceto educação digital, tem).
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Plano de Prioridades — Out/2026 a Dez/2027](../12-artefatos/documentos/plano-de-prioridades-out-2026-a-dez-2027.md)
+- [Plano-Mestre — Alan](../12-artefatos/documentos/plano-mestre-alan.md)
+- [Plano Mestre — Checklists de Execução](../12-artefatos/documentos/plano-mestre-checklists-de-execucao.md)
+- [Painel Geral — Alan](../12-artefatos/documentos/painel-geral-alan.md)
+- [Plano Mestre AMS](../12-artefatos/paginas/plano-mestre-ams-mc6o/index.html) · página interativa · [sobre](../12-artefatos/paginas/plano-mestre-ams-mc6o/LEIA-ME.md)
+- [Auditoria do Plano AMS](../12-artefatos/paginas/auditoria-do-plano-ams-ggul/index.html) · página interativa · [sobre](../12-artefatos/paginas/auditoria-do-plano-ams-ggul/LEIA-ME.md)
+- [Planejador do Grupo](../12-artefatos/paginas/planejador-do-grupo-wvwo/index.html) · página interativa · [sobre](../12-artefatos/paginas/planejador-do-grupo-wvwo/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->
+
+🏫 Material das aulas e projetos da escola: [Trabalho na escola (EMTI)](docencia-escola-emti.md)

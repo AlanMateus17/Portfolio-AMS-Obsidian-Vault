@@ -142,3 +142,13 @@ O MVP roda no seu computador; cada etapa seguinte traz um bloco já testado no p
 3. **Planejamento:** investimentos e ARCA, metas de compra com diagnóstico, valores a receber, impostos anuais, projeção de 15 meses.
 4. **Nuvem e venda:** servidor na internet, domínio, HTTPS, e-mail de convite, recuperar senha, cobrança recorrente por família, termos de uso e política de privacidade (LGPD), exportar e apagar dados, backup.
 5. **Escala:** app de celular (PWA), Open Finance para extratos automáticos, painel do operador sem acesso a dados pessoais.
+
+---
+
+<!-- conexoes:inicio -->
+## 🔗 Onde isto entra no plano
+
+- [AM Rendara — Documento de Projeto Final](../../02-sistemas-de-negocio/rendara-documento-projeto-final.md)
+
+🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->

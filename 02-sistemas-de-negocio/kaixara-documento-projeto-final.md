@@ -213,3 +213,17 @@ A auditoria de escala e segurança financeira identificou que o controle de conc
 5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado (ver [aura-support-documento-projeto-final](../03-servicos-compartilhados/aura-support-documento-projeto-final.md)), com painel de reprocessamento e correção manual para qualquer tenant do AM Kaixara.
 6. **Canal formal de suporte ao lojista** (seção 4.2) — WhatsApp Business, ticket ou e-mail; hoje não está formalizado em nenhum RF.
 7. **Certificado de assinatura de código** — precisa ser adquirido de uma autoridade reconhecida antes do primeiro instalador público.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [AM Kaixara](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
+- [AM Kaixara — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
+- [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->
