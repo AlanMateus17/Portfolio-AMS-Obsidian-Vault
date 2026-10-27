@@ -30,7 +30,7 @@ atualizado: 2026-10-26
 
 ---
 
-## IA0 — Python *(2–4 semanas)*
+## IA0 — Python *(2–4 semanas; mais rápido porque o bloco paralelo de Python começa no Passo 3)*
 - [ ] Sintaxe, tipos, coleções, compreensões, módulos, ambiente virtual, `pytest`
 - [ ] FastAPI (é o único Python da stack: `aura-analytics`)
 - **Desenvolver:** endpoint FastAPI que recebe uma série e devolve média/desvio — o esqueleto do aura-analytics.

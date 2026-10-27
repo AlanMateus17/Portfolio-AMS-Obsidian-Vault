@@ -38,6 +38,7 @@ Nada é descartado. O que não serve à aposta de 12 meses vai pra uma **camada 
 
 - **Trilha diária detalhada (Passos 1-14):** [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — é lá que você marca `[x]` todo dia.
 - **Formação acadêmica e certificações:** [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+- **Tudo o que um dev sênior domina, camada por camada:** [curriculo-dev-senior-completo](07-estudo-e-carreira/curriculo-dev-senior-completo.md).
 - **Novas trilhas (out/2026):** [💹 Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md) · [🤖 Dados e IA](07-estudo-e-carreira/trilha-dados-ia.md) · [🏗️ Engenharia de Software](07-estudo-e-carreira/trilha-engenharia-software.md) · [🔧 Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md).
 - **Camada C (paralelas):** [École 42](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [Segurança ofensiva](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) · [Linux/Arch](07-estudo-e-carreira/trilha-linux-arch-profissional.md) · [Redes](07-estudo-e-carreira/trilha-de-redes.md) · [Inglês/Espanhol](07-estudo-e-carreira/ingles-espanhol-integrado.md).
 - **Camada D (longo):** [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) — tudo estacionado com gatilho.
@@ -120,6 +121,7 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 | Segurança ofensiva (eJPT→OSCP→...) | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) | C→D |
 | Reverse · exploit · kernel · SO/distro próprios | [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) | D |
 | Mandarim | [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) (idiomas longos) | D |
+| **Currículo completo de dev sênior** — todas as camadas (fundamentos, C#, TypeScript, Python, backend, frontend, dados, arquitetura, distribuídos, testes, segurança, DevOps, observabilidade, performance, agente local, processo, entrevista) | [curriculo-dev-senior-completo](07-estudo-e-carreira/curriculo-dev-senior-completo.md) | A |
 | Engenharia de software (mapa por área) · engenharia de sistemas financeiros | [trilha-engenharia-software](07-estudo-e-carreira/trilha-engenharia-software.md) | A |
 | Finanças pessoais e investimentos (ARCA, Barsi, Bazin, Graham, Buffett, Finclass) | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F0 | B |
 | Contabilidade · matemática financeira · tributação brasileira | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F1–F3 | B |

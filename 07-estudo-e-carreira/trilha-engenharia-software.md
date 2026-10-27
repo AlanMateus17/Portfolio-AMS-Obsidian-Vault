@@ -9,6 +9,8 @@ atualizado: 2026-10-26
 
 > **O que este documento é:** o mapa do seu estudo autodidata de engenharia de software. A maior parte **já é a Trilha Principal** do [Sumário Único](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — aqui ela aparece organizada por área (como num currículo de faculdade), para você ver que nada ficou de fora e saber o que **acrescentar**.
 >
+> **Detalhe técnico completo de cada camada** (o que dominar, item por item, e o critério de sênior): [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md).
+>
 > **O que é novo aqui:** a área **Engenharia de sistemas financeiros**, que conecta esta trilha com a [Trilha de Finanças e Economia](trilha-financas-economia.md). É o seu diferencial: pouca gente sabe programar dinheiro direito.
 
 ---

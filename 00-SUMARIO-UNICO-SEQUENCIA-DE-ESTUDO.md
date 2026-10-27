@@ -109,6 +109,8 @@ Isso vale pra todo Passo da Trilha Principal e todo bloco de qualquer Trilha Par
 
 ## 🛤️ TRILHA PRINCIPAL — sempre o próximo item aqui, nunca pule
 
+> **Tudo o que um desenvolvedor sênior domina, em todas as camadas, está no [Currículo Completo do Desenvolvedor Sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md).** Cada Passo abaixo tem uma linha **🧱 Stack completa** apontando para a parte do currículo que entra nele.
+
 Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bloco de tempo — você nunca "só estuda" ou "só codifica" separadamente.
 
 - [ ] **Passo 1 — Lógica + Matemática Parte I + Inglês (início)** *(2-3 semanas)*
@@ -118,40 +120,47 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 2 — Git, SQL, Docker** *(1-2 semanas)*
   Git, SQL/PostgreSQL (`EXPLAIN ANALYZE`), Docker.
+  **🧱 Stack completa:** Git avançado (rebase, `bisect`, conventional commits), modelagem e normalização, `JOIN`s, CTE, window functions, Docker Compose, Bash e PowerShell básicos — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §2.5, §5, §10.
   **Desenvolver:** schema real do AM Kaixara (produto, categoria, estoque, venda) + schema do `aura-licensing`.
   **✅ Pronto quando:** lê um `EXPLAIN ANALYZE` e identifica full scan; ambiente sobe com `docker-compose up`.
   **🤖 Automação que entra aqui:** pre-commit hook (Gitleaks) + Dependabot + backup agendado de `C:\dev\` — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
-- [ ] **Passo 3 — C# Fundamentals + Matemática Parte II (início)** *(1-2 semanas)*
+- [ ] **Passo 3 — C# Fundamentals + TypeScript + Matemática Parte II (início)** *(2-3 semanas)*
   Tipo, classe, coleção, LINQ, nullable reference type, `async/await`, DI + Matemática Cap. 3 (Naturais/Inteiros, Algoritmo de Euclides).
+  **🧱 Stack completa:** `record`, pattern matching, genéricos, `CancellationToken`; **JavaScript moderno e TypeScript** (closures, event loop, Promises, tipos, narrowing, genéricos, `strict`); estruturas de dados e Big-O. **🐍 Começa o bloco paralelo de Python** (1–2 h/semana, refazendo os exercícios do Passo em Python) — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §1, §2.1–2.3.
   **Desenvolver:** entidades `Product`/`Category`/`Sale` + Algoritmo de Euclides implementado. Todo valor em dinheiro como `decimal`, nunca `double` ([engenharia de sistemas financeiros](07-estudo-e-carreira/trilha-engenharia-software.md)).
   **✅ Pronto quando:** entidades compilam sem warning de nulo; Euclides testado.
 
-- [ ] **Passo 4 — API e Autenticação** *(2-3 semanas)*
+- [ ] **Passo 4 — API, Autenticação e Frontend base** *(3-4 semanas)*
   Rota, DTO, validação, JWT, OWASP Top 10, rate limiting + Matemática Cap. 4 (Aritmética Modular/RSA). Inglês Fase B começa.
+  **🧱 Stack completa — backend:** pipeline e middleware do ASP.NET Core, **Controllers** (escolha fixa, não Minimal API), DI e ciclos de vida, Options pattern, validação, `ProblemDetails`, OpenAPI, design REST (status, paginação, versionamento), rate limiting. **Frontend:** HTML semântico e acessibilidade (WCAG AA), CSS (Flexbox, Grid, responsivo), **Tailwind** com os tokens do Aura, **React** (componentes, props, estado, hooks) e **Next.js App Router** (layouts, Server × Client Components) — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §3, §4.1–4.3.
   **Desenvolver:** `tenant_id`+RLS → login JWT/BCrypt (AM Kaixara RF01) → controle de acesso por papel (RF02) → blindagem OWASP. Frontend: Design System (tokens reais) + tela de login.
   **✅ Pronto quando:** login funcional, protegido, com tela real usando os tokens corretos.
 
 - [ ] **Passo 5 — EF Core + CRUD molde** *(1-2 semanas)*
   Migration, relacionamento, `AsNoTracking`, N+1 + Matemática Cap. 5-8 (Racionais, Aplicações Aritméticas, Sequências, Reais).
+  **🧱 Stack completa:** EF Core a fundo (tracking, `Include` e N+1, consultas compiladas, quando usar Dapper), níveis de isolamento e locks; React Hook Form + Zod com o mesmo contrato da API; cliente TypeScript gerado do OpenAPI — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §4.2, §5.
   **Desenvolver:** CRUD de produto/categoria (RF03, o "molde") → `RowVersion`/RNFT-E01 (não adiar) → reserva de estoque (RF11). Frontend: TanStack Query + Zustand, tabela genérica, formulário genérico.
   **💹 Finanças (leve):** começa F1 Contabilidade (partidas dobradas, caixa × competência) e F2 Matemática financeira junto do Cap. 6 do Lins — [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md).
   **✅ Pronto quando:** CRUD funciona com teste de concorrência passando.
 
 - [ ] **Passo 6 — Teste como disciplina** *(1-2 semanas)*
   Pirâmide de teste, `Moq`, teste de integração, TDD + Testing Library/Playwright.
+  **🧱 Stack completa:** **xUnit**, Moq, `WebApplicationFactory` + **Testcontainers** (PostgreSQL e Redis reais), Vitest + Testing Library, **Playwright**, pytest no bloco Python, CodeQL — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §8.
   **Desenvolver:** teste do fluxo de venda (unitário + integração) + teste de componente do carrinho + E2E completo. TDD puro no `aura-goals`.
   **✅ Pronto quando:** cobertura real no fluxo de venda, backend e frontend.
   **🤖 Automação que entra aqui:** CI completo (build + teste a cada push) + CodeQL — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 7 — Fechar o AM Kaixara: pagamento e cobrança** *(2-3 semanas)*
   Aplicação do que já foi estudado, sem tópico novo formal.
+  **🧱 Stack completa — agente local do Kaixara:** Windows Service em .NET, **SQLite offline** com fila de sincronização, periféricos atrás de interfaces (impressora ESC/POS, gaveta, balança, TEF), testes de propriedade nas regras de dinheiro — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §13.
   **Desenvolver:** múltiplos meios de pagamento (RF04) → idempotência/RNFT-E02 → abertura/fechamento de caixa (RF05) → cancelamento com restauração (RF06). Frontend: dashboard + checkout.
   **💹 Finanças:** fechamento de caixa gera lançamentos em **partidas dobradas** + DRE simples por consulta SQL (F1). Começa F3 Tributação (o que NFC-e/NF-e exigem, para o `IEmissorFiscal`).
   **✅ Pronto quando:** AM Kaixara com fluxo de venda ponta a ponta, pagamento idempotente, ledger fechando em zero.
 
 - [ ] **Passo 8 — Arquitetura de verdade** *(contínuo, consolida aqui)*
   SOLID, Design Patterns, Clean Architecture, DI ligada à arquitetura.
+  **🧱 Stack completa:** design patterns por categoria, refatoração (Fowler), **DDD tático** (entidade, objeto de valor, agregado, evento de domínio), diagramas C4, modelagem de ameaças STRIDE; começa a prática de algoritmos de entrevista — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §6, §9, §15.
   **Desenvolver:** refatorar o AM Kaixara aplicando cada padrão nele mesmo (`IFonteDeEstoque`, `IEmissorFiscal`).
   **✅ Pronto quando:** você refatora uma classe e explica por que segue SOLID.
 
@@ -159,17 +168,20 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 9 — Ponte técnica pro próximo sistema** *(após MVP do AM Kaixara)*
   PostGIS, Redis, SignalR, PWA vs. nativo + Matemática Cap. 13 e 17 (Estruturas Lineares, Geometria Analítica — cobre o que seria "Álgebra Linear I"). Inglês Fase C (ADR/README em inglês).
+  **🧱 Stack completa:** padrões de cache e invalidação, **Redis Streams** como fila, consumidor idempotente, resiliência (Polly: retry, timeout, circuit breaker), `BackgroundService`, SignalR com backplane Redis, PWA e offline — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §3, §5, §7.
   **Desenvolver:** cache Redis no AM Kaixara + SignalR no dashboard.
   **✅ Pronto quando:** dashboard atualiza em tempo real sem refresh.
 
 - [ ] **Passo 10 — Produção real** *(2-3 semanas)*
   Docker multi-stage, deploy gerenciado, pipeline GitHub Actions, observabilidade.
+  **🧱 Stack completa:** Docker multi-stage sem root, Linux de servidor, **OpenTelemetry** (logs, métricas, traces), health checks, migração de banco sem parar o sistema (expandir e contrair), estratégias de deploy e rollback, backup com teste de restauração, instalador assinado do agente local — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §10, §11.
   **Desenvolver:** deploy real do AM Kaixara — primeiro marco de verdade do portfólio.
   **✅ Pronto quando:** sistema no ar, observável, deploy automático a cada push.
   **🤖 Automação que entra aqui:** CD completo, Uptime Kuma, backup de banco de produção com teste de restauração, [aura-secrets](10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md) — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 11 — Performance com dado real** *(após meses em produção)*
   `Span<T>`, Garbage Collector, `BenchmarkDotNet` + Matemática Cap. 9 (Estatística Descritiva).
+  **🧱 Stack completa:** dotnet-trace/counters, flame graphs, `ArrayPool`, plano de execução e índices, Core Web Vitals e React Profiler no frontend — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §12.
   **Desenvolver:** medir e otimizar o endpoint mais usado, com número real.
   **✅ Pronto quando:** tem "antes e depois" medido de uma otimização real.
   **🤖 Automação que entra aqui:** teste de carga (k6) — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
@@ -177,6 +189,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 - [ ] **Passo 12 — Extração da plataforma interna** *(2-3 semanas — ponto de virada do cronograma)*
   Template `dotnet new`, NuGet privado, monorepo vs. polyrepo. Espanhol Fase A começa (Inglês já em B1-B2). Nomear a metodologia ágil já praticada.
   **Desenvolver, extraindo do AM Kaixara pronto:** template Clean Architecture+`tenant_id` → `aura-identity` real → lib de multi-tenancy → CI/CD reutilizável → component library (Storybook) → `aura-notifications` → `aura-support` → primeira apostila piloto (fichas duplas acumuladas) → segurança de frontend + lançamento (CDN, cache, métricas).
+  **🧱 Stack completa:** **DDD estratégico** (contextos delimitados entre os sistemas Aura), CQRS, **outbox** e saga, **OAuth 2.0/OIDC** no `aura-identity`, Storybook, teste de contrato, TypeScript avançado — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §3, §6, §7, §8.
   **✅ Pronto quando:** gera a estrutura de um sistema novo com um comando, autenticado, com tema, sem escrever do zero.
   **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
@@ -187,6 +200,8 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 14 em diante — Terceiro sistema e além**
   Ordem de prioridade do portfólio (AM Rendara — puxa F4/F5 da Trilha de Finanças, conciliação e Pix —, AuraVet, AM Consertta, Momentos/Cupido, Loja Virtual, AM Predara, AM Canteira, AM Saberia, AM Horaria, AM Projeta...). Cada sistema novo reaproveita mais que o anterior — a fundação já existe. System Design formal e preparação de entrevista (STAR) entram perto da hora real de aplicar pra vaga.
+  **🎯 Fase sênior (roda junto do Passo 14+):** system design de entrevista, SLI/SLO e postmortem, Kubernetes (noção sólida), conceitos de RabbitMQ/Kafka, réplica de leitura e particionamento, mutation testing, inglês técnico C1 e entrevista em inglês — [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §7, §10, §11, §15.
+  **Clojure/Datomic** (`aura-historico`): só entra aqui, quando o Rendara precisar do histórico — ou sai, se você trocar por Event Sourcing com Marten em .NET (pendência abaixo).
   **✅ Critério de entrada do AM Taskoro** *(22º sistema, GraphQL híbrido via HotChocolate — .NET, não stack separada)*: quando 2-3 sistemas principais já estiverem em produção e a Trilha 42 estiver avançada — ver Trilhas Paralelas abaixo.
 
 ---
@@ -201,7 +216,8 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 |---|---|---|---|
 | **💹 Finanças e Economia** — F0–F3 leves agora; F4+ paralela pesada | F0 já · F1–F2 no Passo 5 · F3 no Passo 7 · F4+ depois do Passo 8 | Contínua (F4–F5: ~4-6 meses) | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) |
 | **🤖 Dados e IA** — Python → ML → deep learning → LLMs → fine-tuning 8B | Depois do Passo 8 | IA0–IA3: ~6-9 meses · IA4–IA7: +1 ano | [trilha-dados-ia](07-estudo-e-carreira/trilha-dados-ia.md) |
-| **🏗️ Engenharia de Software** — não é trilha nova: é o mapa da Trilha Principal por área + engenharia de sistemas financeiros | Já (é a própria Trilha Principal) | — | [trilha-engenharia-software](07-estudo-e-carreira/trilha-engenharia-software.md) |
+| **🐍 Python em paralelo** — base, idiomático, pytest, FastAPI; refaz em Python os exercícios de cada Passo | Passo 3 | Contínuo, 1–2 h/semana | [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) §2.3 |
+| **🏗️ Engenharia de Software** — não é trilha nova: é o mapa da Trilha Principal por área + engenharia de sistemas financeiros. O detalhe técnico completo de cada camada está no [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) | Já (é a própria Trilha Principal) | — | [trilha-engenharia-software](07-estudo-e-carreira/trilha-engenharia-software.md) |
 | **🔧 Robótica e IoT** — R1 ativo pelo projeto agro da escola | R1 já · resto com gatilho | — | [trilha-robotica-iot](07-estudo-e-carreira/trilha-robotica-iot.md) |
 | **Trilha 42** — Circles 00-06, sua stack primeiro depois nativo C/C++ | Depois do Passo 8 | ~7-12 meses ⚠️ | [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) (é a versão corrigida — use esta, não a contagem citada em outros arquivos) |
 | **Pentest/OSCP** | Depois do Passo 8 (mesmo gatilho da Trilha 42) | 1-2 anos | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md), [recursos-links-seguranca-ofensiva](07-estudo-e-carreira/recursos-links-seguranca-ofensiva.md) |

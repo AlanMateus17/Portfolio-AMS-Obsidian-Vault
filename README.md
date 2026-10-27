@@ -99,6 +99,7 @@ Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech 
 - [🤖 Trilha de Dados e Inteligência Artificial](07-estudo-e-carreira/trilha-dados-ia.md)
 - [🏗️ Engenharia de Software — Currículo Mapeado nos Passos](07-estudo-e-carreira/trilha-engenharia-software.md)
 - [🔧 Trilha de Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md)
+- [🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas](07-estudo-e-carreira/curriculo-dev-senior-completo.md)
 
 ## 8 · Material comercial
 
