@@ -1,7 +1,8 @@
 ---
 tags: [estudo, portfolio-ams, ponto-de-entrada]
 tipo: estudo
-status: novo
+status: ativo
+atualizado: 2026-10-26
 ---
 
 # 🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre
@@ -19,6 +20,13 @@ A sequência de *execução* das frentes principais, uma por vez. A trilha de *e
 | Fila 2028+ | — | Demais sistemas, Instituto AMS completo, certificações de segurança | — |
 
 **Regra de foco:** no máximo 1 principal + 1 secundário por fase. O resto fica em fila, pausado de propósito.
+
+> **Renda extra roda por fora desta tabela, desde já:** aulas particulares, manutenção de PC e sites com manutenção mensal (definidos em out/2026). Elas pagam as contas enquanto as fases andam — ver [00-PLANO-UNIFICADO](00-PLANO-UNIFICADO.md) Eixo 2.
+
+### 🎓 Formação acadêmica (roda por fora da Trilha Principal)
+ADS ✅ → **Licenciatura em Matemática** (em curso) → **Ciências Econômicas** 🆕 → Ciência da Computação → Pós Cybersecurity → Pós Arquitetura de Software. Quando matricular na Economia, certificações e o que fica só no autodidata: [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+
+**Removidos do estudo em out/2026:** concurso PF/PRF (e o direito ligado a ele) · desenho · violão.
 
 ### 🔒 Gate de segurança ↔ Linux
 A parte de segurança ([roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md)) só avança com a fase da [trilha-linux-arch-profissional](07-estudo-e-carreira/trilha-linux-arch-profissional.md) concluída:
@@ -116,7 +124,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 
 - [ ] **Passo 3 — C# Fundamentals + Matemática Parte II (início)** *(1-2 semanas)*
   Tipo, classe, coleção, LINQ, nullable reference type, `async/await`, DI + Matemática Cap. 3 (Naturais/Inteiros, Algoritmo de Euclides).
-  **Desenvolver:** entidades `Product`/`Category`/`Sale` + Algoritmo de Euclides implementado.
+  **Desenvolver:** entidades `Product`/`Category`/`Sale` + Algoritmo de Euclides implementado. Todo valor em dinheiro como `decimal`, nunca `double` ([engenharia de sistemas financeiros](07-estudo-e-carreira/trilha-engenharia-software.md)).
   **✅ Pronto quando:** entidades compilam sem warning de nulo; Euclides testado.
 
 - [ ] **Passo 4 — API e Autenticação** *(2-3 semanas)*
@@ -127,6 +135,7 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 - [ ] **Passo 5 — EF Core + CRUD molde** *(1-2 semanas)*
   Migration, relacionamento, `AsNoTracking`, N+1 + Matemática Cap. 5-8 (Racionais, Aplicações Aritméticas, Sequências, Reais).
   **Desenvolver:** CRUD de produto/categoria (RF03, o "molde") → `RowVersion`/RNFT-E01 (não adiar) → reserva de estoque (RF11). Frontend: TanStack Query + Zustand, tabela genérica, formulário genérico.
+  **💹 Finanças (leve):** começa F1 Contabilidade (partidas dobradas, caixa × competência) e F2 Matemática financeira junto do Cap. 6 do Lins — [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md).
   **✅ Pronto quando:** CRUD funciona com teste de concorrência passando.
 
 - [ ] **Passo 6 — Teste como disciplina** *(1-2 semanas)*
@@ -138,14 +147,15 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
 - [ ] **Passo 7 — Fechar o AM Kaixara: pagamento e cobrança** *(2-3 semanas)*
   Aplicação do que já foi estudado, sem tópico novo formal.
   **Desenvolver:** múltiplos meios de pagamento (RF04) → idempotência/RNFT-E02 → abertura/fechamento de caixa (RF05) → cancelamento com restauração (RF06). Frontend: dashboard + checkout.
-  **✅ Pronto quando:** AM Kaixara com fluxo de venda ponta a ponta, pagamento idempotente.
+  **💹 Finanças:** fechamento de caixa gera lançamentos em **partidas dobradas** + DRE simples por consulta SQL (F1). Começa F3 Tributação (o que NFC-e/NF-e exigem, para o `IEmissorFiscal`).
+  **✅ Pronto quando:** AM Kaixara com fluxo de venda ponta a ponta, pagamento idempotente, ledger fechando em zero.
 
 - [ ] **Passo 8 — Arquitetura de verdade** *(contínuo, consolida aqui)*
   SOLID, Design Patterns, Clean Architecture, DI ligada à arquitetura.
   **Desenvolver:** refatorar o AM Kaixara aplicando cada padrão nele mesmo (`IFonteDeEstoque`, `IEmissorFiscal`).
   **✅ Pronto quando:** você refatora uma classe e explica por que segue SOLID.
 
-  > 🔓 **A partir daqui destravam as Trilhas Paralelas** (Trilha 42, Pentest/OSCP) — ver seção abaixo. Elas rodam por baixo dos Passos 9+ sem bloquear nada.
+  > 🔓 **A partir daqui destravam as Trilhas Paralelas** (Finanças F4+, Dados & IA, Trilha 42, Pentest/OSCP) — ver seção abaixo. Elas rodam por baixo dos Passos 9+ sem bloquear nada, **uma de cada vez**.
 
 - [ ] **Passo 9 — Ponte técnica pro próximo sistema** *(após MVP do AM Kaixara)*
   PostGIS, Redis, SignalR, PWA vs. nativo + Matemática Cap. 13 e 17 (Estruturas Lineares, Geometria Analítica — cobre o que seria "Álgebra Linear I"). Inglês Fase C (ADR/README em inglês).
@@ -171,22 +181,28 @@ Cada Passo já junta estudo + desenvolvimento + matemática + idioma no mesmo bl
   **🤖 Automação que entra aqui:** Infraestrutura como código (Terraform) + pipeline CI/CD reutilizável + MkDocs publicado — ver [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md).
 
 - [ ] **Passo 13 — Segundo sistema: AM Rotara** *(bem mais rápido que o primeiro)*
-  Reforço de Geometria Analítica/Estruturas Lineares. No bloco de roteirização: Python + OR-Tools + Matemática Cap. 19-20 (Combinatória, Probabilidade/Bayes).
+  Reforço de Geometria Analítica/Estruturas Lineares. No bloco de roteirização: Python + OR-Tools + Matemática Cap. 19-20 (Combinatória, Probabilidade/Bayes). Se a Trilha de Dados & IA já passou do IA0, o Python já está pronto.
   **Desenvolver:** AM Rotara Bloco 1 (pedido + geolocalização via PostGIS), já herdando login/tema/multi-tenancy/CI-CD do Passo 12.
   **✅ Pronto quando:** segundo sistema em produção — meça quanto tempo real foi economizado vs. o primeiro.
 
 - [ ] **Passo 14 em diante — Terceiro sistema e além**
-  Ordem de prioridade do portfólio (AM Rendara, AuraVet, AM Consertta, Momentos/Cupido, Loja Virtual, AM Predara, AM Canteira, AM Saberia, AM Horaria, AM Projeta...). Cada sistema novo reaproveita mais que o anterior — a fundação já existe. System Design formal e preparação de entrevista (STAR) entram perto da hora real de aplicar pra vaga.
+  Ordem de prioridade do portfólio (AM Rendara — puxa F4/F5 da Trilha de Finanças, conciliação e Pix —, AuraVet, AM Consertta, Momentos/Cupido, Loja Virtual, AM Predara, AM Canteira, AM Saberia, AM Horaria, AM Projeta...). Cada sistema novo reaproveita mais que o anterior — a fundação já existe. System Design formal e preparação de entrevista (STAR) entram perto da hora real de aplicar pra vaga.
   **✅ Critério de entrada do AM Taskoro** *(22º sistema, GraphQL híbrido via HotChocolate — .NET, não stack separada)*: quando 2-3 sistemas principais já estiverem em produção e a Trilha 42 estiver avançada — ver Trilhas Paralelas abaixo.
 
 ---
 
 ## 🧵 TRILHAS PARALELAS — começam num gatilho, nunca bloqueiam a Principal, nunca são esquecidas
 
-Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilha Principal comer esse espaço. Alterne entre elas por engajamento/prazo, não precisam rodar juntas o tempo todo.
+Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilha Principal comer esse espaço.
+
+**Regra nova (out/2026): uma Trilha Paralela pesada ativa por vez.** Com quatro trilhas destravando no mesmo gatilho (Passo 8), rodar todas juntas dilui cada uma até nenhuma andar. Ordem sugerida, alinhada ao objetivo de sistemas financeiros: **Finanças F4–F5 → Dados & IA (IA0–IA3) → Trilha 42 → Pentest/OSCP**. Os módulos leves (Finanças F0–F3, Robótica R1, Espanhol, Física) não contam nesse limite. A ordem é decisão sua — mude aqui se preferir outra.
 
 | Trilha | Começa em | Duração estimada | Documento de detalhe |
 |---|---|---|---|
+| **💹 Finanças e Economia** — F0–F3 leves agora; F4+ paralela pesada | F0 já · F1–F2 no Passo 5 · F3 no Passo 7 · F4+ depois do Passo 8 | Contínua (F4–F5: ~4-6 meses) | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) |
+| **🤖 Dados e IA** — Python → ML → deep learning → LLMs → fine-tuning 8B | Depois do Passo 8 | IA0–IA3: ~6-9 meses · IA4–IA7: +1 ano | [trilha-dados-ia](07-estudo-e-carreira/trilha-dados-ia.md) |
+| **🏗️ Engenharia de Software** — não é trilha nova: é o mapa da Trilha Principal por área + engenharia de sistemas financeiros | Já (é a própria Trilha Principal) | — | [trilha-engenharia-software](07-estudo-e-carreira/trilha-engenharia-software.md) |
+| **🔧 Robótica e IoT** — R1 ativo pelo projeto agro da escola | R1 já · resto com gatilho | — | [trilha-robotica-iot](07-estudo-e-carreira/trilha-robotica-iot.md) |
 | **Trilha 42** — Circles 00-06, sua stack primeiro depois nativo C/C++ | Depois do Passo 8 | ~7-12 meses ⚠️ | [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) (é a versão corrigida — use esta, não a contagem citada em outros arquivos) |
 | **Pentest/OSCP** | Depois do Passo 8 (mesmo gatilho da Trilha 42) | 1-2 anos | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md), [recursos-links-seguranca-ofensiva](07-estudo-e-carreira/recursos-links-seguranca-ofensiva.md) |
 | **Espanhol** | Passo 12 (Inglês já em B1-B2) | Mais rápido que o Inglês | [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) |
@@ -206,6 +222,8 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 | **Produção didática simultânea** (ficha dupla) | A cada tópico novo de matemática+código | [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) |
 | **`aura-status`** — rodar o painel central | Toda segunda-feira (ou depois de qualquer deploy) | [aura-status-documento-projeto-final](10-ferramentas-pessoais/aura-status-documento-projeto-final.md), rotina completa em [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) |
 | **Anki** (repetição espaçada) | Diário, 10-20 min | [metodo-correto-estudo-idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) |
+| **Finanças pessoais e investimentos (F0)** — Finclass + revisão da carteira pelos métodos ARCA/Barsi/Bazin/Graham/Buffett | 1 bloco/semana + revisão mensal no Caixa da Casa | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) §F0 |
+| **Administração e negócios (F7)** — precificação, vendas, funil | Doses pequenas, puxadas pela renda extra | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) §F7 |
 
 ---
 
@@ -220,6 +238,9 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 ---
 
 ## ⚠️ Pendências reais que este sumário não esconde
+
+- **Quando matricular na Economia:** duas graduações EAD juntas consomem todo o tempo de estudo de hoje. Opções e recomendação em [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+- **Ordem das Trilhas Paralelas** (Finanças → IA → 42 → Pentest): sugestão, não decisão — confirme ou troque.
 
 - **Física:** sem sumário real do livro ainda — quando comprar, me mostre o índice e eu reconstruo essa trilha com precisão.
 - **Contagem de projetos da 42 inconsistente entre documentos-fonte** (você vai ver "29", "25 entregáveis + 5 Exam Rank" e "24" em arquivos diferentes do vault) — [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) é o mais recente e corrigido; use ele como fonte de verdade até os outros arquivos serem atualizados.

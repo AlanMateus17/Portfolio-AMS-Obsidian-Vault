@@ -36,7 +36,7 @@ Mesma pergunta que já foi resolvida pro AM Taskoro (GraphQL híbrido), ainda em
 
 ## 3. Ação de médio prazo (sem mudança da versão anterior)
 
-- Avaliar a certificação CEA/CFP pra destravar a camada de consultoria do AM Rendara — ver [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md)
+- Avaliar a certificação CPA + C-Pro I (a CEA foi extinta em jan/2026) ou CFP pra destravar a camada de consultoria do AM Rendara — ver [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md)
 - Revisitar a vertical de Reprodução & Biotecnologia do AuraVet, condicionada à sua decisão sobre atuar nessa área
 
 ---

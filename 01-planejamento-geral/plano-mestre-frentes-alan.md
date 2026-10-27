@@ -85,7 +85,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 **O que é:** finanças pessoais/corporativas com ARCA, Barsi, Value Investing; camada de consultoria premium.
 **Renda:** assinatura do app (self-service) + consultoria paga (bloqueada até certificação).
 **Escalabilidade:** alta no tier self-service; o tier de consultoria tem teto humano (1 pessoa = X clientes atendidos por mês), a menos que você contrate outros consultores certificados depois.
-**Bloqueio regulatório:** para a camada de consultoria, você precisa de **CEA ou CFP** (mais rápido que qualquer pós) e registro como Consultor de Valores Mobiliários pessoa física na CVM (registro gratuito). Sem isso, só dá pra vender a ferramenta, não a consultoria.
+**Bloqueio regulatório:** para a camada de consultoria, você precisa de **CPA + C-Pro I** (a CEA foi extinta pela ANBIMA em jan/2026) **ou CFP** (mais rápido que qualquer pós) e registro como Consultor de Valores Mobiliários pessoa física na CVM (registro gratuito). Sem isso, só dá pra vender a ferramenta, não a consultoria.
 
 ### 3.5 Momentos/Cupido
 **O que é:** plataforma B2C de relacionamento (motor de compatibilidade, sites de casal, cartão NFC físico).
@@ -101,7 +101,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 2. aura-licensing (pré-requisito técnico, desenvolver junto)
 3. AM Rotara (só depois do AM Kaixara maduro, para aproveitar a base)
 4. AM Rendara self-service (pode rodar em paralelo, ritmo mais lento)
-5. AM Rendara consultoria (só após CEA/CFP — planejar como marco de médio prazo)
+5. AM Rendara consultoria (só após CPA + C-Pro I ou CFP — planejar como marco de médio prazo)
 6. Momentos/Cupido (menor prioridade agora — exige esforço de marketing que compete com as outras frentes por tempo)
 
 **Funcionário:** gatilho é **financeiro, não de volume de tarefas** — contrate o primeiro desenvolvedor quando o MRR (receita recorrente mensal) do AM Kaixara cobrir o salário dele com folga (regra de bolso: MRR ≥ 3x o custo do salário, pra sobrar caixa de segurança). Antes disso, contratar dev é queimar caixa que ainda não existe. Suporte técnico/atendimento a cliente pode vir antes do segundo dev, se o volume de tickets começar a tomar seu tempo de desenvolvimento.
@@ -172,7 +172,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 | Educação (apostilas/cursos) | 3 | Média | Média-alta | Raramente necessário |
 | Freelance web dev | 4 | Média-baixa (oportunista) | Baixa-média | Só subcontratação pontual |
 | Dropshipping/afiliados | 5 | Baixa | Alta em tese, arriscada | Só se validado e lucrativo |
-| AM Rendara consultoria | (depende de CEA/CFP) | Baixa por ora | Alta (limitada por pessoa) | Após certificação + demanda |
+| AM Rendara consultoria | (depende de CPA + C-Pro I ou CFP) | Baixa por ora | Alta (limitada por pessoa) | Após certificação + demanda |
 
 ---
 
@@ -191,7 +191,7 @@ Esta é uma frente com 5 produtos que compartilham ~85% da base técnica. Vou de
 
 **Fase 2 — ~9 a 18 meses:**
 - Expandir base de clientes AM Kaixara; iniciar AM Rotara reaproveitando a base técnica.
-- Avaliar início do estudo para CEA (mais rápido que CFP) visando destravar AM Rendara Consultoria.
+- Avaliar início do estudo para CPA + C-Pro I (a CEA foi extinta em jan/2026) visando destravar AM Rendara Consultoria.
 - Decidir sobre primeiro dev contratado, com base na regra de MRR ≥ 3x salário.
 
 **Fase 3 — 18+ meses:**

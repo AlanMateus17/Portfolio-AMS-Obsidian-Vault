@@ -94,6 +94,11 @@ Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech 
 - [Trilha 42 — Estrutura Oficial Verificada (25 entregáveis + 5 Exam Rank)](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md)
 - [🌐 Trilha de Redes](07-estudo-e-carreira/trilha-de-redes.md)
 - [🐧 Trilha Linux/Arch Profissional](07-estudo-e-carreira/trilha-linux-arch-profissional.md)
+- [🎓 Formação Acadêmica — Diplomas, Certificações e Autodidata](07-estudo-e-carreira/formacao-academica.md)
+- [💹 Trilha de Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md)
+- [🤖 Trilha de Dados e Inteligência Artificial](07-estudo-e-carreira/trilha-dados-ia.md)
+- [🏗️ Engenharia de Software — Currículo Mapeado nos Passos](07-estudo-e-carreira/trilha-engenharia-software.md)
+- [🔧 Trilha de Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md)
 
 ## 8 · Material comercial
 

@@ -2,7 +2,7 @@
 tags: [plano-unificado, portfolio-ams, ponto-de-entrada]
 tipo: plano-mestre
 status: ativo
-atualizado: 2026-10-02
+atualizado: 2026-10-26
 ---
 
 # 🎯 Plano Unificado AMS — O Mapa de Tudo
@@ -30,12 +30,15 @@ Nada é descartado. O que não serve à aposta de 12 meses vai pra uma **camada 
 
 | Camada | O que é | % do tempo de estudo |
 |---|---|---|
-| **A — Núcleo** | Dev fullstack .NET → 1º emprego/renda | ~70% |
-| **B — Suporte** | Inglês técnico · Matemática (já é a licenciatura) · Linux/Redes **só até o nível que o dev usa** | ~30% |
-| **C — Paralelas** | École 42/C-C++ · Segurança ofensiva · Espanhol — começam num gatilho, nunca bloqueiam A | 1 bloco fixo/semana |
-| **D — Horizonte longo** | Reverse · kernel · SO próprio · distro própria — todo o [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) | **0% agora** |
+| **A — Núcleo** | Engenharia de software fullstack .NET, **incluindo engenharia de sistemas financeiros** → 1º emprego/renda | ~65% |
+| **B — Suporte** | Inglês técnico · Matemática (já é a licenciatura) · **Finanças leves F0–F3** (investimentos, contabilidade, matemática financeira, tributos) · Linux/Redes **só até o nível que o dev usa** · Robótica R1 (puxada pela aula) | ~35% |
+| **C — Paralelas** (uma pesada por vez) | **Finanças F4–F7** · **Dados & IA** · École 42/C-C++ · Segurança ofensiva · Espanhol · Física — começam num gatilho, nunca bloqueiam A | 1 bloco fixo/semana |
+| **D — Horizonte longo** | Reverse · kernel · SO próprio · distro própria — todo o [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) · Finanças quantitativas (F8) · Robótica R4–R5 · Mandarim | **0% agora** |
+| **Formação** (por fora das camadas) | Licenciatura em Matemática (em curso) → **Ciências Econômicas** → Ciência da Computação → Pós Cyber → Pós Arquitetura | Carga da faculdade |
 
 - **Trilha diária detalhada (Passos 1-14):** [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — é lá que você marca `[x]` todo dia.
+- **Formação acadêmica e certificações:** [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+- **Novas trilhas (out/2026):** [💹 Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md) · [🤖 Dados e IA](07-estudo-e-carreira/trilha-dados-ia.md) · [🏗️ Engenharia de Software](07-estudo-e-carreira/trilha-engenharia-software.md) · [🔧 Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md).
 - **Camada C (paralelas):** [École 42](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [Segurança ofensiva](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) · [Linux/Arch](07-estudo-e-carreira/trilha-linux-arch-profissional.md) · [Redes](07-estudo-e-carreira/trilha-de-redes.md) · [Inglês/Espanhol](07-estudo-e-carreira/ingles-espanhol-integrado.md).
 - **Camada D (longo):** [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) — tudo estacionado com gatilho.
 - **Método (vale pra toda camada):** [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md).
@@ -60,7 +63,7 @@ Nada é descartado. O que não serve à aposta de 12 meses vai pra uma **camada 
 | 4 | **Educação digital** (cursos, infoprodutos, livro, catálogo) | 📈 Ativo já existe (180 apostilas), custo marginal ~zero | Média — ver cluster abaixo | infoprodutos |
 | 5 | **Freelance web dev** (sites p/ negócios locais) | 💵 Caixa por projeto, mas rouba hora do Aura | Baixa — **oportunista** | [plano-mestre-frentes-alan](01-planejamento-geral/plano-mestre-frentes-alan.md) §5 |
 | 6 | **Dropshipping / afiliados** | ⚠️ Mercado saturado, depende de tráfego pago | Baixa — só se validar | [plano-mestre-frentes-alan](01-planejamento-geral/plano-mestre-frentes-alan.md) §6 |
-| 7 | **AM Rendara — consultoria** | 🔒 Bloqueada por certificação (CEA/CFP) + registro CVM | Depois da certificação | [am-rendara](02-sistemas-de-negocio/rendara-documento-projeto-final.md) |
+| 7 | **AM Rendara — consultoria** | 🔒 Bloqueada por certificação (CPA + C-Pro I — a CEA deixou de existir em jan/2026 — ou CFP) + registro CVM, com a sócia | Depois da certificação | [am-rendara](02-sistemas-de-negocio/rendara-documento-projeto-final.md) |
 
 ### 🎓 Cluster "Educação digital" — honestamente, é UMA aposta com 5 nomes
 Você tem cinco coisas que vendem conteúdo educacional — é fácil achar que são 5 frentes, mas competem pelo mesmo tempo e público. Trate como **um funil só**, não cinco:
@@ -117,8 +120,20 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 | Segurança ofensiva (eJPT→OSCP→...) | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) | C→D |
 | Reverse · exploit · kernel · SO/distro próprios | [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) | D |
 | Mandarim | [mapa-horizonte-longo-sistemas](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md) (idiomas longos) | D |
+| Engenharia de software (mapa por área) · engenharia de sistemas financeiros | [trilha-engenharia-software](07-estudo-e-carreira/trilha-engenharia-software.md) | A |
+| Finanças pessoais e investimentos (ARCA, Barsi, Bazin, Graham, Buffett, Finclass) | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F0 | B |
+| Contabilidade · matemática financeira · tributação brasileira | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F1–F3 | B |
+| Finanças corporativas · mercado financeiro e regulação (CVM, BACEN, Pix, Open Finance) | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F4–F5 | C |
+| Economia aplicada · econometria · dados da economia brasileira | faculdade + [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F6 | Formação/C |
+| Administração e negócios (precificação, vendas, processos) | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F7 | B (doses) |
+| Finanças quantitativas | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) F8 | D |
+| Python · dados · ML · deep learning · LLMs · fine-tuning 8B · MLOps | [trilha-dados-ia](07-estudo-e-carreira/trilha-dados-ia.md) | C |
+| Robótica e IoT (Arduino, ESP32, Raspberry Pi) | [trilha-robotica-iot](07-estudo-e-carreira/trilha-robotica-iot.md) | B (R1) → D |
+| Blockchain (ByteSDCoin: PoA, Besu, criptografia) | estudo puxado pelo projeto — doc do projeto + Lins Cap. 4 (RSA) | por projeto |
+| Ciências Econômicas · Ciência da Computação · pós-graduações · certificações | [formacao-academica](07-estudo-e-carreira/formacao-academica.md) | Formação |
 | ⚠️ **Física** | **sem doc — falta o índice do livro** | B (futuro) |
-| ⚠️ **Desenho · Violão** | hobby, sem doc (de propósito — sem meta) | — |
+| ~~Desenho · Violão~~ | **removidos em out/2026** | — |
+| ~~Concurso PF/PRF (direito, TAF)~~ | **removido em out/2026** | — |
 
 ### Renda
 | Frente | Onde mora |
@@ -130,7 +145,10 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 ---
 
 # ⚠️ Decisões que continuam suas (não resolvi sozinho)
-- **Concurso PF/PRF:** no life-plan é "extra", mas são centenas de horas de direito que não cruzam com dev — ou vira prioridade e toma o lugar de um item do núcleo, ou fica na Camada D.
+- ~~**Concurso PF/PRF**~~ — **decidido em out/2026: removido do plano.**
+- **Quando matricular na Economia** e se a Ciência da Computação continua como diploma depois dela: [formacao-academica](07-estudo-e-carreira/formacao-academica.md).
+- **Ordem das Trilhas Paralelas** (Finanças → Dados & IA → 42 → Pentest): sugestão registrada no Sumário, confirme ou troque.
+- **Sócia do Rendara:** o plano dela era CEA, que foi extinta em jan/2026 — o caminho agora é CPA e depois C-Pro I (ou CFP).
 - **Física:** só fecho a trilha com precisão quando você me mostrar o índice do livro.
 - **`aura-historico` (Clojure/Datomic)** e contagem de projetos da 42: pendências herdadas, detalhadas no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md).
 - **Cluster educação:** confirmar a ordem do funil (mini-curso → catálogo → instituto → livro) é decisão sua.

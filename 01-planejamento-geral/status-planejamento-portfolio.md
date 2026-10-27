@@ -29,7 +29,7 @@ status: completo
 | `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) |
 | Decisão de seguro/responsabilidade em trânsito do AM Consertta | Decisão de negócio, não técnica — sinalizada no próprio documento do AM Consertta, ainda não fechada |
 | Vertical de Reprodução & Biotecnologia do AuraVet | Condicionada a uma decisão sua sobre atuação nessa área específica |
-| Certificação CEA/CFP | Pré-requisito pra destravar a camada de consultoria do AM Rendara — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) |
+| Certificação CPA + C-Pro I (ex-CEA) ou CFP | Pré-requisito pra destravar a camada de consultoria do AM Rendara — não é lacuna de documento, é pré-requisito de carreira, já mapeado em [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) |
 
 ---
 
