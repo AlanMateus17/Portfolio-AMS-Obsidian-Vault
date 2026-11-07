@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+<!-- Arquivo GERADO por tools/gerar_docs.py a partir de tools/mapa.template.html e data/. Edite o template ou os dados. -->
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-</head>
-<body>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mapa do Setup AMtech</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap">
 <style>
@@ -111,12 +111,15 @@ code{font-family:var(--mono);font-size:.88em;background:var(--aura-soft);padding
 .step .when{font:500 12px var(--mono);color:var(--muted);margin:2px 0 6px}
 .step p{margin:0;font-size:14px;max-width:68ch}
 </style>
+
+</head>
+<body>
 <div class="wrap">
   <header>
     <div class="eyebrow">Acer Nitro AN515-45 · Grupo AMtech Digital · versão 3 · out/2026</div>
     <h1>Mapa do setup</h1>
     <p class="lede">O setup completo de desenvolvimento, do hardware até a nuvem: o que você já escolheu, o que as empresas grandes pedem hoje e o que está crescendo para os próximos anos. Toque em qualquer item para ver o que ele faz e com quem conversa.</p>
-    <p class="lede"><a href="https://claude.ai/artifact/4Ze2J4Y1oKgAkjuQmbAAG1" target="_top" style="color:var(--aura)">← Ver o diagrama completo do ecossistema</a></p>
+    <p class="lede"><a href="index.html" style="color:var(--aura)">← Ver o diagrama completo do ecossistema</a></p>
   </header>
 
   <section>
@@ -138,7 +141,7 @@ code{font-family:var(--mono);font-size:.88em;background:var(--aura-soft);padding
       <div class="eyebrow">A pilha</div>
       <h2>As camadas do setup</h2>
     </div>
-    <p class="lede">Gerada a partir de <code>data/ecossistema.json</code>, a mesma fonte do diagrama: as camadas, os blocos e as conexões daqui são sempre os mesmos do <a href="https://claude.ai/artifact/4Ze2J4Y1oKgAkjuQmbAAG1" target="_top" style="color:var(--aura)">diagrama interativo</a>.</p>
+    <p class="lede">Gerada a partir de <code>data/ecossistema.json</code>, a mesma fonte do diagrama: as camadas, os blocos e as conexões daqui são sempre os mesmos do <a href="index.html" style="color:var(--aura)">diagrama interativo</a>.</p>
     <div class="legend">
       <span><i class="src local"></i>Local (no notebook)</span>
       <span><i class="src remoto"></i>Remoto (nuvem ou serviço)</span>
@@ -269,5 +272,6 @@ btns.forEach(b=>b.addEventListener("click",()=>apply(b.dataset.f)));
 let saved="all";try{saved=localStorage.getItem("mapa-filtro")||"all"}catch(e){}
 apply(btns.some(b=>b.dataset.f===saved)?saved:"all");
 </script>
+
 </body>
 </html>

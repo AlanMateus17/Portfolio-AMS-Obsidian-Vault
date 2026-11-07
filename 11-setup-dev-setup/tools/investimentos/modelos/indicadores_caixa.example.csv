@@ -1,0 +1,5 @@
+ticker,emissor,tipo,indexador,taxa,liquidez_dias,vencimento_dias,garantia,rating,isento,sena
+TESOURO-SELIC,tesouro,selic,selic,100,1,1100,tesouro,,não,
+LCI-BANCOX-2Y,banco x,lci,cdi,92,720,730,fgc,,sim,
+IPCA-2035,tesouro,ipca,ipca,7.1,1,3300,tesouro,,não,
+DEB-EMPY,empresa y,debenture,cdi,110,1000,1500,nenhuma,bbb,não,

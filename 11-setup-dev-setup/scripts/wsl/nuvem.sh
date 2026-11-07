@@ -3,7 +3,7 @@
 #   bash scripts/wsl/nuvem.sh --simular   # mostra o que faria
 #   bash scripts/wsl/nuvem.sh             # instala
 # Instala: Azure CLI (uv), Terraform (repositório oficial da HashiCorp),
-#          Vercel CLI e Wrangler da Cloudflare (npm global do Node do fnm).
+#          Vercel CLI e Wrangler da Cloudflare (npm global do Node do mise).
 # O login em cada uma é seu: az login, vercel login, wrangler login.
 set -euo pipefail
 
@@ -14,7 +14,7 @@ APT="DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::=--force-confde
 LOG="${HOME}/nuvem-$(date +%Y%m%d-%H%M).log"
 ERROS=0
 export PATH="$HOME/.local/bin:$PATH"
-command -v fnm >/dev/null 2>&1 && eval "$(fnm env --shell bash 2>/dev/null)"
+if command -v mise >/dev/null 2>&1; then eval "$(mise env -s bash 2>/dev/null)"; elif command -v fnm >/dev/null 2>&1; then eval "$(fnm env --shell bash 2>/dev/null)"; fi
 
 linha() { printf '%-9s %-24s %-11s %s\n' "$1" "$2" "$3" "${4:-}" | tee -a "$LOG"; }
 tem() { command -v "$1" >/dev/null 2>&1; }
@@ -40,7 +40,8 @@ fi
 if tem terraform; then linha iac Terraform "JA TEM" "$(terraform version | head -1)"
 else rodar iac Terraform bash -c "
   curl -fsSL https://apt.releases.hashicorp.com/gpg | $SUDO gpg --dearmor --yes -o /usr/share/keyrings/hashicorp.gpg &&
-  echo \"deb [signed-by=/usr/share/keyrings/hashicorp.gpg] https://apt.releases.hashicorp.com \$(. /etc/os-release && echo \"\$VERSION_CODENAME\") main\" | $SUDO tee /etc/apt/sources.list.d/hashicorp.list >/dev/null &&
+  cod=\$(. /etc/os-release && echo \"\$VERSION_CODENAME\") && { curl -fsI https://apt.releases.hashicorp.com/dists/\$cod/Release >/dev/null || cod=noble; } &&
+  echo \"deb [signed-by=/usr/share/keyrings/hashicorp.gpg] https://apt.releases.hashicorp.com \$cod main\" | $SUDO tee /etc/apt/sources.list.d/hashicorp.list >/dev/null &&
   $SUDO apt-get update -y && $SUDO env $APT install terraform"; fi
 
 # Vercel CLI e Wrangler: precisam do Node 22+ do bootstrap

@@ -1,0 +1,44 @@
+name: Site novo ou mudança
+description: Ficha do site. Atribua ao Copilot (ou a outro agente) e ele abre um PR; você só aprova.
+title: "Site: "
+labels: ["site"]
+body:
+  - type: input
+    id: negocio
+    attributes:
+      label: Nome do negócio
+    validations:
+      required: true
+  - type: dropdown
+    id: pacote
+    attributes:
+      label: Pacote
+      options: ["Essencial", "Negócio", "Vendas", "Site próprio do Alan"]
+    validations:
+      required: true
+  - type: textarea
+    id: conteudo
+    attributes:
+      label: Conteúdo
+      description: Endereço, horário, área atendida, WhatsApp, redes, serviços e preços. Sem dado pessoal de cliente final.
+    validations:
+      required: true
+  - type: textarea
+    id: marca
+    attributes:
+      label: Marca
+      description: Cores, logo (anexe) e até 10 fotos com autorização de uso.
+  - type: textarea
+    id: pedido
+    attributes:
+      label: O que fazer nesta issue
+      description: "Uma mudança por issue. Exemplo: criar o site inicial, ou trocar o horário de sábado."
+    validations:
+      required: true
+  - type: checkboxes
+    id: portao
+    attributes:
+      label: Portão
+      options:
+        - label: Entendo que nada vai ao ar sem eu aprovar a prévia e o PR.
+          required: true

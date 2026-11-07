@@ -1,0 +1,32 @@
+# Copie para ~/financas/roi.toml. Valores de exemplo: troque pelos seus todo mês.
+[geral]
+hora_minima = 45
+
+# Cada ferramenta paga e as rendas que ela ajuda ("*" = todas).
+[[ferramenta]]
+nome = "Claude Pro"
+custo = 110
+ofertas = ["*"]
+
+[[ferramenta]]
+nome = "Hostinger"
+custo = 40
+ofertas = ["sites"]
+
+[[ferramenta]]
+nome = "Google AI Plus"
+custo = 25
+ofertas = ["minicurso", "aulas"]
+
+# Um bloco por mês: receita, custos diretos e horas suas de cada renda (ids do portfólio).
+[[mes]]
+mes = "2026-11"
+  [[mes.oferta]]
+  id = "sites"
+  receita = 900
+  custos_diretos = 0
+  horas = 10
+  [[mes.oferta]]
+  id = "avaliacaoia"
+  receita = 300
+  horas = 8

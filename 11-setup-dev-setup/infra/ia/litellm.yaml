@@ -1,0 +1,42 @@
+# Nomes estáveis para os agentes; troque o modelo por trás sem mexer em nenhum agente.
+model_list:
+  - model_name: local
+    litellm_params:
+      model: ollama/qwen2.5:7b
+      api_base: http://host.docker.internal:11434
+  - model_name: rapido
+    litellm_params:
+      model: anthropic/claude-haiku-5-5
+      api_key: os.environ/ANTHROPIC_API_KEY
+  - model_name: forte
+    litellm_params:
+      model: anthropic/claude-sonnet-5-5
+      api_key: os.environ/ANTHROPIC_API_KEY
+  - model_name: gratis            # cota grátis do Gemini (AI Studio): nada sensível
+    litellm_params:
+      model: gemini/gemini-2.5-flash
+      api_key: os.environ/GEMINI_API_KEY
+  - model_name: gratis-cf         # Workers AI da Cloudflare: 10.000 neurônios grátis por dia; nada sensível
+    litellm_params:
+      model: cloudflare/@cf/meta/llama-3.1-8b-instruct
+      api_key: os.environ/CLOUDFLARE_API_KEY
+      account_id: os.environ/CLOUDFLARE_ACCOUNT_ID
+  - model_name: barato            # DeepSeek: muito barato; dados na China, nada sensível
+    litellm_params:
+      model: deepseek/deepseek-chat
+      api_key: os.environ/DEEPSEEK_API_KEY
+  - model_name: reserva           # OpenRouter: modelos grátis com limite
+    litellm_params:
+      model: openrouter/openrouter/auto
+      api_key: os.environ/OPENROUTER_API_KEY
+  - model_name: gpu-alugada        # vLLM numa GPU por hora (RunPod); só quando ligada
+    litellm_params:
+      model: openai/seu-modelo
+      api_base: os.environ/VLLM_URL
+router_settings:
+  fallbacks:
+    - forte: [rapido]
+    - rapido: [gratis, gratis-cf, barato, reserva, local]
+litellm_settings:
+  max_budget: 20          # US$ por mês no total; passou, recusa
+  budget_duration: 30d

@@ -1,0 +1,17 @@
+# Arquitetura de um sistema AM (exemplo para o just diagrama). Gera docs/arquitetura-exemplo.svg.
+direction: right
+cliente: Cliente {shape: person}
+web: apps/web (Next.js) {
+  zod: Zod na borda
+}
+api: apps/api (ASP.NET Core) {
+  core: packages/core (regras puras)
+  db: packages/db (EF Core)
+}
+pg: PostgreSQL {shape: cylinder}
+obs: SigNoz + GlitchTip
+cliente -> web: HTTPS (kamal-proxy)
+web -> api: contrato OpenAPI
+api.core -> api.db
+api.db -> pg
+api -> obs: OpenTelemetry e erros

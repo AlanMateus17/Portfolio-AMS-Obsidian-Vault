@@ -1,0 +1,8 @@
+// Zellij: multiplexador principal (ADR 0008). Atalhos aparecem na barra de baixo; Ctrl+o d desanexa.
+default_layout "setup"
+default_shell "bash"
+pane_frames false
+mouse_mode true
+copy_on_select true
+show_startup_tips false
+session_serialization true

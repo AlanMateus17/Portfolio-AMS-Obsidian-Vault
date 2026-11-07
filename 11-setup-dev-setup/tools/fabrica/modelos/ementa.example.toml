@@ -1,0 +1,10 @@
+disciplina = "Lógica de Programação"
+turma = "1º Técnico"
+
+[[semana]]
+numero = 1
+tema = "Algoritmos no dia a dia"
+objetivos = ["Explicar o que é um algoritmo", "Escrever um algoritmo em passos", "Identificar entrada, processamento e saída"]
+habilidades = ["[código da habilidade]"]
+recursos = ["quadro", "projetor"]
+atividade = "Algoritmo para fazer um sanduíche, testado pelos colegas"

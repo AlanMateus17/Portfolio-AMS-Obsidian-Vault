@@ -1,0 +1,4 @@
+ticker,setor,preco,dy,dy_medio,dividendo_medio,crescimento_dividendos,divida_pl,lpa,vpa,liquidez_corrente,roe,margem_liquida,divida_liquida_ebitda,roic,ev_ebit,fscore,peg,anos_dividendos,anos_lucro,sena
+EXEM3,energia,20,8,7,1.6,4,0.6,2.5,15,1.8,17,22,1.5,14,6,7,0.8,10,10,sim
+TEST4,varejo,30,2,2,0.6,2,1.8,1.0,8,1.1,9,4,3.5,8,12,4,2.0,3,4,não
+FICT3,bancos,25,9,8,2.0,3,,3.2,20,,18,25,,,,6,0.9,10,10,

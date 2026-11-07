@@ -169,42 +169,42 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Selo Editora AMS Silva](#selo) | Local | Marca da editora usada nos livros, no seu CPF por enquanto. Vira empresa quando a renda justificar. | passo 20.7 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Repositório do livro](#brepo) | Remoto | Um repositório por livro: texto, exercícios, figuras, código, estilo, errata e changelog. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Seu modelo de criação](#modelo) | Local | Template de capítulo e regras que o pipeline confere. Aguardando o seu modelo. | passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Fonte única (Markdown + Pandoc)](#fonte) | Local | O texto escrito uma vez e convertido em LaTeX, EPUB e HTML. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Exercícios em YAML](#exyaml) | Local | Enunciado, nível, fonte, gabarito e solução. Gera a lista do capítulo, o gabarito, o site am-mentor e o Anki. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos); passo 22.6 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 22.7 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 22.13 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Selo Editora AMS Silva](#selo) | Local | Marca da editora usada nos livros, no seu CPF por enquanto. Vira empresa quando a renda justificar. | passo 43.7 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Repositório do livro](#brepo) | Remoto | Um repositório por livro: texto, exercícios, figuras, código, estilo, errata e changelog. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Seu modelo de criação](#modelo) | Local | Template de capítulo e regras que o pipeline confere. Aguardando o seu modelo. | passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Fonte única (Markdown + Pandoc)](#fonte) | Local | O texto escrito uma vez e convertido em LaTeX, EPUB e HTML. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Exercícios em YAML](#exyaml) | Local | Enunciado, nível, fonte, gabarito e solução. Gera a lista do capítulo, o gabarito, o site am-mentor e o Anki. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos); passo 46.6 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.7 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.13 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Pranchas TikZ e SVG](#tikz) | Local | Diagramas técnicos vetoriais versionados como código. | passo 4.4 · Semana 2 · nov/2026 |
-| [Classe LaTeX do livro](#bcls) | Local | A identidade visual (papel creme, verdigris, latão, Garamond) aplicada a toda página. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Pipeline do livro (CI)](#bci) | Remoto | A cada mudança: compila e testa o código, confere gabaritos, revisa texto e links, gera PDF, EPUB e arquivo de impressão. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Revisão automática (LanguageTool, Vale)](#lint) | Local | Ortografia e regras de estilo da editora. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Agentes da editora](#bagentes) | Local | Revisor técnico, gerador de testes, verificador de gabarito, leitor iniciante e consistência entre capítulos. | passo 20.5 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Leitores beta e revisão técnica](#beta) | Físico | 3 a 5 leitores do público e uma segunda pessoa da área antes de cada edição. | passo 20.9 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Errata e edições](#errata) | Remoto | Correções públicas e número de edição; o leitor reporta erros por formulário. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [ISBN + código de barras (CBL)](#isbn) | Remoto · precisa de conta | Um ISBN por formato (impresso e ebook), pela plataforma da Câmara Brasileira do Livro. | passo 20.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Ficha catalográfica](#ficha) | Remoto | Feita pela CBL ou por bibliotecário com CRB; vai no verso da folha de rosto. | passo 20.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Depósito legal](#deplegal) | Físico | Pelo menos 1 exemplar à Biblioteca Nacional até 30 dias após publicar (Lei 10.994/2004). | passo 20.11 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Amazon KDP](#kdp) | Remoto · precisa de conta | Ebook com royalty de 35% ou 70% (no Brasil, 70% entre R$ 5,99 e R$ 31,99, com KDP Select) e impressão sob demanda. | passo 20.10 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Gráfica sob demanda (Brasil)](#pod) | Remoto · precisa de conta · futuro | Livro impresso sem estoque; compare custo, prazo e cópia de prova. | passo 29.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Kit edição especial](#bkit) | Físico · futuro | Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins. | passo 29.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Curso por seção](#bcurso) | Remoto · futuro | Uma aula por seção na ordem do sumário, com voz clonada e tela. | passo 29.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Edição do professor](#prof) | Local · futuro | Slides, planos de aula, avaliações e gabaritos; licença para escolas. | passo 29.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Traduções (espanhol, inglês)](#trad) | Remoto · futuro | Tradução revisada por nativo; ebook e curso dublados. | passo 29.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Quadro de referências](#refs) | Remoto | Referências de design, pranchas, caixas e paletas testadas em impressão. | passo 20.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Matriz de editais](#editais) | Local | Cada tópico dos editais de PF, PRF e Forças Armadas ligado ao capítulo que o ensina; o pipeline mostra a cobertura e aponta lacunas. | passo 20.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Projeto do capítulo](#projcap) | Local | Cada capítulo termina com um projeto que só se resolve dominando o assunto, no estilo da École 42. | passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Mapa de pré-requisitos](#prereq) | Local | Cada conceito tem identificador; o pipeline avisa quando algo é usado antes de ser ensinado ou exige outro livro. | passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Seu método (metodo.yaml)](#metodo) | Local | O passo a passo de criação que você vai implementar: cada etapa com entrada, saída e critério de conclusão, conferido pelo pipeline. | passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Acervos de imagens (APIs)](#acervos) | Remoto · precisa de conta | Openverse, Wikimedia Commons, Smithsonian, The Met, Europeana, Library of Congress, NASA, Internet Archive, Biblioteca Nacional Digital, Unsplash e Pexels. | passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Busca automática de imagens](#buscaimg) | Local | Script que consulta os acervos a partir do figuras.yaml de cada capítulo e traz candidatos com licença e resolução. | passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Filtro de licença e fichas](#licenca) | Local | Só passa domínio público, CC0, CC BY, CC BY-SA (com cuidado) e licenças de banco com uso comercial. Cada imagem ganha uma ficha com autor, fonte, licença e link. | passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Folha de contato (artefato)](#contato) | Remoto | Página com os candidatos lado a lado para você escolher. | passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Créditos e legendas](#creditos) | Local | Gerados das fichas: legenda de cada imagem e página de créditos. O build falha se faltar ficha. | passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Figuras por código (Matplotlib…)](#figcod) | Local | Gráficos e grafos gerados de dados e definições a cada build, no estilo do livro. | passo 20.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Classe LaTeX do livro](#bcls) | Local | A identidade visual (papel creme, verdigris, latão, Garamond) aplicada a toda página. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Pipeline do livro (CI)](#bci) | Remoto | A cada mudança: compila e testa o código, confere gabaritos, revisa texto e links, gera PDF, EPUB e arquivo de impressão. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Revisão automática (LanguageTool, Vale)](#lint) | Local | Ortografia e regras de estilo da editora. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Agentes da editora](#bagentes) | Local | Revisor técnico, gerador de testes, verificador de gabarito, leitor iniciante e consistência entre capítulos. | passo 43.5 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Leitores beta e revisão técnica](#beta) | Físico | 3 a 5 leitores do público e uma segunda pessoa da área antes de cada edição. | passo 43.9 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Errata e edições](#errata) | Remoto | Correções públicas e número de edição; o leitor reporta erros por formulário. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [ISBN + código de barras (CBL)](#isbn) | Remoto · precisa de conta | Um ISBN por formato (impresso e ebook), pela plataforma da Câmara Brasileira do Livro. | passo 43.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Ficha catalográfica](#ficha) | Remoto | Feita pela CBL ou por bibliotecário com CRB; vai no verso da folha de rosto. | passo 43.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Depósito legal](#deplegal) | Físico | Pelo menos 1 exemplar à Biblioteca Nacional até 30 dias após publicar (Lei 10.994/2004). | passo 43.11 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Amazon KDP](#kdp) | Remoto · precisa de conta | Ebook com royalty de 35% ou 70% (no Brasil, 70% entre R$ 5,99 e R$ 31,99, com KDP Select) e impressão sob demanda. | passo 43.10 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Gráfica sob demanda (Brasil)](#pod) | Remoto · precisa de conta · futuro | Livro impresso sem estoque; compare custo, prazo e cópia de prova. | passo 53.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Kit edição especial](#bkit) | Físico · futuro | Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins. | passo 53.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Curso por seção](#bcurso) | Remoto · futuro | Uma aula por seção na ordem do sumário, com voz clonada e tela. | passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Edição do professor](#prof) | Local · futuro | Slides, planos de aula, avaliações e gabaritos; licença para escolas. | passo 53.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Traduções (espanhol, inglês)](#trad) | Remoto · futuro | Tradução revisada por nativo; ebook e curso dublados. | passo 53.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Quadro de referências](#refs) | Remoto | Referências de design, pranchas, caixas e paletas testadas em impressão. | passo 43.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Matriz de editais](#editais) | Local | Cada tópico dos editais de PF, PRF e Forças Armadas ligado ao capítulo que o ensina; o pipeline mostra a cobertura e aponta lacunas. | passo 43.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Projeto do capítulo](#projcap) | Local | Cada capítulo termina com um projeto que só se resolve dominando o assunto, no estilo da École 42. | passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Mapa de pré-requisitos](#prereq) | Local | Cada conceito tem identificador; o pipeline avisa quando algo é usado antes de ser ensinado ou exige outro livro. | passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Seu método (metodo.yaml)](#metodo) | Local | O passo a passo de criação que você vai implementar: cada etapa com entrada, saída e critério de conclusão, conferido pelo pipeline. | passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Acervos de imagens (APIs)](#acervos) | Remoto · precisa de conta | Openverse, Wikimedia Commons, Smithsonian, The Met, Europeana, Library of Congress, NASA, Internet Archive, Biblioteca Nacional Digital, Unsplash e Pexels. | passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Busca automática de imagens](#buscaimg) | Local | Script que consulta os acervos a partir do figuras.yaml de cada capítulo e traz candidatos com licença e resolução. | passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Filtro de licença e fichas](#licenca) | Local | Só passa domínio público, CC0, CC BY, CC BY-SA (com cuidado) e licenças de banco com uso comercial. Cada imagem ganha uma ficha com autor, fonte, licença e link. | passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Folha de contato (artefato)](#contato) | Remoto | Página com os candidatos lado a lado para você escolher. | passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Créditos e legendas](#creditos) | Local | Gerados das fichas: legenda de cada imagem e página de créditos. O build falha se faltar ficha. | passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Figuras por código (Matplotlib…)](#figcod) | Local | Gráficos e grafos gerados de dados e definições a cada build, no estilo do livro. | passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [CircuiTikZ](#circ) | Local | Circuitos e portas lógicas para a física e a eletrônica do livro. | passo 4.4 · Semana 2 · nov/2026 |
-| [Geradores de tabelas](#gerad) | Local | Tabelas-verdade, conversões de base e tabelas de operações geradas e conferidas por script. Exemplo testado em tools/editora. | passo 20.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Manim (animações)](#manim) | Local · futuro | O mesmo código da figura vira animação para as aulas do curso. | passo 29.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Texto alternativo](#alt) | Local | Descrição de cada figura para o EPUB acessível; rascunho por IA, revisão sua. | passo 20.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Geradores de tabelas](#gerad) | Local | Tabelas-verdade, conversões de base e tabelas de operações geradas e conferidas por script. Exemplo testado em tools/editora. | passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Manim (animações)](#manim) | Local · futuro | O mesmo código da figura vira animação para as aulas do curso. | passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Texto alternativo](#alt) | Local | Descrição de cada figura para o EPUB acessível; rascunho por IA, revisão sua. | passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 
 <a id="selo"></a>
 
@@ -214,7 +214,7 @@ flowchart LR
 
 Marca da editora usada nos livros, no seu CPF por enquanto. Vira empresa quando a renda justificar.
 
-**Quando entra:** passo 20.7 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.7 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -229,7 +229,7 @@ Marca da editora usada nos livros, no seu CPF por enquanto. Vira empresa quando 
 
 Um repositório por livro: texto, exercícios, figuras, código, estilo, errata e changelog.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -251,7 +251,7 @@ Um repositório por livro: texto, exercícios, figuras, código, estilo, errata 
 
 Template de capítulo e regras que o pipeline confere. Aguardando o seu modelo.
 
-**Quando entra:** passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -267,7 +267,7 @@ Template de capítulo e regras que o pipeline confere. Aguardando o seu modelo.
 
 O texto escrito uma vez e convertido em LaTeX, EPUB e HTML.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -286,7 +286,7 @@ O texto escrito uma vez e convertido em LaTeX, EPUB e HTML.
 
 Enunciado, nível, fonte, gabarito e solução. Gera a lista do capítulo, o gabarito, o site am-mentor e o Anki.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos); passo 22.6 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 22.7 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 22.13 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos); passo 46.6 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.7 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.13 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -319,7 +319,7 @@ Diagramas técnicos vetoriais versionados como código.
 
 A identidade visual (papel creme, verdigris, latão, Garamond) aplicada a toda página.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -337,7 +337,7 @@ A identidade visual (papel creme, verdigris, latão, Garamond) aplicada a toda p
 
 A cada mudança: compila e testa o código, confere gabaritos, revisa texto e links, gera PDF, EPUB e arquivo de impressão.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -365,7 +365,7 @@ A cada mudança: compila e testa o código, confere gabaritos, revisa texto e li
 
 Ortografia e regras de estilo da editora.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -379,7 +379,7 @@ Ortografia e regras de estilo da editora.
 
 Revisor técnico, gerador de testes, verificador de gabarito, leitor iniciante e consistência entre capítulos.
 
-**Quando entra:** passo 20.5 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.5 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -394,7 +394,7 @@ Revisor técnico, gerador de testes, verificador de gabarito, leitor iniciante e
 
 3 a 5 leitores do público e uma segunda pessoa da área antes de cada edição.
 
-**Quando entra:** passo 20.9 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.9 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -409,7 +409,7 @@ Revisor técnico, gerador de testes, verificador de gabarito, leitor iniciante e
 
 Correções públicas e número de edição; o leitor reporta erros por formulário.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -425,7 +425,7 @@ Correções públicas e número de edição; o leitor reporta erros por formulá
 
 Um ISBN por formato (impresso e ebook), pela plataforma da Câmara Brasileira do Livro.
 
-**Quando entra:** passo 20.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -440,7 +440,7 @@ Um ISBN por formato (impresso e ebook), pela plataforma da Câmara Brasileira do
 
 Feita pela CBL ou por bibliotecário com CRB; vai no verso da folha de rosto.
 
-**Quando entra:** passo 20.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -454,7 +454,7 @@ Feita pela CBL ou por bibliotecário com CRB; vai no verso da folha de rosto.
 
 Pelo menos 1 exemplar à Biblioteca Nacional até 30 dias após publicar (Lei 10.994/2004).
 
-**Quando entra:** passo 20.11 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.11 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -468,7 +468,7 @@ Pelo menos 1 exemplar à Biblioteca Nacional até 30 dias após publicar (Lei 10
 
 Ebook com royalty de 35% ou 70% (no Brasil, 70% entre R$ 5,99 e R$ 31,99, com KDP Select) e impressão sob demanda.
 
-**Quando entra:** passo 20.10 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.10 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -483,7 +483,7 @@ Ebook com royalty de 35% ou 70% (no Brasil, 70% entre R$ 5,99 e R$ 31,99, com KD
 
 Livro impresso sem estoque; compare custo, prazo e cópia de prova.
 
-**Quando entra:** passo 29.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -498,7 +498,7 @@ Livro impresso sem estoque; compare custo, prazo e cópia de prova.
 
 Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins.
 
-**Quando entra:** passo 29.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -513,7 +513,7 @@ Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins.
 
 Uma aula por seção na ordem do sumário, com voz clonada e tela.
 
-**Quando entra:** passo 29.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -533,7 +533,7 @@ Uma aula por seção na ordem do sumário, com voz clonada e tela.
 
 Slides, planos de aula, avaliações e gabaritos; licença para escolas.
 
-**Quando entra:** passo 29.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -548,7 +548,7 @@ Slides, planos de aula, avaliações e gabaritos; licença para escolas.
 
 Tradução revisada por nativo; ebook e curso dublados.
 
-**Quando entra:** passo 29.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -563,7 +563,7 @@ Tradução revisada por nativo; ebook e curso dublados.
 
 Referências de design, pranchas, caixas e paletas testadas em impressão.
 
-**Quando entra:** passo 20.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -579,7 +579,7 @@ Referências de design, pranchas, caixas e paletas testadas em impressão.
 
 Cada tópico dos editais de PF, PRF e Forças Armadas ligado ao capítulo que o ensina; o pipeline mostra a cobertura e aponta lacunas.
 
-**Quando entra:** passo 20.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -594,7 +594,7 @@ Cada tópico dos editais de PF, PRF e Forças Armadas ligado ao capítulo que o 
 
 Cada capítulo termina com um projeto que só se resolve dominando o assunto, no estilo da École 42.
 
-**Quando entra:** passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -610,7 +610,7 @@ Cada capítulo termina com um projeto que só se resolve dominando o assunto, no
 
 Cada conceito tem identificador; o pipeline avisa quando algo é usado antes de ser ensinado ou exige outro livro.
 
-**Quando entra:** passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -625,7 +625,7 @@ Cada conceito tem identificador; o pipeline avisa quando algo é usado antes de 
 
 O passo a passo de criação que você vai implementar: cada etapa com entrada, saída e critério de conclusão, conferido pelo pipeline.
 
-**Quando entra:** passo 20.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -640,7 +640,7 @@ O passo a passo de criação que você vai implementar: cada etapa com entrada, 
 
 Openverse, Wikimedia Commons, Smithsonian, The Met, Europeana, Library of Congress, NASA, Internet Archive, Biblioteca Nacional Digital, Unsplash e Pexels.
 
-**Quando entra:** passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -655,7 +655,7 @@ Openverse, Wikimedia Commons, Smithsonian, The Met, Europeana, Library of Congre
 
 Script que consulta os acervos a partir do figuras.yaml de cada capítulo e traz candidatos com licença e resolução.
 
-**Quando entra:** passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -671,7 +671,7 @@ Script que consulta os acervos a partir do figuras.yaml de cada capítulo e traz
 
 Só passa domínio público, CC0, CC BY, CC BY-SA (com cuidado) e licenças de banco com uso comercial. Cada imagem ganha uma ficha com autor, fonte, licença e link.
 
-**Quando entra:** passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -688,7 +688,7 @@ Só passa domínio público, CC0, CC BY, CC BY-SA (com cuidado) e licenças de b
 
 Página com os candidatos lado a lado para você escolher.
 
-**Quando entra:** passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -703,7 +703,7 @@ Página com os candidatos lado a lado para você escolher.
 
 Gerados das fichas: legenda de cada imagem e página de créditos. O build falha se faltar ficha.
 
-**Quando entra:** passo 20.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.3 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -719,7 +719,7 @@ Gerados das fichas: legenda de cada imagem e página de créditos. O build falha
 
 Gráficos e grafos gerados de dados e definições a cada build, no estilo do livro.
 
-**Quando entra:** passo 20.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -749,7 +749,7 @@ Circuitos e portas lógicas para a física e a eletrônica do livro.
 
 Tabelas-verdade, conversões de base e tabelas de operações geradas e conferidas por script. Exemplo testado em tools/editora.
 
-**Quando entra:** passo 20.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -763,7 +763,7 @@ Tabelas-verdade, conversões de base e tabelas de operações geradas e conferid
 
 O mesmo código da figura vira animação para as aulas do curso.
 
-**Quando entra:** passo 29.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -779,7 +779,7 @@ O mesmo código da figura vira animação para as aulas do curso.
 
 Descrição de cada figura para o EPUB acessível; rascunho por IA, revisão sua.
 
-**Quando entra:** passo 20.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

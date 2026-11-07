@@ -1,0 +1,112 @@
+# Política do Jarvis: o que cada comando de voz pode fazer. Copie para ~/.config/amtech/jarvis.toml e troque
+# os ids pelos das suas entidades no Home Assistant (Configurações > Dispositivos > Entidades).
+#   python3 tools/jarvis/politica.py validar ~/.config/amtech/jarvis.toml
+#
+# Níveis: livre · voz (confirma falando) · celular (toque no aviso do app) · proibido.
+# A primeira regra que casa vale. Alguns mínimos são fixos no código (destrancar, abrir janela e portão,
+# desligar geladeira, desarmar alarme, desligar câmera) e o arquivo não consegue afrouxar.
+
+[geral]
+# Acima de ~25 entidades os modelos começam a esquecer aparelhos. Exponha só o que você fala.
+max_entidades_expostas = 25
+notificar = "notify.mobile_app_celular_do_alan"
+
+# ---------------------------------------------------------------- entidades
+[[entidade]]
+id = "light.sala"
+apelido = "luz da sala"
+tipo = "luz"
+
+[[entidade]]
+id = "light.quarto"
+apelido = "luz do quarto"
+tipo = "luz"
+
+[[entidade]]
+id = "switch.tomada_escritorio"
+apelido = "tomada do escritório"
+tipo = "tomada"
+
+[[entidade]]
+id = "switch.geladeira"
+apelido = "geladeira"
+tipo = "geladeira"
+# Desligar só com o ok no celular e por no máximo este tempo (degelo, limpeza, troca de tomada).
+religar_em_min = 30
+
+[[entidade]]
+id = "lock.porta_da_frente"
+apelido = "porta da frente"
+tipo = "porta"
+
+[[entidade]]
+id = "cover.janela_quarto"
+apelido = "janela do quarto"
+tipo = "janela"
+
+[[entidade]]
+id = "cover.cortina_sala"
+apelido = "cortina da sala"
+tipo = "cortina"
+
+[[entidade]]
+id = "sensor.consumo_energia_hoje"
+apelido = "energia de hoje"
+tipo = "sensor"
+
+[[entidade]]
+id = "sensor.agua_hoje"
+apelido = "água de hoje"
+tipo = "sensor"
+
+[[entidade]]
+id = "camera.quintal"
+apelido = "câmera do quintal"
+tipo = "camera"
+
+[[entidade]]
+id = "vacuum.robo_aspirador"
+apelido = "robô aspirador"
+tipo = "aspirador"
+
+# ---------------------------------------------------------------- regras
+[[regra]]
+acao = "light.turn_on"
+nivel = "livre"
+
+[[regra]]
+acao = "light.turn_off"
+nivel = "livre"
+
+[[regra]]
+acao = "lock.lock"
+nivel = "livre"
+motivo = "Trancar é o sentido seguro."
+
+[[regra]]
+acao = "cover.close_cover"
+nivel = "livre"
+motivo = "Fechar é o sentido seguro."
+
+[[regra]]
+acao = "cover.open_cover"
+tipo = "cortina"
+nivel = "livre"
+
+[[regra]]
+acao = "switch.turn_on"
+nivel = "livre"
+
+[[regra]]
+acao = "switch.turn_off"
+tipo = "tomada"
+nivel = "voz"
+
+[[regra]]
+acao = "vacuum.start"
+nivel = "livre"
+
+[[regra]]
+acao = "camera.snapshot"
+nivel = "livre"
+motivo = "Foto vai só para o seu celular, nunca para IA na nuvem."

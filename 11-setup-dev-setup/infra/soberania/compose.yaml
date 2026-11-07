@@ -1,0 +1,251 @@
+# Serviços próprios do setup (soberania): cada um num perfil, ligado só quando for usar.
+#   cp .env.example .env   (e preencha as senhas, geradas no KeePassXC)
+#   docker compose --profile forgejo --profile glitchtip up -d
+#
+# Tudo escuta em 127.0.0.1. Acesso de fora pelo Tailscale (ou Headscale) e HTTPS pelo Caddy/kamal-proxy.
+# Onde rodar: na VM grátis da Oracle (fase Soberania); os mais pesados (SigNoz, Plane) têm instalador próprio.
+name: soberania
+
+services:
+  # Espelho dos repositórios do GitHub, com Git LFS: o código continua seu se a conta for bloqueada.
+  forgejo:
+    profiles: [forgejo]
+    image: codeberg.org/forgejo/forgejo:${FORGEJO_VERSAO:-11}
+    restart: unless-stopped
+    environment:
+      USER_UID: "1000"
+      USER_GID: "1000"
+      FORGEJO__database__DB_TYPE: sqlite3
+      FORGEJO__server__ROOT_URL: ${FORGEJO_URL:-http://localhost:3000/}
+      FORGEJO__server__LFS_START_SERVER: "true"
+      FORGEJO__service__DISABLE_REGISTRATION: "true"
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:2222:22"
+    volumes:
+      - forgejo-dados:/data
+
+  # Git por SSH no servidor da casa, sem web: firmware, placas e o que não precisa de nuvem.
+  soft-serve:
+    profiles: [soft-serve]
+    image: charmbracelet/soft-serve:${SOFTSERVE_VERSAO:-latest}
+    restart: unless-stopped
+    environment:
+      SOFT_SERVE_INITIAL_ADMIN_KEYS: ${SOFTSERVE_CHAVE_ADMIN:?defina SOFTSERVE_CHAVE_ADMIN (sua chave SSH pública) no .env}
+    ports:
+      - "127.0.0.1:23231:23231"
+    volumes:
+      - softserve-dados:/soft-serve
+
+  # Servidor de controle da rede privada (reserva do Tailscale e redes de clientes).
+  headscale:
+    profiles: [headscale]
+    image: headscale/headscale:${HEADSCALE_VERSAO:-stable}
+    restart: unless-stopped
+    command: serve
+    ports:
+      - "127.0.0.1:8085:8080"
+    volumes:
+      - ./headscale/config.yaml:/etc/headscale/config.yaml:ro
+      - headscale-dados:/var/lib/headscale
+
+  # Erros e travamentos dos sistemas (compatível com o SDK do Sentry). Principal; o Sentry SaaS é a reserva.
+  glitchtip-db:
+    profiles: [glitchtip]
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: glitchtip
+      POSTGRES_PASSWORD: ${GLITCHTIP_DB_SENHA:?defina GLITCHTIP_DB_SENHA no .env}
+      POSTGRES_DB: glitchtip
+    volumes:
+      - glitchtip-db:/var/lib/postgresql/data
+  glitchtip-redis:
+    profiles: [glitchtip]
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+  glitchtip-web:
+    profiles: [glitchtip]
+    image: glitchtip/glitchtip:${GLITCHTIP_VERSAO:-latest}
+    restart: unless-stopped
+    depends_on: [glitchtip-db, glitchtip-redis]
+    environment: &glitchtip-env
+      DATABASE_URL: postgres://glitchtip:${GLITCHTIP_DB_SENHA:?defina GLITCHTIP_DB_SENHA no .env}@glitchtip-db:5432/glitchtip
+      REDIS_URL: redis://glitchtip-redis:6379/0
+      SECRET_KEY: ${GLITCHTIP_CHAVE:?defina GLITCHTIP_CHAVE no .env}
+      PORT: "8000"
+      GLITCHTIP_DOMAIN: ${GLITCHTIP_URL:-http://localhost:8001}
+      EMAIL_URL: consolemail://
+      ENABLE_USER_REGISTRATION: "false"
+    ports:
+      - "127.0.0.1:8001:8000"
+  glitchtip-worker:
+    profiles: [glitchtip]
+    image: glitchtip/glitchtip:${GLITCHTIP_VERSAO:-latest}
+    restart: unless-stopped
+    command: ./bin/run-celery-with-beat.sh
+    depends_on: [glitchtip-db, glitchtip-redis]
+    environment: *glitchtip-env
+  glitchtip-migrate:
+    profiles: [glitchtip]
+    image: glitchtip/glitchtip:${GLITCHTIP_VERSAO:-latest}
+    command: ./bin/run-migrate.sh
+    depends_on: [glitchtip-db, glitchtip-redis]
+    environment: *glitchtip-env
+
+  # Manuais dos clientes (wiki em livros, capítulos e páginas). A documentação de dev segue no MkDocs.
+  bookstack-db:
+    profiles: [bookstack]
+    image: lscr.io/linuxserver/mariadb:latest
+    restart: unless-stopped
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      MYSQL_ROOT_PASSWORD: ${BOOKSTACK_DB_SENHA:?defina BOOKSTACK_DB_SENHA no .env}
+      MYSQL_DATABASE: bookstack
+      MYSQL_USER: bookstack
+      MYSQL_PASSWORD: ${BOOKSTACK_DB_SENHA:?defina BOOKSTACK_DB_SENHA no .env}
+    volumes:
+      - bookstack-db:/config
+  bookstack:
+    profiles: [bookstack]
+    image: lscr.io/linuxserver/bookstack:latest
+    restart: unless-stopped
+    depends_on: [bookstack-db]
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+      APP_URL: ${BOOKSTACK_URL:-http://localhost:6875}
+      APP_KEY: ${BOOKSTACK_APP_KEY:?defina BOOKSTACK_APP_KEY no .env (base64:... de 32 bytes)}
+      DB_HOST: bookstack-db
+      DB_PORT: "3306"
+      DB_DATABASE: bookstack
+      DB_USERNAME: bookstack
+      DB_PASSWORD: ${BOOKSTACK_DB_SENHA:?defina BOOKSTACK_DB_SENHA no .env}
+    ports:
+      - "127.0.0.1:6875:80"
+    volumes:
+      - bookstack-dados:/config
+
+  # Orçamento por envelopes (base zero) local-first: a sua conta pessoal; o Caixa da Casa segue para a família.
+  actual:
+    profiles: [actual]
+    image: actualbudget/actual-server:${ACTUAL_VERSAO:-latest}
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5006:5006"
+    volumes:
+      - actual-dados:/data
+
+  # Painel do patrimônio em qualquer lugar (o cálculo de rentabilidade fica no Portfolio Performance).
+  ghostfolio-db:
+    profiles: [ghostfolio]
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ghostfolio
+      POSTGRES_PASSWORD: ${GHOSTFOLIO_DB_SENHA:?defina GHOSTFOLIO_DB_SENHA no .env}
+      POSTGRES_DB: ghostfolio
+    volumes:
+      - ghostfolio-db:/var/lib/postgresql/data
+  ghostfolio-redis:
+    profiles: [ghostfolio]
+    image: valkey/valkey:8-alpine
+    restart: unless-stopped
+    command: ["valkey-server", "--requirepass", "${GHOSTFOLIO_REDIS_SENHA:?defina GHOSTFOLIO_REDIS_SENHA no .env}"]
+  ghostfolio:
+    profiles: [ghostfolio]
+    image: ghostfolio/ghostfolio:${GHOSTFOLIO_VERSAO:-latest}
+    restart: unless-stopped
+    depends_on: [ghostfolio-db, ghostfolio-redis]
+    environment:
+      DATABASE_URL: postgresql://ghostfolio:${GHOSTFOLIO_DB_SENHA:?defina GHOSTFOLIO_DB_SENHA no .env}@ghostfolio-db:5432/ghostfolio?connect_timeout=300&sslmode=prefer
+      REDIS_HOST: ghostfolio-redis
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: ${GHOSTFOLIO_REDIS_SENHA:?defina GHOSTFOLIO_REDIS_SENHA no .env}
+      ACCESS_TOKEN_SALT: ${GHOSTFOLIO_SALT:?defina GHOSTFOLIO_SALT no .env}
+      JWT_SECRET_KEY: ${GHOSTFOLIO_JWT:?defina GHOSTFOLIO_JWT no .env}
+    ports:
+      - "127.0.0.1:3333:3333"
+
+  # Fluxo de caixa com importação de extratos (reserva do financeiro.py, para comparar).
+  firefly-db:
+    profiles: [firefly]
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+      MARIADB_DATABASE: firefly
+      MARIADB_USER: firefly
+      MARIADB_PASSWORD: ${FIREFLY_DB_SENHA:?defina FIREFLY_DB_SENHA no .env}
+    volumes:
+      - firefly-db:/var/lib/mysql
+  firefly:
+    profiles: [firefly]
+    image: fireflyiii/core:${FIREFLY_VERSAO:-latest}
+    restart: unless-stopped
+    depends_on: [firefly-db]
+    environment:
+      APP_KEY: ${FIREFLY_APP_KEY:?defina FIREFLY_APP_KEY no .env (32 caracteres)}
+      APP_URL: ${FIREFLY_URL:-http://localhost:8089}
+      DB_CONNECTION: mysql
+      DB_HOST: firefly-db
+      DB_PORT: "3306"
+      DB_DATABASE: firefly
+      DB_USERNAME: firefly
+      DB_PASSWORD: ${FIREFLY_DB_SENHA:?defina FIREFLY_DB_SENHA no .env}
+      TZ: America/Sao_Paulo
+    ports:
+      - "127.0.0.1:8089:8080"
+    volumes:
+      - firefly-upload:/var/www/html/storage/upload
+
+  # Contabilidade do CNPJ quando abrir (complementa o contador; não o substitui).
+  akaunting-db:
+    profiles: [akaunting]
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_RANDOM_ROOT_PASSWORD: "yes"
+      MARIADB_DATABASE: akaunting
+      MARIADB_USER: akaunting
+      MARIADB_PASSWORD: ${AKAUNTING_DB_SENHA:?defina AKAUNTING_DB_SENHA no .env}
+    volumes:
+      - akaunting-db:/var/lib/mysql
+  akaunting:
+    profiles: [akaunting]
+    image: docker.io/akaunting/akaunting:${AKAUNTING_VERSAO:-latest}
+    restart: unless-stopped
+    depends_on: [akaunting-db]
+    environment:
+      APP_URL: ${AKAUNTING_URL:-http://localhost:8090}
+      LOCALE: pt-BR
+      DB_HOST: akaunting-db
+      DB_PORT: "3306"
+      DB_NAME: akaunting
+      DB_USERNAME: akaunting
+      DB_PASSWORD: ${AKAUNTING_DB_SENHA:?defina AKAUNTING_DB_SENHA no .env}
+      DB_PREFIX: ak_
+      COMPANY_NAME: Grupo AMtech Digital
+      COMPANY_EMAIL: ${AKAUNTING_EMAIL:-contato@exemplo.com.br}
+      ADMIN_EMAIL: ${AKAUNTING_EMAIL:-contato@exemplo.com.br}
+      ADMIN_PASSWORD: ${AKAUNTING_ADMIN_SENHA:?defina AKAUNTING_ADMIN_SENHA no .env}
+      AKAUNTING_SETUP: "true"
+    ports:
+      - "127.0.0.1:8090:80"
+    volumes:
+      - akaunting-dados:/var/www/html
+
+volumes:
+  forgejo-dados:
+  softserve-dados:
+  headscale-dados:
+  glitchtip-db:
+  bookstack-db:
+  bookstack-dados:
+  actual-dados:
+  ghostfolio-db:
+  firefly-db:
+  firefly-upload:
+  akaunting-db:
+  akaunting-dados:

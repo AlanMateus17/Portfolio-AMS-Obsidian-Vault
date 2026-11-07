@@ -7,6 +7,12 @@ atualizado: 2026-10-26
 
 # 🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre
 
+> **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; AM Rendara no 2º trimestre)
+> - **O que fazer hoje no setup:** `just agora` · roteiro completo na [pasta 11](11-setup-dev-setup/00-INDICE-DO-SETUP.md), espelho automático do dev-setup
+> Este arquivo continua aqui como referência; nada foi apagado.
+
+
 > **Em palavras simples:** esta é a lista do que **estudar**, em ordem. São 14 Passos; cada um junta programação, matemática e inglês, e termina com um projeto real (o AM Kaixara é o primeiro). Você nunca escolhe o que estudar: é sempre o próximo Passo sem `[x]`. Palavras difíceis: [Glossário](00-GLOSSARIO.md). O caminho completo (estudo + setup + rendas): [Guia do Iniciante](00-GUIA-DO-INICIANTE.md). Cada Passo aparece no [Plano Mestre](00-PLANO-MESTRE-PASSO-A-PASSO.md) com o código `E-P1` a `E-P14`, ligado aos passos do setup que ele destrava.
 
 ## 🗺️ Roadmap por fases (execução dos projetos)

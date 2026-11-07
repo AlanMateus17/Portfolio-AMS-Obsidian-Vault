@@ -1,0 +1,29 @@
+# Teste dinâmico (DAST) com o OWASP ZAP no modo baseline: passivo, sem ataque, contra o SEU ambiente de homologação.
+# Complementa o workflow qualidade.yml do repositório padrão (gitleaks, Trivy, Semgrep e testes).
+#
+# Como usar num sistema seu:
+#   mkdir -p .github/workflows && cp ~/dev/dev-setup/infra/templates/seguranca/dast-zap.yml .github/workflows/
+#   Crie a variável do repositório HOMOLOGACAO_URL (Settings > Secrets and variables > Actions > Variables).
+#
+# Nunca aponte para site de terceiro: mesmo o modo passivo é varredura, e só roda com autorização.
+name: dast
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * 1"  # segunda de manhã
+permissions:
+  contents: read
+  issues: write  # o ZAP abre uma issue com o resumo
+jobs:
+  zap:
+    runs-on: ubuntu-latest
+    if: vars.HOMOLOGACAO_URL != ''
+    steps:
+      - uses: actions/checkout@v4
+      - name: ZAP baseline (passivo)
+        # Confira a versão mais nova em github.com/zaproxy/action-baseline/releases antes de copiar.
+        uses: zaproxy/action-baseline@v0.14.0
+        with:
+          target: ${{ vars.HOMOLOGACAO_URL }}
+          fail_action: false
+          allow_issue_writing: true

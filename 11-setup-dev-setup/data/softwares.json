@@ -1,0 +1,1375 @@
+{
+ "modulos": [
+  {
+   "id": "vitrine",
+   "nome": "Vitrine base",
+   "faz": "Páginas, SEO, WhatsApp, mapa, horário e formulário de contato"
+  },
+  {
+   "id": "avaliacoes",
+   "nome": "Avaliações e depoimentos",
+   "faz": "Mostra avaliações do Google e pede avaliação depois do atendimento"
+  },
+  {
+   "id": "galeria",
+   "nome": "Galeria e portfólio",
+   "faz": "Fotos de obras, pratos, trabalhos e antes/depois"
+  },
+  {
+   "id": "blog",
+   "nome": "Blog e notícias",
+   "faz": "Artigos para SEO e novidades"
+  },
+  {
+   "id": "orcamento",
+   "nome": "Pedido de orçamento",
+   "faz": "Formulário que vira orçamento em PDF e vai para o WhatsApp"
+  },
+  {
+   "id": "cardapio",
+   "nome": "Cardápio digital",
+   "faz": "Cardápio com QR, fotos, preços e esgotados"
+  },
+  {
+   "id": "pedidos",
+   "nome": "Pedido online",
+   "faz": "Carrinho que manda o pedido para o WhatsApp ou para pagamento"
+  },
+  {
+   "id": "agenda",
+   "nome": "Agendamento",
+   "faz": "Horários, pagamento antecipado e lembretes"
+  },
+  {
+   "id": "catalogo",
+   "nome": "Catálogo com filtros",
+   "faz": "Produtos, imóveis ou veículos com busca e filtros"
+  },
+  {
+   "id": "portal",
+   "nome": "Área do cliente",
+   "faz": "Login, histórico, documentos e segunda via"
+  },
+  {
+   "id": "pagamento",
+   "nome": "Pagamento e assinatura",
+   "faz": "Pix, cartão, cobrança recorrente e controle de acesso"
+  },
+  {
+   "id": "leads",
+   "nome": "Captura de contatos",
+   "faz": "Formulário com consentimento (LGPD), funil e CRM"
+  },
+  {
+   "id": "relatorio",
+   "nome": "Relatório mensal",
+   "faz": "Visitas, contatos e pedidos do mês enviados ao cliente"
+  },
+  {
+   "id": "multitenant",
+   "nome": "Base multi-empresa Aura",
+   "faz": "Cada cliente isolado (tenant e RLS), licença por módulo"
+  },
+  {
+   "id": "estoque",
+   "nome": "Estoque e ficha técnica",
+   "faz": "Entrada, saída, custo, receita e perdas (Kaixara)"
+  },
+  {
+   "id": "financeiro",
+   "nome": "Financeiro",
+   "faz": "Contas, fluxo de caixa, conciliação e DRE (Rendara)"
+  },
+  {
+   "id": "fiscal",
+   "nome": "Emissão fiscal",
+   "faz": "NF-e, NFC-e e NFS-e por API"
+  },
+  {
+   "id": "geo",
+   "nome": "Mapa e rastreio",
+   "faz": "Rotas, entregador e acompanhamento em tempo real (Rotara)"
+  },
+  {
+   "id": "ia",
+   "nome": "Assistente de IA",
+   "faz": "Respostas, resumos e geração de conteúdo com regras (aura-copilot)"
+  },
+  {
+   "id": "exercicios",
+   "nome": "Banco de exercícios e correção",
+   "faz": "Exercícios, correção automática e certificado"
+  }
+ ],
+ "softwares": [
+  {
+   "id": "site-padaria",
+   "nome": "Site de padaria e confeitaria",
+   "categoria": "site",
+   "publico": "padarias, confeitarias, docerias",
+   "faz": "Vitrine, cardápio, encomenda de bolos e salgados",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "cardapio",
+    "pedidos",
+    "galeria"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-restaurante",
+   "nome": "Site de restaurante, lanchonete e sushi",
+   "categoria": "site",
+   "publico": "restaurantes, lanchonetes, pizzarias, sushi",
+   "faz": "Cardápio digital, pedido pelo WhatsApp, reservas",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "cardapio",
+    "pedidos",
+    "agenda"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-cafeteria",
+   "nome": "Site de cafeteria",
+   "categoria": "site",
+   "publico": "cafeterias",
+   "faz": "Cardápio, fidelidade simples, eventos",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "cardapio",
+    "galeria"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-imobiliaria",
+   "nome": "Site de imobiliária",
+   "categoria": "site",
+   "publico": "imobiliárias e corretores",
+   "faz": "Catálogo de imóveis com filtros, contato por imóvel, captação de proprietário",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "catalogo",
+    "galeria",
+    "blog"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-construtora",
+   "nome": "Site de construtora e empreiteira",
+   "categoria": "site",
+   "publico": "construtoras, empreiteiras, pedreiros",
+   "faz": "Portfólio de obras, empreendimentos, orçamento",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "galeria",
+    "orcamento",
+    "catalogo"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-oficina",
+   "nome": "Site de oficina mecânica e autopeças",
+   "categoria": "site",
+   "publico": "oficinas, funilarias, autopeças",
+   "faz": "Serviços, orçamento, agendamento de revisão",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "orcamento",
+    "agenda"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-assistencia",
+   "nome": "Site de assistência técnica",
+   "categoria": "site",
+   "publico": "assistências de celular e informática",
+   "faz": "Serviços, orçamento, status do conserto",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "orcamento",
+    "portal"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-clinica",
+   "nome": "Site de clínica e consultório",
+   "categoria": "site",
+   "publico": "clínicas, psicólogos, fisioterapeutas, nutricionistas",
+   "faz": "Especialidades, agendamento, conteúdo. Respeitar as regras de publicidade de cada conselho",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "agenda",
+    "blog"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-odonto",
+   "nome": "Site de odontologia",
+   "categoria": "site",
+   "publico": "dentistas e clínicas odontológicas",
+   "faz": "Tratamentos, agendamento, depoimentos (regras do CRO)",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "agenda",
+    "galeria"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-beleza",
+   "nome": "Site de salão, barbearia e estética",
+   "categoria": "site",
+   "publico": "salões, barbearias, estética",
+   "faz": "Serviços, preços, agendamento",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "agenda",
+    "galeria"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-academia",
+   "nome": "Site de academia e personal",
+   "categoria": "site",
+   "publico": "academias, estúdios, personal trainers",
+   "faz": "Planos, aula experimental, agenda",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "agenda",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-pet",
+   "nome": "Site de pet shop e veterinária",
+   "categoria": "site",
+   "publico": "pet shops, clínicas veterinárias",
+   "faz": "Banho e tosa com agenda, produtos, emergência",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "agenda",
+    "catalogo"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-escola",
+   "nome": "Site de escola e curso livre",
+   "categoria": "site",
+   "publico": "escolas particulares, cursos de idioma e informática",
+   "faz": "Cursos, matrícula, eventos",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "blog",
+    "galeria"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-advocacia",
+   "nome": "Site de advocacia",
+   "categoria": "site",
+   "publico": "advogados e escritórios",
+   "faz": "Áreas de atuação e conteúdo, dentro das regras da OAB (sem captação)",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "blog"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-contabilidade",
+   "nome": "Site de contabilidade",
+   "categoria": "site",
+   "publico": "escritórios de contabilidade",
+   "faz": "Serviços, abertura de empresa, portal de documentos",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "portal",
+    "blog"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-loja",
+   "nome": "Site de loja (moda, presentes, variedades)",
+   "categoria": "site",
+   "publico": "lojas de roupa, calçados, presentes",
+   "faz": "Catálogo com pedido pelo WhatsApp ou loja virtual",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "catalogo",
+    "pedidos",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-mercado",
+   "nome": "Site de mercado, hortifruti e açougue",
+   "categoria": "site",
+   "publico": "mercados de bairro, hortifrútis, açougues",
+   "faz": "Ofertas da semana, lista de pedido, entrega",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "catalogo",
+    "pedidos"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-pousada",
+   "nome": "Site de hotel e pousada",
+   "categoria": "site",
+   "publico": "hotéis e pousadas de Barbacena e região",
+   "faz": "Quartos, galeria, reserva direta sem comissão",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "galeria",
+    "agenda",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-floricultura",
+   "nome": "Site de floricultura",
+   "categoria": "site",
+   "publico": "floriculturas e produtores de rosas (Barbacena)",
+   "faz": "Catálogo de buquês, pedido com data de entrega",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "catalogo",
+    "pedidos",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-eventos",
+   "nome": "Site de buffet, eventos e fotógrafo",
+   "categoria": "site",
+   "publico": "buffets, decoradores, fotógrafos, DJs",
+   "faz": "Portfólio, pacotes, orçamento de evento",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "galeria",
+    "orcamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-arquitetura",
+   "nome": "Site de arquitetura e interiores",
+   "categoria": "site",
+   "publico": "arquitetos, designers, marcenarias",
+   "faz": "Portfólio de projetos, orçamento",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "galeria",
+    "orcamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-autoescola",
+   "nome": "Site de autoescola",
+   "categoria": "site",
+   "publico": "autoescolas",
+   "faz": "Categorias, preços, matrícula",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "agenda"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-solar",
+   "nome": "Site de energia solar e elétrica",
+   "categoria": "site",
+   "publico": "integradores solares e eletricistas",
+   "faz": "Simulador de economia, orçamento",
+   "ferramenta": "horizons",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "orcamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-mudancas",
+   "nome": "Site de transporte e mudanças",
+   "categoria": "site",
+   "publico": "transportadoras, fretes, mudanças",
+   "faz": "Orçamento por distância, áreas atendidas",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "orcamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-igreja",
+   "nome": "Site de igreja e ONG",
+   "categoria": "site",
+   "publico": "igrejas, associações, ONGs",
+   "faz": "Agenda, transmissões, doações",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "blog",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "site-industria",
+   "nome": "Site de indústria e fornecedor B2B",
+   "categoria": "site",
+   "publico": "pequenas indústrias e distribuidores",
+   "faz": "Catálogo técnico e pedido de cotação",
+   "ferramenta": "builder",
+   "receita": "criação + mensalidade",
+   "oferta": "sites",
+   "modulos": [
+    "vitrine",
+    "avaliacoes",
+    "leads",
+    "relatorio",
+    "catalogo",
+    "orcamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "am-kaixara",
+   "nome": "AM Kaixara (PDV, comandas, estoque, ficha técnica)",
+   "categoria": "sistema",
+   "publico": "restaurantes, lojas, assistências",
+   "faz": "Venda, comanda, mesa, cozinha, estoque, receita e caixa",
+   "ferramenta": "aura",
+   "receita": "assinatura por módulo",
+   "oferta": "kaixara",
+   "modulos": [
+    "multitenant",
+    "estoque",
+    "fiscal",
+    "financeiro",
+    "pagamento"
+   ],
+   "estado": "em-construcao",
+   "vende": true
+  },
+  {
+   "id": "am-rendara",
+   "nome": "AM Rendara (finanças e ARCA)",
+   "categoria": "sistema",
+   "publico": "pessoas, famílias, pequenas empresas",
+   "faz": "Contas, fluxo de caixa, cascata, carteira e rebalanceamento",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "rendara",
+   "modulos": [
+    "multitenant",
+    "financeiro",
+    "pagamento",
+    "ia"
+   ],
+   "estado": "em-construcao",
+   "vende": true
+  },
+  {
+   "id": "am-rotara",
+   "nome": "AM Rotara (pedidos e entregas)",
+   "categoria": "sistema",
+   "publico": "delivery e lojistas",
+   "faz": "Pedidos, rotas, app do entregador, prova de entrega",
+   "ferramenta": "aura",
+   "receita": "assinatura + por entrega",
+   "oferta": "rotara",
+   "modulos": [
+    "multitenant",
+    "geo",
+    "pedidos",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-taskoro",
+   "nome": "AM Taskoro (Kanban e Scrum)",
+   "categoria": "sistema",
+   "publico": "equipes pequenas",
+   "faz": "Quadros, sprints, métricas",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "taskoro",
+   "modulos": [
+    "multitenant",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-projeta",
+   "nome": "AM Projeta (diagnóstico de setup e arquitetura por IA)",
+   "categoria": "sistema",
+   "publico": "devs e pequenas software houses",
+   "faz": "Diagnóstico do ambiente e proposta de arquitetura",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "setuppro",
+   "modulos": [
+    "multitenant",
+    "ia",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-predara",
+   "nome": "AM Predara (condomínios)",
+   "categoria": "sistema",
+   "publico": "síndicos e administradoras",
+   "faz": "Boletos, reservas, ocorrências, comunicados",
+   "ferramenta": "aura",
+   "receita": "assinatura por unidade",
+   "oferta": "whitelabel",
+   "modulos": [
+    "multitenant",
+    "financeiro",
+    "agenda",
+    "portal",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-canteira",
+   "nome": "AM Canteira (obras e construção)",
+   "categoria": "sistema",
+   "publico": "construtoras e empreiteiras",
+   "faz": "Orçamento, cronograma, compras e medição de obra",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "encomenda",
+   "modulos": [
+    "multitenant",
+    "orcamento",
+    "financeiro",
+    "estoque"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-consertta",
+   "nome": "AM Consertta (assistência técnica)",
+   "categoria": "sistema",
+   "publico": "assistências técnicas",
+   "faz": "Ordem de serviço, status para o cliente, garantia, peças",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "assist",
+   "modulos": [
+    "multitenant",
+    "estoque",
+    "portal",
+    "orcamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-horaria",
+   "nome": "AM Horaria (agendamentos)",
+   "categoria": "sistema",
+   "publico": "salões, clínicas, autônomos",
+   "faz": "Agenda, pagamento antecipado, lembretes",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "aulas",
+   "modulos": [
+    "multitenant",
+    "agenda",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-saberia",
+   "nome": "AM Saberia (educacional)",
+   "categoria": "sistema",
+   "publico": "escolas e cursos",
+   "faz": "Turmas, conteúdo, avaliações. Dado de menor com regras LGPD",
+   "ferramenta": "aura",
+   "receita": "assinatura por aluno",
+   "oferta": "fabricaprof",
+   "modulos": [
+    "multitenant",
+    "exercicios",
+    "portal",
+    "ia"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-petara",
+   "nome": "AM Petara (veterinária e pet shop)",
+   "categoria": "sistema",
+   "publico": "clínicas veterinárias e pet shops",
+   "faz": "Prontuário do animal, vacinas, banho e tosa, estoque",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "whitelabel",
+   "modulos": [
+    "multitenant",
+    "agenda",
+    "estoque",
+    "fiscal"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-vendra",
+   "nome": "AM Vendra (loja virtual)",
+   "categoria": "sistema",
+   "publico": "lojas pequenas",
+   "faz": "Loja, carrinho, frete, pagamento",
+   "ferramenta": "aura",
+   "receita": "assinatura + taxa",
+   "oferta": "whitelabel",
+   "modulos": [
+    "multitenant",
+    "catalogo",
+    "pedidos",
+    "pagamento",
+    "fiscal"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "am-vynla",
+   "nome": "AM Vynla (linha do tempo e NFC para casais e famílias)",
+   "categoria": "sistema",
+   "publico": "casais, famílias, presentes",
+   "faz": "Linha do tempo, memórias, cartão NFC",
+   "ferramenta": "aura",
+   "receita": "venda + assinatura",
+   "oferta": "whitelabel",
+   "modulos": [
+    "multitenant",
+    "galeria",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "delivery-whitelabel",
+   "nome": "App de delivery com a marca do restaurante",
+   "categoria": "sistema",
+   "publico": "restaurantes",
+   "faz": "Pedido próprio sem comissão de marketplace",
+   "ferramenta": "aura",
+   "receita": "assinatura",
+   "oferta": "whitelabel",
+   "modulos": [
+    "multitenant",
+    "cardapio",
+    "pedidos",
+    "geo",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "ss-fichatecnica",
+   "nome": "Ficha técnica e preço para confeitaria, marmita e lanchonete",
+   "categoria": "microsaas",
+   "publico": "negócios de comida em casa",
+   "faz": "Custo por receita, preço de venda e margem",
+   "ferramenta": "horizons",
+   "receita": "assinatura barata",
+   "oferta": "consultoriaresto",
+   "modulos": [
+    "estoque",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-orcamento",
+   "nome": "Orçamento e ordem de serviço para autônomos",
+   "categoria": "microsaas",
+   "publico": "eletricistas, técnicos, marceneiros",
+   "faz": "Orçamento em PDF, link de WhatsApp, OS",
+   "ferramenta": "horizons",
+   "receita": "assinatura barata",
+   "oferta": "remoto",
+   "modulos": [
+    "orcamento",
+    "pagamento",
+    "portal"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-alunos",
+   "nome": "Controle de alunos e mensalidades",
+   "categoria": "microsaas",
+   "publico": "professores particulares e personal trainers",
+   "faz": "Alunos, presença, cobrança",
+   "ferramenta": "horizons",
+   "receita": "assinatura barata",
+   "oferta": "aulas",
+   "modulos": [
+    "agenda",
+    "pagamento",
+    "portal"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-cardapio",
+   "nome": "Cardápio digital com QR",
+   "categoria": "microsaas",
+   "publico": "bares e restaurantes",
+   "faz": "Cardápio, esgotado, QR por mesa",
+   "ferramenta": "horizons",
+   "receita": "assinatura barata",
+   "oferta": "kaixara",
+   "modulos": [
+    "cardapio",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-diagnostico",
+   "nome": "Diagnóstico de presença digital do comércio",
+   "categoria": "microsaas",
+   "publico": "comércio local",
+   "faz": "Nota automática de Google, site e redes; vira lead de serviço",
+   "ferramenta": "horizons",
+   "receita": "isca para serviços",
+   "oferta": "agencialocal",
+   "modulos": [
+    "leads",
+    "ia"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-usados",
+   "nome": "Checklist de compra de usados",
+   "categoria": "microsaas",
+   "publico": "quem compra celular, notebook ou veículo usado",
+   "faz": "IMEI, FIPE, sinais de golpe",
+   "ferramenta": "horizons",
+   "receita": "afiliados e isca",
+   "oferta": "revenda-notebooks",
+   "modulos": [
+    "leads"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-calculadoras",
+   "nome": "Calculadoras financeiras (CLT x PJ, MEI, financiamento)",
+   "categoria": "microsaas",
+   "publico": "público geral",
+   "faz": "Cálculo com as regras do Caixa da Casa",
+   "ferramenta": "horizons",
+   "receita": "anúncios e isca",
+   "oferta": "calculadoras",
+   "modulos": [
+    "leads",
+    "blog"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-planonegocio",
+   "nome": "Gerador de plano de negócios e viabilidade",
+   "categoria": "microsaas",
+   "publico": "quem vai abrir empresa",
+   "faz": "Projeção, ponto de equilíbrio, documento",
+   "ferramenta": "horizons",
+   "receita": "venda única",
+   "oferta": "planonegocio",
+   "modulos": [
+    "financeiro",
+    "pagamento",
+    "ia"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-bpo",
+   "nome": "Painel de BPO financeiro para clientes",
+   "categoria": "microsaas",
+   "publico": "pequenas empresas",
+   "faz": "Conciliação e relatório mensal",
+   "ferramenta": "aura",
+   "receita": "mensalidade do serviço",
+   "oferta": "bpofin",
+   "modulos": [
+    "financeiro",
+    "relatorio",
+    "portal"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-fabrica",
+   "nome": "Fábrica de documentos para professores",
+   "categoria": "microsaas",
+   "publico": "professores da rede de MG",
+   "faz": "Planejamento semanal, guia de ensino, documentos",
+   "ferramenta": "horizons",
+   "receita": "assinatura",
+   "oferta": "fabricaprof",
+   "modulos": [
+    "ia",
+    "pagamento",
+    "portal"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "ss-cascata",
+   "nome": "Planilha Cascata (validação do Rendara)",
+   "categoria": "microsaas",
+   "publico": "pessoas organizando as finanças",
+   "faz": "Caixas em cascata e metas",
+   "ferramenta": "python",
+   "receita": "venda única",
+   "oferta": "rendara",
+   "modulos": [
+    "financeiro"
+   ],
+   "estado": "existe",
+   "vende": true
+  },
+  {
+   "id": "ed-ammentor",
+   "nome": "AM Mentor (735 exercícios, correção e certificado)",
+   "categoria": "educacao",
+   "publico": "estudantes de programação",
+   "faz": "Exercícios com correção automática",
+   "ferramenta": "nextjs",
+   "receita": "assinatura",
+   "oferta": "ammentor",
+   "modulos": [
+    "exercicios",
+    "pagamento",
+    "portal"
+   ],
+   "estado": "existe",
+   "vende": true
+  },
+  {
+   "id": "ed-catalogo",
+   "nome": "Catálogo do HTML",
+   "categoria": "educacao",
+   "publico": "alunos e iniciantes",
+   "faz": "Site didático para publicar o próprio site",
+   "ferramenta": "nextjs",
+   "receita": "isca gratuita",
+   "oferta": "catalogo",
+   "modulos": [
+    "vitrine",
+    "blog"
+   ],
+   "estado": "existe",
+   "vende": true
+  },
+  {
+   "id": "ed-instituto",
+   "nome": "Plataforma do Instituto AMS (multiprofessor)",
+   "categoria": "educacao",
+   "publico": "alunos e professores parceiros",
+   "faz": "Cursos, vídeos, comunidade, certificados",
+   "ferramenta": "aura",
+   "receita": "venda de cursos + parte dos professores",
+   "oferta": "formti",
+   "modulos": [
+    "portal",
+    "pagamento",
+    "exercicios"
+   ],
+   "estado": "planejado",
+   "vende": true
+  },
+  {
+   "id": "ed-bytesdcoin",
+   "nome": "ByteSDCoin (blockchain educacional, sem aposta)",
+   "categoria": "educacao",
+   "publico": "escolas e clubes",
+   "faz": "Moeda escolar, mérito, tabuleiro robótico",
+   "ferramenta": "aura",
+   "receita": "licença",
+   "oferta": "bytesdcoin",
+   "modulos": [
+    "multitenant",
+    "portal"
+   ],
+   "estado": "em-construcao",
+   "vende": true
+  },
+  {
+   "id": "ed-jogo",
+   "nome": "Jogo educativo de lógica",
+   "categoria": "educacao",
+   "publico": "iniciantes",
+   "faz": "Desafios de lógica em forma de jogo",
+   "ferramenta": "nextjs",
+   "receita": "venda única",
+   "oferta": "jogo",
+   "modulos": [
+    "exercicios"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "dv-templates",
+   "nome": "Templates Next.js/Tailwind",
+   "categoria": "produto",
+   "publico": "devs e agências",
+   "faz": "Sites prontos a partir do Aura Design System",
+   "ferramenta": "nextjs",
+   "receita": "venda única",
+   "oferta": "templatesint",
+   "modulos": [
+    "vitrine",
+    "blog"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "dv-uikits",
+   "nome": "Kits de componentes",
+   "categoria": "produto",
+   "publico": "devs",
+   "faz": "Blocos de interface prontos",
+   "ferramenta": "nextjs",
+   "receita": "venda única",
+   "oferta": "uikits",
+   "modulos": [
+    "vitrine"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "dv-pluginwp",
+   "nome": "Plugin WordPress com versão Pro",
+   "categoria": "produto",
+   "publico": "sites WordPress e WooCommerce",
+   "faz": "Resolve um problema dos clientes de sites",
+   "ferramenta": "wordpress",
+   "receita": "assinatura anual",
+   "oferta": "pluginwp",
+   "modulos": [
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "dv-n8n",
+   "nome": "Templates de automação n8n",
+   "categoria": "produto",
+   "publico": "pequenos negócios e devs",
+   "faz": "As suas automações empacotadas",
+   "ferramenta": "n8n",
+   "receita": "venda única",
+   "oferta": "n8ntemplates",
+   "modulos": [
+    "leads"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "dv-setup",
+   "nome": "Setup profissional",
+   "categoria": "produto",
+   "publico": "devs e estudantes",
+   "faz": "Ambiente pronto, verificado e documentado",
+   "ferramenta": "scripts",
+   "receita": "venda única + serviço",
+   "oferta": "setuppro",
+   "modulos": [
+    "ia"
+   ],
+   "estado": "em-construcao",
+   "vende": true
+  },
+  {
+   "id": "dv-modelosfin",
+   "nome": "Modelos financeiros para empresas",
+   "categoria": "produto",
+   "publico": "pequenas empresas",
+   "faz": "Fluxo de caixa, DRE, precificação",
+   "ferramenta": "python",
+   "receita": "venda única",
+   "oferta": "modelosfin",
+   "modulos": [
+    "financeiro"
+   ],
+   "estado": "ideia",
+   "vende": true
+  },
+  {
+   "id": "pr-site",
+   "nome": "Site pessoal, portfólio e blog (Next.js)",
+   "categoria": "proprio",
+   "publico": "você",
+   "faz": "Portfólio, blog, loja, currículo",
+   "ferramenta": "nextjs",
+   "receita": "vitrine das vendas",
+   "oferta": null,
+   "modulos": [
+    "vitrine",
+    "blog",
+    "leads"
+   ],
+   "estado": "existe",
+   "vende": false
+  },
+  {
+   "id": "pr-amtech",
+   "nome": "Site da Grupo AMtech Digital",
+   "categoria": "proprio",
+   "publico": "clientes do grupo",
+   "faz": "Marcas, serviços e contato",
+   "ferramenta": "nextjs",
+   "receita": "vitrine das vendas",
+   "oferta": null,
+   "modulos": [
+    "vitrine",
+    "leads",
+    "avaliacoes"
+   ],
+   "estado": "planejado",
+   "vende": false
+  },
+  {
+   "id": "pr-editora",
+   "nome": "Site da Editora AMS Silva",
+   "categoria": "proprio",
+   "publico": "leitores e escolas",
+   "faz": "Livros, kits e adoção",
+   "ferramenta": "nextjs",
+   "receita": "vitrine das vendas",
+   "oferta": null,
+   "modulos": [
+    "vitrine",
+    "catalogo",
+    "pagamento"
+   ],
+   "estado": "planejado",
+   "vende": false
+  },
+  {
+   "id": "pr-caixa",
+   "nome": "Caixa da Casa",
+   "categoria": "proprio",
+   "publico": "você e a família",
+   "faz": "Finanças da casa, rotina, metas, veículos",
+   "ferramenta": "artifact",
+   "receita": "protótipo do Rendara",
+   "oferta": null,
+   "modulos": [
+    "financeiro"
+   ],
+   "estado": "existe",
+   "vende": false
+  },
+  {
+   "id": "pr-aurastatus",
+   "nome": "aura-status",
+   "categoria": "proprio",
+   "publico": "você",
+   "faz": "Status de todos os projetos num painel",
+   "ferramenta": "aura",
+   "receita": "uso próprio",
+   "oferta": null,
+   "modulos": [
+    "relatorio"
+   ],
+   "estado": "em-construcao",
+   "vende": false
+  },
+  {
+   "id": "pr-auratest",
+   "nome": "AuraTest",
+   "categoria": "proprio",
+   "publico": "você e os sistemas AM",
+   "faz": "Testes dos sistemas Aura",
+   "ferramenta": "aura",
+   "receita": "uso próprio",
+   "oferta": null,
+   "modulos": [
+    "multitenant"
+   ],
+   "estado": "em-construcao",
+   "vende": false
+  },
+  {
+   "id": "pr-devsetup",
+   "nome": "dev-setup (este repositório)",
+   "categoria": "proprio",
+   "publico": "você",
+   "faz": "O setup inteiro, verificado no CI",
+   "ferramenta": "scripts",
+   "receita": "base de tudo",
+   "oferta": null,
+   "modulos": [
+    "relatorio"
+   ],
+   "estado": "existe",
+   "vende": false
+  },
+  {
+   "id": "ss-abnt",
+   "nome": "Verificador e formatador ABNT online",
+   "categoria": "microsaas",
+   "publico": "universitários e pós-graduandos",
+   "faz": "Laudo ABNT e arquivo corrigido a partir do .docx enviado",
+   "ferramenta": "horizons",
+   "receita": "por documento ou assinatura",
+   "oferta": "abnt-auto",
+   "modulos": [
+    "pagamento",
+    "portal",
+    "ia"
+   ],
+   "estado": "em-construcao",
+   "vende": true
+  },
+  {
+   "id": "ss-conferir",
+   "nome": "Conferência de documentos escolares",
+   "categoria": "microsaas",
+   "publico": "coordenações e escolas",
+   "faz": "Aponta campos vazios, fora do modelo e fora das regras em cada planejamento",
+   "ferramenta": "horizons",
+   "receita": "licença por escola",
+   "oferta": "docs-escolas",
+   "modulos": [
+    "portal",
+    "pagamento"
+   ],
+   "estado": "ideia",
+   "vende": true
+  }
+ ]
+}

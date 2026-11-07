@@ -1,0 +1,45 @@
+# Casa e vida: Home Assistant (casa inteligente), Paperless-ngx (documentos com busca) e Grocy (estoque da casa,
+# ração e remédios dos cães, lista de compras). Tudo local, no seu PC. Os dados ficam em ${CASA_DIR}.
+#   cd infra/casa && cp casa.env.example .env && docker compose up -d
+# Home Assistant: http://localhost:8123 · Paperless: http://localhost:8010 · Grocy: http://localhost:9283
+name: amtech-casa
+services:
+  homeassistant:
+    image: ghcr.io/home-assistant/home-assistant:stable
+    restart: unless-stopped
+    volumes:
+      - ${CASA_DIR:?defina CASA_DIR no .env}/homeassistant:/config
+    environment:
+      TZ: America/Sao_Paulo
+    ports:
+      - "127.0.0.1:8123:8123"
+  paperless-redis:
+    image: docker.io/library/redis:7
+    restart: unless-stopped
+  paperless:
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
+    restart: unless-stopped
+    depends_on:
+      - paperless-redis
+    volumes:
+      - ${CASA_DIR}/paperless/data:/usr/src/paperless/data
+      - ${CASA_DIR}/paperless/media:/usr/src/paperless/media
+      - ${CASA_DIR}/paperless/entrada:/usr/src/paperless/consume
+    environment:
+      PAPERLESS_REDIS: redis://paperless-redis:6379
+      PAPERLESS_OCR_LANGUAGE: por
+      PAPERLESS_TIME_ZONE: America/Sao_Paulo
+      PAPERLESS_SECRET_KEY: ${PAPERLESS_SECRET:?gere uma chave e guarde no KeePassXC}
+    ports:
+      - "127.0.0.1:8010:8000"
+  grocy:
+    image: lscr.io/linuxserver/grocy:latest
+    restart: unless-stopped
+    environment:
+      TZ: America/Sao_Paulo
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - ${CASA_DIR}/grocy:/config
+    ports:
+      - "127.0.0.1:9283:80"

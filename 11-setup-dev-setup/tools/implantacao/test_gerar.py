@@ -17,6 +17,15 @@ class TestImplantacao(unittest.TestCase):
         d["fases"][1]["passos"].append(copy.deepcopy(d["fases"][0]["passos"][0]))
         self.assertTrue(any("repetido" in e for e in validar(d)))
 
+    def test_todo_passo_tem_comando_ou_motivo(self):
+        d = copy.deepcopy(self.d)
+        p = d["fases"][0]["passos"][0]
+        p.pop("comando", None)
+        p.pop("fora", None)
+        self.assertTrue(any("sem comando de terminal" in e for e in validar(d)))
+        p["fora"] = "Feito no site."
+        self.assertFalse(any("sem comando de terminal" in e for e in validar(d)))
+
     def test_detecta_script_inexistente(self):
         d = copy.deepcopy(self.d)
         d["fases"][0]["passos"][0]["comando"] = "bash scripts/wsl/nao-existe.sh"

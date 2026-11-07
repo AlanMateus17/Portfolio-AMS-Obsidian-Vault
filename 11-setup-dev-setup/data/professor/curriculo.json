@@ -1,0 +1,817 @@
+{
+ "niveis": [
+  "nada",
+  "viu a aula",
+  "fez a prática",
+  "passou na prova",
+  "ensinou"
+ ],
+ "modulos": [
+  {
+   "id": "s-terminal",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "Terminal Linux no WSL: navegar, ler, procurar e encadear comandos",
+   "objetivos": [
+    "Explicar o que é o WSL2 e onde ficam os arquivos do Linux e do Windows",
+    "Usar cd, ls, cat, less, grep, find, pipes e redirecionamento sem consultar",
+    "Ler a mensagem de erro de um comando e achar a causa"
+   ],
+   "prereq": [],
+   "pratica": "No Ubuntu do WSL: encontrar todos os arquivos .md do dev-setup que citam 'restic' e contar quantos são, num comando só.",
+   "fontes": [
+    "https://learn.microsoft.com/pt-br/windows/wsl/",
+    "https://www.gnu.org/software/bash/manual/"
+   ],
+   "blocos": [
+    "wsl"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "akita": [
+    "linux",
+    "terminal",
+    "shell",
+    "bash"
+   ],
+   "akita_posts": [
+    "akitando-127-como-funciona-o-boot-de-um-linux-o-que-tem-num-livecd",
+    "coisas-que-iniciantes-ignoram-sobre-pcs"
+   ]
+  },
+  {
+   "id": "s-git",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "Git e GitHub: commit, branch, PR e como desfazer sem medo",
+   "objetivos": [
+    "Explicar working tree, staging e commit com um desenho",
+    "Criar branch, abrir PR com gh e revisar o diff",
+    "Desfazer: restore, revert e quando NÃO usar reset --hard"
+   ],
+   "prereq": [
+    "s-terminal"
+   ],
+   "pratica": "Criar um branch no dev-setup, mudar uma linha do README, abrir PR com gh pr create e fechar sem merge.",
+   "fontes": [
+    "https://git-scm.com/book/pt-br/v2",
+    "https://docs.github.com/pt/get-started/using-github/github-flow"
+   ],
+   "blocos": [
+    "git",
+    "gh"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "assistir": [
+    {
+     "plataforma": "Alura",
+     "titulo": "Git e GitHub: controle de versão",
+     "url": "https://www.alura.com.br/curso-online-git-github-controle-de-versao"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": "Git e GitHub: branching, conflitos e pull requests",
+     "url": "https://www.alura.com.br/curso-online-git-github-branching-conflitos-pull-requests"
+    }
+   ],
+   "akita": [
+    "git",
+    "controle-de-versao"
+   ],
+   "akita_posts": [
+    "akitando-70-entendendo-git-nao-e-um-tutorial",
+    "akitando-71-usando-git-direito-limpando-seus-commits"
+   ]
+  },
+  {
+   "id": "s-just",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "just: a porta única de comandos do setup",
+   "objetivos": [
+    "Ler o justfile e dizer o que cada receita chama",
+    "Rodar receitas com argumentos",
+    "Saber por que o setup não coloca lógica dentro do justfile"
+   ],
+   "prereq": [
+    "s-terminal"
+   ],
+   "pratica": "Rodar just, escolher 3 receitas e explicar, sem olhar, o que cada uma faz por baixo.",
+   "fontes": [
+    "https://just.systems/man/en/"
+   ],
+   "blocos": [
+    "just"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75
+  },
+  {
+   "id": "s-backup",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "Backup com restic: como o seu setup se protege e como restaurar",
+   "objetivos": [
+    "Explicar a regra 3-2-1 e onde estão as suas 3 cópias",
+    "Explicar snapshot, deduplicação, criptografia e retenção (forget/prune)",
+    "Restaurar um arquivo e conferir que ele abre"
+   ],
+   "prereq": [
+    "s-terminal"
+   ],
+   "pratica": "Restaurar o README.md do snapshot mais recente para /tmp/teste e comparar com o original (diff).",
+   "fontes": [
+    "https://restic.readthedocs.io/"
+   ],
+   "blocos": [
+    "restic"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "akita": [
+    "backup",
+    "armazenamento-e-backup",
+    "btrfs",
+    "snapshot"
+   ],
+   "akita_posts": [
+    "akitando-146-protegendo-e-recuperando-dados-perdidos-git-backup-btrfs",
+    "usuarios-linux-sempre-escolham-btrfs-nao-ext4"
+   ]
+  },
+  {
+   "id": "s-segredos",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "Segredos: KeePassXC, sops e age, e por que senha nunca vai para o Git",
+   "objetivos": [
+    "Separar o que vai no cofre, o que vai cifrado com age e o que nunca sai da máquina",
+    "Cifrar e decifrar um arquivo de teste com age",
+    "Explicar o que o gitleaks procura em cada commit"
+   ],
+   "prereq": [
+    "s-terminal"
+   ],
+   "pratica": "Cifrar um arquivo de teste com age, conferir que o conteúdo ficou ilegível e decifrar de volta.",
+   "fontes": [
+    "https://keepassxc.org/docs/",
+    "https://github.com/FiloSottile/age",
+    "https://github.com/getsops/sops"
+   ],
+   "blocos": [
+    "kee",
+    "age"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "akita": [
+    "senha",
+    "criptografia",
+    "seguranca"
+   ],
+   "akita_posts": [
+    "akitando-131-sua-seguranca-e-uma-droga-gerenciadores-de-senhas-2fa-encriptacao",
+    "akitando-67-entendendo-conceitos-basicos-de-criptografia-parte-1-2"
+   ]
+  },
+  {
+   "id": "s-docker",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "Containers: Docker e Compose sem mistério",
+   "objetivos": [
+    "Explicar imagem, container, volume e rede",
+    "Ler um compose.yaml do setup e dizer o que cada serviço faz",
+    "Subir, ver logs e derrubar um serviço"
+   ],
+   "prereq": [
+    "s-terminal"
+   ],
+   "pratica": "Subir o perfil glitchtip do infra/soberania, abrir os logs, derrubar e explicar onde os dados ficaram guardados.",
+   "fontes": [
+    "https://docs.docker.com/get-started/",
+    "https://docs.docker.com/compose/"
+   ],
+   "blocos": [
+    "docker"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "assistir": [
+    {
+     "plataforma": "Alura",
+     "titulo": "Docker: criando e gerenciando containers",
+     "url": "https://www.alura.com.br/conteudo/docker-criando-gerenciando-containers"
+    }
+   ],
+   "akita": [
+    "docker",
+    "containers"
+   ],
+   "akita_posts": [
+    "akitando-139-entendendo-como-containers-funcionam",
+    "akitando-149-configurando-docker-compose-postgres-com-testes-de-carga-parte-final-da-rinha-de-backend"
+   ]
+  },
+  {
+   "id": "s-ia-segura",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "Claude Code com segurança: ai-jail, contexto e revisão do que a IA fez",
+   "objetivos": [
+    "Explicar o que o ai-jail deixa e não deixa o agente ver",
+    "Montar um pedido com just arquiteto e ler o pacote",
+    "Revisar um diff da IA antes de aceitar"
+   ],
+   "prereq": [
+    "s-git"
+   ],
+   "pratica": "Pedir ao Claude Code, dentro do ai-jail, uma mudança pequena num branch, revisar o diff linha a linha e explicar cada linha.",
+   "fontes": [
+    "https://docs.claude.com/en/docs/claude-code/overview",
+    "https://github.com/akitaonrails/ai-jail"
+   ],
+   "blocos": [
+    "cc",
+    "jail",
+    "triagem"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "akita": [
+    "agentes-de-codigo",
+    "agentes",
+    "sandbox",
+    "claude code"
+   ],
+   "akita_posts": [
+    "ai-jail-sandbox-para-agentes-de-ia-de-shell-script-a-ferramenta-real",
+    "como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas"
+   ]
+  },
+  {
+   "id": "s-nucleo",
+   "trilha": "setup",
+   "trimestre": 1,
+   "titulo": "O Núcleo: banco central, lembrar, buscar, agenda e auditoria",
+   "objetivos": [
+    "Explicar as 4 tabelas do núcleo e para que serve cada uma",
+    "Usar lembrar, buscar, agora, decisoes e feito",
+    "Dizer o que a política de autonomia deixa automático e o que para no seu ok"
+   ],
+   "prereq": [
+    "s-just"
+   ],
+   "pratica": "Guardar uma lição com just lembrar, achá-la com just buscar e marcar um passo com just feito.",
+   "fontes": [
+    "docs/nucleo/README.md",
+    "docs/adr/0009-nucleo-amtech.md"
+   ],
+   "blocos": [
+    "nucleo"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "akita": [
+    "memória",
+    "memory",
+    "contexto"
+   ]
+  },
+  {
+   "id": "s-ci",
+   "trilha": "setup",
+   "trimestre": 2,
+   "titulo": "CI: GitHub Actions e o just check como portão",
+   "objetivos": [
+    "Ler o workflow docs.yml e dizer o que cada etapa confere",
+    "Achar a causa de um CI vermelho pelo log",
+    "Diferenciar erro seu de falha de infraestrutura e saber quando só rodar de novo"
+   ],
+   "prereq": [
+    "s-git"
+   ],
+   "pratica": "Abrir o último CI com gh run view, achar a etapa mais lenta e explicar o que ela faz.",
+   "fontes": [
+    "https://docs.github.com/pt/actions"
+   ],
+   "blocos": [
+    "gha"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "assistir": [
+    {
+     "plataforma": "Alura",
+     "titulo": "Testes em .NET: integre seus testes nos pipelines de CI/CD"
+    }
+   ],
+   "akita": [
+    "testes",
+    "devops",
+    "ci"
+   ],
+   "akita_posts": [
+    "parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou",
+    "testes-de-integracao-em-monorepo-bastidores-do-the-m-akita-chronicles"
+   ]
+  },
+  {
+   "id": "s-deploy",
+   "trilha": "setup",
+   "trimestre": 2,
+   "titulo": "Deploy: Hostinger por push e Kamal em VM",
+   "objetivos": [
+    "Explicar o caminho do commit até o ar em cada um",
+    "Fazer deploy e rollback de um app de teste",
+    "Dizer o que precisa existir antes do primeiro cliente (backup, rollback, monitoramento)"
+   ],
+   "prereq": [
+    "s-docker",
+    "s-ci"
+   ],
+   "pratica": "Fazer deploy do template infra/templates/kamal numa VM de teste e um kamal rollback.",
+   "fontes": [
+    "https://kamal-deploy.org/docs/"
+   ],
+   "blocos": [
+    "kamal",
+    "hostg"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "akita": [
+    "deploy",
+    "devops",
+    "kamal"
+   ],
+   "akita_posts": [
+    "sqlite-kamal-deploy-de-rails-sem-drama-bastidores-do-the-m-akita-chronicles",
+    "akitando-113-a-forma-ideal-de-projetos-web-os-12-fatores"
+   ]
+  },
+  {
+   "id": "o-csharp",
+   "trilha": "oficio",
+   "trimestre": 1,
+   "titulo": "C# do zero ao confortável: tipos, coleções, LINQ, classes e exceções",
+   "objetivos": [
+    "Resolver os 3 exercícios de lógica do plano em C# sem IA",
+    "Usar List, Dictionary e LINQ com segurança",
+    "Explicar valor x referência e null"
+   ],
+   "prereq": [],
+   "pratica": "Escrever em C# o rebalanceamento ARCA simplificado com testes xUnit.",
+   "fontes": [
+    "https://learn.microsoft.com/pt-br/dotnet/csharp/"
+   ],
+   "blocos": [
+    "rt"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "assistir": [
+    {
+     "plataforma": "Alura",
+     "titulo": "C#: criando sua primeira aplicação"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": "C#: aplicando a Orientação a Objetos"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": "C#: Trabalhando com Arrays e Coleções"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": "C# LINQ: explorando ferramentas de consulta"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": "C# e Exceções: construa aplicações resilientes"
+    }
+   ],
+   "akita": [
+    "linguagens-de-programacao",
+    "orientação a objetos",
+    "programacao"
+   ],
+   "akita_posts": [
+    "akitando-46-gerenciamento-de-memoria-parte-2-entendendo-back-end-para-iniciantes-parte-6"
+   ]
+  },
+  {
+   "id": "o-dotnet",
+   "trilha": "oficio",
+   "trimestre": 1,
+   "titulo": "Projeto .NET de verdade: solução, projetos, testes e configuração",
+   "objetivos": [
+    "Criar solução com API, domínio e testes pelo dotnet CLI",
+    "Explicar injeção de dependência e appsettings",
+    "Rodar testes e ler a cobertura"
+   ],
+   "prereq": [
+    "o-csharp",
+    "s-git"
+   ],
+   "pratica": "Montar a solução do AM Rendara (só o esqueleto) com um teste passando no CI.",
+   "fontes": [
+    "https://learn.microsoft.com/pt-br/dotnet/core/"
+   ],
+   "blocos": [
+    "rt",
+    "api"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "assistir": [
+    {
+     "plataforma": "Alura",
+     "titulo": ".NET: criando uma API Web com ASP.NET Core"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": ".NET: persistindo dados com Entity Framework Core"
+    },
+    {
+     "plataforma": "Alura",
+     "titulo": "Testes em .NET: criando testes de unidade com xUnit"
+    }
+   ],
+   "akita": [
+    "arquitetura-de-software",
+    "engenharia-de-software",
+    "testes"
+   ],
+   "akita_posts": [
+    "akitando-130-rant-projetos-testes-e-estimativa-rated-r"
+   ]
+  },
+  {
+   "id": "o-sql",
+   "trilha": "oficio",
+   "trimestre": 1,
+   "titulo": "SQL e PostgreSQL: modelar, consultar e não perder dado",
+   "objetivos": [
+    "Modelar 3 tabelas com chaves e restrições",
+    "Escrever SELECT com JOIN, GROUP BY e filtros",
+    "Explicar transação e índice"
+   ],
+   "prereq": [
+    "s-docker"
+   ],
+   "pratica": "Modelar contas, lançamentos e categorias do Caixa da Casa e consultar o saldo por mês.",
+   "fontes": [
+    "https://www.postgresql.org/docs/current/tutorial.html"
+   ],
+   "blocos": [
+    "pg"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "assistir": [
+    {
+     "plataforma": "Alura",
+     "titulo": "Formação SQL com PostgreSQL (os 2 primeiros cursos)",
+     "url": "https://www.alura.com.br/formacao-postgresql"
+    }
+   ],
+   "akita": [
+    "bancos-de-dados",
+    "postgres",
+    "sql"
+   ],
+   "akita_posts": [
+    "akitando-118-fiz-um-servidor-de-sql-entendendo-banco-de-dados",
+    "akitando-143-discutindo-sobre-banco-de-dados-dos-primordios-a-big-data"
+   ]
+  },
+  {
+   "id": "o-astro",
+   "trilha": "oficio",
+   "trimestre": 1,
+   "titulo": "Site de cliente em Astro: do kit de sites até o ar",
+   "objetivos": [
+    "Criar páginas e componentes em Astro",
+    "Publicar por push e ligar o domínio",
+    "Medir desempenho e acessibilidade antes de entregar"
+   ],
+   "prereq": [
+    "s-git"
+   ],
+   "pratica": "Publicar o site da AMtech Software (passo sw-site) com nota 90+ no Lighthouse.",
+   "fontes": [
+    "https://docs.astro.build/pt-br/"
+   ],
+   "blocos": [
+    "astro"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75,
+   "akita": [
+    "desenvolvimento-web",
+    "frontend",
+    "site"
+   ],
+   "akita_posts": [
+    "akitando-124-como-funciona-sockets-cliente-servidor-e-a-web-introducao-a-redes-parte-4",
+    "akitando-133-tornando-sua-app-web-mais-rapida-4-tecnicas-de-otimizacao"
+   ]
+  },
+  {
+   "id": "f-caixa-competencia",
+   "trilha": "financas",
+   "trimestre": 1,
+   "titulo": "Regime de caixa e de competência: quando o dinheiro conta",
+   "objetivos": [
+    "Explicar a diferença com 3 exemplos do seu dia a dia",
+    "Classificar 10 lançamentos nos dois regimes",
+    "Dizer qual regime o carnê-leão usa e por quê"
+   ],
+   "prereq": [],
+   "pratica": "Classificar um mês real do Caixa da Casa (sem dado de terceiros) nos dois regimes.",
+   "fontes": [
+    "https://www.gov.br/receitafederal/pt-br"
+   ],
+   "blocos": [
+    "caixa"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75
+  },
+  {
+   "id": "f-fluxo-caixa",
+   "trilha": "financas",
+   "trimestre": 1,
+   "titulo": "Fluxo de caixa: projetar o mês e não ser pego de surpresa",
+   "objetivos": [
+    "Montar um fluxo de caixa de 3 meses",
+    "Calcular saldo mínimo e capital de giro",
+    "Achar o mês de risco antes dele chegar"
+   ],
+   "prereq": [
+    "f-caixa-competencia"
+   ],
+   "pratica": "Projetar os próximos 3 meses da AMtech Software com o 1º cliente e os custos do setup.",
+   "fontes": [
+    "https://sebrae.com.br/"
+   ],
+   "blocos": [
+    "caixa"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "akita_posts": [
+    "akitando-104-rant-empreendendo-com-software-do-jeito-errado"
+   ]
+  },
+  {
+   "id": "f-dre",
+   "trilha": "financas",
+   "trimestre": 1,
+   "titulo": "DRE simples: receita, custo, despesa e lucro de verdade",
+   "objetivos": [
+    "Montar a DRE de um mês",
+    "Diferenciar custo de despesa",
+    "Calcular margem e ponto de equilíbrio"
+   ],
+   "prereq": [
+    "f-fluxo-caixa"
+   ],
+   "pratica": "Montar a DRE do 1º trimestre da AMtech Software, mesmo com valores pequenos.",
+   "fontes": [
+    "https://sebrae.com.br/"
+   ],
+   "blocos": [
+    "caixa"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75
+  },
+  {
+   "id": "f-carne-leao",
+   "trilha": "financas",
+   "trimestre": 1,
+   "titulo": "Carnê-leão: declarar o que você vende no CPF",
+   "objetivos": [
+    "Saber o que entra, o prazo e como se calcula",
+    "Lançar um recebimento de exemplo",
+    "Guardar os comprovantes do jeito certo (fora da IA e do GitHub)"
+   ],
+   "prereq": [
+    "f-caixa-competencia"
+   ],
+   "pratica": "Simular o lançamento de uma venda de site no carnê-leão (sem enviar) e conferir o DARF.",
+   "fontes": [
+    "https://www.gov.br/receitafederal/pt-br"
+   ],
+   "blocos": [
+    "nfse",
+    "govbr"
+   ],
+   "profundidade": "usar",
+   "estimado_min": 75
+  },
+  {
+   "id": "f-preco",
+   "trilha": "financas",
+   "trimestre": 1,
+   "titulo": "Preço de serviço: hora mínima, custo e margem",
+   "objetivos": [
+    "Calcular a sua hora mínima a partir dos custos e da meta",
+    "Precificar os 3 pacotes da AMtech Software",
+    "Saber quando recusar cliente"
+   ],
+   "prereq": [
+    "f-dre",
+    "mat-porcentagem-juros"
+   ],
+   "pratica": "Recalcular o preço dos 3 pacotes (passo sw-ofertas) e defender cada número.",
+   "fontes": [
+    "docs/plano-eixo.md"
+   ],
+   "blocos": [
+    "kitsites"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "akita_posts": [
+    "akitando-104-rant-empreendendo-com-software-do-jeito-errado"
+   ]
+  },
+  {
+   "id": "mat-linguagem",
+   "trilha": "matematica",
+   "trimestre": 1,
+   "titulo": "Linguagem matemática: símbolos, proposições e como ler uma definição",
+   "objetivos": [
+    "Ler em voz alta qualquer frase com ∀, ∃, ⇒, ⇔, ∈ e explicar o sentido",
+    "Montar a tabela-verdade de proposições compostas",
+    "Traduzir uma condição de negócio para lógica e para um if em C#"
+   ],
+   "prereq": [],
+   "pratica": "Escrever a regra de liberação de venda do AM Kaixara como proposição, tabela-verdade e if em C#.",
+   "fontes": [
+    "https://lins-victor.github.io/pdfs/fmf.pdf"
+   ],
+   "blocos": [
+    "rt"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "ler": [
+    {
+     "obra": "Matemática Básica (V. H. S. Lins, Möbius)",
+     "trecho": "parte de Lógica e o glossário de símbolos (confira o nome na sua edição)"
+    }
+   ]
+  },
+  {
+   "id": "mat-conjuntos",
+   "trilha": "matematica",
+   "trimestre": 1,
+   "titulo": "Teoria dos conjuntos: operações, relações e o elo com bancos de dados",
+   "objetivos": [
+    "Fazer união, interseção, diferença e complementar com diagramas",
+    "Explicar produto cartesiano e relação",
+    "Mostrar a mesma operação em HashSet do C# e num JOIN do SQL"
+   ],
+   "prereq": [
+    "mat-linguagem"
+   ],
+   "pratica": "Resolver 5 exercícios do livro no papel e reescrever 2 deles com HashSet e com SQL no PostgreSQL local.",
+   "fontes": [
+    "https://lins-victor.github.io/pdfs/fmf.pdf"
+   ],
+   "blocos": [
+    "rt",
+    "pg"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "ler": [
+    {
+     "obra": "Matemática Básica (V. H. S. Lins, Möbius)",
+     "trecho": "teoria dos conjuntos (confira o nome na sua edição)"
+    }
+   ]
+  },
+  {
+   "id": "mat-porcentagem-juros",
+   "trilha": "matematica",
+   "trimestre": 1,
+   "titulo": "Porcentagem e juros: a matemática que todo preço e todo empréstimo esconde",
+   "objetivos": [
+    "Calcular aumento, desconto e variação percentual sem errar a base",
+    "Diferenciar juros simples e compostos com exemplos reais",
+    "Montar no código uma função de juros compostos com testes"
+   ],
+   "prereq": [
+    "mat-linguagem"
+   ],
+   "pratica": "Calcular quanto custa parcelar o notebook no cartão contra pagar à vista com desconto, no papel e numa função C# testada.",
+   "fontes": [
+    "https://www.bcb.gov.br/cidadaniafinanceira"
+   ],
+   "blocos": [
+    "rt",
+    "caixa"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "ler": [
+    {
+     "obra": "Matemática Básica (V. H. S. Lins, Möbius)",
+     "trecho": "porcentagem e juros (confira o nome na sua edição)"
+    }
+   ]
+  },
+  {
+   "id": "mat-potencias-log",
+   "trilha": "matematica",
+   "trimestre": 1,
+   "titulo": "Potências, raízes e logaritmos: crescimento, juros compostos e Big-O",
+   "objetivos": [
+    "Aplicar as propriedades de potências e logaritmos",
+    "Resolver 'em quanto tempo o dinheiro dobra' com logaritmo",
+    "Explicar por que busca binária é O(log n)"
+   ],
+   "prereq": [
+    "mat-porcentagem-juros"
+   ],
+   "pratica": "Calcular o tempo para dobrar uma aplicação a 1% ao mês e comparar com a busca binária numa lista de 1 milhão de itens.",
+   "fontes": [
+    "https://lins-victor.github.io/pdfs/fmf.pdf"
+   ],
+   "blocos": [
+    "rt"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "ler": [
+    {
+     "obra": "Matemática Básica (V. H. S. Lins, Möbius)",
+     "trecho": "potências e raízes; logaritmos (confira o nome na sua edição)"
+    }
+   ],
+   "akita": [
+    "algoritmos-e-estruturas-de-dados",
+    "complexidade",
+    "big-o"
+   ]
+  },
+  {
+   "id": "fis-grandezas",
+   "trilha": "fisica",
+   "trimestre": 1,
+   "titulo": "Grandezas, unidades e notação científica: a base de toda física",
+   "objetivos": [
+    "Converter unidades do SI e prefixos (mili, micro, quilo, mega)",
+    "Escrever e operar números em notação científica",
+    "Fazer análise dimensional para conferir uma fórmula"
+   ],
+   "prereq": [],
+   "pratica": "Converter as especificações reais do seu notebook (W, V, A, GHz, GB) e conferir as contas.",
+   "fontes": [
+    "https://lins-victor.github.io/pdfs/fmf.pdf",
+    "https://www.bipm.org/en/measurement-units"
+   ],
+   "blocos": [
+    "nitro"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "ler": []
+  },
+  {
+   "id": "fis-eletricidade",
+   "trilha": "fisica",
+   "trimestre": 1,
+   "titulo": "Eletricidade básica: carga, tensão, corrente, resistência, lei de Ohm e potência",
+   "objetivos": [
+    "Explicar tensão, corrente e resistência com uma analogia e com a definição",
+    "Calcular o resistor de um LED pela lei de Ohm",
+    "Calcular potência e consumo em kWh de um aparelho"
+   ],
+   "prereq": [
+    "fis-grandezas"
+   ],
+   "pratica": "Calcular e montar no Arduino o resistor de um LED, medir com multímetro e comparar o medido com o calculado.",
+   "fontes": [
+    "https://www.bipm.org/en/measurement-units"
+   ],
+   "blocos": [
+    "rob",
+    "ard"
+   ],
+   "profundidade": "a-fundo",
+   "estimado_min": 75,
+   "ler": [],
+   "akita_posts": [
+    "coisas-que-iniciantes-ignoram-sobre-pcs"
+   ]
+  }
+ ]
+}

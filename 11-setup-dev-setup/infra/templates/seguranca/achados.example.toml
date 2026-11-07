@@ -1,0 +1,37 @@
+# Achados de um teste de intrusão. Gere o relatório com:
+#   python3 tools/seguranca/relatorio.py ~/clientes/loja/escopo.toml ~/clientes/loja/achados.toml
+# A nota sai do vetor CVSS 3.1 (confira um vetor com tools/seguranca/cvss.py). Nunca escreva a nota à mão.
+# Evidência: o mínimo para provar. Mascare dado pessoal (LGPD) e nunca cole senha real.
+
+titulo = "Teste de intrusão: aplicação web da Loja Exemplo"
+responsavel = "Alan Mateus · AMtech Segurança"
+metodologia = ["OWASP Web Security Testing Guide (WSTG)", "PTES (Penetration Testing Execution Standard)", "OWASP ASVS 4.0 nível 1 como checklist"]
+resumo = """
+O teste encontrou uma falha que permite ler pedidos de outros clientes trocando um número na URL.
+A nota CVSS é média, mas ela expõe dados pessoais (LGPD): corrija antes de qualquer campanha de vendas.
+A outra já foi corrigida e conferida no reteste.
+"""
+
+[[achado]]
+id = "AMS-01"
+titulo = "Acesso a pedidos de outros clientes (IDOR)"
+vetor = "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N"
+ativo = "https://app.loja.example/pedidos/1042"
+descricao = "A rota de detalhe do pedido confere se o usuário está logado, mas não se o pedido pertence a ele."
+evidencia = "Logado como cliente de teste A (pedido 1041), a requisição GET /pedidos/1042 devolveu o pedido do cliente B (nome e endereço mascarados neste relatório)."
+impacto = "Qualquer cliente cadastrado lê nome, endereço e itens de todos os pedidos: vazamento de dados pessoais (LGPD)."
+recomendacao = "Filtrar a consulta pelo dono do pedido no servidor (WHERE cliente_id = usuário logado) e cobrir com teste automatizado."
+referencias = ["CWE-639", "OWASP Top 10 2021 A01"]
+status = "aberto"
+
+[[achado]]
+id = "AMS-02"
+titulo = "Cabeçalhos de segurança ausentes"
+vetor = "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N"
+ativo = "https://loja.example"
+descricao = "O site não envia Content-Security-Policy, X-Content-Type-Options nem Strict-Transport-Security."
+evidencia = "Resposta HTTP da página inicial sem os três cabeçalhos (curl -I)."
+impacto = "Facilita ataques no navegador do cliente se outra falha (ex.: XSS) aparecer."
+recomendacao = "Configurar os cabeçalhos no servidor ou no proxy (Caddy) e conferir com o laudo do kit de sites."
+referencias = ["OWASP Secure Headers Project"]
+status = "corrigido"

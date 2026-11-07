@@ -12,13 +12,14 @@ if (-not (Get-Command code -ErrorAction SilentlyContinue)) {
   Write-Host 'VS Code nao encontrado no PATH. Rode antes o instalar.ps1 -Aplicar e abra um terminal novo.'
   exit 1
 }
-$instaladas = @(& code --list-extensions 2>$null | ForEach-Object { $_.ToLowerInvariant() })
+# cmd /c: avisos do Node no stderr do code.cmd viram erro no Windows PowerShell 5.1 com ErrorActionPreference Stop
+$instaladas = @(cmd /c 'code --list-extensions 2>nul' | ForEach-Object { $_.ToLowerInvariant() })
 $erros = 0
 foreach ($e in $desejadas) {
   if ($instaladas -contains $e.ToLowerInvariant()) { $st = 'JA TEM' }
   elseif (-not $Aplicar) { $st = 'INSTALARIA' }
   else {
-    & code --install-extension $e --force *> $null
+    cmd /c "code --install-extension $e --force >nul 2>&1"
     if ($LASTEXITCODE -eq 0) { $st = 'INSTALADO' } else { $st = 'ERRO'; $erros++ }
   }
   Write-Host ("{0,-40} {1}" -f $e, $st)

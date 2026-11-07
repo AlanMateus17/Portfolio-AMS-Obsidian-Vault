@@ -10,7 +10,7 @@ Nada é vendido sem ter passado pela esteira; nada é feito uma vez só: cada tr
 
 ```mermaid
 flowchart LR
-  C["Catálogo único<br/>47 ofertas pontuadas"] --> E["Esteira<br/>ideia → validação → construção<br/>→ lançamento → escala"]
+  C["Catálogo único<br/>108 ofertas pontuadas<br/>arsenal com vereditos"] --> E["Esteira<br/>ideia → validação → construção<br/>→ lançamento → escala"]
   E --> Q["Padrão de qualidade<br/>por tipo de oferta"]
   Q --> V["Venda e entrega"]
   V --> D["Clientes e dados<br/>CRM único, LGPD"]
@@ -33,7 +33,12 @@ flowchart LR
 5. [Padrão de qualidade](05-padrao-de-qualidade.md): o que é "pronto" para cada tipo de oferta e o ciclo de melhoria
 6. [Clientes e dados](06-clientes-e-dados.md): CRM único, consentimento, jornadas entre ofertas e os números de cada uma
 7. [Ordem de execução](07-ordem-de-execucao.md): o que fazer nos próximos 90 dias e 12 meses, dentro das horas que você tem
-- [Portfólio de ofertas](portfolio.md): o catálogo completo com ranking e as fontes de renda novas (gerado)
+8. [Financiar o setup](08-financiar-o-setup.md): a renda paga o setup, nessa ordem — cada marco de renda libera uma compra, pela cascata
+- [Portfólio de ofertas](portfolio.md): o catálogo completo, o arsenal de rendas (o que entra agora, a fila, o que fica para 2027, o que exige capital e o que foi descartado), as regras de hora mínima e teto de horas, e o ranking (gerado)
+- [Kit de sites com IA da Hostinger](kit-sites.md): pacotes, ficha do cliente, um prompt por tipo de negócio, conferência automática, checklist de entrega, relatório mensal e o [modelo de contrato](contrato-sites-modelo.md) (gerado)
+- [Conversas curtas](sessoes-curtas.md): o protocolo para o limite das IAs durar (pacote de contexto, ESTADO.md, ai-memory, ai-usagebar)
+- [Operação 24 horas](24-horas.md): o que roda no notebook, no GitHub e na VM grátis, e o que o setup faz sozinho o tempo todo
+- [Catálogo de softwares](softwares.md): todos os sites por tipo de negócio, sistemas AM, micro-SaaS e produtos que você pode criar e vender, montados com módulos reaproveitáveis e ligados às ofertas (gerado)
 - [`portfolio.html`](portfolio.html): o mesmo catálogo com filtros, para abrir no navegador
 
 ## Antes de tudo: o limite real

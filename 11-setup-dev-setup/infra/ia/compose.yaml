@@ -1,0 +1,23 @@
+# Gateway de modelos (LiteLLM): um endereço só para todos os modelos — locais (Ollama), por API (Claude)
+# e GPU alugada (vLLM no RunPod). Cada agente pede "rapido", "forte" ou "local" e o gateway escolhe,
+# com limite de gasto e registro de custo.
+#   cd infra/ia && cp ia.env.example .env && docker compose up -d     → http://localhost:4000
+name: amtech-ia
+services:
+  litellm:
+    image: ghcr.io/berriai/litellm:main-stable
+    restart: unless-stopped
+    command: ["--config", "/app/config.yaml", "--port", "4000"]
+    volumes:
+      - ./litellm.yaml:/app/config.yaml:ro
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      LITELLM_MASTER_KEY: ${LITELLM_MASTER_KEY:?gere uma chave e guarde no KeePassXC}
+      VLLM_URL: ${VLLM_URL:-http://localhost:8000/v1}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:4000:4000"

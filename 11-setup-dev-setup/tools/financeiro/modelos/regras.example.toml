@@ -1,0 +1,9 @@
+# Palavra no histórico do extrato -> categoria. Ajuste com os nomes que aparecem nos SEUS extratos.
+[categorias]
+"Moradia" = ["aluguel", "condominio", "cemig", "copasa", "energia", "agua"]
+"Comida" = ["supermercado", "mercado", "padaria", "ifood", "restaurante"]
+"Transporte" = ["posto", "combustivel", "uber", "99"]
+"Cães" = ["racao", "pet", "veterin"]
+"Estudo" = ["alura", "udemy", "faculdade", "livraria", "amazon"]
+"Assinaturas" = ["spotify", "google one", "claude", "prime video", "netflix"]
+"Renda" = ["salario", "pagamento recebido", "pix recebido", "hotmart", "kiwify"]

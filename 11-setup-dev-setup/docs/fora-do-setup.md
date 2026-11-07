@@ -14,5 +14,6 @@ Nada do planejamento foi retirado. Os quatro primeiros entram por outro caminho,
 | Treinar um 8B na GTX 1650 | A placa tem 4 GB e o QLoRA de 8B pede 6 GB. O treino entra pelo Kaggle e por GPU alugada em 2027, e em casa quando a workstation com GPU chegar (fase Infraestrutura própria). |
 | Mobile nativo (Kotlin, Swift, Flutter) | Abriria outra stack. O app mobile entra em 2028 com .NET MAUI, na mesma linguagem do Aura (fase Distribuído, plataforma e segunda nuvem). |
 | OpenClaw | Histórico sério de instâncias expostas e execução de código não confiável. |
-| Bun, Hono, Rust, Tauri, gRPC | Rejeitados por você para o Aura. |
+| Bun, Hono, Tauri e gRPC | Não são mais proibidos (ADR 0007): entram pela triagem quando forem a melhor ferramenta para um trabalho. Rust já entrou para firmware e CLIs. |
 | Postman, IDEs pagas, SaaS pagos | Você prefere open source; Bruno, DBeaver e VS Code cobrem. |
+| SLU e Fator R | Pronto para ligar com a renda (fase CNPJ e formalização), com Akaunting e o contador. Os 6% do Anexo III valem só na 1ª faixa (até R$ 180 mil em 12 meses) e o pró-labore de 28% paga INSS de 11% e IR. |

@@ -1,0 +1,151 @@
+{
+ "auditado_em": "2026-11-01",
+ "regras": [
+  "Cada tarefa vai para a ferramenta que faz melhor ou mais barato; nenhuma tarefa depende dos créditos de uma ferramenta só (sempre há uma primária e uma reserva).",
+  "Todos os agentes seguem as mesmas regras: AGENTS.md é o padrão lido pela maioria (Codex, Copilot e outros); CLAUDE.md e GEMINI.md saem do mesmo arquivo (scripts/wsl/regras-ia.sh).",
+  "Portão humano: nada vai para a internet, gasta dinheiro ou fala com cliente sem a sua aprovação. O agente prepara; você aprova o PR, a prévia ou a mensagem.",
+  "Dado de aluno, finanças pessoais e senhas não entram em nenhum agente na nuvem nem no OpenClaw.",
+  "Auditoria de recursos a cada 3 meses, junto com a de custos: os planos mudam rápido (o Gemini CLI saiu do ar para contas pessoais e o v0 cortou o crédito mensal em 2026)."
+ ],
+ "ferramentas": [
+  {
+   "bloco": "copi",
+   "nome": "GitHub Copilot Pro (grátis para professor verificado)",
+   "recursos": [
+    {"recurso": "Agente na nuvem", "o_que": "Você atribui uma issue ao Copilot e ele abre um pull request com o código; dá para pedir ajustes no próprio PR", "custo": "Incluído no Pro (1.500 créditos de IA por mês)", "uso": "Motor principal da esteira de sites e de tarefas de código pequenas, sem gastar o limite do Claude", "decisao": "usar grátis"},
+    {"recurso": "Agentes de terceiros", "o_que": "Escolher outro agente na mesma issue (prévia pública nos planos pagos)", "custo": "Incluído no Pro, em prévia", "uso": "Rodar a mesma issue em outro agente quando o primeiro errar", "decisao": "usar grátis"},
+    {"recurso": "Copilot CLI e app", "o_que": "Agente no terminal, incluído em todos os planos", "custo": "Créditos do plano", "uso": "Reserva de código no terminal quando o Claude Code bater o limite", "decisao": "usar grátis"}
+   ],
+   "lacuna": "A verificação de professor no GitHub Education ainda está pendente; é ela que libera o Pro grátis. É a maior lacuna do setup hoje.",
+   "fonte": "https://docs.github.com/en/copilot/concepts/billing/individual-plans"
+  },
+  {
+   "bloco": "anth",
+   "nome": "Claude Pro (app, Claude Code e rotinas)",
+   "recursos": [
+    {"recurso": "Rotinas do Claude Code", "o_que": "Tarefa salva que roda na nuvem da Anthropic por horário, por chamada de API ou por evento do GitHub (PR, issue), mesmo com o notebook desligado", "custo": "Pro: 5 execuções por dia, à parte do limite normal", "uso": "Revisar todo PR da esteira, resumo noturno dos repositórios, vigia de dependências", "decisao": "usar já"},
+    {"recurso": "Conectores e skills da Hostinger", "o_que": "Skills prontas para publicar, ligar domínio, manter WordPress, auditar e consertar sites na Hostinger", "custo": "Já pago; precisa conectar o MCP da Hostinger", "uso": "Publicar e manter os sites de clientes pela conversa", "decisao": "usar já"}
+   ],
+   "lacuna": "Cada rotina começa de um clone novo do repositório: o que ela precisa saber tem de estar em AGENTS.md ou em arquivo do repositório.",
+   "fonte": "https://www.noqta.tn/en/blog/claude-code-routines-cloud-ai-automation-guide-2026"
+  },
+  {
+   "bloco": "codex",
+   "nome": "Codex (OpenAI)",
+   "recursos": [
+    {"recurso": "Codex no ChatGPT Go", "o_que": "Agente de código incluído no Go, com limite baixo e cota semanal", "custo": "Grátis pelo Nubank (Go)", "uso": "Segunda opinião e reserva em tarefas leves; lê o mesmo AGENTS.md", "decisao": "usar grátis"},
+    {"recurso": "Sites (ChatGPT/Codex)", "o_que": "Cria e hospeda apps e páginas a partir da conversa", "custo": "Só nos planos pagos acima do Go", "uso": "Nenhum: proíbe comércio e pagamentos e publica direto em produção, sem prévia", "decisao": "não usar"}
+   ],
+   "lacuna": "Não serve como agente principal no Go: a cota semanal acaba em poucas horas de uso pesado.",
+   "fonte": "https://help.openai.com/en/articles/11369540-using-codex-with-your-chatgpt-plan"
+  },
+  {
+   "bloco": "gcode",
+   "nome": "Google (AI Plus, Antigravity, Jules)",
+   "recursos": [
+    {"recurso": "Gemini CLI", "o_que": "Saiu do ar para contas pessoais sem licença paga em 18/06/2026; o substituto é o Antigravity CLI, de código fechado", "custo": "—", "uso": "Nenhum fluxo do setup deve depender dele", "decisao": "não usar"},
+    {"recurso": "Antigravity", "o_que": "Ambiente de agentes do Google; o acesso ampliado aparece só no plano Pro, não no Plus", "custo": "Limitado no Plus", "uso": "Testar só se sobrar cota; não é motor da esteira", "decisao": "adiar"},
+    {"recurso": "Deep Research e NotebookLM no AI Plus", "o_que": "Mais acesso que o grátis; o NotebookLM responde preso às suas fontes", "custo": "AI Plus", "uso": "Rascunho de aulas e pesquisa de mercado", "decisao": "usar já"}
+   ],
+   "lacuna": "O armazenamento do AI Plus varia por país (a página internacional mostra 400 GB); confira o valor no Brasil antes de trocar o Google One.",
+   "fonte": "https://www.shopifreaks.com/google-ends-free-gemini-cli-access-for-non-enterprise-users-on-june-18-replacing-it-with-closed-source-antigravity-cli/"
+  },
+  {
+   "bloco": "hostg",
+   "nome": "Hostinger",
+   "recursos": [
+    {"recurso": "MCP oficial (hostinger-api-mcp)", "o_que": "146 ferramentas para IAs: sites, VPS, domínios e DNS, e-mail marketing, pagamentos, e-commerce e Horizons", "custo": "Grátis com a conta", "uso": "Claude, Codex ou o agente noturno publicam e conferem sites sem você abrir o painel", "decisao": "usar já"},
+    {"recurso": "Deploy por push no GitHub", "o_que": "Cada push no repositório publica o site; apps Node.js são construídos a partir do código", "custo": "Incluído na hospedagem web", "uso": "Último passo da esteira: PR aprovado → merge → site no ar", "decisao": "usar já"},
+    {"recurso": "Construtor com IA, Hostinger Agent e Reach", "o_que": "Criação de sites e campanhas por IA com créditos à parte (recarga a partir de 500 créditos, que vencem em 3 meses)", "custo": "Plano de créditos de IA, pago à parte", "uso": "Só quando um cliente do pacote Vendas pagar pela função", "decisao": "adiar"},
+    {"recurso": "Kodee (VPS gerenciada por IA)", "o_que": "Agente que executa comandos na VPS da Hostinger", "custo": "Só com VPS", "uso": "Nenhum agora: a VM grátis da Oracle já faz o papel de servidor 24 h", "decisao": "não usar"}
+   ],
+   "lacuna": "O MCP da Hostinger ainda não está conectado ao Claude; sem ele, as skills de publicar e manter sites não funcionam.",
+   "fonte": "https://www.hostinger.com/support/?p=342"
+  },
+  {
+   "bloco": "oclaw",
+   "nome": "OpenClaw",
+   "recursos": [
+    {"recurso": "Agente pessoal 24/7", "o_que": "Agente auto-hospedado que executa tarefas agendadas e por mensagem, com skills e acesso a ferramentas", "custo": "Grátis (código aberto) + o modelo que ele usar pelo gateway", "uso": "Tarefas noturnas que as rotinas e o n8n não cobrem: triagem, relatórios, rascunhos de prospecção", "decisao": "testar isolado"}
+   ],
+   "lacuna": "Histórico de segurança ruim em 2026: 341 skills maliciosas na loja oficial, mais de 135 mil instâncias expostas e falhas de nota 8,8 a 9,9. Só roda na VM isolada, atrás do Tailscale, sem suas contas pessoais, sem skills de terceiros não revisadas e com chave do gateway de teto baixo.",
+   "fonte": "https://www.orcarouter.ai/blog/openclaw-exposed-instances-agent-identity"
+  },
+  {
+   "bloco": "cf",
+   "nome": "Cloudflare",
+   "recursos": [
+    {"recurso": "Workers AI", "o_que": "Modelos abertos rodando na rede da Cloudflare, com 10.000 neurônios grátis por dia", "custo": "Grátis até a cota diária", "uso": "Modelo 'gratis-cf' no gateway, para rascunho em volume", "decisao": "usar grátis"},
+    {"recurso": "Cloudflare API MCP", "o_que": "Substitui o conector antigo, que avisa que está descontinuado", "custo": "Grátis", "uso": "DNS, Pages e Workers pela conversa", "decisao": "trocar"}
+   ],
+   "lacuna": "O conector conectado hoje é o descontinuado.",
+   "fonte": "https://costbench.com/software/llm-api-providers/cloudflare-workers-ai/free-plan/"
+  },
+  {
+   "bloco": "clov",
+   "nome": "Lovable",
+   "recursos": [
+    {"recurso": "Plano grátis", "o_que": "5 créditos por dia (máximo de 30 por mês), até 5 projetos em lovable.app, sem domínio próprio", "custo": "Grátis", "uso": "Protótipo de landing para validar uma ideia antes de construir", "decisao": "usar grátis"},
+    {"recurso": "Sincronização com o GitHub", "o_que": "Disponível em todos os planos, inclusive o grátis", "custo": "Grátis", "uso": "Levar o protótipo aprovado para o repositório e publicar na Hostinger pela esteira", "decisao": "usar grátis"}
+   ],
+   "lacuna": "Domínio próprio só no pago: o site final sai pela esteira, não pelo Lovable.",
+   "fonte": "https://eesel.ai/blog/lovable-pricing"
+  },
+  {
+   "bloco": "vercel",
+   "nome": "Vercel (v0)",
+   "recursos": [
+    {"recurso": "v0", "o_que": "Gerador de interfaces; o plano grátis virou crédito único de US$ 5 só para contas novas (out/2026)", "custo": "Pago para uso contínuo", "uso": "Nenhum: Lovable grátis e o Copilot cobrem", "decisao": "não usar"}
+   ],
+   "lacuna": "Nenhum fluxo deve contar com crédito mensal grátis do v0.",
+   "fonte": "https://www.usagepricing.com/blueprint/activity/v0-2026-10-05-free-credits-one-time"
+  },
+  {
+   "bloco": "mp",
+   "nome": "Mercado Pago",
+   "recursos": [
+    {"recurso": "MCP oficial (Recursos para IA)", "o_que": "Servidor MCP do Mercado Pago para agentes consultarem a documentação e montarem a integração do checkout", "custo": "Grátis", "uso": "Integrar pagamento nos sites e sistemas com o agente lendo a documentação oficial", "decisao": "usar já"}
+   ],
+   "lacuna": "Chave de produção nunca vai para agente: só a de teste, e a troca para produção passa pelo portão.",
+   "fonte": "https://www.mercadopago.com.br/developers/pt/docs/checkout-pro/additional-content/mcp-server"
+  },
+  {
+   "bloco": "hotm",
+   "nome": "Hotmart",
+   "recursos": [
+    {"recurso": "MCPs de terceiros", "o_que": "Não há MCP oficial; os que existem são de terceiros", "custo": "—", "uso": "Nenhum com credencial de venda; use os webhooks oficiais pelo n8n", "decisao": "não usar"}
+   ],
+   "lacuna": "Vendas da Hotmart chegam ao setup só por webhook oficial.",
+   "fonte": "https://github.com/thaleslaray/hotmart-mcp"
+  },
+  {
+   "bloco": "img",
+   "nome": "Canva",
+   "recursos": [
+    {"recurso": "IA no plano grátis", "o_que": "Até 20 usos premium de IA por mês (o Canva Code entra nessa cota)", "custo": "Grátis", "uso": "Capas e posts pontuais", "decisao": "usar grátis"},
+    {"recurso": "Canva para Educação", "o_que": "Plano grátis para professores elegíveis, com recursos do Pro", "custo": "Grátis se aprovado", "uso": "Material de aula e posts sem pagar o Pro", "decisao": "usar grátis"}
+   ],
+   "lacuna": "Pedir a verificação de professor no Canva para Educação (confira a elegibilidade).",
+   "fonte": "https://www.eesel.ai/en/blog/canva-ai-pricing"
+  }
+ ],
+ "rotas": [
+  {"tarefa": "Site novo (seu ou de cliente)", "primaria": "Copilot (agente na nuvem): issue com a ficha → PR", "reserva": "Claude Code; depois Codex", "portao": "Você aprova a prévia e o PR"},
+  {"tarefa": "Revisar cada PR da esteira", "primaria": "Rotina do Claude Code disparada pelo PR", "reserva": "Revisão do Copilot", "portao": "Merge só com o CI verde"},
+  {"tarefa": "Publicar e ligar domínio", "primaria": "Deploy por push na Hostinger + skills da Hostinger", "reserva": "Cloudflare Pages para site estático", "portao": "Merge aprovado"},
+  {"tarefa": "Manter WordPress dos clientes", "primaria": "Skill maintain-wordpress pelo MCP da Hostinger", "reserva": "Painel da Hostinger", "portao": "Você aprova antes de atualizar"},
+  {"tarefa": "Protótipo para validar ideia", "primaria": "Lovable grátis → GitHub", "reserva": "Copilot", "portao": "Teste com público antes de construir"},
+  {"tarefa": "Software (sistemas AM)", "primaria": "Claude Code", "reserva": "Copilot CLI ou Codex", "portao": "Testes e revisão sua"},
+  {"tarefa": "Tarefas noturnas do setup", "primaria": "Rotinas do Claude Code (5/dia) e n8n na VM", "reserva": "OpenClaw isolado (fase 3)", "portao": "Relatório no Telegram; ação só com aprovação"},
+  {"tarefa": "Rascunho em volume", "primaria": "Gateway: gratis-cf, gratis, local", "reserva": "barato, reserva", "portao": "Nada sensível"},
+  {"tarefa": "Pagamento em site ou sistema", "primaria": "Agente com o MCP do Mercado Pago (chave de teste)", "reserva": "Documentação manual", "portao": "Troca para produção feita por você"},
+  {"tarefa": "Imagens, capas e posts", "primaria": "ChatGPT Go e Canva", "reserva": "FLUX local", "portao": "Você aprova antes de publicar"}
+ ],
+ "esteira_sites": [
+  "Você preenche a ficha (a mesma do kit de sites) como issue no repositório do site, com o rótulo 'site'.",
+  "A issue é atribuída ao Copilot, que abre um PR com o site (modelo da stack, sem dependências novas sem motivo).",
+  "O CI roda links, acessibilidade e desempenho; a rotina do Claude revisa o PR contra o AGENTS.md.",
+  "Uma prévia sobe no Cloudflare Pages; você abre no celular e aprova ou pede ajuste no próprio PR.",
+  "Merge → deploy por push na Hostinger → o vigia semanal passa a monitorar o site."
+ ]
+}

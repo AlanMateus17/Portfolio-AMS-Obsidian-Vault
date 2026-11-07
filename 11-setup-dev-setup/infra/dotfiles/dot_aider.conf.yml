@@ -1,0 +1,7 @@
+# Aider: par de programação de custo zero com o modelo local do Ollama (ADR 0008).
+# O Claude Code continua o agente principal; o Aider é o nível 1 (R$ 0) para tarefa simples.
+# Na GTX 1650 (4 GB) o 7B roda com parte na CPU; se ficar lento, troque por qwen2.5-coder:3b (cabe.py 32).
+model: ollama_chat/qwen2.5-coder:7b
+map-tokens: 1024
+auto-commits: false
+gitignore: false

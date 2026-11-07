@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-</head>
-<body>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Arquivo GERADO por tools/gerar_docs.py a partir de tools/diagrama.template.html e data/ecossistema.json. Não edite à mão. -->
 <title>Ecossistema AMtech</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600&display=swap">
 <style>
@@ -96,12 +96,15 @@ details.ly summary .bandnum{font:500 12px var(--mono);color:var(--gold)}
 details.ly ul{margin:0;padding:0 14px 12px 36px;font-size:14px;display:flex;flex-direction:column;gap:4px}
 details.ly li span{color:var(--muted)}
 </style>
+
+</head>
+<body>
 <div class="wrap">
   <header>
     <div class="eyebrow">Grupo AMtech Digital · do hardware à venda · out/2026</div>
     <h1>Ecossistema AMtech</h1>
     <p class="lede">Todas as camadas do seu setup em um desenho só: o notebook, as ferramentas locais, a nuvem, os sites, a criação de conteúdo e a venda dos infoprodutos. Toque em qualquer bloco para ver com o que ele se conecta, ou escolha um fluxo pronto.</p>
-    <p class="lede"><a href="https://claude.ai/artifact/BTUyCQfojw6cngvR5W5oAB" target="_top" style="color:var(--aura)">Ver a ordem de estudo, as nuvens e os dados de mercado →</a></p>
+    <p class="lede"><a href="mapa.html" style="color:var(--aura)">Ver a ordem de estudo, as nuvens e os dados de mercado →</a></p>
   </header>
 
   <section style="display:flex;flex-direction:column;gap:12px">
@@ -209,5 +212,6 @@ document.getElementById("acc").innerHTML=CONTAS.map(([t,l])=>`<div class="card">
 document.getElementById("gaps").innerHTML=DATA.auditoria.map(g=>`<div class="card"><h3>${ESC(g.grupo)}</h3><ul>${g.itens.map(x=>`<li><b>${ESC(x.nome)}</b><span>${ESC(x.obs)}</span></li>`).join("")}</ul></div>`).join("");
 document.getElementById("list").innerHTML=LAYERS.map(([id,t],i)=>`<details class="ly"><summary><span class="bandnum">${String(LAYERS.length-i).padStart(2,"0")}</span>${ESC(t)}</summary><ul>${N.filter(n=>n[1]===id).map(n=>`<li>${ESC(n[2].replace("|"," "))}${n[4]?" ●":""} <span>· ${ESC(n[6])}${n[7]?` <b>Quando:</b> ${ESC(n[7])}`:""}</span></li>`).join("")}</ul></details>`).join("");
 </script>
+
 </body>
 </html>

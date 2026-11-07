@@ -1,0 +1,4 @@
+ticker,setor,tipo,domicilio,indice_amplo,taxa_adm,preco,pvp,dy,dy_medio,dividendo_medio,crescimento_dividendos,anos_aumento_dividendo,divida_pl,lpa,vpa,liquidez_corrente,roe,margem_liquida,divida_liquida_ebitda,fscore,peg,sena
+WRLD,indice,etf,irlanda,sim,0.2,100,,,,,,,,,,,,,,,,sim
+ARIS,consumo,acao,eua,não,,60,,3,3.5,2.4,6,40,0.8,3,12,1.6,30,18,1.2,8,1.5,sim
+REIT,imoveis,reit,eua,não,0.6,40,0.95,5,5,2,,,,,,,,,,,,

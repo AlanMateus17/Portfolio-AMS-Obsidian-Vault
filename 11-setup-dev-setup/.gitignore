@@ -8,3 +8,7 @@ infra/automacao/.env
 scripts/windows/instalar-*.log
 scripts/windows/inventario-*/
 diagnostico-*/
+
+# Chave do servidor Headscale
+infra/soberania/headscale/config.yaml
+infra/soberania/.env

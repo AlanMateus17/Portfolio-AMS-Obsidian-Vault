@@ -1,0 +1,24 @@
+# Copie para ~/.config/amtech/radar.toml e ajuste com os preços que você conhece.
+# Fora do repositório: seus números de compra e venda são só seus.
+
+[geral]
+hora_minima = 45          # R$ por hora sua (regra do arsenal)
+margem_minima = 0.20      # lucro mínimo sobre o preço de compra
+taxa_plataforma = 0.12    # taxa média do Mercado Livre/OLX na revenda
+deslocamento = 15         # custo de ir ver o item
+horas_padrao = 2
+
+# Cada referência: palavras que o título precisa ter, preço de revenda (já consertado), custo do conserto e horas suas.
+[[referencia]]
+contem = ["thinkpad", "t480"]
+categoria = "notebook"
+revenda = 1500
+conserto = 150
+horas = 3
+
+[[referencia]]
+contem = ["iphone 11"]
+categoria = "celular"
+revenda = 1300
+conserto = 200
+horas = 2

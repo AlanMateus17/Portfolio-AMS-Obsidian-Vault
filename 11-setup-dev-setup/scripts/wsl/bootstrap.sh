@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prepara o Ubuntu 24.04 do WSL2 para o setup: ferramentas, linguagens, segurança, agentes e pastas.
+# Prepara o Ubuntu (24.04 ou mais novo) do WSL2 para o setup: ferramentas, linguagens, segurança, agentes e pastas.
 # Seguro para rodar várias vezes: o que já está pronto é pulado.
 #
 #   bash scripts/wsl/bootstrap.sh --simular                      # mostra o que faria, sem mudar nada
@@ -62,7 +62,7 @@ fi
 # ------------------------------------------------------------------ 1. pacotes do sistema
 PACOTES=(build-essential curl wget git unzip zip jq ripgrep fzf tmux zsh ca-certificates gnupg
          bubblewrap restic pandoc sqlite3 postgresql-client python3-venv shellcheck openssh-client
-         nmap dnsutils)
+         nmap bind9-dnsutils)
 FALTAM=()
 for p in "${PACOTES[@]}"; do dpkg -s "$p" >/dev/null 2>&1 || FALTAM+=("$p"); done
 if [[ ${#FALTAM[@]} -eq 0 ]]; then linha "apt" "pacotes base (${#PACOTES[@]})" "JA TEM"
@@ -80,11 +80,19 @@ else rodar "github" "gh" bash -c "
 if tem dotnet && dotnet --list-sdks 2>/dev/null | grep -q '^10\.'; then linha "linguagem" ".NET 10 SDK" "JA TEM"
 else rodar "linguagem" ".NET 10 SDK" bash -c "$SUDO apt-get update -y && $SUDO env $APT install dotnet-sdk-10.0"; fi
 
-if tem fnm; then linha "linguagem" "fnm (Node)" "JA TEM"
-else rodar "linguagem" "fnm (Node)" bash -c 'd=$(mktemp -d) && curl -fsSL -o "$d/fnm.zip" https://github.com/Schniz/fnm/releases/latest/download/fnm-linux.zip && unzip -qo "$d/fnm.zip" -d "$d" && install -m755 "$d/fnm" "$HOME/.local/bin/fnm" && rm -rf "$d"'; fi
-if tem node && [[ "$(node -v | tr -d v | cut -d. -f1)" -ge 22 ]]; then linha "linguagem" "Node LTS" "JA TEM" "$(node -v)"
-else rodar "linguagem" "Node LTS" bash -c 'eval "$(fnm env)" && fnm install --lts && fnm default lts-latest'; fi
-grep -q 'fnm env' "$HOME/.bashrc" 2>/dev/null || { [[ $SIMULAR -eq 1 ]] || echo 'eval "$(fnm env --use-on-cd --shell bash)"' >> "$HOME/.bashrc"; }
+# Runtimes pelo mise (ADR 0008): Node, Go e Rust num gerenciador só; o fnm fica só como reserva se já existir.
+if tem mise; then linha "linguagem" "mise" "JA TEM" "$(mise --version 2>/dev/null | cut -d' ' -f1)"
+else rodar "linguagem" "mise" bash -c 'curl -fsSL https://mise.run | MISE_INSTALL_PATH="$HOME/.local/bin/mise" sh'; fi
+tem mise && eval "$(mise env -s bash 2>/dev/null)"
+if tem mise && mise where node >/dev/null 2>&1; then linha "linguagem" "Node LTS (mise)" "JA TEM" "$(mise exec -- node -v 2>/dev/null)"
+elif tem mise || [[ $SIMULAR -eq 1 ]]; then rodar "linguagem" "Node LTS (mise)" mise use -g --yes node@lts
+else linha "linguagem" "Node LTS (mise)" "FALTA" "o mise não instalou; veja $LOG"; fi
+# A linha no .bashrc põe ~/.local/bin no PATH antes: no shell de login do WSL o .bashrc roda antes do .profile acrescentar a pasta.
+MISE_LINHA='export PATH="$HOME/.local/bin:$PATH"; if command -v mise >/dev/null; then eval "$(mise activate bash)"; elif command -v fnm >/dev/null; then eval "$(fnm env --use-on-cd --shell bash)"; fi'
+if [[ $SIMULAR -eq 0 ]] && ! grep -qxF "$MISE_LINHA" "$HOME/.bashrc" 2>/dev/null; then
+  grep -v 'fnm env' "$HOME/.bashrc" > "$HOME/.bashrc.tmp" 2>/dev/null; cat "$HOME/.bashrc.tmp" > "$HOME/.bashrc"; rm -f "$HOME/.bashrc.tmp"
+  echo "$MISE_LINHA" >> "$HOME/.bashrc"
+fi
 
 if tem uv; then linha "linguagem" "uv (Python)" "JA TEM" "$(uv --version)"
 else rodar "linguagem" "uv (Python)" bash -c "curl -LsSf https://astral.sh/uv/install.sh | sh"; fi
@@ -100,6 +108,24 @@ else
   V="$( [[ $SIMULAR -eq 1 ]] || versao_mais_recente aquasecurity/trivy )"
   rodar "seguranca" "trivy ${V}" bash -c "curl -fsSL -o /tmp/trivy.deb https://github.com/aquasecurity/trivy/releases/download/v${V}/trivy_${V}_Linux-64bit.deb && $SUDO dpkg -i /tmp/trivy.deb && rm -f /tmp/trivy.deb"
 fi
+
+# ------------------------------------------------------------------ 4b. terminal moderno e porta única (just)
+# Binários únicos, sem runtime: just (receitas do justfile), zoxide, eza, fd, btop, hyperfine, tio (serial da bancada) e tcpdump.
+TERMINAL=(just zoxide eza fd-find btop hyperfine tio tcpdump)
+FALTAM_T=()
+for p in "${TERMINAL[@]}"; do dpkg -s "$p" >/dev/null 2>&1 || FALTAM_T+=("$p"); done
+if [[ ${#FALTAM_T[@]} -eq 0 ]]; then linha "terminal" "just, zoxide, eza, fd, btop…" "JA TEM"
+else rodar "terminal" "terminal moderno (${#FALTAM_T[@]} faltando)" bash -c "$SUDO apt-get update -y && $SUDO env $APT install ${FALTAM_T[*]}"; fi
+for ferramenta in lazygit lazydocker; do
+  if tem "$ferramenta"; then linha "terminal" "$ferramenta" "JA TEM"; continue; fi
+  V="$( [[ $SIMULAR -eq 1 ]] || versao_mais_recente "jesseduffield/$ferramenta" )"
+  rodar "terminal" "$ferramenta ${V}" bash -c "curl -fsSL https://github.com/jesseduffield/$ferramenta/releases/download/v${V}/${ferramenta}_${V}_Linux_x86_64.tar.gz | tar -xz -C \"\$HOME/.local/bin\" $ferramenta"
+done
+if tem starship; then linha "terminal" "Starship" "JA TEM"
+else rodar "terminal" "Starship" bash -c 'curl -fsSL https://starship.rs/install.sh | sh -s -- -y -b "$HOME/.local/bin"'; fi
+# Uma linha só no .bashrc liga o prompt, o cd inteligente e o nome curto do fd (no Ubuntu o binário chama fdfind)
+TERM_LINHA='command -v starship >/dev/null && eval "$(starship init bash)"; command -v zoxide >/dev/null && eval "$(zoxide init bash)"; command -v fdfind >/dev/null && alias fd=fdfind'
+if [[ $SIMULAR -eq 0 ]] && ! grep -qxF "$TERM_LINHA" "$HOME/.bashrc" 2>/dev/null; then echo "$TERM_LINHA" >> "$HOME/.bashrc"; fi
 
 # ------------------------------------------------------------------ 5. agentes de IA
 if tem claude; then linha "agentes" "Claude Code" "JA TEM" "$(claude --version 2>/dev/null)"
@@ -157,7 +183,7 @@ else mkdir -p "${PASTAS[@]}"; linha "pastas" "pastas dev e AMtech" "CRIADO" "$FA
 
 # ------------------------------------------------------------------ 9. Docker (vem do Docker Desktop)
 if tem docker && docker info >/dev/null 2>&1; then linha "docker" "Docker no WSL" "OK" "$(docker version --format '{{.Server.Version}}' 2>/dev/null)"
-else linha "docker" "Docker no WSL" "MANUAL" "Docker Desktop > Settings > Resources > WSL integration > Ubuntu-24.04"; fi
+else linha "docker" "Docker no WSL" "MANUAL" "Docker Desktop > Settings > Resources > WSL integration > ${WSL_DISTRO_NAME:-Ubuntu}"; fi
 
 echo
 if [[ $SIMULAR -eq 1 ]]; then echo "Simulação pronta. Rode sem --simular para aplicar."

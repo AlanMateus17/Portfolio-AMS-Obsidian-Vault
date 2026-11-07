@@ -1,0 +1,4 @@
+# O chezmoi pede a senha do cofre só quando um modelo usar a função keepassxc.
+[keepassxc]
+    database = {{ printf "%q" (joinPath .chezmoi.homeDir "Cofre" "AMtech.kdbx") }}
+    mode = "open"

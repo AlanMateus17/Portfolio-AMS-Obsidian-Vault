@@ -4,6 +4,12 @@ tags: [plano-mestre, passo-a-passo, setup, estudo, renda]
 
 # 🧭 Plano Mestre — tudo em um só passo a passo
 
+> **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; AM Rendara no 2º trimestre)
+> - **O que fazer hoje no setup:** `just agora` · roteiro completo na [pasta 11](11-setup-dev-setup/00-INDICE-DO-SETUP.md), espelho automático do dev-setup
+> Este arquivo continua aqui como referência; nada foi apagado.
+
+
 > **Este é o único lugar para saber o que fazer a seguir.** Ele junta os dois planejamentos:
 > o **setup** (repositório `dev-setup`, 34 fases, hoje dentro deste vault na pasta `11-setup-dev-setup`) e o **estudo** (este vault, 14 Passos), mais
 > as **fontes de renda**, as **finanças da casa**, a **faculdade**, as **certificações** e as **decisões**.

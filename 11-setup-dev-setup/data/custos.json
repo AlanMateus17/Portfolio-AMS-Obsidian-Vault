@@ -1,0 +1,600 @@
+{
+ "regras": {
+  "construir": [
+   "O que diferencia você e vira produto: sistemas AM, Fábrica de aulas, kit de sites, radar, agentes do grupo, MCP próprio",
+   "Cola entre ferramentas: scripts, verificadores, geradores (pouco código, muito ganho)"
+  ],
+  "open_source": [
+   "Infraestrutura que todo mundo precisa e ninguém paga por ela: n8n, Postiz, Cal.com, Umami, Uptime Kuma, Grafana, Paperless, Home Assistant, LiteLLM, Ollama, llama.cpp, Whisper, Listmonk, GlitchTip, Keycloak",
+   "Modelos abertos com licença Apache 2.0 ou MIT para o que vira produto",
+   "n8n: a licença permite uso interno e nos seus fluxos; não permite revender o próprio n8n como serviço"
+  ],
+  "pagar": [
+   "Só quando custa menos que as suas horas ou quando exige confiança/legalidade: Claude (uma IA só), domínio, Hostinger já pago, taxas por venda, contador e certificado quando houver CNPJ",
+   "Toda assinatura passa pela auditoria trimestral e pela cascata"
+  ]
+ },
+ "itens": [
+  {
+   "bloco": "anth",
+   "item": "Claude (assinatura)",
+   "hoje": "mensal",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "A ferramenta que mais devolve hora sua: código, setup, conteúdo. A única IA paga."
+  },
+  {
+   "bloco": "anth",
+   "item": "Claude por API (agentes)",
+   "hoje": "por uso",
+   "decisao": "limitar",
+   "alternativa": "Modelos locais pelo gateway para tarefas simples",
+   "motivo": "Teto mensal no LiteLLM; 'local' por padrão, 'rapido' só quando o eval mostrar que o local não basta."
+  },
+  {
+   "bloco": "gpt",
+   "item": "ChatGPT pago",
+   "hoje": "mensal",
+   "decisao": "testar grátis",
+   "alternativa": "ChatGPT Go grátis pelo Nubank (1 mês; 3 meses no Nubank+; 1 ano no Ultravioleta), depois R$ 39,99 se for usado toda semana",
+   "motivo": "Segunda IA para imagens, voz e quando o limite do Claude acabar. Plus (R$ 99,90) só se o Go não bastar."
+  },
+  {
+   "bloco": "gem",
+   "item": "Gemini pago",
+   "hoje": "mensal",
+   "decisao": "trocar",
+   "alternativa": "Google AI Plus (R$ 24,99, com 200 GB) no lugar do Google One atual, se o seu plano for de até 200 GB",
+   "motivo": "Quase sem custo extra: troca o armazenamento que você já paga por armazenamento + Gemini Pro + NotebookLM com mais uso. Melhor IA para rascunhar aulas a partir das fontes."
+  },
+  {
+   "bloco": "grok",
+   "item": "Grok",
+   "hoje": "pago",
+   "decisao": "cortar",
+   "alternativa": "Grátis, se quiser ver o que está em alta no X",
+   "motivo": "O diferencial é o X em tempo real; não resolve aula, código nem setup melhor que as outras."
+  },
+  {
+   "bloco": "ds",
+   "item": "DeepSeek",
+   "hoje": "grátis / API muito barata",
+   "decisao": "usar barato",
+   "alternativa": "Chat grátis; API pelo gateway como 'barato'",
+   "motivo": "Ótimo custo para rascunho em volume. Os dados ficam em servidores na China: nada sensível, nada de aluno, nada de cliente."
+  },
+  {
+   "bloco": "codex",
+   "item": "Codex (OpenAI)",
+   "hoje": "incluso em planos do ChatGPT",
+   "decisao": "usar o que já paga",
+   "alternativa": "Usar só se vier junto com o plano do ChatGPT que você tiver",
+   "motivo": "Bom como segunda opinião de código quando o limite do Claude acabar; não vale assinar à parte."
+  },
+  {
+   "bloco": "gcode",
+   "item": "Agentes de código do Google",
+   "hoje": "saiu do ar no grátis",
+   "decisao": "cortar",
+   "alternativa": "Copilot Pro e Codex como reservas de código",
+   "motivo": "O Gemini CLI parou para contas pessoais sem licença paga em 18/06/2026; o Antigravity tem acesso ampliado só no Pro."
+  },
+  {
+   "bloco": "copi",
+   "item": "GitHub Copilot",
+   "hoje": "mensal",
+   "decisao": "usar grátis",
+   "alternativa": "GitHub Education como PROFESSOR (Copilot Pro), não como estudante",
+   "motivo": "Professor verificado ganha o Pro grátis, com agente na nuvem e agentes de terceiros; o plano de estudante exclui os agentes de terceiros. Motor da esteira de sites."
+  },
+  {
+   "bloco": "voz",
+   "item": "Voz clonada (ElevenLabs)",
+   "hoje": "mensal",
+   "decisao": "adiar",
+   "alternativa": "OpenVoice V2 (MIT) ou Piper (vozes prontas) locais",
+   "motivo": "Pagar só no mês em que um curso pago estiver sendo gravado; testar antes o aberto."
+  },
+  {
+   "bloco": "dub",
+   "item": "Dublagem (ElevenLabs)",
+   "hoje": "mensal",
+   "decisao": "adiar",
+   "alternativa": "Dublagem automática do YouTube, quando disponível no canal",
+   "motivo": "Só depois de um curso vender em português."
+  },
+  {
+   "bloco": "vercel",
+   "item": "Vercel",
+   "hoje": "grátis (Hobby)",
+   "decisao": "trocar para comercial",
+   "alternativa": "Cloudflare Pages ou GitHub Pages (grátis e permitem uso comercial) ou o Hostinger que você já paga",
+   "motivo": "O plano Hobby da Vercel é para uso pessoal, não comercial: site de cliente ou de venda não pode ficar nele."
+  },
+  {
+   "bloco": "sonar",
+   "item": "SonarQube Cloud",
+   "hoje": "grátis só para público",
+   "decisao": "trocar",
+   "alternativa": "Semgrep CE no CI (já no repositório padrão)",
+   "motivo": "Repositório privado no Sonar é pago; o Semgrep cobre de graça."
+  },
+  {
+   "bloco": "sentry",
+   "item": "Sentry",
+   "hoje": "grátis (cota)",
+   "decisao": "manter grátis",
+   "alternativa": "GlitchTip auto-hospedado se passar da cota",
+   "motivo": "A cota grátis basta no começo."
+  },
+  {
+   "bloco": "mailer",
+   "item": "MailerLite",
+   "hoje": "grátis (limite)",
+   "decisao": "manter grátis",
+   "alternativa": "Listmonk auto-hospedado + envio barato (SES/Resend)",
+   "motivo": "O plano grátis encolheu em 2025: confira o limite. Passou dele, Listmonk custa centavos."
+  },
+  {
+   "bloco": "b2",
+   "item": "Backblaze B2",
+   "hoje": "por TB",
+   "decisao": "adiar",
+   "alternativa": "Disco externo + Google Drive que você já paga (restic via rclone)",
+   "motivo": "Uma nuvem de backup só; use a que já está paga."
+  },
+  {
+   "bloco": "gdrv",
+   "item": "Google One",
+   "hoje": "mensal",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Já pago; vira o destino do backup criptografado."
+  },
+  {
+   "bloco": "gpuh",
+   "item": "GPU por hora",
+   "hoje": "por hora",
+   "decisao": "limitar",
+   "alternativa": "Kaggle e Colab grátis primeiro",
+   "motivo": "Alugar só para o que não cabe no grátis, com teto e desligando ao terminar."
+  },
+  {
+   "bloco": "vllm",
+   "item": "vLLM em GPU alugada",
+   "hoje": "por hora",
+   "decisao": "adiar",
+   "alternativa": "Ollama local e gateway",
+   "motivo": "Só quando um modelo seu tiver uso real."
+  },
+  {
+   "bloco": "ws",
+   "item": "Workstation com GPU",
+   "hoje": "compra",
+   "decisao": "adiar",
+   "alternativa": "Kaggle, Colab, GPU por hora, cluster na rede",
+   "motivo": "Comprar só quando o aluguel passar do valor da parcela por 6 meses seguidos."
+  },
+  {
+   "bloco": "nas",
+   "item": "Servidor caseiro",
+   "hoje": "compra",
+   "decisao": "adiar",
+   "alternativa": "Um PC usado barato ou o notebook antigo como servidor",
+   "motivo": "Servidor não precisa de máquina nova."
+  },
+  {
+   "bloco": "ykey",
+   "item": "Chave física (YubiKey)",
+   "hoje": "compra",
+   "decisao": "adiar",
+   "alternativa": "App 2FA no celular + códigos de recuperação no cofre",
+   "motivo": "Bom, mas não urgente."
+  },
+  {
+   "bloco": "tail",
+   "item": "Tailscale",
+   "hoje": "grátis (pessoal)",
+   "decisao": "manter grátis",
+   "alternativa": "Headscale auto-hospedado se um dia precisar",
+   "motivo": "O plano pessoal grátis cobre todos os seus aparelhos."
+  },
+  {
+   "bloco": "aw",
+   "item": "ActivityWatch",
+   "hoje": "grátis",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Código aberto."
+  },
+  {
+   "bloco": "restic",
+   "item": "restic",
+   "hoje": "grátis",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Código aberto."
+  },
+  {
+   "bloco": "hostg",
+   "item": "Hostinger",
+   "hoje": "anual",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Já pago; hospeda os sites dos clientes e o e-mail profissional sem custo extra."
+  },
+  {
+   "bloco": "mail",
+   "item": "E-mail profissional",
+   "hoje": "incluso",
+   "decisao": "usar o que já paga",
+   "alternativa": "E-mail do plano Hostinger; Cloudflare Email Routing para encaminhar",
+   "motivo": "Não contratar Google Workspace agora."
+  },
+  {
+   "bloco": "dom",
+   "item": "Domínio (Registro.br)",
+   "hoje": "anual",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Barato e necessário."
+  },
+  {
+   "bloco": "agenda",
+   "item": "Cal.com",
+   "hoje": "grátis",
+   "decisao": "manter grátis",
+   "alternativa": "Auto-hospedar se precisar de mais",
+   "motivo": "O plano individual grátis basta."
+  },
+  {
+   "bloco": "postiz",
+   "item": "Postiz",
+   "hoje": "grátis (auto-hospedado)",
+   "decisao": "manter",
+   "alternativa": "Agendador nativo das redes",
+   "motivo": "Código aberto no seu PC."
+  },
+  {
+   "bloco": "umami",
+   "item": "Umami",
+   "hoje": "grátis",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Auto-hospedado ou plano grátis."
+  },
+  {
+   "bloco": "ads",
+   "item": "Anúncios pagos",
+   "hoje": "por uso",
+   "decisao": "adiar",
+   "alternativa": "Conteúdo orgânico + SEO + indicação",
+   "motivo": "Só depois de uma oferta vender sem anúncio; regras de corte já no setup."
+  },
+  {
+   "bloco": "infl",
+   "item": "Influenciadores e newsletters",
+   "hoje": "por uso",
+   "decisao": "adiar",
+   "alternativa": "Parcerias por permuta",
+   "motivo": "Só com oferta validada."
+  },
+  {
+   "bloco": "nfapi",
+   "item": "API de NFS-e",
+   "hoje": "mensal",
+   "decisao": "adiar",
+   "alternativa": "Emissor nacional da NFS-e (gov, grátis) enquanto for MEI",
+   "motivo": "API só quando o volume de notas pedir."
+  },
+  {
+   "bloco": "ecnpj",
+   "item": "Certificado digital e-CNPJ",
+   "hoje": "anual",
+   "decisao": "adiar",
+   "alternativa": "—",
+   "motivo": "Só quando houver CNPJ."
+  },
+  {
+   "bloco": "pixa",
+   "item": "Gateway Pix (Asaas)",
+   "hoje": "por venda",
+   "decisao": "manter",
+   "alternativa": "Mercado Pago, que você já usa",
+   "motivo": "Sem mensalidade; paga só quando vende."
+  },
+  {
+   "bloco": "hotm",
+   "item": "Hotmart / Kiwify",
+   "hoje": "por venda",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Sem mensalidade."
+  },
+  {
+   "bloco": "ytm",
+   "item": "YouTube membros",
+   "hoje": "por venda",
+   "decisao": "adiar",
+   "alternativa": "—",
+   "motivo": "Depende de canal monetizado."
+  },
+  {
+   "bloco": "plat",
+   "item": "Alura · Rocketseat · Udemy",
+   "hoje": "mensal",
+   "decisao": "cortar uma",
+   "alternativa": "Ficar com uma plataforma na renovação + Microsoft Learn, roadmap.sh e documentação oficial (grátis)",
+   "motivo": "Regra já decidida: nenhum curso novo até o cartão zerar."
+  },
+  {
+   "bloco": "dez",
+   "item": "Zoomcamp e cursos de IA",
+   "hoje": "grátis",
+   "decisao": "manter",
+   "alternativa": "—",
+   "motivo": "Os Zoomcamps são gratuitos."
+  },
+  {
+   "bloco": "anki",
+   "item": "Anki",
+   "hoje": "grátis no PC",
+   "decisao": "manter grátis",
+   "alternativa": "AnkiDroid (grátis) no celular",
+   "motivo": "O app pago é só o de iPhone."
+  },
+  {
+   "bloco": "img",
+   "item": "Canva",
+   "hoje": "grátis",
+   "decisao": "manter grátis",
+   "alternativa": "Krita e Inkscape",
+   "motivo": "Pro só se um cliente pagar por isso."
+  },
+  {
+   "bloco": "edit",
+   "item": "DaVinci Resolve",
+   "hoje": "grátis",
+   "decisao": "manter grátis",
+   "alternativa": "Kdenlive",
+   "motivo": "A versão grátis basta."
+  },
+  {
+   "bloco": "cupw",
+   "item": "Conector Upwork",
+   "hoje": "créditos por proposta",
+   "decisao": "adiar",
+   "alternativa": "—",
+   "motivo": "Só com inglês B1."
+  },
+  {
+   "bloco": "ws",
+   "item": "Hardware novo em geral",
+   "hoje": "compra",
+   "decisao": "regra",
+   "alternativa": "Comprar só o que um passo do roteiro bloqueia",
+   "motivo": "Cada compra entra pelo Caixa da Casa e pela cascata."
+  },
+  {
+   "bloco": "anth",
+   "item": "Claude Max (5x)",
+   "hoje": "US$ 100 por mês",
+   "decisao": "adiar",
+   "alternativa": "Pro + Google AI Plus + ChatGPT Go grátis + modelos locais + Gemini API grátis no gateway",
+   "motivo": "É a solução direta para o limite, mas custa caro hoje. Entra quando uma renda passar no portão e o limite ainda travar o trabalho."
+  },
+  {
+   "bloco": "litellm",
+   "item": "Gemini API (cota grátis do AI Studio)",
+   "hoje": "grátis (cota)",
+   "decisao": "usar grátis",
+   "alternativa": "—",
+   "motivo": "Rascunhos em lote pelo gateway sem gastar o Claude. Na cota grátis o Google pode usar os dados para melhorar produtos: nada sensível, nada de aluno."
+  },
+  {
+   "bloco": "perp",
+   "item": "Perplexity",
+   "hoje": "grátis",
+   "decisao": "usar grátis",
+   "alternativa": "—",
+   "motivo": "Pesquisa com fontes citadas no plano grátis; Pro só se aparecer de graça por promoção."
+  },
+  {
+   "bloco": "litellm",
+   "item": "OpenRouter",
+   "hoje": "por uso (alguns modelos grátis)",
+   "decisao": "usar grátis",
+   "alternativa": "—",
+   "motivo": "Uma chave para dezenas de modelos, inclusive grátis com limite; bom reserva no gateway. Confira a política de dados de cada modelo."
+  },
+  {
+   "bloco": "cc",
+   "item": "Z.AI (GLM, plano de código)",
+   "hoje": "mensal baixo",
+   "decisao": "testar grátis",
+   "alternativa": "Usar como reserva do Claude Code quando o limite acabar",
+   "motivo": "Plano de código barato que funciona em ferramentas compatíveis com o Claude Code; o próprio Akita monitora no ai-usagebar. Confira preço, limites e política de dados antes."
+  }
+ ],
+ "modelos_abertos": [
+  {
+   "tarefa": "Chat e agentes locais",
+   "modelo": "Qwen (maioria dos tamanhos), Mistral 7B, Phi",
+   "licenca": "Apache 2.0 / MIT (confira cada tamanho)",
+   "roda": "Ollama no notebook (até ~14B com offload)"
+  },
+  {
+   "tarefa": "Código local",
+   "modelo": "Qwen Coder",
+   "licenca": "Apache 2.0 (confira o tamanho)",
+   "roda": "Ollama"
+  },
+  {
+   "tarefa": "Busca nas suas notas (embeddings para RAG)",
+   "modelo": "bge-m3, nomic-embed-text",
+   "licenca": "MIT / Apache 2.0",
+   "roda": "Ollama, até em CPU"
+  },
+  {
+   "tarefa": "Transcrição de aulas e vídeos",
+   "modelo": "Whisper (faster-whisper)",
+   "licenca": "MIT",
+   "roda": "GPU 4 GB ou CPU"
+  },
+  {
+   "tarefa": "Voz",
+   "modelo": "Piper (vozes prontas) · OpenVoice V2 (clonar a SUA voz)",
+   "licenca": "MIT",
+   "roda": "CPU"
+  },
+  {
+   "tarefa": "OCR de documentos",
+   "modelo": "Tesseract (dentro do Paperless)",
+   "licenca": "Apache 2.0",
+   "roda": "CPU"
+  },
+  {
+   "tarefa": "Imagens",
+   "modelo": "FLUX.1 schnell",
+   "licenca": "Apache 2.0",
+   "roda": "GPU alugada ou Colab (pesado para 4 GB)"
+  },
+  {
+   "tarefa": "Modelos grandes para estudo",
+   "modelo": "Llama, Gemma",
+   "licenca": "Licenças próprias com restrições: leia antes de usar em produto",
+   "roda": "Quantizados ou alugados"
+  }
+ ],
+ "rotas_ia": [
+  {
+   "tarefa": "Planejar o setup, arquitetura, revisão de código e do que vai para cliente",
+   "ia": "Claude (Pro)",
+   "por_que": "Melhor raciocínio longo e coerência com o repositório"
+  },
+  {
+   "tarefa": "Código no setup e nos sistemas",
+   "ia": "Claude Code; Copilot (agente na nuvem) para issues pequenas",
+   "por_que": "Lê e muda o repositório com testes"
+  },
+  {
+   "tarefa": "Rascunho de aulas e documentos a partir das ementas e fontes oficiais",
+   "ia": "NotebookLM / Gemini (AI Plus)",
+   "por_que": "Responde preso às fontes que você carrega; economiza o limite do Claude"
+  },
+  {
+   "tarefa": "Revisar a aula pronta contra as suas regras",
+   "ia": "Claude",
+   "por_que": "Uma revisão curta gasta pouco limite"
+  },
+  {
+   "tarefa": "Pesquisa com fontes",
+   "ia": "Perplexity (grátis) ou Gemini; Claude para fechar a decisão",
+   "por_que": "Busca barata, decisão no Claude"
+  },
+  {
+   "tarefa": "Imagens, capas e voz de conversa",
+   "ia": "ChatGPT Go",
+   "por_que": "Ponto forte dele"
+  },
+  {
+   "tarefa": "Rascunho em volume pela API (descrições, variações, resumos)",
+   "ia": "DeepSeek ou OpenRouter grátis pelo gateway",
+   "por_que": "Custo perto de zero; nada sensível"
+  },
+  {
+   "tarefa": "Código quando o limite do Claude acabar",
+   "ia": "Copilot Pro (grátis para professor) ou Codex do ChatGPT Go",
+   "por_que": "Créditos de outra empresa; revisão final no Claude. Detalhes em docs/recursos.md"
+  },
+  {
+   "tarefa": "Transcrever, resumir e rascunhar em volume",
+   "ia": "Modelos locais (Ollama) ou Gemini API grátis pelo gateway",
+   "por_que": "Sem custo e sem gastar limite"
+  },
+  {
+   "tarefa": "Tudo que tem dado sensível (aluno, finanças, senha)",
+   "ia": "Nenhuma IA na nuvem; modelo local ou à mão",
+   "por_que": "Segurança acima de conveniência"
+  }
+ ],
+ "economia_limite": [
+  "Uma conversa por tarefa: conversa longa relê tudo a cada mensagem e consome o limite muito mais rápido.",
+  "Projects com os arquivos fixos (regras, ementas, setup) em vez de colar tudo de novo.",
+  "Modelo mais leve do Claude para tarefas simples; o mais forte só para planejar e revisar.",
+  "Rascunho na IA mais barata, revisão final no Claude.",
+  "Peça o resultado em arquivo ou no repositório, não em textos longos repetidos no chat."
+ ],
+ "ia_extras": [
+  {
+   "categoria": "Vídeo curto a partir dos seus vídeos longos",
+   "exemplos": "Ferramentas de cortes automáticos; aberto: Whisper + FFmpeg + script seu",
+   "renda": "Mais alcance no Reels/Shorts → isca do mini-curso e dos sites",
+   "decisao": "construir aberto",
+   "quando": "Quando o canal tiver 10 vídeos longos"
+  },
+  {
+   "categoria": "Avatar e vídeo falado",
+   "exemplos": "Avatares de IA (só com o SEU rosto e a SUA voz)",
+   "renda": "Vídeos de venda e aulas sem gravar tudo de novo",
+   "decisao": "adiar",
+   "quando": "Depois que um curso vender; nunca rosto ou voz de aluno"
+  },
+  {
+   "categoria": "Imagens e capas",
+   "exemplos": "ChatGPT Go (imagens), FLUX.1 schnell (aberto)",
+   "renda": "Capas de curso, posts, mockups de sites para proposta",
+   "decisao": "usar o que já tem",
+   "quando": "Agora"
+  },
+  {
+   "categoria": "Apresentações e propostas",
+   "exemplos": "Geradores de slides com IA; Claude Slides que você já tem",
+   "renda": "Proposta bonita em minutos → fecha mais sites",
+   "decisao": "usar o que já tem",
+   "quando": "Agora"
+  },
+  {
+   "categoria": "Música e trilha",
+   "exemplos": "Geradores de música com IA (confira a licença comercial do plano)",
+   "renda": "Trilha própria nos vídeos, sem direito autoral de terceiros",
+   "decisao": "adiar",
+   "quando": "Quando o canal monetizar"
+  },
+  {
+   "categoria": "Prospecção e enriquecimento de leads",
+   "exemplos": "Ferramentas de lista e enriquecimento B2B; aberto: o seu prospector com dados públicos",
+   "renda": "Mais conversas com comércio local",
+   "decisao": "construir aberto",
+   "quando": "Fase 24 horas (prospector)"
+  },
+  {
+   "categoria": "Atendimento omnicanal com IA",
+   "exemplos": "Chatwoot (aberto) + agente atendente pelo gateway",
+   "renda": "Responde WhatsApp/Instagram/site rápido, com passagem para você",
+   "decisao": "construir aberto",
+   "quando": "Com 3 clientes de sites ou o primeiro curso"
+  },
+  {
+   "categoria": "SEO e conteúdo com IA",
+   "exemplos": "Search Console + Umami + agente de pauta pelo gateway",
+   "renda": "Tráfego orgânico para o blog e as páginas de venda",
+   "decisao": "construir aberto",
+   "quando": "Quando o site novo for ao ar"
+  },
+  {
+   "categoria": "Agente no navegador",
+   "exemplos": "Claude in Chrome (você já tem)",
+   "renda": "Tarefas repetitivas em sites sem API",
+   "decisao": "usar o que já tem",
+   "quando": "Agora, com aprovação nas ações"
+  },
+  {
+   "categoria": "Transcrição e notas de reuniões e aulas",
+   "exemplos": "Whisper local; NotebookLM",
+   "renda": "Cada aula vira resumo, exercícios e post",
+   "decisao": "usar o que já tem",
+   "quando": "Agora"
+  }
+ ]
+}

@@ -7,6 +7,12 @@ atualizado: 2026-10-02
 
 # Método de Estudo — Documento Único
 
+> **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](../11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](../11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](../11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; AM Rendara no 2º trimestre)
+> - **O que fazer hoje no setup:** `just agora` · roteiro completo na [pasta 11](../11-setup-dev-setup/00-INDICE-DO-SETUP.md), espelho automático do dev-setup
+> Este arquivo continua aqui como referência; nada foi apagado.
+
+
 > **Consolida três documentos antigos** (`metodologia-aprendizado-cientifica`, `metodo-estudo-producao-didatica-simultanea`, `loop-estudo-multilinguagem-sistema-real`), em três seções:
 > **A.** a ciência de como estudar + Protocolo de Fim de Bloco · **B.** o loop de 5 etapas por tópico · **C.** produção didática simultânea (ficha dupla + registro de entrevista).
 > Os três originais foram para `99-arquivo/`.

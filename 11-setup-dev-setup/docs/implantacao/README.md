@@ -35,6 +35,10 @@ Antes de instalar qualquer coisa, `scripts/windows/diagnostico.ps1` lê o notebo
 
 Para rodar: extraia o `dev-setup.zip` (botão direito > Extrair tudo), entre na pasta que tem `RODAR-DIAGNOSTICO.cmd` e a pasta `scripts` (o Windows costuma criar `dev-setup\dev-setup`; a certa é a de dentro, e ela fica em `C:\Users\SEU_USUARIO\dev-setup`, porque todos os comandos do Windows do roteiro apontam para lá e assim funcionam de qualquer pasta) e clique com o botão direito em `RODAR-DIAGNOSTICO.cmd` > Executar como administrador. Ele entra sozinho na pasta certa e não mexe em mais nada do computador. O relatório fica em `diagnostico-AAAAMMDD`, dentro da mesma pasta.
 
+## Pelo terminal
+
+Todo passo tem o comando para copiar ou, quando não dá, a linha **Fora do terminal** com o motivo. Dos 253 passos, 131 têm comando e 127 se fazem inteiros pelo terminal: os do Windows no PowerShell (como Administrador), os do Linux no Ubuntu, e os marcados como Claude com `claude "Passo ..."`, que abre o Claude Code no repositório com o pedido daquele passo. O resto não tem como: criar conta e ligar a verificação em duas etapas é sempre no site do serviço com o celular, órgão público e contador têm atendimento próprio, montar hardware é com as mãos, e gravar, vender e decidir são com você. O CI falha se um passo ficar sem comando e sem motivo.
+
 ## Senhas: recuperar, trocar e guardar
 
 Logo depois de preparar a máquina vem a fase das senhas, porque o resto do roteiro cria dezenas de contas. O KeePassXC guarda todas, com uma senha mestra de 6 palavras que é a única que você decora, e um kit de emergência em papel garante que perder o notebook e o celular não tranca você para fora. A ordem importa: primeiro o e-mail principal (todo "Esqueci minha senha" passa por ele), depois as senhas salvas nos navegadores vão para o cofre, o relatório do KeePassXC aponta as fracas, repetidas e vazadas, e as contas críticas são trocadas uma por uma com verificação em duas etapas. O resto vai 5 contas por semana. O Claude não vê nem guarda nenhuma senha: quem digita é sempre você.

@@ -1,0 +1,124 @@
+{
+ "pacotes": [
+  {
+   "id": "essencial",
+   "nome": "Essencial",
+   "inclui": [
+    "Site institucional (Website Builder com IA)",
+    "Google Perfil da Empresa configurado",
+    "Botão de WhatsApp e telefone clicável",
+    "Domínio e e-mail no nome do cliente",
+    "Monitoramento de site no ar"
+   ],
+   "mudancas_mes": 1,
+   "horas_mes_meta": 1
+  },
+  {
+   "id": "negocio",
+   "nome": "Negócio",
+   "inclui": [
+    "Tudo do Essencial",
+    "Pedido de avaliação no Google depois do atendimento",
+    "Relatório mensal automático de visitas e contatos",
+    "Até 3 mudanças de conteúdo por mês",
+    "Posts de novidade no Google Perfil"
+   ],
+   "mudancas_mes": 3,
+   "horas_mes_meta": 2
+  },
+  {
+   "id": "vendas",
+   "nome": "Vendas",
+   "inclui": [
+    "Tudo do Negócio",
+    "Função paga no Horizons: cardápio com pedido, agenda, catálogo ou área do cliente",
+    "Automação de atendimento no WhatsApp (perguntas frequentes)",
+    "Captura de contatos com consentimento (LGPD)"
+   ],
+   "mudancas_mes": 5,
+   "horas_mes_meta": 4
+  }
+ ],
+ "ficha": [
+  [
+   "Nome do negócio e CNPJ ou CPF do responsável",
+   "texto"
+  ],
+  [
+   "Tipo de negócio (um dos 26 do catálogo)",
+   "lista"
+  ],
+  [
+   "Endereço, horário de funcionamento e área atendida",
+   "texto"
+  ],
+  [
+   "WhatsApp, telefone, e-mail e redes",
+   "texto"
+  ],
+  [
+   "Logo (arquivo) e cores da marca",
+   "arquivo"
+  ],
+  [
+   "Até 10 fotos boas do lugar, produtos ou trabalhos",
+   "arquivo"
+  ],
+  [
+   "O que vende: serviços ou produtos com preço (se quiser mostrar)",
+   "texto"
+  ],
+  [
+   "3 diferenciais e o público principal",
+   "texto"
+  ],
+  [
+   "Depoimentos ou link das avaliações do Google",
+   "texto"
+  ],
+  [
+   "Domínio desejado (e se já tem)",
+   "texto"
+  ],
+  [
+   "Pacote escolhido (Essencial, Negócio, Vendas)",
+   "lista"
+  ],
+  [
+   "Autorização de uso das fotos e textos enviados",
+   "aceite"
+  ],
+  [
+   "Consentimento para os dados de contato no CRM (LGPD)",
+   "aceite"
+  ]
+ ],
+ "checklist_entrega": [
+  "Conta Hostinger e domínio no nome do cliente; você como colaborador (sem acesso a pagamentos)",
+  "Laudo do conferir.py com nota 80 ou mais, e Lighthouse no celular conferido",
+  "SSL ativo e endereço com https",
+  "WhatsApp, telefone e mapa testados no celular",
+  "Formulário de contato testado (mensagem chegou)",
+  "Google Perfil da Empresa verificado e com link do site",
+  "Monitoramento no Uptime Kuma e cliente cadastrado no CRM",
+  "Relatório mensal agendado",
+  "Contrato assinado e primeira mensalidade cobrada",
+  "Senhas do cliente só no KeePassXC (grupo Clientes), nunca por WhatsApp"
+ ],
+ "relatorio": [
+  "Visitas do mês e comparação com o mês anterior",
+  "Cliques em WhatsApp e telefone",
+  "Mensagens do formulário",
+  "Avaliações novas no Google",
+  "Site no ar (% do tempo) e incidentes",
+  "Mudanças feitas e quantas restam no pacote",
+  "Uma sugestão de melhoria para o próximo mês"
+ ],
+ "regras": [
+  "Conta e domínio no nome do cliente",
+  "Mudança fora do pacote é orçada à parte",
+  "Site novo começa da ficha e da biblioteca de prompts, não do zero",
+  "Nada de fotos ou textos de terceiros sem licença",
+  "Clínica, odontologia e advocacia: seguir as regras de publicidade do conselho"
+ ]
+}

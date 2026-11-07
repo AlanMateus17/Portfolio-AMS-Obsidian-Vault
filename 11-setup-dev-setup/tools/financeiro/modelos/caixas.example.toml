@@ -1,0 +1,16 @@
+# Sua cascata: cada caixa só recebe quando o anterior está cheio. Preencha com os SEUS valores.
+# "atual" você atualiza no fim do mês (ou o Caixa da Casa mostra).
+[[caixa]]
+nome = "Cartão até zerar"
+meta = 0
+atual = 0
+
+[[caixa]]
+nome = "Caixa de segurança (1 mês de custo)"
+meta = 0
+atual = 0
+
+[[caixa]]
+nome = "Reserva de emergência (3 → 6 → 12 meses)"
+meta = 0
+atual = 0

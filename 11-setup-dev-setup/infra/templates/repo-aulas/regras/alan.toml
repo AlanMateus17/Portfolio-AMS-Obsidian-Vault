@@ -1,0 +1,9 @@
+# Suas regras para a Fábrica de aulas. Copie para o repositório "aulas" (privado) como regras/alan.toml.
+professor = "Alan Mateus"
+escola = "[nome da escola]"
+max_objetivos = 3              # ensinar só o essencial
+duracao_aula_min = 50
+avaliacao_padrao = "Atividade prática entregue no fim da aula"
+fontes_permitidas = ["documentação oficial", "BNCC e Currículo Referência de MG", "material próprio"]
+proibido = ["dados, nomes, notas, fotos ou vozes de alunos", "conteúdo copiado de livros ou cursos pagos"]
+revisao_vira_regra = true      # cada correção sua numa aula vira uma linha aqui

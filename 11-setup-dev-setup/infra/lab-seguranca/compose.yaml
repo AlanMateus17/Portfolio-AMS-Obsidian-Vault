@@ -1,0 +1,24 @@
+# Laboratório de ataque: aplicações feitas para serem invadidas, só no seu computador.
+#   docker compose -f infra/lab-seguranca/compose.yaml up -d
+#   Juice Shop: http://127.0.0.1:3000 · WebGoat: http://127.0.0.1:8080/WebGoat
+#   docker compose -f infra/lab-seguranca/compose.yaml down   (desliga quando terminar)
+#
+# Portas presas em 127.0.0.1: nada disso fica exposto na rede de casa nem na da escola.
+# Estas aplicações são vulneráveis de propósito: nunca publique, nunca rode na VM da Oracle.
+name: lab-seguranca
+
+services:
+  juice-shop:
+    image: bkimminich/juice-shop:latest
+    restart: "no"
+    ports:
+      - "127.0.0.1:3000:3000"
+
+  webgoat:
+    image: webgoat/webgoat:latest
+    restart: "no"
+    ports:
+      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:9090:9090"
+    environment:
+      TZ: America/Sao_Paulo

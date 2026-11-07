@@ -7,6 +7,12 @@ atualizado: 2026-10-26
 
 # 🧭 Guia do Iniciante — Tudo o Que Você Vai Fazer, em Ordem e em Palavras Simples
 
+> **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; AM Rendara no 2º trimestre)
+> - **O que fazer hoje no setup:** `just agora` · roteiro completo na [pasta 11](11-setup-dev-setup/00-INDICE-DO-SETUP.md), espelho automático do dev-setup
+> Este arquivo continua aqui como referência; nada foi apagado.
+
+
 > **Para quem é este documento:** para você, lendo como se não soubesse nada do plano. Ele junta **estudo, setup, rendas, finanças, faculdades e certificações** num caminho só, com etapas numeradas. Cada palavra técnica tem explicação no [Glossário](00-GLOSSARIO.md).
 >
 > **Lista completa de itens:** este guia é o resumo. Todos os 391 itens (os 253 passos do setup, os 14 Passos de estudo, as trilhas, as rendas, as finanças, a faculdade e as certificações), cada um com código, “pronto quando” e ligações, estão no [Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md).

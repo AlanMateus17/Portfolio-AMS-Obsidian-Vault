@@ -1,0 +1,26 @@
+# Runtimes e CLIs do setup: um gerenciador só (ADR 0008). Instale tudo com: mise install
+# O Python continua no uv (projetos e ferramentas Python); o .NET 10 vem do apt.
+# Se o mise reclamar do backend "github:", troque por "ubi:" (o nome antigo do mesmo recurso).
+[tools]
+node = "lts"
+go = "latest"
+rust = "stable"
+"github:zellij-org/zellij" = "latest"
+"github:sxyazi/yazi" = "latest"
+"github:terrastruct/d2" = "latest"
+"github:tsenart/vegeta" = "latest"
+"github:FiloSottile/age" = "latest"
+"github:getsops/sops" = "latest"
+"github:ekzhang/bore" = "latest"
+"github:charmbracelet/gum" = "latest"
+"github:charmbracelet/soft-serve" = "latest"
+"github:goreleaser/goreleaser" = "latest"
+"github:axodotdev/cargo-dist" = "latest"
+"github:probe-rs/probe-rs" = "latest"
+"github:tree-sitter/tree-sitter" = "latest"
+"github:stripe/stripe-cli" = "latest"
+"github:benbjohnson/litestream" = "latest"
+"github:pocketbase/pocketbase" = "latest"
+
+[settings]
+experimental = false

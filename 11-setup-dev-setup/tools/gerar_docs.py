@@ -123,11 +123,6 @@ AVISO = "<!-- Arquivo GERADO por tools/gerar_docs.py a partir de data/. Edite os
 
 # ---------------------------------------------------------------- geradores
 
-# Camadas cujo diagrama, com um grupo por camada vizinha, quebra o desenho do Mermaid
-# ("Cannot set properties of undefined (setting 'order')"). Conferido com o mmdc 11.
-AGRUPAR_VIZINHOS = {"oper"}
-
-
 def gerar_camada(eco: dict, camada: dict, por_id: dict, saidas: dict, entradas: dict) -> str:
     cid = camada["id"]
     n = num(eco, cid)
@@ -160,20 +155,12 @@ def gerar_camada(eco: dict, camada: dict, por_id: dict, saidas: dict, entradas: 
     for b in blocos:
         linhas.append(f'    n_{b["id"]}["{mm(nome(b))}"]')
     linhas.append("  end")
-    if cid in AGRUPAR_VIZINHOS:
-        # um grupo só para os vizinhos: com um grupo por camada o Mermaid (dagre) falha ao desenhar
-        linhas.append('  subgraph L_outras["Outras camadas"]')
-        for outra in ordem:
-            for bid in sorted(vizinhos.get(outra, ())):
-                linhas.append(f'    n_{bid}["{mm(nome(por_id[bid]))} · camada {num(eco, outra):02d}"]')
-        linhas.append("  end")
-    else:
-        for outra in ordem:
-            if outra in vizinhos:
-                linhas.append(f'  subgraph L_{outra}["{mm(titulo_por_id[outra])}"]')
-                for bid in sorted(vizinhos[outra]):
-                    linhas.append(f'    n_{bid}["{mm(nome(por_id[bid]))}"]')
-                linhas.append("  end")
+    for outra in ordem:
+        if outra in vizinhos:
+            linhas.append(f'  subgraph L_{outra}["{mm(titulo_por_id[outra])}"]')
+            for bid in sorted(vizinhos[outra]):
+                linhas.append(f'    n_{bid}["{mm(nome(por_id[bid]))}"]')
+            linhas.append("  end")
     for de, para, rot in arestas:
         linhas.append(f'  n_{de} -->|"{mm(rot)}"| n_{para}')
     linhas.append(f"  classDef desta fill:#e2ecec,stroke:#0e3a45,color:#13262b")
@@ -242,6 +229,10 @@ def gerar_arquitetura(eco: dict, por_camada: dict) -> str:
     out.append("- O Windows cuida só do que precisa de janela, GPU e segurança; o código vive e roda no Linux (Ubuntu no WSL2). Ver [ADR 0001](adr/0001-wsl2-em-vez-de-dual-boot.md).")
     out.append("- Agentes de IA trabalham dentro de sandbox e só enxergam a pasta do projeto. Ver [ADR 0002](adr/0002-agentes-de-ia-em-sandbox.md).")
     out.append("- Infraestrutura por código, Azure primeiro e AWS depois. Ver [ADR 0003](adr/0003-azure-primeiro.md).")
+    out.append("- Produção barata em VM pelo Kamal, um deploy só. Ver [ADR 0005](adr/0005-deploy-em-vm-com-kamal.md). Contrato no OpenAPI e Zod só no front. Ver [ADR 0006](adr/0006-contratos-na-borda.md).")
+    out.append("- Antes de construir, a triagem: subir pronto, colar ou construir (`just triagem`). Ver [Empresa solo](empresa-solo.md).")
+    out.append("- Tudo conectado pelo Núcleo AMtech: as ferramentas falam com um banco central e os agentes agem pela política de autonomia. Ver [ADR 0009](adr/0009-nucleo-amtech.md).")
+    out.append("- A melhor ferramenta para cada trabalho, sem linguagem proibida. Ver [ADR 0007](adr/0007-poliglota-por-funcao.md); principal e reserva de cada função no [ADR 0008](adr/0008-trocas-de-ferramenta-principal.md).")
     out.append("- Uma ferramenta por função: o que repete outra fica de fora ([decisões](fora-do-setup.md)).")
     out.append("- Segredos só no KeePassXC; nunca no repositório.\n")
     return "\n".join(out)
@@ -346,12 +337,20 @@ def gerar_indice_docs(eco: dict, por_camada: dict) -> str:
     out.append("- [Auditoria: o que faltava](auditoria.md)")
     out.append("- [Sistemas operacionais](sistemas-operacionais.md) · [Nuvem](nuvem.md) · [Mercado](mercado.md) · [Roteiro de estudo](roteiro.md)")
     out.append("- [Peças autorais](pecas-autorais.md) · [Decisões](fora-do-setup.md)")
+    out.append("- [Arquitetura de IA: modelos grandes sem computador maior](ia/README.md) · [Hugging Face: o que usar e o que comprar](ia/hugging-face.md) · [Rede própria entre os seus computadores](rede/README.md) · [Custos: construir, abrir ou pagar](custos.md) · [Recursos: a melhor ferramenta para cada tarefa](recursos.md) · [Investimentos: as suas metodologias](investimentos.md) · [Certificações](certificacoes.md)")
     out.append("- [Marketing, vendas e automação](marketing/README.md): funil, canais sem rosto com voz clonada, publicação automática, tráfego, parcerias, internacional e medição de lucro")
     out.append("- [Editora AMS Silva](editora/README.md): estrutura legal, pipeline de produção dos livros, rigor editorial, identidade visual, avaliação, produtos, lançamento e roteiro")
     out.append("- [Implantação](implantacao/README.md): roteiro que cobre todos os blocos do setup, scripts que instalam e verificadores que conferem; pipeline de conteúdo e stack de automação")
     out.append("- [Operação do grupo](operacao/README.md): esteira de ofertas, portfólio pontuado, marca e presença, flywheel de conteúdo, automação, qualidade, clientes e ordem de execução")
     out.append("- [Negócios do grupo](negocios/README.md): os nove negócios em Barbacena, estrutura de CNPJs, ordem de abertura, números, cardápios e mínimo legal")
+    out.append("- [Segurança](seguranca/README.md): engenharia reversa com IA, AppSec nos seus sistemas, empresa de pentest com guarda de escopo e relatório CVSS, e o Jarvis")
+    out.append("- [Jarvis](jarvis/README.md): o setup e a casa por comando de voz: voz local, casa, câmeras, energia, água, robótica, PC e open source, com política de risco")
+    out.append("- [Construção civil, arquitetura e engenharia civil](construcao/README.md): BIM aberto e Autodesk educacional, estudo e normas, regras da IA e as rendas pela TI")
     out.append("- [Vários computadores, SSD externo e NAS](infra/README.md): como crescer o setup para mais máquinas e armazenamento local e em nuvem")
+    out.append("- [Boas práticas em todo repositório](boas-praticas.md): git, versões, tags, segurança, qualidade, backup e licenças")
+    out.append("- [Painel do Núcleo](cockpit.html): a constelação do setup inteiro, o que já roda sozinho, principal e reserva, autonomia, roteiro e o que falta (abra no navegador)")
+    out.append("- [Núcleo AMtech](nucleo/README.md): o setup conectado e autônomo, com banco central, garimpo de código, política de autonomia, agentes 24 horas e o teste do sistema inteiro")
+    out.append("- [Empresa solo: o contexto mestre dentro do setup](empresa-solo.md): o que entrou, o que ficou de fora, as 88 ferramentas uma por uma, o cronograma de 14 dias reescrito e os comandos `just`")
     out.append("- [Decisões de arquitetura (ADRs)](adr/)")
     out.append("- Versões interativas, geradas dos mesmos dados: [`index.html`](index.html) (diagrama) e [`mapa.html`](mapa.html) (mapa do setup), para abrir no navegador\n")
     out.append("## Camadas\n")
@@ -370,14 +369,20 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
            "Arquitetura completa do meu ambiente de desenvolvimento e de trabalho: do hardware ao deploy na nuvem, da criação de conteúdo à venda de cursos. Cada ferramenta tem um motivo, um lugar e conexões definidas, e toda a documentação é gerada a partir de uma única fonte de dados.\n",
            f"| Camadas | Blocos | Conexões | Fluxos | Contas necessárias |\n|---|---|---|---|---|\n| {len(eco['camadas'])} | {total_b} | {total_c} | {len(eco['fluxos'])} | {contas} |\n",
            "## Por onde começar\n",
+           "- **Continuar numa conversa nova com o Claude**: cole o [CONTINUAR.md](CONTINUAR.md) (ou `python3 tools/sessao/contexto.py --inicio | clip.exe`) e diga qual passo vai fazer. As decisões recentes ficam no [ESTADO.md](ESTADO.md).",
            "- **Comece aqui, no Windows**: extraia o zip, entre na pasta que tem `RODAR-DIAGNOSTICO.cmd` e clique com o botão direito nele > Executar como administrador. Ele só lê o notebook e diz por qual passo do roteiro começar.",
+           "- **Montar tudo de uma vez**: `cd ~/dev/dev-setup && just instalar` (veja antes com `just instalar --simular`). O plano de autonomia está no [Núcleo AMtech](docs/nucleo/README.md).",
+           "- **No Ubuntu, um comando só**: `cd ~/dev/dev-setup && just` lista tudo; `just check` antes de cada commit e `just triagem \"o que você quer\"` antes de construir algo novo. Ver [Empresa solo](docs/empresa-solo.md).",
            "- **[Arquitetura](docs/arquitetura.md)**: a pilha inteira, camada por camada, com o diagrama de cada uma.",
            "- **[Fluxos de ponta a ponta](docs/fluxos.md)**: codar com agente e publicar, vender um curso, publicar automaticamente, medir uma campanha e outros.",
            "- **[Editora AMS Silva](docs/editora/README.md)**: livros produzidos como software, com código testado, gabaritos conferidos e PDF, EPUB e impressão gerados da mesma fonte.",
            "- **[Implantação](docs/implantacao/README.md)**: do planejamento ao setup funcionando, com scripts de instalação, verificadores e o roteiro passo a passo.",
-           "- **[Operação do grupo](docs/operacao/README.md)**: a esteira por onde passa toda oferta, o portfólio com 47 ofertas pontuadas, marca, conteúdo, automação, qualidade e a ordem de execução.",
+           "- **[Operação do grupo](docs/operacao/README.md)**: a esteira por onde passa toda oferta, o portfólio com " + str(len(json.loads((RAIZ / "data" / "portfolio.json").read_text(encoding="utf-8"))["ofertas"])) + " ofertas pontuadas e classificadas (arsenal de rendas), marca, conteúdo, automação, qualidade e a ordem de execução.",
            "- **[Negócios do grupo](docs/negocios/README.md)**: software, loja, robótica, ponto de retirada, entregas, delivery, sushi, cafeteria e padaria, com números, ordem de abertura e mínimo legal de cada um.",
            "- **[Marketing, vendas e automação](docs/marketing/README.md)**: funil, canais sem rosto com voz clonada, publicação no melhor horário, tráfego pago, parcerias, internacional e lucro por venda.",
+           "- **[Segurança](docs/seguranca/README.md)**: engenharia reversa com IA, AppSec nos seus sistemas, o caminho até a AMtech Segurança (pentest com guarda de escopo e relatório CVSS) e o Jarvis.",
+           "- **[Jarvis](docs/jarvis/README.md)**: comandos de voz para o PC, a casa (energia, água, câmeras, portas, janelas, eletrodomésticos) e os robôs, com política de risco.",
+           "- **[Construção civil e arquitetura](docs/construcao/README.md)**: BIM aberto (Bonsai, FreeCAD), Autodesk educacional, SINAPI, regras da IA para engenharia e a automação BIM como renda.",
            "- **Diagrama interativo**: baixe [`docs/index.html`](docs/index.html) e abra no navegador. Toque em qualquer bloco para ver as conexões dele.",
            "- **[Toda a documentação](docs/README.md)**\n",
            "## A pilha\n",
@@ -399,8 +404,8 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
         destaque = ", ".join(nome(b) for b in bl[:4]) + ("…" if len(bl) > 4 else "")
         out.append(f"| {num(eco, c['id']):02d} | [{c['titulo']}](docs/camadas/{arquivo_camada(eco, c['id'])}) | {len(bl)} | {destaque} |")
     out += ["",
-            "## Stack fixa dos sistemas\n",
-            "C#/.NET 10 · ASP.NET Core (Controllers) · Clean Architecture + DDD · PostgreSQL · Redis · SignalR · TypeScript, Next.js e Tailwind · Docker · GitHub Actions. Rejeitadas de propósito: Bun, Hono, Rust, Tauri e gRPC. Decisões em [`docs/adr`](docs/adr).\n",
+            "## Stack\n",
+            "Sistemas AM: C#/.NET 10 · ASP.NET Core (Controllers) · Clean Architecture + DDD · PostgreSQL · Redis · SignalR · Next.js, TypeScript, Tailwind e Zod · Docker · GitHub Actions · Kamal. Fora deles, a melhor ferramenta para cada trabalho ([ADR 0007](docs/adr/0007-poliglota-por-funcao.md)): Astro para sites, SvelteKit e PocketBase para MVPs, Go para CLIs, Rust para firmware, Python para dados e IA. Principal e reserva de cada função no [ADR 0008](docs/adr/0008-trocas-de-ferramenta-principal.md).\n",
             "## Como este repositório funciona\n",
             "```mermaid", "flowchart LR",
             '  D["data/ecossistema.json<br/>data/mapa.json"] --> G["tools/gerar_docs.py"]',
@@ -425,6 +430,9 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
             "  implantacao/        roteiro de implantação e acompanhamento (gerados)",
             "  operacao/           esteira, portfólio, marca, conteúdo, automação, qualidade, execução",
             "  negocios/           os nove negócios do grupo: estrutura, ordem, números, cardápios, licenças",
+            "  seguranca/          engenharia reversa, AppSec e empresa de pentest",
+            "  jarvis/             voz, casa, câmeras, energia, água, robótica e PC por comando de voz",
+            "  construcao/         construção civil, arquitetura e engenharia civil pela TI",
             "  contas.md, auditoria.md, nuvem.md, roteiro.md, ...",
             "  adr/                decisões de arquitetura",
             "  index.html          diagrama interativo (gerado)",
@@ -432,8 +440,13 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
             "scripts/windows/      instalar.ps1, verificar.ps1, extensões do VS Code e o inventário do Windows",
             "scripts/wsl/          bootstrap.sh, nuvem.sh, verificar.sh e ativar-pipeline.sh",
             "infra/automacao/      n8n, banco de métricas, Grafana e Uptime Kuma (Docker Compose)",
+            "infra/lab-seguranca/  laboratório de ataque local (Juice Shop, WebGoat) presos em 127.0.0.1",
+            "infra/lab-alvo/       alvo isolado sem internet: o software que você estudou contra o atacante",
+            "infra/jarvis/         voz local (Whisper, Piper, openWakeWord), MQTT, Zigbee2MQTT e Frigate",
             "config/marca.md       guia de marca usado pelo pipeline de conteúdo",
+            "infra/templates/     repositório padrão, deploy com Kamal, esteira de sites, regras da IA e segurança",
             "tools/                geradores, motor financeiro, pipeline de conteúdo e templates",
+            "justfile              porta única de comandos (check, triagem, arquiteto, docs, ci-local)",
             "```\n",
             "## Status\n",
             "Em construção por fases. A fase 1 (Windows, WSL2, Docker e .NET) está em andamento; o restante segue o [roteiro de estudo](docs/roteiro.md).\n",

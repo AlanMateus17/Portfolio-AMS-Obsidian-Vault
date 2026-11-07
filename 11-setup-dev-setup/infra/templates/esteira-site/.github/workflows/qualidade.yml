@@ -1,0 +1,42 @@
+# Portão automático de todo PR de site: HTML válido, links funcionando, acessibilidade e nota do Lighthouse
+# (desempenho, acessibilidade e SEO; limites em .lighthouserc.json).
+# Só depois disso a rotina do Claude revisa e você aprova a prévia.
+name: qualidade
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Construir (se houver package.json)
+        run: if [ -f package.json ]; then npm ci && npm run build --if-present; fi
+      - name: Pasta publicada
+        id: pasta
+        run: for d in dist out build public .; do if [ -f "$d/index.html" ]; then echo "dir=$d" >> "$GITHUB_OUTPUT"; break; fi; done
+      - name: HTML válido
+        run: npx --yes html-validate@9 "${{ steps.pasta.outputs.dir }}/**/*.html"
+      - name: Links funcionando
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-mail "${{ steps.pasta.outputs.dir }}/**/*.html"
+          fail: true
+      - name: Acessibilidade básica
+        run: |
+          npx --yes http-server "${{ steps.pasta.outputs.dir }}" -p 8080 -s &
+          sleep 3
+          npx --yes pa11y-ci@3 http://localhost:8080/
+      - name: Lighthouse (desempenho, acessibilidade e SEO)
+        run: npx --yes @lhci/cli@0.14 autorun --collect.staticDistDir="${{ steps.pasta.outputs.dir }}"
+      - name: Guardar o relatório do Lighthouse
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse
+          path: .lighthouseci

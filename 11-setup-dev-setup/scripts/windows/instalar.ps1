@@ -104,7 +104,7 @@ if ((Test-Path $cfg) -and -not $SobrescreverWslconfig) {
 
 # ------------------------------------------------------------------ 4. o que nao da para automatizar
 Registrar 'manual' 'DaVinci Resolve' 'MANUAL' 'Nao esta no winget: baixe em blackmagicdesign.com'
-Registrar 'manual' 'Docker Desktop -> WSL' 'MANUAL' 'Settings > Resources > WSL integration > ligar Ubuntu-24.04'
+Registrar 'manual' 'Docker Desktop -> WSL' 'MANUAL' 'Settings > Resources > WSL integration > ligar o seu Ubuntu'
 Registrar 'manual' 'Criptografia do disco' 'MANUAL' 'Configuracoes > Privacidade e seguranca > Criptografia do dispositivo (guarde a chave no KeePassXC)'
 
 # ------------------------------------------------------------------ resumo

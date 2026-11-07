@@ -1,0 +1,166 @@
+{
+ "conferido_em": "2026-11-01",
+ "regras": [
+  "Certificação só entra na fila quando habilita uma renda ou uma vaga que você quer; nenhuma por colecionar.",
+  "Antes de pagar qualquer prova, confira o edital e o preço do ano no site oficial: as regras mudam (a ANBIMA trocou CPA-10, CPA-20 e CEA em 2026; o AZ-204 saiu em 31/07/2026).",
+  "O dinheiro da prova sai da verba de estudo do Caixa da Casa, não da reserva."
+ ],
+ "trilhas": [
+  {
+   "id": "financas",
+   "nome": "Mercado financeiro",
+   "objetivo": "Recomendar investimentos de forma legal, fazer conteúdo de finanças com recomendação e, no futuro, criar e gerir fundos.",
+   "itens": [
+    {
+     "nome": "CNPI (Apimec)",
+     "habilita": "Analista de valores mobiliários: recomendar ativos em relatório, aula ou conteúdo. Aparece na lista de certificações que a CVM aceita para consultor.",
+     "requisito": "Graduação concluída para o credenciamento (a sua de ADS conta). Provas CB + CG1, com até 12 meses entre elas.",
+     "custo": "Provas de R$ 735 (CB) e R$ 919 (CG1) em valores de 2024, mais credenciamento e taxa trimestral",
+     "ordem": 1,
+     "status": "novo",
+     "fonte": "https://www.topinvest.com.br/blog/cnpi-requisitos/"
+    },
+    {
+     "nome": "Registro de consultor na CVM",
+     "habilita": "Consultoria de investimentos remunerada, pessoa a pessoa.",
+     "requisito": "Certificação aceita pela CVM (a lista inclui CNPI, CGA, CFP e CFA nível III; confira se o C-PRO I substituiu a CEA nessa lista) e as regras da Resolução CVM 19.",
+     "custo": "Registro gratuito",
+     "ordem": 2,
+     "status": "novo",
+     "fonte": "https://www.gov.br/pt-br/servicos/registrar-consultor-cvm"
+    },
+    {
+     "nome": "CGE e CGA (ANBIMA)",
+     "habilita": "Gestor de recursos (administrador de carteiras) na CVM. A CGE cobre fundos estruturados, como FIIs; a CGA, os demais.",
+     "requisito": "Graduação, morar no Brasil e reputação ilibada, além da prova.",
+     "custo": "Confira no edital da ANBIMA",
+     "ordem": 3,
+     "status": "já no plano",
+     "fonte": "https://www.infomoney.com.br/carreira/cvm-amplia-rol-de-certificacoes-para-se-tornar-administrador-de-carteiras/"
+    },
+    {
+     "nome": "CFP (Planejar)",
+     "habilita": "Planejador financeiro pessoal; também aceita pela CVM para consultor.",
+     "requisito": "Graduação e 3 anos de experiência em finanças pessoais (ou 1 ano supervisionado).",
+     "custo": "Cerca de R$ 1.300 a prova completa (valor de 2023)",
+     "ordem": 4,
+     "status": "novo",
+     "fonte": "https://www.suno.com.br/guias/certificacao-cfp"
+    },
+    {
+     "nome": "CFA (CFA Institute)",
+     "habilita": "Referência internacional; o nível III habilita gestor e consultor na CVM e abre vagas no exterior.",
+     "requisito": "Três níveis em inglês.",
+     "custo": "Em dólar; confira no site do CFA Institute",
+     "ordem": 5,
+     "status": "já no plano",
+     "fonte": "https://www.infomoney.com.br/carreira/cvm-amplia-rol-de-certificacoes-para-se-tornar-administrador-de-carteiras/"
+    },
+    {
+     "nome": "CPA, C-PRO R e C-PRO I (ANBIMA)",
+     "habilita": "Distribuição de investimentos em banco ou plataforma (substituem CPA-10, CPA-20 e CEA desde janeiro de 2026).",
+     "requisito": "Prova; atualização obrigatória todo ano.",
+     "custo": "CPA R$ 225; C-PRO R ou I R$ 500; atualização anual de R$ 115 ou R$ 325",
+     "ordem": 9,
+     "status": "só se for trabalhar em banco",
+     "fonte": "https://www.anbima.com.br/pt_br/noticias/anbima-divulga-precos-e-atualizacao-anual-das-novas-certificacoes-de-distribuicao.htm"
+    }
+   ]
+  },
+  {
+   "id": "tecnologia",
+   "nome": "Desenvolvimento, nuvem e IA",
+   "objetivo": "Vaga de dev sênior no Brasil e no exterior e credibilidade para vender sistemas.",
+   "itens": [
+    {
+     "nome": "AZ-900 (fundamentos do Azure)",
+     "habilita": "Base de nuvem para o currículo e para o deploy dos sistemas AM.",
+     "requisito": "Prova; trilha grátis no Microsoft Learn.",
+     "custo": "Confira no Microsoft Learn (há vouchers em eventos gratuitos)",
+     "ordem": 1,
+     "status": "já no plano",
+     "fonte": "https://learn.microsoft.com/credentials/"
+    },
+    {
+     "nome": "AI-200 (Azure AI Cloud Developer)",
+     "habilita": "Desenvolvedor Azure com IA; substitui o AZ-204, que não pode mais ser agendado desde 31/07/2026.",
+     "requisito": "Prova; experiência com código no Azure.",
+     "custo": "Confira no Microsoft Learn",
+     "ordem": 2,
+     "status": "troca do AZ-204",
+     "fonte": "https://ecorpit.com/az-204-retired-azure-ai-200-ab-410-certification-path-2026/"
+    },
+    {
+     "nome": "AWS Certified Cloud Practitioner",
+     "habilita": "Segunda nuvem no currículo, para o mesmo sistema rodar na AWS.",
+     "requisito": "Prova; trilha grátis no AWS Skill Builder.",
+     "custo": "Confira no site da AWS",
+     "ordem": 3,
+     "status": "já no plano",
+     "fonte": "https://aws.amazon.com/certification/"
+    }
+   ]
+  },
+  {
+   "id": "seguranca",
+   "nome": "Segurança",
+   "objetivo": "Segurança nos seus sistemas, bug bounty, AMtech Segurança (pentest) e perícia.",
+   "itens": [
+    {
+     "nome": "CompTIA A+ e Network+",
+     "habilita": "Base de hardware e redes (casa com as suas aulas de manutenção e redes).",
+     "requisito": "Provas",
+     "custo": "Em dólar; confira no site da CompTIA",
+     "ordem": 1,
+     "status": "já no plano",
+     "fonte": "https://www.comptia.org/certifications"
+    },
+    {
+     "nome": "CompTIA Security+",
+     "habilita": "Segurança de entrada reconhecida no exterior.",
+     "requisito": "Prova",
+     "custo": "Em dólar; confira no site da CompTIA",
+     "ordem": 2,
+     "status": "já no plano",
+     "fonte": "https://www.comptia.org/certifications/security"
+    },
+    {
+     "nome": "eJPT (INE)",
+     "habilita": "Primeira prova prática de pentest: abre o bug bounty, o laudo dos sites e o curso de segurança.",
+     "requisito": "TryHackMe Jr Penetration Tester e os laboratórios Apprentice da PortSwigger antes da prova.",
+     "custo": "Em dólar; confira no site da INE (há promoções com voucher)",
+     "ordem": 3,
+     "status": "já no plano",
+     "fonte": "https://ine.com/security/certifications/ejpt-certification"
+    },
+    {
+     "nome": "BSCP (PortSwigger)",
+     "habilita": "Pentest de aplicação web, o que a maioria das empresas pequenas precisa.",
+     "requisito": "Laboratórios Practitioner da Web Security Academy (grátis).",
+     "custo": "Em dólar; confira no site da PortSwigger",
+     "ordem": 4,
+     "status": "novo",
+     "fonte": "https://portswigger.net/web-security/certification"
+    },
+    {
+     "nome": "OSCP (OffSec)",
+     "habilita": "A certificação que contratos de pentest pedem: portão da AMtech Segurança.",
+     "requisito": "Curso PEN-200 e laboratórios; só depois do eJPT.",
+     "custo": "Em dólar; confira no site da OffSec",
+     "ordem": 5,
+     "status": "já no plano",
+     "fonte": "https://www.offsec.com/courses/pen-200/"
+    },
+    {
+     "nome": "OSWE e OSEP (OffSec)",
+     "habilita": "Nível avançado: revisão de código para achar falhas (OSWE) e simulação de invasão com evasão (OSEP).",
+     "requisito": "OSCP e histórico de trabalho; sem pressa.",
+     "custo": "Em dólar; confira no site da OffSec",
+     "ordem": 6,
+     "status": "novo",
+     "fonte": "https://www.offsec.com/courses/web-300/"
+    }
+   ]
+  }
+ ]
+}

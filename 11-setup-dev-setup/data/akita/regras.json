@@ -1,0 +1,392 @@
+{
+ "notas": {
+  "como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas": {
+   "data": "2026-11-06",
+   "regras": [
+    "AK-0001",
+    "AK-0002",
+    "AK-0003",
+    "AK-0004",
+    "AK-0005",
+    "AK-0006",
+    "AK-0007",
+    "AK-0008",
+    "AK-0009",
+    "AK-0010",
+    "AK-0011",
+    "AK-0012"
+   ],
+   "opiniao": false
+  },
+  "parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou": {
+   "data": "2026-11-06",
+   "regras": [
+    "AK-0013",
+    "AK-0014",
+    "AK-0015",
+    "AK-0016",
+    "AK-0017",
+    "AK-0018",
+    "AK-0019",
+    "AK-0020",
+    "AK-0021",
+    "AK-0022"
+   ],
+   "opiniao": false
+  }
+ },
+ "regras": [
+  {
+   "id": "AK-0001",
+   "tipo": "regra",
+   "area": "seguranca",
+   "texto": "Agente de IA não recebe acesso a produção: nada de SSH, credencial de banco ou token de administrador de produção; em staging ele pode trabalhar.",
+   "no_setup": "A política do Núcleo já trava ações sensíveis, mas não diz com essas palavras que agente nunca recebe credencial de produção. Proposta: escrever no ADR 0009 e no CLAUDE.md padrão.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0002",
+   "tipo": "pratica",
+   "area": "seguranca",
+   "texto": "Sessão longa, sem supervisão ou que mexe em arquivos do sistema roda numa sandbox em que só a pasta do projeto é real e chaves SSH, nuvem e navegador ficam de fora.",
+   "no_setup": "Já segue: Claude Code roda dentro do ai-jail (just arquiteto-claude).",
+   "sugestao": "ja-segue",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0003",
+   "tipo": "dica",
+   "area": "ia",
+   "texto": "Agente destrutivo quase sempre começa num pedido vago; diga exatamente o que apagar ou mudar e dê o contexto.",
+   "no_setup": "Já segue em parte: o just arquiteto monta o contexto. Falta a regra escrita no CLAUDE.md padrão.",
+   "sugestao": "ja-segue",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0004",
+   "tipo": "pratica",
+   "area": "infra",
+   "texto": "Use um sistema de arquivos com snapshots leves e agendados (BTRFS com Timeshift ou snapper) e o grub-btrfs para dar boot num snapshot se o sistema não subir.",
+   "no_setup": "Não vale para o WSL2 (ext4 dentro de VHDX). Vale para o Arch no 2º disco: instalar em BTRFS com snapper e grub-btrfs. No WSL, a rede de segurança é o restic e um wsl --export semanal.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0005",
+   "tipo": "alerta",
+   "area": "infra",
+   "texto": "No Windows não existe snapshot leve confiável para os seus dados: quem desenvolve no Windows precisa de backup externo, sem discussão.",
+   "no_setup": "Já segue em parte: restic diário às 22h30 para o disco externo. A cópia fora de casa no Backblaze B2 ainda é o passo restic-nuvem do roteiro.",
+   "sugestao": "ja-segue",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0006",
+   "tipo": "pratica",
+   "area": "infra",
+   "texto": "Backup externo diário com restic, pulando caches de desenvolvimento, e retenção de 7 diários, 4 semanais, 6 mensais e 1 anual.",
+   "no_setup": "Já segue quase igual: o backup.sh guarda 7 diários, 4 semanais e 12 mensais e pula node_modules, bin e obj. Diferença: acrescentar target/ e __pycache__ e 1 anual.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0007",
+   "tipo": "regra",
+   "area": "infra",
+   "texto": "Em servidor, não peça comando avulso ao agente: ele escreve a receita versionada e idempotente (Ansible, Terraform, Kamal), roda, confere e corrige até passar.",
+   "no_setup": "Kamal e Compose já estão no setup. Proposta: regra no CLAUDE.md padrão e no template de repositório.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0008",
+   "tipo": "regra",
+   "area": "dev",
+   "texto": "Mudança em banco de produção só por migration versionada que passou por staging; nunca SQL de manutenção digitado na mão, com ou sem IA.",
+   "no_setup": "Os sistemas Aura usam migrations do EF Core. Proposta: escrever a regra no CLAUDE.md do Aura.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0009",
+   "tipo": "regra",
+   "area": "infra",
+   "texto": "Não rode em produção nada de que você não consegue se recuperar: backup com restauração ensaiada e monitoramento antes de chamar algo de produção.",
+   "no_setup": "Já segue em parte: há o passo de restauração e o Uptime Kuma. Proposta: ensaio de restauração mensal agendado e avisado no Telegram.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0010",
+   "tipo": "pratica",
+   "area": "infra",
+   "texto": "Deixe o estado da máquina sempre à vista: último backup, snapshots, limpeza de caches e erros de disco, com as manutenções em timers que avisam quando atrasam.",
+   "no_setup": "O resumo da manhã no Telegram existe, mas não mostra a idade do último backup. Proposta: incluir backup, espaço em disco e última manutenção no resumo.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0011",
+   "tipo": "dica",
+   "area": "infra",
+   "texto": "Agende a limpeza de caches de desenvolvimento (target/ do Rust, caches de pacotes) duas vezes por mês.",
+   "no_setup": "Não existe. Proposta: dev-cache-clean no domingo junto com a manutenção.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0012",
+   "tipo": "pratica",
+   "area": "infra",
+   "texto": "Isole ambientes que não são de trabalho (jogos, LLM local) em containers reconstruíveis a partir de uma receita versionada (distrobox + Ansible).",
+   "no_setup": "Proposta parcial: o laboratório de IA local (Ollama, Whisper, PyTorch) num container com receita no repositório, em vez de instalar direto no Ubuntu.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Como me precaver pros meus agentes não apagarem minhas coisas?",
+    "url": "https://akitaonrails.com/2026/07/11/como-me-precaver-pros-meus-agentes-nao-apagarem-minhas-coisas/",
+    "data": "2026-07-11"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0013",
+   "tipo": "regra",
+   "area": "dev",
+   "texto": "Faça deploy pequeno e frequente: se revisar e publicar demora mais do que desenvolver, o gargalo é o processo.",
+   "no_setup": "Vale para os sistemas e sites, mantendo a sua regra de aprovação: publicar continua parando no seu ok, só que num toque, sem fila.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0014",
+   "tipo": "regra",
+   "area": "dev",
+   "texto": "Acelerar só depois do ambiente mínimo: testes unitários e de cenário, CI em todo push, revisão automática antes do merge, feature flag, staging, rollback rápido e observabilidade.",
+   "no_setup": "O CI e os testes já existem. Proposta: checklist do ambiente mínimo no template de repositório e o just check conferindo cada item.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0015",
+   "tipo": "alerta",
+   "area": "dev",
+   "texto": "Se a infraestrutura não deixa reverter rápido, conserte isso antes de acelerar.",
+   "no_setup": "Proposta: cada sistema com rollback de um comando (kamal rollback) testado antes do primeiro cliente.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0016",
+   "tipo": "alerta",
+   "area": "dev",
+   "texto": "Reverter o código não desfaz o que já saiu do sistema (pagamento, nota fiscal, e-mail); e migration destrutiva segue expand-contract: cria o novo, migra, só depois remove o velho.",
+   "no_setup": "Aplica ao Pix Automático e à NFS-e dos sistemas AM. Proposta: regra no CLAUDE.md do Aura e teste de cenário para pagamento.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0017",
+   "tipo": "pratica",
+   "area": "ia",
+   "texto": "Revisão automática de PR que trata a descrição do autor como não verificada: procura credencial exposta, código malicioso, quebra de versão e injeção de prompt; issue nunca executa comando colado.",
+   "no_setup": "Essencial para o garimpo de código (fase 2 do Núcleo) e para PRs de fora. Proposta: uma skill de auditoria de PR no Claude Code.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0018",
+   "tipo": "regra",
+   "area": "dev",
+   "texto": "Correção de bug começa pelo teste que reproduz o bug; sem abstração especulativa, sem TODO esquecido e sem afrouxar teste para passar.",
+   "no_setup": "Proposta: escrever no CLAUDE.md padrão.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0019",
+   "tipo": "pratica",
+   "area": "dev",
+   "texto": "Publicar deve custar um comando (git push ou um comando de barra); se custa mais, ainda tem etapa manual demais.",
+   "no_setup": "Já segue em parte: sites por push na Hostinger e Kamal nos sistemas. Falta medir o caminho do commit ao ar em cada produto.",
+   "sugestao": "ja-segue",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0020",
+   "tipo": "dica",
+   "area": "dev",
+   "texto": "Um push de tag gera os binários de todas as plataformas que você publica num único release.",
+   "no_setup": "Proposta: release por tag nos templates de CLI em Go e Rust.",
+   "sugestao": "proposta",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0021",
+   "tipo": "dica",
+   "area": "negocio",
+   "texto": "Feedback de gente usando de verdade vale mais que qualquer revisão sua: publique cedo para ter quem use e reclame.",
+   "no_setup": "Já segue: passo beta do roteiro e o portão de venda antes de construir mais.",
+   "sugestao": "ja-segue",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  },
+  {
+   "id": "AK-0022",
+   "tipo": "dica",
+   "area": "dev",
+   "texto": "Meça antes de assumir que uma ferramenta é mais rápida; a medição pode contrariar a sua aposta.",
+   "no_setup": "Já segue: just medir (hyperfine) antes de trocar de stack.",
+   "sugestao": "ja-segue",
+   "validade": "perene",
+   "fonte": {
+    "titulo": "Parem de inventar desculpas e façam mais deploy! Com a IA, a premissa mudou.",
+    "url": "https://akitaonrails.com/2026/09/22/parem-de-inventar-desculpas-e-facam-mais-deploy-a-premissa-mudou/",
+    "data": "2026-09-22"
+   },
+   "estado": "nova",
+   "decisao": ""
+  }
+ ]
+}

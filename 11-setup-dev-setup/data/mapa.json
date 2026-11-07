@@ -69,7 +69,7 @@
     },
     {
      "k": "Certificações",
-     "v": "AZ-900 (fundamentos) e depois AZ-204 (desenvolvedor)."
+     "v": "AZ-900 (fundamentos) e depois AI-200 (desenvolvedor Azure com IA; substituiu o AZ-204 em 31/07/2026)."
     },
     {
      "k": "Prática",
@@ -239,7 +239,7 @@
   {
    "etapa": "Distribuído e plataforma",
    "quando": "2028 · junto do Passo 12 (plataforma interna)",
-   "o_que": "RabbitMQ e Kafka, autenticação OIDC, Kubernetes local (kind). AZ-204."
+   "o_que": "RabbitMQ e Kafka, autenticação OIDC, Kubernetes local (kind). AI-200."
   },
   {
    "etapa": "Segunda nuvem e sênior",
@@ -258,7 +258,7 @@
    "nome": "CLAUDE.md padrão do Aura",
    "tipo": "Contexto do agente",
    "fase": "f1",
-   "descricao": "Modelo copiado para cada repo: stack, camadas, nomes, tecnologias rejeitadas e como rodar testes."
+   "descricao": "Modelo copiado para cada repo: stack, camadas, nomes, a árvore apps/ e packages/ e como rodar testes."
   },
   {
    "nome": "Subagente revisor-csharp",
@@ -361,12 +361,16 @@
    "motivo": "Histórico sério de instâncias expostas e execução de código não confiável."
   },
   {
-   "item": "Bun, Hono, Rust, Tauri, gRPC",
-   "motivo": "Rejeitados por você para o Aura."
+   "item": "Bun, Hono, Tauri e gRPC",
+   "motivo": "Não são mais proibidos (ADR 0007): entram pela triagem quando forem a melhor ferramenta para um trabalho. Rust já entrou para firmware e CLIs."
   },
   {
    "item": "Postman, IDEs pagas, SaaS pagos",
    "motivo": "Você prefere open source; Bruno, DBeaver e VS Code cobrem."
+  },
+  {
+   "item": "SLU e Fator R",
+   "motivo": "Pronto para ligar com a renda (fase CNPJ e formalização), com Akaunting e o contador. Os 6% do Anexo III valem só na 1ª faixa (até R$ 180 mil em 12 meses) e o pró-labore de 28% paga INSS de 11% e IR."
   }
  ]
 }

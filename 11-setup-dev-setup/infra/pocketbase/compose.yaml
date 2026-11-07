@@ -1,0 +1,22 @@
+# MVP no PocketBase com réplica no R2. Rode no Ubuntu do WSL:
+#   PB_VERSAO=x.y.z LS_VERSAO=x.y.z docker compose up -d --build
+name: pocketbase
+services:
+  pocketbase:
+    build:
+      context: .
+      args:
+        PB_VERSAO: ${PB_VERSAO:?defina PB_VERSAO (versão do PocketBase)}
+        LS_VERSAO: ${LS_VERSAO:?defina LS_VERSAO (versão do Litestream)}
+    restart: unless-stopped
+    environment:
+      LITESTREAM_BUCKET: ${LITESTREAM_BUCKET:?defina LITESTREAM_BUCKET}
+      LITESTREAM_ENDPOINT: ${LITESTREAM_ENDPOINT:?defina LITESTREAM_ENDPOINT (https://<conta>.r2.cloudflarestorage.com)}
+      LITESTREAM_ACCESS_KEY_ID: ${LITESTREAM_ACCESS_KEY_ID:?defina LITESTREAM_ACCESS_KEY_ID}
+      LITESTREAM_SECRET_ACCESS_KEY: ${LITESTREAM_SECRET_ACCESS_KEY:?defina LITESTREAM_SECRET_ACCESS_KEY}
+    ports:
+      - "127.0.0.1:8090:8090"
+    volumes:
+      - pb-dados:/pb_data
+volumes:
+  pb-dados:

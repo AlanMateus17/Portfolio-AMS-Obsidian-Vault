@@ -1,0 +1,103 @@
+# Jarvis: voz local (ouvir, falar, palavra de ativação) e o barramento MQTT da casa e dos robôs.
+#
+# Onde roda (ADR 0004): o Home Assistant fica no servidor da casa, ligado o tempo todo. Este arquivo serve
+# para o notebook emprestar a GPU ao reconhecimento de voz (muito mais rápido que a CPU do servidor) e para
+# o servidor da casa, se ele for um mini PC com Linux e Docker em vez do Home Assistant OS.
+#
+#   cd infra/jarvis && cp -n jarvis.env.example .env && nano .env
+#   docker compose up -d                       # voz (Whisper na GPU, Piper, openWakeWord) + MQTT
+#   docker compose --profile zigbee up -d      # + Zigbee2MQTT (com o coordenador USB ligado)
+#   docker compose --profile cameras up -d     # + Frigate (câmeras com detecção de pessoas, local)
+#
+# No Home Assistant: Configurações > Dispositivos e serviços > Wyoming Protocol, apontando para JARVIS_IP:
+# 10300 (Whisper), 10200 (Piper) e 10400 (openWakeWord). Depois, Assistentes de voz > novo assistente.
+#
+# Primeira vez no MQTT, crie o usuário (a senha vai para o KeePassXC):
+#   docker compose run --rm mosquitto mosquitto_passwd -c /mosquitto/dados/senhas jarvis
+name: amtech-jarvis
+
+services:
+  whisper:
+    # faster-whisper com GPU: a GTX 1650 (4 GB) roda o modelo small com folga e o medium no limite.
+    image: lscr.io/linuxserver/faster-whisper:gpu
+    restart: unless-stopped
+    environment:
+      TZ: America/Sao_Paulo
+      WHISPER_MODEL: ${WHISPER_MODELO:-small}
+      WHISPER_LANG: pt
+      WHISPER_BEAM: "2"
+    volumes:
+      - ${JARVIS_DIR:?defina JARVIS_DIR no .env}/whisper:/config
+    ports:
+      - "${JARVIS_IP:-127.0.0.1}:10300:10300"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  piper:
+    image: lscr.io/linuxserver/piper:latest
+    restart: unless-stopped
+    environment:
+      TZ: America/Sao_Paulo
+      PIPER_VOICE: ${PIPER_VOZ:-pt_BR-faber-medium}
+    volumes:
+      - ${JARVIS_DIR}/piper:/config
+    ports:
+      - "${JARVIS_IP:-127.0.0.1}:10200:10200"
+
+  openwakeword:
+    # "hey_jarvis" já vem treinado no openWakeWord. Satélites ESP32-S3 usam o microWakeWord no próprio chip.
+    image: rhasspy/wyoming-openwakeword:latest
+    restart: unless-stopped
+    command: --preload-model hey_jarvis
+    ports:
+      - "${JARVIS_IP:-127.0.0.1}:10400:10400"
+
+  mosquitto:
+    # Barramento da casa: sensores, Zigbee2MQTT, Frigate, leitor do hidrômetro e os robôs (ROS 2) falam por aqui.
+    image: eclipse-mosquitto:2
+    restart: unless-stopped
+    volumes:
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+      - ${JARVIS_DIR}/mosquitto:/mosquitto/dados
+    ports:
+      - "${JARVIS_IP:-127.0.0.1}:1883:1883"
+
+  zigbee2mqtt:
+    image: koenkk/zigbee2mqtt:latest
+    restart: unless-stopped
+    profiles: [zigbee]
+    depends_on: [mosquitto]
+    environment:
+      TZ: America/Sao_Paulo
+    volumes:
+      - ${JARVIS_DIR}/zigbee2mqtt:/app/data
+    devices:
+      - ${ZIGBEE_USB:-/dev/ttyUSB0}:/dev/ttyACM0
+    ports:
+      - "${JARVIS_IP:-127.0.0.1}:8080:8080"
+
+  frigate:
+    # Gravação e detecção 100% locais. Câmeras só no que é seu: nada de rua, vizinho ou cômodo de visita sem aviso.
+    image: ghcr.io/blakeblackshear/frigate:stable
+    restart: unless-stopped
+    profiles: [cameras]
+    shm_size: "256mb"
+    depends_on: [mosquitto]
+    environment:
+      TZ: America/Sao_Paulo
+      FRIGATE_RTSP_PASSWORD: ${FRIGATE_RTSP_SENHA:-}
+    volumes:
+      - ${JARVIS_DIR}/frigate/config:/config
+      - ${FRIGATE_GRAVACOES:-/srv/frigate}:/media/frigate
+      - type: tmpfs
+        target: /tmp/cache
+        tmpfs:
+          size: 1000000000
+    ports:
+      - "${JARVIS_IP:-127.0.0.1}:8971:8971"
+      - "${JARVIS_IP:-127.0.0.1}:8554:8554"

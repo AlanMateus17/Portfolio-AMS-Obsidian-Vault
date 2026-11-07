@@ -67,6 +67,16 @@ select{font:500 13px var(--sans);padding:5px 10px;border-radius:8px;border:1px s
 .meta{font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
 .meta b{color:var(--ink);font-weight:500}
 .empty{color:var(--muted);padding:24px 0}
+.tag.v-agora{background:var(--ok);color:var(--on-aura)}
+.tag.v-proxima{background:var(--ok-tint);color:var(--ok)}
+.tag.v-manter{background:var(--aura-tint);color:var(--aura)}
+.tag.v-fila{background:var(--gold-tint);color:var(--gold-ink)}
+.tag.v-em2027,.tag.v-decidir{background:var(--warn-tint);color:var(--warn)}
+.tag.v-descartar{background:var(--idle-tint);color:var(--idle);text-decoration:line-through}
+.why{font-size:13px;color:var(--muted);border-left:3px solid var(--line);padding-left:10px}
+.rules{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.rules ul{margin:0;padding-left:18px;font-size:14px}
+.rules .nums{display:flex;flex-wrap:wrap;gap:8px}
 </style>
 
 <div class="wrap">
@@ -75,18 +85,27 @@ select{font:500 13px var(--sans);padding:5px 10px;border-radius:8px;border:1px s
     <h1>Portfólio AMtech</h1>
     <p class="lede">Tudo o que o grupo vende ou pode vender, num lugar só: infoprodutos, livro, software, serviços, negócios físicos e mídia. Cada oferta tem um próximo passo concreto e a divisão entre o que o setup automatiza e o que fica com você.</p>
     <p><span class="formula">Pontos = 2 × sinergia + escala + demanda − esforço − capital</span></p>
+    <p><span class="formula">Facilidade = sinergia + demanda + (6 − esforço) + (6 − capital)</span></p>
   </header>
+
+  <section class="rules" aria-label="Regras do arsenal">
+    <h2>Regras do arsenal</h2>
+    <div class="nums" id="rnums"></div>
+    <ul id="rblocos"></ul>
+  </section>
 
   <div class="stats" id="stats"></div>
 
   <section class="filters" aria-label="Filtros">
-    <div class="frow"><span class="flabel">Frente</span><div class="frow" id="fFrente"></div></div>
+    <div class="frow"><span class="flabel">Veredito</span><div class="frow" id="fVeredito"></div></div>
+    <div class="frow"><span class="flabel">Perfil</span><div class="frow" id="fPerfil"></div></div>
+    <div class="frow"><span class="flabel">Marca</span><div class="frow" id="fFrente"></div></div>
     <div class="frow"><span class="flabel">Estágio</span><div class="frow" id="fEstagio"></div></div>
     <div class="frow"><span class="flabel">Escala</span><div class="frow" id="fEscala"></div></div>
     <div class="frow"><span class="flabel">Mostrar</span>
       <button class="chip" id="fNovas" aria-pressed="false">Só fontes novas</button>
       <label for="ordem" class="count">Ordenar por</label>
-      <select id="ordem"><option value="pontos">Pontos</option><option value="nome">Nome</option><option value="esforco">Menor esforço</option></select>
+      <select id="ordem"><option value="facil">Mais fácil</option><option value="pontos">Pontos</option><option value="nome">Nome</option><option value="esforco">Menor esforço</option></select>
       <span class="count" id="count"></span>
     </div>
   </section>
@@ -96,7 +115,7 @@ select{font:500 13px var(--sans);padding:5px 10px;border-radius:8px;border:1px s
 
 <script>
 const D = __DATA__;
-const st={frente:"",estagio:"",escala:"",novas:false,ordem:"pontos"};
+const st={frente:"",estagio:"",escala:"",veredito:"",perfil:"",novas:false,ordem:"facil"};
 try{Object.assign(st,JSON.parse(localStorage.getItem("portfolio-filtros")||"{}"));}catch(e){}
 const $=id=>document.getElementById(id);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -106,28 +125,31 @@ function chips(el,key,map){el.innerHTML=[`<button class="chip" data-v="" aria-pr
 function salvar(){try{localStorage.setItem("portfolio-filtros",JSON.stringify(st));}catch(e){}}
 $("fNovas").onclick=()=>{st.novas=!st.novas;salvar();render();};
 $("ordem").onchange=e=>{st.ordem=e.target.value;salvar();render();};
-function stats(){const o=D.ofertas;const n=x=>o.filter(x).length;
-  $("stats").innerHTML=[[o.length,"ofertas no catálogo"],[n(x=>x.nova),"fontes de renda novas"],[n(x=>x.escala==="digital"),"escalam no digital"],[n(x=>["validacao","construcao"].includes(x.estagio)),"em validação ou construção"]].map(([v,k])=>`<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");}
+function stats(){const o=D.ofertas;const n=x=>o.filter(x).length;const R=D.regras;
+  $("rnums").innerHTML=[["R$ "+R.hora_minima,"hora mínima"],[R.teto_horas_semana+" h","teto extra por semana"],[R.max_agora,"rendas em \"agora\""]].map(([v,k])=>`<span class="tag">${esc(v)} · ${esc(k)}</span>`).join("")+`<span class="tag">portão: ${esc(R.portao)}</span>`;
+  $("rblocos").innerHTML=R.blocos_da_semana.map(b=>`<li>${esc(b)}</li>`).join("");
+  $("stats").innerHTML=[[o.length,"ofertas no catálogo"],[n(x=>x.veredito==="agora"),"rendas agora"],[n(x=>x.perfil==="passiva"),"passivas"],[n(x=>x.veredito==="descartar"),"descartadas"]].map(([v,k])=>`<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join("");}
 function render(){
-  chips($("fFrente"),"frente",D.frentes);chips($("fEstagio"),"estagio",D.estagios);chips($("fEscala"),"escala",D.escalas);
+  chips($("fVeredito"),"veredito",D.vereditos);chips($("fPerfil"),"perfil",D.perfis);chips($("fFrente"),"frente",D.frentes);chips($("fEstagio"),"estagio",D.estagios);chips($("fEscala"),"escala",D.escalas);
   $("fNovas").setAttribute("aria-pressed",st.novas);$("ordem").value=st.ordem;
-  let L=D.ofertas.filter(o=>(!st.frente||o.frente===st.frente)&&(!st.estagio||o.estagio===st.estagio)&&(!st.escala||o.escala===st.escala)&&(!st.novas||o.nova));
+  let L=D.ofertas.filter(o=>(!st.frente||o.frente===st.frente)&&(!st.estagio||o.estagio===st.estagio)&&(!st.escala||o.escala===st.escala)&&(!st.novas||o.nova)&&(!st.veredito||o.veredito===st.veredito)&&(!st.perfil||o.perfil===st.perfil));
+  if(st.ordem==="facil")L=[...L].sort((a,b)=>b.facil-a.facil||b.pontos-a.pontos);
   if(st.ordem==="nome")L=[...L].sort((a,b)=>a.nome.localeCompare(b.nome,"pt-BR"));
   if(st.ordem==="esforco")L=[...L].sort((a,b)=>(a.nota.esforco+a.nota.capital)-(b.nota.esforco+b.nota.capital)||b.pontos-a.pontos);
   $("count").textContent=L.length+(L.length===1?" oferta":" ofertas");
   $("list").innerHTML=L.length?L.map(card).join(""):'<p class="empty">Nenhuma oferta com esses filtros. Toque em "Todas" para limpar.</p>';
 }
 function card(o){
-  const pct=Math.max(0,o.pontos)/18*100;
   const li=a=>a.length?`<ul>${a.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:'<p>—</p>';
   return `<article class="item">
     <div class="top"><div style="display:flex;flex-direction:column;gap:6px;min-width:0"><h2>${esc(o.nome)}</h2>
-      <div class="tags">${o.nova?'<span class="tag new">nova</span>':''}<span class="tag s-${o.estagio}">${esc(D.estagios[o.estagio])}</span><span class="tag">${esc(D.frentes[o.frente])}</span><span class="tag">${esc(o.escala)}</span></div></div>
-      <div class="score" title="sinergia ${o.nota.sinergia} · escala ${o.nota.escala} · demanda ${o.nota.demanda} · esforço ${o.nota.esforco} · capital ${o.nota.capital}"><b>${o.pontos}</b><div class="meter" aria-hidden="true"><i style="width:${pct}%"></i></div></div></div>
+      <div class="tags"><span class="tag v-${o.veredito}">${esc(D.vereditos[o.veredito])}${o.ordem?" · "+o.ordem+"ª":""}</span>${o.nova?'<span class="tag new">nova</span>':''}<span class="tag">${esc(D.perfis[o.perfil].split(" (")[0])}</span><span class="tag">${o.automacao}% automático</span><span class="tag s-${o.estagio}">${esc(D.estagios[o.estagio])}</span><span class="tag">${esc(D.frentes[o.frente])}</span><span class="tag">${esc(o.escala)}</span></div></div>
+      <div class="score" title="facilidade ${o.facil} de 20 · sinergia ${o.nota.sinergia} · escala ${o.nota.escala} · demanda ${o.nota.demanda} · esforço ${o.nota.esforco} · capital ${o.nota.capital}"><b>${o.facil}</b><div class="meter" aria-hidden="true"><i style="width:${(o.facil-4)/16*100}%"></i></div><span class="count">facilidade · ${o.pontos} pts</span></div></div>
+    <p class="why">${esc(o.motivo)}</p>
     <div class="next"><span>Próximo passo</span>${esc(o.proximo_passo)}</div>
     ${o.quando?`<div class="next"><span>Quando entra</span>${esc(o.quando)}</div>`:""}
     <div class="split"><div><h3>O setup automatiza</h3>${li(o.automatico)}</div><div><h3>Fica com você</h3>${li(o.humano)}</div></div>
-    <div class="meta"><span><b>Receita:</b> ${esc(o.receita)}</span><span><b>Canais:</b> ${esc(o.canais.join(", ")||"—")}</span><span><b>Métrica:</b> ${esc(o.metrica)}</span>${o.deriva_de.length?`<span><b>Nasce de:</b> ${esc(o.deriva_de.map(d=>nomeDe[d]).join(", "))}</span>`:""}</div>
+    <div class="meta"><span><b>Receita:</b> ${esc(o.receita)}</span><span><b>Canais:</b> ${esc(o.canais.join(", ")||"—")}</span><span><b>Métrica:</b> ${esc(o.metrica)}</span>${o.usa&&o.usa.length?`<span><b>Automações:</b> ${esc(o.usa.map(u=>D.automacoes[u]).join(", "))}</span>`:""}${o.deriva_de.length?`<span><b>Nasce de:</b> ${esc(o.deriva_de.map(d=>nomeDe[d]).join(", "))}</span>`:""}</div>
   </article>`;
 }
 stats();render();

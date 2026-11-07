@@ -7,7 +7,7 @@
 
 > **Ligação com a camada de baixo:** Cada produto nasce do conteúdo gravado, escrito ou programado.
 
-**7 blocos** · 0 precisam de conta · 2 marcados como futuro
+**8 blocos** · 0 precisam de conta · 2 marcados como futuro
 
 ## Mapa de conexões
 
@@ -21,6 +21,7 @@ flowchart LR
     n_aulas["Aulas particulares"]
     n_sites["Sites para pequenas empresas"]
     n_saas["Sistemas AM (SaaS)"]
+    n_esteira["Esteira de sites (issue → PR → ar)"]
   end
   subgraph L_oper["Operação do grupo (esteira, marca, qualidade)"]
     n_oesteira["Esteira de ofertas"]
@@ -41,6 +42,7 @@ flowchart LR
     n_hotm["Hotmart"]
     n_kiwi["Kiwify"]
     n_mp["Mercado Pago"]
+    n_polar["Polar (venda internacional)"]
     n_udemy["Udemy"]
   end
   subgraph L_emp["Pessoa física: impostos e finanças"]
@@ -64,6 +66,7 @@ flowchart LR
   end
   subgraph L_cont["Produção de conteúdo"]
     n_edit["DaVinci Resolve ou Kdenlive"]
+    n_fabrica["Fábrica de aulas"]
   end
   subgraph L_nuvem["Nuvem, código e entrega"]
     n_azure["Azure"]
@@ -78,6 +81,7 @@ flowchart LR
     n_cupw["Conector Upwork"]
   end
   subgraph L_chat["Assistentes de IA (chat, pesquisa e estudo)"]
+    n_copi["GitHub Copilot"]
     n_nblm["NotebookLM"]
   end
   subgraph L_win["Windows 11, apps e máquinas virtuais"]
@@ -101,6 +105,7 @@ flowchart LR
   n_form -->|"produto"| n_hotm
   n_tmpl -->|"download"| n_hotm
   n_tmpl -->|"demo pública"| n_gh
+  n_tmpl -->|"vende lá fora"| n_polar
   n_zip -->|"empacota o download"| n_tmpl
   n_story -->|"demo do template"| n_tmpl
   n_livro -->|"PDF"| n_hotm
@@ -118,6 +123,7 @@ flowchart LR
   n_aulas -->|"cobrança"| n_mp
   n_agenda -->|"horários"| n_aulas
   n_wa -->|"agenda"| n_aulas
+  n_fabrica -->|"material das aulas"| n_aulas
   n_sites -->|"cobrança"| n_mp
   n_sites -->|"hospedagem do cliente"| n_hostg
   n_sites -->|"vira serviço da empresa"| n_nsoft
@@ -127,24 +133,28 @@ flowchart LR
   n_cupw -->|"encontra clientes"| n_sites
   n_oorc -->|"propostas"| n_sites
   n_wa -->|"pedido de orçamento"| n_sites
+  n_esteira -->|"entrega"| n_sites
   n_saas -->|"roda na nuvem"| n_azure
   n_saas -->|"cobrança por módulo"| n_lic
   n_saas -->|"vende por assinatura"| n_nkaix
+  n_esteira -->|"deploy por push"| n_hostg
+  n_copi -->|"abre o PR"| n_esteira
   classDef desta fill:#e2ecec,stroke:#0e3a45,color:#13262b
-  class n_curso,n_form,n_tmpl,n_livro,n_aulas,n_sites,n_saas desta
+  class n_curso,n_form,n_tmpl,n_livro,n_aulas,n_sites,n_saas,n_esteira desta
 ```
 
 ## Blocos
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Mini-curso Lógica de Programação](#curso) | Local | Primeiro produto de lançamento, para validar antes de construir mais. | passo 14.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 17.1 · Semanas 12 a 15 · jan a fev/2027 |
-| [Formações (TI, Matemática, Finanças)](#form) | Local · futuro | Cursos completos, depois que o mini-curso vender. | passo 23.10 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 18.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| [Livro Lógica e Máquina](#livro) | Local | Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impresso, kit, curso e site saem da mesma fonte. | passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Aulas particulares](#aulas) | Físico | Seus estudos viram aula paga. | passo 14.8 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Sites para pequenas empresas](#sites) | Local | Freelance em Barbacena: sites e lojas. | passo 13.13 · Semanas 6 e 7 · dez/2026; passo 22.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 22.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
-| [Sistemas AM (SaaS)](#saas) | Remoto · futuro | AM Kaixara, AM Rendara e os demais, vendidos por assinatura. | passo 26.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [Mini-curso Lógica de Programação](#curso) | Local | Primeiro produto de lançamento, para validar antes de construir mais. | passo 37.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.1 · Semanas 12 a 15 · jan a fev/2027 |
+| [Formações (TI, Matemática, Finanças)](#form) | Local · futuro | Cursos completos, depois que o mini-curso vender. | passo 47.10 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
+| [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 41.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| [Livro Lógica e Máquina](#livro) | Local | Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impresso, kit, curso e site saem da mesma fonte. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
+| [Aulas particulares](#aulas) | Físico | Seus estudos viram aula paga. | passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027 |
+| [Sites para pequenas empresas](#sites) | Local | Freelance em Barbacena: sites e lojas. | passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Sistemas AM (SaaS)](#saas) | Remoto · futuro | AM Kaixara, AM Rendara e os demais, vendidos por assinatura. | passo 50.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [Esteira de sites (issue → PR → ar)](#esteira) | Local | Ficha como issue, agente abre o PR, CI confere HTML, links e acessibilidade, a rotina do Claude revisa, você aprova a prévia e o merge publica na Hostinger. Modelo em infra/templates/esteira-site. | passo 28.3 · Semana 6 · nov/2026 a dez/2026; passo 28.4 · Semana 6 · nov/2026 a dez/2026; passo 28.5 · Semana 6 · nov/2026 a dez/2026 |
 
 <a id="curso"></a>
 
@@ -154,7 +164,7 @@ flowchart LR
 
 Primeiro produto de lançamento, para validar antes de construir mais.
 
-**Quando entra:** passo 14.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 17.1 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 37.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.1 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -177,7 +187,7 @@ Primeiro produto de lançamento, para validar antes de construir mais.
 
 Cursos completos, depois que o mini-curso vender.
 
-**Quando entra:** passo 23.10 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 47.10 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -192,12 +202,13 @@ Cursos completos, depois que o mini-curso vender.
 
 Frontends prontos e projetos vendidos como download.
 
-**Quando entra:** passo 18.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Hotmart](20-venda.md#hotm) | Plataformas de venda e recebimento | download |
 | → envia para | [GitHub](12-nuvem.md#gh) | Nuvem, código e entrega | demo pública |
+| → envia para | [Polar (venda internacional)](20-venda.md#polar) | Plataformas de venda e recebimento | vende lá fora |
 | ← recebe de | [7-Zip](03-win.md#zip) | Windows 11, apps e máquinas virtuais | empacota o download |
 | ← recebe de | [Storybook](11-app.md#story) | Aplicação: sistemas AM (Aura) | demo do template |
 
@@ -209,7 +220,7 @@ Frontends prontos e projetos vendidos como download.
 
 Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impresso, kit, curso e site saem da mesma fonte.
 
-**Quando entra:** passo 20.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -234,13 +245,14 @@ Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impre
 
 Seus estudos viram aula paga.
 
-**Quando entra:** passo 14.8 · Semanas 8 a 10 · dez/2026 a jan/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Mercado Pago](20-venda.md#mp) | Plataformas de venda e recebimento | cobrança |
 | ← recebe de | [Agenda online (Cal.com)](20-venda.md#agenda) | Plataformas de venda e recebimento | horários |
 | ← recebe de | [WhatsApp Business](22-pub.md#wa) | Público e canais | agenda |
+| ← recebe de | [Fábrica de aulas](13-cont.md#fabrica) | Produção de conteúdo | material das aulas |
 
 <a id="sites"></a>
 
@@ -250,7 +262,7 @@ Seus estudos viram aula paga.
 
 Freelance em Barbacena: sites e lojas.
 
-**Quando entra:** passo 13.13 · Semanas 6 e 7 · dez/2026; passo 22.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 22.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -263,6 +275,7 @@ Freelance em Barbacena: sites e lojas.
 | ← recebe de | [Conector Upwork](08-clc.md#cupw) | Claude: recursos, conectores e plugins | encontra clientes |
 | ← recebe de | [Agente orçamentista](23-oper.md#oorc) | Operação do grupo (esteira, marca, qualidade) | propostas |
 | ← recebe de | [WhatsApp Business](22-pub.md#wa) | Público e canais | pedido de orçamento |
+| ← recebe de | [Esteira de sites (issue → PR → ar)](17-prod.md#esteira) | Produtos (o que você vende) | entrega |
 
 <a id="saas"></a>
 
@@ -272,13 +285,29 @@ Freelance em Barbacena: sites e lojas.
 
 AM Kaixara, AM Rendara e os demais, vendidos por assinatura.
 
-**Quando entra:** passo 26.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 50.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Azure](12-nuvem.md#azure) | Nuvem, código e entrega | roda na nuvem |
 | → envia para | [aura-licensing](11-app.md#lic) | Aplicação: sistemas AM (Aura) | cobrança por módulo |
 | → envia para | [AM Kaixara (PDV e cardápio)](11-app.md#nkaix) | Aplicação: sistemas AM (Aura) | vende por assinatura |
+
+<a id="esteira"></a>
+
+### Esteira de sites (issue → PR → ar)
+
+*Local*
+
+Ficha como issue, agente abre o PR, CI confere HTML, links e acessibilidade, a rotina do Claude revisa, você aprova a prévia e o merge publica na Hostinger. Modelo em infra/templates/esteira-site.
+
+**Quando entra:** passo 28.3 · Semana 6 · nov/2026 a dez/2026; passo 28.4 · Semana 6 · nov/2026 a dez/2026; passo 28.5 · Semana 6 · nov/2026 a dez/2026 ([roteiro](../implantacao/roteiro.md))
+
+| Direção | Bloco | Camada | O que passa |
+|---|---|---|---|
+| → envia para | [Hostinger (clientes WP)](18-web.md#hostg) | Vitrine web (sites e domínio) | deploy por push |
+| → envia para | [Sites para pequenas empresas](17-prod.md#sites) | Produtos (o que você vende) | entrega |
+| ← recebe de | [GitHub Copilot](07-chat.md#copi) | Assistentes de IA (chat, pesquisa e estudo) | abre o PR |
 
 ---
 

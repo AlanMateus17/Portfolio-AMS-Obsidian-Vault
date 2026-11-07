@@ -1,0 +1,5 @@
+# yazi: gerenciador de arquivos no terminal, com prévia. Abra com: yazi
+[mgr]
+show_hidden = true
+sort_by = "natural"
+sort_dir_first = true

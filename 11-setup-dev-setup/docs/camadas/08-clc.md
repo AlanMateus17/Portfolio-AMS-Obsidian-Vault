@@ -82,6 +82,7 @@ flowchart LR
     n_gem["Gemini (pago)"]
   end
   subgraph L_ia["Agentes de IA e sandbox"]
+    n_aiusage["ai-usagebar (Akita)"]
     n_cc["Claude Code"]
   end
   subgraph L_win["Windows 11, apps e máquinas virtuais"]
@@ -100,6 +101,7 @@ flowchart LR
   n_cc -->|"modelo Claude"| n_anth
   n_ai -->|"modelos"| n_anth
   n_opipe -->|"API do Claude"| n_anth
+  n_aiusage -->|"mostra o limite"| n_anth
   n_cgws -->|"mesmos dados Google"| n_gem
   n_cgws -->|"resumos de e-mail e agenda"| n_obsd
   n_cgws -->|"o Claude lê o Drive"| n_gdrv
@@ -134,12 +136,12 @@ flowchart LR
 | [Projects + memória](#proj) | Remoto · precisa de conta | Um Project por frente (Aura, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas. | passo 9.1 · Semana 4 · nov/2026 |
 | [Artifacts (Docs, Slides, Sheets…)](#arts) | Remoto · precisa de conta | Documentos, apresentações, planilhas e designs editáveis e compartilháveis. O Caixa da Casa e este diagrama são artifacts. | passo 9.1 · Semana 4 · nov/2026 |
 | [Pesquisa aprofundada](#resq) | Remoto · precisa de conta | Relatório com dezenas de fontes: mercado de cursos, concorrentes, editais. | passo 9.1 · Semana 4 · nov/2026 |
-| [Tarefas agendadas](#sched) | Remoto · precisa de conta | O Claude executa sozinho em horário marcado: resumo semanal dos repositórios, rascunho de post, revisão do plano de estudos. | passo 9.1 · Semana 4 · nov/2026 |
+| [Tarefas agendadas](#sched) | Remoto · precisa de conta | O Claude executa sozinho em horário marcado: resumo semanal dos repositórios, rascunho de post, revisão do plano de estudos. | passo 9.1 · Semana 4 · nov/2026; passo 31.8 · Dez/2026 a jan/2027 |
 | [Claude in Chrome + uso do computador](#cchr) | Remoto · precisa de conta | O Claude opera o navegador e os apps do Windows por você, pedindo aprovação nas ações sensíveis. | passo 3.6 · Semana 1 · out/2026 |
-| [Claude (assinatura e API)](#anth) | Remoto · precisa de conta | Assinatura usada pelo app e pelo Claude Code; API para as funções de IA dos sistemas. | passo 11.2 · Semana 5 · nov/2026 |
-| [Conector Google (Gmail, Drive…)](#cgws) | Remoto · precisa de conta | Já conectado. Lê e organiza e-mail, agenda de aulas, arquivos do Drive, Docs, Sheets e Slides. | passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 9.2 · Semana 4 · nov/2026 |
-| [Conectores Canva + Figma](#ccan) | Remoto · precisa de conta | Já conectados. Canva para posts e capas; Figma para as telas dos sistemas e do Instituto AMS. | passo 9.2 · Semana 4 · nov/2026; passo 12.4 · Semana 5 · dez/2026 |
-| [Conector MailerLite](#cml) | Remoto · precisa de conta | Já conectado. O Claude monta grupos, formulários e campanhas da newsletter. | passo 9.2 · Semana 4 · nov/2026; passo 13.6 · Semanas 6 e 7 · dez/2026 |
+| [Claude (assinatura e API)](#anth) | Remoto · precisa de conta | Assinatura usada pelo app e pelo Claude Code; API para as funções de IA dos sistemas. | passo 20.9 · Semana 5 · nov/2026; passo 27.9 · Semana 6 · nov/2026 a dez/2026; passo 28.2 · Semana 6 · nov/2026 a dez/2026; passo 34.2 · Semana 5 · nov/2026 |
+| [Conector Google (Gmail, Drive…)](#cgws) | Remoto · precisa de conta | Já conectado. Lê e organiza e-mail, agenda de aulas, arquivos do Drive, Docs, Sheets e Slides. | passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 9.2 · Semana 4 · nov/2026; passo 24.2 · Nov/2026 a out/2027, revisão no fim de cada trimestre |
+| [Conectores Canva + Figma](#ccan) | Remoto · precisa de conta | Já conectados. Canva para posts e capas; Figma para as telas dos sistemas e do Instituto AMS. | passo 9.2 · Semana 4 · nov/2026; passo 35.4 · Semana 5 · dez/2026 |
+| [Conector MailerLite](#cml) | Remoto · precisa de conta | Já conectado. O Claude monta grupos, formulários e campanhas da newsletter. | passo 9.2 · Semana 4 · nov/2026; passo 36.6 · Semanas 6 e 7 · dez/2026 |
 | [Vercel · AWS · Microsoft Learn](#cdev) | Remoto · precisa de conta | Já conectados. Deploy e logs na Vercel; documentação oficial da AWS e da Microsoft (Azure, .NET) direto na conversa. | passo 9.2 · Semana 4 · nov/2026 |
 | [Conector Upwork](#cupw) | Remoto · precisa de conta | Já conectado. Busca freelas e ajuda com propostas: renda extra com sites e sistemas. | passo 9.2 · Semana 4 · nov/2026 |
 | [Lovable + Supabase](#clov) | Remoto · precisa de conta | Já conectados. Fora da sua stack, mas ótimos para validar antes de construir: uma landing ou protótipo em horas para testar se vende. | passo 9.2 · Semana 4 · nov/2026 |
@@ -148,7 +150,7 @@ flowchart LR
 | [Plugins: engineering + design](#peng) | Remoto | Revisão de código, arquitetura, ADR, testes, incidentes, crítica de design e acessibilidade. | passo 9.3 · Semana 4 · nov/2026 |
 | [Plugins: finance + Fiscal.ai](#pfin) | Remoto | Demonstrativos e conciliação para a empresa; dados de empresas abertas para os seus estudos de investimento. | passo 9.3 · Semana 4 · nov/2026 |
 | [Plugins: Hostinger · Adobe · Cloudinary](#phst) | Remoto | Hostinger para os sites de clientes; Adobe e Cloudinary para editar e otimizar imagens e vídeos. | passo 9.3 · Semana 4 · nov/2026 |
-| [Conector Cloudflare](#ccf) | Remoto · precisa de conta | Conectado. Este conector avisa que está descontinuado; troque pelo Cloudflare API MCP (mcp.cloudflare.com/mcp), que cobre DNS, Pages e R2. | passo 9.2 · Semana 4 · nov/2026 |
+| [Conector Cloudflare](#ccf) | Remoto · precisa de conta | Conectado. Este conector avisa que está descontinuado; troque pelo Cloudflare API MCP (mcp.cloudflare.com/mcp), que cobre DNS, Pages e R2. | passo 9.2 · Semana 4 · nov/2026; passo 28.6 · Semana 6 · nov/2026 a dez/2026 |
 | [Conector vidIQ](#cvid) | Remoto · precisa de conta | Conectado. Palavras-chave, tendências, títulos e thumbnails para YouTube e Instagram. | passo 9.2 · Semana 4 · nov/2026 |
 
 <a id="proj"></a>
@@ -202,7 +204,7 @@ Relatório com dezenas de fontes: mercado de cursos, concorrentes, editais.
 
 O Claude executa sozinho em horário marcado: resumo semanal dos repositórios, rascunho de post, revisão do plano de estudos.
 
-**Quando entra:** passo 9.1 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 9.1 · Semana 4 · nov/2026; passo 31.8 · Dez/2026 a jan/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -231,7 +233,7 @@ O Claude opera o navegador e os apps do Windows por você, pedindo aprovação n
 
 Assinatura usada pelo app e pelo Claude Code; API para as funções de IA dos sistemas.
 
-**Quando entra:** passo 11.2 · Semana 5 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 20.9 · Semana 5 · nov/2026; passo 27.9 · Semana 6 · nov/2026 a dez/2026; passo 28.2 · Semana 6 · nov/2026 a dez/2026; passo 34.2 · Semana 5 · nov/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -239,6 +241,7 @@ Assinatura usada pelo app e pelo Claude Code; API para as funções de IA dos si
 | ← recebe de | [Claude Code](05-ia.md#cc) | Agentes de IA e sandbox | modelo Claude |
 | ← recebe de | [IA: RAG + pgvector](11-app.md#ai) | Aplicação: sistemas AM (Aura) | modelos |
 | ← recebe de | [Pipeline de conteúdo](23-oper.md#opipe) | Operação do grupo (esteira, marca, qualidade) | API do Claude |
+| ← recebe de | [ai-usagebar (Akita)](05-ia.md#aiusage) | Agentes de IA e sandbox | mostra o limite |
 
 <a id="cgws"></a>
 
@@ -248,7 +251,7 @@ Assinatura usada pelo app e pelo Claude Code; API para as funções de IA dos si
 
 Já conectado. Lê e organiza e-mail, agenda de aulas, arquivos do Drive, Docs, Sheets e Slides.
 
-**Quando entra:** passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 9.2 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 9.2 · Semana 4 · nov/2026; passo 24.2 · Nov/2026 a out/2027, revisão no fim de cada trimestre ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -264,7 +267,7 @@ Já conectado. Lê e organiza e-mail, agenda de aulas, arquivos do Drive, Docs, 
 
 Já conectados. Canva para posts e capas; Figma para as telas dos sistemas e do Instituto AMS.
 
-**Quando entra:** passo 9.2 · Semana 4 · nov/2026; passo 12.4 · Semana 5 · dez/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 9.2 · Semana 4 · nov/2026; passo 35.4 · Semana 5 · dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -280,7 +283,7 @@ Já conectados. Canva para posts e capas; Figma para as telas dos sistemas e do 
 
 Já conectado. O Claude monta grupos, formulários e campanhas da newsletter.
 
-**Quando entra:** passo 9.2 · Semana 4 · nov/2026; passo 13.6 · Semanas 6 e 7 · dez/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 9.2 · Semana 4 · nov/2026; passo 36.6 · Semanas 6 e 7 · dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -411,7 +414,7 @@ Hostinger para os sites de clientes; Adobe e Cloudinary para editar e otimizar i
 
 Conectado. Este conector avisa que está descontinuado; troque pelo Cloudflare API MCP (mcp.cloudflare.com/mcp), que cobre DNS, Pages e R2.
 
-**Quando entra:** passo 9.2 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 9.2 · Semana 4 · nov/2026; passo 28.6 · Semana 6 · nov/2026 a dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

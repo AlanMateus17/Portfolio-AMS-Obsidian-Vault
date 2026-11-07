@@ -10,7 +10,7 @@ Agentes, skills, hooks e ferramentas que fazem parte do setup e são construído
 | Peça | Tipo | Fase | O que faz |
 |---|---|---|---|
 | **Acervo AMtech** | Ferramenta Python | Agora | Converte todos os seus documentos para o Obsidian, separa pessoais, terceiros e escola, e sugere produtos. Já existe: tools/acervo/acervo.py. |
-| **CLAUDE.md padrão do Aura** | Contexto do agente | Agora | Modelo copiado para cada repo: stack, camadas, nomes, tecnologias rejeitadas e como rodar testes. |
+| **CLAUDE.md padrão do Aura** | Contexto do agente | Agora | Modelo copiado para cada repo: stack, camadas, nomes, a árvore apps/ e packages/ e como rodar testes. |
 | **Subagente revisor-csharp** | Agente do Claude Code | Agora | Caça seus erros recorrentes: PascalCase, throw sem if, atribuição esquecida no construtor. |
 | **Skill /commit** | Skill do Claude Code | Agora | Mensagens no padrão Conventional Commits a partir do diff. |
 | **dotfiles + install.sh** | Repositório | Agora | Reconstrói o ambiente (WSL agora, Arch depois) com um comando. |

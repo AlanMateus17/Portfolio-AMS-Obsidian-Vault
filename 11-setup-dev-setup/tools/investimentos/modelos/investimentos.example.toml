@@ -1,0 +1,38 @@
+# Suas regras de investimento. Fica em ~/financas (fora do GitHub). Não é recomendação: são as SUAS regras.
+[portao]
+cartao_zerado = false        # true quando o cartão estiver zerado
+reserva_completa = false     # true quando a reserva de emergência estiver na meta atual (3, 6 ou 12 meses)
+
+[arca]                       # % de cada classe no total investido (soma 100)
+acoes = 25
+fiis = 25
+caixa = 25
+internacional = 25
+
+[aporte]
+minimo_por_compra = 100      # fatias menores que isso vão para a maior: com R$ 800 por mês, cada mês reforça poucas metodologias
+
+[mercado]                    # atualize todo mês
+ntnb_juro_real = 0           # juro real do Tesouro IPCA+ de prazo longo, em % (site do Tesouro Direto)
+retorno_exigido = 12         # % ao ano que você exige de ações (modelo de Gordon)
+juro_real_min = 6            # juro real mínimo para comprar IPCA+
+
+# Para mudar a divisão por metodologia ou os limites de uma classe, descomente e ajuste (a alocação soma 100):
+# [classes.acoes.alocacao]
+# barsi = 20
+# bazin = 15
+# graham = 10
+# buffett = 15
+# sena = 10
+# formula_magica = 10
+# piotroski = 5
+# lynch = 5
+# gordon = 10
+# [classes.fiis.concentracao]
+# max_ativo_pct = 15
+# max_setor_pct = 35
+# min_ativos = 6
+
+[sena]
+# Suas anotações das perguntas do método (do material que você estudou). Responda na coluna "sena" dos CSVs (sim/não).
+perguntas = []

@@ -1,0 +1,4 @@
+ticker,setor,tipo,preco,pvp,dy,dy_medio,dividendo_medio,anos_rendimentos,vacancia,num_imoveis,maior_inquilino,liquidez_diaria,taxa_adm,pct_high_grade,ltv_medio,sena
+LOGX11,logistica,tijolo,95,0.92,9.5,9,8.9,8,4,6,22,1200,0.8,,,sim
+PAPR11,papel,papel,98,0.98,12,11.5,11.2,6,,,,2500,0.9,80,55,
+SHOP11,shopping,tijolo,110,1.15,7,7,7.6,3,15,2,40,300,1.2,,,não

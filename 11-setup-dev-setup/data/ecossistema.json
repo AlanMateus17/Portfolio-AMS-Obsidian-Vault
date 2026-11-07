@@ -439,7 +439,7 @@
    "tipo": "remoto",
    "conta": false,
    "futuro": false,
-   "descricao": "alanmateus17.github.io: portfólio, blog e newsletter."
+   "descricao": "alanmateus17.github.io: portfólio, blog e newsletter. Migra do Jekyll para o Astro (ADR 0008)."
   },
   {
    "id": "inst",
@@ -475,7 +475,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Estatística de visitas sem cookies invasivos. Open source."
+   "descricao": "Principal do analytics sem cookie (o Plausible é a reserva). Open source."
   },
   {
    "id": "gsc",
@@ -493,7 +493,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Hospedagem WordPress que você já tem; serve para sites de clientes."
+   "descricao": "Hospedagem que você já tem. Deploy por push no GitHub (inclusive Node.js) e MCP oficial com 146 ferramentas para IAs: publicar, ligar domínio e manter WordPress pela conversa. Créditos de IA (construtor, Agent, Reach) são pagos à parte."
   },
   {
    "id": "curso",
@@ -565,7 +565,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Trilhas oficiais e gratuitas para AZ-900, AZ-204 e AWS."
+   "descricao": "Trilhas oficiais e gratuitas para AZ-900, AI-200 (substituto do AZ-204) e AWS."
   },
   {
    "id": "thm",
@@ -943,7 +943,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Avisa quando um erro acontece em produção, com o ponto exato no código. Plano grátis para um dev."
+   "descricao": "Reserva do GlitchTip (ADR 0008): avisa quando um erro acontece em produção, com o ponto exato no código. Plano grátis."
   },
   {
    "id": "kuma",
@@ -970,7 +970,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": true,
-   "descricao": "Logs e rastreamento de requisições entre serviços, consultados no Grafana."
+   "descricao": "Reserva do SigNoz (ADR 0008): logs e rastreamento de requisições consultados no Grafana."
   },
   {
    "id": "otel",
@@ -1115,6 +1115,42 @@
    "conta": false,
    "futuro": false,
    "descricao": "Cria Azure, AWS e Cloudflare por código."
+  },
+  {
+   "id": "mqtt",
+   "camada": "cnt",
+   "rotulo": "Mosquitto (MQTT)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Barramento da casa: Zigbee2MQTT, Frigate, leitor do hidrômetro e os robôs publicam e recebem comandos por aqui, com usuário e senha."
+  },
+  {
+   "id": "z2m",
+   "camada": "cnt",
+   "rotulo": "Zigbee2MQTT",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Liga o coordenador Zigbee ao MQTT; aceita aparelhos de várias marcas sem o app de cada uma."
+  },
+  {
+   "id": "frigate",
+   "camada": "cnt",
+   "rotulo": "Frigate (câmeras|com detecção)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Grava e detecta pessoas, carros e animais localmente; manda eventos ao Home Assistant. Imagem nunca vai para IA na nuvem."
+  },
+  {
+   "id": "esphome",
+   "camada": "cnt",
+   "rotulo": "ESPHome",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Firmware por arquivo de configuração para ESP32: satélites de voz, sensores e robôs viram entidades do Home Assistant."
   },
   {
    "id": "proj",
@@ -1348,7 +1384,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Agente de código da OpenAI (terminal, VS Code e nuvem). Está incluído até no plano grátis do ChatGPT, com limite. Use como segunda opinião ao Claude Code, nos mesmos repositórios."
+   "descricao": "Agente de código da OpenAI (terminal, VS Code e nuvem). Vem no ChatGPT Go com limite baixo: reserva e segunda opinião, lendo o mesmo AGENTS.md. O Sites do ChatGPT não serve para clientes (proíbe comércio)."
   },
   {
    "id": "gcode",
@@ -1357,7 +1393,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Jules e o CLI do Google. As regras mudaram em 2026: o CLI deixou de ser grátis para contas pessoais. Confira o que o seu plano do Gemini inclui antes de montar um fluxo em cima dele."
+   "descricao": "O Gemini CLI saiu do ar para contas pessoais sem licença paga em 18/06/2026; o substituto, Antigravity CLI, é fechado e tem acesso ampliado só no plano Pro. Nenhum fluxo do setup depende dele."
   },
   {
    "id": "perp",
@@ -1375,7 +1411,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Autocompletar e chat dentro do VS Code. Professores verificados no GitHub Education ganham o plano Pro grátis."
+   "descricao": "Autocompletar, chat e agente na nuvem: você atribui uma issue e ele abre um PR. Professores verificados no GitHub Education ganham o Pro grátis (1.500 créditos por mês). Motor da esteira de sites."
   },
   {
    "id": "pyds",
@@ -1582,7 +1618,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Diagnóstico de rede no Ubuntu: portas, DNS e requisições HTTP. Instalados pelo bootstrap.sh."
+   "descricao": "Diagnóstico de rede no Ubuntu: portas, DNS, requisições HTTP e captura de pacotes (tcpdump). Instalados pelo bootstrap.sh."
   },
   {
    "id": "wsl",
@@ -1636,7 +1672,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Configuração versionada do ambiente."
+   "descricao": "Configuração versionada do ambiente, aplicada pelo chezmoi a partir de infra/dotfiles."
   },
   {
    "id": "arch",
@@ -2845,6 +2881,15 @@
    "descricao": "App dos sistemas AM no celular, em C# como o resto do Aura. Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack."
   },
   {
+   "id": "nobra",
+   "camada": "app",
+   "rotulo": "AM Obra (diário,|medição, compras)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Sistema AM para pequenas construtoras: diário de obra, medição, compras e estimativa pelo SINAPI, lendo o IFC."
+  },
+  {
    "id": "ocatal",
    "camada": "oper",
    "rotulo": "Portfólio de ofertas",
@@ -3050,6 +3095,1392 @@
    "conta": false,
    "futuro": false,
    "descricao": "tools/acervo/acervo.py: lê todos os seus documentos sem alterar nada, acha cópias, separa os pessoais, marca o que é de terceiros ou da escola, converte o resto para Markdown no Obsidian e sugere os produtos que dá para vender. Tudo no notebook."
+  },
+  {
+   "id": "radar",
+   "camada": "neg",
+   "rotulo": "Radar de revenda",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Lê os alertas de busca salvos (OLX, Mercado Livre, Facebook, Estante Virtual) que chegam ao Gmail, compara com o preço de referência e avisa no Telegram só o que passa da hora mínima. Nunca compra nem fala com vendedor."
+  },
+  {
+   "id": "nseg",
+   "camada": "neg",
+   "rotulo": "AMtech Segurança|(pentest)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Testes de segurança para empresas: laudo dos sites primeiro, pentest completo depois da OSCP, com contrato revisado, seguro e reteste."
+  },
+  {
+   "id": "aw",
+   "camada": "win",
+   "rotulo": "ActivityWatch",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Mede sozinho em que programas e sites vai o seu tempo. Base do retorno por hora de cada renda. Fica no seu PC."
+  },
+  {
+   "id": "bonsai",
+   "camada": "win",
+   "rotulo": "Bonsai + IfcOpenShell|(BIM aberto)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "BIM no formato aberto IFC dentro do Blender: plantas, cortes e quantitativos, de graça."
+  },
+  {
+   "id": "freecad",
+   "camada": "win",
+   "rotulo": "FreeCAD 1.1 (BIM,|2D e FEM)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Desenho técnico, BIM e elementos finitos no mesmo programa aberto."
+  },
+  {
+   "id": "adskedu",
+   "camada": "win",
+   "rotulo": "Autodesk educacional|(Revit, Civil 3D)",
+   "tipo": "local",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Revit, AutoCAD, Civil 3D e Robot Structural grátis para professor; só estudo e ensino, nunca trabalho pago."
+  },
+  {
+   "id": "qgis",
+   "camada": "win",
+   "rotulo": "QGIS (terreno e|mapas)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Topografia, mapa do terreno e dados do IBGE e da prefeitura."
+  },
+  {
+   "id": "ha",
+   "camada": "hw",
+   "rotulo": "Home Assistant",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Casa inteligente local: sensores, luzes, avisos e a base da robótica pessoal."
+  },
+  {
+   "id": "srvcasa",
+   "camada": "hw",
+   "rotulo": "Servidor da casa|(N100 ou Pi 5)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Mini PC N100 (ou Raspberry Pi 5) com Home Assistant OS, ligado no nobreak: a casa funciona com o notebook desligado (ADR 0004)."
+  },
+  {
+   "id": "zbdongle",
+   "camada": "hw",
+   "rotulo": "Coordenador Zigbee|(USB)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Rádio Zigbee no servidor da casa: tomadas, sensores e atuadores conversam sem nuvem e sem Wi-Fi."
+  },
+  {
+   "id": "satvoz",
+   "camada": "hw",
+   "rotulo": "Satélites de voz|(ESP32-S3)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Microfone e alto-falante por cômodo, com a palavra de ativação no próprio chip (microWakeWord). O ESP32 comum não tem fôlego para isso."
+  },
+  {
+   "id": "dispcasa",
+   "camada": "hw",
+   "rotulo": "Tomadas, sensores|e atuadores",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Tomadas com medição (geladeira, chuveiro), medidor no quadro, sensores de porta e janela, fechadura, motores de janela e cortina."
+  },
+  {
+   "id": "cams",
+   "camada": "hw",
+   "rotulo": "Câmeras IP (RTSP)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Câmeras com RTSP local, sem depender da nuvem do fabricante; só apontando para a sua casa."
+  },
+  {
+   "id": "aguacam",
+   "camada": "hw",
+   "rotulo": "Leitor do hidrômetro|(ESP32-CAM)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "AI-on-the-edge-device: uma ESP32-CAM fotografa o hidrômetro e lê os números no próprio chip. Só lê, nunca mexe no medidor da concessionária."
+  },
+  {
+   "id": "so101",
+   "camada": "hw",
+   "rotulo": "Braços SO-101|(líder + seguidor)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Braço robótico aberto da Hugging Face: você move o líder, o seguidor copia e o LeRobot grava para o robô aprender."
+  },
+  {
+   "id": "reachy",
+   "camada": "hw",
+   "rotulo": "Reachy Mini|(corpo do Jarvis)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Robô de mesa aberto da Hugging Face e Pollen: 4 microfones, câmera, alto-falante e cabeça que se mexe, programado em Python."
+  },
+  {
+   "id": "kitcampo",
+   "camada": "hw",
+   "rotulo": "Kit de campo (LoRa,|umidade, ultrassom)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "ESP32 com rádio LoRa, sensores de umidade capacitivos, válvula solenoide, ultrassom e célula de carga: horta, irrigação, bebedouro, cocho e balança."
+  },
+  {
+   "id": "paperless",
+   "camada": "dados",
+   "rotulo": "Paperless-ngx",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Arquivo de documentos da casa e da escola com busca no texto (OCR em português). Local."
+  },
+  {
+   "id": "grocy",
+   "camada": "dados",
+   "rotulo": "Grocy",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Estoque da casa, ração e remédios dos cães, validade e lista de compras."
+  },
+  {
+   "id": "fabrica",
+   "camada": "cont",
+   "rotulo": "Fábrica de aulas",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Gera planejamentos e documentos da escola no modelo exigido, a partir da ementa e das suas regras. Sem dados de aluno."
+  },
+  {
+   "id": "kitsites",
+   "camada": "web",
+   "rotulo": "Kit de sites|(Hostinger IA)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Pacotes, ficha do cliente, 26 prompts por tipo de negócio, conferência automática, checklist e relatório mensal."
+  },
+  {
+   "id": "avaliador",
+   "camada": "web",
+   "rotulo": "Avaliador de|templates",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Lê uma pasta de templates e diz qual é útil, qual adaptar e qual descartar, sem rodar código de terceiros."
+  },
+  {
+   "id": "financas",
+   "camada": "emp",
+   "rotulo": "Financeiro local",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Importa extratos, categoriza, resume o mês e aplica a sua cascata. Dados em ~/financas, fora do GitHub."
+  },
+  {
+   "id": "rotinas",
+   "camada": "lin",
+   "rotulo": "Rotinas agendadas",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Resumo da manhã no Telegram e manutenção semanal, pelo cron do Ubuntu."
+  },
+  {
+   "id": "organizar",
+   "camada": "seg",
+   "rotulo": "Organizadores",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Downloads por tipo (sem apagar nada) e exportação de senhas pronta para o KeePassXC."
+  },
+  {
+   "id": "litellm",
+   "camada": "ia",
+   "rotulo": "Gateway de modelos|(LiteLLM)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Um endereço para todos os modelos (local, API, GPU alugada), com nomes estáveis, fallback e teto de gasto."
+  },
+  {
+   "id": "promptfoo",
+   "camada": "ia",
+   "rotulo": "Evals dos agentes|(promptfoo)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Casos de teste de cada agente; prompt ou modelo novo só entra se passar."
+  },
+  {
+   "id": "revisor",
+   "camada": "oper",
+   "rotulo": "Agente revisor|de qualidade",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Confere cada entrega contra o padrão de qualidade da oferta antes de chegar ao cliente."
+  },
+  {
+   "id": "mcpproprio",
+   "camada": "ia",
+   "rotulo": "MCP próprio|(seus dados)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Servidor MCP só de leitura com portfólio, softwares, roteiro e progresso, para qualquer agente consultar."
+  },
+  {
+   "id": "agentsdk",
+   "camada": "ia",
+   "rotulo": "Claude Agent SDK",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Agentes próprios em código (revisor, analista, orçamentista) com as mesmas ferramentas do Claude Code."
+  },
+  {
+   "id": "repopadrao",
+   "camada": "nuvem",
+   "rotulo": "Repositório padrão",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Modelo com pre-commit, CI de qualidade, Definition of Done, ADRs e CHANGELOG para todo repositório."
+  },
+  {
+   "id": "segredos",
+   "camada": "seg",
+   "rotulo": "Segredos do cofre|(keepassxc-cli)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "O comando recebe o segredo direto do KeePassXC, sem .env em texto puro."
+  },
+  {
+   "id": "restauracao",
+   "camada": "seg",
+   "rotulo": "Teste de|restauração",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Restaura o último backup numa pasta temporária e confere. Backup não testado não conta."
+  },
+  {
+   "id": "relab",
+   "camada": "seg",
+   "rotulo": "Lab de engenharia|reversa",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Ghidra, ILSpy, gdb e strace (scripts/wsl/ferramentas-re.sh) para estudar binários seus, crackmes e a aula dos alunos. Binário de terceiro só com autorização escrita. Padrão sala limpa: alvos/ (binários brutos, fora do Git) → specs/ (o protocolo em Markdown) → src/ (reimplementação limpa em C# ou TypeScript, sem copiar código do alvo)."
+  },
+  {
+   "id": "ghidramcp",
+   "camada": "seg",
+   "rotulo": "GhidraMCP (IA|no Ghidra)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Servidor MCP que deixa o Claude listar, renomear e explicar funções no Ghidra. Binário de cliente só com modelo local (Ollama) e cláusula no contrato."
+  },
+  {
+   "id": "labseg",
+   "camada": "seg",
+   "rotulo": "Lab de ataque|(Juice Shop, WebGoat)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "infra/lab-seguranca: aplicações vulneráveis de propósito, presas em 127.0.0.1, para treinar o OWASP Top 10 sem tocar em sistema real."
+  },
+  {
+   "id": "kitpent",
+   "camada": "seg",
+   "rotulo": "Kit de pentest|(Burp, ZAP, nmap…)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Ferramentas maduras do mercado na VM Kali: Burp Suite, OWASP ZAP, nmap, ffuf, nuclei, sqlmap e Metasploit. Usar, não reescrever."
+  },
+  {
+   "id": "appsec",
+   "camada": "seg",
+   "rotulo": "AppSec nos seus|sistemas",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Modelagem de ameaças (STRIDE), checklist ASVS e ZAP na homologação, por cima do gitleaks, Trivy e Semgrep do repositório padrão."
+  },
+  {
+   "id": "escopo",
+   "camada": "seg",
+   "rotulo": "Guarda de escopo|(autorização)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "tools/seguranca/escopo.py: nenhum teste roda sem termo assinado, dentro da janela e do escopo; cada comando fica registrado."
+  },
+  {
+   "id": "relpent",
+   "camada": "seg",
+   "rotulo": "Relatório de|pentest (CVSS)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "tools/seguranca/relatorio.py e cvss.py: do sumário executivo ao registro de atividades, com a nota CVSS 3.1 calculada, nunca escrita à mão."
+  },
+  {
+   "id": "politica",
+   "camada": "seg",
+   "rotulo": "Política do Jarvis|(níveis de risco)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "tools/jarvis/politica.py: livre, voz, celular ou proibido por ação; destrancar, abrir janela e desligar geladeira nunca só por voz."
+  },
+  {
+   "id": "labalvo",
+   "camada": "seg",
+   "rotulo": "Lab de alvo isolado|(rede sem internet)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "O software que você estudou roda numa rede sem internet, só com o atacante: containers (scripts/wsl/lab-alvo.sh) ou VMs Kali e Alvo no VirtualBox (scripts/windows/lab-alvo.ps1), com foto para desfazer o ataque."
+  },
+  {
+   "id": "iacluster",
+   "camada": "ia",
+   "rotulo": "Cluster de IA|na rede",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "llama.cpp RPC ou exo: um modelo maior dividido entre os seus computadores."
+  },
+  {
+   "id": "vllm",
+   "camada": "dados",
+   "rotulo": "vLLM (GPU alugada)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Serve um modelo grande numa GPU por hora, ligado ao gateway, só enquanto precisa."
+  },
+  {
+   "id": "destilacao",
+   "camada": "dados",
+   "rotulo": "Destilação",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Modelo grande gera exemplos da sua tarefa; um modelo pequeno aprende a imitá-lo."
+  },
+  {
+   "id": "gptzero",
+   "camada": "est",
+   "rotulo": "GPT do zero|(estudo)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Tokenizador, atenção e treino de um GPT pequeno no Kaggle, para dominar a arquitetura."
+  },
+  {
+   "id": "adguard",
+   "camada": "lin",
+   "rotulo": "AdGuard Home (DNS)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "DNS da casa com bloqueio de anúncios e rastreadores, também pelo Tailscale."
+  },
+  {
+   "id": "labrede",
+   "camada": "est",
+   "rotulo": "Laboratório de redes",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Packet Tracer e containerlab para VLAN, roteamento e firewall (Network+ e CCNA)."
+  },
+  {
+   "id": "portsw",
+   "camada": "est",
+   "rotulo": "PortSwigger Web|Security Academy",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "A melhor trilha grátis de segurança web, com laboratórios no navegador; prepara a certificação BSCP."
+  },
+  {
+   "id": "crackmes",
+   "camada": "est",
+   "rotulo": "Crackmes (OWASP MAS,|crackmes.one)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Desafios de engenharia reversa feitos para serem quebrados: o treino legal do laboratório."
+  },
+  {
+   "id": "bbplat",
+   "camada": "est",
+   "rotulo": "BugHunt · HackerOne|(bug bounty)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Programas públicos de bug bounty com escopo e regras escritas: o primeiro histórico e a primeira renda de segurança."
+  },
+  {
+   "id": "godbolt",
+   "camada": "est",
+   "rotulo": "Compiler Explorer|(godbolt)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": false,
+   "descricao": "C de um lado, assembly do outro, no navegador: a aula de Arquitetura de Computadores sem instalar nada."
+  },
+  {
+   "id": "refarq",
+   "camada": "est",
+   "rotulo": "Repositórios de|referência",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": false,
+   "descricao": "dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Kaixara e registrar em ADR."
+  },
+  {
+   "id": "wireguard",
+   "camada": "lin",
+   "rotulo": "WireGuard (na mão)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Túnel montado à mão entre duas máquinas, para entender o que o Tailscale faz."
+  },
+  {
+   "id": "ros2",
+   "camada": "lin",
+   "rotulo": "ROS 2 + ponte MQTT",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Robôs no Raspberry Pi com ROS 2; o mqtt_client leva os tópicos para o MQTT e o Home Assistant manda e recebe comandos."
+  },
+  {
+   "id": "roi",
+   "camada": "oper",
+   "rotulo": "Lucro por ferramenta",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Lucro e prejuízo de cada ferramenta paga e de cada renda, mês a mês, contra a hora mínima."
+  },
+  {
+   "id": "vigia",
+   "camada": "nuvem",
+   "rotulo": "Vigia semanal|(GitHub Actions)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Roda no GitHub sem o notebook ligado: confere os sites dos clientes e procura segredos."
+  },
+  {
+   "id": "vm247",
+   "camada": "nuvem",
+   "rotulo": "VM sempre ligada|(Oracle grátis)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "2 núcleos e 12 GB grátis para n8n, bot, Uptime Kuma e gateway rodarem 24 horas."
+  },
+  {
+   "id": "prospector",
+   "camada": "oper",
+   "rotulo": "Prospector com|aprovação",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Monta listas de negócios a partir de dados públicos e rascunha a abordagem; você aprova cada contato."
+  },
+  {
+   "id": "ifcresumo",
+   "camada": "oper",
+   "rotulo": "Resumo de IFC|(ifc_resumo.py)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "tools/construcao/ifc_resumo.py: pavimentos, elementos e quantidades de qualquer modelo IFC, sem instalar nada."
+  },
+  {
+   "id": "aiusage",
+   "camada": "ia",
+   "rotulo": "ai-usagebar (Akita)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Mostra no terminal quanto do limite de Claude, Codex, Z.AI e OpenRouter já foi usado."
+  },
+  {
+   "id": "sessao",
+   "camada": "ia",
+   "rotulo": "Pacote de contexto|+ ESTADO.md",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Contexto curto para começar cada conversa nova e memória de 5 linhas por sessão: o limite dura."
+  },
+  {
+   "id": "strata",
+   "camada": "ia",
+   "rotulo": "Strata (MoE grande)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Motor aberto (MIT) que roda um MoE de 125B com 6B ativos em PC doméstico usando a VRAM como cache. Pede ~12 GB de GPU: entra com a workstation."
+  },
+  {
+   "id": "openrouter",
+   "camada": "nuvem",
+   "rotulo": "OpenRouter",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Uma chave para dezenas de modelos, alguns grátis com limite; reserva no gateway."
+  },
+  {
+   "id": "speckle",
+   "camada": "nuvem",
+   "rotulo": "Speckle (modelos|na web)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": true,
+   "descricao": "Plataforma aberta para levar modelos à web com versões e API."
+  },
+  {
+   "id": "posthog",
+   "camada": "mkt",
+   "rotulo": "PostHog (funil|e gravações)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Funis, gravação de sessões e testes nas páginas de venda: mostra onde o visitante desiste. Plano de nuvem com cota grátis; código aberto."
+  },
+  {
+   "id": "metabase",
+   "camada": "dados",
+   "rotulo": "Metabase (painéis)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Painéis e perguntas sobre vendas, clientes e conteúdo sem programar, em cima do banco de métricas. Local."
+  },
+  {
+   "id": "growthbook",
+   "camada": "mkt",
+   "rotulo": "GrowthBook|(testes A/B)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Testes A/B e liberação gradual de funções com estatística correta. Código aberto."
+  },
+  {
+   "id": "analises",
+   "camada": "dados",
+   "rotulo": "Análises de cliente|(RFM, LTV, churn)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Quem compra mais, quem está sumindo, quanto vale cada cliente e previsão de receita, em Python/DuckDB."
+  },
+  {
+   "id": "lerobot",
+   "camada": "dados",
+   "rotulo": "LeRobot (robôs que|aprendem)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Biblioteca da Hugging Face para gravar demonstrações, treinar políticas (ACT, SmolVLA) e rodar no robô."
+  },
+  {
+   "id": "docling",
+   "camada": "dados",
+   "rotulo": "Docling + Granite-|Docling (documentos)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Converte PDF, foto e NFC-e em Markdown e JSON com tabelas: Caixa da Casa, documentos da escola, ABNT e acervo."
+  },
+  {
+   "id": "sinapi",
+   "camada": "dados",
+   "rotulo": "SINAPI (custos|de MG, Caixa)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Custos de referência da construção por estado, todo mês, em Excel: base das estimativas, sempre com mês e UF."
+  },
+  {
+   "id": "chatwoot",
+   "camada": "venda",
+   "rotulo": "Chatwoot|(atendimento)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Caixa única de WhatsApp, Instagram, e-mail e site, com o agente atendente e passagem para você. Código aberto."
+  },
+  {
+   "id": "twenty",
+   "camada": "venda",
+   "rotulo": "Twenty (CRM aberto)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "CRM de verdade (funil, tarefas, e-mails) no lugar da planilha, quando houver 20+ clientes ou leads ativos."
+  },
+  {
+   "id": "documenso",
+   "camada": "emp",
+   "rotulo": "Documenso|(assinatura)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Contratos assinados online com validade, código aberto, no lugar de serviços pagos."
+  },
+  {
+   "id": "invoiceninja",
+   "camada": "emp",
+   "rotulo": "Invoice Ninja|(orçamentos)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Orçamentos, faturas e cobrança recorrente de serviços. Código aberto."
+  },
+  {
+   "id": "penpot",
+   "camada": "cont",
+   "rotulo": "Penpot (design)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Design de telas e protótipos, aberto, alternativa ao Figma pago."
+  },
+  {
+   "id": "oclaw",
+   "camada": "ia",
+   "rotulo": "OpenClaw|(agente 24 h)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Agente auto-hospedado para tarefas noturnas que as rotinas e o n8n não cobrem. Histórico de segurança ruim em 2026: só na VM isolada, atrás do Tailscale, sem suas contas pessoais, sem skills de terceiros não revisadas e com chave de teto baixo no gateway."
+  },
+  {
+   "id": "jarvis",
+   "camada": "ia",
+   "rotulo": "Jarvis (porta única|dos agentes)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Assistente de voz do Home Assistant com o Claude como agente: comando simples resolve local, o resto passa pela política do Jarvis; o PC e o código vão pelo Claude Code por voz."
+  },
+  {
+   "id": "jvoz",
+   "camada": "ia",
+   "rotulo": "Voz local: Whisper,|Piper, openWakeWord",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Protocolo Wyoming (infra/jarvis): Whisper na GPU do notebook, Piper em pt_BR e openWakeWord com o \"hey jarvis\"; reserva na CPU do servidor da casa."
+  },
+  {
+   "id": "hamcp",
+   "camada": "ia",
+   "rotulo": "MCP do Home|Assistant",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Integração Model Context Protocol Server: o Claude controla e consulta só as entidades expostas, com conta de administrador e OAuth."
+  },
+  {
+   "id": "ccvoz",
+   "camada": "ia",
+   "rotulo": "Claude Code por voz|(/voice + falar.py)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Você fala com o /voice e ele responde em voz pelo hook tools/jarvis/falar.py (Piper local): pastas, arquivos, pesquisa, repositórios e PRs."
+  },
+  {
+   "id": "ifcmcp",
+   "camada": "ia",
+   "rotulo": "MCP do IfcOpenShell",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "O Claude consulta e edita o modelo IFC por MCP (ifcopenshell-mcp), seguindo as regras de construção."
+  },
+  {
+   "id": "esteira",
+   "camada": "prod",
+   "rotulo": "Esteira de sites|(issue → PR → ar)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Ficha como issue, agente abre o PR, CI confere HTML, links e acessibilidade, a rotina do Claude revisa, você aprova a prévia e o merge publica na Hostinger. Modelo em infra/templates/esteira-site."
+  },
+  {
+   "id": "just",
+   "camada": "lin",
+   "rotulo": "just (porta única|de comandos)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "O justfile na raiz do repositório junta os comandos do setup: just check (o mesmo portão do CI), just triagem, just arquiteto, just docs, just medir. Binário único, instalado pelo bootstrap.sh."
+  },
+  {
+   "id": "termx",
+   "camada": "lin",
+   "rotulo": "Terminal moderno|(zoxide, eza, fd…)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "zoxide (cd que aprende), eza (ls), fd (find), btop (monitor), hyperfine (benchmark), lazygit, lazydocker e o prompt Starship. Binários únicos, instalados pelo bootstrap.sh; ripgrep, fzf e tmux já vinham; tcpdump entra junto."
+  },
+  {
+   "id": "triagem",
+   "camada": "oper",
+   "rotulo": "Triagem: montar,|colar ou construir",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "tools/triagem/triagem.py (just triagem): acha no setup o que já resolve o pedido e decide A (subir pronto), B (colar com n8n ou API) ou C (construir o núcleo no Aura, com ADR). O arquitetar monta o pacote curto de contexto para o Claude. Regra das 4 horas."
+  },
+  {
+   "id": "repomix",
+   "camada": "ia",
+   "rotulo": "Repomix (contexto|enxuto para IA)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Empacota só a pasta pedida, com --compress (tree-sitter por dentro), para colar no Claude do app sem mandar o repositório inteiro. Roda por npx, sem instalar."
+  },
+  {
+   "id": "act",
+   "camada": "nuvem",
+   "rotulo": "act (CI do Actions|na sua máquina)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Roda os workflows do GitHub Actions no Docker local (gh act). Acha o erro do CI antes do push, sem gastar minuto de Actions."
+  },
+  {
+   "id": "kamal",
+   "camada": "nuvem",
+   "rotulo": "Kamal (deploy em|VM por SSH)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Deploy sem queda dos sistemas AM numa VM (a da Oracle primeiro), com HTTPS e rollback por versão. Roda pela imagem Docker oficial; segredos pelo keepassxc-cli. ADR 0005; modelo em infra/templates/kamal."
+  },
+  {
+   "id": "zod",
+   "camada": "app",
+   "rotulo": "Zod · Biome · Vitest|(front)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Zod valida no front tudo o que chega da API e dos formulários; Biome faz lint e formatação; Vitest testa as regras do front. O contrato do backend é o OpenAPI (ADR 0006)."
+  },
+  {
+   "id": "klaro",
+   "camada": "web",
+   "rotulo": "Klaro!|(consentimento LGPD)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Banner de consentimento aberto: Pixel da Meta, tag do Google e demais só disparam depois do aceite. O Umami não usa cookie e fica fora do banner."
+  },
+  {
+   "id": "kicad",
+   "camada": "win",
+   "rotulo": "KiCad · PulseView|· tio (bancada)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "KiCad desenha esquemático e placa (com a BOM interativa do InteractiveHtmlBom); PulseView decodifica I2C, SPI e UART do analisador lógico; tio abre a serial no Ubuntu (USB pelo usbipd)."
+  },
+  {
+   "id": "analog",
+   "camada": "hw",
+   "rotulo": "Analisador lógico|(8 canais USB)",
+   "tipo": "fisico",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Clone de 8 canais compatível com o sigrok, por cerca de R$ 40 a R$ 80. Mostra o que o sensor e o ESP32 estão dizendo de verdade no fio."
+  },
+  {
+   "id": "mise",
+   "camada": "lin",
+   "rotulo": "mise (runtimes|e CLIs)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Principal (ADR 0008): instala e fixa Node, Go, Rust e as CLIs do setup a partir de ~/.config/mise/config.toml. O fnm fica como reserva; o Python segue no uv."
+  },
+  {
+   "id": "zellij",
+   "camada": "lin",
+   "rotulo": "Zellij (abas e|sessões)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Multiplexador principal (ADR 0008): atalhos visíveis, layout setup (código, servidor, lazygit, lazydocker, btop) e sessões que voltam. O tmux fica para servidores."
+  },
+  {
+   "id": "yazi",
+   "camada": "lin",
+   "rotulo": "yazi (arquivos no|terminal)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Gerenciador de arquivos no terminal com prévia de imagem, PDF e código. Pelo mise."
+  },
+  {
+   "id": "chezmoi",
+   "camada": "lin",
+   "rotulo": "chezmoi (dotfiles|com o cofre)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Principal dos dotfiles (ADR 0008): aplica infra/dotfiles (mise, Zellij, Starship, Ghostty, Neovim, yazi, Aider) e lê segredos do KeePassXC na hora, sem gravar nada no repositório."
+  },
+  {
+   "id": "ghostty",
+   "camada": "lin",
+   "rotulo": "Ghostty (terminal|do Arch)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Terminal acelerado por GPU para o Arch nativo; abre direto na sessão do Zellij. Não tem versão para Windows, onde o Windows Terminal continua."
+  },
+  {
+   "id": "podman",
+   "camada": "lin",
+   "rotulo": "Podman (containers|sem root)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Containers sem root e sem serviço: roda o lab de alvo e imagens de terceiros com menos risco. O Docker Desktop segue como principal no dia a dia."
+  },
+  {
+   "id": "gitlfs",
+   "camada": "lin",
+   "rotulo": "Git LFS (arquivos|grandes)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Firmware, bancos do Ghidra, placas do KiCad e modelos 3D fora do histórico do Git; o Forgejo serve o LFS do espelho."
+  },
+  {
+   "id": "treesitter",
+   "camada": "lin",
+   "rotulo": "tree-sitter|(AST no editor)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Destaque, seleção e navegação por árvore sintática no Neovim (C#, TS, Go, Rust, Python, Svelte, Astro). O Repomix e o Aider usam o mesmo parser."
+  },
+  {
+   "id": "posting",
+   "camada": "lin",
+   "rotulo": "posting (API no|terminal)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Cliente de API no terminal, com requisições em arquivo. Reserva do Bruno; o jeito de testar uma API por SSH dentro da VM."
+  },
+  {
+   "id": "harlequin",
+   "camada": "lin",
+   "rotulo": "harlequin (SQL no|terminal)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Editor de SQL no terminal para Postgres e DuckDB. Reserva do DBeaver; bom dentro do Zellij e por SSH."
+  },
+  {
+   "id": "gum",
+   "camada": "lin",
+   "rotulo": "gum (menus nos|scripts)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Menus, perguntas e confirmações bonitas nos scripts: o just menu escolhe a receita com setas."
+  },
+  {
+   "id": "d2",
+   "camada": "lin",
+   "rotulo": "D2 (diagramas|como texto)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Diagramas de arquitetura de sistema e de cliente como texto, exportados em SVG. Os diagramas da documentação do GitHub seguem em Mermaid."
+  },
+  {
+   "id": "vegeta",
+   "camada": "lin",
+   "rotulo": "vegeta (carga em|taxa fixa)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Carga HTTP em taxa constante para achar o teto de uma API, do limite de requisições e do pool do banco. Os cenários seguem no k6."
+  },
+  {
+   "id": "bpftrace",
+   "camada": "lin",
+   "rotulo": "bpftrace (kernel|em produção)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Rastreamento dinâmico com eBPF para latência que não aparece em log. Na VM e no Linux nativo, onde o kernel é seu."
+  },
+  {
+   "id": "aider",
+   "camada": "ia",
+   "rotulo": "Aider + Ollama|(nível R$ 0)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Par de programação no Git com o modelo local (Qwen 2.5 Coder) e o repo map por tree-sitter: o nível 1 do roteamento, sem gastar token. O Claude Code segue como agente principal."
+  },
+  {
+   "id": "llmcli",
+   "camada": "ia",
+   "rotulo": "llm (IA nos pipes|do terminal)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "git diff | llm \"mensagem de commit\": IA no meio de qualquer comando, com o plugin do Ollama (grátis) e os modelos do gateway."
+  },
+  {
+   "id": "age",
+   "camada": "seg",
+   "rotulo": "age · sops|(arquivos cifrados)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "age cifra arquivos que saem da máquina (exportações, entregas a cliente, cópia extra do cofre); sops cifra configurações de VM guardadas fora do Git. Segredo do dia a dia segue só no KeePassXC."
+  },
+  {
+   "id": "gocryptfs",
+   "camada": "seg",
+   "rotulo": "gocryptfs (pasta|dos alvos cifrada)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "A pasta dos alvos da sala limpa fica cifrada mesmo com o disco aberto: agentes, backups e sincronização só veem bytes embaralhados."
+  },
+  {
+   "id": "radare2",
+   "camada": "seg",
+   "rotulo": "radare2 (triagem|de binários)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Triagem rápida e scripts (r2pipe) antes de abrir o Ghidra, que segue como descompilador principal."
+  },
+  {
+   "id": "bore",
+   "camada": "nuvem",
+   "rotulo": "bore (túnel TCP|próprio)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Túnel TCP com servidor próprio na VM, para expor uma porta que não é web (demonstração, MQTT, SSH) sem passar por serviço de terceiro. Webhooks seguem no cloudflared."
+  },
+  {
+   "id": "headscale",
+   "camada": "nuvem",
+   "rotulo": "Headscale (rede|própria)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Servidor de controle próprio da rede WireGuard: reserva do Tailscale e rede privada dos clientes (AMtech Campo, lojas)."
+  },
+  {
+   "id": "forgejo",
+   "camada": "nuvem",
+   "rotulo": "Forgejo (espelho|dos repositórios)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Espelho de todos os repositórios do GitHub, com Git LFS, na VM: o código continua seu se a conta for bloqueada. O GitHub segue principal pelo Actions, Copilot e Education."
+  },
+  {
+   "id": "softserve",
+   "camada": "nuvem",
+   "rotulo": "Soft Serve (Git|por SSH em casa)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Servidor Git só por SSH, leve, no servidor da casa: firmware, placas e projetos que não precisam sair da rede."
+  },
+  {
+   "id": "coolify",
+   "camada": "nuvem",
+   "rotulo": "Coolify (apps de|cliente em VPS)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Painel para subir apps de um clique (WordPress, n8n, Chatwoot) na VPS de um cliente que quer mexer sozinho. Os sistemas AM seguem no Kamal."
+  },
+  {
+   "id": "dokploy",
+   "camada": "nuvem",
+   "rotulo": "Dokploy (reserva|do Coolify)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Mesmo papel do Coolify, mais leve: para VPS pequena de cliente."
+  },
+  {
+   "id": "plunk",
+   "camada": "nuvem",
+   "rotulo": "Plunk (e-mail|próprio no SES)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "E-mail transacional e campanhas auto-hospedados sobre o Amazon SES, quando o volume passar do plano grátis do Resend (que segue principal)."
+  },
+  {
+   "id": "stripecli",
+   "camada": "nuvem",
+   "rotulo": "Stripe CLI (testar|pagamentos)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Simula pagamentos e encaminha webhooks para a máquina (stripe listen) quando o Stripe ou o Polar entrarem nas vendas."
+  },
+  {
+   "id": "polar",
+   "camada": "venda",
+   "rotulo": "Polar (venda|internacional)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Merchant of Record aberto: vende templates, código-fonte e assinaturas para fora do Brasil e cuida do imposto de cada país. Confirme no cadastro se aceita recebimento no Brasil."
+  },
+  {
+   "id": "heyform",
+   "camada": "venda",
+   "rotulo": "HeyForm (qualifica|o orçamento)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Principal da qualificação (ADR 0008): formulário de conversa com lógica (escopo, prazo, verba) antes de liberar a agenda do Cal.com."
+  },
+  {
+   "id": "formbricks",
+   "camada": "mkt",
+   "rotulo": "Formbricks (NPS e|pesquisas)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Principal de pesquisas (ADR 0008): NPS e pesquisa dentro do produto e por link, com histórico por cliente."
+  },
+  {
+   "id": "plausible",
+   "camada": "web",
+   "rotulo": "Plausible (reserva|do Umami)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Analytics sem cookie, reserva do Umami e painel público para cliente que pedir."
+  },
+  {
+   "id": "bookstack",
+   "camada": "web",
+   "rotulo": "BookStack (manuais|dos clientes)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Wiki em livros, capítulos e páginas para os manuais que o cliente lê e o pós-venda aponta. A documentação de dev segue no MkDocs."
+  },
+  {
+   "id": "astro",
+   "camada": "web",
+   "rotulo": "Astro (sites de|conteúdo)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Principal dos sites de conteúdo (ADR 0007 e 0008): blog, landing pages, Instituto AMS, Catálogo do HTML. O site pessoal migra do Jekyll para ele; publica no Cloudflare Pages."
+  },
+  {
+   "id": "sveltekit",
+   "camada": "app",
+   "rotulo": "SvelteKit (apps|pequenos)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Apps pequenos e interativos e o front dos MVPs em PocketBase (ADR 0007). Sistemas AM seguem em Next.js."
+  },
+  {
+   "id": "pocketbase",
+   "camada": "app",
+   "rotulo": "PocketBase (MVP|antes do Aura)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Banco, login, arquivos e tempo real num binário: valida a ideia antes de construir no Aura. Modelo em infra/pocketbase."
+  },
+  {
+   "id": "litestream",
+   "camada": "app",
+   "rotulo": "Litestream (SQLite|no R2)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Copia o SQLite do PocketBase para o R2 a cada segundo e restaura sozinho se a VM for recriada."
+  },
+  {
+   "id": "reactemail",
+   "camada": "app",
+   "rotulo": "React Email|(modelos)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Modelos de e-mail em componentes, os mesmos para o Resend e o Plunk."
+  },
+  {
+   "id": "golang",
+   "camada": "app",
+   "rotulo": "Go (CLIs com|bubbletea)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "CLIs do setup e produtos em binário único, com tela interativa (bubbletea) e release multiplataforma pelo GoReleaser. Modelo em infra/templates/go-cli."
+  },
+  {
+   "id": "rust",
+   "camada": "app",
+   "rotulo": "Rust (firmware|e CLIs)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Firmware (ESP32-C3/C6, STM32 com Embassy) e ferramentas que pedem desempenho, com release pelo cargo-dist. Modelo em infra/templates/rust-cli."
+  },
+  {
+   "id": "probers",
+   "camada": "win",
+   "rotulo": "probe-rs (grava e|depura chips)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Grava e depura firmware em chips ARM e RISC-V (ESP32-C3/C6, STM32) por USB. Entra com a primeira placa que não seja ESP32 clássico."
+  },
+  {
+   "id": "logseq",
+   "camada": "win",
+   "rotulo": "Logseq (diário e|runbooks)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Diário e runbooks em tópicos sobre a mesma pasta Markdown do vault. O Obsidian segue principal."
+  },
+  {
+   "id": "signoz",
+   "camada": "obs",
+   "rotulo": "SigNoz (logs,|traces e métricas)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Principal da observabilidade dos apps (ADR 0008): logs, traces e métricas numa tela, nativo de OpenTelemetry. O Grafana fica para o painel de lucro."
+  },
+  {
+   "id": "glitchtip",
+   "camada": "obs",
+   "rotulo": "GlitchTip (erros|dos sistemas)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Principal dos erros (ADR 0008): o mesmo SDK do Sentry, auto-hospedado e sem cota. O Sentry SaaS fica de reserva."
+  },
+  {
+   "id": "plane",
+   "camada": "oper",
+   "rotulo": "Plane (projetos de|cliente)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Projetos e tarefas de cliente e dos negócios fora do código (restaurantes, editora). O código segue no GitHub Projects."
+  },
+  {
+   "id": "beancount",
+   "camada": "emp",
+   "rotulo": "Beancount + Fava|(livro contábil)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Principal da contabilidade em partidas dobradas (ADR 0008): o livro em texto puro, versionado em ~/financas, com balanço e DRE na tela do Fava."
+  },
+  {
+   "id": "hledger",
+   "camada": "emp",
+   "rotulo": "hledger (relatórios|no terminal)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Reserva do Beancount: relatórios de partidas dobradas no terminal."
+  },
+  {
+   "id": "pportf",
+   "camada": "emp",
+   "rotulo": "Portfolio Performance|(rentabilidade)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Principal da rentabilidade (ADR 0008): TTWROR, IRR e proventos em várias moedas, para conferir o resultado de cada metodologia do investimentos.py."
+  },
+  {
+   "id": "ghostfolio",
+   "camada": "emp",
+   "rotulo": "Ghostfolio (painel|do patrimônio)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Painel do patrimônio no celular, auto-hospedado. O cálculo fica no Portfolio Performance."
+  },
+  {
+   "id": "actual",
+   "camada": "emp",
+   "rotulo": "Actual Budget|(envelopes)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Orçamento pessoal por envelopes, base zero, local-first. O Caixa da Casa segue para o rateio da família."
+  },
+  {
+   "id": "firefly",
+   "camada": "emp",
+   "rotulo": "Firefly III|(reserva)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Fluxo de caixa com importação de extrato: reserva do financeiro.py, para comparar."
+  },
+  {
+   "id": "akaunting",
+   "camada": "emp",
+   "rotulo": "Akaunting|(contabilidade CNPJ)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "Contabilidade e faturas do CNPJ quando abrir; complementa o contador, não o substitui."
+  },
+  {
+   "id": "erpnext",
+   "camada": "neg",
+   "rotulo": "ERPNext (negócios|físicos)",
+   "tipo": "remoto",
+   "conta": true,
+   "futuro": false,
+   "descricao": "ERP aberto para os negócios físicos até o Aura cobrir e referência de mercado ao desenhar o AM Kaixara."
+  },
+  {
+   "id": "nucleo",
+   "camada": "oper",
+   "rotulo": "Núcleo AMtech|(banco central)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "tools/nucleo/nucleo.py (ADR 0009): eventos, conhecimento, tarefas e auditoria. SQLite no notebook, PostgreSQL + pgvector na VM. A triagem e o arquiteto leem e gravam aqui sozinhos; just lembrar e just buscar para você."
+  },
+  {
+   "id": "garimpo",
+   "camada": "oper",
+   "rotulo": "Garimpo de código|(GitHub)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Busca no GitHub e no grep.app, filtra pelos 5 indicadores, clona num Podman sem internet, recorta com tree-sitter, testa, limpa e abre PR com licença e origem. Você aprova o merge."
+  },
+  {
+   "id": "politicaaut",
+   "camada": "seg",
+   "rotulo": "Política de|autonomia",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Cada ação de agente tem um nível: automático, avisa, pede ok (toque no Telegram) ou proibido. Botão de parar tudo. Estende a política do Jarvis a todo o setup."
+  },
+  {
+   "id": "orquestrador",
+   "camada": "ia",
+   "rotulo": "Orquestrador de|agentes (24 h)",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Claude Agent SDK na VM: lê eventos e tarefas do núcleo e chama o agente certo (garimpeiro, arquiteto, revisor, deploy, atendente, cobrador, financeiro), dentro do teto do LiteLLM."
+  },
+  {
+   "id": "adaptadores",
+   "camada": "mkt",
+   "rotulo": "Adaptadores do|núcleo",
+   "tipo": "remoto",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Um conector por ferramenta (n8n para os simples, código para os complexos): traduz webhooks em eventos do núcleo e executa as ações que ele manda."
+  },
+  {
+   "id": "simulacao",
+   "camada": "oper",
+   "rotulo": "Simulação noturna|de ponta a ponta",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "Toda noite, uma venda falsa atravessa o setup inteiro (lead, agenda, contrato, fatura, pagamento, NPS, lançamento, painel). Se algo quebrar, o relatório da manhã avisa."
+  },
+  {
+   "id": "akita",
+   "camada": "est",
+   "rotulo": "Escola Akita|(regras com seu ok)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "O blog e os episódios do Akitando (transcrições no próprio blog) viram notas no Obsidian e regras com outras palavras e link da fonte. O texto original fica só na sua máquina; regra só muda o setup depois do seu ok, por PR."
+  },
+  {
+   "id": "professor",
+   "camada": "est",
+   "rotulo": "Professor do setup|(aula e revisão)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": false,
+   "descricao": "Currículo do eixo e do próprio setup: aula estruturada em blocos de 25 min, prática no setup, prova corrigida com rubrica, revisão espaçada e cartões para o Anki. Aulas geradas uma vez e guardadas no Obsidian."
   }
  ],
  "conexoes": [
@@ -6097,6 +7528,1261 @@
    "de": "diag",
    "para": "oinst",
    "rotulo": "o que falta instalar"
+  },
+  {
+   "de": "radar",
+   "para": "painel",
+   "rotulo": "lucro por hora"
+  },
+  {
+   "de": "kitsites",
+   "para": "kuma",
+   "rotulo": "monitora os sites"
+  },
+  {
+   "de": "avaliador",
+   "para": "kitsites",
+   "rotulo": "templates aprovados"
+  },
+  {
+   "de": "rotinas",
+   "para": "tg",
+   "rotulo": "resumo da manhã"
+  },
+  {
+   "de": "organizar",
+   "para": "kee",
+   "rotulo": "importa senhas"
+  },
+  {
+   "de": "aw",
+   "para": "painel",
+   "rotulo": "horas por renda"
+  },
+  {
+   "de": "financas",
+   "para": "painel",
+   "rotulo": "sobra do mês"
+  },
+  {
+   "de": "docker",
+   "para": "ha",
+   "rotulo": "roda"
+  },
+  {
+   "de": "docker",
+   "para": "paperless",
+   "rotulo": "roda"
+  },
+  {
+   "de": "docker",
+   "para": "grocy",
+   "rotulo": "roda"
+  },
+  {
+   "de": "fabrica",
+   "para": "aulas",
+   "rotulo": "material das aulas"
+  },
+  {
+   "de": "grocy",
+   "para": "tg",
+   "rotulo": "avisa ração e remédios"
+  },
+  {
+   "de": "litellm",
+   "para": "oll",
+   "rotulo": "usa modelos locais"
+  },
+  {
+   "de": "litellm",
+   "para": "gpuh",
+   "rotulo": "usa GPU alugada"
+  },
+  {
+   "de": "promptfoo",
+   "para": "litellm",
+   "rotulo": "testa pelo gateway"
+  },
+  {
+   "de": "revisor",
+   "para": "agentsdk",
+   "rotulo": "feito com"
+  },
+  {
+   "de": "agentsdk",
+   "para": "litellm",
+   "rotulo": "chama modelos"
+  },
+  {
+   "de": "mcpproprio",
+   "para": "cc",
+   "rotulo": "consultado por"
+  },
+  {
+   "de": "n8n",
+   "para": "litellm",
+   "rotulo": "agentes do n8n usam"
+  },
+  {
+   "de": "repopadrao",
+   "para": "sec",
+   "rotulo": "inclui"
+  },
+  {
+   "de": "segredos",
+   "para": "kee",
+   "rotulo": "lê do cofre"
+  },
+  {
+   "de": "restauracao",
+   "para": "painel",
+   "rotulo": "resultado do teste"
+  },
+  {
+   "de": "iacluster",
+   "para": "tail",
+   "rotulo": "pela rede privada"
+  },
+  {
+   "de": "vllm",
+   "para": "gpuh",
+   "rotulo": "roda em"
+  },
+  {
+   "de": "destilacao",
+   "para": "kgl",
+   "rotulo": "treina em"
+  },
+  {
+   "de": "gptzero",
+   "para": "kgl",
+   "rotulo": "treina em"
+  },
+  {
+   "de": "syncth",
+   "para": "tail",
+   "rotulo": "pela rede privada"
+  },
+  {
+   "de": "adguard",
+   "para": "tail",
+   "rotulo": "DNS da rede"
+  },
+  {
+   "de": "labrede",
+   "para": "tail",
+   "rotulo": "pratica antes"
+  },
+  {
+   "de": "wireguard",
+   "para": "tail",
+   "rotulo": "base de"
+  },
+  {
+   "de": "roi",
+   "para": "painel",
+   "rotulo": "resultado por ferramenta"
+  },
+  {
+   "de": "vigia",
+   "para": "kitsites",
+   "rotulo": "usa o conferir"
+  },
+  {
+   "de": "vm247",
+   "para": "n8n",
+   "rotulo": "roda 24 h"
+  },
+  {
+   "de": "vm247",
+   "para": "tail",
+   "rotulo": "pela rede privada"
+  },
+  {
+   "de": "prospector",
+   "para": "ocrm",
+   "rotulo": "leads aprovados"
+  },
+  {
+   "de": "aiusage",
+   "para": "anth",
+   "rotulo": "mostra o limite"
+  },
+  {
+   "de": "sessao",
+   "para": "cc",
+   "rotulo": "começa cada sessão"
+  },
+  {
+   "de": "sessao",
+   "para": "mem",
+   "rotulo": "complementa"
+  },
+  {
+   "de": "strata",
+   "para": "ws",
+   "rotulo": "precisa de"
+  },
+  {
+   "de": "litellm",
+   "para": "openrouter",
+   "rotulo": "reserva"
+  },
+  {
+   "de": "posthog",
+   "para": "painel",
+   "rotulo": "conversão por página"
+  },
+  {
+   "de": "metabase",
+   "para": "metrics",
+   "rotulo": "lê"
+  },
+  {
+   "de": "growthbook",
+   "para": "posthog",
+   "rotulo": "mede os testes"
+  },
+  {
+   "de": "analises",
+   "para": "duck",
+   "rotulo": "roda em"
+  },
+  {
+   "de": "analises",
+   "para": "metabase",
+   "rotulo": "publica"
+  },
+  {
+   "de": "chatwoot",
+   "para": "oatend",
+   "rotulo": "usa o agente"
+  },
+  {
+   "de": "twenty",
+   "para": "ocrm",
+   "rotulo": "substitui a planilha"
+  },
+  {
+   "de": "documenso",
+   "para": "legal",
+   "rotulo": "assina contratos"
+  },
+  {
+   "de": "invoiceninja",
+   "para": "hooks",
+   "rotulo": "avisa pagamentos"
+  },
+  {
+   "de": "penpot",
+   "para": "front",
+   "rotulo": "telas dos sistemas"
+  },
+  {
+   "de": "oclaw",
+   "para": "vm247",
+   "rotulo": "roda isolado"
+  },
+  {
+   "de": "oclaw",
+   "para": "litellm",
+   "rotulo": "modelo com teto"
+  },
+  {
+   "de": "copi",
+   "para": "esteira",
+   "rotulo": "abre o PR"
+  },
+  {
+   "de": "esteira",
+   "para": "hostg",
+   "rotulo": "deploy por push"
+  },
+  {
+   "de": "esteira",
+   "para": "sites",
+   "rotulo": "entrega"
+  },
+  {
+   "de": "relab",
+   "para": "ghidramcp",
+   "rotulo": "plugin"
+  },
+  {
+   "de": "ghidramcp",
+   "para": "mcp",
+   "rotulo": "fala por MCP"
+  },
+  {
+   "de": "ghidramcp",
+   "para": "oll",
+   "rotulo": "binário de cliente: modelo local"
+  },
+  {
+   "de": "crackmes",
+   "para": "relab",
+   "rotulo": "desafios"
+  },
+  {
+   "de": "godbolt",
+   "para": "relab",
+   "rotulo": "do C ao assembly"
+  },
+  {
+   "de": "vms",
+   "para": "kitpent",
+   "rotulo": "Kali roda o kit"
+  },
+  {
+   "de": "kitpent",
+   "para": "labseg",
+   "rotulo": "treina em"
+  },
+  {
+   "de": "portsw",
+   "para": "kitpent",
+   "rotulo": "ensina o Burp"
+  },
+  {
+   "de": "thm",
+   "para": "kitpent",
+   "rotulo": "laboratórios guiados"
+  },
+  {
+   "de": "bbplat",
+   "para": "kitpent",
+   "rotulo": "programas com escopo"
+  },
+  {
+   "de": "escopo",
+   "para": "kitpent",
+   "rotulo": "libera o alvo"
+  },
+  {
+   "de": "kitpent",
+   "para": "relpent",
+   "rotulo": "achados"
+  },
+  {
+   "de": "escopo",
+   "para": "relpent",
+   "rotulo": "registro de atividades"
+  },
+  {
+   "de": "relpent",
+   "para": "nseg",
+   "rotulo": "entregável"
+  },
+  {
+   "de": "nseg",
+   "para": "nsoft",
+   "rotulo": "mesmos clientes"
+  },
+  {
+   "de": "appsec",
+   "para": "repopadrao",
+   "rotulo": "soma ao CI"
+  },
+  {
+   "de": "appsec",
+   "para": "nkaix",
+   "rotulo": "ameaças do Kaixara"
+  },
+  {
+   "de": "appsec",
+   "para": "dbot",
+   "rotulo": "CodeQL"
+  },
+  {
+   "de": "refarq",
+   "para": "nkaix",
+   "rotulo": "comparar arquitetura"
+  },
+  {
+   "de": "refarq",
+   "para": "ghproj",
+   "rotulo": "vira ADR"
+  },
+  {
+   "de": "jarvis",
+   "para": "tg",
+   "rotulo": "conversa por"
+  },
+  {
+   "de": "jarvis",
+   "para": "mcpproprio",
+   "rotulo": "consulta seus dados"
+  },
+  {
+   "de": "jarvis",
+   "para": "agentsdk",
+   "rotulo": "chama os agentes"
+  },
+  {
+   "de": "jarvis",
+   "para": "ha",
+   "rotulo": "comanda a casa"
+  },
+  {
+   "de": "jarvis",
+   "para": "status",
+   "rotulo": "painel (HUD)"
+  },
+  {
+   "de": "jarvis",
+   "para": "aprov",
+   "rotulo": "ação pede o seu ok"
+  },
+  {
+   "de": "jvoz",
+   "para": "jarvis",
+   "rotulo": "voz"
+  },
+  {
+   "de": "whis",
+   "para": "jvoz",
+   "rotulo": "transcreve"
+  },
+  {
+   "de": "srvcasa",
+   "para": "ha",
+   "rotulo": "roda o"
+  },
+  {
+   "de": "ups",
+   "para": "srvcasa",
+   "rotulo": "energia"
+  },
+  {
+   "de": "dispcasa",
+   "para": "zbdongle",
+   "rotulo": "Zigbee"
+  },
+  {
+   "de": "zbdongle",
+   "para": "z2m",
+   "rotulo": "rádio"
+  },
+  {
+   "de": "z2m",
+   "para": "mqtt",
+   "rotulo": "publica"
+  },
+  {
+   "de": "mqtt",
+   "para": "ha",
+   "rotulo": "integra"
+  },
+  {
+   "de": "cams",
+   "para": "frigate",
+   "rotulo": "RTSP"
+  },
+  {
+   "de": "frigate",
+   "para": "mqtt",
+   "rotulo": "eventos"
+  },
+  {
+   "de": "aguacam",
+   "para": "mqtt",
+   "rotulo": "leitura do hidrômetro"
+  },
+  {
+   "de": "satvoz",
+   "para": "esphome",
+   "rotulo": "firmware"
+  },
+  {
+   "de": "esphome",
+   "para": "ha",
+   "rotulo": "entidades"
+  },
+  {
+   "de": "rob",
+   "para": "esphome",
+   "rotulo": "ESP32"
+  },
+  {
+   "de": "rob",
+   "para": "ros2",
+   "rotulo": "Raspberry Pi"
+  },
+  {
+   "de": "ros2",
+   "para": "mqtt",
+   "rotulo": "ponte"
+  },
+  {
+   "de": "jvoz",
+   "para": "ha",
+   "rotulo": "Assist local"
+  },
+  {
+   "de": "jarvis",
+   "para": "hamcp",
+   "rotulo": "casa por MCP"
+  },
+  {
+   "de": "hamcp",
+   "para": "ha",
+   "rotulo": "entidades expostas"
+  },
+  {
+   "de": "politica",
+   "para": "jarvis",
+   "rotulo": "níveis de risco"
+  },
+  {
+   "de": "politica",
+   "para": "hamcp",
+   "rotulo": "o que expor"
+  },
+  {
+   "de": "ccvoz",
+   "para": "jarvis",
+   "rotulo": "PC e código"
+  },
+  {
+   "de": "ccvoz",
+   "para": "cc",
+   "rotulo": "/voice"
+  },
+  {
+   "de": "ccvoz",
+   "para": "jvoz",
+   "rotulo": "fala a resposta"
+  },
+  {
+   "de": "tail",
+   "para": "srvcasa",
+   "rotulo": "acesso de fora"
+  },
+  {
+   "de": "so101",
+   "para": "lerobot",
+   "rotulo": "teleoperação e gravação"
+  },
+  {
+   "de": "lerobot",
+   "para": "hf",
+   "rotulo": "datasets e políticas"
+  },
+  {
+   "de": "lerobot",
+   "para": "kgl",
+   "rotulo": "treino do ACT"
+  },
+  {
+   "de": "lerobot",
+   "para": "gpuh",
+   "rotulo": "treino do SmolVLA (bf16)"
+  },
+  {
+   "de": "so101",
+   "para": "rob",
+   "rotulo": "aulas de robótica"
+  },
+  {
+   "de": "reachy",
+   "para": "jarvis",
+   "rotulo": "corpo na mesa"
+  },
+  {
+   "de": "reachy",
+   "para": "hf",
+   "rotulo": "apps do Hub"
+  },
+  {
+   "de": "docling",
+   "para": "hf",
+   "rotulo": "modelo Granite-Docling"
+  },
+  {
+   "de": "docling",
+   "para": "acv",
+   "rotulo": "lê os documentos"
+  },
+  {
+   "de": "kitcampo",
+   "para": "esphome",
+   "rotulo": "firmware"
+  },
+  {
+   "de": "kitcampo",
+   "para": "mqtt",
+   "rotulo": "leituras de longe"
+  },
+  {
+   "de": "bonsai",
+   "para": "ifcresumo",
+   "rotulo": "exporta IFC"
+  },
+  {
+   "de": "freecad",
+   "para": "ifcresumo",
+   "rotulo": "exporta IFC"
+  },
+  {
+   "de": "adskedu",
+   "para": "ifcresumo",
+   "rotulo": "IFC do Revit"
+  },
+  {
+   "de": "qgis",
+   "para": "bonsai",
+   "rotulo": "terreno"
+  },
+  {
+   "de": "ifcmcp",
+   "para": "bonsai",
+   "rotulo": "consulta e edita o modelo"
+  },
+  {
+   "de": "ifcmcp",
+   "para": "mcp",
+   "rotulo": "fala por MCP"
+  },
+  {
+   "de": "ifcresumo",
+   "para": "nobra",
+   "rotulo": "quantidades"
+  },
+  {
+   "de": "sinapi",
+   "para": "nobra",
+   "rotulo": "preços do mês"
+  },
+  {
+   "de": "bonsai",
+   "para": "speckle",
+   "rotulo": "publica na web"
+  },
+  {
+   "de": "nobra",
+   "para": "nsoft",
+   "rotulo": "produto"
+  },
+  {
+   "de": "relab",
+   "para": "labalvo",
+   "rotulo": "o que estudou vira alvo"
+  },
+  {
+   "de": "kitpent",
+   "para": "labalvo",
+   "rotulo": "ataca"
+  },
+  {
+   "de": "vms",
+   "para": "labalvo",
+   "rotulo": "VMs Kali e Alvo"
+  },
+  {
+   "de": "labalvo",
+   "para": "relpent",
+   "rotulo": "achados"
+  },
+  {
+   "de": "just",
+   "para": "triagem",
+   "rotulo": "just triagem e just arquiteto"
+  },
+  {
+   "de": "just",
+   "para": "gha",
+   "rotulo": "o mesmo portão do CI"
+  },
+  {
+   "de": "just",
+   "para": "repomix",
+   "rotulo": "just contexto-ia"
+  },
+  {
+   "de": "just",
+   "para": "wsl",
+   "rotulo": "roda no Ubuntu"
+  },
+  {
+   "de": "termx",
+   "para": "wsl",
+   "rotulo": "instalado no Ubuntu"
+  },
+  {
+   "de": "triagem",
+   "para": "ghproj",
+   "rotulo": "rascunha o ADR"
+  },
+  {
+   "de": "triagem",
+   "para": "cc",
+   "rotulo": "pacote de contexto"
+  },
+  {
+   "de": "triagem",
+   "para": "oesteira",
+   "rotulo": "decide antes da esteira"
+  },
+  {
+   "de": "repomix",
+   "para": "cc",
+   "rotulo": "contexto enxuto"
+  },
+  {
+   "de": "act",
+   "para": "gha",
+   "rotulo": "roda o workflow local"
+  },
+  {
+   "de": "act",
+   "para": "docker",
+   "rotulo": "usa o Docker"
+  },
+  {
+   "de": "kamal",
+   "para": "vm247",
+   "rotulo": "deploy por SSH"
+  },
+  {
+   "de": "kamal",
+   "para": "ghcr",
+   "rotulo": "puxa a imagem"
+  },
+  {
+   "de": "kamal",
+   "para": "segredos",
+   "rotulo": "lê os segredos"
+  },
+  {
+   "de": "zod",
+   "para": "front",
+   "rotulo": "valida o que chega"
+  },
+  {
+   "de": "zod",
+   "para": "oapi",
+   "rotulo": "segue o contrato"
+  },
+  {
+   "de": "klaro",
+   "para": "pixel",
+   "rotulo": "libera as tags com aceite"
+  },
+  {
+   "de": "klaro",
+   "para": "legal",
+   "rotulo": "cumpre a política"
+  },
+  {
+   "de": "kicad",
+   "para": "rob",
+   "rotulo": "desenha as placas"
+  },
+  {
+   "de": "kicad",
+   "para": "freecad",
+   "rotulo": "placa para o gabinete"
+  },
+  {
+   "de": "analog",
+   "para": "kicad",
+   "rotulo": "lido pelo PulseView"
+  },
+  {
+   "de": "analog",
+   "para": "rob",
+   "rotulo": "mede os sinais"
+  },
+  {
+   "de": "mise",
+   "para": "wsl",
+   "rotulo": "roda no Ubuntu"
+  },
+  {
+   "de": "mise",
+   "para": "rt",
+   "rotulo": "instala Node, Go e Rust"
+  },
+  {
+   "de": "zellij",
+   "para": "wsl",
+   "rotulo": "roda no Ubuntu"
+  },
+  {
+   "de": "zellij",
+   "para": "termx",
+   "rotulo": "abre lazygit e btop"
+  },
+  {
+   "de": "yazi",
+   "para": "wsl",
+   "rotulo": "roda no Ubuntu"
+  },
+  {
+   "de": "chezmoi",
+   "para": "dot",
+   "rotulo": "aplica os dotfiles"
+  },
+  {
+   "de": "chezmoi",
+   "para": "kee",
+   "rotulo": "lê segredos do cofre"
+  },
+  {
+   "de": "ghostty",
+   "para": "arch",
+   "rotulo": "terminal do Arch"
+  },
+  {
+   "de": "ghostty",
+   "para": "zellij",
+   "rotulo": "abre na sessão"
+  },
+  {
+   "de": "podman",
+   "para": "labalvo",
+   "rotulo": "alvo sem root"
+  },
+  {
+   "de": "gitlfs",
+   "para": "git",
+   "rotulo": "binários fora do histórico"
+  },
+  {
+   "de": "treesitter",
+   "para": "nvim",
+   "rotulo": "destaque por AST"
+  },
+  {
+   "de": "posting",
+   "para": "api",
+   "rotulo": "testa a API"
+  },
+  {
+   "de": "harlequin",
+   "para": "pg",
+   "rotulo": "consulta o Postgres"
+  },
+  {
+   "de": "harlequin",
+   "para": "duck",
+   "rotulo": "abre o DuckDB"
+  },
+  {
+   "de": "gum",
+   "para": "just",
+   "rotulo": "just menu"
+  },
+  {
+   "de": "d2",
+   "para": "ghproj",
+   "rotulo": "diagramas no repositório"
+  },
+  {
+   "de": "vegeta",
+   "para": "api",
+   "rotulo": "acha o teto"
+  },
+  {
+   "de": "bpftrace",
+   "para": "vm247",
+   "rotulo": "latência na VM"
+  },
+  {
+   "de": "aider",
+   "para": "oll",
+   "rotulo": "usa o modelo local"
+  },
+  {
+   "de": "aider",
+   "para": "git",
+   "rotulo": "commits pequenos"
+  },
+  {
+   "de": "llmcli",
+   "para": "oll",
+   "rotulo": "manda para o Ollama"
+  },
+  {
+   "de": "age",
+   "para": "gdrv",
+   "rotulo": "cifra antes de subir"
+  },
+  {
+   "de": "age",
+   "para": "kee",
+   "rotulo": "segredo segue no cofre"
+  },
+  {
+   "de": "gocryptfs",
+   "para": "relab",
+   "rotulo": "guarda os alvos"
+  },
+  {
+   "de": "radare2",
+   "para": "relab",
+   "rotulo": "triagem antes do Ghidra"
+  },
+  {
+   "de": "bore",
+   "para": "vm247",
+   "rotulo": "servidor na VM"
+  },
+  {
+   "de": "headscale",
+   "para": "tail",
+   "rotulo": "reserva do Tailscale"
+  },
+  {
+   "de": "headscale",
+   "para": "vm247",
+   "rotulo": "roda na VM"
+  },
+  {
+   "de": "forgejo",
+   "para": "gh",
+   "rotulo": "espelha o GitHub"
+  },
+  {
+   "de": "forgejo",
+   "para": "vm247",
+   "rotulo": "roda na VM"
+  },
+  {
+   "de": "forgejo",
+   "para": "gitlfs",
+   "rotulo": "serve o LFS"
+  },
+  {
+   "de": "softserve",
+   "para": "srvcasa",
+   "rotulo": "roda no servidor da casa"
+  },
+  {
+   "de": "coolify",
+   "para": "docker",
+   "rotulo": "sobe containers"
+  },
+  {
+   "de": "dokploy",
+   "para": "coolify",
+   "rotulo": "reserva leve"
+  },
+  {
+   "de": "plunk",
+   "para": "tmail",
+   "rotulo": "reserva própria do Resend"
+  },
+  {
+   "de": "plunk",
+   "para": "aws",
+   "rotulo": "envia pelo SES"
+  },
+  {
+   "de": "stripecli",
+   "para": "hooks",
+   "rotulo": "simula webhooks"
+  },
+  {
+   "de": "tmpl",
+   "para": "polar",
+   "rotulo": "vende lá fora"
+  },
+  {
+   "de": "heyform",
+   "para": "agenda",
+   "rotulo": "libera a agenda"
+  },
+  {
+   "de": "heyform",
+   "para": "ocrm",
+   "rotulo": "lead no CRM"
+  },
+  {
+   "de": "formbricks",
+   "para": "oaval",
+   "rotulo": "alimenta o NPS"
+  },
+  {
+   "de": "plausible",
+   "para": "umami",
+   "rotulo": "reserva"
+  },
+  {
+   "de": "opos",
+   "para": "bookstack",
+   "rotulo": "aponta o manual"
+  },
+  {
+   "de": "bookstack",
+   "para": "vm247",
+   "rotulo": "roda na VM"
+  },
+  {
+   "de": "astro",
+   "para": "site",
+   "rotulo": "o site migra para ele"
+  },
+  {
+   "de": "astro",
+   "para": "cf",
+   "rotulo": "publica no Pages"
+  },
+  {
+   "de": "sveltekit",
+   "para": "pocketbase",
+   "rotulo": "front do MVP"
+  },
+  {
+   "de": "pocketbase",
+   "para": "litestream",
+   "rotulo": "replica o banco"
+  },
+  {
+   "de": "litestream",
+   "para": "blob",
+   "rotulo": "cópia no R2"
+  },
+  {
+   "de": "reactemail",
+   "para": "tmail",
+   "rotulo": "modelos dos e-mails"
+  },
+  {
+   "de": "golang",
+   "para": "gha",
+   "rotulo": "GoReleaser na tag"
+  },
+  {
+   "de": "rust",
+   "para": "rob",
+   "rotulo": "firmware das placas"
+  },
+  {
+   "de": "rust",
+   "para": "gha",
+   "rotulo": "cargo-dist na tag"
+  },
+  {
+   "de": "probers",
+   "para": "rob",
+   "rotulo": "grava o firmware"
+  },
+  {
+   "de": "logseq",
+   "para": "obsd",
+   "rotulo": "mesma pasta do vault"
+  },
+  {
+   "de": "otel",
+   "para": "signoz",
+   "rotulo": "envia por OTLP"
+  },
+  {
+   "de": "signoz",
+   "para": "vm247",
+   "rotulo": "roda na VM"
+  },
+  {
+   "de": "api",
+   "para": "glitchtip",
+   "rotulo": "SDK do Sentry"
+  },
+  {
+   "de": "glitchtip",
+   "para": "vm247",
+   "rotulo": "roda na VM"
+  },
+  {
+   "de": "glitchtip",
+   "para": "sentry",
+   "rotulo": "reserva"
+  },
+  {
+   "de": "signoz",
+   "para": "loki",
+   "rotulo": "reserva"
+  },
+  {
+   "de": "plane",
+   "para": "ocrm",
+   "rotulo": "projeto do cliente"
+  },
+  {
+   "de": "financas",
+   "para": "beancount",
+   "rotulo": "lançamentos do mês"
+  },
+  {
+   "de": "hledger",
+   "para": "beancount",
+   "rotulo": "reserva"
+  },
+  {
+   "de": "pportf",
+   "para": "financas",
+   "rotulo": "rentabilidade da carteira"
+  },
+  {
+   "de": "ghostfolio",
+   "para": "pportf",
+   "rotulo": "painel"
+  },
+  {
+   "de": "actual",
+   "para": "caixa",
+   "rotulo": "complementa"
+  },
+  {
+   "de": "firefly",
+   "para": "financas",
+   "rotulo": "reserva"
+  },
+  {
+   "de": "akaunting",
+   "para": "cnpj",
+   "rotulo": "contas do CNPJ"
+  },
+  {
+   "de": "akaunting",
+   "para": "conta",
+   "rotulo": "relatório ao contador"
+  },
+  {
+   "de": "erpnext",
+   "para": "nkaix",
+   "rotulo": "referência do Kaixara"
+  },
+  {
+   "de": "kamal",
+   "para": "aws",
+   "rotulo": "VM paga quando a renda pagar"
+  },
+  {
+   "de": "kamal",
+   "para": "azure",
+   "rotulo": "VM paga quando a renda pagar"
+  },
+  {
+   "de": "triagem",
+   "para": "nucleo",
+   "rotulo": "lê e grava"
+  },
+  {
+   "de": "nucleo",
+   "para": "mcpproprio",
+   "rotulo": "servido por MCP"
+  },
+  {
+   "de": "garimpo",
+   "para": "nucleo",
+   "rotulo": "registra o garimpo"
+  },
+  {
+   "de": "garimpo",
+   "para": "podman",
+   "rotulo": "clona isolado"
+  },
+  {
+   "de": "garimpo",
+   "para": "treesitter",
+   "rotulo": "recorta o trecho"
+  },
+  {
+   "de": "garimpo",
+   "para": "gh",
+   "rotulo": "abre o PR"
+  },
+  {
+   "de": "orquestrador",
+   "para": "nucleo",
+   "rotulo": "lê eventos e tarefas"
+  },
+  {
+   "de": "orquestrador",
+   "para": "politicaaut",
+   "rotulo": "pede o nível"
+  },
+  {
+   "de": "politicaaut",
+   "para": "tg",
+   "rotulo": "ok no celular"
+  },
+  {
+   "de": "orquestrador",
+   "para": "litellm",
+   "rotulo": "teto de gasto"
+  },
+  {
+   "de": "adaptadores",
+   "para": "nucleo",
+   "rotulo": "eventos"
+  },
+  {
+   "de": "adaptadores",
+   "para": "n8n",
+   "rotulo": "fluxos simples"
+  },
+  {
+   "de": "simulacao",
+   "para": "adaptadores",
+   "rotulo": "testa a cadeia"
+  },
+  {
+   "de": "simulacao",
+   "para": "tg",
+   "rotulo": "relatório da manhã"
+  },
+  {
+   "de": "restic",
+   "para": "nucleo",
+   "rotulo": "registra o backup"
+  },
+  {
+   "de": "akita",
+   "para": "nucleo",
+   "rotulo": "regras e texto pesquisável"
+  },
+  {
+   "de": "akita",
+   "para": "obsd",
+   "rotulo": "uma nota por post"
+  },
+  {
+   "de": "akita",
+   "para": "lmods",
+   "rotulo": "lote noturno grátis"
+  },
+  {
+   "de": "cc",
+   "para": "akita",
+   "rotulo": "aplica a regra aprovada (PR)"
+  },
+  {
+   "de": "professor",
+   "para": "nucleo",
+   "rotulo": "nível de domínio e revisões"
+  },
+  {
+   "de": "professor",
+   "para": "anki",
+   "rotulo": "cartões de cada aula"
+  },
+  {
+   "de": "professor",
+   "para": "obsd",
+   "rotulo": "aulas e provas"
+  },
+  {
+   "de": "akita",
+   "para": "professor",
+   "rotulo": "regras viram contexto da aula"
+  },
+  {
+   "de": "cc",
+   "para": "professor",
+   "rotulo": "escreve a aula e corrige a prova"
   }
  ],
  "fluxos": [
@@ -6747,6 +9433,128 @@
     {
      "bloco": "metrics",
      "descricao": "A primeira venda chega ao banco e ao painel."
+    }
+   ]
+  },
+  {
+   "id": "pentest",
+   "titulo": "Um teste de intrusão, do contrato ao reteste",
+   "passos": [
+    {
+     "bloco": "escopo",
+     "descricao": "O termo assinado vira escopo.toml; a guarda confere assinatura, janela e alvos."
+    },
+    {
+     "bloco": "kitpent",
+     "descricao": "Os testes rodam pelo escopo.py rodar, só nos alvos liberados, e cada comando fica registrado."
+    },
+    {
+     "bloco": "relpent",
+     "descricao": "Os achados viram relatório com nota CVSS calculada e o registro de atividades no apêndice."
+    },
+    {
+     "bloco": "nseg",
+     "descricao": "A AMtech Segurança entrega, combina as correções e faz o reteste."
+    }
+   ]
+  },
+  {
+   "id": "reversa",
+   "titulo": "Engenharia reversa com IA (estudo e aula)",
+   "passos": [
+    {
+     "bloco": "godbolt",
+     "descricao": "Na aula, o aluno vê o C virar assembly no Compiler Explorer."
+    },
+    {
+     "bloco": "relab",
+     "descricao": "O binário que ele mesmo compilou (ou um crackme) abre no Ghidra."
+    },
+    {
+     "bloco": "ghidramcp",
+     "descricao": "O GhidraMCP entrega as funções ao Claude, que renomeia e explica."
+    },
+    {
+     "bloco": "mcp",
+     "descricao": "Tudo passa pelos servidores MCP com permissão limitada."
+    }
+   ]
+  },
+  {
+   "id": "voz-casa",
+   "titulo": "Um comando de voz até a tomada",
+   "passos": [
+    {
+     "bloco": "satvoz",
+     "descricao": "O satélite do cômodo ouve \"hey jarvis\" e grava o pedido."
+    },
+    {
+     "bloco": "esphome",
+     "descricao": "O firmware ESPHome manda o áudio ao Home Assistant."
+    },
+    {
+     "bloco": "ha",
+     "descricao": "O Assist transcreve (Whisper), resolve a frase ou pergunta ao Claude, e confere a política."
+    },
+    {
+     "bloco": "mqtt",
+     "descricao": "O comando sai pelo MQTT."
+    },
+    {
+     "bloco": "z2m",
+     "descricao": "O Zigbee2MQTT traduz para o rádio."
+    },
+    {
+     "bloco": "zbdongle",
+     "descricao": "O coordenador envia pelo Zigbee."
+    },
+    {
+     "bloco": "dispcasa",
+     "descricao": "A tomada desliga, e o Piper confirma em voz."
+    }
+   ]
+  },
+  {
+   "id": "obra",
+   "titulo": "Do modelo BIM à estimativa da obra",
+   "passos": [
+    {
+     "bloco": "qgis",
+     "descricao": "O terreno sai do QGIS."
+    },
+    {
+     "bloco": "bonsai",
+     "descricao": "A casa é modelada em IFC no Bonsai."
+    },
+    {
+     "bloco": "ifcresumo",
+     "descricao": "O resumo confere pavimentos, elementos e quantidades."
+    },
+    {
+     "bloco": "nobra",
+     "descricao": "O AM Obra cruza as quantidades com os preços do SINAPI-MG do mês: estimativa para o profissional revisar."
+    }
+   ]
+  },
+  {
+   "id": "estudar-atacar",
+   "titulo": "Da engenharia reversa ao pentest, no seu laboratório",
+   "passos": [
+    {
+     "bloco": "relab",
+     "descricao": "O programa abre no Ghidra ou no ILSpy: onde confere senha, que dados guarda, com quem fala na rede."
+    },
+    {
+     "bloco": "labalvo",
+     "descricao": "Uma cópia dele roda na rede isolada, com foto do estado limpo."
+    },
+    {
+     "bloco": "kitpent",
+     "descricao": "O atacante testa os pontos que a engenharia reversa apontou."
+    },
+    {
+     "bloco": "relpent",
+     "descricao": "Os achados viram relatório com CVSS; se o software for de terceiro, aviso em particular ao projeto."
     }
    ]
   }

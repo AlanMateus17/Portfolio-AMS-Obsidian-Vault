@@ -1,0 +1,38 @@
+# Escopo assinado de um teste de intrusão. Copie para a pasta do cliente (fora do GitHub):
+#   mkdir -p ~/clientes/loja && cp infra/templates/seguranca/escopo.example.toml ~/clientes/loja/escopo.toml
+# Confira com: python3 tools/seguranca/escopo.py validar ~/clientes/loja/escopo.toml
+# Domínios .example e IPs 203.0.113.0/24 são reservados para documentação: troque pelos do contrato.
+
+cliente = "Loja Exemplo Ltda"
+contrato = "AMS-SEG-2027-001"
+
+[autorizacao]
+assinada_por = "Fulana de Tal (sócia-administradora)"
+assinada_em = 2027-03-01
+# PDF do termo de autorização assinado (modelo em autorizacao-modelo.md), na mesma pasta deste arquivo.
+arquivo = "autorizacao-assinada.pdf"
+
+[janela]
+# Sempre com fuso horário. Fora desta janela a guarda bloqueia qualquer teste.
+inicio = 2027-03-10T09:00:00-03:00
+fim = 2027-03-14T18:00:00-03:00
+
+[alvos]
+# "loja.example" vale só para o domínio; "*.loja.example" vale para os subdomínios.
+dominios = ["loja.example", "*.loja.example"]
+ips = ["203.0.113.16/28"]
+urls = []
+
+[fora]
+# Exclusão sempre vence. Pagamento de terceiro (gateway) nunca entra sem autorização do terceiro.
+dominios = ["pagamento.loja.example"]
+ips = []
+urls = []
+
+[regras]
+proibido = [
+  "negação de serviço",
+  "engenharia social com funcionários",
+  "acessar ou copiar dados reais de clientes além do mínimo para provar o achado",
+]
+contato_emergencia = "Nome, cargo e telefone de quem atende se algo cair durante o teste"

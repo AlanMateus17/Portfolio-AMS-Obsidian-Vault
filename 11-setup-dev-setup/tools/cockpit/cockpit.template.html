@@ -1,0 +1,342 @@
+<title>Núcleo AMtech</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<!-- Arquivo GERADO por tools/cockpit/gerar.py a partir de data/ e dos ADRs. Edite o modelo ou os dados. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap">
+<style>
+/* Layout: uma constelação do setup inteiro no topo (o núcleo no centro, as 23 camadas em órbitas, cada bloco uma estrela, as conexões acendem ao tocar);
+   abaixo, o painel de leitura: o que já roda sozinho, as fases do núcleo, principal e reserva, autonomia, o roteiro e o que falta. Tokens do Aura Design System. */
+:root{
+  --paper:#F7F5F0; --surface:#FFFFFF; --ink:#13262B; --muted:#5B6B6E; --line:#DCD8CE;
+  --aura:#0E3A45; --on-aura:#F7F5F0; --gold:#C08A3E; --gold-ink:#8A5E22; --aura-tint:#E2ECEC; --gold-tint:#F3E7D3;
+  --ok:#2F7A4F; --ok-tint:#E3F1E8; --warn:#9A5B12; --warn-tint:#FBEBD2; --off:#8C4A4A; --off-tint:#F4E4E2;
+  --void:#071317; --void-2:#0C2027; --void-ink:#E7EEEC; --void-muted:#8FA6A9; --star-local:#7FC4C9; --star-remoto:#E1B46A; --star-fisico:#E7EEEC; --filament:#E1B46A;
+  --display:"Fraunces",Georgia,serif; --sans:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0B1A1E; --surface:#112429; --ink:#E9EEEC; --muted:#9AAEB0; --line:#24414A;
+  --aura:#7FC4C9; --on-aura:#0B1A1E; --gold:#D9A85E; --gold-ink:#E3B877; --aura-tint:#163238; --gold-tint:#3A2D18;
+  --ok:#7CCB9A; --ok-tint:#16301F; --warn:#E8B46A; --warn-tint:#3A2A12; --off:#E39C9C; --off-tint:#3A1E1E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0B1A1E; --surface:#112429; --ink:#E9EEEC; --muted:#9AAEB0; --line:#24414A;
+  --aura:#7FC4C9; --on-aura:#0B1A1E; --gold:#D9A85E; --gold-ink:#E3B877; --aura-tint:#163238; --gold-tint:#3A2D18;
+  --ok:#7CCB9A; --ok-tint:#16301F; --warn:#E8B46A; --warn-tint:#3A2A12; --off:#E39C9C; --off-tint:#3A1E1E; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.55 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--void)}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+a{color:var(--aura)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.eyebrow{font:500 12px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:var(--gold-ink)}
+h2{margin:0;font:600 clamp(22px,3.6vw,28px)/1.2 var(--display);color:var(--aura);text-wrap:balance}
+h3{margin:0;font:600 16px/1.3 var(--sans);text-wrap:balance}
+p{margin:0}
+.lede{color:var(--muted);max-width:68ch}
+
+/* ---------- constelação ---------- */
+.sky{background:radial-gradient(120% 90% at 50% 38%,var(--void-2),var(--void) 70%);color:var(--void-ink);padding-block:28px 22px}
+.sky .eyebrow{color:var(--star-remoto)}
+.sky h1{margin:6px 0 0;font:700 clamp(40px,8vw,76px)/.95 var(--display);letter-spacing:-.02em;text-wrap:balance}
+.sky h1 em{font-style:normal;color:var(--star-remoto)}
+.sky .lede{color:var(--void-muted);margin-top:10px}
+.nums{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:14px;font:500 13px var(--mono);color:var(--void-muted);font-variant-numeric:tabular-nums}
+.nums b{color:var(--void-ink);font-weight:500}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:18px;margin-top:18px;align-items:start}
+@media(max-width:900px){.stage{grid-template-columns:minmax(0,1fr)}}
+.orbit{position:relative;min-width:0}
+canvas#c{display:block;width:100%;aspect-ratio:16/11;max-height:640px;cursor:crosshair;touch-action:manipulation}
+@media(max-width:600px){canvas#c{aspect-ratio:1/1}}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tools input,.tools select{font:500 14px var(--sans);background:rgba(255,255,255,.06);color:var(--void-ink);border:1px solid rgba(231,238,236,.22);border-radius:8px;padding:8px 12px;min-height:40px}
+.tools input{flex:1 1 220px;min-width:0}
+.tools select{flex:0 1 260px;min-width:0}
+.tools select option{color:#13262B}
+.found{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.found button{font:500 12px var(--sans);background:transparent;color:var(--void-ink);border:1px solid rgba(225,180,106,.5);border-radius:999px;padding:4px 10px;cursor:pointer}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:10px;font-size:12px;color:var(--void-muted)}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(231,238,236,.16);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0;max-height:640px;overflow:auto}
+.card h3{font:600 22px/1.15 var(--display);color:var(--void-ink)}
+.card .lay{font:500 12px var(--mono);color:var(--star-remoto);letter-spacing:.04em}
+.card p{color:var(--void-ink);font-size:14px}
+.card .k{font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--void-muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 11px var(--mono);padding:2px 8px;border-radius:4px;background:rgba(127,196,201,.16);color:var(--void-ink)}
+.chip.g{background:rgba(225,180,106,.2)}
+.card ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:4px;font-size:13px}
+.card li{color:var(--void-muted)}
+.card li button{font:500 13px var(--sans);background:none;border:0;padding:0;color:var(--star-local);text-decoration:underline;text-underline-offset:3px;cursor:pointer;text-align:left}
+.card li b{font:500 12px var(--mono);color:var(--star-remoto);font-weight:500;margin-right:6px}
+.links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:16px;font-size:13px}
+.links a{color:var(--star-local)}
+
+/* ---------- painel de leitura ---------- */
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:8px;scrollbar-width:none}
+nav.tabs a{font:500 13px var(--sans);text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:999px;white-space:nowrap}
+nav.tabs a:hover{color:var(--ink);background:var(--aura-tint)}
+main{padding-block:28px 72px}
+main .wrap{display:flex;flex-direction:column;gap:44px}
+section{display:flex;flex-direction:column;gap:12px;scroll-margin-top:64px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th{text-align:left;font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);background:var(--surface)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.f{font-weight:600}
+td .old{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.pill{font:500 11px var(--mono);letter-spacing:.04em;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.pill.ok{background:var(--ok-tint);color:var(--ok)} .pill.cmd{background:var(--gold-tint);color:var(--gold-ink)} .pill.no{background:var(--off-tint);color:var(--off)}
+.pill.feita{background:var(--ok-tint);color:var(--ok)} .pill.comecada{background:var(--gold-tint);color:var(--gold-ink)} .pill.proxima{background:var(--aura-tint);color:var(--aura)} .pill.nada{background:var(--paper);color:var(--muted);border:1px solid var(--line)}
+.meter{display:flex;height:10px;border-radius:5px;overflow:hidden;background:var(--line)}
+.meter i{display:block;height:100%}
+.meter .a{background:var(--ok)} .meter .b{background:var(--gold)} .meter .c{background:var(--off)}
+.mlegend{display:flex;flex-wrap:wrap;gap:4px 16px;font:500 13px var(--mono);color:var(--muted);font-variant-numeric:tabular-nums}
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.step{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.step .n{font:600 24px/1 var(--display);color:var(--gold)}
+.step p{font-size:13px;color:var(--muted)}
+.road{display:flex;flex-direction:column;gap:2px}
+details.ph{border-bottom:1px solid var(--line)}
+details.ph summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:34px minmax(0,1fr) minmax(80px,30%) 64px;gap:10px;align-items:center;padding:8px 2px}
+details.ph summary::-webkit-details-marker{display:none}
+@media(max-width:620px){details.ph summary{grid-template-columns:30px minmax(0,1fr) 56px}.ph .bar{display:none}}
+.ph .i{font:500 12px var(--mono);color:var(--gold-ink);font-variant-numeric:tabular-nums}
+.ph .t{font-weight:500;min-width:0}
+.ph .t small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.ph .bar{height:8px;border-radius:4px;background:var(--aura-tint);overflow:hidden}
+.ph .bar i{display:block;height:100%;background:var(--aura)}
+.ph.nuc .bar i{background:var(--gold)}
+.ph.nuc .t{color:var(--gold-ink)}
+.ph .h{font:500 12px var(--mono);color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.ph ol{margin:0 0 12px;padding-left:44px;font-size:14px;display:flex;flex-direction:column;gap:3px}
+.ph ol li::marker{font:500 12px var(--mono);color:var(--gold-ink)}
+.tag{font:500 11px var(--mono);padding:1px 6px;border-radius:4px;background:var(--gold-tint);color:var(--gold-ink);margin-left:6px;white-space:nowrap}
+.gaps{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.gap{border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.gap .big{font:600 30px/1 var(--display);color:var(--aura);font-variant-numeric:tabular-nums}
+.gap ul{margin:0;padding-left:18px;font-size:13px;color:var(--muted);display:flex;flex-direction:column;gap:2px;max-height:220px;overflow:auto}
+.filter{font:500 14px var(--sans);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:8px 12px;min-height:40px;max-width:360px;width:100%}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<header class="sky gut">
+  <div class="wrap">
+    <div class="eyebrow">Grupo AMtech Digital · setup inteiro, conectado · ADR 0009</div>
+    <h1>Núcleo <em>AMtech</em></h1>
+    <p class="lede">Cada estrela é uma ferramenta, um serviço ou uma peça do setup; cada órbita, uma camada, do hardware no centro até o público na borda. Toque numa estrela para ver o que ela faz, com quem conversa e em que passo do roteiro ela entra.</p>
+    <div class="nums" id="nums"></div>
+    <div class="stage">
+      <div class="orbit">
+        <canvas id="c" role="img" aria-label="Constelação dos blocos do setup por camada"></canvas>
+        <div class="tools">
+          <label for="q" class="eyebrow" hidden>Buscar</label>
+          <input id="q" type="search" placeholder="Buscar: Kamal, garimpo, backup, Chatwoot…" autocomplete="off">
+          <label for="lay" hidden>Camada</label>
+          <select id="lay"><option value="">Todas as camadas</option></select>
+        </div>
+        <div class="found" id="found" aria-live="polite"></div>
+        <div class="legend">
+          <span><i style="background:var(--star-local)"></i>Local</span>
+          <span><i style="background:var(--star-remoto)"></i>Remoto (nuvem ou serviço)</span>
+          <span><i style="background:var(--star-fisico)"></i>Físico</span>
+          <span><i style="border:1.5px solid var(--void-muted)"></i>Futuro</span>
+        </div>
+      </div>
+      <aside class="card" id="card" aria-live="polite"></aside>
+    </div>
+    <div class="links">
+      <a href="https://claude.ai/artifact/CJ27fg9sycvhqZ2s9GSbjd" target="_top">Implantação (marcar o progresso)</a>
+      <a href="https://claude.ai/artifact/4Ze2J4Y1oKgAkjuQmbAAG1" target="_top">Ecossistema</a>
+      <a href="https://claude.ai/artifact/BTUyCQfojw6cngvR5W5oAB" target="_top">Mapa</a>
+      <a href="https://claude.ai/artifact/Mbj1yj6LRmUnf3SJLrTfaB" target="_top">Portfólio de rendas</a>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs gut" aria-label="Seções">
+  <div class="wrap">
+    <a href="#produto">Para que serve</a><a href="#hoje">O que já roda sozinho</a><a href="#fases">Fases do núcleo</a>
+    <a href="#trocas">Principal e reserva</a><a href="#autonomia">Autonomia</a><a href="#roteiro">Roteiro</a><a href="#falta">O que falta</a>
+  </div>
+</nav>
+
+<main class="gut">
+  <div class="wrap">
+    <section id="produto">
+      <div class="eyebrow">O produto</div>
+      <h2>Mais renda, menos horas suas</h2>
+      <p class="lede">O núcleo trabalha para cada frente do grupo e, com os adaptadores de negócio, vira o produto de automação que a empresa de TI vende para pequenos negócios.</p>
+      <div class="tbl"><table id="tProduto"><thead><tr><th>Empresa ou frente</th><th>O núcleo faz sozinho</th><th>Fica com você</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section id="hoje">
+      <div class="eyebrow">Situação real</div>
+      <h2>O que já roda sozinho</h2>
+      <div class="meter" id="mHoje" aria-hidden="true"></div>
+      <div class="mlegend" id="lHoje"></div>
+      <div class="tbl"><table id="tHoje"><thead><tr><th>Função</th><th>Situação</th><th>O que falta</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section id="fases">
+      <div class="eyebrow">Núcleo AMtech · 9 fases</div>
+      <h2>Da fundação ao teste do sistema inteiro</h2>
+      <div class="steps" id="sNucleo"></div>
+    </section>
+
+    <section id="trocas">
+      <div class="eyebrow">ADR 0008</div>
+      <h2>A melhor ferramenta para cada função</h2>
+      <p class="lede">Nenhuma ferramenta ficou de fora: cada função tem uma principal e, quando faz sentido, uma reserva que só sobe quando o papel dela aparece.</p>
+      <label for="fTroca" hidden>Filtrar</label>
+      <input id="fTroca" class="filter" type="search" placeholder="Filtrar por função ou ferramenta" autocomplete="off">
+      <h3>Trocas: a nova virou principal</h3>
+      <div class="tbl"><table id="tTrocas"><thead><tr><th>Função</th><th>Agora</th><th>Reserva</th><th>Por quê</th></tr></thead><tbody></tbody></table></div>
+      <h3>Mantidas: a atual continua melhor</h3>
+      <div class="tbl"><table id="tMantidas"><thead><tr><th>Função</th><th>Principal</th><th>A sugestão entra como</th><th>Por quê</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section id="autonomia">
+      <div class="eyebrow">Política de autonomia</div>
+      <h2>Até onde o setup age sem você</h2>
+      <p class="lede">Publicar, enviar em seu nome, cobrar, comprar, assinar e digitar senha param sempre no seu toque no celular.</p>
+      <div class="tbl"><table id="tAuto"><thead><tr><th>Área</th><th>Automático</th><th>Para no seu ok</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
+    <section id="roteiro">
+      <div class="eyebrow">Implantação</div>
+      <h2>O roteiro inteiro, fase por fase</h2>
+      <p class="lede">A barra é o tempo de trabalho da fase; em dourado, as fases do núcleo e da empresa solo. Toque numa fase para ver os passos.</p>
+      <div class="road" id="road"></div>
+    </section>
+
+    <section id="falta">
+      <div class="eyebrow">Lacunas</div>
+      <h2>O que falta para tudo funcionar</h2>
+      <div class="gaps" id="gaps"></div>
+    </section>
+  </div>
+</main>
+
+<script>
+const D=/*DADOS*/null;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const norm=s=>String(s).normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const B=Object.fromEntries(D.blocos.map(b=>[b.id,b]));
+const viz={};D.conexoes.forEach(([a,b,r])=>{(viz[a]=viz[a]||[]).push([b,r,"→"]);(viz[b]=viz[b]||[]).push([a,r,"←"]);});
+const horas=D.fases.reduce((s,f)=>s+f.h,0);
+
+/* ---------- números ---------- */
+$("#nums").innerHTML=[[D.blocos.length,"blocos"],[D.conexoes.length,"conexões"],[D.camadas.length,"camadas"],[D.fases.length,"fases"],[D.passos.length,"passos"],[Math.round(horas),"horas de trabalho"],[D.ofertas.total,"ofertas ("+D.ofertas.agora+" agora)"]]
+  .map(([v,k])=>`<span><b>${v}</b> ${k}</span>`).join("");
+
+/* ---------- constelação ---------- */
+const cv=$("#c"),cx=cv.getContext("2d");
+const reduz=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let W=0,H=0,dpr=1,t0=performance.now(),sel=null,hover=null,filtro=null,camada="";
+const porCamada=D.camadas.map(()=>[]);D.blocos.forEach(b=>porCamada[b.c].push(b));
+const N=D.camadas.length;
+function tamanho(){const r=cv.getBoundingClientRect();dpr=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0);}
+function posicoes(t){
+  const ox=W/2,oy=H/2,rx=W*.47,ry=H*.46,r0=.13;
+  porCamada.forEach((lista,c)=>{
+    const anel=(N-1-c)/(N-1), f=r0+(1-r0)*anel;
+    const giro=reduz?0:(t/1000)*(c%2?1:-1)*(0.006+0.004*(c%3));
+    lista.forEach((b,j)=>{const a=j/lista.length*Math.PI*2+c*2.399+giro;b.x=ox+Math.cos(a)*rx*f;b.y=oy+Math.sin(a)*ry*f;});
+  });
+}
+function cor(b){return b.t==="remoto"?css("--star-remoto"):b.t==="fisico"?css("--star-fisico"):css("--star-local");}
+function aceso(b){
+  if(camada!==""&&b.c!==+camada)return false;
+  if(filtro&&!filtro.has(b.id))return false;
+  if(sel&&b.id!==sel&&!(viz[sel]||[]).some(v=>v[0]===b.id))return false;
+  return true;
+}
+function desenha(t){
+  if(!W){tamanho();}
+  posicoes(t);
+  cx.clearRect(0,0,W,H);
+  const ox=W/2,oy=H/2,rx=W*.47,ry=H*.46;
+  cx.lineWidth=1;
+  for(let c=0;c<N;c++){const f=.13+.87*((N-1-c)/(N-1));cx.strokeStyle=(camada!==""&&c===+camada)?"rgba(225,180,106,.45)":"rgba(231,238,236,.06)";cx.beginPath();cx.ellipse(ox,oy,rx*f,ry*f,0,0,Math.PI*2);cx.stroke();}
+  const foco=sel||hover;
+  if(foco&&viz[foco]){const a=B[foco];cx.strokeStyle=css("--filament");cx.globalAlpha=.75;cx.lineWidth=1.2;
+    viz[foco].forEach(([o])=>{const b=B[o];if(!b)return;const mx=(a.x+b.x)/2+(oy-(a.y+b.y)/2)*.18,my=(a.y+b.y)/2+((a.x+b.x)/2-ox)*.18;cx.beginPath();cx.moveTo(a.x,a.y);cx.quadraticCurveTo(mx,my,b.x,b.y);cx.stroke();});
+    cx.globalAlpha=1;}
+  const pulso=reduz?1:1+.08*Math.sin(t/700);
+  const g=cx.createRadialGradient(ox,oy,0,ox,oy,Math.min(W,H)*.09*pulso);g.addColorStop(0,"rgba(225,180,106,.95)");g.addColorStop(.35,"rgba(225,180,106,.35)");g.addColorStop(1,"rgba(225,180,106,0)");
+  cx.fillStyle=g;cx.beginPath();cx.arc(ox,oy,Math.min(W,H)*.09*pulso,0,Math.PI*2);cx.fill();
+  cx.fillStyle=css("--void");cx.font="600 "+Math.max(11,Math.min(W,H)*.026)+"px "+css("--mono");cx.textAlign="center";cx.textBaseline="middle";cx.fillText("núcleo",ox,oy);
+  const r=Math.max(2.2,Math.min(W,H)/260);
+  D.blocos.forEach(b=>{const on=aceso(b),destaque=b.id===foco;cx.globalAlpha=on?1:.16;const rr=destaque?r*2.4:r;cx.beginPath();cx.arc(b.x,b.y,rr,0,Math.PI*2);
+    if(b.f){cx.strokeStyle=cor(b);cx.lineWidth=1.2;cx.stroke();}else{cx.fillStyle=cor(b);cx.fill();}});
+  cx.globalAlpha=1;
+  if(foco){const b=B[foco];cx.font="500 12px "+css("--sans");cx.textAlign=b.x>ox?"right":"left";cx.fillStyle=css("--void-ink");cx.fillText(b.r,b.x+(b.x>ox?-10:10),b.y-12);}
+  if(!reduz)requestAnimationFrame(desenha);
+}
+function perto(e){const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let m=null,d=14*14;D.blocos.forEach(b=>{if(!aceso(b)&&sel)return;const q=(b.x-x)**2+(b.y-y)**2;if(q<d){d=q;m=b.id;}});return m;}
+cv.addEventListener("pointermove",e=>{hover=perto(e);cv.style.cursor=hover?"pointer":"crosshair";if(reduz)desenha(0);});
+cv.addEventListener("pointerleave",()=>{hover=null;if(reduz)desenha(0);});
+cv.addEventListener("click",e=>{const id=perto(e);escolher(id&&id!==sel?id:null);});
+addEventListener("resize",()=>{tamanho();if(reduz)desenha(0);});
+
+function quando(b){return b.o.slice(0,6).map(i=>{const [n,t,fi]=D.passos[i];return `<li><b>${n}</b>${esc(t)} <span>· ${esc(D.fases[fi].q)}</span></li>`;}).join("")+(b.o.length>6?`<li>e mais ${b.o.length-6} passos</li>`:"");}
+function escolher(id){
+  sel=id;const c=$("#card");
+  if(!id){c.innerHTML=`<div class="k">Núcleo AMtech</div><h3>${D.blocos.length} peças, uma conversa só</h3><p>O núcleo no centro guarda os eventos, o conhecimento, as tarefas e a auditoria de tudo; as ferramentas são peças trocáveis em volta dele.</p><div class="k">Comece por</div><ul>${["nucleo","garimpo","triagem","kamal","chatwoot","glitchtip"].filter(x=>B[x]).map(x=>`<li><button data-id="${x}">${esc(B[x].r)}</button></li>`).join("")}</ul>`;}
+  else{const b=B[id],vs=viz[id]||[];
+    c.innerHTML=`<div class="lay">${String(N-b.c).padStart(2,"0")} · ${esc(D.camadas[b.c].t)}</div><h3>${esc(b.r)}</h3>
+    <div class="chips"><span class="chip">${b.t}</span>${b.f?'<span class="chip g">futuro</span>':'<span class="chip">no setup</span>'}${b.k?'<span class="chip g">precisa de conta</span>':""}</div>
+    <p>${esc(b.d)}</p><div class="k">Conversa com (${vs.length})</div><ul>${vs.map(([o,r,dir])=>B[o]?`<li>${dir} <button data-id="${o}">${esc(B[o].r)}</button> · ${esc(r)}</li>`:"").join("")}</ul>
+    <div class="k">Entra no roteiro</div><ul>${quando(b)}</ul>`;}
+  c.querySelectorAll("button[data-id]").forEach(x=>x.onclick=()=>escolher(x.dataset.id));
+  if(reduz)desenha(0);
+}
+D.camadas.forEach((c,i)=>{const o=document.createElement("option");o.value=i;o.textContent=String(N-i).padStart(2,"0")+" · "+c.t;$("#lay").appendChild(o);});
+$("#lay").onchange=e=>{camada=e.target.value;if(reduz)desenha(0);};
+$("#q").oninput=e=>{const q=norm(e.target.value.trim());const f=$("#found");
+  if(q.length<2){filtro=null;f.innerHTML="";}else{const hits=D.blocos.filter(b=>norm(b.r+" "+b.d+" "+b.id).includes(q));filtro=new Set(hits.map(b=>b.id));
+    f.innerHTML=hits.slice(0,14).map(b=>`<button data-id="${b.id}">${esc(b.r)}</button>`).join("")+(hits.length>14?`<span class="eyebrow">+${hits.length-14}</span>`:"")+(hits.length?"":`<span class="eyebrow" style="color:var(--void-muted)">Nada com esse nome</span>`);
+    f.querySelectorAll("button").forEach(x=>x.onclick=()=>escolher(x.dataset.id));}
+  if(reduz)desenha(0);};
+tamanho();escolher(null);requestAnimationFrame(desenha);
+
+/* ---------- tabelas ---------- */
+const linhas=(sel,rows,fn)=>{$(sel+" tbody").innerHTML=rows.map(fn).join("");};
+linhas("#tProduto",D.produto,r=>`<tr><td class="f">${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`);
+const estado=s=>{const n=norm(s);return n.includes("sozinho")?["ok","sozinho"]:n.includes("comando")?["cmd","um comando"]:["no","não existe"];};
+linhas("#tHoje",D.hoje,r=>{const [c,l]=estado(r[1]);return `<tr><td class="f">${esc(r[0])}</td><td><span class="pill ${c}">${l}</span></td><td>${esc(r[2])}</td></tr>`;});
+const cont={ok:0,cmd:0,no:0};D.hoje.forEach(r=>cont[estado(r[1])[0]]++);const tot=D.hoje.length;
+$("#mHoje").innerHTML=`<i class="a" style="width:${cont.ok/tot*100}%"></i><i class="b" style="width:${cont.cmd/tot*100}%"></i><i class="c" style="width:${cont.no/tot*100}%"></i>`;
+$("#lHoje").innerHTML=`<span>${cont.ok} sozinho</span><span>${cont.cmd} com um comando</span><span>${cont.no} ainda não existem</span>`;
+$("#sNucleo").innerHTML=D.nucleo.map(r=>{const s=norm(r[3]);const [c,l]=s.includes("feita")?["feita","feita"]:s.includes("comecada")?["comecada","começada"]:s.includes("proxima")?["proxima","próxima"]:["nada","a fazer"];
+  return `<div class="step"><div class="n">${esc(r[0])}</div><h3>${esc(r[1])}</h3><p>${esc(r[2])}</p><div><span class="pill ${c}">${l}</span></div></div>`;}).join("");
+function trocas(){const q=norm($("#fTroca").value.trim());const ok=r=>!q||norm(r.join(" ")).includes(q);
+  linhas("#tTrocas",D.trocas.filter(ok),r=>`<tr><td class="f">${esc(r[0])}</td><td><span class="old">${esc(r[1])}</span><br><b>${esc(r[2])}</b></td><td>${esc(r[3])}</td><td>${esc(r[4])}</td></tr>`);
+  linhas("#tMantidas",D.mantidas.filter(ok),r=>`<tr><td class="f">${esc(r[0])}</td><td><b>${esc(r[1])}</b></td><td>${esc(r[2])}</td><td>${esc(r[3])}</td></tr>`);}
+$("#fTroca").oninput=trocas;trocas();
+linhas("#tAuto",D.autonomia,r=>`<tr><td class="f">${esc(r[0])}</td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`);
+
+/* ---------- roteiro ---------- */
+const hmax=Math.max(...D.fases.map(f=>f.h));
+const porFase=D.fases.map(()=>[]);D.passos.forEach(p=>porFase[p[2]].push(p));
+$("#road").innerHTML=D.fases.map((f,i)=>`<details class="ph${f.nuc?" nuc":""}"><summary><span class="i">${String(i).padStart(2,"0")}</span><span class="t">${esc(f.t)}${f.g?'<span class="tag">com gatilho</span>':""}${f.compra?`<span class="tag">${f.compra} compra</span>`:""}${f.pago?`<span class="tag">${f.pago} pago</span>`:""}<small>${esc(f.q)}</small></span><span class="bar"><i style="width:${f.h/hmax*100}%"></i></span><span class="h">${f.n} · ${f.h} h</span></summary><ol>${porFase[i].map(p=>`<li>${esc(p[1])}</li>`).join("")}</ol></details>`).join("");
+
+/* ---------- o que falta ---------- */
+const futuros=D.blocos.filter(b=>b.f);
+const nucFalta=D.nucleo.filter(r=>!norm(r[3]).includes("feita"));
+const naoExiste=D.hoje.filter(r=>estado(r[1])[0]==="no");
+const gat=D.fases.filter(f=>f.g);
+const nCompra=D.fases.reduce((s,f)=>s+f.compra,0),nPago=D.fases.reduce((s,f)=>s+f.pago,0);
+const gap=(n,t,txt,itens)=>`<div class="gap"><div class="big">${n}</div><h3>${esc(t)}</h3><p class="lede" style="font-size:13px">${esc(txt)}</p>${itens?`<ul>${itens.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}</div>`;
+$("#gaps").innerHTML=[
+  gap(nucFalta.length,"fases do núcleo por fazer","A autonomia completa depende delas, nesta ordem.",nucFalta.map(r=>r[0]+" · "+r[1])),
+  gap(naoExiste.length,"funções que ainda não rodam sozinhas","Cada uma tem a fase do núcleo que a resolve.",naoExiste.map(r=>r[0]+" → "+r[2])),
+  gap(futuros.length,"peças marcadas como futuro","Estão no desenho e no roteiro, com data ou gatilho.",futuros.map(b=>b.r)),
+  gap(nCompra+nPago,"passos que pedem dinheiro",`${nCompra} pedem compra e ${nPago} pedem um serviço pago; entram pela cascata, quando uma renda pagar.`,D.fases.filter(f=>f.compra||f.pago).map(f=>`${f.t} (${f.compra+f.pago})`)),
+  gap(gat.length,"fases que esperam um gatilho","Não começam por data: começam quando o gatilho acontecer.",gat.map(f=>f.t)),
+].join("");
+</script>

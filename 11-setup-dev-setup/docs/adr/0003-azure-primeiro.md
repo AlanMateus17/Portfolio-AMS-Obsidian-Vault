@@ -16,3 +16,5 @@ Primeiro deploy real no Azure (App Service ou Container Apps, PostgreSQL, Key Va
 - Melhor integração com .NET e com empresas que usam o ecossistema Microsoft.
 - A AWS entra em seguida para cobrir o mercado maior.
 - Infra por código permite destruir e recriar tudo, e vira material de portfólio e de aula.
+
+> Atualização (2026-11-01): o AZ-204 deixou de ser agendável em 31/07/2026; o caminho de desenvolvedor passa a ser o AI-200. Ver docs/certificacoes.md.

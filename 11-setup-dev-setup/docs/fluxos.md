@@ -519,3 +519,102 @@ flowchart LR
 7. **[Aprovação no celular](camadas/21-mkt.md#aprov)**: Você aprova.
 8. **[n8n](camadas/21-mkt.md#n8n)**: Os posts levam o público até a página.
 9. **[Banco de métricas (PostgreSQL)](camadas/21-mkt.md#metrics)**: A primeira venda chega ao banco e ao painel.
+
+## Um teste de intrusão, do contrato ao reteste
+
+```mermaid
+flowchart LR
+  s0["1. Guarda de escopo (autorização)"]
+  s1["2. Kit de pentest (Burp, ZAP, nmap…)"]
+  s2["3. Relatório de pentest (CVSS)"]
+  s3["4. AMtech Segurança (pentest)"]
+  s0 --> s1
+  s1 --> s2
+  s2 --> s3
+```
+
+1. **[Guarda de escopo (autorização)](camadas/02-seg.md#escopo)**: O termo assinado vira escopo.toml; a guarda confere assinatura, janela e alvos.
+2. **[Kit de pentest (Burp, ZAP, nmap…)](camadas/02-seg.md#kitpent)**: Os testes rodam pelo escopo.py rodar, só nos alvos liberados, e cada comando fica registrado.
+3. **[Relatório de pentest (CVSS)](camadas/02-seg.md#relpent)**: Os achados viram relatório com nota CVSS calculada e o registro de atividades no apêndice.
+4. **[AMtech Segurança (pentest)](camadas/16-neg.md#nseg)**: A AMtech Segurança entrega, combina as correções e faz o reteste.
+
+## Engenharia reversa com IA (estudo e aula)
+
+```mermaid
+flowchart LR
+  s0["1. Compiler Explorer (godbolt)"]
+  s1["2. Lab de engenharia reversa"]
+  s2["3. GhidraMCP (IA no Ghidra)"]
+  s3["4. Servidores MCP"]
+  s0 --> s1
+  s1 --> s2
+  s2 --> s3
+```
+
+1. **[Compiler Explorer (godbolt)](camadas/14-est.md#godbolt)**: Na aula, o aluno vê o C virar assembly no Compiler Explorer.
+2. **[Lab de engenharia reversa](camadas/02-seg.md#relab)**: O binário que ele mesmo compilou (ou um crackme) abre no Ghidra.
+3. **[GhidraMCP (IA no Ghidra)](camadas/02-seg.md#ghidramcp)**: O GhidraMCP entrega as funções ao Claude, que renomeia e explica.
+4. **[Servidores MCP](camadas/05-ia.md#mcp)**: Tudo passa pelos servidores MCP com permissão limitada.
+
+## Um comando de voz até a tomada
+
+```mermaid
+flowchart LR
+  s0["1. Satélites de voz (ESP32-S3)"]
+  s1["2. ESPHome"]
+  s2["3. Home Assistant"]
+  s3["4. Mosquitto (MQTT)"]
+  s4["5. Zigbee2MQTT"]
+  s5["6. Coordenador Zigbee (USB)"]
+  s6["7. Tomadas, sensores e atuadores"]
+  s0 --> s1
+  s1 --> s2
+  s2 --> s3
+  s3 --> s4
+  s4 --> s5
+  s5 --> s6
+```
+
+1. **[Satélites de voz (ESP32-S3)](camadas/01-hw.md#satvoz)**: O satélite do cômodo ouve "hey jarvis" e grava o pedido.
+2. **[ESPHome](camadas/09-cnt.md#esphome)**: O firmware ESPHome manda o áudio ao Home Assistant.
+3. **[Home Assistant](camadas/01-hw.md#ha)**: O Assist transcreve (Whisper), resolve a frase ou pergunta ao Claude, e confere a política.
+4. **[Mosquitto (MQTT)](camadas/09-cnt.md#mqtt)**: O comando sai pelo MQTT.
+5. **[Zigbee2MQTT](camadas/09-cnt.md#z2m)**: O Zigbee2MQTT traduz para o rádio.
+6. **[Coordenador Zigbee (USB)](camadas/01-hw.md#zbdongle)**: O coordenador envia pelo Zigbee.
+7. **[Tomadas, sensores e atuadores](camadas/01-hw.md#dispcasa)**: A tomada desliga, e o Piper confirma em voz.
+
+## Do modelo BIM à estimativa da obra
+
+```mermaid
+flowchart LR
+  s0["1. QGIS (terreno e mapas)"]
+  s1["2. Bonsai + IfcOpenShell (BIM aberto)"]
+  s2["3. Resumo de IFC (ifc_resumo.py)"]
+  s3["4. AM Obra (diário, medição, compras)"]
+  s0 --> s1
+  s1 --> s2
+  s2 --> s3
+```
+
+1. **[QGIS (terreno e mapas)](camadas/03-win.md#qgis)**: O terreno sai do QGIS.
+2. **[Bonsai + IfcOpenShell (BIM aberto)](camadas/03-win.md#bonsai)**: A casa é modelada em IFC no Bonsai.
+3. **[Resumo de IFC (ifc_resumo.py)](camadas/23-oper.md#ifcresumo)**: O resumo confere pavimentos, elementos e quantidades.
+4. **[AM Obra (diário, medição, compras)](camadas/11-app.md#nobra)**: O AM Obra cruza as quantidades com os preços do SINAPI-MG do mês: estimativa para o profissional revisar.
+
+## Da engenharia reversa ao pentest, no seu laboratório
+
+```mermaid
+flowchart LR
+  s0["1. Lab de engenharia reversa"]
+  s1["2. Lab de alvo isolado (rede sem internet)"]
+  s2["3. Kit de pentest (Burp, ZAP, nmap…)"]
+  s3["4. Relatório de pentest (CVSS)"]
+  s0 --> s1
+  s1 --> s2
+  s2 --> s3
+```
+
+1. **[Lab de engenharia reversa](camadas/02-seg.md#relab)**: O programa abre no Ghidra ou no ILSpy: onde confere senha, que dados guarda, com quem fala na rede.
+2. **[Lab de alvo isolado (rede sem internet)](camadas/02-seg.md#labalvo)**: Uma cópia dele roda na rede isolada, com foto do estado limpo.
+3. **[Kit de pentest (Burp, ZAP, nmap…)](camadas/02-seg.md#kitpent)**: O atacante testa os pontos que a engenharia reversa apontou.
+4. **[Relatório de pentest (CVSS)](camadas/02-seg.md#relpent)**: Os achados viram relatório com CVSS; se o software for de terceiro, aviso em particular ao projeto.

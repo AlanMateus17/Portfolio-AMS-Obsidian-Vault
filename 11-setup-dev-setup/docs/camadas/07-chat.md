@@ -31,6 +31,7 @@ flowchart LR
   end
   subgraph L_prod["Produtos (o que você vende)"]
     n_curso["Mini-curso Lógica de Programação"]
+    n_esteira["Esteira de sites (issue → PR → ar)"]
   end
   subgraph L_est["Estudo e carreira"]
     n_ghed["GitHub Education"]
@@ -83,6 +84,7 @@ flowchart LR
   n_gcode -->|"mesmos repos"| n_gh
   n_perp -->|"pesquisa com fontes"| n_obsd
   n_copi -->|"autocompletar"| n_vsc
+  n_copi -->|"abre o PR"| n_esteira
   n_ghed -->|"Copilot Pro"| n_copi
   classDef desta fill:#e2ecec,stroke:#0e3a45,color:#13262b
   class n_capp2,n_gpt,n_gem,n_nblm,n_grok,n_ds,n_codex,n_gcode,n_perp,n_copi desta
@@ -93,15 +95,15 @@ flowchart LR
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
 | [Claude (app)](#capp2) | Remoto · precisa de conta | Seu assistente principal (assinatura paga): planejamento, escrita longa, revisão e análise de documentos. | passo 9.1 · Semana 4 · nov/2026 |
-| [ChatGPT](#gpt) | Remoto · precisa de conta | Assistente geral da OpenAI: segunda opinião em código e texto, imagens e conversa por voz. O plano grátis basta. | passo 9.4 · Semana 4 · nov/2026 |
-| [Gemini (pago)](#gem) | Remoto · precisa de conta | Sua segunda assinatura paga. Ligado a Gmail, Drive, Docs e YouTube: pesquisa aprofundada, resumo de vídeos longos e limites maiores no NotebookLM. Use para tudo que vive no ecossistema Google. | passo 9.4 · Semana 4 · nov/2026 |
-| [NotebookLM](#nblm) | Remoto · precisa de conta | Do Google: você envia PDFs (livro do VHSlins, apostilas, editais) e ele responde só com base neles, com citações. Ótimo para estudar e preparar aulas. | passo 6.7 · Semana 2 · nov/2026 |
+| [ChatGPT](#gpt) | Remoto · precisa de conta | Assistente geral da OpenAI: segunda opinião em código e texto, imagens e conversa por voz. O plano grátis basta. | passo 9.4 · Semana 4 · nov/2026; passo 27.8 · Semana 6 · nov/2026 a dez/2026 |
+| [Gemini (pago)](#gem) | Remoto · precisa de conta | Sua segunda assinatura paga. Ligado a Gmail, Drive, Docs e YouTube: pesquisa aprofundada, resumo de vídeos longos e limites maiores no NotebookLM. Use para tudo que vive no ecossistema Google. | passo 9.4 · Semana 4 · nov/2026; passo 27.8 · Semana 6 · nov/2026 a dez/2026 |
+| [NotebookLM](#nblm) | Remoto · precisa de conta | Do Google: você envia PDFs (livro do VHSlins, apostilas, editais) e ele responde só com base neles, com citações. Ótimo para estudar e preparar aulas. | passo 6.7 · Semana 2 · nov/2026; passo 27.9 · Semana 6 · nov/2026 a dez/2026 |
 | [Grok](#grok) | Remoto · precisa de conta | Assistente da xAI, ligado ao X. Útil para acompanhar notícias e tendências em tempo real. Use a versão grátis. | passo 9.4 · Semana 4 · nov/2026 |
 | [DeepSeek](#ds) | Remoto · precisa de conta | Modelo chinês forte em raciocínio e código, com chat grátis. Os dados enviados ficam em servidores na China: nada de dados de clientes, alunos ou da empresa. Para uso sensível, rode a versão pequena no Ollama. | passo 9.4 · Semana 4 · nov/2026 |
-| [Codex (OpenAI)](#codex) | Remoto · precisa de conta | Agente de código da OpenAI (terminal, VS Code e nuvem). Está incluído até no plano grátis do ChatGPT, com limite. Use como segunda opinião ao Claude Code, nos mesmos repositórios. | passo 9.4 · Semana 4 · nov/2026 |
-| [Agentes de código do Google](#gcode) | Remoto · precisa de conta | Jules e o CLI do Google. As regras mudaram em 2026: o CLI deixou de ser grátis para contas pessoais. Confira o que o seu plano do Gemini inclui antes de montar um fluxo em cima dele. | passo 9.4 · Semana 4 · nov/2026 |
+| [Codex (OpenAI)](#codex) | Remoto · precisa de conta | Agente de código da OpenAI (terminal, VS Code e nuvem). Vem no ChatGPT Go com limite baixo: reserva e segunda opinião, lendo o mesmo AGENTS.md. O Sites do ChatGPT não serve para clientes (proíbe comércio). | passo 9.4 · Semana 4 · nov/2026 |
+| [Agentes de código do Google](#gcode) | Remoto · precisa de conta | O Gemini CLI saiu do ar para contas pessoais sem licença paga em 18/06/2026; o substituto, Antigravity CLI, é fechado e tem acesso ampliado só no plano Pro. Nenhum fluxo do setup depende dele. | passo 9.4 · Semana 4 · nov/2026 |
 | [Perplexity](#perp) | Remoto · precisa de conta | Busca com fontes citadas. Bom para pesquisa de mercado e para checar fatos antes de publicar. | passo 9.4 · Semana 4 · nov/2026 |
-| [GitHub Copilot](#copi) | Remoto · precisa de conta | Autocompletar e chat dentro do VS Code. Professores verificados no GitHub Education ganham o plano Pro grátis. | passo 33.1 · Contínuo, desde a semana 2 |
+| [GitHub Copilot](#copi) | Remoto · precisa de conta | Autocompletar, chat e agente na nuvem: você atribui uma issue e ele abre um PR. Professores verificados no GitHub Education ganham o Pro grátis (1.500 créditos por mês). Motor da esteira de sites. | passo 28.1 · Semana 6 · nov/2026 a dez/2026; passo 28.3 · Semana 6 · nov/2026 a dez/2026 |
 
 <a id="capp2"></a>
 
@@ -131,7 +133,7 @@ Seu assistente principal (assinatura paga): planejamento, escrita longa, revisã
 
 Assistente geral da OpenAI: segunda opinião em código e texto, imagens e conversa por voz. O plano grátis basta.
 
-**Quando entra:** passo 9.4 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 9.4 · Semana 4 · nov/2026; passo 27.8 · Semana 6 · nov/2026 a dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -147,7 +149,7 @@ Assistente geral da OpenAI: segunda opinião em código e texto, imagens e conve
 
 Sua segunda assinatura paga. Ligado a Gmail, Drive, Docs e YouTube: pesquisa aprofundada, resumo de vídeos longos e limites maiores no NotebookLM. Use para tudo que vive no ecossistema Google.
 
-**Quando entra:** passo 9.4 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 9.4 · Semana 4 · nov/2026; passo 27.8 · Semana 6 · nov/2026 a dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -162,7 +164,7 @@ Sua segunda assinatura paga. Ligado a Gmail, Drive, Docs e YouTube: pesquisa apr
 
 Do Google: você envia PDFs (livro do VHSlins, apostilas, editais) e ele responde só com base neles, com citações. Ótimo para estudar e preparar aulas.
 
-**Quando entra:** passo 6.7 · Semana 2 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 6.7 · Semana 2 · nov/2026; passo 27.9 · Semana 6 · nov/2026 a dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -204,7 +206,7 @@ Modelo chinês forte em raciocínio e código, com chat grátis. Os dados enviad
 
 *Remoto · precisa de conta*
 
-Agente de código da OpenAI (terminal, VS Code e nuvem). Está incluído até no plano grátis do ChatGPT, com limite. Use como segunda opinião ao Claude Code, nos mesmos repositórios.
+Agente de código da OpenAI (terminal, VS Code e nuvem). Vem no ChatGPT Go com limite baixo: reserva e segunda opinião, lendo o mesmo AGENTS.md. O Sites do ChatGPT não serve para clientes (proíbe comércio).
 
 **Quando entra:** passo 9.4 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
 
@@ -219,7 +221,7 @@ Agente de código da OpenAI (terminal, VS Code e nuvem). Está incluído até no
 
 *Remoto · precisa de conta*
 
-Jules e o CLI do Google. As regras mudaram em 2026: o CLI deixou de ser grátis para contas pessoais. Confira o que o seu plano do Gemini inclui antes de montar um fluxo em cima dele.
+O Gemini CLI saiu do ar para contas pessoais sem licença paga em 18/06/2026; o substituto, Antigravity CLI, é fechado e tem acesso ampliado só no plano Pro. Nenhum fluxo do setup depende dele.
 
 **Quando entra:** passo 9.4 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
 
@@ -247,13 +249,14 @@ Busca com fontes citadas. Bom para pesquisa de mercado e para checar fatos antes
 
 *Remoto · precisa de conta*
 
-Autocompletar e chat dentro do VS Code. Professores verificados no GitHub Education ganham o plano Pro grátis.
+Autocompletar, chat e agente na nuvem: você atribui uma issue e ele abre um PR. Professores verificados no GitHub Education ganham o Pro grátis (1.500 créditos por mês). Motor da esteira de sites.
 
-**Quando entra:** passo 33.1 · Contínuo, desde a semana 2 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 28.1 · Semana 6 · nov/2026 a dez/2026; passo 28.3 · Semana 6 · nov/2026 a dez/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [VS Code](03-win.md#vsc) | Windows 11, apps e máquinas virtuais | autocompletar |
+| → envia para | [Esteira de sites (issue → PR → ar)](17-prod.md#esteira) | Produtos (o que você vende) | abre o PR |
 | ← recebe de | [GitHub Education](14-est.md#ghed) | Estudo e carreira | Copilot Pro |
 
 ---

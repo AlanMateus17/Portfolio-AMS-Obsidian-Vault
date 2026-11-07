@@ -1,0 +1,16 @@
+# Painéis de negócio sem programar (Metabase): perguntas sobre vendas, clientes e conteúdo em cima do banco de métricas.
+#   cd infra/dados && docker compose up -d   → http://localhost:3002
+name: amtech-dados
+services:
+  metabase:
+    image: metabase/metabase:latest
+    restart: unless-stopped
+    volumes:
+      - ${DADOS_DIR:-./dados}/metabase:/metabase-data
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+      JAVA_TIMEZONE: America/Sao_Paulo
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:3002:3000"

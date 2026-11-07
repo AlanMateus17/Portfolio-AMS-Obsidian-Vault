@@ -1,0 +1,11 @@
+# Réplica contínua do banco do PocketBase no Cloudflare R2 (custa centavos). Credenciais vêm do ambiente.
+dbs:
+  - path: /pb_data/data.db
+    replicas:
+      - type: s3
+        bucket: ${LITESTREAM_BUCKET}
+        path: pocketbase
+        endpoint: ${LITESTREAM_ENDPOINT}
+        region: auto
+        access-key-id: ${LITESTREAM_ACCESS_KEY_ID}
+        secret-access-key: ${LITESTREAM_SECRET_ACCESS_KEY}

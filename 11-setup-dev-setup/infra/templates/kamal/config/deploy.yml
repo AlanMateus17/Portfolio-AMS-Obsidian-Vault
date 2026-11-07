@@ -1,0 +1,47 @@
+# Kamal 2: deploy sem queda de um sistema AM numa VM, por SSH (ADR 0005).
+# Copie esta pasta para a raiz do sistema e troque os valores entre <>.
+# Rode no Ubuntu do WSL, na pasta do sistema: alanmateus@...$ kamal setup   (primeira vez) · kamal deploy · kamal rollback <versão>
+service: <am-sistema>
+image: <usuario-github>/<am-sistema>
+
+servers:
+  web:
+    - <ip-da-vm-no-tailscale>
+
+# O kamal-proxy pede o certificado HTTPS sozinho quando o DNS do domínio aponta para a VM.
+proxy:
+  ssl: true
+  host: <app.seudominio.com.br>
+  app_port: 8080
+  healthcheck:
+    path: /health
+
+registry:
+  server: ghcr.io
+  username: <usuario-github>
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+builder:
+  arch: amd64
+
+env:
+  clear:
+    ASPNETCORE_ENVIRONMENT: Production
+  secret:
+    - ConnectionStrings__Principal
+
+# PostgreSQL na mesma VM enquanto couber; backup diário pelo restic (fase Backup e segurança).
+accessories:
+  db:
+    image: postgres:17
+    host: <ip-da-vm-no-tailscale>
+    port: "127.0.0.1:5432:5432"
+    env:
+      secret:
+        - POSTGRES_PASSWORD
+    directories:
+      - data:/var/lib/postgresql/data
+
+ssh:
+  user: deploy

@@ -1,0 +1,116 @@
+# Orçamento do setup, só para desenvolver e testar protótipos. Copie para ~/financas (fora do GitHub):
+#   mkdir -p ~/financas && cp tools/custos/orcamento.example.toml ~/financas/orcamento.toml
+#   python3 tools/custos/orcamento.py ~/financas/orcamento.toml
+#
+# custo = valor mínimo em reais; custo_max = teto (deixe de fora se for valor fixo).
+# recorrente = true: é por mês (assinatura, GPU por hora). Sem isso, é compra única.
+# venda = true: é para VENDER um produto, não para desenvolver → fica fora do total.
+# etapa = 1 (começar agora), 2 (robótica importada), 3 (GPU). Os valores abaixo são estimativas: CONFIRME.
+
+[geral]
+ref_mes = "novembro/2026"
+
+# ---------------------------------------------------------------- software (quase tudo grátis fica de fora)
+[[item]]
+nome = "Claude Pro"
+categoria = "software"
+etapa = 1
+custo = 110
+recorrente = true
+
+[[item]]
+nome = "GPU por hora (treino de IA, com teto)"
+categoria = "software"
+etapa = 1
+custo = 0
+custo_max = 150
+recorrente = true
+
+# ---------------------------------------------------------------- hardware etapa 1 (começar)
+[[item]]
+nome = "Servidor da casa (mini PC N100)"
+categoria = "hardware"
+etapa = 1
+custo = 1000
+custo_max = 1800
+
+[[item]]
+nome = "Nobreak"
+categoria = "hardware"
+etapa = 1
+custo = 400
+custo_max = 700
+
+[[item]]
+nome = "2º NVMe + backup externo"
+categoria = "hardware"
+etapa = 1
+custo = 700
+custo_max = 1500
+
+[[item]]
+nome = "Coordenador Zigbee + kit casa (tomadas, sensores, fechadura)"
+categoria = "hardware"
+etapa = 1
+custo = 1000
+custo_max = 2300
+
+[[item]]
+nome = "Satélite de voz ESP32-S3 + câmera IP + leitor de hidrômetro"
+categoria = "hardware"
+etapa = 1
+custo = 450
+custo_max = 1100
+
+[[item]]
+nome = "Kit de campo (ESP32, LoRa, umidade, válvula, ultrassom, célula de carga)"
+categoria = "hardware"
+etapa = 1
+custo = 400
+custo_max = 900
+
+[[item]]
+nome = "Kit de robótica base (Arduino/ESP32/Pi, sensores)"
+categoria = "hardware"
+etapa = 1
+custo = 300
+custo_max = 800
+
+# ---------------------------------------------------------------- hardware etapa 2 (robótica importada)
+[[item]]
+nome = "Par de braços SO-101 + 2 câmeras USB (com impostos)"
+categoria = "hardware"
+etapa = 2
+custo = 2500
+custo_max = 4000
+
+[[item]]
+nome = "Reachy Mini (com impostos)"
+categoria = "hardware"
+etapa = 2
+custo = 4000
+custo_max = 6000
+
+[[item]]
+nome = "LeKiwi (base móvel)"
+categoria = "hardware"
+etapa = 2
+custo = 1500
+custo_max = 3000
+
+# ---------------------------------------------------------------- hardware etapa 3 (GPU)
+[[item]]
+nome = "GPU 12–16 GB (usada ou nova)"
+categoria = "hardware"
+etapa = 3
+custo = 1800
+custo_max = 4500
+
+# ---------------------------------------------------------------- exemplo de item que NÃO conta (venda)
+[[item]]
+nome = "Hospedagem de produção dos sistemas AM (quando vender)"
+categoria = "software"
+etapa = 3
+custo = 50
+recorrente = true
+venda = true

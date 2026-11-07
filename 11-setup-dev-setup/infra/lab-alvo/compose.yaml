@@ -1,0 +1,28 @@
+# Laboratório de alvo isolado: o software que você quer estudar roda numa rede SEM internet, só com o atacante.
+#   bash scripts/wsl/lab-alvo.sh subir                      # alvo padrão: Juice Shop
+#   ALVO_IMAGEM=minha-api:dev ALVO_PORTA=8080 bash scripts/wsl/lab-alvo.sh subir
+#   bash scripts/wsl/lab-alvo.sh verificar                  # prova que o atacante alcança o alvo e não alcança a internet
+#   bash scripts/wsl/lab-alvo.sh entrar                     # terminal do atacante (nmap, sqlmap, ffuf, nikto...)
+#   bash scripts/wsl/lab-alvo.sh limpar                     # apaga tudo, inclusive o que o ataque mudou no alvo
+#
+# A rede "alvo" é internal: nenhum dos dois sai para a internet e nada é publicado na rede de casa.
+# O alvo pode ser: software seu, código aberto, apps vulneráveis de propósito, ou sistema de cliente
+# com termo assinado. Nunca o servidor de verdade de outra empresa: aqui só roda cópia na sua máquina.
+name: lab-alvo
+
+services:
+  atacante:
+    build: ./atacante
+    image: amtech/lab-atacante:local
+    command: ["sleep", "infinity"]
+    hostname: atacante
+    networks: [alvo]
+
+  alvo:
+    image: ${ALVO_IMAGEM:-bkimminich/juice-shop:latest}
+    hostname: alvo
+    networks: [alvo]
+
+networks:
+  alvo:
+    internal: true

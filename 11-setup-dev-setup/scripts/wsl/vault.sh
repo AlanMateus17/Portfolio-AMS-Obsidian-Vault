@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
-# Cria o cofre do Obsidian em ~/dev/notas, organizado para estudar, guardar conhecimento e transformar em produto.
+# Prepara o cofre do Obsidian em ~/dev/notas. O padrão é o SEU vault (Portfolio-AMS-Obsidian-Vault): se a pasta não existe,
+# clona do GitHub; se já é o seu vault, só cria as pastas do Professor e da Escola Akita. --novo cria um cofre vazio do zero.
 # Seguro para rodar várias vezes: não apaga nem sobrescreve nota sua.
-#   bash scripts/wsl/vault.sh             # cria ou completa
+#   bash scripts/wsl/vault.sh             # clona o seu vault ou completa as pastas
+#   bash scripts/wsl/vault.sh --novo      # cofre novo, vazio, com as pastas modelo
 #   bash scripts/wsl/vault.sh --simular   # mostra o que faria
 #   bash scripts/wsl/vault.sh --pasta DIR
-# No Windows, abra no Obsidian a pasta \\wsl.localhost\Ubuntu-24.04\home\SEU_USUARIO\dev\notas
+# No Windows, abra no Obsidian a pasta \\wsl.localhost\<nome do seu Ubuntu>\home\SEU_USUARIO\dev\notas
 set -euo pipefail
 
-SIMULAR=0; V="$HOME/dev/notas"
+SIMULAR=0; NOVO=0; V="$HOME/dev/notas"; REPO_VAULT="AlanMateus17/Portfolio-AMS-Obsidian-Vault"
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --simular) SIMULAR=1 ;;
+    --novo) NOVO=1 ;;
     --pasta) V="${2:?informe a pasta}"; shift ;;
     -h|--help) sed -n '2,8p' "$0"; exit 0 ;;
     *) echo "Opção desconhecida: $1" >&2; exit 64 ;;
@@ -32,6 +35,18 @@ arquivo() {  # arquivo <caminho> ; conteúdo pela entrada padrão. Nunca sobresc
   else mkdir -p "$(dirname "$alvo")"; printf '%s\n' "$conteudo" > "$alvo"; linha arquivo "$1" "CRIADO"; feito=$((feito + 1)); fi
 }
 
+if [[ $NOVO -eq 0 ]]; then
+  if [[ ! -e "$V" ]]; then
+    if [[ $SIMULAR -eq 1 ]]; then linha clonar "$REPO_VAULT" "CLONARIA em $V"; exit 0; fi
+    gh repo clone "$REPO_VAULT" "$V"
+  fi
+  if [[ -f "$V/00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md" ]]; then
+    for p in "07-estudo-e-carreira/professor" "07-estudo-e-carreira/akita" "09-material-producao-simultanea/fichas-duplas"; do pasta "$p"; done
+    echo "Seu vault está em $V. Para trazer o setup para a pasta 11: cd ~/dev/dev-setup && just vault-espelho"
+    exit 0
+  fi
+  echo "Aviso: $V existe mas não é o seu vault (sem o Sumário Único). Criando as pastas modelo; use --pasta para outro lugar."
+fi
 for p in "00-Entrada" "10-Estudos" "20-Aulas" "30-Acervo" "40-Produtos" "50-Projetos" "60-Conteudo" "90-Modelos" "99-Arquivo" "anexos"; do pasta "$p"; done
 
 arquivo "00-INICIO.md" <<'EOF'
@@ -135,4 +150,4 @@ else git -C "$V" init -q && git -C "$V" add -A && git -C "$V" commit -qm "chore:
 
 echo
 if [[ $SIMULAR -eq 1 ]]; then echo "Simulação pronta."
-else echo "Pronto ($feito item(ns) novos). Abra no Obsidian: \\\\wsl.localhost\\Ubuntu-24.04$(echo "$V" | tr '/' '\\')"; fi
+else echo "Pronto ($feito item(ns) novos). Abra no Obsidian: \\\\wsl.localhost\\${WSL_DISTRO_NAME:-Ubuntu}$(echo "$V" | tr '/' '\\')"; fi

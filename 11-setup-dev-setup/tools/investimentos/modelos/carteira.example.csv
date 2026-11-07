@@ -1,0 +1,8 @@
+ticker,classe,setor,metodo,valor_atual,emissor,garantia,vencimento_dias
+EXEM3,acoes,energia,barsi,900,,,
+FICT3,acoes,bancos,bazin,700,,,
+TEST4,acoes,varejo,buffett,150,,,
+LOGX11,fiis,logistica,bazin_fii,500,,,
+TESOURO-SELIC,caixa,tesouro,liquidez,1500,tesouro,tesouro,1100
+LCI-BANCOX-2Y,caixa,banco x,escada,300,banco x,fgc,730
+WRLD,internacional,indice,bogle,200,,,
