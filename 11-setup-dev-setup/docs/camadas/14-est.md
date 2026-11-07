@@ -113,7 +113,7 @@ flowchart LR
 | [Anki](#anki) | Local · precisa de conta | Repetição espaçada para comandos, conceitos, certificações e concurso. Open source. A conta grátis do AnkiWeb sincroniza notebook e celular. | passo 3.2 · Semana 1 · out/2026; passo 25.5 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 46.7 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 57.3 · Contínuo, desde a semana 2 |
 | [roadmap.sh + Akita](#road) | Remoto | Roteiros de estudo e referência da trilha Linux. | passo 57.1 · Contínuo, desde a semana 2 |
 | [GitHub Education](#ghed) | Remoto · precisa de conta | Pacote para professores: Copilot Pro e outros benefícios. Peça a verificação. | passo 28.1 · Semana 6 · nov/2026 a dez/2026 |
-| [Zoomcamp de dados + cursos de IA](#dez) | Remoto | Data Engineering Zoomcamp (DataTalksClub, grátis, 10 semanas), curso de LLM da Hugging Face, fast.ai e Neural Networks: Zero to Hero. Para a IA vão só as suas anotações e os seus projetos. | passo 44.6 · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| [Zoomcamp de dados + cursos de IA](#dez) | Remoto | Data Engineering Zoomcamp (DataTalksClub, grátis, 10 semanas), curso de LLM da Hugging Face, fast.ai e Neural Networks: Zero to Hero. Para a IA vão só as suas anotações e os seus projetos. | passo 44.6 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | [GPT do zero (estudo)](#gptzero) | Local | Tokenizador, atenção e treino de um GPT pequeno no Kaggle, para dominar a arquitetura. | passo 29.1 · 2027, depois do primeiro fine-tuning de 8B |
 | [Laboratório de redes](#labrede) | Local | Packet Tracer e containerlab para VLAN, roteamento e firewall (Network+ e CCNA). | passo 30.5 · Semana 6 · nov/2026 |
 | [PortSwigger Web Security Academy](#portsw) | Remoto · precisa de conta | A melhor trilha grátis de segurança web, com laboratórios no navegador; prepara a certificação BSCP. | passo 58.9 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
@@ -222,7 +222,7 @@ Pacote para professores: Copilot Pro e outros benefícios. Peça a verificação
 
 Data Engineering Zoomcamp (DataTalksClub, grátis, 10 semanas), curso de LLM da Hugging Face, fast.ai e Neural Networks: Zero to Hero. Para a IA vão só as suas anotações e os seus projetos.
 
-**Quando entra:** passo 44.6 · Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.6 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

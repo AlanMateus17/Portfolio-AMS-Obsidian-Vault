@@ -106,41 +106,45 @@ Fases 0, 3, 4 e 5 completas: diagnóstico, Windows (winget, BitLocker, Defender,
 | 20 | Padrão de elite em todo repositório | Semana 5 · nov/2026 | 10 |
 | 21 | Empresa solo: o contexto mestre no setup | Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica | 18 |
 | 22 | Núcleo AMtech: o setup conectado e autônomo | Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois | 12 |
-| 23 | Agentes e IA com qualidade medida | Semana 6 · nov/2026 a dez/2026 | 15 |
-| 24 | Roteador de agentes e esteira de sites | Semana 6 · nov/2026 a dez/2026 | 9 |
-| 25 | Modelos grandes sem computador maior | 2027, depois do primeiro fine-tuning de 8B | 6 |
-| 26 | Rede própria entre os seus computadores | Semana 6 · nov/2026 | 6 |
-| 27 | Operação 24 horas | Dez/2026 a jan/2027 | 8 |
-| 28 | Soberania: serviços próprios na VM | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar | 13 |
-| 29 | Dados e crescimento: medir, testar e vender mais | Com a primeira página de venda no ar (jan/2027) e por etapas | 13 |
-| 30 | Pipeline de conteúdo | Semana 5 · nov/2026 | 7 |
-| 31 | Estúdio de conteúdo | Semana 5 · dez/2026 | 5 |
-| 32 | Contas, canais e sites | Semanas 6 e 7 · dez/2026 | 14 |
-| 33 | Vendas e finanças no CPF | Semanas 8 a 10 · dez/2026 a jan/2027 | 20 |
-| 34 | Vendas medidas | Semana 11 · jan/2027 | 4 |
-| 35 | Teste do núcleo | Semana 11 · jan/2027 | 4 |
-| 36 | Primeira venda: o mini-curso no ar | Semanas 12 a 15 · jan a fev/2027 | 9 |
-| 37 | Base dos sistemas AM | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 | 9 |
-| 38 | Nuvem e deploy | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) | 8 |
-| 39 | Editora | Quando o capítulo 1 estiver pronto | 11 |
-| 40 | Dados, IA e pendrives | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) | 12 |
-| 41 | Sprint de 14 dias (Estratégia do Halter) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) | 10 |
-| 42 | Mais ofertas, uma por vez | Fev a dez/2027, uma oferta por vez | 23 |
-| 43 | Marketing pago e crescimento | A partir de fev/2027 | 11 |
-| 44 | Linux nativo e laboratório completo | 2027, conforme cada compra | 7 |
-| 45 | IA dentro dos sistemas AM | Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5 | 1 |
-| 46 | Sistemas AM à venda | 2027 | 5 |
-| 47 | CNPJ e formalização | Quando a renda pedir | 5 |
-| 48 | Agentes do grupo | Junto com o primeiro CNPJ | 7 |
-| 49 | Editora: depois do primeiro livro | Depois do primeiro livro | 5 |
-| 50 | Distribuído, plataforma e segunda nuvem | 2028 | 6 |
-| 51 | Infraestrutura própria | 2028, quando o grupo pedir | 3 |
-| 52 | Negócios do grupo em Barbacena | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano | 11 |
-| 53 | Estudo contínuo | Contínuo, desde a semana 2 | 14 |
-| 54 | Engenharia reversa, AppSec e pentest | Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) | 21 |
-| 55 | Jarvis: o setup e a casa por comando de voz | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas | 13 |
-| 56 | Hugging Face e IA física: TI, casa inteligente e agropecuária | Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino | 16 |
-| 57 | Construção civil, arquitetura e engenharia civil (pela TI) | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão | 13 |
+| 23 | AMtech Software: a primeira empresa | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada | 10 |
+| 24 | Eixo de 12 meses: dev sênior de software para finanças | Nov/2026 a out/2027, revisão no fim de cada trimestre | 6 |
+| 25 | Professor do setup: aprender tudo o que você opera | Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre | 9 |
+| 26 | Escola Akita: seguir a fundo, com o seu ok | Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último | 6 |
+| 27 | Agentes e IA com qualidade medida | Semana 6 · nov/2026 a dez/2026 | 15 |
+| 28 | Roteador de agentes e esteira de sites | Semana 6 · nov/2026 a dez/2026 | 9 |
+| 29 | Modelos grandes sem computador maior | 2027, depois do primeiro fine-tuning de 8B | 6 |
+| 30 | Rede própria entre os seus computadores | Semana 6 · nov/2026 | 6 |
+| 31 | Operação 24 horas | Dez/2026 a jan/2027 | 8 |
+| 32 | Soberania: serviços próprios na VM | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar | 13 |
+| 33 | Dados e crescimento: medir, testar e vender mais | Com a primeira página de venda no ar (jan/2027) e por etapas | 13 |
+| 34 | Pipeline de conteúdo | Semana 5 · nov/2026 | 7 |
+| 35 | Estúdio de conteúdo | Semana 5 · dez/2026 | 5 |
+| 36 | Contas, canais e sites | Semanas 6 e 7 · dez/2026 | 14 |
+| 37 | Vendas e finanças no CPF | Semanas 8 a 10 · dez/2026 a jan/2027 | 20 |
+| 38 | Vendas medidas | Semana 11 · jan/2027 | 4 |
+| 39 | Teste do núcleo | Semana 11 · jan/2027 | 4 |
+| 40 | Primeira venda: o mini-curso no ar | Semanas 12 a 15 · jan a fev/2027 | 9 |
+| 41 | Base dos sistemas AM | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP | 9 |
+| 42 | Nuvem e deploy | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) | 8 |
+| 43 | Editora | Quando o capítulo 1 estiver pronto | 11 |
+| 44 | Dados, IA e pendrives | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) | 12 |
+| 45 | Sprint de 14 dias (Estratégia do Halter) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) | 10 |
+| 46 | Mais ofertas, uma por vez | Fev a dez/2027, uma oferta por vez | 23 |
+| 47 | Marketing pago e crescimento | A partir de fev/2027 | 11 |
+| 48 | Linux nativo e laboratório completo | 2027, conforme cada compra | 7 |
+| 49 | IA dentro dos sistemas AM | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção | 1 |
+| 50 | Sistemas AM à venda | 2027 | 5 |
+| 51 | CNPJ e formalização | Quando a renda pedir | 5 |
+| 52 | Agentes do grupo | Junto com o primeiro CNPJ | 7 |
+| 53 | Editora: depois do primeiro livro | Depois do primeiro livro | 5 |
+| 54 | Distribuído, plataforma e segunda nuvem | 2028 | 6 |
+| 55 | Infraestrutura própria | 2028, quando o grupo pedir | 3 |
+| 56 | Negócios do grupo em Barbacena | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano | 11 |
+| 57 | Estudo contínuo | Contínuo, desde a semana 2 | 14 |
+| 58 | Engenharia reversa, AppSec e pentest | Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) | 21 |
+| 59 | Jarvis: o setup e a casa por comando de voz | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas | 13 |
+| 60 | Hugging Face e IA física: TI, casa inteligente e agropecuária | Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino | 16 |
+| 61 | Construção civil, arquitetura e engenharia civil (pela TI) | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão | 13 |
 
 ## 7. Minhas pendências (ver também ESTADO.md)
 1. Senhas: passo kp-organizar, depois 2.4 (exportar do Chrome, importar no KeePassXC, apagar os CSVs, copiar o cofre para o pendrive).

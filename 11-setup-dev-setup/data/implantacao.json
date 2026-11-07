@@ -4936,9 +4936,9 @@
     },
     {
      "id": "vaga",
-     "titulo": "Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — quando o Passo 8 da trilha de estudo estiver feito (≈ jul a dez/2027)",
+     "titulo": "Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — no trimestre 4 do eixo (ago a out/2027)",
      "quem": "voce",
-     "pronto": "10 candidaturas enviadas com o portfólio do sistema exemplo",
+     "pronto": "10 candidaturas enviadas com o portfólio do AM Rendara",
      "tempo_min": 120,
      "fora": "Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.",
      "blocos": [
@@ -4958,7 +4958,7 @@
      ]
     }
    ],
-   "quando": "Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6"
+   "quando": "Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP"
   },
   {
    "id": "f19",
@@ -5061,7 +5061,7 @@
      ]
     }
    ],
-   "quando": "Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)"
+   "quando": "Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante)"
   },
   {
    "id": "f20",
@@ -5394,7 +5394,7 @@
      "decisao": true
     }
    ],
-   "quando": "Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)"
+   "quando": "Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028)"
   },
   {
    "id": "f-sprint",
@@ -6229,7 +6229,7 @@
      ]
     }
    ],
-   "quando": "Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5"
+   "quando": "Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção"
   },
   {
    "id": "f26",
@@ -6999,7 +6999,7 @@
      "pronto": "Marco do ano definido",
      "tempo_min": 15,
      "blocos": [],
-     "fora": "Horizonte longo; entra depois do Passo 9 do plano de estudos."
+     "fora": "Horizonte longo; pausado até o fim do ano 1 do eixo (ADR 0011)."
     },
     {
      "id": "est-ebtt",
@@ -7152,7 +7152,7 @@
     },
     {
      "id": "sg-ameacas",
-     "titulo": "Modelagem de ameaças e checklist ASVS do AM Kaixara",
+     "titulo": "Modelagem de ameaças e checklist ASVS do AM Rendara (o primeiro sistema)",
      "quem": "claude",
      "pronto": "Tabela STRIDE preenchida e cada mitigação com um teste que prova",
      "tempo_min": 120,
@@ -7160,7 +7160,7 @@
       "appsec"
      ],
      "comando": "mkdir -p docs/seguranca && cp ~/dev/dev-setup/infra/templates/seguranca/modelagem-ameacas.md docs/seguranca/ameacas.md",
-     "nota": "Rode dentro da pasta do AM Kaixara. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal."
+     "nota": "Rode dentro da pasta do AM Rendara. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal."
     },
     {
      "id": "sg-dast",
@@ -7170,18 +7170,18 @@
      "tempo_min": 20,
      "blocos": [],
      "comando": "mkdir -p .github/workflows && cp ~/dev/dev-setup/infra/templates/seguranca/dast-zap.yml .github/workflows/",
-     "nota": "Dentro da pasta do sistema, quando ele tiver homologação (Passo 5 da trilha). Crie a variável HOMOLOGACAO_URL no repositório."
+     "nota": "Dentro da pasta do sistema, quando ele tiver homologação (trimestre 2 do eixo, com o AM Rendara). Crie a variável HOMOLOGACAO_URL no repositório."
     },
     {
      "id": "sg-arquitetura",
-     "titulo": "Comparar o AM Kaixara com os repositórios de referência",
+     "titulo": "Comparar o AM Rendara com os repositórios de referência",
      "quem": "claude",
-     "pronto": "3 ADRs novas no Kaixara, cada uma com a diferença e a decisão",
+     "pronto": "3 ADRs novas no AM Rendara, cada uma com a diferença e a decisão",
      "tempo_min": 180,
      "blocos": [
       "refarq"
      ],
-     "fora": "Leitura guiada: a funcionalidade criar pedido seguida da API ao banco no eShop e no modular-monolith, comparada com a sua."
+     "fora": "Leitura guiada: a funcionalidade registrar lançamento seguida da API ao banco no eShop e no modular-monolith, comparada com a sua."
     },
     {
      "id": "sg-ensaio",

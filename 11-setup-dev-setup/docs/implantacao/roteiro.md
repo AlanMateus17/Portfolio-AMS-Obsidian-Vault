@@ -55,15 +55,15 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [38 · Vendas medidas](#f15) | Semana 11 · jan/2027 | 4 | 2 h 40 min |
 | [39 · Teste do núcleo](#f16) | Semana 11 · jan/2027 | 4 | 1 h 00 min |
 | [40 · Primeira venda: o mini-curso no ar](#f17) | Semanas 12 a 15 · jan a fev/2027 | 9 | 23 h 15 min |
-| [41 · Base dos sistemas AM](#f18) | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 | 9 | 8 h 40 min |
-| [42 · Nuvem e deploy](#f19) | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) | 8 | 7 h 45 min |
+| [41 · Base dos sistemas AM](#f18) | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP | 9 | 8 h 40 min |
+| [42 · Nuvem e deploy](#f19) | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) | 8 | 7 h 45 min |
 | [43 · Editora](#f20) | Quando o capítulo 1 estiver pronto · **gatilho:** O capítulo 1 e o seu modelo de criação prontos | 11 | 18 h 30 min |
-| [44 · Dados, IA e pendrives](#f21) | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) | 12 | 16 h 20 min |
+| [44 · Dados, IA e pendrives](#f21) | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) | 12 | 16 h 20 min |
 | [45 · Sprint de 14 dias (Estratégia do Halter)](#f-sprint) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) · **gatilho:** O recesso começou e uma das 3 rendas de agora já passou no portão | 10 | 35 h 00 min |
 | [46 · Mais ofertas, uma por vez](#f22) | Fev a dez/2027, uma oferta por vez · **gatilho:** A primeira venda do mini-curso aconteceu | 23 | 129 h 00 min |
 | [47 · Marketing pago e crescimento](#f23) | A partir de fev/2027 · **gatilho:** O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar | 11 | 38 h 30 min |
 | [48 · Linux nativo e laboratório completo](#f24) | 2027, conforme cada compra | 7 | 18 h 15 min |
-| [49 · IA dentro dos sistemas AM](#f25) | Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5 | 1 | 8 h 00 min |
+| [49 · IA dentro dos sistemas AM](#f25) | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção | 1 | 8 h 00 min |
 | [50 · Sistemas AM à venda](#f26) | 2027 · **gatilho:** O primeiro sistema AM pronto e testado com um cliente | 5 | 120 h 00 min |
 | [51 · CNPJ e formalização](#f27) | Quando a renda pedir · **gatilho:** A renda passou do valor de virada definido com o contador | 5 | 14 h 00 min |
 | [52 · Agentes do grupo](#f28) | Junto com o primeiro CNPJ · **gatilho:** Clientes e vendas recorrentes | 7 | 18 h 00 min |
@@ -4590,7 +4590,7 @@ cd ~/dev/dev-setup && claude "Passo mc-isca do roteiro: Isca grátis (aula 1) co
 
 Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy.
 
-**Quando:** Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6
+**Quando:** Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP
 
 ### 41.1 Gerar o modelo de sistema com /novo-sistema-aura
 
@@ -4673,12 +4673,12 @@ cd ~/dev/dev-setup && claude "Passo ghcr do roteiro: Publicar a imagem Docker da
 - **Oferta:** Templates e código-fonte
 - Implanta: Templates e código-fonte
 
-### 41.8 Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — quando o Passo 8 da trilha de estudo estiver feito (≈ jul a dez/2027)
+### 41.8 Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — no trimestre 4 do eixo (ago a out/2027)
 
 **Você** · 2 h 00 min
 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
-- [ ] **Pronto quando:** 10 candidaturas enviadas com o portfólio do sistema exemplo
+- [ ] **Pronto quando:** 10 candidaturas enviadas com o portfólio do AM Rendara
 - Implanta: Recrutadores
 
 ### 41.9 Zod, Biome e Vitest no front do modelo Aura
@@ -4701,7 +4701,7 @@ cd ~/dev/dev-setup && claude "Passo front-contratos do roteiro: Zod, Biome e Vit
 
 As contas de nuvem criadas por código, com custo sob controle.
 
-**Quando:** Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)
+**Quando:** Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante)
 
 ### 42.1 Instalar Azure CLI, Terraform, Vercel CLI e Wrangler
 
@@ -4945,7 +4945,7 @@ cd ~/dev/dev-setup && claude "Passo editais do roteiro: Montar a matriz de edita
 
 O laboratório de dados e de treino no ar, um modelo seu rodando no Ollama e os pendrives de Kali e Arch dando boot.
 
-**Quando:** Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029)
+**Quando:** Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028)
 
 ### 44.1 Gravar o pendrive do Kali com persistência criptografada
 
@@ -5662,7 +5662,7 @@ sudo pacman -S --needed ghostty zellij && chezmoi apply
 
 Busca e assistente com os seus dados dentro de um sistema AM.
 
-**Quando:** Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5
+**Quando:** Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção
 
 ### 49.1 RAG com pgvector dentro do primeiro sistema AM
 
@@ -6305,7 +6305,7 @@ As trilhas de estudo ligadas ao setup, sem copiar conteúdo de ninguém.
 
 **Você** · 15 min
 
-- **Fora do terminal:** Horizonte longo; entra depois do Passo 9 do plano de estudos.
+- **Fora do terminal:** Horizonte longo; pausado até o fim do ano 1 do eixo (ADR 0011).
 - [ ] **Pronto quando:** Marco do ano definido
 
 ### 57.11 Vigiar editais de professor EBTT (IF Sudeste MG, campus Barbacena) e de professor efetivo de MG
@@ -6455,7 +6455,7 @@ powershell -ExecutionPolicy Bypass -File $HOME\dev-setup\scripts\windows\lab-alv
 - [ ] **Pronto quando:** Apprentice de todos os temas resolvidos e anotados no Obsidian
 - Implanta: PortSwigger Web Security Academy · Kit de pentest (Burp, ZAP, nmap…)
 
-### 58.10 Modelagem de ameaças e checklist ASVS do AM Kaixara
+### 58.10 Modelagem de ameaças e checklist ASVS do AM Rendara (o primeiro sistema)
 
 **Claude com você** · 2 h 00 min
 
@@ -6466,7 +6466,7 @@ mkdir -p docs/seguranca && cp ~/dev/dev-setup/infra/templates/seguranca/modelage
 ```
 
 - [ ] **Pronto quando:** Tabela STRIDE preenchida e cada mitigação com um teste que prova
-- Rode dentro da pasta do AM Kaixara. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal.
+- Rode dentro da pasta do AM Rendara. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal.
 - Implanta: AppSec nos seus sistemas
 
 ### 58.11 ZAP passivo na homologação de cada sistema
@@ -6480,14 +6480,14 @@ mkdir -p .github/workflows && cp ~/dev/dev-setup/infra/templates/seguranca/dast-
 ```
 
 - [ ] **Pronto quando:** Issue do ZAP aberta e sem alerta alto
-- Dentro da pasta do sistema, quando ele tiver homologação (Passo 5 da trilha). Crie a variável HOMOLOGACAO_URL no repositório.
+- Dentro da pasta do sistema, quando ele tiver homologação (trimestre 2 do eixo, com o AM Rendara). Crie a variável HOMOLOGACAO_URL no repositório.
 
-### 58.12 Comparar o AM Kaixara com os repositórios de referência
+### 58.12 Comparar o AM Rendara com os repositórios de referência
 
 **Claude com você** · 3 h 00 min
 
-- **Fora do terminal:** Leitura guiada: a funcionalidade criar pedido seguida da API ao banco no eShop e no modular-monolith, comparada com a sua.
-- [ ] **Pronto quando:** 3 ADRs novas no Kaixara, cada uma com a diferença e a decisão
+- **Fora do terminal:** Leitura guiada: a funcionalidade registrar lançamento seguida da API ao banco no eShop e no modular-monolith, comparada com a sua.
+- [ ] **Pronto quando:** 3 ADRs novas no AM Rendara, cada uma com a diferença e a decisão
 - Implanta: Repositórios de referência
 
 ### 58.13 Ensaiar o serviço completo contra o seu próprio site
@@ -7070,7 +7070,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Comunidade (Discord ou grupo) | 37.10, 46.15 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Busca Google (SEO) | 36.12 | Semanas 6 e 7 · dez/2026 |
 | Alunos e ex-alunos | 36.10 | Semanas 6 e 7 · dez/2026 |
-| Recrutadores | 41.8 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| Recrutadores | 41.8 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | TikTok | 36.1 | Semanas 6 e 7 · dez/2026 |
 | Facebook | 36.1 | Semanas 6 e 7 · dez/2026 |
 
@@ -7181,7 +7181,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 |---|---|---|
 | Mini-curso Lógica de Programação | 37.5, 40.1 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Formações (TI, Matemática, Finanças) | 47.10 | A partir de fev/2027 |
-| Templates e código-fonte | 41.7 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| Templates e código-fonte | 41.7 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | Livro Lógica e Máquina | 43.2 | Quando o capítulo 1 estiver pronto |
 | Aulas particulares | 37.8 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Sites para pequenas empresas | 23.3, 24.3, 36.13, 46.9, 46.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
@@ -7263,7 +7263,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Anki | 3.2, 25.5, 46.7, 57.3 | Semana 1 · out/2026; Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; Fev a dez/2027, uma oferta por vez; Contínuo, desde a semana 2 |
 | roadmap.sh + Akita | 57.1 | Contínuo, desde a semana 2 |
 | GitHub Education | 28.1 | Semana 6 · nov/2026 a dez/2026 |
-| Zoomcamp de dados + cursos de IA | 44.6 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| Zoomcamp de dados + cursos de IA | 44.6 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | GPT do zero (estudo) | 29.1 | 2027, depois do primeiro fine-tuning de 8B |
 | Laboratório de redes | 30.5 | Semana 6 · nov/2026 |
 | PortSwigger Web Security Academy | 58.9 | Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
@@ -7291,22 +7291,22 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Armazenamento de arquivos (Blob/R2) | 42.4 | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
-| E-mail transacional (Resend, SES…) | 42.5, 45.2 | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| SonarQube Cloud | 41.5 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| Armazenamento de arquivos (Blob/R2) | 42.4 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| E-mail transacional (Resend, SES…) | 42.5, 45.2 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| SonarQube Cloud | 41.5 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | Projects · ADRs · MkDocs | 5.5 | Semana 2 · nov/2026 |
 | Dependabot + CodeQL | 5.3 | Semana 2 · nov/2026 |
 | Google Cloud | 54.5 | 2028 |
 | GitHub | 2.7, 5.1, 5.4, 24.6 | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semana 2 · nov/2026; Nov/2026 a out/2027, revisão no fim de cada trimestre |
 | GitHub Actions | 5.2, 39.1 | Semana 2 · nov/2026; Semana 11 · jan/2027 |
-| GHCR (imagens) | 41.6 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| GHCR (imagens) | 41.6 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | GitHub Pages | 36.7 | Semanas 6 e 7 · dez/2026 |
-| Cloudflare (DNS, Pages, e-mail) | 28.4, 28.6, 28.7, 36.3, 36.8, 38.1, 42.6 | Semana 6 · nov/2026 a dez/2026; Semanas 6 e 7 · dez/2026; Semana 11 · jan/2027; Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
-| Vercel | 42.6 | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
-| Azure | 32.13, 42.2, 42.3, 42.6 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
+| Cloudflare (DNS, Pages, e-mail) | 28.4, 28.6, 28.7, 36.3, 36.8, 38.1, 42.6 | Semana 6 · nov/2026 a dez/2026; Semanas 6 e 7 · dez/2026; Semana 11 · jan/2027; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| Vercel | 42.6 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| Azure | 32.13, 42.2, 42.3, 42.6 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
 | AWS | 32.13, 54.4 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; 2028 |
 | Backblaze B2 (backup) | 7.2 | Semana 3 · nov/2026 |
-| GPU por hora (RunPod e afins) | 29.4, 44.9 | 2027, depois do primeiro fine-tuning de 8B; Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| GPU por hora (RunPod e afins) | 29.4, 44.9 | 2027, depois do primeiro fine-tuning de 8B; Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | Google Drive (seus documentos) | 0.5, 8.1, 27.8 | Antes de tudo · semana 1 (out/2026); Semanas 3 e 4 · nov/2026; Semana 6 · nov/2026 a dez/2026 |
 | Repositório padrão | 20.1, 20.2 | Semana 5 · nov/2026 |
 | Vigia semanal (GitHub Actions) | 31.1, 31.2 | Dez/2026 a jan/2027 |
@@ -7314,7 +7314,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | OpenRouter | 27.15 | Semana 6 · nov/2026 a dez/2026 |
 | Speckle (modelos na web) | 61.10 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 | act (CI do Actions na sua máquina) | 21.7 | Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
-| Kamal (deploy em VM por SSH) | 23.5, 32.13, 42.8, 45.1, 45.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Kamal (deploy em VM por SSH) | 23.5, 32.13, 42.8, 45.1, 45.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | bore (túnel TCP próprio) | 32.7 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | Headscale (rede própria) | 32.4 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | Forgejo (espelho dos repositórios) | 32.1 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
@@ -7328,26 +7328,26 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| OpenAPI + Scalar | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| OpenAPI + Scalar | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | PostGIS + MapLibre | 50.3 | 2027 |
-| Storybook | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| Clean Arch + DDD | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| EF Core + Npgsql | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| SignalR | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| Multi-tenant (RLS) | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| Testes: xUnit, Playwright, k6 | 24.4, 41.1, 45.10 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Storybook | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Clean Arch + DDD | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| EF Core + Npgsql | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| SignalR | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Multi-tenant (RLS) | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Testes: xUnit, Playwright, k6 | 24.4, 41.1, 45.10 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Serviços aura- (10) | 50.4 | 2027 |
-| Next.js + Aura Design System | 24.4, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6; Fev a dez/2027, uma oferta por vez |
-| API ASP.NET Core | 24.4, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6; Fev a dez/2027, uma oferta por vez |
-| Keycloak / Entra ID | 41.2 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| IA: RAG + pgvector | 49.1 | Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5 |
+| Next.js + Aura Design System | 24.4, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
+| API ASP.NET Core | 24.4, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
+| Keycloak / Entra ID | 41.2 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| IA: RAG + pgvector | 49.1 | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção |
 | aura-licensing | 50.1 | 2027 |
-| aura-status | 42.7 | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
+| aura-status | 42.7 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
 | AM Kaixara (PDV e cardápio) | 46.12, 50.2 | Fev a dez/2027, uma oferta por vez; 2027 |
 | AM Rotara (entregas) | 50.3, 50.5 | 2027 |
 | App mobile (.NET MAUI) | 54.6 | 2028 |
 | AM Obra (diário, medição, compras) | 61.12 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
-| Zod · Biome · Vitest (front) | 41.9, 45.8 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Zod · Biome · Vitest (front) | 41.9, 45.8 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | SvelteKit (apps pequenos) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | PocketBase (MVP antes do Aura) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Litestream (SQLite no R2) | 45.10 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
@@ -7359,14 +7359,14 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Sentry (erros) | 41.4 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| Sentry (erros) | 41.4 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | Uptime Kuma | 10.6, 31.5, 45.1 | Semana 4 · nov/2026; Dez/2026 a jan/2027; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| Seq (logs) | 41.3 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| Seq (logs) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | Loki + Tempo | 54.3 | 2028 |
-| OpenTelemetry | 24.5, 41.3 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| Prometheus | 41.3 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| OpenTelemetry | 24.5, 41.3 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Prometheus | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | Grafana | 10.4, 38.4 | Semana 4 · nov/2026; Semana 11 · jan/2027 |
-| .NET Aspire | 41.3 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| .NET Aspire | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | SigNoz (logs, traces e métricas) | 32.3 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | GlitchTip (erros dos sistemas) | 32.2 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 
@@ -7374,18 +7374,18 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Caddy (proxy + HTTPS) | 41.3 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| Mailpit | 41.3 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| Caddy (proxy + HTTPS) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Mailpit | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | Kafka | 54.1 | 2028 |
 | kubectl · Helm · k9s | 54.2 | 2028 |
-| Azure CLI · AWS CLI | 42.1 | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
+| Azure CLI · AWS CLI | 42.1 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
 | Datomic local | 50.4 | 2027 |
 | Docker + Compose | 4.2, 10.2 | Semana 2 · nov/2026; Semana 4 · nov/2026 |
-| PostgreSQL | 10.2, 22.5, 24.4, 41.1 | Semana 4 · nov/2026; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Nov/2026 a out/2027, revisão no fim de cada trimestre; Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| Redis | 41.1 | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| PostgreSQL | 10.2, 22.5, 24.4, 41.1 | Semana 4 · nov/2026; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Redis | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | RabbitMQ | 54.1 | 2028 |
 | Kubernetes local (kind) | 54.2 | 2028 |
-| Terraform | 42.1, 42.3 | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) |
+| Terraform | 42.1, 42.3 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
 | Mosquitto (MQTT) | 59.2 | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | Zigbee2MQTT | 59.7 | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | Frigate (câmeras com detecção) | 59.9 | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
@@ -7434,19 +7434,19 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Python de dados (Polars, Jupyter) | 44.4 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| DuckDB + Parquet | 33.4, 44.4 | Com a primeira página de venda no ar (jan/2027) e por etapas; Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| dbt Core | 44.7 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Airflow (orquestração) | 44.8 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Spark (PySpark) | 44.4 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Seus datasets (só conteúdo seu) | 44.10 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| PyTorch + CUDA (WSL2) | 44.3, 44.4 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Hugging Face (modelos e Hub) | 44.9 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Unsloth (QLoRA) | 44.11 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Kaggle · Colab (GPU grátis) | 29.1, 29.3, 44.9, 44.11 | 2027, depois do primeiro fine-tuning de 8B; Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| MLflow (experimentos) | 44.4 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Avaliação dos modelos | 44.10, 44.12 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| llama.cpp (GGUF) | 27.3, 44.4, 44.12 | Semana 6 · nov/2026 a dez/2026; Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| Python de dados (Polars, Jupyter) | 44.4 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| DuckDB + Parquet | 33.4, 44.4 | Com a primeira página de venda no ar (jan/2027) e por etapas; Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| dbt Core | 44.7 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Airflow (orquestração) | 44.8 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Spark (PySpark) | 44.4 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Seus datasets (só conteúdo seu) | 44.10 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| PyTorch + CUDA (WSL2) | 44.3, 44.4 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Hugging Face (modelos e Hub) | 44.9 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Unsloth (QLoRA) | 44.11 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Kaggle · Colab (GPU grátis) | 29.1, 29.3, 44.9, 44.11 | 2027, depois do primeiro fine-tuning de 8B; Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| MLflow (experimentos) | 44.4 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Avaliação dos modelos | 44.10, 44.12 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| llama.cpp (GGUF) | 27.3, 44.4, 44.12 | Semana 6 · nov/2026 a dez/2026; Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | Paperless-ngx | 19.1, 19.2 | Dez/2026 |
 | Grocy | 19.1, 19.3 | Dez/2026 |
 | vLLM (GPU alugada) | 29.4, 29.5 | 2027, depois do primeiro fine-tuning de 8B |
@@ -7461,14 +7461,14 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Modelos locais: Qwen · Gemma · Llama | 6.4, 26.4, 27.4, 44.5 | Semana 2 · nov/2026; Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; Semana 6 · nov/2026 a dez/2026; Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| Modelos locais: Qwen · Gemma · Llama | 6.4, 26.4, 27.4, 44.5 | Semana 2 · nov/2026; Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; Semana 6 · nov/2026 a dez/2026; Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | Base de conhecimento (RAG) das suas notas | 6.7, 8.6, 31.7 | Semana 2 · nov/2026; Semanas 3 e 4 · nov/2026; Dez/2026 a jan/2027 |
 | Claude Code | 6.1, 21.4, 22.8, 25.4, 25.6, 25.9, 26.3, 26.4, 28.5 | Semana 2 · nov/2026; Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; Semana 6 · nov/2026 a dez/2026 |
 | ai-jail | 6.2, 21.6 | Semana 2 · nov/2026; Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | ai-memory | 6.6, 27.13 | Semana 2 · nov/2026; Semana 6 · nov/2026 a dez/2026 |
 | Servidores MCP | 6.5, 27.6 | Semana 2 · nov/2026; Semana 6 · nov/2026 a dez/2026 |
 | CLAUDE.md, agentes e skills (seus) | 6.3, 21.6, 27.10 | Semana 2 · nov/2026; Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica; Semana 6 · nov/2026 a dez/2026 |
-| Ollama | 6.4, 27.4, 44.5, 44.12 | Semana 2 · nov/2026; Semana 6 · nov/2026 a dez/2026; Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| Ollama | 6.4, 27.4, 44.5, 44.12 | Semana 2 · nov/2026; Semana 6 · nov/2026 a dez/2026; Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | Gateway de modelos (LiteLLM) | 27.1, 27.7, 27.11, 27.15, 28.7, 29.5, 31.5 | Semana 6 · nov/2026 a dez/2026; 2027, depois do primeiro fine-tuning de 8B; Dez/2026 a jan/2027 |
 | Evals dos agentes (promptfoo) | 27.2, 27.7, 29.3, 31.7 | Semana 6 · nov/2026 a dez/2026; 2027, depois do primeiro fine-tuning de 8B; Dez/2026 a jan/2027 |
 | MCP próprio (seus dados) | 27.6 | Semana 6 · nov/2026 a dez/2026 |
@@ -7549,7 +7549,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Wireshark | 3.2 | Semana 1 · out/2026 |
 | VMs: Kali · Arch · Servidores | 48.3 | 2027, conforme cada compra |
 | Arduino IDE 2 | 3.2, 46.16 | Semana 1 · out/2026; Fev a dez/2027, uma oferta por vez |
-| Rufus (grava pendrives) | 44.1 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| Rufus (grava pendrives) | 44.1 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | ActivityWatch | 17.1 | Semana 4 · nov/2026 |
 | Bonsai + IfcOpenShell (BIM aberto) | 61.3 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 | FreeCAD 1.1 (BIM, 2D e FEM) | 61.2 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
@@ -7602,8 +7602,8 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Microfone + câmera | 48.6 | 2027, conforme cada compra |
 | Celular | 1.2, 2.9, 4.9 | Semana 1 · out/2026; Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semana 2 · nov/2026 |
 | Disco externo | 1.1, 1.2, 2.11, 7.1 | Semana 1 · out/2026; Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semana 3 · nov/2026 |
-| Pendrive Kali (persistência) | 44.1 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
-| Pendrive Arch (instalação portátil) | 44.2 | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) |
+| Pendrive Kali (persistência) | 44.1 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| Pendrive Arch (instalação portátil) | 44.2 | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
 | Arduino · ESP32 · Pi | 1.2, 46.16 | Semana 1 · out/2026; Fev a dez/2027, uma oferta por vez |
 | Servidor caseiro (NAS + serviços) | 55.1 | 2028, quando o grupo pedir |
 | SSD externo (USB-C 10 Gbps) | 1.2 | Semana 1 · out/2026 |

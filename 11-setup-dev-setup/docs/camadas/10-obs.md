@@ -88,14 +88,14 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Sentry (erros)](#sentry) | Remoto · precisa de conta | Reserva do GlitchTip (ADR 0008): avisa quando um erro acontece em produção, com o ponto exato no código. Plano grátis. | passo 41.4 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| [Sentry (erros)](#sentry) | Remoto · precisa de conta | Reserva do GlitchTip (ADR 0008): avisa quando um erro acontece em produção, com o ponto exato no código. Plano grátis. | passo 41.4 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Uptime Kuma](#kuma) | Local | Verifica a cada minuto se os sites e APIs estão no ar e avisa no celular. Open source. | passo 10.6 · Semana 4 · nov/2026; passo 31.5 · Dez/2026 a jan/2027; passo 45.1 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
-| [Seq (logs)](#seq) | Local | Visualizador de logs simples para começar, antes da stack Grafana. | passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| [Seq (logs)](#seq) | Local | Visualizador de logs simples para começar, antes da stack Grafana. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Loki + Tempo](#loki) | Local · futuro | Reserva do SigNoz (ADR 0008): logs e rastreamento de requisições consultados no Grafana. | passo 54.3 · 2028 |
-| [OpenTelemetry](#otel) | Local | Coleta logs, métricas e traces da API. | passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
-| [Prometheus](#prom) | Local | Guarda as métricas. | passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| [OpenTelemetry](#otel) | Local | Coleta logs, métricas e traces da API. | passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [Prometheus](#prom) | Local | Guarda as métricas. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Grafana](#graf) | Local | Painéis e alertas. | passo 10.4 · Semana 4 · nov/2026; passo 38.4 · Semana 11 · jan/2027 |
-| [.NET Aspire](#aspire) | Local | Sobe o sistema inteiro no dev com painel próprio. | passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| [.NET Aspire](#aspire) | Local | Sobe o sistema inteiro no dev com painel próprio. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [SigNoz (logs, traces e métricas)](#signoz) | Remoto · precisa de conta | Principal da observabilidade dos apps (ADR 0008): logs, traces e métricas numa tela, nativo de OpenTelemetry. O Grafana fica para o painel de lucro. | passo 32.3 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | [GlitchTip (erros dos sistemas)](#glitchtip) | Remoto · precisa de conta | Principal dos erros (ADR 0008): o mesmo SDK do Sentry, auto-hospedado e sem cota. O Sentry SaaS fica de reserva. | passo 32.2 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 
@@ -107,7 +107,7 @@ flowchart LR
 
 Reserva do GlitchTip (ADR 0008): avisa quando um erro acontece em produção, com o ponto exato no código. Plano grátis.
 
-**Quando entra:** passo 41.4 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.4 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -141,7 +141,7 @@ Verifica a cada minuto se os sites e APIs estão no ar e avisa no celular. Open 
 
 Visualizador de logs simples para começar, antes da stack Grafana.
 
-**Quando entra:** passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -170,7 +170,7 @@ Reserva do SigNoz (ADR 0008): logs e rastreamento de requisições consultados n
 
 Coleta logs, métricas e traces da API.
 
-**Quando entra:** passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -187,7 +187,7 @@ Coleta logs, métricas e traces da API.
 
 Guarda as métricas.
 
-**Quando entra:** passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -223,7 +223,7 @@ Painéis e alertas.
 
 Sobe o sistema inteiro no dev com painel próprio.
 
-**Quando entra:** passo 41.3 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

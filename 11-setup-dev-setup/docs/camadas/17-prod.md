@@ -149,7 +149,7 @@ flowchart LR
 |---|---|---|---|
 | [Mini-curso Lógica de Programação](#curso) | Local | Primeiro produto de lançamento, para validar antes de construir mais. | passo 37.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.1 · Semanas 12 a 15 · jan a fev/2027 |
 | [Formações (TI, Matemática, Finanças)](#form) | Local · futuro | Cursos completos, depois que o mini-curso vender. | passo 47.10 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 41.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 |
+| [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Livro Lógica e Máquina](#livro) | Local | Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impresso, kit, curso e site saem da mesma fonte. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Aulas particulares](#aulas) | Físico | Seus estudos viram aula paga. | passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Sites para pequenas empresas](#sites) | Local | Freelance em Barbacena: sites e lojas. | passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
@@ -202,7 +202,7 @@ Cursos completos, depois que o mini-curso vender.
 
 Frontends prontos e projetos vendidos como download.
 
-**Quando entra:** passo 41.7 · Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

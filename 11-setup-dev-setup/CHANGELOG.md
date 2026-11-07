@@ -2,6 +2,11 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.22.2] - 2026-11-06
+
+### Mudado
+- Datas do roteiro alinhadas ao plano do eixo (ADR 0011 e 0013) em vez dos Passos do Sumário antigo: base dos sistemas e deploy no trimestre 2 com o AM Rendara, vagas no trimestre 4, dados, treino de IA e IA nos sistemas pausados até o fim do ano 1. A modelagem de ameaças e a comparação de arquitetura passam a ser no AM Rendara, o primeiro sistema.
+
 ## [2.22.1] - 2026-11-06
 
 ### Corrigido
