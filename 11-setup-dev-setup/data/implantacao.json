@@ -2491,7 +2491,7 @@
   },
   {
    "id": "f-empresa-software",
-   "titulo": "AMtech Software: a primeira empresa",
+   "titulo": "Grupo AMtech Digital: a primeira empresa",
    "objetivo": "A empresa de desenvolvimento funcionando no CPF desde já, com o funil, a esteira de sites e a cobrança rodando pelo núcleo; o CNPJ entra no ponto de virada combinado com o contador. Aqui ficam as decisões que só você pode tomar.",
    "quando": "Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada",
    "passos": [
@@ -2586,7 +2586,7 @@
      "quem": "voce",
      "pronto": "Tabela de autonomia da empresa revisada por você e gravada no núcleo",
      "tempo_min": 30,
-     "comando": "cd ~/dev/dev-setup && just lembrar \"Autonomia da AMtech Software: (escreva o que muda em relação ao docs/nucleo/README.md)\" padrao",
+     "comando": "cd ~/dev/dev-setup && just lembrar \"Autonomia da Grupo AMtech Digital: (escreva o que muda em relação ao docs/nucleo/README.md)\" padrao",
      "nota": "O ponto de partida é a tabela de autonomia do Núcleo: proposta, contrato, cobrança e publicação param no seu toque no celular.",
      "decisao": true,
      "empresas": [
@@ -2625,7 +2625,7 @@
      "quem": "claude",
      "pronto": "Um lead de teste atravessa o funil inteiro e só para no seu ok para enviar a proposta",
      "tempo_min": 240,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo sw-funil do roteiro: Ligar o funil da AMtech Software\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo sw-funil do roteiro: Ligar o funil da Grupo AMtech Digital\"",
      "nota": "Usa os adaptadores de negócio do Núcleo (fase 6): o funil fica pronto junto com ela.",
      "empresas": [
       "software"
@@ -2664,7 +2664,7 @@
      "quem": "voce",
      "pronto": "Revisão do mês anotada no núcleo; decisão de cortar, subir preço ou manter",
      "tempo_min": 30,
-     "comando": "cd ~/dev/dev-setup && just buscar \"AMtech Software\"",
+     "comando": "cd ~/dev/dev-setup && just buscar \"Grupo AMtech Digital\"",
      "decisao": true,
      "empresas": [
       "editora",
@@ -6869,7 +6869,7 @@
     },
     {
      "id": "neg-a1",
-     "titulo": "A1 · AMtech Software",
+     "titulo": "A1 · Grupo AMtech Digital",
      "quem": "voce",
      "pronto": "3 meses seguidos com lucro e 10 clientes pagantes",
      "tempo_min": 2400,

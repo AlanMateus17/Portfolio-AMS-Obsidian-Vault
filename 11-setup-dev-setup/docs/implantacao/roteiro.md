@@ -37,7 +37,7 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [20 · Padrão de elite em todo repositório](#f-elite) | Semana 5 · nov/2026 | 10 | 2 h 45 min |
 | [21 · Empresa solo: o contexto mestre no setup](#f-solo) | Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica | 18 | 7 h 35 min |
 | [22 · Núcleo AMtech: o setup conectado e autônomo](#f-nucleo) | Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois | 12 | 43 h 15 min |
-| [23 · AMtech Software: a primeira empresa](#f-empresa-software) | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada | 10 | 12 h 20 min |
+| [23 · Grupo AMtech Digital: a primeira empresa](#f-empresa-software) | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada | 10 | 12 h 20 min |
 | [24 · Eixo de 12 meses: dev sênior de software para finanças](#f-eixo) | Nov/2026 a out/2027, revisão no fim de cada trimestre | 6 | 4 h 40 min |
 | [25 · Professor do setup: aprender tudo o que você opera](#f-professor) | Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre | 9 | 7 h 50 min |
 | [26 · Escola Akita: seguir a fundo, com o seu ok](#f-akita) | Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último | 6 | 2 h 50 min |
@@ -2520,7 +2520,7 @@ cd ~/dev/dev-setup && claude "Passo nuc-simulacao do roteiro: simulação noturn
 
 <a id="f-empresa-software"></a>
 
-## 23 · AMtech Software: a primeira empresa
+## 23 · Grupo AMtech Digital: a primeira empresa
 
 A empresa de desenvolvimento funcionando no CPF desde já, com o funil, a esteira de sites e a cobrança rodando pelo núcleo; o CNPJ entra no ponto de virada combinado com o contador. Aqui ficam as decisões que só você pode tomar.
 
@@ -2596,7 +2596,7 @@ cd ~/dev/dev-setup && just triagem "hospedar o site de um cliente" --nucleo nao
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && just lembrar "Autonomia da AMtech Software: (escreva o que muda em relação ao docs/nucleo/README.md)" padrao
+cd ~/dev/dev-setup && just lembrar "Autonomia da Grupo AMtech Digital: (escreva o que muda em relação ao docs/nucleo/README.md)" padrao
 ```
 
 - [ ] **Pronto quando:** Tabela de autonomia da empresa revisada por você e gravada no núcleo
@@ -2625,7 +2625,7 @@ cd ~/dev/dev-setup && just site amtech && just site amtech --checar
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo sw-funil do roteiro: Ligar o funil da AMtech Software"
+cd ~/dev/dev-setup && claude "Passo sw-funil do roteiro: Ligar o funil da Grupo AMtech Digital"
 ```
 
 - [ ] **Pronto quando:** Um lead de teste atravessa o funil inteiro e só para no seu ok para enviar a proposta
@@ -2652,7 +2652,7 @@ cd ~/dev/dev-setup && claude "Passo sw-funil do roteiro: Ligar o funil da AMtech
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && just buscar "AMtech Software"
+cd ~/dev/dev-setup && just buscar "Grupo AMtech Digital"
 ```
 
 - [ ] **Pronto quando:** Revisão do mês anotada no núcleo; decisão de cortar, subir preço ou manter
@@ -6159,7 +6159,7 @@ cd ~/dev/dev-setup && claude "Passo planejador-real do roteiro: Planejador do gr
 - [ ] **Pronto quando:** Capital mínimo e portões calculados com os seus dados
 - Implanta: Planejador do Grupo
 
-### 56.2 A1 · AMtech Software
+### 56.2 A1 · Grupo AMtech Digital
 
 **Você** · 40 h 00 min
 
