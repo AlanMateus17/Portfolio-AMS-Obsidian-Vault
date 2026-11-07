@@ -2,6 +2,11 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.22.1] - 2026-11-06
+
+### Corrigido
+- O espelho apagou da pasta 11 do vault 8 arquivos que só existiam lá (o gerador do Plano Mestre e as páginas de fluxogramas, lucro por venda e plano mestre). Eles foram recuperados no vault, em 10-ferramentas-pessoais. Agora o espelho só remove o que ele mesmo copiou (lista em .espelho-manifesto); arquivo seu na pasta 11 fica e gera um aviso.
+
 ## [2.22.0] - 2026-11-06
 
 ### Adicionado

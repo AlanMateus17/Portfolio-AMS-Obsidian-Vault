@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Espelha o dev-setup dentro do seu vault do Obsidian (pasta 11-setup-dev-setup), para estudo e setup ficarem num lugar só.
 
-A fonte da verdade é o repositório dev-setup (CI, testes, geradores). O vault recebe uma cópia exata dos arquivos
-versionados: o que mudou é copiado, o que saiu do setup sai do vault. Não edite a pasta 11 no Obsidian: a próxima cópia
-desfaz. O índice da pasta (00-INDICE-DO-SETUP.md) é do vault e é regenerado aqui.
+A fonte da verdade é o repositório dev-setup (CI, testes, geradores). O vault recebe uma cópia dos arquivos versionados:
+o que mudou é copiado, e o que saiu do setup sai do vault. Só sai o que o próprio espelho copiou antes (lista em
+.espelho-manifesto): arquivo que você criou na pasta 11 nunca é apagado, só avisado. Não edite os arquivos copiados no
+Obsidian: a próxima cópia desfaz. O índice da pasta (00-INDICE-DO-SETUP.md) é do vault e é regenerado aqui.
 
     python3 tools/vault/espelho.py                 # copia para ~/dev/notas/11-setup-dev-setup (ou AMTECH_VAULT)
     python3 tools/vault/espelho.py --simular       # só mostra o que mudaria
@@ -22,6 +23,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parents[2]
 PASTA = "11-setup-dev-setup"
 INDICE = "00-INDICE-DO-SETUP.md"
+MANIFESTO = ".espelho-manifesto"  # o que o espelho copiou da última vez; só isso pode ser removido
 
 
 def vault() -> Path:
@@ -62,8 +64,10 @@ atualizado: {date.today().isoformat()}
 
 
 def espelhar(origem: Path, destino: Path, lista: list[str], simular: bool = False) -> dict[str, int]:
-    n = {"novo": 0, "mudou": 0, "saiu": 0}
-    alvo = set(lista) | {INDICE}
+    n = {"novo": 0, "mudou": 0, "saiu": 0, "seus": 0}
+    alvo = set(lista) | {INDICE, MANIFESTO}
+    man = destino / MANIFESTO
+    copiados_antes = set(man.read_text(encoding="utf-8").splitlines()) if man.exists() else set()
     for rel in lista:
         o, d = origem / rel, destino / rel
         if d.exists() and filecmp.cmp(o, d, shallow=False):
@@ -76,6 +80,10 @@ def espelhar(origem: Path, destino: Path, lista: list[str], simular: bool = Fals
         for d in sorted(destino.rglob("*"), reverse=True):
             rel = d.relative_to(destino).as_posix()
             if d.is_file() and rel not in alvo:
+                if rel not in copiados_antes:
+                    n["seus"] += 1  # não veio do espelho: fica, e o aviso diz onde
+                    print(f"aviso: {rel} não é do dev-setup e ficou na pasta 11; mova para outra pasta do vault", file=sys.stderr)
+                    continue
                 n["saiu"] += 1
                 if not simular:
                     d.unlink()
@@ -84,6 +92,7 @@ def espelhar(origem: Path, destino: Path, lista: list[str], simular: bool = Fals
     if not simular:
         destino.mkdir(parents=True, exist_ok=True)
         (destino / INDICE).write_text(indice_md(), encoding="utf-8")
+        man.write_text("\n".join(sorted(lista)) + "\n", encoding="utf-8")
     return n
 
 
@@ -100,7 +109,8 @@ def main(argv: list[str] | None = None) -> int:
         return 2
     n = espelhar(RAIZ, v / PASTA, arquivos(), args.simular)
     verbo = "mudaria" if args.simular else "espelho atualizado"
-    print(f"{v / PASTA}: {verbo} ({n['novo']} novos, {n['mudou']} mudados, {n['saiu']} removidos).")
+    extra = f", {n['seus']} seus mantidos" if n["seus"] else ""
+    print(f"{v / PASTA}: {verbo} ({n['novo']} novos, {n['mudou']} mudados, {n['saiu']} removidos{extra}).")
     return 0
 
 

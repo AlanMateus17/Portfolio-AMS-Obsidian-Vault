@@ -18,13 +18,15 @@ class TestEspelho(unittest.TestCase):
             (d / "velho" / "x.ps1").write_text("parado em 27/10")
             (d / "b.md").write_text("antigo")
             n = espelho.espelhar(o, d, ["docs/a.md", "b.md"], simular=True)
-            self.assertEqual(n, {"novo": 1, "mudou": 1, "saiu": 1})
-            self.assertTrue((d / "velho" / "x.ps1").exists(), "simular não muda nada")
+            self.assertEqual(n, {"novo": 1, "mudou": 1, "saiu": 0, "seus": 1}, "o que não veio do espelho nunca sai")
             espelho.espelhar(o, d, ["docs/a.md", "b.md"])
             self.assertEqual((d / "b.md").read_text(), "B")
-            self.assertFalse((d / "velho").exists())
+            self.assertTrue((d / "velho" / "x.ps1").exists(), "arquivo seu fica")
             self.assertIn("Espelho automático", (d / espelho.INDICE).read_text())
-            self.assertEqual(espelho.espelhar(o, d, ["docs/a.md", "b.md"]), {"novo": 0, "mudou": 0, "saiu": 0})
+            (o / "b.md").unlink()
+            self.assertEqual(espelho.espelhar(o, d, ["docs/a.md"]), {"novo": 0, "mudou": 0, "saiu": 1, "seus": 1},
+                             "o que o espelho copiou e saiu do setup, sai")
+            self.assertFalse((d / "b.md").exists())
 
     def test_so_espelha_no_vault(self):
         with tempfile.TemporaryDirectory() as t:
