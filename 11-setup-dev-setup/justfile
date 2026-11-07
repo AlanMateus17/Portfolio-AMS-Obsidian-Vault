@@ -139,6 +139,10 @@ professor *args:
 akita *args:
     python3 tools/akita/akita.py {{args}}
 
+# Site de uma marca (amtech, instituto, editora): just site amtech  ·  só pendências: just site instituto --checar
+site *args:
+    python3 tools/sites/novo_site.py {{args}}
+
 # Copia o dev-setup para a pasta 11 do seu vault (o just docs já faz isso quando o vault existe)
 vault-espelho *opcao:
     python3 tools/vault/espelho.py {{opcao}}

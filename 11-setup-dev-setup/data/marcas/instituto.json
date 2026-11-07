@@ -1,0 +1,170 @@
+{
+ "id": "instituto",
+ "nome": "Instituto AMS Silva",
+ "sigla": "AMS",
+ "dominio": "",
+ "responsavel": "Alan Mateus",
+ "documento": "",
+ "descricao": "Cursos de programação, matemática e finanças, do zero ao profissional, por um professor que dá aula de verdade.",
+ "chamada": "Cursos de TI, Matemática e Finanças",
+ "titulo": "Aprenda a pensar como programador, do zero.",
+ "subtitulo": "Cursos curtos e diretos, com exercício resolvido, prática de verdade e um professor que ensina todos os dias em sala de aula.",
+ "acao_principal": "Entrar na lista de espera",
+ "secoes": {
+  "ofertas": "Cursos",
+  "ofertas_titulo": "Comece pelo primeiro passo",
+  "como_titulo": "Como os cursos funcionam"
+ },
+ "ofertas": [
+  {
+   "id": "minicurso",
+   "nome": "Lógica de Programação",
+   "resumo": "O mini-curso para quem nunca programou: variáveis, decisões, repetições e funções, com exercícios do jeito que caem na prova e no trabalho.",
+   "inclui": [
+    "Aulas curtas, de 10 a 15 minutos",
+    "Exercícios em 4 níveis com gabarito comentado",
+    "Pseudocódigo e C# lado a lado",
+    "Certificado de conclusão",
+    "Acesso pelo celular"
+   ],
+   "preco": "",
+   "prazo": "",
+   "acao": "Quero ser avisado",
+   "link": ""
+  },
+  {
+   "id": "matematica",
+   "nome": "Matemática para programar",
+   "resumo": "Conjuntos, porcentagem, juros, potências e logaritmos aplicados ao código e ao dinheiro.",
+   "inclui": [
+    "Teoria com exemplos resolvidos",
+    "Exercícios no papel e em código",
+    "Aplicações em finanças e algoritmos"
+   ],
+   "preco": "Em breve",
+   "prazo": "",
+   "acao": "Quero ser avisado",
+   "link": ""
+  },
+  {
+   "id": "financas",
+   "nome": "Finanças para quem empreende",
+   "resumo": "Fluxo de caixa, preço e lucro de verdade para freelancer e pequeno negócio.",
+   "inclui": [
+    "Planilhas prontas",
+    "Casos reais",
+    "Do preço ao imposto no CPF"
+   ],
+   "preco": "Em breve",
+   "prazo": "",
+   "acao": "Quero ser avisado",
+   "link": ""
+  }
+ ],
+ "passos": [
+  {
+   "titulo": "Assista no seu ritmo",
+   "texto": "Aulas curtas, uma ideia por vez, no celular ou no computador."
+  },
+  {
+   "titulo": "Faça antes de olhar a resposta",
+   "texto": "Cada aula tem exercício; o gabarito comentado explica o porquê."
+  },
+  {
+   "titulo": "Revise na hora certa",
+   "texto": "Cartões de revisão para não esquecer o que aprendeu."
+  },
+  {
+   "titulo": "Mostre o que sabe",
+   "texto": "Um projeto no fim de cada curso para o seu portfólio."
+  }
+ ],
+ "sobre": {
+  "titulo": "Quem ensina",
+  "paragrafos": [
+   "Sou Alan Mateus, professor de Informática no ensino médio técnico e desenvolvedor. Formado em Análise e Desenvolvimento de Sistemas e estudante de Licenciatura em Matemática.",
+   "Os cursos do Instituto AMS Silva usam o mesmo método das minhas aulas: explicação curta, exemplo resolvido, exercício e revisão. O material é autoral."
+  ]
+ },
+ "perguntas": [
+  {
+   "p": "Preciso saber alguma coisa antes?",
+   "r": "Não. O curso de Lógica começa do zero."
+  },
+  {
+   "p": "Menor de idade pode comprar?",
+   "r": "A compra é feita por maiores de 18 anos. Para estudantes menores, quem compra é o responsável."
+  },
+  {
+   "p": "Tem garantia?",
+   "r": "Sim, 7 dias de garantia pela plataforma de pagamento, como manda o Código de Defesa do Consumidor."
+  }
+ ],
+ "contato": {
+  "titulo": "Quer ser avisado quando abrir?",
+  "texto": "Entre na lista de espera e receba a primeira aula grátis no lançamento.",
+  "formulario": "",
+  "whatsapp": "",
+  "whatsapp_mensagem": "Olá! Quero saber dos cursos do Instituto AMS Silva.",
+  "email": ""
+ },
+ "analytics": {
+  "umami": null
+ },
+ "tokens": {
+  "fundo": "#0F1620",
+  "superficie": "#162130",
+  "tinta": "#E9E4D6",
+  "suave": "#A8B0B8",
+  "linha": "#26344A",
+  "principal": "#D6A24A",
+  "sobre_principal": "#0F1620",
+  "destaque": "#D6A24A",
+  "escuro": {
+   "fundo": "#0F1620",
+   "superficie": "#162130",
+   "tinta": "#E9E4D6",
+   "suave": "#A8B0B8",
+   "linha": "#26344A",
+   "principal": "#D6A24A",
+   "sobre_principal": "#0F1620",
+   "destaque": "#E8B865"
+  }
+ },
+ "legal": {
+  "atualizado": "07/11/2026",
+  "email_privacidade": "",
+  "dados": [
+   {
+    "o_que": "Nome e e-mail",
+    "para_que": "enviar a lista de espera, as aulas e avisos dos cursos (você pode sair a qualquer momento)"
+   },
+   {
+    "o_que": "Dados de compra",
+    "para_que": "liberar o acesso e emitir recibo; o pagamento é processado pela plataforma, que guarda os dados do cartão"
+   }
+  ],
+  "operadores": [
+   "plataforma de pagamento e área de membros",
+   "serviço de e-mail",
+   "provedor de hospedagem"
+  ],
+  "retencao": "Pelo tempo necessário para atender você e cumprir obrigações legais e fiscais (até 5 anos para registros de venda). Contatos que não viraram cliente são apagados em 12 meses.",
+  "cookies": "Usamos medição de visitas sem cookies e sem identificar você (Umami). Não usamos cookies de publicidade.",
+  "termos": [
+   {
+    "titulo": "Compra e acesso",
+    "texto": "Os cursos são vendidos e entregues por plataforma de pagamento e área de membros parceira. A compra é feita por maiores de 18 anos; para estudantes menores, compra o responsável."
+   },
+   {
+    "titulo": "Garantia",
+    "texto": "7 dias de garantia a partir da compra, com reembolso integral pela plataforma."
+   },
+   {
+    "titulo": "Uso do material",
+    "texto": "O acesso é pessoal. Copiar, revender ou distribuir as aulas e materiais não é permitido."
+   }
+  ]
+ },
+ "texto_sem_preco": "Preço no lançamento"
+}

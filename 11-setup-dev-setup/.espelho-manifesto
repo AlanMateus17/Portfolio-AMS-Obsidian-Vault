@@ -19,6 +19,9 @@ data/implantacao.json
 data/investimentos.json
 data/kitsites.json
 data/mapa.json
+data/marcas/amtech.json
+data/marcas/editora.json
+data/marcas/instituto.json
 data/negocios.json
 data/portfolio.json
 data/professor/curriculo.json
@@ -88,6 +91,7 @@ docs/editora/10-imagens-e-figuras.md
 docs/editora/11-automacao-e-metodo.md
 docs/editora/README.md
 docs/empresa-solo.md
+docs/empresas/README.md
 docs/fluxos.md
 docs/fora-do-setup.md
 docs/ia/README.md
@@ -253,6 +257,14 @@ infra/templates/seguranca/autorizacao-modelo.md
 infra/templates/seguranca/dast-zap.yml
 infra/templates/seguranca/escopo.example.toml
 infra/templates/seguranca/modelagem-ameacas.md
+infra/templates/site-marca/.gitignore
+infra/templates/site-marca/astro.config.mjs
+infra/templates/site-marca/package.json
+infra/templates/site-marca/public/robots.txt
+infra/templates/site-marca/src/layouts/Base.astro
+infra/templates/site-marca/src/pages/index.astro
+infra/templates/site-marca/src/pages/privacidade.astro
+infra/templates/site-marca/src/pages/termos.astro
 justfile
 scripts/git-hooks/pre-push
 scripts/windows/diagnostico.ps1
@@ -382,6 +394,8 @@ tools/seguranca/relatorio.py
 tools/seguranca/test_seguranca.py
 tools/sessao/contexto.py
 tools/sessao/test_contexto.py
+tools/sites/novo_site.py
+tools/sites/test_novo_site.py
 tools/softwares/softwares.py
 tools/softwares/test_softwares.py
 tools/test_gerar_docs.py

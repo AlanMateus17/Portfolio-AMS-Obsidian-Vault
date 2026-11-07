@@ -1,0 +1,119 @@
+{
+ "id": "editora",
+ "nome": "Editora AMS Silva",
+ "sigla": "Ed",
+ "dominio": "",
+ "responsavel": "Alan Mateus",
+ "documento": "",
+ "descricao": "Livros didáticos de tecnologia com o rigor dos melhores livros de matemática: teoria, exemplos resolvidos e exercícios comentados.",
+ "chamada": "Editora AMS Silva",
+ "titulo": "Lógica e Máquina: do raciocínio lógico ao código.",
+ "subtitulo": "Fundamentos de Tecnologia da Informação, da matemática à máquina, com exemplos resolvidos e exercícios comentados do básico ao avançado.",
+ "acao_principal": "Ser avisado do lançamento",
+ "secoes": {
+  "ofertas": "Livros",
+  "ofertas_titulo": "Em produção",
+  "como_titulo": "Como o livro é feito"
+ },
+ "ofertas": [
+  {
+   "id": "logica-e-maquina",
+   "nome": "Lógica e Máquina · Volume 1",
+   "resumo": "Lógica, programação e orientação a objetos, do zero, com estudos de caso de sistemas reais.",
+   "inclui": [
+    "Teoria com exemplos resolvidos",
+    "Exercícios em níveis com resolução comentada",
+    "Código testado em várias linguagens",
+    "Ebook e impresso"
+   ],
+   "preco": "Em produção",
+   "prazo": "",
+   "acao": "Quero ser avisado",
+   "link": ""
+  }
+ ],
+ "passos": [
+  {
+   "titulo": "Escrito por quem ensina",
+   "texto": "Cada capítulo nasce das aulas e é testado com alunos de verdade."
+  },
+  {
+   "titulo": "Revisado com rigor",
+   "texto": "Código testado, gabarito conferido e leitura de iniciante antes de publicar."
+  },
+  {
+   "titulo": "Ilustrado",
+   "texto": "Figuras e diagramas próprios, em pranchas numeradas."
+  },
+  {
+   "titulo": "Do básico ao avançado",
+   "texto": "Do ensino médio ao profissional, no mesmo livro."
+  }
+ ],
+ "sobre": {
+  "titulo": "A editora",
+  "paragrafos": [
+   "A Editora AMS Silva publica livros didáticos de tecnologia de Alan Mateus, professor de Informática e desenvolvedor.",
+   "O primeiro título é Lógica e Máquina, em volumes, do raciocínio lógico à inteligência de dados."
+  ]
+ },
+ "perguntas": [],
+ "contato": {
+  "titulo": "Quer saber quando sair?",
+  "texto": "Deixe o seu e-mail para receber o aviso de lançamento e um capítulo de amostra.",
+  "formulario": "",
+  "whatsapp": "",
+  "whatsapp_mensagem": "",
+  "email": ""
+ },
+ "analytics": {
+  "umami": null
+ },
+ "tokens": {
+  "fundo": "#F7F1E3",
+  "superficie": "#FFFDF7",
+  "tinta": "#1C1B18",
+  "suave": "#6B5842",
+  "linha": "#E2D6BC",
+  "principal": "#3B5D50",
+  "sobre_principal": "#F7F1E3",
+  "destaque": "#8A6A3A",
+  "escuro": {
+   "fundo": "#171612",
+   "superficie": "#211F1A",
+   "tinta": "#EDE6D6",
+   "suave": "#B9A88E",
+   "linha": "#3A352B",
+   "principal": "#8DB3A3",
+   "sobre_principal": "#171612",
+   "destaque": "#C9A46A"
+  }
+ },
+ "legal": {
+  "atualizado": "07/11/2026",
+  "email_privacidade": "",
+  "dados": [
+   {
+    "o_que": "E-mail",
+    "para_que": "avisar do lançamento e enviar o capítulo de amostra"
+   }
+  ],
+  "operadores": [
+   "serviço de e-mail",
+   "provedor de hospedagem"
+  ],
+  "retencao": "Pelo tempo necessário para atender você e cumprir obrigações legais e fiscais (até 5 anos para registros de venda). Contatos que não viraram cliente são apagados em 12 meses.",
+  "cookies": "Usamos medição de visitas sem cookies e sem identificar você (Umami). Não usamos cookies de publicidade.",
+  "termos": [
+   {
+    "titulo": "Direitos autorais",
+    "texto": "Textos, figuras e exercícios são protegidos. Citações curtas com a fonte são bem-vindas; reprodução do livro não é permitida."
+   },
+   {
+    "titulo": "Vendas",
+    "texto": "Os livros são vendidos por lojas e plataformas parceiras, com as regras de entrega e troca de cada uma."
+   }
+  ]
+ },
+ "texto_sem_preco": "Em produção"
+}

@@ -2504,6 +2504,8 @@
      "fora": "Conversa com o contador. Desenvolvimento de software (CNAE 6201-5/01) não pode ser MEI. As opções são: 1) seguir no CPF com carnê-leão, simples e sem custo fixo, mas com imposto que sobe com a renda (até 27,5%); 2) SLU no Simples Nacional, que com o Fator R (pró-labore de pelo menos 28% da receita) fica no Anexo III, a partir de 6% na 1ª faixa, mais INSS de 11% e IR sobre o pró-labore e a mensalidade do contador. Recomendação do setup: CPF até a renda de software pagar o contador e o pró-labore com folga.",
      "decisao": true,
      "empresas": [
+      "editora",
+      "instituto",
       "software"
      ],
      "blocos": [
@@ -2588,6 +2590,8 @@
      "nota": "O ponto de partida é a tabela de autonomia do Núcleo: proposta, contrato, cobrança e publicação param no seu toque no celular.",
      "decisao": true,
      "empresas": [
+      "editora",
+      "instituto",
       "software"
      ],
      "blocos": [
@@ -2597,11 +2601,11 @@
     },
     {
      "id": "sw-site",
-     "titulo": "Publicar o site da AMtech Software com os 3 pacotes e o formulário de orçamento",
-     "quem": "claude",
-     "pronto": "Site no ar em Astro, com os pacotes, o HeyForm e o Klaro!",
+     "titulo": "Gerar o site do Grupo AMtech Digital e publicar quando o checador não apontar pendências",
+     "quem": "script",
+     "pronto": "just site amtech --checar sem pendências e o site no ar no seu domínio",
      "tempo_min": 180,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo sw-site do roteiro: Publicar o site da AMtech Software com os 3 pacotes e o formulário de orçamento\"",
+     "comando": "cd ~/dev/dev-setup && just site amtech && just site amtech --checar",
      "ofertas": [
       "sites"
      ],
@@ -2612,7 +2616,8 @@
       "amsite",
       "astro",
       "heyform"
-     ]
+     ],
+     "nota": "O site sai pronto do modelo (pacotes, como funciona, sobre, dúvidas, contato, privacidade e termos da LGPD). Textos e cores em data/marcas/amtech.json. O checador lista o que só você preenche: domínio, canal de contato, e-mail da LGPD, preços e o Umami."
     },
     {
      "id": "sw-funil",
@@ -2662,6 +2667,8 @@
      "comando": "cd ~/dev/dev-setup && just buscar \"AMtech Software\"",
      "decisao": true,
      "empresas": [
+      "editora",
+      "instituto",
       "software"
      ],
      "blocos": [
@@ -4179,6 +4186,9 @@
       "mailer",
       "isca",
       "cml"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4204,6 +4214,9 @@
      "blocos": [
       "inst",
       "cf"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4221,6 +4234,7 @@
       "catalogo"
      ],
      "empresas": [
+      "instituto",
       "software"
      ]
     },
@@ -4366,6 +4380,9 @@
       "hotm",
       "kiwi",
       "curso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4383,6 +4400,9 @@
      ],
      "ofertas": [
       "dio"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4411,6 +4431,7 @@
       "aulas"
      ],
      "empresas": [
+      "instituto",
       "software"
      ]
     },
@@ -4438,6 +4459,9 @@
      "fora": "Cadastro no site ou app do serviço, com documento e confirmação no celular; nenhum deles deixa criar conta por terminal.",
      "blocos": [
       "comu"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4692,6 +4716,38 @@
    "objetivo": "A primeira venda real pela internet, com entrega, suporte, imposto e números no painel.",
    "passos": [
     {
+     "id": "inst-nome",
+     "titulo": "Confirmar a marca 'Instituto AMS Silva' e buscar no INPI (classe 41, educação) antes de investir nela",
+     "quem": "voce",
+     "pronto": "Busca feita sem conflito; nome confirmado ou trocado em data/marcas/instituto.json",
+     "tempo_min": 30,
+     "fora": "Busca de marcas no site do INPI, classe 41 (educação). O setup usava 'Instituto AMS'; o nome que você passou a usar é 'Instituto AMS Silva'.",
+     "decisao": true,
+     "empresas": [
+      "instituto"
+     ],
+     "blocos": [
+      "inst",
+      "inpi"
+     ]
+    },
+    {
+     "id": "inst-preco",
+     "titulo": "Decidir o preço do mini-curso de Lógica e da pré-venda",
+     "quem": "voce",
+     "pronto": "Preço cheio e preço de pré-venda escritos em data/marcas/instituto.json",
+     "tempo_min": 20,
+     "fora": "Decisão sua. O setup calcula o lucro por venda depois da taxa da plataforma e do carnê-leão (passo calc-regras).",
+     "decisao": true,
+     "empresas": [
+      "instituto"
+     ],
+     "blocos": [
+      "curso",
+      "hotm"
+     ]
+    },
+    {
      "id": "mc-roteiro",
      "titulo": "Fechar o roteiro das 5 primeiras aulas do mini-curso a partir do acervo",
      "quem": "claude",
@@ -4703,6 +4759,9 @@
      ],
      "ofertas": [
       "minicurso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4718,6 +4777,9 @@
      ],
      "ofertas": [
       "minicurso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4733,6 +4795,9 @@
      ],
      "ofertas": [
       "minicurso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4744,16 +4809,19 @@
      "comando": "cd ~/dev/dev-setup && claude \"Passo klaro-lgpd do roteiro: Banner de consentimento (Klaro!) antes de ligar o Pixel\"",
      "blocos": [
       "klaro"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
      "id": "mc-pagina",
      "titulo": "Página de vendas no Instituto AMS: promessa, conteúdo, preço e garantia",
-     "quem": "claude",
+     "quem": "script",
      "pronto": "Página no ar levando ao checkout, com Pixel e UTM",
      "tempo_min": 120,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo mc-pagina do roteiro: Página de vendas no Instituto AMS: promessa, conteúdo, preço e garantia\"",
-     "nota": "Sem depoimento inventado: só depoimentos reais, com autorização, quando existirem.",
+     "comando": "cd ~/dev/dev-setup && just site instituto && just site instituto --checar",
+     "nota": "O site do Instituto AMS Silva sai pronto do modelo, com o curso de Lógica, a lista de espera e a regra de compra só por maiores de 18 (ou pelo responsável). Falta você pôr o link do checkout da Hotmart no campo link da oferta em data/marcas/instituto.json.",
      "blocos": [
       "inst",
       "pixel",
@@ -4761,6 +4829,9 @@
      ],
      "ofertas": [
       "minicurso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4777,6 +4848,9 @@
      "ofertas": [
       "minicurso",
       "newsletter"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4793,6 +4867,9 @@
      ],
      "ofertas": [
       "minicurso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4809,6 +4886,9 @@
      ],
      "ofertas": [
       "minicurso"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -4826,6 +4906,9 @@
      "ofertas": [
       "minicurso",
       "udemy"
+     ],
+     "empresas": [
+      "instituto"
      ]
     }
    ],
@@ -5080,6 +5163,9 @@
       "metodo",
       "projcap",
       "prereq"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5102,6 +5188,9 @@
       "lint",
       "errata",
       "livro"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5117,6 +5206,9 @@
       "licenca",
       "contato",
       "creditos"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5130,6 +5222,9 @@
       "figcod",
       "gerad",
       "alt"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5141,6 +5236,9 @@
      "comando": "cd ~/dev/dev-setup && claude \"Passo editora-agentes do roteiro: Criar os agentes da editora: revisor técnico, gabarito, leitor iniciante e consistência\"",
      "blocos": [
       "bagentes"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5153,6 +5251,9 @@
      "blocos": [
       "editais",
       "refs"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5165,7 +5266,26 @@
      "blocos": [
       "selo"
      ],
-     "decisao": true
+     "decisao": true,
+     "empresas": [
+      "editora"
+     ]
+    },
+    {
+     "id": "ed-site",
+     "titulo": "Gerar o site da Editora AMS Silva com a lista de aviso do lançamento",
+     "quem": "script",
+     "pronto": "just site editora --checar sem pendências e o site no ar",
+     "tempo_min": 30,
+     "comando": "cd ~/dev/dev-setup && just site editora && just site editora --checar",
+     "nota": "Textos e cores em data/marcas/editora.json, na identidade do livro (papel creme, verdete e latão).",
+     "empresas": [
+      "editora"
+     ],
+     "blocos": [
+      "selo",
+      "livro"
+     ]
     },
     {
      "id": "isbn-ficha",
@@ -5181,6 +5301,9 @@
      "blocos": [
       "isbn",
       "ficha"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5196,7 +5319,10 @@
      "blocos": [
       "beta"
      ],
-     "decisao": true
+     "decisao": true,
+     "empresas": [
+      "editora"
+     ]
     },
     {
      "id": "kdp",
@@ -5213,6 +5339,9 @@
      ],
      "ofertas": [
       "livro"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -5227,6 +5356,9 @@
      ],
      "blocos": [
       "deplegal"
+     ],
+     "empresas": [
+      "editora"
      ]
     }
    ],
@@ -5602,6 +5734,9 @@
      ],
      "ofertas": [
       "catalogo"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -5618,6 +5753,9 @@
      ],
      "ofertas": [
       "aulasprof"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -5633,6 +5771,9 @@
      ],
      "ofertas": [
       "rendara"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -5805,6 +5946,9 @@
      ],
      "ofertas": [
       "comunidade"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -6095,6 +6239,9 @@
       "formti",
       "formmat",
       "financas"
+     ],
+     "empresas": [
+      "instituto"
      ]
     },
     {
@@ -6497,6 +6644,9 @@
      ],
      "blocos": [
       "pod"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -6514,6 +6664,9 @@
      ],
      "ofertas": [
       "kitlivro"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -6526,6 +6679,9 @@
      "blocos": [
       "bcurso",
       "manim"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -6540,6 +6696,9 @@
      ],
      "ofertas": [
       "adocao"
+     ],
+     "empresas": [
+      "editora"
      ]
     },
     {
@@ -6557,6 +6716,9 @@
      ],
      "ofertas": [
       "traducao"
+     ],
+     "empresas": [
+      "editora"
      ]
     }
    ],

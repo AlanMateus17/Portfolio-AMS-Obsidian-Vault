@@ -4,13 +4,13 @@
 
 [← Implantação](README.md)
 
-62 fases, 564 passos, cerca de **1638 h 38 min** de trabalho no total. Cada passo tem um critério de pronto que dá para conferir. A versão para marcar o progresso é o [`acompanhamento.html`](acompanhamento.html) (e o artefato Implantação AMtech).
+62 fases, 567 passos, cerca de **1639 h 58 min** de trabalho no total. Cada passo tem um critério de pronto que dá para conferir. A versão para marcar o progresso é o [`acompanhamento.html`](acompanhamento.html) (e o artefato Implantação AMtech).
 
 Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Script** (você roda o comando), **Claude com você** (o Claude faz pelo conector ou pelo Claude Code, com a sua aprovação).
 
 **Todo o planejamento está aqui:** os 485 blocos do [mapa do setup](../mapa.html), de todas as 23 camadas, entram em algum passo, com a data ou o gatilho de quando, e cada uma das 108 ofertas do portfólio tem o passo em que entra à venda. Nada fica de fora; o CI falha se um bloco ou uma oferta nova não tiver passo ([quando entra cada bloco](#quando-entra-cada-bloco)).
 
-**Dá para fazer hoje:** 439 dos 564 passos (620 h 23 min) só precisam do notebook e de contas grátis. Os outros dizem o que falta: comprar algo, pagar um serviço, ter um conteúdo seu pronto ou esperar o gatilho da fase.
+**Dá para fazer hoje:** 441 dos 567 passos (621 h 13 min) só precisam do notebook e de contas grátis. Os outros dizem o que falta: comprar algo, pagar um serviço, ter um conteúdo seu pronto ou esperar o gatilho da fase.
 
 | Fase | Quando | Passos | Tempo |
 |---|---|---:|---:|
@@ -54,10 +54,10 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [37 · Vendas e finanças no CPF](#f14) | Semanas 8 a 10 · dez/2026 a jan/2027 | 20 | 12 h 10 min |
 | [38 · Vendas medidas](#f15) | Semana 11 · jan/2027 | 4 | 2 h 40 min |
 | [39 · Teste do núcleo](#f16) | Semana 11 · jan/2027 | 4 | 1 h 00 min |
-| [40 · Primeira venda: o mini-curso no ar](#f17) | Semanas 12 a 15 · jan a fev/2027 | 9 | 23 h 15 min |
+| [40 · Primeira venda: o mini-curso no ar](#f17) | Semanas 12 a 15 · jan a fev/2027 | 11 | 24 h 05 min |
 | [41 · Base dos sistemas AM](#f18) | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP | 9 | 8 h 40 min |
 | [42 · Nuvem e deploy](#f19) | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) | 8 | 7 h 45 min |
-| [43 · Editora](#f20) | Quando o capítulo 1 estiver pronto · **gatilho:** O capítulo 1 e o seu modelo de criação prontos | 11 | 18 h 30 min |
+| [43 · Editora](#f20) | Quando o capítulo 1 estiver pronto · **gatilho:** O capítulo 1 e o seu modelo de criação prontos | 12 | 19 h 00 min |
 | [44 · Dados, IA e pendrives](#f21) | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) | 12 | 16 h 20 min |
 | [45 · Sprint de 14 dias (Estratégia do Halter)](#f-sprint) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) · **gatilho:** O recesso começou e uma das 3 rendas de agora já passou no portão | 10 | 35 h 00 min |
 | [46 · Mais ofertas, uma por vez](#f22) | Fev a dez/2027, uma oferta por vez · **gatilho:** A primeira venda do mini-curso aconteceu | 23 | 129 h 00 min |
@@ -2603,17 +2603,18 @@ cd ~/dev/dev-setup && just lembrar "Autonomia da AMtech Software: (escreva o que
 - O ponto de partida é a tabela de autonomia do Núcleo: proposta, contrato, cobrança e publicação param no seu toque no celular.
 - Implanta: Política de autonomia · Núcleo AMtech (banco central)
 
-### 23.7 Publicar o site da AMtech Software com os 3 pacotes e o formulário de orçamento
+### 23.7 Gerar o site do Grupo AMtech Digital e publicar quando o checador não apontar pendências
 
-**Claude com você** · 3 h 00 min
+**Script** · 3 h 00 min
 
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo sw-site do roteiro: Publicar o site da AMtech Software com os 3 pacotes e o formulário de orçamento"
+cd ~/dev/dev-setup && just site amtech && just site amtech --checar
 ```
 
-- [ ] **Pronto quando:** Site no ar em Astro, com os pacotes, o HeyForm e o Klaro!
+- [ ] **Pronto quando:** just site amtech --checar sem pendências e o site no ar no seu domínio
+- O site sai pronto do modelo (pacotes, como funciona, sobre, dúvidas, contato, privacidade e termos da LGPD). Textos e cores em data/marcas/amtech.json. O checador lista o que só você preenche: domínio, canal de contato, e-mail da LGPD, preços e o Umami.
 - **Oferta:** Sites e lojas para pequenas empresas
 - Implanta: Site Grupo AMtech · Astro (sites de conteúdo) · HeyForm (qualifica o orçamento)
 
@@ -4482,7 +4483,27 @@ A primeira venda real pela internet, com entrega, suporte, imposto e números no
 
 **Quando:** Semanas 12 a 15 · jan a fev/2027
 
-### 40.1 Fechar o roteiro das 5 primeiras aulas do mini-curso a partir do acervo
+### 40.1 Confirmar a marca 'Instituto AMS Silva' e buscar no INPI (classe 41, educação) antes de investir nela
+
+**Você** · 30 min
+
+**Decisão sua:** o setup prepara as opções, quem decide é você.
+
+- **Fora do terminal:** Busca de marcas no site do INPI, classe 41 (educação). O setup usava 'Instituto AMS'; o nome que você passou a usar é 'Instituto AMS Silva'.
+- [ ] **Pronto quando:** Busca feita sem conflito; nome confirmado ou trocado em data/marcas/instituto.json
+- Implanta: Instituto AMS · Registro de marca (INPI)
+
+### 40.2 Decidir o preço do mini-curso de Lógica e da pré-venda
+
+**Você** · 20 min
+
+**Decisão sua:** o setup prepara as opções, quem decide é você.
+
+- **Fora do terminal:** Decisão sua. O setup calcula o lucro por venda depois da taxa da plataforma e do carnê-leão (passo calc-regras).
+- [ ] **Pronto quando:** Preço cheio e preço de pré-venda escritos em data/marcas/instituto.json
+- Implanta: Mini-curso Lógica de Programação · Hotmart
+
+### 40.3 Fechar o roteiro das 5 primeiras aulas do mini-curso a partir do acervo
 
 **Claude com você** · 2 h 00 min
 
@@ -4496,7 +4517,7 @@ cd ~/dev/dev-setup && claude "Passo mc-roteiro do roteiro: Fechar o roteiro das 
 - **Oferta:** Mini-curso Lógica de Programação
 - Implanta: Mini-curso Lógica de Programação
 
-### 40.2 Gravar e editar as 5 aulas
+### 40.4 Gravar e editar as 5 aulas
 
 **Você** · 10 h 00 min
 
@@ -4505,7 +4526,7 @@ cd ~/dev/dev-setup && claude "Passo mc-roteiro do roteiro: Fechar o roteiro das 
 - **Oferta:** Mini-curso Lógica de Programação
 - Implanta: OBS Studio · DaVinci Resolve ou Kdenlive
 
-### 40.3 Subir as aulas na Hotmart com preço e garantia de 7 dias
+### 40.5 Subir as aulas na Hotmart com preço e garantia de 7 dias
 
 **Você** · 2 h 00 min
 
@@ -4515,7 +4536,7 @@ cd ~/dev/dev-setup && claude "Passo mc-roteiro do roteiro: Fechar o roteiro das 
 - **Oferta:** Mini-curso Lógica de Programação
 - Implanta: Hotmart
 
-### 40.4 Banner de consentimento (Klaro!) antes de ligar o Pixel
+### 40.6 Banner de consentimento (Klaro!) antes de ligar o Pixel
 
 **Claude com você** · 45 min
 
@@ -4528,22 +4549,22 @@ cd ~/dev/dev-setup && claude "Passo klaro-lgpd do roteiro: Banner de consentimen
 - [ ] **Pronto quando:** Pixel e tags só disparam depois do aceite; o Umami segue sem banner
 - Implanta: Klaro! (consentimento LGPD)
 
-### 40.5 Página de vendas no Instituto AMS: promessa, conteúdo, preço e garantia
+### 40.7 Página de vendas no Instituto AMS: promessa, conteúdo, preço e garantia
 
-**Claude com você** · 2 h 00 min
+**Script** · 2 h 00 min
 
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo mc-pagina do roteiro: Página de vendas no Instituto AMS: promessa, conteúdo, preço e garantia"
+cd ~/dev/dev-setup && just site instituto && just site instituto --checar
 ```
 
 - [ ] **Pronto quando:** Página no ar levando ao checkout, com Pixel e UTM
-- Sem depoimento inventado: só depoimentos reais, com autorização, quando existirem.
+- O site do Instituto AMS Silva sai pronto do modelo, com o curso de Lógica, a lista de espera e a regra de compra só por maiores de 18 (ou pelo responsável). Falta você pôr o link do checkout da Hotmart no campo link da oferta em data/marcas/instituto.json.
 - **Oferta:** Mini-curso Lógica de Programação
 - Implanta: Instituto AMS · Tags de conversão (Pixel, Google…) · Padrão de UTM
 
-### 40.6 Isca grátis (aula 1) com a sequência de e-mails que leva à venda
+### 40.8 Isca grátis (aula 1) com a sequência de e-mails que leva à venda
 
 **Claude com você** · 1 h 30 min
 
@@ -4557,7 +4578,7 @@ cd ~/dev/dev-setup && claude "Passo mc-isca do roteiro: Isca grátis (aula 1) co
 - **Oferta:** Mini-curso Lógica de Programação · Newsletter (patrocínio e vendas)
 - Implanta: Isca grátis + sequência de e-mails · MailerLite
 
-### 40.7 Abrir a pré-venda: lista de e-mail, Instagram, WhatsApp e LinkedIn
+### 40.9 Abrir a pré-venda: lista de e-mail, Instagram, WhatsApp e LinkedIn
 
 **Você** · 2 h 00 min
 
@@ -4566,7 +4587,7 @@ cd ~/dev/dev-setup && claude "Passo mc-isca do roteiro: Isca grátis (aula 1) co
 - **Oferta:** Mini-curso Lógica de Programação
 - Implanta: Instagram · WhatsApp Business · LinkedIn
 
-### 40.8 Primeira venda real: acesso, suporte, painel e carnê-leão
+### 40.10 Primeira venda real: acesso, suporte, painel e carnê-leão
 
 **Você** · 1 h 00 min
 
@@ -4575,7 +4596,7 @@ cd ~/dev/dev-setup && claude "Passo mc-isca do roteiro: Isca grátis (aula 1) co
 - **Oferta:** Mini-curso Lógica de Programação
 - Implanta: Hotmart · Webhooks de venda · Carnê-leão (Receita Federal)
 
-### 40.9 Publicar o mini-curso também na Kiwify, Eduzz e Udemy
+### 40.11 Publicar o mini-curso também na Kiwify, Eduzz e Udemy
 
 **Você** · 2 h 00 min
 
@@ -4900,7 +4921,21 @@ cd ~/dev/dev-setup && claude "Passo editais do roteiro: Montar a matriz de edita
 - [ ] **Pronto quando:** Logo aprovado e aplicado na classe LaTeX
 - Implanta: Selo Editora AMS Silva
 
-### 43.8 Comprar os ISBNs na CBL e pedir a ficha catalográfica
+### 43.8 Gerar o site da Editora AMS Silva com a lista de aviso do lançamento
+
+**Script** · 30 min
+
+No **Ubuntu** (linha `alanmateus@...$`):
+
+```bash
+cd ~/dev/dev-setup && just site editora && just site editora --checar
+```
+
+- [ ] **Pronto quando:** just site editora --checar sem pendências e o site no ar
+- Textos e cores em data/marcas/editora.json, na identidade do livro (papel creme, verdete e latão).
+- Implanta: Selo Editora AMS Silva · Livro Lógica e Máquina
+
+### 43.9 Comprar os ISBNs na CBL e pedir a ficha catalográfica
 
 **Você** · 1 h 00 min
 
@@ -4909,7 +4944,7 @@ cd ~/dev/dev-setup && claude "Passo editais do roteiro: Montar a matriz de edita
 - **Precisa:** pagar um serviço, conteúdo seu pronto (livro, capítulo)
 - Implanta: ISBN + código de barras (CBL) · Ficha catalográfica
 
-### 43.9 Escolher 3 a 5 leitores beta e um revisor técnico
+### 43.10 Escolher 3 a 5 leitores beta e um revisor técnico
 
 **Você** · 30 min
 
@@ -4920,7 +4955,7 @@ cd ~/dev/dev-setup && claude "Passo editais do roteiro: Montar a matriz de edita
 - **Precisa:** conteúdo seu pronto (livro, capítulo)
 - Implanta: Leitores beta e revisão técnica
 
-### 43.10 Criar a conta no Amazon KDP e cadastrar o livro em rascunho
+### 43.11 Criar a conta no Amazon KDP e cadastrar o livro em rascunho
 
 **Você** · 1 h 00 min
 
@@ -4930,7 +4965,7 @@ cd ~/dev/dev-setup && claude "Passo editais do roteiro: Montar a matriz de edita
 - **Oferta:** Livro Lógica e Máquina
 - Implanta: Amazon KDP
 
-### 43.11 Enviar o depósito legal à Biblioteca Nacional até 30 dias depois de publicar
+### 43.12 Enviar o depósito legal à Biblioteca Nacional até 30 dias depois de publicar
 
 **Você** · 30 min
 
@@ -7062,10 +7097,10 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Bloco | Passo | Quando |
 |---|---|---|
 | Meta Business Suite | 36.5 | Semanas 6 e 7 · dez/2026 |
-| Instagram | 36.1, 40.7 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| Instagram | 36.1, 40.9 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
 | YouTube | 36.1, 46.14 | Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
-| LinkedIn | 36.1, 40.7 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
-| WhatsApp Business | 36.2, 40.7 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| LinkedIn | 36.1, 40.9 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| WhatsApp Business | 36.2, 40.9 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
 | Google Perfil da Empresa | 46.9, 56.3 | Fev a dez/2027, uma oferta por vez; Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
 | Comunidade (Discord ou grupo) | 37.10, 46.15 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Busca Google (SEO) | 36.12 | Semanas 6 e 7 · dez/2026 |
@@ -7079,20 +7114,20 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Bloco | Passo | Quando |
 |---|---|---|
 | Meta Ads (Instagram, Facebook) | 47.1 | A partir de fev/2027 |
-| Isca grátis + sequência de e-mails | 36.6, 40.6 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
-| MailerLite | 36.6, 40.6, 46.8 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027; Fev a dez/2027, uma oferta por vez |
+| Isca grátis + sequência de e-mails | 36.6, 40.8 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| MailerLite | 36.6, 40.8, 46.8 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027; Fev a dez/2027, uma oferta por vez |
 | Postiz (agendador) | 10.8 | Semana 4 · nov/2026 |
 | Aprovação no celular | 34.3 | Semana 5 · nov/2026 |
 | Telegram (avisos) | 18.1, 18.2, 18.3, 18.4, 18.5, 31.5, 34.3 | Semana 5 · nov/2026; Dez/2026 a jan/2027 |
 | n8n | 10.1, 10.2, 10.5, 10.7, 12.1, 12.4, 12.6, 12.7, 12.9, 12.10, 12.12, 27.7, 31.5, 46.5 | Semana 4 · nov/2026; Nov/2026 em diante, uma por vez, na ordem de desbloqueio; Semana 6 · nov/2026 a dez/2026; Dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Algoritmo de horário | 47.6 | A partir de fev/2027 |
-| Tags de conversão (Pixel, Google…) | 36.5, 40.5 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
-| Padrão de UTM | 37.12, 40.5 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Tags de conversão (Pixel, Google…) | 36.5, 40.7 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| Padrão de UTM | 37.12, 40.7 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Google e YouTube Ads | 47.2 | A partir de fev/2027 |
 | TikTok Ads | 47.2 | A partir de fev/2027 |
 | Regras de corte | 37.13 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Lucro por Venda (calculadora) | 37.13 | Semanas 8 a 10 · dez/2026 a jan/2027 |
-| Webhooks de venda | 38.1, 38.2, 39.3, 40.8 | Semana 11 · jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Webhooks de venda | 38.1, 38.2, 39.3, 40.10 | Semana 11 · jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Banco de métricas (PostgreSQL) | 10.2, 10.7, 38.3 | Semana 4 · nov/2026; Semana 11 · jan/2027 |
 | Painel de lucro (Grafana) | 11.6, 12.11, 38.4, 39.3 | Semana 4 · nov/2026; Nov/2026 em diante, uma por vez, na ordem de desbloqueio; Semana 11 · jan/2027 |
 | Programa de afiliados | 47.5 | A partir de fev/2027 |
@@ -7116,10 +7151,10 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Pix Automático + gateway (ex.: Asaas) | 24.5, 45.9, 51.4 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite); Quando a renda pedir |
 | Agenda online (Cal.com) | 23.8, 37.8, 45.4, 46.18, 46.19 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 8 a 10 · dez/2026 a jan/2027; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite); Fev a dez/2027, uma oferta por vez |
 | CRM simples (planilha) | 37.9 | Semanas 8 a 10 · dez/2026 a jan/2027 |
-| Hotmart | 37.5, 40.3, 40.8, 46.3, 46.4 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027; Fev a dez/2027, uma oferta por vez |
-| Kiwify | 37.5, 40.9 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
-| Eduzz | 37.6, 40.9 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
-| Udemy | 37.6, 40.9 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Hotmart | 37.5, 40.2, 40.5, 40.10, 46.3, 46.4 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027; Fev a dez/2027, uma oferta por vez |
+| Kiwify | 37.5, 40.11 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Eduzz | 37.6, 40.11 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Udemy | 37.6, 40.11 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | DIO (parceria) | 37.6 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | YouTube (membros) | 47.9 | A partir de fev/2027 |
 | Mercado Pago | 37.7, 46.19 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
@@ -7133,13 +7168,13 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Registro de marca (INPI) | 23.2, 37.17 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 8 a 10 · dez/2026 a jan/2027 |
+| Registro de marca (INPI) | 23.2, 37.17, 40.1 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Termos, privacidade (LGPD) e contratos | 23.4, 37.4 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Certificado digital (e-CNPJ) | 51.2 | Quando a renda pedir |
 | API de NFS-e (ex.: Focus NFe) | 51.3 | Quando a renda pedir |
 | CNPJ (futuro) | 23.1, 51.1 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Quando a renda pedir |
 | gov.br (prata ou ouro) | 2.7, 37.1 | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semanas 8 a 10 · dez/2026 a jan/2027 |
-| Carnê-leão (Receita Federal) | 37.18, 40.8 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Carnê-leão (Receita Federal) | 37.18, 40.10 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Declaração anual do IR | 37.19 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Conta bancária separada (CPF) | 2.7, 37.2 | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Contador | 23.1, 24.5, 37.3 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 8 a 10 · dez/2026 a jan/2027 |
@@ -7162,7 +7197,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | E-mail profissional (enviar e receber) | 36.4 | Semanas 6 e 7 · dez/2026 |
 | Domínio (Registro.br) | 36.3 | Semanas 6 e 7 · dez/2026 |
 | Site pessoal + blog (Jekyll) | 24.3, 24.6, 36.7, 46.1 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
-| Instituto AMS | 36.8, 40.5 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| Instituto AMS | 36.8, 40.1, 40.7 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
 | Site Grupo AMtech | 23.7, 36.9 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 6 e 7 · dez/2026 |
 | Catálogo do HTML | 36.9, 46.2 | Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
 | Umami (analytics) | 36.11 | Semanas 6 e 7 · dez/2026 |
@@ -7170,7 +7205,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Hostinger (clientes WP) | 23.5, 28.2, 28.4, 36.13, 46.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semana 6 · nov/2026 a dez/2026; Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
 | Kit de sites (Hostinger IA) | 13.1, 13.2, 13.3, 13.4, 23.3 | Semanas 4 e 5 · nov/2026; Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada |
 | Avaliador de templates | 13.5 | Semanas 4 e 5 · nov/2026 |
-| Klaro! (consentimento LGPD) | 40.4 | Semanas 12 a 15 · jan a fev/2027 |
+| Klaro! (consentimento LGPD) | 40.6 | Semanas 12 a 15 · jan a fev/2027 |
 | Plausible (reserva do Umami) | 33.11 | Com a primeira página de venda no ar (jan/2027) e por etapas |
 | BookStack (manuais dos clientes) | 32.5 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | Astro (sites de conteúdo) | 23.7, 36.14, 45.9 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 6 e 7 · dez/2026; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
@@ -7179,10 +7214,10 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Mini-curso Lógica de Programação | 37.5, 40.1 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
+| Mini-curso Lógica de Programação | 37.5, 40.2, 40.3 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Formações (TI, Matemática, Finanças) | 47.10 | A partir de fev/2027 |
 | Templates e código-fonte | 41.7 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Livro Lógica e Máquina | 43.2 | Quando o capítulo 1 estiver pronto |
+| Livro Lógica e Máquina | 43.2, 43.8 | Quando o capítulo 1 estiver pronto |
 | Aulas particulares | 37.8 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Sites para pequenas empresas | 23.3, 24.3, 36.13, 46.9, 46.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
 | Sistemas AM (SaaS) | 50.1 | 2027 |
@@ -7216,7 +7251,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Selo Editora AMS Silva | 43.7 | Quando o capítulo 1 estiver pronto |
+| Selo Editora AMS Silva | 43.7, 43.8 | Quando o capítulo 1 estiver pronto |
 | Repositório do livro | 43.2 | Quando o capítulo 1 estiver pronto |
 | Seu modelo de criação | 43.1 | Quando o capítulo 1 estiver pronto |
 | Fonte única (Markdown + Pandoc) | 43.2 | Quando o capítulo 1 estiver pronto |
@@ -7226,12 +7261,12 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Pipeline do livro (CI) | 43.2 | Quando o capítulo 1 estiver pronto |
 | Revisão automática (LanguageTool, Vale) | 43.2 | Quando o capítulo 1 estiver pronto |
 | Agentes da editora | 43.5 | Quando o capítulo 1 estiver pronto |
-| Leitores beta e revisão técnica | 43.9 | Quando o capítulo 1 estiver pronto |
+| Leitores beta e revisão técnica | 43.10 | Quando o capítulo 1 estiver pronto |
 | Errata e edições | 43.2 | Quando o capítulo 1 estiver pronto |
-| ISBN + código de barras (CBL) | 43.8 | Quando o capítulo 1 estiver pronto |
-| Ficha catalográfica | 43.8 | Quando o capítulo 1 estiver pronto |
-| Depósito legal | 43.11 | Quando o capítulo 1 estiver pronto |
-| Amazon KDP | 43.10 | Quando o capítulo 1 estiver pronto |
+| ISBN + código de barras (CBL) | 43.9 | Quando o capítulo 1 estiver pronto |
+| Ficha catalográfica | 43.9 | Quando o capítulo 1 estiver pronto |
+| Depósito legal | 43.12 | Quando o capítulo 1 estiver pronto |
+| Amazon KDP | 43.11 | Quando o capítulo 1 estiver pronto |
 | Gráfica sob demanda (Brasil) | 53.1 | Depois do primeiro livro |
 | Kit edição especial | 53.2 | Depois do primeiro livro |
 | Curso por seção | 53.3 | Depois do primeiro livro |
@@ -7278,8 +7313,8 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| OBS Studio | 3.2, 35.1, 40.2 | Semana 1 · out/2026; Semana 5 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
-| DaVinci Resolve ou Kdenlive | 3.7, 35.3, 40.2 | Semana 1 · out/2026; Semana 5 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| OBS Studio | 3.2, 35.1, 40.4 | Semana 1 · out/2026; Semana 5 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
+| DaVinci Resolve ou Kdenlive | 3.7, 35.3, 40.4 | Semana 1 · out/2026; Semana 5 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
 | Audacity | 3.2, 35.2 | Semana 1 · out/2026; Semana 5 · dez/2026 |
 | Canva · Krita · Inkscape | 3.2, 28.8, 35.4 | Semana 1 · out/2026; Semana 6 · nov/2026 a dez/2026; Semana 5 · dez/2026 |
 | Whisper (local) | 4.4, 34.6 | Semana 2 · nov/2026; Semana 5 · nov/2026 |

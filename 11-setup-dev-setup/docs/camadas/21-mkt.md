@@ -288,20 +288,20 @@ flowchart LR
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
 | [Meta Ads (Instagram, Facebook)](#ads) | Remoto · precisa de conta · futuro | Primeiro canal pago: anúncios da isca grátis e remarketing do mini-curso. Desde jan/2026 a fatura tem +12,15% de impostos sobre a mídia. | passo 47.1 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Isca grátis + sequência de e-mails](#isca) | Local | Aula ou PDF grátis que captura o e-mail e abre uma sequência de 5 a 7 e-mails até o mini-curso. | passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.6 · Semanas 12 a 15 · jan a fev/2027 |
-| [MailerLite](#mailer) | Remoto · precisa de conta | Newsletter do blog com grupos por tema e funil de lançamento. Você já escolheu o plano grátis. | passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.6 · Semanas 12 a 15 · jan a fev/2027; passo 46.8 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Isca grátis + sequência de e-mails](#isca) | Local | Aula ou PDF grátis que captura o e-mail e abre uma sequência de 5 a 7 e-mails até o mini-curso. | passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.8 · Semanas 12 a 15 · jan a fev/2027 |
+| [MailerLite](#mailer) | Remoto · precisa de conta | Newsletter do blog com grupos por tema e funil de lançamento. Você já escolheu o plano grátis. | passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.8 · Semanas 12 a 15 · jan a fev/2027; passo 46.8 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Postiz (agendador)](#postiz) | Local · futuro | Agendador open source (AGPL-3.0) que publica em mais de 28 redes. Roda no seu Docker com PostgreSQL e Redis; integra com o n8n. | passo 10.8 · Semana 4 · nov/2026 |
 | [Aprovação no celular](#aprov) | Local | Nenhum post sai sem o seu ok: a peça chega pelo Telegram e você aprova no celular. Protege o canal de erro da IA. | passo 34.3 · Semana 5 · nov/2026 |
 | [Telegram (avisos)](#tg) | Remoto · precisa de conta | Bot que avisa no celular: peça pronta para aprovar, serviço fora do ar. Grátis. | passo 18.1 · Semana 5 · nov/2026; passo 18.2 · Semana 5 · nov/2026; passo 18.3 · Semana 5 · nov/2026; passo 18.4 · Semana 5 · nov/2026; passo 18.5 · Semana 5 · nov/2026; passo 31.5 · Dez/2026 a jan/2027; passo 34.3 · Semana 5 · nov/2026 |
 | [n8n](#n8n) | Local | Automação: novo aluno → e-mail, post agendado, aviso. | passo 10.1 · Semana 4 · nov/2026; passo 10.2 · Semana 4 · nov/2026; passo 10.5 · Semana 4 · nov/2026; passo 10.7 · Semana 4 · nov/2026; passo 12.1 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 12.4 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 12.6 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 12.7 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 12.9 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 12.10 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 12.12 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 27.7 · Semana 6 · nov/2026 a dez/2026; passo 31.5 · Dez/2026 a jan/2027; passo 46.5 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Algoritmo de horário](#horario) | Local · futuro | Calcula o desempenho por rede, dia e hora com os seus dados; 80% dos posts nas melhores faixas, 20% testando faixas novas. | passo 47.6 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Tags de conversão (Pixel, Google…)](#pixel) | Remoto · precisa de conta | Pixel + API de Conversões da Meta, tag do Google Ads, pixel do TikTok e as tags de Kwai, Pinterest, LinkedIn e nativos. Sem a tag, o canal não aprende quem compra e a venda não chega ao painel. | passo 36.5 · Semanas 6 e 7 · dez/2026; passo 40.5 · Semanas 12 a 15 · jan a fev/2027 |
-| [Padrão de UTM](#utm) | Local | Todo link marcado com fonte, meio, campanha e criativo, para ligar cada venda ao anúncio ou post que a trouxe. | passo 37.12 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.5 · Semanas 12 a 15 · jan a fev/2027 |
+| [Tags de conversão (Pixel, Google…)](#pixel) | Remoto · precisa de conta | Pixel + API de Conversões da Meta, tag do Google Ads, pixel do TikTok e as tags de Kwai, Pinterest, LinkedIn e nativos. Sem a tag, o canal não aprende quem compra e a venda não chega ao painel. | passo 36.5 · Semanas 6 e 7 · dez/2026; passo 40.7 · Semanas 12 a 15 · jan a fev/2027 |
+| [Padrão de UTM](#utm) | Local | Todo link marcado com fonte, meio, campanha e criativo, para ligar cada venda ao anúncio ou post que a trouxe. | passo 37.12 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.7 · Semanas 12 a 15 · jan a fev/2027 |
 | [Google e YouTube Ads](#gads) | Remoto · precisa de conta · futuro | Para vídeos longos que já convertem e buscas com intenção de compra. | passo 47.2 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
 | [TikTok Ads](#ttads) | Remoto · precisa de conta · futuro | Depois que os cortes orgânicos mostrarem tração. | passo 47.2 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
 | [Regras de corte](#regras) | Local | Pausa criativo ou conjunto quando o CPA passa do de empate; sobe 15% do orçamento quando fica abaixo do CPA da margem. | passo 37.13 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Lucro por Venda (calculadora)](#calc) | Remoto | Artefato com taxas das plataformas, imposto, CPA e ROAS de empate, simulador e o lucro real de cada campanha. | passo 37.13 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Webhooks de venda](#hooks) | Remoto | Hotmart, Kiwify e Eduzz avisam cada venda e reembolso; o n8n grava no banco. | passo 38.1 · Semana 11 · jan/2027; passo 38.2 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027; passo 40.8 · Semanas 12 a 15 · jan a fev/2027 |
+| [Webhooks de venda](#hooks) | Remoto | Hotmart, Kiwify e Eduzz avisam cada venda e reembolso; o n8n grava no banco. | passo 38.1 · Semana 11 · jan/2027; passo 38.2 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027; passo 40.10 · Semanas 12 a 15 · jan a fev/2027 |
 | [Banco de métricas (PostgreSQL)](#metrics) | Local | Tabelas de produtos, vendas, gastos, ferramentas e impostos. | passo 10.2 · Semana 4 · nov/2026; passo 10.7 · Semana 4 · nov/2026; passo 38.3 · Semana 11 · jan/2027 |
 | [Painel de lucro (Grafana)](#painel) | Local | Lucro por produto, canal, campanha e país, atualizado sozinho. | passo 11.6 · Semana 4 · nov/2026; passo 12.11 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 38.4 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027 |
 | [Programa de afiliados](#afprog) | Remoto · futuro | Comissão definida pela calculadora, aberta depois de 20 vendas próprias. | passo 47.5 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
@@ -346,7 +346,7 @@ Primeiro canal pago: anúncios da isca grátis e remarketing do mini-curso. Desd
 
 Aula ou PDF grátis que captura o e-mail e abre uma sequência de 5 a 7 e-mails até o mini-curso.
 
-**Quando entra:** passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.6 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.8 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -371,7 +371,7 @@ Aula ou PDF grátis que captura o e-mail e abre uma sequência de 5 a 7 e-mails 
 
 Newsletter do blog com grupos por tema e funil de lançamento. Você já escolheu o plano grátis.
 
-**Quando entra:** passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.6 · Semanas 12 a 15 · jan a fev/2027; passo 46.8 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 36.6 · Semanas 6 e 7 · dez/2026; passo 40.8 · Semanas 12 a 15 · jan a fev/2027; passo 46.8 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -498,7 +498,7 @@ Calcula o desempenho por rede, dia e hora com os seus dados; 80% dos posts nas m
 
 Pixel + API de Conversões da Meta, tag do Google Ads, pixel do TikTok e as tags de Kwai, Pinterest, LinkedIn e nativos. Sem a tag, o canal não aprende quem compra e a venda não chega ao painel.
 
-**Quando entra:** passo 36.5 · Semanas 6 e 7 · dez/2026; passo 40.5 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 36.5 · Semanas 6 e 7 · dez/2026; passo 40.7 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -520,7 +520,7 @@ Pixel + API de Conversões da Meta, tag do Google Ads, pixel do TikTok e as tags
 
 Todo link marcado com fonte, meio, campanha e criativo, para ligar cada venda ao anúncio ou post que a trouxe.
 
-**Quando entra:** passo 37.12 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.5 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 37.12 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.7 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -631,7 +631,7 @@ Artefato com taxas das plataformas, imposto, CPA e ROAS de empate, simulador e o
 
 Hotmart, Kiwify e Eduzz avisam cada venda e reembolso; o n8n grava no banco.
 
-**Quando entra:** passo 38.1 · Semana 11 · jan/2027; passo 38.2 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027; passo 40.8 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 38.1 · Semana 11 · jan/2027; passo 38.2 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027; passo 40.10 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

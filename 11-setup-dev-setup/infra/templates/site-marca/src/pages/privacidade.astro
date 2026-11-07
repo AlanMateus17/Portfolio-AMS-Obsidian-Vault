@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+import marca from "../marca.json";
+const l = marca.legal;
+---
+<Base titulo="Política de privacidade" descricao={`Como ${marca.nome} trata os seus dados (LGPD).`}>
+  <article class="w" style="padding-top:32px"><div class="estreito">
+    <span class="rotulo">LGPD</span>
+    <h1 style="font-size:clamp(30px,5vw,44px)">Política de privacidade</h1>
+    <p class="suave">Atualizada em {l.atualizado}. Modelo do dev-setup: revise com um advogado antes de coletar dados em volume.</p>
+    <h2 style="font-size:24px;margin-top:12px">Quem cuida dos seus dados</h2>
+    <p>{marca.responsavel || marca.nome}{marca.documento ? `, ${marca.documento}` : ""}. Contato do encarregado: <a href={`mailto:${l.email_privacidade}`}>{l.email_privacidade}</a>.</p>
+    <h2 style="font-size:24px;margin-top:12px">O que coletamos e por quê</h2>
+    <ul style="padding-left:20px;display:grid;gap:6px">{l.dados.map((d) => <li><strong>{d.o_que}:</strong> {d.para_que}</li>)}</ul>
+    <h2 style="font-size:24px;margin-top:12px">Com quem compartilhamos</h2>
+    <p>Só com os serviços necessários para atender você: {l.operadores.join(", ")}. Não vendemos dados.</p>
+    <h2 style="font-size:24px;margin-top:12px">Por quanto tempo</h2>
+    <p>{l.retencao}</p>
+    <h2 style="font-size:24px;margin-top:12px">Seus direitos</h2>
+    <p>Você pode pedir acesso, correção, portabilidade ou exclusão dos seus dados e revogar consentimentos a qualquer momento pelo e-mail acima. Respondemos em até 15 dias.</p>
+    <h2 style="font-size:24px;margin-top:12px">Cookies e medição</h2>
+    <p>{l.cookies}</p>
+  </div></article>
+</Base>

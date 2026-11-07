@@ -1,0 +1,60 @@
+---
+import marca from "../marca.json";
+const { titulo, descricao } = Astro.props;
+const t = marca.tokens;
+const nomeCompleto = titulo ? `${titulo} · ${marca.nome}` : marca.nome;
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{nomeCompleto}</title>
+  <meta name="description" content={descricao ?? marca.descricao} />
+  <meta property="og:title" content={nomeCompleto} />
+  <meta property="og:description" content={descricao ?? marca.descricao} />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href={`data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='${encodeURIComponent(t.principal)}'/><text x='50%' y='58%' font-family='Georgia,serif' font-size='30' font-weight='700' fill='${encodeURIComponent(t.fundo)}' text-anchor='middle' dominant-baseline='middle'>${marca.sigla}</text></svg>`} />
+  {marca.analytics?.umami && <script defer src={marca.analytics.umami.script} data-website-id={marca.analytics.umami.id}></script>}
+  <style is:global define:vars={{ fundo: t.fundo, superficie: t.superficie, tinta: t.tinta, suave: t.suave, linha: t.linha, principal: t.principal, sobrePrincipal: t.sobre_principal, destaque: t.destaque, fundoE: t.escuro.fundo, superficieE: t.escuro.superficie, tintaE: t.escuro.tinta, suaveE: t.escuro.suave, linhaE: t.escuro.linha, principalE: t.escuro.principal, sobrePrincipalE: t.escuro.sobre_principal, destaqueE: t.escuro.destaque }}>
+    :root { --c-fundo: var(--fundo); --c-sup: var(--superficie); --c-tinta: var(--tinta); --c-suave: var(--suave); --c-linha: var(--linha); --c-pri: var(--principal); --c-sobre: var(--sobrePrincipal); --c-dest: var(--destaque); color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root { --c-fundo: var(--fundoE); --c-sup: var(--superficieE); --c-tinta: var(--tintaE); --c-suave: var(--suaveE); --c-linha: var(--linhaE); --c-pri: var(--principalE); --c-sobre: var(--sobrePrincipalE); --c-dest: var(--destaqueE); color-scheme: dark; } }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--c-fundo); color: var(--c-tinta); font: 400 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    a { color: var(--c-pri); }
+    .w { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .estreito { max-width: 760px; display: grid; gap: 14px; }
+    h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.15; text-wrap: balance; margin: 0; }
+    h1 { font-size: clamp(34px, 6vw, 58px); }
+    h2 { font-size: clamp(26px, 4vw, 36px); }
+    p { margin: 0; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 10px; font-weight: 600; text-decoration: none; border: 2px solid var(--c-pri); }
+    .btn.cheio { background: var(--c-pri); color: var(--c-sobre); }
+    .btn.vazio { color: var(--c-pri); }
+    .btn:focus-visible, a:focus-visible { outline: 3px solid var(--c-dest); outline-offset: 3px; }
+    .rotulo { font: 600 13px/1 system-ui, sans-serif; letter-spacing: .1em; text-transform: uppercase; color: var(--c-dest); }
+    .suave { color: var(--c-suave); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="w" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:18px;padding-bottom:18px;flex-wrap:wrap">
+    <a href="/" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:10px">
+      <span aria-hidden="true" style="display:grid;place-items:center;min-width:38px;padding:0 7px;height:38px;border-radius:9px;background:var(--c-pri);color:var(--c-sobre);font:700 17px Georgia,serif">{marca.sigla}</span>
+      <strong style="font-family:Georgia,serif;font-size:19px">{marca.nome}</strong>
+    </a>
+    <nav aria-label="Principal" style="display:flex;gap:18px;flex-wrap:wrap;font-weight:500">
+      <a href="/#ofertas" style="color:inherit;text-decoration:none">{marca.secoes.ofertas}</a>
+      <a href="/#como" style="color:inherit;text-decoration:none">Como funciona</a>
+      <a href="/#sobre" style="color:inherit;text-decoration:none">Sobre</a>
+      <a href="/#contato" style="color:inherit;text-decoration:none">Contato</a>
+    </nav>
+  </header>
+  <main><slot /></main>
+  <footer class="w suave" style="border-top:1px solid var(--c-linha);margin-top:72px;padding-top:24px;padding-bottom:40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:15px">
+    <span>© {new Date().getFullYear()} {marca.nome}{marca.responsavel ? ` · ${marca.responsavel}` : ""}{marca.documento ? ` · ${marca.documento}` : ""}</span>
+    <span style="display:flex;gap:16px"><a href="/privacidade">Privacidade</a><a href="/termos">Termos</a></span>
+  </footer>
+</body>
+</html>

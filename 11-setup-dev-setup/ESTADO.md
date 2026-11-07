@@ -43,3 +43,4 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-06: v2.20: Alura (assistir antes) e VHSlins (ler antes) ligados aos módulos; trilhas de matemática e física; semana fixa no just professor hoje; aula termina com roteiro para dar a aula.
 - 2026-11-06: v2.21: posts do Akita escolhidos por módulo no Professor; regras aprovadas entram no núcleo; podcasts viram nota de escuta (just professor escutei); bug das tags do índice do Akita corrigido.
 - 2026-11-06: v2.22: um vault só (ADR 0013): o seu Portfolio-AMS-Obsidian-Vault em ~/dev/notas, com o dev-setup espelhado na pasta 11 (just vault-espelho); plano mestre = eixo + Professor.
+- 2026-11-07: v2.23: sites das 3 empresas prontos pelo modelo Astro (just site amtech|instituto|editora; --checar mostra o que falta); roteiro por empresa (just agora instituto|editora); docs/empresas/README.md.

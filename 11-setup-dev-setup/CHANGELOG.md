@@ -2,6 +2,13 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.23.0] - 2026-11-07
+
+### Adicionado
+- Sites das três empresas, gerados do mesmo modelo Astro (`infra/templates/site-marca`, `tools/sites/novo_site.py`, `just site <marca>`): Grupo AMtech Digital (pacotes Essencial, Negócio e Vendas), Instituto AMS Silva (mini-curso de Lógica, lista de espera, compra só por maiores de 18 ou responsável) e Editora AMS Silva (Lógica e Máquina). Início, ofertas, como funciona, sobre, dúvidas, contato, privacidade e termos da LGPD, claro e escuro, celular, sitemap. `--checar` lista o que só você preenche (domínio, contato, e-mail da LGPD, preços, link de venda, Umami). Testes.
+- Roteiro por empresa: passos marcados com instituto e editora (`just agora instituto`, `just agora editora`); decisões novas: marca Instituto AMS Silva no INPI (classe 41) e preço do mini-curso; passo do site da Editora; os passos de site da AMtech e da página do Instituto passam a usar o gerador.
+- docs/empresas/README.md: o que está pronto, o que só você faz e o que ainda não é automático.
+
 ## [2.22.2] - 2026-11-06
 
 ### Mudado

@@ -1,0 +1,170 @@
+{
+ "id": "amtech",
+ "nome": "Grupo AMtech Digital",
+ "sigla": "AM",
+ "dominio": "",
+ "responsavel": "Alan Mateus",
+ "documento": "",
+ "descricao": "Sites, sistemas e automação para pequenas empresas de Barbacena e região, com manutenção mensal e entrega medida.",
+ "chamada": "Desenvolvimento de software · Barbacena, MG",
+ "titulo": "Seu negócio aparecendo no Google e atendendo sozinho no WhatsApp.",
+ "subtitulo": "Sites rápidos, sistemas sob medida e automações para pequenas empresas. Você aprova cada etapa, e o site continua cuidado todo mês.",
+ "acao_principal": "Pedir orçamento",
+ "secoes": {
+  "ofertas": "Pacotes",
+  "ofertas_titulo": "Três pacotes, sem surpresa na fatura",
+  "como_titulo": "Do primeiro contato ao site no ar"
+ },
+ "ofertas": [
+  {
+   "id": "essencial",
+   "nome": "Essencial",
+   "resumo": "Para ser encontrado e chamado.",
+   "inclui": [
+    "Site institucional rápido e no celular",
+    "Google Perfil da Empresa configurado",
+    "Botão de WhatsApp e telefone clicável",
+    "Domínio e e-mail no seu nome",
+    "Monitoramento do site no ar",
+    "1 mudança de conteúdo por mês"
+   ],
+   "preco": "",
+   "prazo": ""
+  },
+  {
+   "id": "negocio",
+   "nome": "Negócio",
+   "resumo": "Para transformar visita em cliente.",
+   "inclui": [
+    "Tudo do Essencial",
+    "Pedido de avaliação no Google depois do atendimento",
+    "Relatório mensal de visitas e contatos",
+    "Até 3 mudanças por mês",
+    "Novidades no Google Perfil"
+   ],
+   "preco": "",
+   "prazo": ""
+  },
+  {
+   "id": "vendas",
+   "nome": "Vendas",
+   "resumo": "Para vender e atender sem parar.",
+   "inclui": [
+    "Tudo do Negócio",
+    "Cardápio com pedido, agenda, catálogo ou área do cliente",
+    "Respostas automáticas no WhatsApp para as perguntas frequentes",
+    "Captura de contatos com consentimento (LGPD)",
+    "Até 5 mudanças por mês"
+   ],
+   "preco": "",
+   "prazo": ""
+  }
+ ],
+ "passos": [
+  {
+   "titulo": "Conversa de 20 minutos",
+   "texto": "Você conta o que o negócio precisa; eu digo qual pacote resolve e quanto custa."
+  },
+  {
+   "titulo": "Proposta e contrato",
+   "texto": "Proposta por escrito e contrato assinado online, sem papel."
+  },
+  {
+   "titulo": "Prévia no seu celular",
+   "texto": "Você vê o site antes de ir ao ar e pede os ajustes."
+  },
+  {
+   "titulo": "No ar e cuidado",
+   "texto": "Site publicado, medido e mantido todo mês, com relatório."
+  }
+ ],
+ "sobre": {
+  "titulo": "Quem faz",
+  "paragrafos": [
+   "Sou Alan Mateus, professor de Informática e desenvolvedor em Barbacena. Formado em Análise e Desenvolvimento de Sistemas, construo sites e sistemas com as mesmas ferramentas das empresas grandes, no tamanho do seu negócio.",
+   "Cada entrega passa por testes automáticos de velocidade, acessibilidade e segurança, e você recebe o relatório como prova."
+  ]
+ },
+ "perguntas": [
+  {
+   "p": "O site fica no meu nome?",
+   "r": "Sim. Domínio, e-mail e conteúdo são seus. Se um dia quiser sair, você leva tudo."
+  },
+  {
+   "p": "Preciso entender de tecnologia?",
+   "r": "Não. Você aprova pelo celular e eu cuido do resto."
+  },
+  {
+   "p": "Emite nota?",
+   "r": "Por enquanto atendo como pessoa física, com recibo e imposto pago no carnê-leão. Quando houver CNPJ, passa a sair nota fiscal."
+  }
+ ],
+ "contato": {
+  "titulo": "Vamos ver o que o seu negócio precisa?",
+  "texto": "Mande uma mensagem com o nome do negócio e o que você quer resolver. A primeira conversa não custa nada.",
+  "formulario": "",
+  "whatsapp": "",
+  "whatsapp_mensagem": "Olá! Vim pelo site do Grupo AMtech Digital e quero um orçamento.",
+  "email": ""
+ },
+ "analytics": {
+  "umami": null
+ },
+ "tokens": {
+  "fundo": "#F7F5F0",
+  "superficie": "#FFFFFF",
+  "tinta": "#13262B",
+  "suave": "#5B6B6E",
+  "linha": "#DCD8CE",
+  "principal": "#0E3A45",
+  "sobre_principal": "#F7F5F0",
+  "destaque": "#9A6A26",
+  "escuro": {
+   "fundo": "#0B1A1E",
+   "superficie": "#112429",
+   "tinta": "#E9EEEC",
+   "suave": "#9AAEB0",
+   "linha": "#24414A",
+   "principal": "#7FC4C9",
+   "sobre_principal": "#0B1A1E",
+   "destaque": "#D9A85E"
+  }
+ },
+ "legal": {
+  "atualizado": "07/11/2026",
+  "email_privacidade": "",
+  "dados": [
+   {
+    "o_que": "Nome, telefone e e-mail",
+    "para_que": "responder o seu pedido de orçamento e cumprir o contrato"
+   },
+   {
+    "o_que": "Dados de visita sem identificação",
+    "para_que": "saber quais páginas ajudam e melhorar o site"
+   }
+  ],
+  "operadores": [
+   "provedor de hospedagem",
+   "agenda online",
+   "assinatura eletrônica de contratos",
+   "emissão de cobrança"
+  ],
+  "retencao": "Pelo tempo necessário para atender você e cumprir obrigações legais e fiscais (até 5 anos para registros de venda). Contatos que não viraram cliente são apagados em 12 meses.",
+  "cookies": "Usamos medição de visitas sem cookies e sem identificar você (Umami). Não usamos cookies de publicidade.",
+  "termos": [
+   {
+    "titulo": "Serviços",
+    "texto": "Os serviços, prazos e valores de cada projeto ficam na proposta e no contrato assinados. Este site é informativo."
+   },
+   {
+    "titulo": "Pagamentos",
+    "texto": "Taxa de criação e mensalidade conforme o contrato. Atraso acima de 30 dias pode suspender a manutenção, nunca o acesso ao que é seu."
+   },
+   {
+    "titulo": "Responsabilidade",
+    "texto": "O conteúdo publicado no site do cliente (textos, fotos, preços) é de responsabilidade do cliente, que garante ter direito de uso."
+   }
+  ]
+ },
+ "texto_sem_preco": "Sob orçamento"
+}

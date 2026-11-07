@@ -109,8 +109,8 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [OBS Studio](#obss) | Local | Grava tela, câmera e áudio das aulas e vídeos. | passo 3.2 · Semana 1 · out/2026; passo 35.1 · Semana 5 · dez/2026; passo 40.2 · Semanas 12 a 15 · jan a fev/2027 |
-| [DaVinci Resolve ou Kdenlive](#edit) | Local | Edição de vídeo. Os dois têm versão grátis. | passo 3.7 · Semana 1 · out/2026; passo 35.3 · Semana 5 · dez/2026; passo 40.2 · Semanas 12 a 15 · jan a fev/2027 |
+| [OBS Studio](#obss) | Local | Grava tela, câmera e áudio das aulas e vídeos. | passo 3.2 · Semana 1 · out/2026; passo 35.1 · Semana 5 · dez/2026; passo 40.4 · Semanas 12 a 15 · jan a fev/2027 |
+| [DaVinci Resolve ou Kdenlive](#edit) | Local | Edição de vídeo. Os dois têm versão grátis. | passo 3.7 · Semana 1 · out/2026; passo 35.3 · Semana 5 · dez/2026; passo 40.4 · Semanas 12 a 15 · jan a fev/2027 |
 | [Audacity](#aud) | Local | Limpa ruído e ajusta o áudio. | passo 3.2 · Semana 1 · out/2026; passo 35.2 · Semana 5 · dez/2026 |
 | [Canva · Krita · Inkscape](#img) | Local · precisa de conta | Capas, posts e thumbnails. Canva precisa de conta; Krita e Inkscape são open source. | passo 3.2 · Semana 1 · out/2026; passo 28.8 · Semana 6 · nov/2026 a dez/2026; passo 35.4 · Semana 5 · dez/2026 |
 | [Whisper (local)](#whis) | Local | Transcreve as aulas para legenda, artigo e capítulo. | passo 4.4 · Semana 2 · nov/2026; passo 34.6 · Semana 5 · nov/2026 |
@@ -126,7 +126,7 @@ flowchart LR
 
 Grava tela, câmera e áudio das aulas e vídeos.
 
-**Quando entra:** passo 3.2 · Semana 1 · out/2026; passo 35.1 · Semana 5 · dez/2026; passo 40.2 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 3.2 · Semana 1 · out/2026; passo 35.1 · Semana 5 · dez/2026; passo 40.4 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -142,7 +142,7 @@ Grava tela, câmera e áudio das aulas e vídeos.
 
 Edição de vídeo. Os dois têm versão grátis.
 
-**Quando entra:** passo 3.7 · Semana 1 · out/2026; passo 35.3 · Semana 5 · dez/2026; passo 40.2 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 3.7 · Semana 1 · out/2026; passo 35.3 · Semana 5 · dez/2026; passo 40.4 · Semanas 12 a 15 · jan a fev/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
