@@ -227,7 +227,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | **DDD tático** | Entidade, objeto de valor, agregado e sua fronteira de consistência, repositório, serviço de domínio, eventos de domínio | P8 |
 | **DDD estratégico** | Contextos delimitados, linguagem ubíqua, mapa de contexto entre os sistemas Aura | P12 |
 | CQRS | Separar leitura e escrita; quando vale a complexidade | P12 |
-| Event Sourcing | Estado como sequência de eventos; base do `aura-historico` (Datomic ou Marten) | P14 |
+| Event Sourcing (opcional) | Estado como sequência de eventos; se precisar de histórico, tabela append-only no PostgreSQL | P14 |
 | Monolito modular × microsserviços | Por que começar modular; custo real de distribuir | P12 |
 | Decisões registradas | ADRs (você já usa) | P12 |
 | Modelagem e diagramas | Modelo C4 (contexto, contêiner, componente), diagramas de sequência | P8 · P12 |
