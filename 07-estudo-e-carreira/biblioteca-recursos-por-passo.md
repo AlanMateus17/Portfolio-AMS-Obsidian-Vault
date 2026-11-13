@@ -36,16 +36,17 @@ Pra cada tecnologia/conceito, 1-3 recursos **verificados**, não uma lista gené
 
 ---
 
-## Passo 3-5 — C#, ASP.NET Core, EF Core
+## Passo 3-5 — TypeScript, Next.js, Prisma/Drizzle
 
 | Tópico | Recurso | Tipo |
 |---|---|---|
-| C# fundamentals | [Microsoft Learn — C# Fundamentals](https://learn.microsoft.com/pt-br/dotnet/csharp/) | Doc oficial, PT-BR |
-| `async`/`await` de verdade | [Stephen Cleary — There Is No Thread](https://blog.stephencleary.com/2013/11/there-is-no-thread.html) | Blog técnico, referência clássica |
-| ASP.NET Core Web API | [Microsoft Learn — Tutorial de Web API](https://learn.microsoft.com/pt-br/aspnet/core/tutorials/first-web-api) | Doc oficial |
+| TypeScript fundamentals | [TypeScript Handbook (oficial)](https://www.typescriptlang.org/docs/handbook/intro.html) | Doc oficial |
+| `async`/`await` em JS/TS | [MDN — async function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function) | Doc oficial, PT-BR |
+| Next.js (App Router, API) | [Next.js — Learn (oficial)](https://nextjs.org/learn) | Tutorial oficial |
 | OWASP Top 10 | [OWASP Top 10 oficial](https://owasp.org/www-project-top-ten/) | Doc oficial, referência da indústria |
-| Entity Framework Core | [Microsoft Learn — EF Core](https://learn.microsoft.com/pt-br/ef/core/) | Doc oficial |
-| Problema N+1 | [EF Core — Loading Related Data](https://learn.microsoft.com/en-us/ef/core/querying/related-data/) | Doc oficial |
+| ORM (Prisma) | [Prisma — Docs](https://www.prisma.io/docs) | Doc oficial |
+| Supabase (banco, auth, realtime) | [Supabase — Docs](https://supabase.com/docs) | Doc oficial |
+| Problema N+1 | [Prisma — Relation queries / N+1](https://www.prisma.io/docs/orm/prisma-client/queries/relation-queries) | Doc oficial |
 
 ---
 
@@ -101,13 +102,13 @@ Pra cada tecnologia/conceito, 1-3 recursos **verificados**, não uma lista gené
 
 ---
 
-## Passo 9 — PostGIS, Redis, SignalR
+## Passo 9 — PostGIS, Realtime, Cache
 
 | Tópico | Recurso | Tipo |
 |---|---|---|
 | PostGIS | [PostGIS Docs oficial](https://postgis.net/documentation/) | Doc oficial |
-| Redis | [Redis Docs oficial](https://redis.io/docs/latest/) | Doc oficial |
-| SignalR | [Microsoft Learn — SignalR](https://learn.microsoft.com/pt-br/aspnet/core/signalr/introduction) | Doc oficial |
+| Tempo real | [Supabase Realtime — Docs](https://supabase.com/docs/guides/realtime) | Doc oficial (substitui SignalR) |
+| Cache (quando precisar) | [Redis Docs oficial](https://redis.io/docs/latest/) | Doc oficial, opcional |
 
 ---
 
@@ -142,14 +143,13 @@ Pra cada tecnologia/conceito, 1-3 recursos **verificados**, não uma lista gené
 
 ---
 
-## Bloco 21B — AM Taskoro (GraphQL via HotChocolate — dentro do .NET, não stack separada)
+## GraphQL — opcional, só se um projeto pedir
+
+> O AM Taskoro foi **cortado** (ver `99-arquivo`). GraphQL deixou de ser trilha. Se algum dia um projeto precisar, em TypeScript o caminho é Apollo Server ou Yoga, não HotChocolate (.NET).
 
 | Tópico | Recurso | Tipo |
 |---|---|---|
-| GraphQL (conceito, agnóstico de linguagem) | [GraphQL.org — Learn](https://graphql.org/learn/) | Doc oficial |
-| HotChocolate | [HotChocolate Docs oficial (ChilliCream)](https://chillicream.com/docs/hotchocolate) | Doc oficial |
-| GraphQL Subscription no HotChocolate (tempo real) | [HotChocolate — Subscriptions](https://chillicream.com/docs/hotchocolate/v13/defining-a-schema/subscriptions) | Doc oficial |
-| Limite de profundidade/complexidade de query (segurança) | [HotChocolate — Security](https://chillicream.com/docs/hotchocolate/v13/security) | Doc oficial |
+| GraphQL (conceito) | [GraphQL.org — Learn](https://graphql.org/learn/) | Doc oficial |
 
 ---
 
@@ -161,7 +161,7 @@ Diferente do resto desta biblioteca (recurso específico de um passo), o roadmap
 |---|---|---|
 | Índice geral (todos os roadmaps disponíveis) | [roadmap.sh/roadmaps](https://roadmap.sh/roadmaps) | Sempre que precisar achar o roadmap certo de uma tecnologia nova |
 | Backend | [roadmap.sh/backend](https://roadmap.sh/backend) | Passos 3-8 |
-| ASP.NET Core | [roadmap.sh/aspnet-core](https://roadmap.sh/aspnet-core) | Passos 3-5, específico do seu framework |
+| Node.js / React | [roadmap.sh/nodejs](https://roadmap.sh/nodejs) · [roadmap.sh/react](https://roadmap.sh/react) | Passos 3-5, seu backend/front em TS |
 
 Pra PostgreSQL, Docker, System Design, C, C++, Git/GitHub, SQL, DevOps, Kubernetes — todos existem no site, mas em vez de arriscar um link exato que pode mudar, busque pelo nome direto em [roadmap.sh/roadmaps](https://roadmap.sh/roadmaps) no momento do Passo correspondente (ex: Passo 8B → buscar "C" e "C++" lá).
 

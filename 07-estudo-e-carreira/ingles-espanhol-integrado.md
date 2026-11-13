@@ -32,8 +32,8 @@ Isso é pedagógico, não preferência: aprender uma segunda língua estrangeira
 - Se estiver em A1-A2: consolidar gramática básica com Duolingo ou Anki (grátis), 15-20 min/dia — isso é o único bloco de tempo genuinamente "separado" deste plano inteiro, e é curto de propósito
 - Em paralelo, já ativo desde o Passo 1: prestar atenção deliberada ao vocabulário técnico que já aparece no código e nos termos do plano de estudo (`if`, `class`, `repository`, `commit`) — não é estudo novo, é atenção nova a algo que já está acontecendo
 
-### Fase B — Troca de fonte técnica pra inglês (a partir do Passo 2-3 do plano de dev, quando C#/API começar a ficar mais denso)
-- A documentação oficial da Microsoft (`.NET`, ASP.NET Core) tem versão em inglês e em PT-BR — **passar a consultar a versão em inglês por padrão**, voltando pro português só quando travar de verdade
+### Fase B — Troca de fonte técnica pra inglês (a partir do Passo 2-3 do plano de dev, quando TS/API começar a ficar mais denso)
+- A documentação oficial (TypeScript, Next.js, Python, Supabase) está em inglês — **passar a consultar sempre em inglês por padrão**, voltando pro português só quando travar de verdade
 - Vídeo técnico: quando assistir conteúdo da Rocketseat/Alura (em português), complementar ocasionalmente com talk técnica em inglês legendada (não precisa trocar tudo, só intercalar)
 - Isso já é nível B1-B2 de leitura técnica sem ser um "curso de inglês" — é o mesmo princípio da matemática, aplicado a idioma
 

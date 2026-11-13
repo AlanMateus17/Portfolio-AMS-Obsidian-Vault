@@ -57,11 +57,11 @@ Estimativas são projeção, não medição. Do Passo 3-4 em diante, recalibre c
 
 # B. O loop de 5 etapas por tópico
 ```
-1. Livro (papel) → 2. C# → 3. JavaScript → 4. Sistema real → 5. Ficha de aula
+1. Livro (papel) → 2. TypeScript → 3. Python → 4. Sistema real → 5. Ficha de aula
 ```
 Expressar a mesma ideia de 4 jeitos = entendeu, não decorou. Nem todo tópico tem Etapa 4 (ex.: Números Complexos) — use o loop completo só nos marcados com conexão real em [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md).
 
-**Exemplo — "E"/conjunção:** Etapa 1 tabela-verdade · Etapa 2 `estudei && dormiBem` em C# · Etapa 3 mesmo em JS · Etapa 4 `if (produto.Estoque > 0 && cliente.Ativo && !pedido.Cancelado)` no AM Kaixara · Etapa 5 vira ficha.
+**Exemplo — "E"/conjunção:** Etapa 1 tabela-verdade · Etapa 2 `estudei && dormiBem` em TypeScript · Etapa 3 mesmo em Python · Etapa 4 `if (produto.estoque > 0 && cliente.ativo && !pedido.cancelado)` no AM Gestão · Etapa 5 vira ficha.
 
 **Tópicos com Etapa 4 real:** Cap. 3 (Euclides ↔ recursão) · Cap. 4 (RSA → `aura-vault`) · Cap. 17 (Geometria Analítica → AM Rotara `ST_Distance`) · Cap. 19-20 (Combinatória → `aura-analytics`).
 

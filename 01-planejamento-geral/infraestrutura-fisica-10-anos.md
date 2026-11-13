@@ -31,7 +31,7 @@ status: completo
 
 ## Camada 1 — Estação de trabalho principal
 
-Precisa aguentar simultaneamente: .NET 10 + Docker + PostgreSQL + Next.js local, várias IDEs abertas, e futuramente um lab de pentest (OSCP).
+Precisa aguentar simultaneamente: Node/TS + Python + Docker + PostgreSQL + Next.js local, várias IDEs abertas, e futuramente um lab de pentest (OSCP).
 
 | Item | Especificação |
 |---|---|
@@ -57,7 +57,7 @@ Espinha dorsal de tudo: apostilas, código-fonte, ISOs da assistência técnica,
 ## Camada 4 — Ambiente de desenvolvimento
 
 Replica em local o que roda em produção, evitando "funciona na minha máquina":
-- Docker Compose padronizado (mesma stack do AM Kaixara: .NET 10, PostgreSQL, Next.js)
+- Docker Compose padronizado (mesma stack do AM Gestão: Node/TS, Python, PostgreSQL, Next.js)
 - CI/CD self-hosted (Gitea Actions) rodando testes a cada push
 
 ## Camada 5 — Produção (hospedagem dos SaaS)

@@ -9,7 +9,7 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** aqui está o que você vai ter de **diploma** (faculdades), de **certificado** (provas do mercado de investimentos) e o que vai aprender **sozinho**. Também diz quais certificados a lei exige para recomendar investimentos e criar fundos.
 
-> **Objetivo de carreira (out/2026):** ser **programador sênior** na stack definida (C#/.NET + TypeScript/Next.js, com Python em paralelo), especializado em **IA desenvolvida e treinada do zero** e em **software para administração, empreendedorismo e finanças**, trabalhando no Brasil e principalmente no exterior. No lado financeiro, ter **as certificações do setor de investimentos** para recomendar investimentos e criar os próprios fundos sem barreira regulatória.
+> **Objetivo de carreira (out/2026):** ser **programador sênior** na stack definida (núcleo TypeScript/Next.js + Python/FastAPI + SQL; C#/.NET como carta de reserva), especializado em **IA desenvolvida e treinada do zero** e em **software para administração, empreendedorismo e finanças**, trabalhando no Brasil e principalmente no exterior. No lado financeiro, ter **as certificações do setor de investimentos** para recomendar investimentos e criar os próprios fundos sem barreira regulatória.
 >
 > **Decisões de out/2026:** sai o concurso PF/PRF, desenho e violão. **Saem as pós-graduações** (Cybersecurity e Arquitetura). **Engenharia de software é só autodidata**, sem faculdade. Entra a **faculdade de Ciências Econômicas**.
 
@@ -93,7 +93,7 @@ O que cada atividade exige por lei, para você ou para alguém da sua empresa:
 | C/C++ (École 42) | [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) |
 | Linux, redes, baixo nível, SO próprio | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [trilha-de-redes](trilha-de-redes.md) · [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md) |
 | Robótica e IoT | [trilha-robotica-iot](trilha-robotica-iot.md) |
-| Inglês (essencial para o exterior), espanhol, mandarim | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
+| Inglês (essencial para o exterior), espanhol | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
 
 ---
 

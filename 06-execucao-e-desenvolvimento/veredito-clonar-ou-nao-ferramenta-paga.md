@@ -34,7 +34,7 @@ status: novo
 | Spinnaker, ArgoCD, Harness | GitHub Actions + script de deploy |
 | k6 Cloud, Gatling, JMeter (Enterprise) | k6 (núcleo open source) |
 
-**Por que não vale clonar nenhuma dessas:** o valor delas está em **anos de refinamento de UI, integração e escala** — não em conceito novo pra aprender. Construir uma versão própria de "CI engine" ou "scanner de vulnerabilidade" ensina muito menos do que construir um sistema de negócio real (que é o que os 23 sistemas Aura já fazem). Aqui, aprender é usar bem, não reconstruir.
+**Por que não vale clonar nenhuma dessas:** o valor delas está em **anos de refinamento de UI, integração e escala** — não em conceito novo pra aprender. Construir uma versão própria de "CI engine" ou "scanner de vulnerabilidade" ensina muito menos do que construir um sistema de negócio real (que é o que o AM Gestão já faz). Aqui, aprender é usar bem, não reconstruir.
 
 ---
 

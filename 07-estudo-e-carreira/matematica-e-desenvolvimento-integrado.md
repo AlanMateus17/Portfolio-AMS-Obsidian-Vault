@@ -38,7 +38,7 @@ status: completo
 
 ---
 
-### Passo 2-3 (Git/SQL + início de C#) — Parte II, capítulos 3-6
+### Passo 2-3 (Git/SQL + início de TypeScript) — Parte II, capítulos 3-6
 A Parte II é a mais densa do livro inteiro, e merece o próprio bloco de tempo, não uma inclusão parcial no Passo 1.
 
 | Capítulo | Conteúdo real (via subtópico) | Conexão |
@@ -50,7 +50,7 @@ A Parte II é a mais densa do livro inteiro, e merece o próprio bloco de tempo,
 
 ---
 
-### Passo 2-6 (junto com C#/Frontend/Arquitetura) — restante da Parte II + Parte IV início
+### Passo 2-6 (junto com TS/Frontend/Arquitetura) — restante da Parte II + Parte IV início
 | Capítulo | Conteúdo | Conexão |
 |---|---|---|
 | 7. Sequências Numéricas | Recorrência, somas telescópicas, PA, PG | Recorrência matemática = recursão em código, mesma semana que US-06 |

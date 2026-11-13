@@ -20,7 +20,7 @@ MATEMÁTICA  (já corre na licenciatura + livro do Lins)
    ▼
 LÓGICA · ALGORITMOS · ESTRUTURAS DE DADOS        → já no núcleo (Camada A)
    ▼
-C · C++ · Python · JS/TS · C#                    → C/C++ vem pela École 42
+TypeScript · Python · SQL · C/C++ · Rust         → C/C++ e Rust vêm pela trilha de SO/robótica
    ▼
 LINUX + WINDOWS (internals)                      → Linux já começa na Camada C
    ▼

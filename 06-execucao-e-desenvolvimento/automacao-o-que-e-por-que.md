@@ -15,9 +15,9 @@ atualizado: 2026-10-02
 Prioridade: 🟢 já, mesmo sozinho · 🟡 só com produção real · 🔴 só time grande.
 
 ## A. Catálogo — adotar vs. construir
-**A.1 Adotar (grátis):** `dotnet format` · Gitleaks · GitHub Actions · Dependabot · CodeQL (SAST) · GitHub Actions+script (CD) · Terraform (IaC) · Uptime Kuma (monitor) · Grafana Loki (log) · Swagger (doc API) · MkDocs (site doc) · semantic-release (changelog) · k6 (carga) · Claude Code Action (revisão PR) · GitHub Projects (≈Jira) · GitHub Container Registry · RabbitMQ (≈Kafka). A coluna "enterprise" (Jenkins, Snyk, Datadog, Splunk, PagerDuty, HashiCorp Vault, Kafka...) é só pra reconhecer o nome.
-**A.2 Construir (é seu):** `aura-status` — console C#, agrega Git de todos os repos, pasta órfã, backup, catálogo, PRs do Dependabot, timer do Protocolo, Anki, zip-gabaritos. (arquitetura em [painel-central-arquitetura-todas-fases](painel-central-arquitetura-todas-fases.md))
-**A.3 Setup conectado:** backup no Task Scheduler, `aura-status` semanal em log, Certbot semanal, Uptime Kuma via Docker `--restart=always`.
+**A.1 Adotar (grátis):** ESLint/Prettier/Biome · Gitleaks · GitHub Actions · Dependabot · CodeQL (SAST) · GitHub Actions+script (CD) · Terraform (IaC) · Uptime Kuma (monitor) · Grafana Loki (log) · Swagger/OpenAPI (doc API) · MkDocs (site doc) · semantic-release (changelog) · k6 (carga) · Claude Code Action (revisão PR) · GitHub Projects (≈Jira) · GitHub Container Registry · RabbitMQ (≈Kafka). A coluna "enterprise" (Jenkins, Snyk, Datadog, Splunk, PagerDuty, HashiCorp Vault, Kafka...) é só pra reconhecer o nome.
+**A.2 Construir (é seu):** uma ferramenta de status (Go ou Python) que agrega Git de todos os repos, pasta órfã, backup, catálogo, PRs do Dependabot, timer do Protocolo, Anki, zip-gabaritos. (substitui o antigo `aura-status` em C#, arquivado)
+**A.3 Setup conectado:** backup agendado, ferramenta de status semanal em log, Certbot semanal, Uptime Kuma via Docker `--restart=always`.
 
 ## B. Como fazer (comando real)
 - **Commit 🟢:** `dotnet format`; `gitleaks protect --staged -v`; `pre-commit install`; commitlint.
@@ -32,7 +32,7 @@ Prioridade: 🟢 já, mesmo sozinho · 🟡 só com produção real · 🔴 só 
 - **Negócio/IA 🟡🔴:** nota fiscal via API (dry run), conciliação, notificação Discord, `actions/stale`, CODEOWNERS, k6, FinOps, `claude-code-action` (revisão, nunca decisão final).
 
 ## C. Por quê / risco (resumo)
-Você é 1 pessoa com 23 sistemas e TDAH → o risco é **esquecer a tarefa chata**; automação é a prótese pra isso. Riscos por categoria: pipeline (flaky, precisa rollback testado) · IaC (`apply` sem `plan` apaga produção) · observabilidade (fadiga de alerta) · segurança (falso positivo; rotacionar segredo) · doc (técnica demais → ficha dupla continua) · **backup não testado não é backup** · financeiro (dinheiro real → dry run) · bot (caminho pra humano) · IA (vaza segredo ~2x, GitGuardian mar/2026; 2ª opinião, não decisão).
+Você é 1 pessoa com um produto grande (AM Gestão) e TDAH → o risco é **esquecer a tarefa chata**; automação é a prótese pra isso. Riscos por categoria: pipeline (flaky, precisa rollback testado) · IaC (`apply` sem `plan` apaga produção) · observabilidade (fadiga de alerta) · segurança (falso positivo; rotacionar segredo) · doc (técnica demais → ficha dupla continua) · **backup não testado não é backup** · financeiro (dinheiro real → dry run) · bot (caminho pra humano) · IA (vaza segredo ~2x, GitGuardian mar/2026; 2ª opinião, não decisão).
 
 ## D. Testes (pirâmide)
 Unitário (xUnit) · Integração (Testcontainers) · Contrato (Pact — crítico com 22 sistemas) · E2E (Playwright) · Smoke · Regressão · Carga (k6) · Segurança (CodeQL/ZAP) · Acessibilidade (Lighthouse) · Exploratório manual · **Restauração de backup (1x/mês, o mais esquecido)**.

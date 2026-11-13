@@ -71,7 +71,7 @@ Prioridade: Python ⭐⭐⭐⭐⭐, Bash ⭐⭐⭐⭐⭐, PowerShell ⭐⭐⭐�
 > [!warning] Sequência correta
 > Python + Bash sólidos → antes do OSCP. C básico → antes do CRTO. Assembly → antes do OSED. Não inverta.
 >
-> **Nota de integração:** Python já está na sua Fase 7 (aura-analytics). C e C++ já vêm da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md). C#/.NET é sua stack principal. Ou seja: quase toda a base de linguagem deste nível você já cobre por outras trilhas — aqui é aplicá-las ao contexto ofensivo, não aprender do zero.
+> **Nota de integração:** Python já está na sua trilha de dados/IA. C e C++ vêm da trilha de SO/robótica. C#/.NET é carta de reserva, mas segue útil em segurança ofensiva no mundo Windows. Ou seja: quase toda a base de linguagem deste nível você já cobre por outras trilhas — aqui é aplicá-las ao contexto ofensivo, não aprender do zero.
 
 ## 0.4 Criptografia Aplicada
 Hashes (MD5, SHA-1/256, bcrypt, NTLM, LM, NetNTLMv1/v2), simétrica (AES CBC/CTR/GCM, DES, RC4, ChaCha20), assimétrica (RSA, ECDSA, DH), PKI/CAs/X.509/CRL/OCSP, TLS 1.2 vs 1.3, DPAPI.
@@ -108,7 +108,7 @@ API1 BOLA, API2 Broken Authentication, API3 Broken Object Property Level Auth, A
 Técnicas específicas: Mass Assignment, Parameter Pollution, GraphQL introspection/batching/field suggestions, Verb tampering, Content-type confusion, Swagger/OpenAPI exposure. Ferramentas: Postman/Insomnia, Kiterunner, Arjun, ffuf, GraphQL Playground, jwt_tool.
 
 > [!note] Conexão com seu portfólio
-> Você constrói APIs REST (ASP.NET Core) e GraphQL (AM Taskoro). Esta seção é o lado ofensivo exato do que você já projeta defensivamente nos seus RNFTs de segurança. Estude os dois lados juntos.
+> Você constrói APIs REST (Next.js/FastAPI) no AM Gestão. Esta seção é o lado ofensivo exato do que você já projeta defensivamente nos seus RNFTs de segurança. Estude os dois lados juntos.
 
 ## 1.5 WAF Evasion
 Fingerprinting (wafw00f), encoding bypass (URL simples/duplo, Unicode, HTML entities, Base64), case manipulation, comentários SQL, whitespace alternatives, HTTP Parameter Pollution, Chunked Transfer Encoding, bypass de WAF cloud via origin direct (Shodan p/ IP real), header manipulation (X-Forwarded-For, X-Real-IP).
@@ -273,7 +273,7 @@ Protocolos (Modbus 502, DNP3 20000, Profinet, EtherNet/IP 44818, Siemens S7 102,
 Prompt injection (direct/indirect), jailbreaking, tool call hijacking, adversarial ML (evasão de detectores, model extraction, training data poisoning), LLM como ferramenta ofensiva, testes em sistemas com LLM. Recurso: OWASP Top 10 for LLM Applications.
 
 > [!note] Conexão direta com seu portfólio
-> Você tem o `aura-copilot` (IA function-calling) e o [projeta-documento-projeto-final](../02-sistemas-de-negocio/projeta-documento-projeto-final.md) (geração por IA voltada ao cliente). A série [rnft-ia-governanca-geracao-ia](../04-documentos-transversais/rnft-ia-governanca-geracao-ia.md) que você já criou é justamente a defesa contra parte disto. Esta seção é o ataque correspondente — os dois lados da mesma moeda.
+> Você planeja recursos de IA no AM Gestão (busca semântica, geração assistida). A série [rnft-ia-governanca-geracao-ia](../04-documentos-transversais/rnft-ia-governanca-geracao-ia.md) que você já criou é justamente a defesa contra parte disto. Esta seção é o ataque correspondente — os dois lados da mesma moeda.
 
 ## 6.2 APT Emulation
 Simular threat actor específico com TTPs documentadas. APTs para estudo: APT29 (Midnight Blizzard), APT41, Lazarus, FIN7/CARBANAK, ALPHV/BlackCat. Plataformas: SCYTHE, Vectr.

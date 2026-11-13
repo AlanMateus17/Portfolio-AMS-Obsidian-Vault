@@ -112,7 +112,7 @@ atualizado: 2026-10-26
 | Vender no **CPF**, com carnê-leão mensal (sem MEI por enquanto) | Menos custo enquanto valida; programação geralmente não cabe no MEI |
 | Hotmart, Kiwify, Eduzz, Udemy e DIO para cursos | Custo zero antecipado |
 | **Obsidian** em vez de Notion | Arquivos seus, no seu disco e no GitHub |
-| **Azure** antes da AWS | Combina com .NET |
+| **Vercel** (web) + VPS/AWS | Combina com TS/Next.js e Python |
 | **Arch e Kali em pendrive**, nunca dual boot | Já houve perda de dados antes; procedimento de Secure Boot/BitLocker documentado |
 | Ajuste fino de IA 8B no **Kaggle** ou GPU alugada | A GTX 1650 tem só 4 GB |
 | Livro autocontido (ensina toda a matemática e física necessárias) | Leitor não precisa de outro livro antes |

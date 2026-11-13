@@ -24,7 +24,7 @@ atualizado: 2026-10-26
 | **Python** | Linguagem simples, padrão para dados e IA; roda em paralelo no seu plano |
 | **SQL** | A linguagem para perguntar coisas ao banco de dados |
 | **Bash / PowerShell** | Linguagens de comandos do terminal (Linux / Windows) |
-| **.NET** | A plataforma onde o C# roda |
+| **.NET** | A plataforma onde o C# roda (hoje só na carta de reserva) |
 | **Runtime / GC** | O "motor" que executa o programa / a parte que limpa a memória sozinha |
 
 ## Construção de sistemas
@@ -37,7 +37,7 @@ atualizado: 2026-10-26
 | **API** | A "porta" pela qual o frontend (ou outro sistema) conversa com o backend |
 | **REST** | O jeito mais comum de desenhar uma API, usando endereços e verbos (GET, POST…) |
 | **GraphQL** | Outro jeito de API, em que quem pede escolhe os campos (usado no AM Taskoro) |
-| **ASP.NET Core / Controllers** | A ferramenta do .NET para criar APIs / a forma organizada que você escolheu de escrevê-las |
+| **Next.js / NestJS** | Jeitos de criar o backend/API em TypeScript (o principal). ASP.NET Core faz o mesmo no .NET, hoje só na reserva |
 | **HTML / CSS** | Estrutura da página / aparência da página |
 | **React** | Biblioteca para montar telas em pedaços reutilizáveis (componentes) |
 | **Next.js** | Ferramenta em cima do React que cuida de páginas, rotas e desempenho |
@@ -62,7 +62,7 @@ atualizado: 2026-10-26
 | **PostGIS** | Extensão do PostgreSQL para mapas e localização (AM Rotara) |
 | **Índice** | O "índice remissivo" do banco: deixa a busca rápida |
 | **Transação** | Um conjunto de operações que acontece inteiro ou não acontece |
-| **EF Core / Dapper** | Ferramentas do .NET para falar com o banco sem escrever todo o SQL na mão |
+| **Prisma / Drizzle** | Ferramentas do TypeScript para falar com o banco sem escrever todo o SQL na mão (equivalem ao EF Core do .NET) |
 | **Migração** | Mudança na estrutura do banco, feita de forma controlada |
 | **Cache** | Guardar um resultado para não calcular de novo |
 
@@ -88,7 +88,7 @@ atualizado: 2026-10-26
 |---|---|
 | **Teste unitário / integração / E2E** | Testa um pedaço / testa pedaços juntos / testa o sistema inteiro como um usuário |
 | **TDD** | Escrever o teste antes do código |
-| **xUnit, Playwright, Testcontainers** | Ferramentas de teste (C#, navegador, banco real em contêiner) |
+| **Vitest, Playwright, pytest** | Ferramentas de teste (TypeScript, navegador, Python) |
 | **Git / GitHub** | Histórico de versões do código / site onde ele fica guardado |
 | **Commit / push** | Salvar uma versão / mandar para o GitHub |
 | **Docker / contêiner** | "Caixa" que leva o sistema com tudo o que ele precisa para rodar igual em qualquer lugar |

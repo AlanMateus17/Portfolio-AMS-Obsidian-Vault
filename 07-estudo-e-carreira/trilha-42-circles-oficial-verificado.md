@@ -61,25 +61,25 @@ A versão anterior (`trilha-42-circles-oficial-verificado`) tinha 3 erros reais:
 
 ## Tabela completa — Sua Stack primeiro (Fase A) → Nativo depois (Fase B)
 
-| Circle | Projeto | Fase A — sua stack (C#) | Fase B — nativo |
+| Circle | Projeto | Fase A — sua stack (TypeScript/Node) | Fase B — nativo |
 |---|---|---|---|
-| 00 | `Libft` | Método estático sobre `char[]` | C, `malloc`/`free` |
-| 01 | `get_next_line` | Buffer mantido em C# | C, buffer estático |
-| 01 | `ft_printf` | `params object[]` | C, `va_list`/`va_arg` |
+| 00 | `Libft` | Funções sobre `string`/`Array` | C, `malloc`/`free` |
+| 01 | `get_next_line` | Buffer com `Buffer` do Node | C, buffer estático |
+| 01 | `ft_printf` | Rest params / template strings | C, `va_list`/`va_arg` |
 | 01 | `Born2beroot` | — (infraestrutura) | VM Linux hardened |
-| 02 | `so_long` | C# + biblioteca gráfica simples | C + MiniLibX |
-| 02 | `pipex` | `System.Diagnostics.Process` | C, `fork`/`pipe`/`exec` |
-| 02 | `push_swap` | Algoritmo em C# | Port pra C |
-| 03 | `Philosophers` | `Thread`/`SemaphoreSlim` (mesmo músculo do RNFT-E01) | C, `pthread`/`sem_t` |
-| 03 | `minishell` | `Process.Start` simulando shell | C, `fork`/`execve`/`pipe`/`dup2` |
+| 02 | `so_long` | TS + canvas simples | C + MiniLibX |
+| 02 | `pipex` | `child_process` do Node | C, `fork`/`pipe`/`exec` |
+| 02 | `push_swap` | Algoritmo em TypeScript | Port pra C |
+| 03 | `Philosophers` | `async`/`worker_threads` (mesmo músculo do RNFT-E01) | C, `pthread`/`sem_t` |
+| 03 | `minishell` | `child_process.spawn` simulando shell | C, `fork`/`execve`/`pipe`/`dup2` |
 | 04 | `NetPractice` | — (infraestrutura) | Configuração de IP/rede |
-| 04 | `miniRT` | C# + SkiaSharp (conecta com Geometria Analítica — ver [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md), Parte V) | C + MiniLibX |
-| 04 | `CPP Module 00-08` (9 módulos) | — (OOP já dominado via C#) | C++, prática direta de sintaxe |
-| 05 | `ft_containers` | — (STL não tem equivalente direto de "reimplementar" em C#, já que `List<T>`/`Dictionary<K,V>` já são a biblioteca padrão) | C++, reimplementar `vector`/`map`/`stack` — aqui o exercício É a linguagem, não porta de conceito já visto |
+| 04 | `miniRT` | TS + canvas (conecta com Geometria Analítica — ver [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md), Parte V) | C + MiniLibX |
+| 04 | `CPP Module 00-08` (9 módulos) | — (OOP já dominado via TS) | C++, prática direta de sintaxe |
+| 05 | `ft_containers` | — (não há o que "reimplementar" em TS, já que `Array`/`Map` já são a biblioteca padrão) | C++, reimplementar `vector`/`map`/`stack` — aqui o exercício É a linguagem, não porta de conceito já visto |
 | 05 | `Inception` | — (Docker já dominado na Fase 6D; entra como auditoria de disciplina extra: só Debian, sem tag `latest`) | Mesmo, com a disciplina específica da 42 |
-| 05 | `webserv` | Já feito na Fase 2.2 (`TcpListener`) | C++, socket POSIX e `poll`/`epoll` |
-| 05 | `ft_irc` | C# com `TcpListener`, protocolo IRC | C++, socket POSIX |
-| 06 | `ft_transcendence` | Nenhuma necessária — o AM Kaixara já supera o que este projeto pede | JavaScript/NestJS — fazer como exercício comparativo contra sua própria arquitetura |
+| 05 | `webserv` | Já feito na Fase 2.2 (`http`/`net` do Node) | C++, socket POSIX e `poll`/`epoll` |
+| 05 | `ft_irc` | TS com `net.Server`, protocolo IRC | C++, socket POSIX |
+| 06 | `ft_transcendence` | Nenhuma necessária — o AM Gestão já supera o que este projeto pede | NestJS — exercício comparativo contra sua própria arquitetura |
 
 **Total: 25 entregáveis + 5 Exam Rank (avaliação de gate, não projeto de estudo — mas real, cronometrado, sem consulta).**
 

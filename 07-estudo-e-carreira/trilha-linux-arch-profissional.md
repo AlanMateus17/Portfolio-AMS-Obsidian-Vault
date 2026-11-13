@@ -55,18 +55,20 @@ Acer Nitro. Ponto de maior risco: GPU híbrida (AMD integrada + NVIDIA). Testar 
 - [ ] Pacotes: `pacman`, `yay`, AUR, remover órfãos, ler `PKGBUILD`
 - [ ] **Evidência:** `~/.config/hypr/` versionado + `notas/03-setup-notebook.md`
 
-## Fase 4 — Ambiente de desenvolvimento .NET/Aura
-Rodar um sistema do Aura inteiro no Arch, sem Windows.
+## Fase 4 — Ambiente de desenvolvimento (stack nova)
+Rodar o AM Gestão inteiro no Arch, sem Windows.
 
-- [ ] .NET 10 SDK (pacote ou Mise); `dotnet --info`
-- [ ] IDE: Rider, VS Code (C# Dev Kit) ou LazyVim (extra de C#); registrar o motivo
+- [ ] Node + TypeScript via Mise; `node --version`
+- [ ] Python via Mise (dados/IA); ambiente virtual por projeto
+- [ ] IDE: VS Code ou LazyVim; registrar o motivo
 - [ ] Docker nativo via systemd, usuário no grupo `docker`, sem Docker Desktop
-- [ ] `docker compose` com PostgreSQL e Redis
+- [ ] `docker compose` com PostgreSQL (ou Supabase local)
 - [ ] Mise para Node, Python e versões por projeto
-- [ ] Subir o AM Kaixara do zero: API + banco + frontend Next.js
+- [ ] Subir o AM Gestão do zero: frontend Next.js + API TS + Python + banco
+- [ ] (Opcional) SDK do Go para o agente fiscal / ferramentas CLI
 - [ ] ZSH: aliases, Starship, Atuin
 - [ ] TUIs: LazyGit, LazyDocker
-- [ ] **Evidência:** `setup-aura-dev.sh` que reconstrói o ambiente num Arch limpo com um comando
+- [ ] **Evidência:** `setup-dev.sh` que reconstrói o ambiente num Arch limpo com um comando
 
 ## Fase 5 — Administração e automação
 "Uso Linux" vira "administro Linux". A fase que mais pesa em entrevista.
@@ -92,8 +94,8 @@ Rodar um sistema do Aura inteiro no Arch, sem Windows.
 - [ ] **Regra do repo público:** nenhuma chave/senha/IP interno; segredos fora do Git
 - [ ] **Evidência:** `notas/06-seguranca.md`
 
-## Fase 7 — Projeto autoral: aura-status na Waybar
-Ver documento próprio: [aura-status-documento-projeto-final](../10-ferramentas-pessoais/aura-status-documento-projeto-final.md). O aura-status ganha modo `--waybar` que imprime uma linha JSON; a Waybar mostra o resumo e abre a TUI ao clicar.
+## Fase 7 — Projeto autoral: um status na Waybar
+Pequena ferramenta de status (Go ou Python) que agrega git/backup/estudo numa linha. Modo `--waybar` imprime uma linha JSON; a Waybar mostra o resumo e abre a TUI ao clicar. (Substitui o antigo `aura-status` em C#, arquivado.)
 
 - [ ] `Severidade`, `ResultadoStatus`, `WaybarFormatter` com testes
 - [ ] Modo `--waybar` abaixo de 1s (cache para fontes lentas como a API do GitHub)
@@ -117,7 +119,7 @@ Dá para começar sem o NAS: PC velho, Raspberry Pi ou VM sempre ligada.
 
 ## Fases 9–10 — Documentação e currículo
 - [ ] README do dotfiles com screenshot e decisões (por que BTRFS, subvolumes, Omarchy)
-- [ ] Fixar no GitHub: dotfiles, aura-status, homelab
+- [ ] Fixar no GitHub: dotfiles, ferramenta de status, homelab
 - [ ] Série no blog, um post por fase
 - [ ] Contribuir com algo pequeno em projeto aberto
 - [ ] Linhas de currículo (com link): administração Linux, automação de ambiente, ferramenta autoral, infraestrutura

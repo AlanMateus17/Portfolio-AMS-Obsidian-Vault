@@ -5,16 +5,16 @@ status: completo
 ---
 
 # Setup do Ambiente de Trabalho — Versão Final Consolidada
-### Acer Nitro AN515-45 — reconstruído após reinstalação do Windows, atualizado com tudo decidido no portfólio de 23 sistemas
+### Acer Nitro AN515-45 — reconstruído após reinstalação do Windows, atualizado para a stack nova (AM Gestão)
 
-> **Contexto real:** o Windows foi reinstalado (corrupção) e o ambiente está sendo remontado do zero. Este documento consolida o que já foi confirmado instalado, o que falta do checklist original, e o que precisa ser **adicionado** agora que o portfólio cresceu (AM Taskoro, Trilha 42, Segurança Ofensiva **e** Defensiva).
+> **Contexto real:** o Windows foi reinstalado (corrupção) e o ambiente está sendo remontado do zero. Este documento consolida o que já foi confirmado instalado, o que falta do checklist, e o que o ambiente precisa agora com a stack nova (TS + Python + SQL; Go e C# como reserva), além de Trilha 42 e Segurança.
 
 ---
 
 ## 🚨 Dois alertas reais, resolver antes de continuar o resto
 
-### 1. Versão do .NET — verificar antes de prosseguir
-Confirmado instalado: **.NET SDK 9.0.317**. Mas todo o portfólio (RNF, RF, os 23 sistemas) foi decidido em **C#/.NET 10**. Duas possibilidades: (a) você instalou a 9 de propósito porque a 10 ainda não estava disponível/estável via `winget` no momento, ou (b) foi instalada por engano durante a reconstrução rápida. **Ação:** rodar `dotnet --list-sdks`, confirmar se o SDK 10 já está disponível pra instalar, e se estiver, instalar ele também (podem coexistir) — não precisa desinstalar a 9, mas o projeto real deve mirar a 10.
+### 1. Núcleo da stack nova — garantir antes de prosseguir
+O núcleo agora é **TypeScript + Python + SQL** (ver [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md)). **Ação:** confirmar Node LTS + pnpm e Python 3.13 funcionando (`node -v`, `pnpm -v`, `python --version`). O .NET deixou de ser base — só instale o SDK quando for mexer na carta de reserva (vaga .NET ou agente fiscal, onde Go também serve).
 
 ### 2. Senha da chave SSH em papel — resolver com prioridade máxima
 A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar de instalar. **Ação imediata:** assim que o KeePassXC estiver pronto, mover essa senha pra lá e destruir o papel — é o primeiro item a fechar, antes de qualquer outra coisa deste documento, porque é o único risco de segurança real e ativo agora.
@@ -35,10 +35,11 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 
 ## 📋 Checklist completo, na ordem certa — o que falta
 
-### Camada 1 — Fundamento do stack por problema (C#/.NET)
-- [ ] Confirmar/instalar .NET SDK 10 (ver alerta 1 acima)
-- [ ] `dotnet-ef` (global tool, pra migration do EF Core)
-- [ ] Extensão C# Dev Kit no VS Code (se for usar VS Code em vez do Visual Studio pra parte do trabalho)
+### Camada 1 — Fundamento do núcleo (TypeScript + Python)
+- [ ] Node LTS + **pnpm** (via nvm-windows ou Mise)
+- [ ] Python 3.13 + ambiente virtual por projeto; `pip`/`uv`
+- [ ] Extensões VS Code: ESLint, Prettier, Python, Pylance
+- [ ] (Só se for mexer na reserva) .NET SDK ou Go
 - [ ] **Gitleaks** (binário + hook de pre-commit) — segredo vazado em commit, especialmente importante usando Claude Code (ver [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md))
 - [ ] `git lfs install` — mesmo sem uso imediato, deixa configurado antes de precisar
 - [ ] Claude Code (`npm install -g @anthropic-ai/claude-code` ou instalador nativo — requer Node.js 18+, já confirmado instalado)
@@ -48,9 +49,9 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 - [ ] Extensões VS Code: ESLint, Prettier, Tailwind CSS IntelliSense
 
 ### Camada 3 — Banco de dado e API local
-- [ ] DBeaver (cliente visual de Postgres/Redis)
+- [ ] DBeaver (cliente visual de Postgres)
 - [ ] Bruno (cliente de API, alternativa gratuita ao Postman)
-- [ ] `docker-compose.yml` padrão do AM Kaixara rodando Postgres + Redis local
+- [ ] `docker-compose.yml` do AM Gestão rodando Postgres local (ou Supabase local via CLI)
 
 ### Camada 4 — Trilha 42 (C/C++)
 - [ ] Toolchain C/C++ dentro do WSL2: `build-essential`, `make`, `cmake`, `gdb`, `valgrind`
@@ -89,7 +90,7 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 - [seguranca-e-ferramentas-todas-as-frentes](../01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) — Gitleaks, Git LFS e Claude Code, detalhados
 - [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) — Fase 12 (Segurança Ofensiva) e Fase 12B (Segurança Defensiva, nova)
 - [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) — o que a Camada 4 deste setup sustenta
-- [Next.js/Design System](../04-documentos-transversais/rnf-transversais-design-tema.md) — o que a Camada 2 deste setup sustenta (não mais o AM Taskoro, que agora é .NET)
+- [Next.js/Design System](../04-documentos-transversais/rnf-transversais-design-tema.md) — o que a Camada 2 deste setup sustenta
 - [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — onde cada camada entra na ordem real de estudo
 
 ---

@@ -25,7 +25,7 @@ Para "conectar o AM Kaixara com o outro sistema online que a pessoa comprou", é
 
 ### 1.1 O que o instalador contém
 - Agente local (já especificado no documento final do AM Kaixara) empacotado como serviço Windows
-- Runtime necessário embutido ou verificado na instalação (evita depender do cliente já ter .NET instalado)
+- Runtime necessário embutido ou verificado na instalação (ex.: agente fiscal em Go como binário único, sem depender de runtime no cliente)
 - Banco local (SQLite, já previsto para o modo offline) pré-configurado
 - Assistente de instalação com poucos passos: inserir chave de licença → validar online → configurar impressora/gaveta/balança conectados → pronto
 
