@@ -12,7 +12,7 @@ tipo: dashboard-diario
 
 
 > **Primeira vez ou perdido?** Leia o [Guia do Iniciante](00-GUIA-DO-INICIANTE.md): o plano inteiro, em ordem e em palavras simples. Palavras difíceis: [Glossário](00-GLOSSARIO.md).
-> **O que fazer agora, item por item:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos**.
+> **O que fazer agora, item por item:** [📋 Plano Mestre passo a passo](PLANO-UNICO-AMtech.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos**.
 
 *[← Voltar pro Início](00-INICIO.md)*
 
@@ -45,7 +45,7 @@ Não precisa abrir mais nenhum outro documento.
 
 ## 🔜 Quando terminar o EPIC-01 inteiro
 
-Abra **[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** → marque o Passo 1 como concluído → siga pro **Passo 2**. Ele te diz exatamente o próximo bloco, na mesma lógica de hoje.
+Abra **[00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md)** → marque o Passo 1 como concluído → siga pro **Passo 2**. Ele te diz exatamente o próximo bloco, na mesma lógica de hoje.
 
 ---
 

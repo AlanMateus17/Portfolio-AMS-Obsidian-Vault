@@ -10,7 +10,7 @@ atualizado: 2026-10-27
 
 ## Plano geral e prioridades
 
-**Notas do plano:** [🧭 Plano Mestre — tudo em um só passo a passo](../00-PLANO-MESTRE-PASSO-A-PASSO.md) · [🎯 Plano Unificado AMS — O Mapa de Tudo](../00-PLANO-UNIFICADO.md) · [Plano Mestre — Frentes de Estudo, Negócio e Renda](../01-planejamento-geral/plano-mestre-frentes-alan.md) · [Status de Planejamento do Portfólio — o que já existe, o que falta, e o que se reaproveita de onde](../01-planejamento-geral/status-planejamento-portfolio.md)
+**Notas do plano:** [🧭 Plano Mestre — tudo em um só passo a passo](PLANO-UNICO-AMtech.md) · [🎯 Plano Unificado AMS — O Mapa de Tudo](PLANO-UNICO-AMtech.md) · [Plano Mestre — Frentes de Estudo, Negócio e Renda](../01-planejamento-geral/plano-mestre-frentes-alan.md) · [Status de Planejamento do Portfólio — o que já existe, o que falta, e o que se reaproveita de onde](../01-planejamento-geral/status-planejamento-portfolio.md)
 
 **Artefatos:**
 
@@ -24,7 +24,7 @@ atualizado: 2026-10-27
 
 ## Sequência de estudo
 
-**Notas do plano:** [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [Método de Estudo — Documento Único](../07-estudo-e-carreira/metodo-de-estudo.md)
+**Notas do plano:** [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](PLANO-UNICO-AMtech.md) · [Método de Estudo — Documento Único](../07-estudo-e-carreira/metodo-de-estudo.md)
 
 **Artefatos:**
 

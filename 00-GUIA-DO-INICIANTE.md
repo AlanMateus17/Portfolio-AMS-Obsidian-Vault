@@ -15,7 +15,7 @@ atualizado: 2026-10-26
 
 > **Para quem é este documento:** para você, lendo como se não soubesse nada do plano. Ele junta **estudo, setup, rendas, finanças, faculdades e certificações** num caminho só, com etapas numeradas. Cada palavra técnica tem explicação no [Glossário](00-GLOSSARIO.md).
 >
-> **Lista completa de itens:** este guia é o resumo. Todos os 391 itens (os 253 passos do setup, os 14 Passos de estudo, as trilhas, as rendas, as finanças, a faculdade e as certificações), cada um com código, “pronto quando” e ligações, estão no [Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md).
+> **Lista completa de itens:** este guia é o resumo. Todos os 391 itens (os 253 passos do setup, os 14 Passos de estudo, as trilhas, as rendas, as finanças, a faculdade e as certificações), cada um com código, “pronto quando” e ligações, estão no [Plano Mestre passo a passo](PLANO-UNICO-AMtech.md).
 >
 > **Como usar:** abra só este guia e o [Cartão "Você está aqui"](CARTAO-voce-esta-aqui.md). Faça a etapa atual, marque `[x]`, passe para a próxima. Os outros 100 arquivos do vault são **material de consulta**: você só abre quando uma etapa manda abrir.
 
@@ -28,7 +28,7 @@ atualizado: 2026-10-26
 3. **A meta:** R$ 7.000 líquidos por mês, com renda feita em casa, até o fim de 2027.
 4. **As rendas que vêm primeiro:** aulas particulares, manutenção de computador, sites com mensalidade e o mini-curso de Lógica. Depois, uma oferta nova por vez. Lista completa: [fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md).
 5. **O setup** (notebook, programas, automações) é a máquina que produz aula, conteúdo e venda: [setup completo](01-planejamento-geral/setup-completo-dev-setup.md); os documentos, fluxogramas e scripts estão na [pasta do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
-6. **O estudo** segue 14 Passos, um de cada vez: [Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md). Tudo o que um sênior precisa saber está no [currículo](07-estudo-e-carreira/curriculo-dev-senior-completo.md).
+6. **O estudo** segue 14 Passos, um de cada vez: [Sumário Único](PLANO-UNICO-AMtech.md). Tudo o que um sênior precisa saber está no [currículo](07-estudo-e-carreira/curriculo-dev-senior-completo.md).
 7. **As faculdades:** Licenciatura em Matemática (agora), depois Economia e uma faculdade para IA, uma de cada vez: [formação](07-estudo-e-carreira/formacao-academica.md).
 8. **As certificações de investimento:** CPA → CNPI → CGA → CFA, na ordem: [formação](07-estudo-e-carreira/formacao-academica.md).
 9. **A regra de ouro:** **uma coisa em construção e uma em teste por vez.** O resto espera na fila, anotado.
@@ -137,4 +137,4 @@ Concurso PF/PRF · desenho · violão · pós-graduações (Cybersecurity e Arqu
 
 Use a página **Auditoria do Plano** (publicada junto com esta revisão). Ela lista cada coisa que você já planejou nas conversas, na memória e nos repositórios, e mostra em qual arquivo do vault ela está. O que aparecer como "falta" é o que ainda precisa entrar.
 
-🔗 [Glossário](00-GLOSSARIO.md) · [Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [Plano Unificado](00-PLANO-UNIFICADO.md) · [Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [Setup](01-planejamento-geral/setup-completo-dev-setup.md)
+🔗 [Glossário](00-GLOSSARIO.md) · [Sumário Único](PLANO-UNICO-AMtech.md) · [Plano Unificado](PLANO-UNICO-AMtech.md) · [Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [Setup](01-planejamento-geral/setup-completo-dev-setup.md)

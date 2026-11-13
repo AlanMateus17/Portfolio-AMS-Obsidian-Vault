@@ -25,7 +25,7 @@ status: completo
 
 | Item | Onde está a pendência |
 |---|---|
-| Física básica do livro | Estrutura provisória até você comprar o livro e mostrar o sumário real — ver [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) |
+| Física básica do livro | Estrutura provisória até você comprar o livro e mostrar o sumário real — ver [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) |
 | `aura-historico` (Clojure/Datomic) | Decisão de stack em aberto — mesma revisão que já foi feita no AM Taskoro (Event Sourcing com Marten resolveria sem sair do .NET), ainda não decidida — ver [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) |
 | Decisão de seguro/responsabilidade em trânsito do AM Consertta | Decisão de negócio, não técnica — sinalizada no próprio documento do AM Consertta, ainda não fechada |
 | Vertical de Reprodução & Biotecnologia do AuraVet | Condicionada a uma decisão sua sobre atuação nessa área específica |
@@ -52,7 +52,7 @@ status: completo
 
 ## 🔗 Documentos relacionados
 - [inventario-portfolio-atualizado](inventario-portfolio-atualizado.md) — lista completa dos 23 sistemas/serviços com status
-- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — ordem de estudo/desenvolvimento de tudo isso
+- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) — ordem de estudo/desenvolvimento de tudo isso
 - [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — formas de renda de cada frente, incluindo os sistemas deste portfólio
 
 ---

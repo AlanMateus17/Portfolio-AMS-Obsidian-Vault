@@ -243,7 +243,7 @@ Os números de cada negócio (investimento, custos fixos, equipe, receita-alvo, 
 - 2027 só com o restaurante: **R$ 2.200**. Meta: **R$ 7.000**. Faltam **R$ 4.800/mês**, com prazo realista no fim de 2027.
 - Divisão planejada para dez/2027: aulas particulares R$ 2.800 · sites com manutenção R$ 1.500 (cresce todo mês) · infoprodutos R$ 500+.
 
-🔗 Setup que sustenta tudo isso: [setup-completo-dev-setup](setup-completo-dev-setup.md) · Plano geral: [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md) · Passo a passo: [00-GUIA-DO-INICIANTE](../00-GUIA-DO-INICIANTE.md)
+🔗 Setup que sustenta tudo isso: [setup-completo-dev-setup](setup-completo-dev-setup.md) · Plano geral: [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md) · Passo a passo: [00-GUIA-DO-INICIANTE](../00-GUIA-DO-INICIANTE.md)
 
 ---
 

@@ -1,13 +1,13 @@
 # 📚 Portfólio AMS — Vault de Planejamento
 
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
+> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](PLANO-UNICO-AMtech.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
 
 Documentação de estudo, projetos e negócios de **Alan Mateus** (Grupo AMtech Digital). Navegue clicando abaixo.
 
 ## 🧭 Comece por aqui
 
-- **[Plano Unificado — o mapa de tudo](00-PLANO-UNIFICADO.md)**
-- **[Sumário Único de Estudo](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)**
+- **[Plano Unificado — o mapa de tudo](PLANO-UNICO-AMtech.md)**
+- **[Sumário Único de Estudo](PLANO-UNICO-AMtech.md)**
 - **[Você está aqui](CARTAO-voce-esta-aqui.md)**
 
 ---

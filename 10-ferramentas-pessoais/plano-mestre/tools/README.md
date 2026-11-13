@@ -10,7 +10,7 @@ Junta `data/implantacao.json` e `data/portfolio.json` deste repositório com o S
 
 ```bash
 python tools/plano_mestre/montar.py . ../Portfolio-AMS-Obsidian-Vault plano-mestre.json
-python tools/plano_mestre/gerar_md.py plano-mestre.json ../Portfolio-AMS-Obsidian-Vault/00-PLANO-MESTRE-PASSO-A-PASSO.md
+python tools/plano_mestre/gerar_md.py plano-mestre.json ../Portfolio-AMS-Obsidian-Vault/PLANO-UNICO-AMtech.md
 ```
 
 `fluxogramas.py docs/ saida.html` junta os 68 diagramas Mermaid dos documentos numa página só.

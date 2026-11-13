@@ -112,7 +112,7 @@ Fechar o ciclo aplicando tudo no que você já constrói.
 <!-- conexoes:inicio -->
 ## 🔗 Onde isto entra no plano
 
-- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../PLANO-UNICO-AMtech.md)
 - [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
 - [🌐 Trilha de Redes](../../07-estudo-e-carreira/trilha-de-redes.md)
 

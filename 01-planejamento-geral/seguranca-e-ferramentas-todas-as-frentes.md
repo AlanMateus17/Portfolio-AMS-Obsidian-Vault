@@ -15,7 +15,7 @@ status: novo
 
 ### 1.1 Git — o que você já vai estudar (Passo 2), mais o que falta
 
-Git básico já está no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) (Passo 2). O que falta é **higiene de segredo**, que nenhum curso de Git básico cobre:
+Git básico já está no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) (Passo 2). O que falta é **higiene de segredo**, que nenhum curso de Git básico cobre:
 
 - **Gitleaks** — scanner de segredo (chave de API, senha, token) de código aberto, escrito em Go, roda como binário único. Detecta 150+ tipos de segredo (AWS, GitHub, Slack, banco de dados) via regex + análise de entropia.
 - **Onde instalar:** (1) hook de pre-commit local — roda em milissegundos, bloqueia segredo antes de virar commit; (2) CI (GitHub Actions/Gitea Actions) — pega o que o hook local não pegou; (3) GitHub push protection — trava no servidor, não depende de disciplina individual.
@@ -83,7 +83,7 @@ Cobertura separada, específica pra: vazamento de dado, ataque hacker, multa por
 Já mapeada em `plano-mestre-frentes-alan` (toolkit por nível, software por marca) — nada novo aqui além da seção 2 acima (RC Profissional cobre erro de reparo que danifica aparelho do cliente).
 
 ### Frente 3 — Ecossistema Aura (SaaS)
-Coberto pela seção 1 inteira (Git, Git LFS, Gitleaks, Claude Code) + toda a trilha técnica já no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md). Nada a acrescentar em ferramenta nova.
+Coberto pela seção 1 inteira (Git, Git LFS, Gitleaks, Claude Code) + toda a trilha técnica já no [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md). Nada a acrescentar em ferramenta nova.
 
 ### Frente 4 — Educação (apostilas, cursos, mentoria)
 

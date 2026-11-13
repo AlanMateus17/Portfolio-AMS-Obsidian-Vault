@@ -247,7 +247,7 @@ Você domina o assunto com profissionalismo quando consegue fazer tudo abaixo se
 <!-- conexoes:inicio -->
 ## 🔗 Onde isto entra no plano
 
-- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../PLANO-UNICO-AMtech.md)
 - [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
 - [🐧 Trilha Linux/Arch Profissional](../../07-estudo-e-carreira/trilha-linux-arch-profissional.md)
 - [🌌 Mapa de Horizonte Longo — Sistemas, Baixo Nível e SO Próprio](../../07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md)

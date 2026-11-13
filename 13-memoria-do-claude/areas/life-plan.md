@@ -10,5 +10,5 @@ aliases: [replanejamento, plano de vida, prioridades]
 - [stated] Pretende em 2027 deixar a escola e ficar só no restaurante, fazendo renda extra em casa (aulas particulares, freela de sites, produtos e infoprodutos) até chegar a R$ 7 mil líquidos/mês; depois quer sair do restaurante para tocar outros projetos
 - [stated] Quer que os próprios estudos virem o conteúdo das aulas particulares
 - [stated] Adotou para todos os seus planos a técnica de validar antes de construir: lançar primeiro uma versão mínima barata (ex.: planilha vendida antes do sistema AM Rendara) e só construir o sistema se ela vender
-- [stated] Prioridades definidas em out/2026: estudos seguindo a ordem do 00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md, os 3 projetos de portfólio, renda extra, [[instituto-ams]] conectado às rendas extras, livro [[livro-logica-e-maquina]], site AM Mentor, [[catalogo-html]] e concluir a presença digital de uma vez
+- [stated] Prioridades definidas em out/2026: estudos seguindo a ordem do PLANO-UNICO-AMtech.md, os 3 projetos de portfólio, renda extra, [[instituto-ams]] conectado às rendas extras, livro [[livro-logica-e-maquina]], site AM Mentor, [[catalogo-html]] e concluir a presença digital de uma vez
 - [stated] Quer criar vídeos para o YouTube, para venda dos próprios sites e para explicar as aulas que pretende oferecer, usando IA para clonar a própria voz
