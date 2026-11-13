@@ -132,9 +132,9 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Autenticação e autorização | JWT, refresh token, cookies, **OAuth 2.0 e OpenID Connect** (fluxos authorization code + PKCE, client credentials), políticas e claims, autorização por recurso, multi-tenant com `tenant_id` + RLS | P4 · P12 |
 | Design de API REST | Recursos, verbos e status corretos, paginação (offset × cursor), filtros, ordenação, versionamento, idempotência com `Idempotency-Key`, ETag e concorrência otimista, HATEOAS (noção) | P4 · P7 |
 | Documentação de API | OpenAPI, geração de cliente TypeScript a partir do contrato | P4 · P5 |
-| GraphQL | HotChocolate, schema, resolvers, problema N+1 com DataLoader (AM Taskoro) | P14 |
-| Tempo real | SignalR (hubs, grupos, escala com backplane Redis) | P9 |
-| Tarefas em segundo plano | `BackgroundService`, `IHostedService`, filas, agendamento | P9 · P12 |
+| GraphQL (opcional) | Conceito, schema, resolvers, N+1 com DataLoader; em TS use Apollo Server ou Yoga. Só se um projeto pedir | P14 |
+| Tempo real | Supabase Realtime (ou WebSocket): canais, presença, escala | P9 |
+| Tarefas em segundo plano | Filas e workers (BullMQ no Node, Celery/RQ no Python), agendamento | P9 · P12 |
 | Logging | `ILogger`, logs estruturados, níveis, correlação por requisição | P4 · P10 |
 | Resiliência | Retry, timeout, circuit breaker com Polly / `Microsoft.Extensions.Http.Resilience`, `HttpClientFactory` | P9 |
 | Caching | `IMemoryCache`, `IDistributedCache` com Redis, output caching, invalidação | P9 |
@@ -175,7 +175,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 |---|---|---|
 | App Router | Layouts, rotas aninhadas, loading e error boundaries | P4 |
 | Renderização | Server Components × Client Components, SSR, SSG, ISR, streaming; quando cada um faz sentido | P4 · P9 |
-| Dados | Buscar no servidor, cache do Next, revalidação, Server Actions (e quando preferir chamar a API .NET) | P5 |
+| Dados | Buscar no servidor, cache do Next, revalidação, Server Actions (e quando preferir chamar a API no servidor) | P5 |
 | Autenticação no front | Sessão, middleware de rota, proteção de páginas | P4 |
 | Exportação estática | Sites dos clientes de freela na Hostinger | P4 |
 | Internacionalização | Português, inglês e espanhol (produtos para fora do Brasil) | Sr |
@@ -202,7 +202,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Plano de execução | `EXPLAIN ANALYZE`, seq scan × index scan, estatísticas, `VACUUM` e autovacuum | P2 · P11 |
 | Transações | ACID, **níveis de isolamento** (read committed, repeatable read, serializable) e as anomalias de cada um, locks, deadlock, `SELECT … FOR UPDATE`, concorrência otimista × pessimista | P5 · P7 |
 | PostgreSQL específico | JSONB, enums, constraints e `CHECK`, **Row-Level Security**, extensões (PostGIS, pgvector), funções e triggers (com moderação) | P4 · P9 · IA5 |
-| EF Core a fundo | Migrations, relacionamentos, tracking × `AsNoTracking`, N+1 e `Include`, consultas compiladas, SQL bruto, `RowVersion`; quando usar **Dapper** | P5 · P11 |
+| ORM a fundo (Prisma/Drizzle) | Migrations, relacionamentos, N+1 e `include`/eager load, SQL bruto quando preciso, controle de concorrência (`version`); cliente Supabase e quando descer pro SQL puro | P5 · P11 |
 | Migrações sem parar o sistema | Expandir e contrair (adicionar coluna, migrar dado, remover depois), migração em produção com rollback | P10 |
 | Operação | Backup e **teste de restauração**, point-in-time recovery, réplica de leitura, connection pooling (PgBouncer), particionamento de tabela | P10 · Sr |
 | Redis | Tipos (string, hash, list, set, sorted set, stream), TTL, padrões de cache (cache-aside, write-through), invalidação, locks distribuídos e seus riscos, Redis Streams como fila | P9 |
@@ -258,15 +258,15 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Estratégia | Pirâmide e "troféu" de testes, o que testar em cada camada, cobertura como sinal e não meta | P6 |
-| Unitário | **xUnit**, AAA, test doubles (mock, stub, fake) com Moq, testes legíveis | P6 |
+| Unitário | **Vitest** (TS) e **pytest** (Python), AAA, test doubles (mock, stub, fake), testes legíveis | P6 |
 | Integração | `WebApplicationFactory`, **Testcontainers** com PostgreSQL e Redis reais | P6 |
 | Contrato | Teste de contrato da API (consumidor × provedor) | P12 |
 | E2E | **Playwright**, testes estáveis (sem `sleep`), dados de teste | P6 |
 | TDD | Ciclo vermelho-verde-refatorar, quando ajuda e quando atrapalha | P6 |
 | Testes de propriedade | Gerar entradas aleatórias para regras de dinheiro (FsCheck) | P7 |
-| Mutação | Medir a qualidade dos testes (Stryker.NET) | Sr |
+| Mutação | Medir a qualidade dos testes (Stryker-JS, mutmut no Python) | Sr |
 | Carga | **k6**: carga, estresse, pico, duração | P11 |
-| Análise estática | Analyzers do .NET, ESLint, CodeQL, SonarQube (noção) | P6 |
+| Análise estática | ESLint/Biome (TS), ruff (Python), CodeQL, SonarQube (noção) | P6 |
 | Revisão de código | O que olhar num PR: correção, legibilidade, segurança, teste | P6 · Sr |
 
 **Sênior quando…** uma refatoração grande passa em produção sem susto porque os testes certos existiam — e o time confia na suíte.
@@ -315,7 +315,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Os três sinais | Logs estruturados, métricas, **tracing distribuído** com **OpenTelemetry** | P10 |
-| Ferramentas | Serilog/OTel no .NET, Grafana/Prometheus (ou equivalente), Uptime Kuma (já planejado) | P10 |
+| Ferramentas | Pino/OpenTelemetry (Node), structlog (Python), Grafana/Prometheus (ou equivalente), Uptime Kuma (já planejado) | P10 |
 | SLI, SLO e orçamento de erro | Definir o que é "funcionando" para cada sistema | Sr |
 | Alertas | Alertar no sintoma do usuário, não em cada métrica; evitar fadiga de alerta (`aura-oncall`) | P10 |
 | Incidentes | Resposta a incidente, comunicação, **postmortem sem culpa** | Sr |
@@ -331,7 +331,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Medir antes | Profiling (dotnet-trace, dotnet-counters, PerfView), **BenchmarkDotNet**, flame graphs | P11 |
-| Memória no .NET | Alocações, GC, pooling (`ArrayPool`), `Span<T>` | P11 |
+| Memória (Node/Python) | Heap e GC, evitar vazamentos, streams/buffers, perfis de memória | P11 |
 | Banco | Índices, consultas, pool de conexões, réplica de leitura | P11 · Sr |
 | Cache | Onde cachear (navegador, CDN, aplicação, banco), invalidação | P9 · P11 |
 | Escala | Vertical × horizontal, aplicação sem estado, filas para picos | P12 · Sr |
@@ -346,7 +346,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 
 | Tópico | O que dominar | Onde |
 |---|---|---|
-| Windows Service em .NET | `BackgroundService` como serviço do Windows, instalação, logs no Event Viewer | P7 |
+| Agente local (Go ou C#, reserva) | Serviço em background no balcão (impressora fiscal, gaveta, TEF), instalação, logs | P7 |
 | Offline-first | SQLite local, fila de sincronização, resolução de conflito quando a internet volta | P7 |
 | Periféricos | Impressora fiscal/térmica (ESC/POS), gaveta de dinheiro, balança, TEF — atrás de interfaces (`IImpressoraFiscal`, `IGavetaDinheiro`, `IBalanca`, `ITefService`) | P7 |
 | Comunicação | Porta serial e USB, comunicação local com o navegador | P7 |
@@ -408,7 +408,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Processo | *Software Engineering at Google* (Winters, Manshreck e Wright) · *The Pragmatic Programmer* (Hunt e Thomas) |
 | Entrevista | *System Design Interview* (Alex Xu) |
 
-Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, ASP.NET Core, React, PostgreSQL, Docker, System Design e Software Architect ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
+Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, Node.js, React, PostgreSQL, Docker, System Design e Software Architect ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
 
 ---
 

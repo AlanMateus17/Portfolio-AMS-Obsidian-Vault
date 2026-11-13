@@ -68,8 +68,8 @@ Pra cada tecnologia/conceito, 1-3 recursos **verificados**, não uma lista gené
 
 | Tópico | Recurso | Tipo |
 |---|---|---|
-| xUnit | [xUnit.net Docs oficial](https://xunit.net/docs/getting-started/netcore/cmdline) | Doc oficial |
-| Moq | [Moq Quickstart (GitHub oficial)](https://github.com/devlooped/moq/wiki/Quickstart) | Doc oficial |
+| Vitest (TS) | [Vitest — Guide oficial](https://vitest.dev/guide/) | Doc oficial |
+| pytest (Python) | [pytest — Docs oficial](https://docs.pytest.org/) | Doc oficial |
 | Testing Library | [Testing Library Docs oficial](https://testing-library.com/docs/) | Doc oficial |
 | Playwright | [Playwright — Getting Started oficial](https://playwright.dev/docs/intro) | Doc oficial |
 | TDD na prática | [Martin Fowler — Test Driven Development](https://martinfowler.com/bliki/TestDrivenDevelopment.html) | Artigo de referência |

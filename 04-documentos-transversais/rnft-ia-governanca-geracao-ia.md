@@ -17,7 +17,7 @@ Diferente de RNFT-E (escala), RNFT-S (segurança/distribuição) e RNFT-D (desig
 
 ## RNFT-IA01 — Validação estrutural obrigatória (golden file)
 
-Toda saída gerada por IA passa por teste automatizado (`xUnit`, padrão "golden file") comparando a estrutura contra um schema esperado, antes de chegar ao cliente. Não é validação de conteúdo (isso é IA02), é validação de **forma** — a saída tem todos os campos esperados, no formato esperado.
+Toda saída gerada por IA passa por teste automatizado (Vitest/pytest, padrão "golden file") comparando a estrutura contra um schema esperado, antes de chegar ao cliente. Não é validação de conteúdo (isso é IA02), é validação de **forma** — a saída tem todos os campos esperados, no formato esperado.
 
 ## RNFT-IA02 — QA automático de coerência antes da entrega
 

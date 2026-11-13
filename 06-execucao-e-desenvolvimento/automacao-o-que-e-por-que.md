@@ -35,7 +35,7 @@ Prioridade: 🟢 já, mesmo sozinho · 🟡 só com produção real · 🔴 só 
 Você é 1 pessoa com um produto grande (AM Gestão) e TDAH → o risco é **esquecer a tarefa chata**; automação é a prótese pra isso. Riscos por categoria: pipeline (flaky, precisa rollback testado) · IaC (`apply` sem `plan` apaga produção) · observabilidade (fadiga de alerta) · segurança (falso positivo; rotacionar segredo) · doc (técnica demais → ficha dupla continua) · **backup não testado não é backup** · financeiro (dinheiro real → dry run) · bot (caminho pra humano) · IA (vaza segredo ~2x, GitGuardian mar/2026; 2ª opinião, não decisão).
 
 ## D. Testes (pirâmide)
-Unitário (xUnit) · Integração (Testcontainers) · Contrato (Pact — crítico com 22 sistemas) · E2E (Playwright) · Smoke · Regressão · Carga (k6) · Segurança (CodeQL/ZAP) · Acessibilidade (Lighthouse) · Exploratório manual · **Restauração de backup (1x/mês, o mais esquecido)**.
+Unitário (Vitest/pytest) · Integração (Testcontainers) · Contrato (Pact, se houver múltiplos serviços) · E2E (Playwright) · Smoke · Regressão · Carga (k6) · Segurança (CodeQL/ZAP) · Acessibilidade (Lighthouse) · Exploratório manual · **Restauração de backup (1x/mês, o mais esquecido)**.
 
 ## E. Onde usar IA
 ✅ esqueleto de teste, 1ª revisão PR, explicar erro, msg de commit, triagem de log, doc técnica. 🟡 resposta a cliente (com escape), correção de vuln, anomalia financeira (só alerta). 🔴 código de auth, LGPD, mover dinheiro, aprovar o próprio PR. Régua: perto de dinheiro/dado/jurídico, menos automático.
