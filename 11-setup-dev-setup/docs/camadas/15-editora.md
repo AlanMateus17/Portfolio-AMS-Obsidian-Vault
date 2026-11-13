@@ -185,11 +185,11 @@ flowchart LR
 | [Ficha catalográfica](#ficha) | Remoto | Feita pela CBL ou por bibliotecário com CRB; vai no verso da folha de rosto. | passo 43.9 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Depósito legal](#deplegal) | Físico | Pelo menos 1 exemplar à Biblioteca Nacional até 30 dias após publicar (Lei 10.994/2004). | passo 43.12 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Amazon KDP](#kdp) | Remoto · precisa de conta | Ebook com royalty de 35% ou 70% (no Brasil, 70% entre R$ 5,99 e R$ 31,99, com KDP Select) e impressão sob demanda. | passo 43.11 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Gráfica sob demanda (Brasil)](#pod) | Remoto · precisa de conta · futuro | Livro impresso sem estoque; compare custo, prazo e cópia de prova. | passo 53.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Kit edição especial](#bkit) | Físico · futuro | Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins. | passo 53.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Curso por seção](#bcurso) | Remoto · futuro | Uma aula por seção na ordem do sumário, com voz clonada e tela. | passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Edição do professor](#prof) | Local · futuro | Slides, planos de aula, avaliações e gabaritos; licença para escolas. | passo 53.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
-| [Traduções (espanhol, inglês)](#trad) | Remoto · futuro | Tradução revisada por nativo; ebook e curso dublados. | passo 53.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Gráfica sob demanda (Brasil)](#pod) | Remoto · precisa de conta · futuro | Livro impresso sem estoque; compare custo, prazo e cópia de prova. | passo 54.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Kit edição especial](#bkit) | Físico · futuro | Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins. | passo 54.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Curso por seção](#bcurso) | Remoto · futuro | Uma aula por seção na ordem do sumário, com voz clonada e tela. | passo 54.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Edição do professor](#prof) | Local · futuro | Slides, planos de aula, avaliações e gabaritos; licença para escolas. | passo 54.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Traduções (espanhol, inglês)](#trad) | Remoto · futuro | Tradução revisada por nativo; ebook e curso dublados. | passo 54.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
 | [Quadro de referências](#refs) | Remoto | Referências de design, pranchas, caixas e paletas testadas em impressão. | passo 43.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Matriz de editais](#editais) | Local | Cada tópico dos editais de PF, PRF e Forças Armadas ligado ao capítulo que o ensina; o pipeline mostra a cobertura e aponta lacunas. | passo 43.6 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Projeto do capítulo](#projcap) | Local | Cada capítulo termina com um projeto que só se resolve dominando o assunto, no estilo da École 42. | passo 43.1 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
@@ -203,7 +203,7 @@ flowchart LR
 | [Figuras por código (Matplotlib…)](#figcod) | Local | Gráficos e grafos gerados de dados e definições a cada build, no estilo do livro. | passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [CircuiTikZ](#circ) | Local | Circuitos e portas lógicas para a física e a eletrônica do livro. | passo 4.4 · Semana 2 · nov/2026 |
 | [Geradores de tabelas](#gerad) | Local | Tabelas-verdade, conversões de base e tabelas de operações geradas e conferidas por script. Exemplo testado em tools/editora. | passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
-| [Manim (animações)](#manim) | Local · futuro | O mesmo código da figura vira animação para as aulas do curso. | passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
+| [Manim (animações)](#manim) | Local · futuro | O mesmo código da figura vira animação para as aulas do curso. | passo 54.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) |
 | [Texto alternativo](#alt) | Local | Descrição de cada figura para o EPUB acessível; rascunho por IA, revisão sua. | passo 43.4 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 
 <a id="selo"></a>
@@ -483,7 +483,7 @@ Ebook com royalty de 35% ou 70% (no Brasil, 70% entre R$ 5,99 e R$ 31,99, com KD
 
 Livro impresso sem estoque; compare custo, prazo e cópia de prova.
 
-**Quando entra:** passo 53.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 54.1 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -498,7 +498,7 @@ Livro impresso sem estoque; compare custo, prazo e cópia de prova.
 
 Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins.
 
-**Quando entra:** passo 53.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 54.2 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -513,7 +513,7 @@ Tiragem limitada com capa dura, marcador e pôster, no modelo do VHSlins.
 
 Uma aula por seção na ordem do sumário, com voz clonada e tela.
 
-**Quando entra:** passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 54.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -533,7 +533,7 @@ Uma aula por seção na ordem do sumário, com voz clonada e tela.
 
 Slides, planos de aula, avaliações e gabaritos; licença para escolas.
 
-**Quando entra:** passo 53.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 54.4 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -548,7 +548,7 @@ Slides, planos de aula, avaliações e gabaritos; licença para escolas.
 
 Tradução revisada por nativo; ebook e curso dublados.
 
-**Quando entra:** passo 53.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 54.5 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -763,7 +763,7 @@ Tabelas-verdade, conversões de base e tabelas de operações geradas e conferid
 
 O mesmo código da figura vira animação para as aulas do curso.
 
-**Quando entra:** passo 53.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 54.3 · Depois do primeiro livro (começa quando: o primeiro livro publicado) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

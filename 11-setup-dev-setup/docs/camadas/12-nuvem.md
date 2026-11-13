@@ -85,7 +85,7 @@ flowchart LR
     n_voz["Voz clonada (ElevenLabs)"]
   end
   subgraph L_app["Aplicação: sistemas AM (Aura)"]
-    n_api["API ASP.NET Core"]
+    n_api["API TypeScript (Next/NestJS)"]
     n_golang["Go (CLIs com bubbletea)"]
     n_litestream["Litestream (SQLite no R2)"]
     n_reactemail["React Email (modelos)"]
@@ -264,23 +264,23 @@ flowchart LR
 | [SonarQube Cloud](#sonar) | Remoto · precisa de conta | Nota de qualidade e segurança do código a cada PR. Grátis para repositório público; recrutador vê o selo. | passo 41.5 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Projects · ADRs · MkDocs](#ghproj) | Remoto | GitHub Projects espelhando o EPIC-01, decisões de arquitetura registradas e documentação publicada no Pages. | passo 5.5 · Semana 2 · nov/2026 |
 | [Dependabot + CodeQL](#dbot) | Remoto | Dependabot atualiza pacotes vulneráveis; CodeQL procura falhas no seu código. Grátis em repositório público. | passo 5.3 · Semana 2 · nov/2026 |
-| [Google Cloud](#gcp) | Remoto · precisa de conta · futuro | Terceira nuvem: só o básico, quando um projeto de IA ou dados pedir. | passo 54.5 · 2028 |
-| [GitHub](#gh) | Remoto · precisa de conta | Código, vault, ensino-ti e a org grupo-amtech-digital. É também o seu portfólio. | passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 5.1 · Semana 2 · nov/2026; passo 5.4 · Semana 2 · nov/2026; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre |
+| [Google Cloud](#gcp) | Remoto · precisa de conta · futuro | Terceira nuvem: só o básico, quando um projeto de IA ou dados pedir. | passo 55.5 · 2028 |
+| [GitHub](#gh) | Remoto · precisa de conta | Código, vault, ensino-ti e a org grupo-amtech-digital. É também o seu portfólio. | passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 5.1 · Semana 2 · nov/2026; passo 5.4 · Semana 2 · nov/2026; passo 24.8 · Nov/2026 a out/2027, revisão no fim de cada trimestre |
 | [GitHub Actions](#gha) | Remoto | CI/CD: build, testes, segurança e deploy. | passo 5.2 · Semana 2 · nov/2026; passo 39.1 · Semana 11 · jan/2027 |
 | [GHCR (imagens)](#ghcr) | Remoto | Registro das imagens Docker das APIs. | passo 41.6 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [GitHub Pages](#ghp) | Remoto | Hospeda site pessoal, blog e Catálogo do HTML. | passo 36.7 · Semanas 6 e 7 · dez/2026 |
 | [Cloudflare (DNS, Pages, e-mail)](#cf) | Remoto · precisa de conta | DNS, HTTPS, proteção, hospedagem estática dos sites comerciais e redirecionamento de e-mail do domínio. O Cloudflare Tunnel leva os webhooks de venda até o n8n sem abrir portas em casa. | passo 28.4 · Semana 6 · nov/2026 a dez/2026; passo 28.6 · Semana 6 · nov/2026 a dez/2026; passo 28.7 · Semana 6 · nov/2026 a dez/2026; passo 36.3 · Semanas 6 e 7 · dez/2026; passo 36.8 · Semanas 6 e 7 · dez/2026; passo 38.1 · Semana 11 · jan/2027; passo 42.6 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
 | [Vercel](#vercel) | Remoto · precisa de conta | Frontends Next.js. O plano grátis é para uso pessoal e não comercial; confira os termos antes de pôr venda nele. | passo 42.6 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
 | [Azure](#azure) | Remoto · precisa de conta | Primeira nuvem para as APIs AM: App Service/Container Apps, PostgreSQL, Key Vault. | passo 32.13 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; passo 42.2 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); passo 42.3 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); passo 42.6 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
-| [AWS](#aws) | Remoto · precisa de conta · futuro | Segunda nuvem, para o mercado maior. | passo 32.13 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; passo 54.4 · 2028 |
+| [AWS](#aws) | Remoto · precisa de conta · futuro | Segunda nuvem, para o mercado maior. | passo 32.13 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; passo 55.4 · 2028 |
 | [Backblaze B2 (backup)](#b2) | Remoto · precisa de conta · futuro | Cópia fora de casa do backup, criptografada pelo restic. US$ 6,95 por TB/mês. | passo 7.2 · Semana 3 · nov/2026 |
-| [GPU por hora (RunPod e afins)](#gpuh) | Remoto · precisa de conta | Quando o Kaggle não bastar: GPU de 24 GB a partir de cerca de US$ 0,27 a 0,90 por hora no RunPod (out/2026). Um fine-tuning QLoRA de 8B costuma levar poucas horas. Use crédito pré-pago, sem cartão em débito automático. | passo 29.4 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| [GPU por hora (RunPod e afins)](#gpuh) | Remoto · precisa de conta | Quando o Kaggle não bastar: GPU de 24 GB a partir de cerca de US$ 0,27 a 0,90 por hora no RunPod (out/2026). Um fine-tuning QLoRA de 8B costuma levar poucas horas. Use crédito pré-pago, sem cartão em débito automático. | passo 29.4 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
 | [Google Drive (seus documentos)](#gdrv) | Remoto · precisa de conta | Onde estão hoje as suas aulas, apostilas, provas, especificações e planos, misturados com cópias repetidas e documentos pessoais. O Google Takeout tira uma cópia completa para o acervo. | passo 0.5 · Antes de tudo · semana 1 (out/2026); passo 8.1 · Semanas 3 e 4 · nov/2026; passo 27.8 · Semana 6 · nov/2026 a dez/2026 |
 | [Repositório padrão](#repopadrao) | Local | Modelo com pre-commit, CI de qualidade, Definition of Done, ADRs e CHANGELOG para todo repositório. | passo 20.1 · Semana 5 · nov/2026; passo 20.2 · Semana 5 · nov/2026 |
 | [Vigia semanal (GitHub Actions)](#vigia) | Remoto | Roda no GitHub sem o notebook ligado: confere os sites dos clientes e procura segredos. | passo 31.1 · Dez/2026 a jan/2027; passo 31.2 · Dez/2026 a jan/2027 |
 | [VM sempre ligada (Oracle grátis)](#vm247) | Remoto · precisa de conta | 2 núcleos e 12 GB grátis para n8n, bot, Uptime Kuma e gateway rodarem 24 horas. | passo 28.9 · Semana 6 · nov/2026 a dez/2026; passo 31.1 · Dez/2026 a jan/2027; passo 31.4 · Dez/2026 a jan/2027; passo 31.5 · Dez/2026 a jan/2027; passo 45.1 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [OpenRouter](#openrouter) | Remoto · precisa de conta | Uma chave para dezenas de modelos, alguns grátis com limite; reserva no gateway. | passo 27.15 · Semana 6 · nov/2026 a dez/2026 |
-| [Speckle (modelos na web)](#speckle) | Remoto · precisa de conta · futuro | Plataforma aberta para levar modelos à web com versões e API. | passo 61.10 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
+| [Speckle (modelos na web)](#speckle) | Remoto · precisa de conta · futuro | Plataforma aberta para levar modelos à web com versões e API. | passo 62.10 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 | [act (CI do Actions na sua máquina)](#act) | Local | Roda os workflows do GitHub Actions no Docker local (gh act). Acha o erro do CI antes do push, sem gastar minuto de Actions. | passo 21.7 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [Kamal (deploy em VM por SSH)](#kamal) | Local | Deploy sem queda dos sistemas AM numa VM (a da Oracle primeiro), com HTTPS e rollback por versão. Roda pela imagem Docker oficial; segredos pelo keepassxc-cli. ADR 0005; modelo em infra/templates/kamal. | passo 23.5 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 32.13 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; passo 42.8 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); passo 45.1 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 45.10 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [bore (túnel TCP próprio)](#bore) | Remoto · precisa de conta | Túnel TCP com servidor próprio na VM, para expor uma porta que não é web (demonstração, MQTT, SSH) sem passar por serviço de terceiro. Webhooks seguem no cloudflared. | passo 32.7 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
@@ -304,7 +304,7 @@ Fotos de produtos, anexos e PDFs dos sistemas AM fora do banco de dados.
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | arquivos |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | arquivos |
 | ← recebe de | [Litestream (SQLite no R2)](11-app.md#litestream) | Aplicação: sistemas AM (Aura) | cópia no R2 |
 
 <a id="tmail"></a>
@@ -319,7 +319,7 @@ E-mails automáticos dos sistemas: confirmação de conta, senha, recibo.
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | e-mails do sistema |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | e-mails do sistema |
 | ← recebe de | [Plunk (e-mail próprio no SES)](12-nuvem.md#plunk) | Nuvem, código e entrega | reserva própria do Resend |
 | ← recebe de | [React Email (modelos)](11-app.md#reactemail) | Aplicação: sistemas AM (Aura) | modelos dos e-mails |
 
@@ -378,7 +378,7 @@ Dependabot atualiza pacotes vulneráveis; CodeQL procura falhas no seu código. 
 
 Terceira nuvem: só o básico, quando um projeto de IA ou dados pedir.
 
-**Quando entra:** passo 54.5 · 2028 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 55.5 · 2028 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -392,7 +392,7 @@ Terceira nuvem: só o básico, quando um projeto de IA ou dados pedir.
 
 Código, vault, ensino-ti e a org grupo-amtech-digital. É também o seu portfólio.
 
-**Quando entra:** passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 5.1 · Semana 2 · nov/2026; passo 5.4 · Semana 2 · nov/2026; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 5.1 · Semana 2 · nov/2026; passo 5.4 · Semana 2 · nov/2026; passo 24.8 · Nov/2026 a out/2027, revisão no fim de cada trimestre ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -541,7 +541,7 @@ Primeira nuvem para as APIs AM: App Service/Container Apps, PostgreSQL, Key Vaul
 
 Segunda nuvem, para o mercado maior.
 
-**Quando entra:** passo 32.13 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; passo 54.4 · 2028 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 32.13 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; passo 55.4 · 2028 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -576,7 +576,7 @@ Cópia fora de casa do backup, criptografada pelo restic. US$ 6,95 por TB/mês.
 
 Quando o Kaggle não bastar: GPU de 24 GB a partir de cerca de US$ 0,27 a 0,90 por hora no RunPod (out/2026). Um fine-tuning QLoRA de 8B costuma levar poucas horas. Use crédito pré-pago, sem cartão em débito automático.
 
-**Quando entra:** passo 29.4 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 29.4 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -677,7 +677,7 @@ Uma chave para dezenas de modelos, alguns grátis com limite; reserva no gateway
 
 Plataforma aberta para levar modelos à web com versões e API.
 
-**Quando entra:** passo 61.10 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 62.10 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

@@ -1081,7 +1081,7 @@
    "nome": "AM Taskoro (gestão de projetos ágeis)",
    "frente": "software",
    "tipo": "SaaS",
-   "estagio": "pausado",
+   "estagio": "ideia",
    "receita": "recorrente",
    "escala": "digital",
    "canais": [
@@ -1104,7 +1104,7 @@
    "perfil": "passiva",
    "automacao": 70,
    "veredito": "fila",
-   "motivo": "Pausado por você.",
+   "motivo": "Despausado em 11/11/2026 (ADR 0015); segue na fila.",
    "lote": "",
    "usa": [
     "recorrencia",
@@ -2256,6 +2256,54 @@
    "motivo": "Você já está construindo; falta empacotar.",
    "lote": "2026-11",
    "ordem": 5,
+   "usa": [
+    "venda",
+    "ci",
+    "midia",
+    "suporte"
+   ]
+  },
+  {
+   "id": "amtechos",
+   "nome": "AMtech OS (sistema pronto para programar, baseado em Ubuntu)",
+   "frente": "software",
+   "tipo": "produto e serviço",
+   "estagio": "construcao",
+   "receita": "grátis (Community) + configuração remota, notebooks prontos, plano mensal e licença para escolas",
+   "escala": "digital",
+   "canais": [
+    "GitHub",
+    "YouTube",
+    "Instituto AMS"
+   ],
+   "automatico": [
+    "instalador",
+    "atualizações",
+    "verificador"
+   ],
+   "humano": [
+    "suporte",
+    "configuração remota"
+   ],
+   "deriva_de": [
+    "setuppro"
+   ],
+   "proximo_passo": "Testar a versão 0.1 numa VM por uma semana (os/README.md)",
+   "metrica": "instalações por mês e clientes pagantes",
+   "nota": {
+    "sinergia": 5,
+    "escala": 4,
+    "demanda": 3,
+    "esforco": 4,
+    "capital": 1
+   },
+   "doc": "../../os/README.md",
+   "nova": true,
+   "perfil": "ativa_boa",
+   "automacao": 70,
+   "veredito": "fila",
+   "motivo": "Você é o primeiro cliente: usar alguns meses antes de vender. A venda nasce do setuppro e puxa revenda de notebooks, suporte remoto e aulas.",
+   "lote": "2026-11",
    "usa": [
     "venda",
     "ci",

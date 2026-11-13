@@ -9,7 +9,7 @@
 
 *1º · casa com sua stack · Próximos 3 meses*
 
-- **Por quê:** A stack do Aura é .NET 10; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft.
+- **Por quê:** A stack do Aura é TypeScript/Python; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft.
 - **Certificações:** AZ-900 (fundamentos) e depois AI-200 (desenvolvedor Azure com IA; substituiu o AZ-204 em 31/07/2026).
 - **Prática:** Publicar um sistema AM no Azure com Terraform, Key Vault e deploy pelo GitHub Actions.
 

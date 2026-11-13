@@ -249,15 +249,15 @@ flowchart LR
 | [CRM único + LGPD](#ocrm) | Local | Uma ficha por cliente com ofertas compradas, origem e consentimento. Começa em planilha e MailerLite; vira tabela no PostgreSQL do grupo. | passo 31.6 · Dez/2026 a jan/2027; passo 33.6 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 37.9 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Flywheel de conteúdo](#ofly) | Local | Cada aula, capítulo, projeto, reparo ou prato vira várias peças: cortes, carrossel, artigo, newsletter, questão, template. | passo 34.5 · Semana 5 · nov/2026; passo 34.6 · Semana 5 · nov/2026 |
 | [Canal build in public](#obuild) | Remoto · precisa de conta · futuro | Vídeo semanal com rosto mostrando decisões reais do grupo: números, setup, aulas. Gera confiança para todas as ofertas. | passo 47.7 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Agente atendente (WhatsApp)](#oatend) | Local · futuro | Responde perguntas frequentes, mostra catálogo e horários e agenda. Passa para você o que não souber. Nunca promete preço fora da tabela. | passo 33.5 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.5 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 52.2 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
-| [Agente orçamentista](#oorc) | Local · futuro | Monta propostas a partir dos pacotes e do histórico, para você aprovar. | passo 52.3 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
-| [Agente cobrador](#ocob) | Local · futuro | Lembra vencimentos e envia o Pix; avisa você nos atrasos. Não faz estorno nem acordo sozinho. | passo 52.4 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
-| [Agente pós-venda](#opos) | Local · futuro | Pergunta a nota, pede avaliação e oferece o próximo passo da jornada do cliente. | passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 52.5 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Agente atendente (WhatsApp)](#oatend) | Local · futuro | Responde perguntas frequentes, mostra catálogo e horários e agenda. Passa para você o que não souber. Nunca promete preço fora da tabela. | passo 33.5 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.5 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 53.2 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Agente orçamentista](#oorc) | Local · futuro | Monta propostas a partir dos pacotes e do histórico, para você aprovar. | passo 53.3 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Agente cobrador](#ocob) | Local · futuro | Lembra vencimentos e envia o Pix; avisa você nos atrasos. Não faz estorno nem acordo sozinho. | passo 53.4 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Agente pós-venda](#opos) | Local · futuro | Pergunta a nota, pede avaliação e oferece o próximo passo da jornada do cliente. | passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 53.5 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
 | [Agente editor de conteúdo](#oedit) | Local | Transforma transcrições em cortes, títulos, legendas, carrosséis, posts do Google e newsletter, seguindo o guia de estilo da marca. | passo 34.5 · Semana 5 · nov/2026; passo 46.14 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
-| [Analista semanal](#oanal) | Local · futuro | Lê o painel toda segunda e manda 3 fatos e 1 sugestão de decisão. Só leitura. | passo 52.1 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
-| [Organizador fiscal](#ofisc) | Local · futuro | Junta notas, extratos e vendas do mês para o contador e para o carnê-leão. | passo 52.6 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Analista semanal](#oanal) | Local · futuro | Lê o painel toda segunda e manda 3 fatos e 1 sugestão de decisão. Só leitura. | passo 53.1 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Organizador fiscal](#ofisc) | Local · futuro | Junta notas, extratos e vendas do mês para o contador e para o carnê-leão. | passo 53.6 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
 | [Revisor de oferta](#orevo) | Local | Confere cada lançamento contra o padrão de qualidade antes de ir ao ar. | passo 37.14 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Agente comprador](#ocomp) | Local · futuro | Sugere a lista de compras dos negócios de comida pelo estoque mínimo e pela previsão de produção. | passo 52.7 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
+| [Agente comprador](#ocomp) | Local · futuro | Sugere a lista de compras dos negócios de comida pelo estoque mínimo e pela previsão de produção. | passo 53.7 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) |
 | [Diagnóstico do notebook](#diag) | Local | scripts/windows/diagnostico.ps1: lê hardware, segurança, programas, WSL, Docker, Ollama e extensões, compara com o setup e diz em que passo cada pendência se resolve. Somente leitura; é a etapa 0 do roteiro. | passo 0.2 · Antes de tudo · semana 1 (out/2026) |
 | [Roteiro de implantação](#oimpl) | Local | data/implantacao.json: fases e passos com critério de pronto, cada passo ligado aos blocos que implanta. Gera docs/implantacao/roteiro.md e a página de acompanhamento; o CI falha se um bloco do setup ficar de fora. | passo 0.6 · Antes de tudo · semana 1 (out/2026); passo 39.4 · Semana 11 · jan/2027 |
 | [Instaladores (PowerShell e bash)](#oinst) | Local | instalar.ps1 (winget, WSL2, .wslconfig) e bootstrap.sh (ferramentas, linguagens, Claude Code, ai-jail, Git assinado). Seguros para rodar de novo. | passo 3.1 · Semana 1 · out/2026; passo 4.4 · Semana 2 · nov/2026 |
@@ -267,7 +267,7 @@ flowchart LR
 | [Agente revisor de qualidade](#revisor) | Local | Confere cada entrega contra o padrão de qualidade da oferta antes de chegar ao cliente. | passo 20.8 · Semana 5 · nov/2026; passo 27.5 · Semana 6 · nov/2026 a dez/2026 |
 | [Lucro por ferramenta](#roi) | Local | Lucro e prejuízo de cada ferramenta paga e de cada renda, mês a mês, contra a hora mínima. | passo 23.10 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 31.3 · Dez/2026 a jan/2027 |
 | [Prospector com aprovação](#prospector) | Remoto | Monta listas de negócios a partir de dados públicos e rascunha a abordagem; você aprova cada contato. | passo 23.9 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 31.6 · Dez/2026 a jan/2027; passo 45.3 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
-| [Resumo de IFC (ifc_resumo.py)](#ifcresumo) | Local | tools/construcao/ifc_resumo.py: pavimentos, elementos e quantidades de qualquer modelo IFC, sem instalar nada. | passo 61.6 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
+| [Resumo de IFC (ifc_resumo.py)](#ifcresumo) | Local | tools/construcao/ifc_resumo.py: pavimentos, elementos e quantidades de qualquer modelo IFC, sem instalar nada. | passo 62.6 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 | [Triagem: montar, colar ou construir](#triagem) | Local | tools/triagem/triagem.py (just triagem): acha no setup o que já resolve o pedido e decide A (subir pronto), B (colar com n8n ou API) ou C (construir o núcleo no Aura, com ADR). O arquitetar monta o pacote curto de contexto para o Claude. Regra das 4 horas. | passo 21.3 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica; passo 21.4 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [Plane (projetos de cliente)](#plane) | Remoto · precisa de conta | Projetos e tarefas de cliente e dos negócios fora do código (restaurantes, editora). O código segue no GitHub Projects. | passo 32.6 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | [Núcleo AMtech (banco central)](#nucleo) | Local | tools/nucleo/nucleo.py (ADR 0009): eventos, conhecimento, tarefas e auditoria. SQLite no notebook, PostgreSQL + pgvector na VM. A triagem e o arquiteto leem e gravam aqui sozinhos; just lembrar e just buscar para você. | passo 22.1 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 22.3 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 22.4 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 22.5 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 22.8 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 23.6 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 23.10 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.1 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 25.3 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 26.1 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; passo 26.5 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último |
@@ -420,7 +420,7 @@ Vídeo semanal com rosto mostrando decisões reais do grupo: números, setup, au
 
 Responde perguntas frequentes, mostra catálogo e horários e agenda. Passa para você o que não souber. Nunca promete preço fora da tabela.
 
-**Quando entra:** passo 33.5 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.5 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 52.2 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 33.5 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.5 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 53.2 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -436,7 +436,7 @@ Responde perguntas frequentes, mostra catálogo e horários e agenda. Passa para
 
 Monta propostas a partir dos pacotes e do histórico, para você aprovar.
 
-**Quando entra:** passo 52.3 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.3 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -450,7 +450,7 @@ Monta propostas a partir dos pacotes e do histórico, para você aprovar.
 
 Lembra vencimentos e envia o Pix; avisa você nos atrasos. Não faz estorno nem acordo sozinho.
 
-**Quando entra:** passo 52.4 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.4 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -466,7 +466,7 @@ Lembra vencimentos e envia o Pix; avisa você nos atrasos. Não faz estorno nem 
 
 Pergunta a nota, pede avaliação e oferece o próximo passo da jornada do cliente.
 
-**Quando entra:** passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 52.5 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 53.5 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -502,7 +502,7 @@ Transforma transcrições em cortes, títulos, legendas, carrosséis, posts do G
 
 Lê o painel toda segunda e manda 3 fatos e 1 sugestão de decisão. Só leitura.
 
-**Quando entra:** passo 52.1 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.1 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -517,7 +517,7 @@ Lê o painel toda segunda e manda 3 fatos e 1 sugestão de decisão. Só leitura
 
 Junta notas, extratos e vendas do mês para o contador e para o carnê-leão.
 
-**Quando entra:** passo 52.6 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.6 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -546,7 +546,7 @@ Confere cada lançamento contra o padrão de qualidade antes de ir ao ar.
 
 Sugere a lista de compras dos negócios de comida pelo estoque mínimo e pela previsão de produção.
 
-**Quando entra:** passo 52.7 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 53.7 · Junto com o primeiro CNPJ (começa quando: clientes e vendas recorrentes) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -709,7 +709,7 @@ Monta listas de negócios a partir de dados públicos e rascunha a abordagem; vo
 
 tools/construcao/ifc_resumo.py: pavimentos, elementos e quantidades de qualquer modelo IFC, sem instalar nada.
 
-**Quando entra:** passo 61.6 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 62.6 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

@@ -17,10 +17,10 @@ Agentes, skills, hooks e ferramentas que fazem parte do setup e são construído
 | **Skill /novo-sistema-aura** | Skill do Claude Code | Próximos 3 meses | Esqueleto de sistema AM: solução Clean Arch, Aspire, compose, testes, CLAUDE.md, Actions e Terraform. |
 | **Módulos Terraform do Aura** | Infra como código | Próximos 3 meses | Um módulo reaproveitável (app + PostgreSQL + Key Vault) usado por todos os sistemas, primeiro no Azure. |
 | **Hooks do Claude Code + Git** | Hooks | Próximos 3 meses | Pós-edição: dotnet format. pre-commit: gitleaks e testes. post-commit: sinal para o aura-status. |
-| **aura-mcp** | Servidor MCP em C# | 3 a 12 meses | Expõe ao agente o catálogo dos 13 sistemas, ADRs e o vault. Projeto de portfólio de IA com sua stack. |
+| **aura-mcp** | Servidor MCP em TypeScript | 3 a 12 meses | Expõe ao agente o catálogo dos 13 sistemas, ADRs e o vault. Projeto de portfólio de IA com sua stack. |
 | **Subagente arquiteto-aura** | Agente do Claude Code | 3 a 12 meses | Confere Clean Arch/DDD e escreve o rascunho do ADR. |
-| **aura-status** | Ferramenta C# | Próximos 3 meses | Painel de repos, backup, Dependabot e estudos. Depois, módulo da Waybar no Arch. |
+| **aura-status** | Ferramenta (Go/Python) | Próximos 3 meses | Painel de repos, backup, Dependabot e estudos. Depois, módulo da Waybar no Arch. |
 | **Laboratório de segurança** | Repositório + VMs | 3 a 12 meses | Configuração das VMs e writeups das máquinas resolvidas. |
-| **AMtech Dev Edition** | Scripts sobre o Omarchy | Depois de 12 meses | Sua edição do Arch com tema Aura e ambiente .NET. |
+| **AMtech Dev Edition** | Scripts sobre o Omarchy | Depois de 12 meses | Sua edição do Arch com tema Aura e ambiente Node/Python. |
 | **Pipeline de treino AMtech** | Repositório Python | 3 a 12 meses | Gera o dataset a partir das suas fontes, treina no Kaggle, avalia, registra no MLflow e publica o GGUF no Ollama. Um comando por etapa. |
 | **Projeto dbt das métricas** | Repositório dbt | Próximos 3 meses | Modelos de vendas, gastos e publicações com testes; o painel de lucro passa a ler daqui. |

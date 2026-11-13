@@ -153,7 +153,7 @@
    "tipo": "regra",
    "area": "dev",
    "texto": "Mudança em banco de produção só por migration versionada que passou por staging; nunca SQL de manutenção digitado na mão, com ou sem IA.",
-   "no_setup": "Os sistemas Aura usam migrations do EF Core. Proposta: escrever a regra no CLAUDE.md do Aura.",
+   "no_setup": "Os sistemas Aura usam migrations do Prisma/Drizzle. Proposta: escrever a regra no CLAUDE.md do Aura.",
    "sugestao": "proposta",
    "validade": "perene",
    "fonte": {

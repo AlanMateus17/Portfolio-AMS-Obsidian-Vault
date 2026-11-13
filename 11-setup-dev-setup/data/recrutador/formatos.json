@@ -1,0 +1,367 @@
+{
+ "escala": {
+  "1": "Não contrataria, com convicção",
+  "2": "Não contrataria",
+  "3": "Contrataria",
+  "4": "Contrataria, com convicção"
+ },
+ "pronto": "Um formato está pronto quando as 3 últimas simulações dele tiveram nota 3 ou 4.",
+ "regras_do_entrevistador": [
+  "Você é o entrevistador, não um professor: não ensina, não dá a resposta e não elogia durante a entrevista.",
+  "Uma pergunta por vez. Espere a resposta antes da próxima.",
+  "Aprofunde como entrevistador de verdade: pergunte 'por quê?', 'e se o volume fosse 100 vezes maior?', 'qual foi a SUA parte?'.",
+  "Se o candidato travar, dê no máximo uma dica pequena e anote que precisou dela.",
+  "Respeite o tempo de cada etapa e avise quando faltarem 5 minutos.",
+  "Fale no idioma do formato o tempo todo, inclusive nas dicas. Se o candidato trocar de idioma, peça para voltar.",
+  "Use só o que o candidato disser. Não invente experiências, empresas ou números sobre ele.",
+  "Só no fim, depois que ele disser 'fim da entrevista', faça a avaliação no formato pedido."
+ ],
+ "formatos": [
+  {
+   "id": "ingles-conversa",
+   "nome": "Conversa em inglês com recrutador internacional",
+   "estilo": "Primeira ligação de 20 minutos com recrutador de empresa estrangeira ou de plataforma de trabalho remoto",
+   "mercado": "internacional",
+   "idioma": "inglês",
+   "trimestre": 1,
+   "minutos": 20,
+   "etapas": [
+    {
+     "nome": "Tell me about yourself",
+     "minutos": 5,
+     "avalia": "Resumo de 90 segundos: quem é, o que constrói, o que procura"
+    },
+    {
+     "nome": "Experiência e motivação",
+     "minutos": 8,
+     "avalia": "Contar um projeto com contexto, ação e resultado; por que trabalho remoto e por que esta empresa"
+    },
+    {
+     "nome": "Logística",
+     "minutos": 5,
+     "avalia": "Fuso horário, disponibilidade, pretensão salarial em dólar, contrato (PJ ou contractor)"
+    },
+    {
+     "nome": "Perguntas do candidato",
+     "minutos": 2,
+     "avalia": "Faz perguntas boas sobre o time e o processo"
+    }
+   ],
+   "competencias": [
+    "Fluência e clareza (não é sotaque)",
+    "Estrutura da resposta",
+    "Escuta e compreensão das perguntas",
+    "Postura profissional"
+   ],
+   "fontes": [
+    "https://www.techinterviewhandbook.org/behavioral-interview/"
+   ]
+  },
+  {
+   "id": "br-triagem",
+   "nome": "Triagem com recrutador (RH) no Brasil",
+   "estilo": "Conversa inicial de RH em empresa de tecnologia brasileira, por vídeo",
+   "mercado": "nacional",
+   "idioma": "português",
+   "trimestre": 1,
+   "minutos": 25,
+   "etapas": [
+    {
+     "nome": "Apresentação",
+     "minutos": 5,
+     "avalia": "Trajetória em 2 minutos, inclusive a transição de carreira, contada como força"
+    },
+    {
+     "nome": "Experiência e projetos",
+     "minutos": 10,
+     "avalia": "Projetos reais do GitHub com o que você fez e o resultado"
+    },
+    {
+     "nome": "Fit e motivação",
+     "minutos": 6,
+     "avalia": "Por que a vaga, como aprende, como lida com prazo e feedback"
+    },
+    {
+     "nome": "Pretensão e modelo",
+     "minutos": 4,
+     "avalia": "Faixa salarial pesquisada, CLT ou PJ, presencial, híbrido ou remoto"
+    }
+   ],
+   "competencias": [
+    "Comunicação",
+    "Clareza da trajetória",
+    "Alinhamento com a vaga",
+    "Negociação básica"
+   ],
+   "fontes": []
+  },
+  {
+   "id": "br-tecnica-dotnet",
+   "nome": "Entrevista técnica TypeScript/Python (júnior a pleno) no Brasil",
+   "estilo": "Entrevista técnica com tech lead: perguntas de TypeScript, Python, SQL e um exercício ao vivo",
+   "mercado": "nacional",
+   "idioma": "português",
+   "trimestre": 1,
+   "minutos": 60,
+   "etapas": [
+    {
+     "nome": "Fundamentos de TypeScript e Python",
+     "minutos": 15,
+     "avalia": "Tipos e narrowing, async/await, map/filter/reduce, injeção de dependência, ciclo de vida de requisição"
+    },
+    {
+     "nome": "Banco de dados",
+     "minutos": 15,
+     "avalia": "SQL com JOIN e GROUP BY, índices, transação, N+1 no ORM (Prisma/Drizzle), migrations"
+    },
+    {
+     "nome": "Exercício ao vivo",
+     "minutos": 20,
+     "avalia": "Resolver um problema pequeno falando o raciocínio, com teste"
+    },
+    {
+     "nome": "Arquitetura do seu projeto",
+     "minutos": 10,
+     "avalia": "Explicar camadas, decisões e o que mudaria no seu sistema"
+    }
+   ],
+   "competencias": [
+    "Conhecimento técnico",
+    "Raciocínio em voz alta",
+    "Qualidade do código e testes",
+    "Clareza das decisões"
+   ],
+   "fontes": [
+    "https://learn.microsoft.com/dotnet/"
+   ]
+  },
+  {
+   "id": "br-case",
+   "nome": "Defesa de case técnico (desafio para casa)",
+   "estilo": "Comum no Brasil: você entrega um projeto pequeno e depois defende as escolhas com dois avaliadores",
+   "mercado": "nacional",
+   "idioma": "português",
+   "trimestre": 2,
+   "minutos": 45,
+   "etapas": [
+    {
+     "nome": "Apresentação do case",
+     "minutos": 10,
+     "avalia": "Mostrar o que entregou, o que ficou de fora e por quê"
+    },
+    {
+     "nome": "Perguntas sobre decisões",
+     "minutos": 20,
+     "avalia": "Defender arquitetura, testes, tratamento de erro e segurança sem se defender demais"
+    },
+    {
+     "nome": "Mudança de requisito ao vivo",
+     "minutos": 15,
+     "avalia": "Adaptar o código a um requisito novo, dizendo onde mexe e o risco"
+    }
+   ],
+   "competencias": [
+    "Domínio do próprio código",
+    "Trade-offs explicados",
+    "Reação a crítica",
+    "Adaptação"
+   ],
+   "fontes": []
+  },
+  {
+   "id": "fintech-dominio",
+   "nome": "Entrevista de domínio em fintech ou banco",
+   "estilo": "Rodada técnica de produto financeiro: pagamentos, conciliação e consistência de dinheiro",
+   "mercado": "nacional",
+   "idioma": "português",
+   "trimestre": 2,
+   "minutos": 45,
+   "etapas": [
+    {
+     "nome": "Conceitos de dinheiro em software",
+     "minutos": 15,
+     "avalia": "Decimal e não float, arredondamento, idempotência, dupla entrada contábil"
+    },
+    {
+     "nome": "Pagamentos e Pix",
+     "minutos": 15,
+     "avalia": "Fluxo de um Pix, webhook, estorno, conciliação com o extrato, o que fazer quando o webhook chega duas vezes"
+    },
+    {
+     "nome": "Caso",
+     "minutos": 15,
+     "avalia": "Desenhar a cobrança mensal de um SaaS (AM Rendara) com falhas e reprocessamento"
+    }
+   ],
+   "competencias": [
+    "Correção com dinheiro",
+    "Pensamento em falhas",
+    "Conhecimento do domínio",
+    "Comunicação"
+   ],
+   "fontes": [
+    "https://www.bcb.gov.br/estabilidadefinanceira/pix"
+   ]
+  },
+  {
+   "id": "bigtech-coding",
+   "nome": "Coding interview (estilo big tech)",
+   "estilo": "Rodada de algoritmos em inglês, como as de empresas grandes dos EUA: um problema, editor compartilhado, sem rodar o código",
+   "mercado": "internacional",
+   "idioma": "inglês",
+   "trimestre": 3,
+   "minutos": 45,
+   "etapas": [
+    {
+     "nome": "Entender o problema",
+     "minutos": 5,
+     "avalia": "Perguntas de esclarecimento, exemplos e casos de borda antes de codar"
+    },
+    {
+     "nome": "Solução e complexidade",
+     "minutos": 10,
+     "avalia": "Começar pela força bruta, melhorar, dizer a complexidade de tempo e espaço"
+    },
+    {
+     "nome": "Código",
+     "minutos": 20,
+     "avalia": "Código limpo e correto falando em voz alta"
+    },
+    {
+     "nome": "Teste e follow-up",
+     "minutos": 10,
+     "avalia": "Testar à mão com um exemplo e responder a uma variação do problema"
+    }
+   ],
+   "competencias": [
+    "Resolução de problemas",
+    "Código",
+    "Comunicação",
+    "Verificação"
+   ],
+   "fontes": [
+    "https://www.techinterviewhandbook.org/coding-interview-techniques/",
+    "https://www.google.com/about/careers/applications/how-we-hire/"
+   ]
+  },
+  {
+   "id": "remoto-intl",
+   "nome": "Seleção para trabalho remoto internacional",
+   "estilo": "Processo de plataforma ou empresa remota que contrata no exterior: inglês, live coding e conversa técnica",
+   "mercado": "internacional",
+   "idioma": "inglês",
+   "trimestre": 3,
+   "minutos": 60,
+   "etapas": [
+    {
+     "nome": "Screening em inglês",
+     "minutos": 10,
+     "avalia": "Apresentação, experiência e disponibilidade"
+    },
+    {
+     "nome": "Live coding",
+     "minutos": 30,
+     "avalia": "Problema prático (API, refatoração ou bug) falando o raciocínio em inglês"
+    },
+    {
+     "nome": "Trabalho remoto",
+     "minutos": 15,
+     "avalia": "Comunicação assíncrona, autonomia, como reporta bloqueios, fuso"
+    },
+    {
+     "nome": "Perguntas do candidato",
+     "minutos": 5,
+     "avalia": "Perguntas sobre time, processo e expectativas"
+    }
+   ],
+   "competencias": [
+    "Inglês técnico",
+    "Código prático",
+    "Autonomia remota",
+    "Comunicação escrita e falada"
+   ],
+   "fontes": []
+  },
+  {
+   "id": "bigtech-design",
+   "nome": "System design (estilo big tech)",
+   "estilo": "Rodada de desenho de sistema em inglês: requisitos, estimativa, arquitetura e gargalos",
+   "mercado": "internacional",
+   "idioma": "inglês",
+   "trimestre": 4,
+   "minutos": 50,
+   "etapas": [
+    {
+     "nome": "Requisitos",
+     "minutos": 8,
+     "avalia": "Funcionais e não funcionais, escopo fechado antes de desenhar"
+    },
+    {
+     "nome": "Estimativa",
+     "minutos": 5,
+     "avalia": "Ordem de grandeza de usuários, requisições por segundo e armazenamento"
+    },
+    {
+     "nome": "Arquitetura",
+     "minutos": 20,
+     "avalia": "Componentes, dados, APIs e por que cada escolha"
+    },
+    {
+     "nome": "Aprofundamento e falhas",
+     "minutos": 17,
+     "avalia": "Gargalos, cache, filas, consistência, o que quebra primeiro e como monitora"
+    }
+   ],
+   "competencias": [
+    "Levantamento de requisitos",
+    "Arquitetura",
+    "Trade-offs",
+    "Comunicação"
+   ],
+   "fontes": [
+    "https://www.techinterviewhandbook.org/system-design/"
+   ]
+  },
+  {
+   "id": "amazon-lp",
+   "nome": "Behavioral com Leadership Principles (estilo Amazon, bar raiser)",
+   "estilo": "Entrevista comportamental em inglês, com perguntas que pedem histórias reais no método STAR e aprofundam até o detalhe",
+   "mercado": "internacional",
+   "idioma": "inglês",
+   "trimestre": 4,
+   "minutos": 50,
+   "etapas": [
+    {
+     "nome": "Ownership e Deliver Results",
+     "minutos": 15,
+     "avalia": "Uma história em que você assumiu algo sozinho e entregou, com número"
+    },
+    {
+     "nome": "Dive Deep e Are Right, A Lot",
+     "minutos": 15,
+     "avalia": "Uma decisão difícil com dado, e uma vez em que você errou"
+    },
+    {
+     "nome": "Customer Obsession e Learn and Be Curious",
+     "minutos": 15,
+     "avalia": "Um problema de cliente ou aluno resolvido, e algo que aprendeu sozinho"
+    },
+    {
+     "nome": "Perguntas do candidato",
+     "minutos": 5,
+     "avalia": "Perguntas maduras sobre o time"
+    }
+   ],
+   "competencias": [
+    "Histórias STAR com a SUA ação",
+    "Resultados medidos",
+    "Autocrítica",
+    "Inglês"
+   ],
+   "fontes": [
+    "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+    "https://www.amazon.jobs/content/en/how-we-hire/interview-loop"
+   ]
+  }
+ ]
+}

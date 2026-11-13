@@ -21,6 +21,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import nucleo as nuc  # noqa: E402
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "implantacao"))
+from gerar import onde_rodar  # noqa: E402
+
+LUGAR = {"powershell": "PowerShell do Windows (PS C:\\>)", "ubuntu": "Ubuntu do WSL", "navegador": "Navegador"}
+
 RAIZ = Path(__file__).resolve().parents[2]
 
 
@@ -105,10 +110,80 @@ def _linha(f, p) -> str:
     custo = " [custa dinheiro]" if set(p.get("precisa", [])) & {"compra", "pagamento"} else ""
     s = f"{marca} {p['id']:<22} {p['titulo']}{custo}\n        fase: {f['titulo']} · {p['tempo_min']} min · pronto quando: {p['pronto']}"
     if p.get("comando"):
-        s += f"\n        Ubuntu do WSL: {p['comando']}"
+        s += f"\n        {LUGAR[onde_rodar(p['comando'])]}: {p['comando']}"
     if p.get("fora"):
         s += f"\n        Fora do terminal: {p['fora']}"
     return s
+
+
+def trilha_rapida() -> dict:
+    return json.loads((RAIZ / "data" / "implantacao-rapida.json").read_text(encoding="utf-8"))
+
+
+def _ids_da_sessao(sessao: dict) -> list[str]:
+    return sessao.get("script", []) + sessao.get("paralelo", []) + sessao.get("depois", [])
+
+
+def validar_rapida(trilha: dict, fases) -> list[str]:
+    """IDs da trilha rápida que não existem no roteiro (lista vazia = tudo certo)."""
+    existem = {p["id"] for f in fases for p in f["passos"]}
+    return [i for s in trilha["sessoes"] for i in _ids_da_sessao(s) if i not in existem]
+
+
+def rapido(trilha: dict, fases, feitos_: set[str], todas: bool = False) -> str:
+    """A sessão atual da trilha rápida (a primeira com passo pendente), com os comandos e o que fazer em paralelo."""
+    por_id = {p["id"]: (f, p) for f in fases for p in f["passos"]}
+    sessoes = trilha["sessoes"]
+    total = sum(len(_ids_da_sessao(s)) for s in sessoes)
+    feitos_trilha = sum(1 for s in sessoes for i in _ids_da_sessao(s) if i in feitos_)
+    saida = [f"Trilha rápida: {feitos_trilha}/{total} passos · {trilha['regra']}"]
+    abertas = [s for s in sessoes if any(i not in feitos_ for i in _ids_da_sessao(s))]
+    if not abertas:
+        return saida[0] + "\n\nTrilha rápida concluída. Volte para: just agora"
+    for s in abertas if todas else abertas[:1]:
+        n = sessoes.index(s) + 1
+        saida.append(f"\n=== Sessão {n} de {len(sessoes)} · {s['titulo']} · cerca de {s['minutos'] // 60}h{s['minutos'] % 60:02d}\n{s['dica']}")
+        for grupo, nome in (("script", "Rode (segue sozinho)"), ("paralelo", "Em paralelo, enquanto o script roda"), ("depois", "Depois")):
+            pend = [i for i in s.get(grupo, []) if i not in feitos_]
+            if pend:
+                saida.append(f"\n--- {nome}")
+                saida += [_linha(*por_id[i]) for i in pend]
+        if not todas:
+            saida.append(f"\nAo terminar cada passo: just feito ID. Próxima sessão: {sessoes[n]['titulo'] if n < len(sessoes) else 'fim da trilha'}.")
+    if todas or len(abertas) == 1:
+        saida.append("\nFica para depois da trilha:\n- " + "\n- ".join(trilha["fica_para_depois"]))
+    return "\n".join(saida)
+
+
+DOC_RAPIDA = RAIZ / "docs" / "implantacao" / "trilha-rapida.md"
+
+
+def rapido_md(trilha: dict, fases) -> str:
+    """A trilha rápida inteira em Markdown, para ler no celular antes de o WSL existir (sessões 1 e 2)."""
+    por_id = {p["id"]: p for f in fases for p in f["passos"]}
+    rot = {"powershell": "PowerShell do Windows (`PS C:\\>`)", "ubuntu": "Ubuntu do WSL", "navegador": "Navegador"}
+    total = sum(s["minutos"] for s in trilha["sessoes"])
+    o = ["<!-- GERADO por tools/nucleo/agenda.py a partir de data/implantacao-rapida.json. Edite o JSON. -->",
+         "# Trilha rápida: o setup funcionando e as 3 empresas prontas para vender", "",
+         trilha["objetivo"], "", f"**Como usar:** {trilha['regra']}", "",
+         f"São {len(trilha['sessoes'])} sessões, cerca de {total // 60} horas no total. Antes do Ubuntu existir (sessões 1 e 2), leia por esta página; "
+         "depois, `just rapido` no Ubuntu do WSL mostra só o que falta.", ""]
+    for n, s in enumerate(trilha["sessoes"], 1):
+        o += [f"## Sessão {n} · {s['titulo']} (cerca de {s['minutos'] // 60}h{s['minutos'] % 60:02d})", "", s["dica"], ""]
+        for grupo, nome in (("script", "Rode (segue sozinho)"), ("paralelo", "Em paralelo, enquanto o script roda"), ("depois", "Depois")):
+            if not s.get(grupo):
+                continue
+            o += [f"**{nome}**", ""]
+            for i in s[grupo]:
+                p = por_id[i]
+                o.append(f"- [ ] `{i}` · {p['titulo']} ({p['tempo_min']} min). Pronto quando: {p['pronto']}")
+                if p.get("comando"):
+                    o.append(f"  - {rot[onde_rodar(p['comando'])]}: `{p['comando']}`")
+                if p.get("fora"):
+                    o.append(f"  - Fora do terminal: {p['fora']}")
+            o.append("")
+    o += ["## Fica para depois da trilha", ""] + [f"- {x}" for x in trilha["fica_para_depois"]] + [""]
+    return "\n".join(o)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -121,8 +196,28 @@ def main(argv: list[str] | None = None) -> int:
     for nome in ("feito", "desfazer"):
         s.add_parser(nome).add_argument("ids", nargs="+")
     s.add_parser("progresso").add_argument("--empresa")
+    r = s.add_parser("rapido")
+    r.add_argument("--todas", action="store_true", help="mostra todas as sessões abertas")
+    r.add_argument("--doc", action="store_true", help="regenera docs/implantacao/trilha-rapida.md")
+    r.add_argument("--check", action="store_true", help="confere se o .md está em dia (usado no just check)")
     args = ap.parse_args(argv)
     fases = roteiro()
+    if args.cmd == "rapido" and (args.doc or args.check):
+        trilha = trilha_rapida()
+        faltam = validar_rapida(trilha, fases)
+        if faltam:
+            print(f"Trilha rápida cita passos que não existem: {', '.join(faltam)}", file=sys.stderr)
+            return 2
+        md = rapido_md(trilha, fases)
+        atual = DOC_RAPIDA.read_text(encoding="utf-8") if DOC_RAPIDA.exists() else ""
+        if args.check:
+            if atual != md:
+                print(f"{DOC_RAPIDA.relative_to(RAIZ)} desatualizado: rode just docs", file=sys.stderr)
+                return 1
+            return 0
+        DOC_RAPIDA.write_text(md, encoding="utf-8")
+        print(f"Escrito {DOC_RAPIDA.relative_to(RAIZ)}")
+        return 0
     con = nuc.abrir()
     try:
         if args.cmd in ("agora", "decisoes"):
@@ -140,6 +235,12 @@ def main(argv: list[str] | None = None) -> int:
             print(f"{marcar(con, args.ids, fases)} passo(s) marcados como feitos.")
         elif args.cmd == "desfazer":
             print(f"{desmarcar(con, args.ids, fases)} passo(s) voltaram para pendentes.")
+        elif args.cmd == "rapido":
+            trilha = trilha_rapida()
+            faltam = validar_rapida(trilha, fases)
+            if faltam:
+                raise ValueError(f"Trilha rápida cita passos que não existem: {', '.join(faltam)}")
+            print(rapido(trilha, fases, feitos(con), args.todas))
         elif args.cmd == "progresso":
             for titulo, feito, total in progresso(fases, feitos(con), args.empresa):
                 barra = "█" * round(10 * feito / total) + "·" * (10 - round(10 * feito / total))

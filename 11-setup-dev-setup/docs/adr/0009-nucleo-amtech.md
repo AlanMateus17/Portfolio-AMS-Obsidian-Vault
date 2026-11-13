@@ -1,7 +1,9 @@
 # 0009 · Núcleo AMtech: um cérebro que conecta todas as ferramentas, sem reescrevê-las
 
-- **Status:** aceita
+- **Status:** aceita, atualizada pela [0017](0017-nucleo-ts-python-dotnet-reserva.md)
 - **Data:** 2026-11-06
+
+> **Atualização (13/11, ADR 0017):** o portfólio deixou de ser um império de sistemas Aura e passou a ser **um produto único, AM Gestão** (TS + Python + Supabase). O "cérebro que conecta" segue valendo como ideia de integração, mas sobre um produto só.
 
 ## Contexto
 

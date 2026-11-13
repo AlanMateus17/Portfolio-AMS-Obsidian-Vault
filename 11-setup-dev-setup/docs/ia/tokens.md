@@ -63,7 +63,7 @@ Não. Dar tudo de antemão gasta token (entra texto) e cansa você. O setup trab
 
 1. **Você dá o essencial** e o resto a IA **assume por padrão**, dizendo o que assumiu: *"assumi pé-direito 2,70 m, parede 15 cm, porta 80 cm — mude se quiser"*.
 2. **Você corrige só o que está errado.** Uma frase de correção custa quase nada; a descrição completa custaria muito.
-3. **A IA reúsa o que já sabe de você:** preferências salvas, a stack fixa (.NET, PostgreSQL), as regras do repositório e os seus projetos. Ela não pergunta de novo o que já está escrito no setup.
+3. **A IA reúsa o que já sabe de você:** preferências salvas, a stack por problema (.NET, PostgreSQL), as regras do repositório e os seus projetos. Ela não pergunta de novo o que já está escrito no setup.
 
 Então "criar da forma mais perfeita possível" não vem de você descrever tudo; vem de um primeiro rascunho com padrões sensatos, que você corrige em uma ou duas frases, rodando o gerador a cada ajuste. Isso é mais rápido, mais barato e dá um resultado melhor do que tentar acertar tudo na primeira descrição.
 
@@ -82,7 +82,7 @@ A economia é a mesma nos três casos, porque o que conta é o texto que chega a
 A regra nº 4 (buscar, não colar) também vale para o próprio repositório. Quatro travas, todas grátis:
 
 1. **O agente não lê lixo nem segredo.** Em todo repositório, `.claude/settings.json` com `permissions.deny` (modelo em `infra/templates/repo-padrao`): `node_modules`, `bin/obj`, lockfiles, logs, `.env` e `~/.ssh`. O Claude Code não usa arquivo `.claudeignore`; é essa regra que vale.
-2. **Pacote de arquitetura em vez de "leia o repositório".** `just arquiteto "o pedido"` monta em cerca de 400 tokens a stack fixa, as regras, o que já existe e o que foi recusado. O Claude não precisa descobrir isso lendo tudo.
+2. **Pacote de arquitetura em vez de "leia o repositório".** `just arquiteto "o pedido"` monta em cerca de 400 tokens a stack por problema, as regras, o que já existe e o que foi recusado. O Claude não precisa descobrir isso lendo tudo.
 3. **Só a pasta que importa, comprimida.** Para colar no Claude do app: `just contexto-ia caminho/da/pasta` (Repomix com `--compress`, que guarda só assinaturas e tipos).
 4. **Resposta seca.** O pacote já pede a resposta sem saudação nem resumo; token de saída custa mais que o de entrada.
 

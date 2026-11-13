@@ -1,6 +1,6 @@
 - Dono: Alan, professor de TI e dev solo; fundador do Grupo AMtech Digital (primeira empresa: AMtech Software, sites e sistemas). Vende no CPF por enquanto.
 - Máquina: Acer Nitro, 32 GB, GTX 1650 de 4 GB. Windows 11 Home + Ubuntu no WSL2 (ext4 dentro de VHDX); Arch planejado num 2º disco.
-- Código: .NET 10 + Next.js nos sistemas Aura (Clean Architecture, EF Core com migrations, PostgreSQL); Astro nos sites; SvelteKit + PocketBase em MVP; Go e Rust em CLIs. OpenAPI no back, Zod no front.
+- Código: TypeScript (Next.js/NestJS) + Python/FastAPI no AM Gestão (PostgreSQL/Supabase, ORM Prisma/Drizzle com migrations); Astro nos sites; PocketBase em MVP; Go e Rust em CLIs/SO. OpenAPI no back, Zod no front e no back (ADR 0006). .NET/C# é carta de reserva (ADR 0017).
 - IA: Claude Code dentro do ai-jail; Ollama local (modelos de 3 a 8B); ai-memory; teto de US$ 20/mês de API via LiteLLM. `just triagem` decide montar, colar ou construir; `just arquiteto` monta o pacote de contexto.
 - Entrega: GitHub + Actions (CI com testes e gitleaks em todo push), Kamal em VM, Docker Compose, Hostinger para sites de clientes, esteira issue → Copilot → PR → prévia → aprovação.
 - Segurança e dados: KeePassXC; segredos mínimos com sops + age; backup restic diário às 22h30 no disco externo (a cópia fora de casa no Backblaze B2 é um passo à parte do roteiro; 7 diários, 4 semanais, 12 mensais; exclui caches, node_modules, bin e obj); manutenção automática aos domingos; Uptime Kuma; GlitchTip.

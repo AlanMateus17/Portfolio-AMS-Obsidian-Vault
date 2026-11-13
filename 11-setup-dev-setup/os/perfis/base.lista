@@ -1,0 +1,24 @@
+# Base de todo perfil do AMtech OS: ferramentas, segurança e saúde do hardware.
+# Um pacote por linha. O instalador pula com aviso o que não existir na versão do Ubuntu.
+git
+gh
+curl
+wget
+ca-certificates
+gnupg
+unzip
+p7zip-full
+jq
+htop
+btop
+ufw
+unattended-upgrades
+apparmor-utils
+smartmontools
+lm-sensors
+keepassxc
+syncthing
+flameshot
+zathura
+fonts-firacode
+dconf-cli

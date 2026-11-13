@@ -49,7 +49,7 @@
 - [07 · Assistentes de IA (chat, pesquisa e estudo)](camadas/07-chat.md) (10 blocos)
 - [06 · Dados e treino de IA](camadas/06-dados.md) (22 blocos)
 - [05 · Agentes de IA e sandbox](camadas/05-ia.md) (26 blocos)
-- [04 · Linux (Ubuntu no WSL2, Arch no 2º disco)](camadas/04-lin.md) (29 blocos)
+- [04 · Linux (Ubuntu no WSL2, Arch no 2º disco)](camadas/04-lin.md) (30 blocos)
 - [03 · Windows 11, apps e máquinas virtuais](camadas/03-win.md) (32 blocos)
 - [02 · Segurança e cofre](camadas/02-seg.md) (25 blocos)
 - [01 · Hardware](camadas/01-hw.md) (26 blocos)

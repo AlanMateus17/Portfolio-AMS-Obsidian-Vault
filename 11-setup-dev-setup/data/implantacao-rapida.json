@@ -1,0 +1,74 @@
+{
+  "objetivo": "O setup funcionando e as 3 empresas prontas para vender, no menor caminho. O resto do roteiro continua valendo, mas espera esta trilha terminar.",
+  "regra": "Uma sessão por dia (ou duas no fim de semana). Os scripts rodam sozinhos: enquanto rodam, você faz os passos marcados como 'em paralelo'. Terminou um passo: just feito ID.",
+  "sessoes": [
+    {
+      "id": "r1",
+      "titulo": "Base no Windows e o cofre",
+      "minutos": 150,
+      "script": ["diag-pasta", "diag-rodar", "backup-inicial", "windows-update"],
+      "paralelo": ["keepass", "senhas-kit", "senhas-email", "github-2fa"],
+      "dica": "Comece o backup-inicial e o windows-update (rodam sozinhos, em janelas separadas do PowerShell) e, enquanto isso, crie o cofre e troque a senha do Google."
+    },
+    {
+      "id": "r2",
+      "titulo": "Instalador do Windows e o Ubuntu",
+      "minutos": 120,
+      "script": ["win-aplicar", "vscode-ext", "win-verificar"],
+      "paralelo": ["senhas-criticas", "senhas-celular", "cripto"],
+      "depois": ["ubuntu-usuario", "docker-wsl", "clonar", "wsl-reiniciar"],
+      "dica": "O win-aplicar leva cerca de 1 hora e não precisa de você. Nesse tempo, troque só as 4 senhas que a trilha usa (Google, GitHub, gov.br e banco); as outras ficam para o passo senhas-resto, 5 por semana."
+    },
+    {
+      "id": "r3",
+      "titulo": "Linux, GitHub e Claude Code",
+      "minutos": 120,
+      "script": ["bootstrap"],
+      "paralelo": ["claude-app", "conectores"],
+      "depois": ["gh-login", "repo-criar", "ci-verde", "claude-login", "obsidian-git", "restic-local", "restaurar"],
+      "dica": "Rode o comando do passo bootstrap no Ubuntu do WSL (o just ainda não existe antes dele): você digita a senha do sudo no começo e ele segue sozinho por cerca de 40 minutos. Nesse tempo, organize o app do Claude e confira os conectores. Depois do bootstrap, just rapido mostra o resto."
+    },
+    {
+      "id": "r4",
+      "titulo": "As decisões da empresa de software",
+      "minutos": 150,
+      "script": [],
+      "paralelo": [],
+      "depois": ["ks-kit", "sw-ofertas", "sw-contrato", "sw-hospedagem", "sw-marca", "sw-autonomia", "inst-preco", "inst-nome"],
+      "dica": "Sessão só de decidir, sem instalar nada. Cada decisão já tem os fatos no roteiro (just decisoes software). Na dúvida, aceite a recomendação: dá para mudar depois do 1º cliente."
+    },
+    {
+      "id": "r5",
+      "titulo": "Contas que vendem",
+      "minutos": 150,
+      "script": [],
+      "paralelo": [],
+      "depois": ["dominio", "email-prof", "banco", "agenda", "crm", "hostinger", "contador"],
+      "dica": "Do contador, só marque a consulta nesta sessão; ela acontece depois. As senhas novas vão direto para o cofre."
+    },
+    {
+      "id": "r6",
+      "titulo": "Os 3 sites no ar",
+      "minutos": 150,
+      "script": ["sw-site", "ks-conferir"],
+      "paralelo": [],
+      "depois": ["ag-deploy", "site-grupo"],
+      "dica": "just site amtech, just site instituto e just site editora; just site MARCA --checar lista o que falta em cada um. Só publique quando o checador não apontar nada."
+    },
+    {
+      "id": "r7",
+      "titulo": "Primeiro cliente",
+      "minutos": 180,
+      "script": [],
+      "paralelo": [],
+      "depois": ["sw-primeiros", "ar-sites", "ks-primeiro"],
+      "dica": "Abordagem uma por uma, nunca disparo em massa. O primeiro site pago fecha o critério do trimestre 1."
+    }
+  ],
+  "fica_para_depois": [
+    "O resto das senhas (senhas-resto: 5 por semana) e os extras do KeePassXC",
+    "Acervo, stack de automação (n8n, Grafana), RAG e MCPs extras",
+    "Núcleo autônomo, Operação 24 horas, Escola Akita e as melhorias do Professor",
+    "Mini-curso gravado (fase 17): começa depois do 1º cliente de site, no bloco de sábado"
+  ]
+}

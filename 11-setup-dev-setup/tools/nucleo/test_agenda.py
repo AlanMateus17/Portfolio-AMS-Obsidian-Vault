@@ -44,6 +44,26 @@ class TestAgenda(unittest.TestCase):
         self.assertEqual(agenda.pendentes(FASES, agenda.feitos(self.con)), [])
         self.assertEqual(agenda.progresso(FASES, {"a"}, "software"), [("Um", 1, 2)])
 
+    def test_comando_diz_o_terminal_certo(self):
+        f = {"titulo": "F"}
+        ps = agenda._linha(f, {"id": "x", "titulo": "X", "tempo_min": 1, "pronto": "ok", "comando": "winget install Git.Git"})
+        ub = agenda._linha(f, {"id": "y", "titulo": "Y", "tempo_min": 1, "pronto": "ok", "comando": "just docs"})
+        self.assertIn("PowerShell do Windows", ps)
+        self.assertNotIn("Ubuntu", ps)
+        self.assertIn("Ubuntu do WSL: just docs", ub)
+
+    def test_trilha_rapida_so_cita_passos_reais(self):
+        self.assertEqual(agenda.validar_rapida(agenda.trilha_rapida(), agenda.roteiro()), [])
+
+    def test_trilha_rapida_mostra_a_sessao_aberta(self):
+        trilha = {"regra": "r", "fica_para_depois": ["x"], "sessoes": [
+            {"titulo": "S1", "minutos": 60, "dica": "d", "script": ["a"], "paralelo": ["b"]},
+            {"titulo": "S2", "minutos": 30, "dica": "d", "depois": ["c"]}]}
+        txt = agenda.rapido(trilha, FASES, {"a", "b"})
+        self.assertIn("Sessão 2 de 2", txt)
+        self.assertNotIn("Sessão 1", txt)
+        self.assertIn("2/3", txt)
+
     def test_id_desconhecido(self):
         with self.assertRaises(ValueError):
             agenda.marcar(self.con, ["zzz"], FASES)

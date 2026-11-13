@@ -1,0 +1,14 @@
+# Perfil Segurança: estudo e laboratório. Só contra alvos seus ou autorizados (tools/seguranca/escopo.py).
+# O usbguard é instalado DESLIGADO: ligar sem cadastrar o teclado e o mouse trava a máquina (veja os/README.md).
+nmap
+tcpdump
+wireshark
+lynis
+rkhunter
+usbguard
+docker.io
+docker-compose-v2
+podman
+qemu-system-x86
+libvirt-daemon-system
+virt-manager

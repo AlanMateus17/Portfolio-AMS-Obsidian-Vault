@@ -18,20 +18,20 @@ flowchart LR
     n_gis["PostGIS + MapLibre"]
     n_story["Storybook"]
     n_clean["Clean Arch + DDD"]
-    n_ef["EF Core + Npgsql"]
-    n_sig["SignalR"]
+    n_ef["Prisma/Drizzle + PostgreSQL"]
+    n_sig["Supabase Realtime"]
     n_rls["Multi-tenant (RLS)"]
     n_tests["Testes: xUnit, Playwright, k6"]
-    n_shared["Serviços aura- (10)"]
+    n_shared["Módulos do AM Gestão"]
     n_front["Next.js + Aura Design System"]
-    n_api["API ASP.NET Core"]
+    n_api["API TypeScript (Next/NestJS)"]
     n_auth["Keycloak / Entra ID"]
     n_ai["IA: RAG + pgvector"]
     n_lic["aura-licensing"]
     n_status["aura-status"]
     n_nkaix["AM Kaixara (PDV e cardápio)"]
     n_nrot["AM Rotara (entregas)"]
-    n_mobile["App mobile (.NET MAUI)"]
+    n_mobile["App mobile (React Native)"]
     n_nobra["AM Obra (diário, medição, compras)"]
     n_zod["Zod · Biome · Vitest (front)"]
     n_sveltekit["SvelteKit (apps pequenos)"]
@@ -87,7 +87,7 @@ flowchart LR
   end
   subgraph L_cnt["Containers, Kubernetes e infra como código"]
     n_caddy["Caddy (proxy + HTTPS)"]
-    n_datomic["Datomic local"]
+    n_datomic["Histórico (append-only)"]
     n_kafka["Kafka"]
     n_mailp["Mailpit"]
     n_pg["PostgreSQL"]
@@ -109,7 +109,7 @@ flowchart LR
   subgraph L_lin["Linux (Ubuntu no WSL2, Arch no 2º disco)"]
     n_git["Git + SSH + gh"]
     n_posting["posting (API no terminal)"]
-    n_rt[".NET 10 · Node · Python"]
+    n_rt["Node/TS · Python"]
     n_vegeta["vegeta (carga em taxa fixa)"]
   end
   subgraph L_win["Windows 11, apps e máquinas virtuais"]
@@ -131,7 +131,7 @@ flowchart LR
   n_story -->|"componentes"| n_front
   n_story -->|"demo do template"| n_tmpl
   n_clean -->|"organiza"| n_api
-  n_ef -->|"Npgsql"| n_pg
+  n_ef -->|"driver pg"| n_pg
   n_api -->|"usa"| n_ef
   n_sig -->|"WebSocket"| n_front
   n_sig -->|"backplane"| n_redis
@@ -141,9 +141,9 @@ flowchart LR
   n_tests -->|"testa"| n_api
   n_tests -->|"roda no CI"| n_gha
   n_shared -->|"HTTP"| n_api
-  n_datomic -->|"aura-historico"| n_shared
+  n_datomic -->|"histórico (Postgres)"| n_shared
   n_front -->|"erros"| n_sentry
-  n_front -->|"HTTP + SignalR"| n_api
+  n_front -->|"HTTP + WebSocket"| n_api
   n_nav -->|"localhost:3000"| n_front
   n_ccan -->|"telas do Figma"| n_front
   n_auth -->|"login"| n_front
@@ -154,7 +154,7 @@ flowchart LR
   n_api -->|"eventos"| n_kafka
   n_api -->|"erros"| n_sentry
   n_api -->|"telemetria"| n_otel
-  n_api -->|"Npgsql"| n_pg
+  n_api -->|"driver pg"| n_pg
   n_api -->|"cache"| n_redis
   n_api -->|"eventos"| n_rmq
   n_api -->|"valida JWT"| n_auth
@@ -168,7 +168,7 @@ flowchart LR
   n_peng -->|"revisão e arquitetura"| n_api
   n_lic -->|"libera módulos"| n_api
   n_rt -->|"compila e roda"| n_api
-  n_mobile -->|"HTTP + SignalR"| n_api
+  n_mobile -->|"HTTP + WebSocket"| n_api
   n_posting -->|"testa a API"| n_api
   n_vegeta -->|"acha o teto"| n_api
   n_ai -->|"pgvector"| n_pg
@@ -213,32 +213,32 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [OpenAPI + Scalar](#oapi) | Local | Documentação interativa da API. No .NET 9 em diante, o Swagger saiu do modelo padrão e o Scalar é a escolha comum. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [PostGIS + MapLibre](#gis) | Local · futuro | Mapas e geolocalização do AM Rotara. Lacuna já identificada nos cursos da Alura e da Rocketseat. | passo 50.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [OpenAPI + Scalar](#oapi) | Local | Documentação interativa da API (OpenAPI); o Scalar é a escolha comum. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [PostGIS + MapLibre](#gis) | Local · futuro | Mapas e geolocalização do AM Rotara. Lacuna já identificada nos cursos da Alura e da Rocketseat. | passo 51.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
 | [Storybook](#story) | Local | Vitrine dos componentes do aura-frontend-kit; vira demo pública e produto (template). | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Clean Arch + DDD](#clean) | Local | Domain, Application, Infrastructure e Api. O domínio não conhece banco nem web. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [EF Core + Npgsql](#ef) | Local | ORM do .NET para PostgreSQL, com migrations versionadas. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [SignalR](#sig) | Local | Tempo real: pedido mudou de status no AM Rotara, venda nova no AM Kaixara. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [Prisma/Drizzle + PostgreSQL](#ef) | Local | ORM do TypeScript (Prisma/Drizzle) para PostgreSQL, com migrations versionadas. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [Supabase Realtime](#sig) | Local | Tempo real: pedido mudou de status no AM Rotara, venda nova no AM Kaixara. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Multi-tenant (RLS)](#rls) | Local | tenant_id + Row-Level Security: cada cliente só vê os próprios dados, garantido pelo banco. | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [Testes: xUnit, Playwright, k6](#tests) | Local | Unidade, integração com banco real, testes de tela no navegador e teste de carga. | passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 45.10 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
-| [Serviços aura- (10)](#shared) | Local · futuro | aura-copilot, aura-historico (Clojure/Datomic), aura-analytics (Python/FastAPI) e os demais. Só nascem quando um sistema precisar. | passo 50.4 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
-| [Next.js + Aura Design System](#front) | Local | Telas dos sistemas e, no futuro, dos sites próprios. | passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
-| [API ASP.NET Core](#api) | Local | Regras de negócio dos sistemas AM. | passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Testes: xUnit, Playwright, k6](#tests) | Local | Unidade, integração com banco real, testes de tela no navegador e teste de carga. | passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 45.10 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
+| [Módulos do AM Gestão](#shared) | Local · futuro | Caixa, Pedidos, Financeiro e Loja. Antes eram serviços aura- separados; agora um produto só (AM Gestão). | passo 51.4 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [Next.js + Aura Design System](#front) | Local | Telas dos sistemas e, no futuro, dos sites próprios. | passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [API TypeScript (Next/NestJS)](#api) | Local | Regras de negócio dos sistemas AM. | passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Keycloak / Entra ID](#auth) | Local | Login e permissões (OAuth2/OIDC). | passo 41.2 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [IA: RAG + pgvector](#ai) | Local · futuro | Busca e assistente dentro dos sistemas (AM Projeta, aura-copilot). | passo 49.1 · Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção |
-| [aura-licensing](#lic) | Local · futuro | Cobrança por módulo dos sistemas AM. | passo 50.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [IA: RAG + pgvector](#ai) | Local · futuro | Busca e assistente dentro do AM Gestão (pgvector + Ollama). | passo 50.1 · Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção |
+| [aura-licensing](#lic) | Local · futuro | Cobrança por módulo dos sistemas AM. | passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
 | [aura-status](#status) | Local | Seu painel de repos, backup e Dependabot. | passo 42.7 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
-| [AM Kaixara (PDV e cardápio)](#nkaix) | Remoto · futuro | PDV, comandas, ordem de serviço, estoque, ficha técnica e engenharia de cardápio. Roda primeiro na loja e nos restaurantes do grupo. | passo 46.12 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 50.2 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
-| [AM Rotara (entregas)](#nrot) | Remoto · futuro | Pedidos, roteirização com PostGIS, app do entregador, prova de entrega e repasse semanal. Base da AM Entregas e do AM Delivery. | passo 50.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente); passo 50.5 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
-| [App mobile (.NET MAUI)](#mobile) | Local · futuro | App dos sistemas AM no celular, em C# como o resto do Aura. Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack. | passo 54.6 · 2028 |
-| [AM Obra (diário, medição, compras)](#nobra) | Remoto · futuro | Sistema AM para pequenas construtoras: diário de obra, medição, compras e estimativa pelo SINAPI, lendo o IFC. | passo 61.12 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
+| [AM Kaixara (PDV e cardápio)](#nkaix) | Remoto · futuro | PDV, comandas, ordem de serviço, estoque, ficha técnica e engenharia de cardápio. Roda primeiro na loja e nos restaurantes do grupo. | passo 46.12 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 51.2 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [AM Rotara (entregas)](#nrot) | Remoto · futuro | Pedidos, roteirização com PostGIS, app do entregador, prova de entrega e repasse semanal. Base da AM Entregas e do AM Delivery. | passo 51.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente); passo 51.5 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [App mobile (React Native)](#mobile) | Local · futuro | App do AM Gestão no celular, em React Native (reusa TypeScript). Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack. | passo 55.6 · 2028 |
+| [AM Obra (diário, medição, compras)](#nobra) | Remoto · futuro | Sistema AM para pequenas construtoras: diário de obra, medição, compras e estimativa pelo SINAPI, lendo o IFC. | passo 62.12 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 | [Zod · Biome · Vitest (front)](#zod) | Local | Zod valida no front tudo o que chega da API e dos formulários; Biome faz lint e formatação; Vitest testa as regras do front. O contrato do backend é o OpenAPI (ADR 0006). | passo 41.9 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 45.8 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [SvelteKit (apps pequenos)](#sveltekit) | Local | Apps pequenos e interativos e o front dos MVPs em PocketBase (ADR 0007). Sistemas AM seguem em Next.js. | passo 45.7 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [PocketBase (MVP antes do Aura)](#pocketbase) | Local | Banco, login, arquivos e tempo real num binário: valida a ideia antes de construir no Aura. Modelo em infra/pocketbase. | passo 45.7 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [Litestream (SQLite no R2)](#litestream) | Local | Copia o SQLite do PocketBase para o R2 a cada segundo e restaura sozinho se a VM for recriada. | passo 45.10 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [React Email (modelos)](#reactemail) | Local | Modelos de e-mail em componentes, os mesmos para o Resend e o Plunk. | passo 33.12 · Com a primeira página de venda no ar (jan/2027) e por etapas |
-| [Go (CLIs com bubbletea)](#golang) | Local | CLIs do setup e produtos em binário único, com tela interativa (bubbletea) e release multiplataforma pelo GoReleaser. Modelo em infra/templates/go-cli. | passo 57.13 · Contínuo, desde a semana 2 |
-| [Rust (firmware e CLIs)](#rust) | Local | Firmware (ESP32-C3/C6, STM32 com Embassy) e ferramentas que pedem desempenho, com release pelo cargo-dist. Modelo em infra/templates/rust-cli. | passo 57.14 · Contínuo, desde a semana 2 |
+| [Go (CLIs com bubbletea)](#golang) | Local | CLIs do setup e produtos em binário único, com tela interativa (bubbletea) e release multiplataforma pelo GoReleaser. Modelo em infra/templates/go-cli. | passo 58.13 · Contínuo, desde a semana 2 |
+| [Rust (firmware e CLIs)](#rust) | Local | Firmware (ESP32-C3/C6, STM32 com Embassy) e ferramentas que pedem desempenho, com release pelo cargo-dist. Modelo em infra/templates/rust-cli. | passo 58.14 · Contínuo, desde a semana 2 |
 
 <a id="oapi"></a>
 
@@ -246,13 +246,13 @@ flowchart LR
 
 *Local*
 
-Documentação interativa da API. No .NET 9 em diante, o Swagger saiu do modelo padrão e o Scalar é a escolha comum.
+Documentação interativa da API (OpenAPI); o Scalar é a escolha comum.
 
 **Quando entra:** passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | documenta |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | documenta |
 | → envia para | [DBeaver · Bruno](03-win.md#dbv) | Windows 11, apps e máquinas virtuais | Bruno importa |
 | ← recebe de | [Zod · Biome · Vitest (front)](11-app.md#zod) | Aplicação: sistemas AM (Aura) | segue o contrato |
 
@@ -264,7 +264,7 @@ Documentação interativa da API. No .NET 9 em diante, o Swagger saiu do modelo 
 
 Mapas e geolocalização do AM Rotara. Lacuna já identificada nos cursos da Alura e da Rocketseat.
 
-**Quando entra:** passo 50.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 51.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -299,26 +299,26 @@ Domain, Application, Infrastructure e Api. O domínio não conhece banco nem web
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | organiza |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | organiza |
 
 <a id="ef"></a>
 
-### EF Core + Npgsql
+### Prisma/Drizzle + PostgreSQL
 
 *Local*
 
-ORM do .NET para PostgreSQL, com migrations versionadas.
+ORM do TypeScript (Prisma/Drizzle) para PostgreSQL, com migrations versionadas.
 
 **Quando entra:** passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | Npgsql |
-| ← recebe de | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | usa |
+| → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | driver pg |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | usa |
 
 <a id="sig"></a>
 
-### SignalR
+### Supabase Realtime
 
 *Local*
 
@@ -330,7 +330,7 @@ Tempo real: pedido mudou de status no AM Rotara, venda nova no AM Kaixara.
 |---|---|---|---|
 | → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | WebSocket |
 | → envia para | [Redis](09-cnt.md#redis) | Containers, Kubernetes e infra como código | backplane |
-| ← recebe de | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | emite |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | emite |
 
 <a id="rls"></a>
 
@@ -345,7 +345,7 @@ tenant_id + Row-Level Security: cada cliente só vê os próprios dados, garanti
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | políticas |
-| ← recebe de | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | define o tenant |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | define o tenant |
 
 <a id="tests"></a>
 
@@ -355,27 +355,27 @@ tenant_id + Row-Level Security: cada cliente só vê os próprios dados, garanti
 
 Unidade, integração com banco real, testes de tela no navegador e teste de carga.
 
-**Quando entra:** passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 45.10 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 45.10 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | testa |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | testa |
 | → envia para | [GitHub Actions](12-nuvem.md#gha) | Nuvem, código e entrega | roda no CI |
 
 <a id="shared"></a>
 
-### Serviços aura- (10)
+### Módulos do AM Gestão
 
 *Local · futuro*
 
-aura-copilot, aura-historico (Clojure/Datomic), aura-analytics (Python/FastAPI) e os demais. Só nascem quando um sistema precisar.
+Caixa, Pedidos, Financeiro e Loja. Antes eram serviços aura- separados; agora um produto só (AM Gestão).
 
-**Quando entra:** passo 50.4 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 51.4 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP |
-| ← recebe de | [Datomic local](09-cnt.md#datomic) | Containers, Kubernetes e infra como código | aura-historico |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP |
+| ← recebe de | [Histórico (append-only)](09-cnt.md#datomic) | Containers, Kubernetes e infra como código | histórico (Postgres) |
 
 <a id="front"></a>
 
@@ -385,14 +385,14 @@ aura-copilot, aura-historico (Clojure/Datomic), aura-analytics (Python/FastAPI) 
 
 Telas dos sistemas e, no futuro, dos sites próprios.
 
-**Quando entra:** passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Sentry (erros)](10-obs.md#sentry) | Observabilidade | erros |
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP + SignalR |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP + WebSocket |
 | ← recebe de | [Navegador + Claude in Chrome](03-win.md#nav) | Windows 11, apps e máquinas virtuais | localhost:3000 |
-| ← recebe de | [SignalR](11-app.md#sig) | Aplicação: sistemas AM (Aura) | WebSocket |
+| ← recebe de | [Supabase Realtime](11-app.md#sig) | Aplicação: sistemas AM (Aura) | WebSocket |
 | ← recebe de | [PostGIS + MapLibre](11-app.md#gis) | Aplicação: sistemas AM (Aura) | mapa |
 | ← recebe de | [Storybook](11-app.md#story) | Aplicação: sistemas AM (Aura) | componentes |
 | ← recebe de | [Conectores Canva + Figma](08-clc.md#ccan) | Claude: recursos, conectores e plugins | telas do Figma |
@@ -402,25 +402,25 @@ Telas dos sistemas e, no futuro, dos sites próprios.
 
 <a id="api"></a>
 
-### API ASP.NET Core
+### API TypeScript (Next/NestJS)
 
 *Local*
 
 Regras de negócio dos sistemas AM.
 
-**Quando entra:** passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; passo 46.17 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [EF Core + Npgsql](11-app.md#ef) | Aplicação: sistemas AM (Aura) | usa |
-| → envia para | [SignalR](11-app.md#sig) | Aplicação: sistemas AM (Aura) | emite |
+| → envia para | [Prisma/Drizzle + PostgreSQL](11-app.md#ef) | Aplicação: sistemas AM (Aura) | usa |
+| → envia para | [Supabase Realtime](11-app.md#sig) | Aplicação: sistemas AM (Aura) | emite |
 | → envia para | [Multi-tenant (RLS)](11-app.md#rls) | Aplicação: sistemas AM (Aura) | define o tenant |
 | → envia para | [Seq (logs)](10-obs.md#seq) | Observabilidade | logs |
 | → envia para | [Mailpit](09-cnt.md#mailp) | Containers, Kubernetes e infra como código | SMTP de teste |
 | → envia para | [Kafka](09-cnt.md#kafka) | Containers, Kubernetes e infra como código | eventos |
 | → envia para | [Sentry (erros)](10-obs.md#sentry) | Observabilidade | erros |
 | → envia para | [OpenTelemetry](10-obs.md#otel) | Observabilidade | telemetria |
-| → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | Npgsql |
+| → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | driver pg |
 | → envia para | [Redis](09-cnt.md#redis) | Containers, Kubernetes e infra como código | cache |
 | → envia para | [RabbitMQ](09-cnt.md#rmq) | Containers, Kubernetes e infra como código | eventos |
 | → envia para | [Keycloak / Entra ID](11-app.md#auth) | Aplicação: sistemas AM (Aura) | valida JWT |
@@ -429,17 +429,17 @@ Regras de negócio dos sistemas AM.
 | ← recebe de | [DBeaver · Bruno](03-win.md#dbv) | Windows 11, apps e máquinas virtuais | HTTP (Bruno) |
 | ← recebe de | [Clean Arch + DDD](11-app.md#clean) | Aplicação: sistemas AM (Aura) | organiza |
 | ← recebe de | [Testes: xUnit, Playwright, k6](11-app.md#tests) | Aplicação: sistemas AM (Aura) | testa |
-| ← recebe de | [Serviços aura- (10)](11-app.md#shared) | Aplicação: sistemas AM (Aura) | HTTP |
+| ← recebe de | [Módulos do AM Gestão](11-app.md#shared) | Aplicação: sistemas AM (Aura) | HTTP |
 | ← recebe de | [API de NFS-e (ex.: Focus NFe)](19-emp.md#nfapi) | Pessoa física: impostos e finanças | IEmissorFiscal |
 | ← recebe de | [E-mail transacional (Resend, SES…)](12-nuvem.md#tmail) | Nuvem, código e entrega | e-mails do sistema |
 | ← recebe de | [Armazenamento de arquivos (Blob/R2)](12-nuvem.md#blob) | Nuvem, código e entrega | arquivos |
 | ← recebe de | [OpenAPI + Scalar](11-app.md#oapi) | Aplicação: sistemas AM (Aura) | documenta |
 | ← recebe de | [Caddy (proxy + HTTPS)](09-cnt.md#caddy) | Containers, Kubernetes e infra como código | HTTPS |
 | ← recebe de | [Plugins: engineering + design](08-clc.md#peng) | Claude: recursos, conectores e plugins | revisão e arquitetura |
-| ← recebe de | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | HTTP + SignalR |
+| ← recebe de | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | HTTP + WebSocket |
 | ← recebe de | [aura-licensing](11-app.md#lic) | Aplicação: sistemas AM (Aura) | libera módulos |
-| ← recebe de | [.NET 10 · Node · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | compila e roda |
-| ← recebe de | [App mobile (.NET MAUI)](11-app.md#mobile) | Aplicação: sistemas AM (Aura) | HTTP + SignalR |
+| ← recebe de | [Node/TS · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | compila e roda |
+| ← recebe de | [App mobile (React Native)](11-app.md#mobile) | Aplicação: sistemas AM (Aura) | HTTP + WebSocket |
 | ← recebe de | [posting (API no terminal)](04-lin.md#posting) | Linux (Ubuntu no WSL2, Arch no 2º disco) | testa a API |
 | ← recebe de | [vegeta (carga em taxa fixa)](04-lin.md#vegeta) | Linux (Ubuntu no WSL2, Arch no 2º disco) | acha o teto |
 
@@ -456,7 +456,7 @@ Login e permissões (OAuth2/OIDC).
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | login |
-| ← recebe de | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | valida JWT |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | valida JWT |
 
 <a id="ai"></a>
 
@@ -464,16 +464,16 @@ Login e permissões (OAuth2/OIDC).
 
 *Local · futuro*
 
-Busca e assistente dentro dos sistemas (AM Projeta, aura-copilot).
+Busca e assistente dentro do AM Gestão (pgvector + Ollama).
 
-**Quando entra:** passo 49.1 · Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 50.1 · Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | pgvector |
 | → envia para | [Claude (assinatura e API)](08-clc.md#anth) | Claude: recursos, conectores e plugins | modelos |
 | → envia para | [Ollama](05-ia.md#oll) | Agentes de IA e sandbox | modelo local |
-| ← recebe de | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | usa |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | usa |
 
 <a id="lic"></a>
 
@@ -483,11 +483,11 @@ Busca e assistente dentro dos sistemas (AM Projeta, aura-copilot).
 
 Cobrança por módulo dos sistemas AM.
 
-**Quando entra:** passo 50.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | libera módulos |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | libera módulos |
 | ← recebe de | [Pix Automático + gateway (ex.: Asaas)](20-venda.md#pixa) | Plataformas de venda e recebimento | cobrança recorrente |
 | ← recebe de | [Sistemas AM (SaaS)](17-prod.md#saas) | Produtos (o que você vende) | cobrança por módulo |
 
@@ -516,7 +516,7 @@ Seu painel de repos, backup e Dependabot.
 
 PDV, comandas, ordem de serviço, estoque, ficha técnica e engenharia de cardápio. Roda primeiro na loja e nos restaurantes do grupo.
 
-**Quando entra:** passo 46.12 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 50.2 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 46.12 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 51.2 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -540,7 +540,7 @@ PDV, comandas, ordem de serviço, estoque, ficha técnica e engenharia de cardá
 
 Pedidos, roteirização com PostGIS, app do entregador, prova de entrega e repasse semanal. Base da AM Entregas e do AM Delivery.
 
-**Quando entra:** passo 50.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente); passo 50.5 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 51.3 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente); passo 51.5 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -552,17 +552,17 @@ Pedidos, roteirização com PostGIS, app do entregador, prova de entrega e repas
 
 <a id="mobile"></a>
 
-### App mobile (.NET MAUI)
+### App mobile (React Native)
 
 *Local · futuro*
 
-App dos sistemas AM no celular, em C# como o resto do Aura. Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack.
+App do AM Gestão no celular, em React Native (reusa TypeScript). Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack.
 
-**Quando entra:** passo 54.6 · 2028 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 55.6 · 2028 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP + SignalR |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP + WebSocket |
 
 <a id="nobra"></a>
 
@@ -572,7 +572,7 @@ App dos sistemas AM no celular, em C# como o resto do Aura. Entra em 2028; Kotli
 
 Sistema AM para pequenas construtoras: diário de obra, medição, compras e estimativa pelo SINAPI, lendo o IFC.
 
-**Quando entra:** passo 61.12 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 62.12 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -661,7 +661,7 @@ Modelos de e-mail em componentes, os mesmos para o Resend e o Plunk.
 
 CLIs do setup e produtos em binário único, com tela interativa (bubbletea) e release multiplataforma pelo GoReleaser. Modelo em infra/templates/go-cli.
 
-**Quando entra:** passo 57.13 · Contínuo, desde a semana 2 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 58.13 · Contínuo, desde a semana 2 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -675,7 +675,7 @@ CLIs do setup e produtos em binário único, com tela interativa (bubbletea) e r
 
 Firmware (ESP32-C3/C6, STM32 com Embassy) e ferramentas que pedem desempenho, com release pelo cargo-dist. Modelo em infra/templates/rust-cli.
 
-**Quando entra:** passo 57.14 · Contínuo, desde a semana 2 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 58.14 · Contínuo, desde a semana 2 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

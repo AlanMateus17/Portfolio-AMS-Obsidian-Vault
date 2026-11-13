@@ -2,7 +2,7 @@
 
 [← Operação do grupo](README.md)
 
-O catálogo tem 108 ofertas, cada uma com veredito no [arsenal de rendas](portfolio.md#arsenal-o-que-entra-agora-e-o-que-não-dá). Fazer todas ao mesmo tempo garante que nenhuma fique boa. Esta página decide o que entra agora, o que espera e por quê, dentro das horas que você realmente tem e da sua aposta dos próximos 12 meses: **vaga de dev + renda própria**.
+O catálogo tem 109 ofertas, cada uma com veredito no [arsenal de rendas](portfolio.md#arsenal-o-que-entra-agora-e-o-que-não-dá). Fazer todas ao mesmo tempo garante que nenhuma fique boa. Esta página decide o que entra agora, o que espera e por quê, dentro das horas que você realmente tem e da sua aposta dos próximos 12 meses: **vaga de dev + renda própria**.
 
 ## As regras
 

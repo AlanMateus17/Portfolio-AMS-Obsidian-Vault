@@ -1,5 +1,7 @@
 # CONTINUAR: contexto completo para qualquer conversa nova
 
+> Instalação no notebook feita por outra conta ou conversa: use [docs/implantacao/INSTALACAO-AUTONOMA.md](docs/implantacao/INSTALACAO-AUTONOMA.md).
+
 Cole este arquivo na primeira mensagem de uma conversa nova (ou rode `python3 ~/dev/dev-setup/tools/sessao/contexto.py --inicio | clip.exe`). Decisões do dia a dia vão para o ESTADO.md; este arquivo muda quando algo grande muda. Última revisão: 06/11/2026 (v2.16). Escola Akita: `just akita pendentes`. Para saber o que é seu: `just agora` e `just decisoes software`.
 
 ## 1. Quem sou e como trabalhar comigo
@@ -19,7 +21,7 @@ Cole este arquivo na primeira mensagem de uma conversa nova (ou rode `python3 ~/
 ## 2. Onde está tudo
 - Repositório privado: github.com/AlanMateus17/dev-setup (branch main, CI verde). No PC: ~/dev/dev-setup (Ubuntu/WSL) e C:\Users\alanmateus\dev-setup (Windows).
 - Regra do repositório: data/*.json → geradores → docs/. Nunca editar arquivo gerado. Toda mudança: dados ou ferramenta, geradores, testes, CHANGELOG, commit, push, CI verde.
-- Números agora: 58 fases, 533 passos, 483 blocos, 108 rendas, 71 softwares, 27 metodologias de investimento. O CI recusa passo sem comando ou motivo, bloco fora do roteiro e renda sem passo.
+- Números agora: 63 fases, 574 passos, 486 blocos, 109 rendas, 71 softwares, 27 metodologias de investimento. O CI recusa passo sem comando ou motivo, bloco fora do roteiro e renda sem passo.
 - Artefatos: Painel do Núcleo (constelação do setup, o que já roda sozinho, principal e reserva, o que falta) https://claude.ai/artifact/Frwo8DGEdifkeVcCKdtTAo · Acompanhamento (progresso marcado) https://claude.ai/artifact/CJ27fg9sycvhqZ2s9GSbjd · Portfólio de rendas https://claude.ai/artifact/Mbj1yj6LRmUnf3SJLrTfaB · Mapa https://claude.ai/artifact/BTUyCQfojw6cngvR5W5oAB · Ecossistema https://claude.ai/artifact/4Ze2J4Y1oKgAkjuQmbAAG1 · Plano de automação (documento) https://claude.ai/artifact/XCzSQNb28yFgPCymRV9wrL · Posts do setup (design) https://claude.ai/artifact/V8826RzNePgWKuy6GuYPvd
 - Guias no repositório: docs/implantacao/roteiro.md (passo a passo), docs/operacao/portfolio.md (rendas e automações), docs/operacao/softwares.md, docs/operacao/kit-sites.md, docs/custos.md (o que pagar, rotas de IA), docs/recursos.md (a melhor ferramenta para cada tarefa: primária, reserva e portão), docs/investimentos.md (as 27 metodologias nas 4 classes do ARCA), docs/certificacoes.md (o que cada certificação habilita e a ordem), docs/seguranca/README.md (engenharia reversa, AppSec e empresa de pentest), docs/jarvis/README.md (voz, casa, câmeras, energia, água, robótica e PC por comando de voz), docs/ia/hugging-face.md (modelos do Hub que cabem na GTX 1650 e as compras em ordem), docs/construcao/README.md (construção civil, arquitetura e engenharia pela TI), docs/operacao/24-horas.md, docs/operacao/sessoes-curtas.md, docs/ia/README.md, docs/rede/README.md.
 
@@ -27,7 +29,8 @@ Cole este arquivo na primeira mensagem de uma conversa nova (ou rode `python3 ~/
 Fases 0, 3, 4 e 5 completas: diagnóstico, Windows (winget, BitLocker, Defender, extensões do VS Code), Ubuntu no WSL com Docker, gh e SSH, repositório no GitHub com CI. Também: backup inicial, Windows Update, 2FA do GitHub, KeePassXC instalado com os cofres copiados para o pendrive D:\Cofre. Falta: senhas (2.2 a 2.4), mesa (1.2), e todas as fases a partir da 6.
 
 ## 4. Decisões principais
-- Arsenal de 108 rendas, cada uma com veredito (agora, próxima, fila, 2027, decidir, descartar), % automático e motivo.
+- AMtech OS (v2.29, nov/2026, ADR 0016 em proposta): o setup vira sistema operacional, uma camada sobre o Ubuntu LTS (os/instalar.sh, perfis dev/escola/empresa/seguranca/criador, comando amtech). Teste numa VM primeiro (os/README.md); depois o 2º NVMe, com o Windows intocado; Arch + Omarchy vai para VM e pendrive. Oferta amtechos na fila, derivada do setuppro.
+- Arsenal de 109 rendas, cada uma com veredito (agora, próxima, fila, 2027, decidir, descartar), % automático e motivo.
 - AGORA (máximo 3): Mini-curso Lógica de Programação, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier).
 - PRÓXIMAS, em ordem: 1. AM Mentor: banco de exercícios com correção; 2. Aulas particulares; 3. Notebooks e PCs: comprar, consertar e revender; 4. Fábrica de documentos para professores de MG (assinatura); 5. Setup profissional (curso, template e configuração remota); 6. Plano de negócios e viabilidade financeira para quem vai abrir empresa; 7. Verificador e formatador ABNT automático (TCC, artigos, relatórios).
 - Regras: hora mínima R$ 45 por hora minha (a confirmar), teto de 7 h extras por semana (quinta 13h–16h30 negócio, sábado 9h30–12h30 produção), portão = 3 meses se pagando, corte = abaixo da hora mínima por 2 meses. Domingo, sono e cães são intocáveis.
@@ -50,6 +53,8 @@ Fases 0, 3, 4 e 5 completas: diagnóstico, Windows (winget, BitLocker, Defender,
 - Jarvis (v2.4): Home Assistant Assist com voz local (Whisper na GPU do notebook, Piper pt_BR, "hey jarvis") e o Claude como agente de conversa; Claude Code por voz no PC (/voice + falar.py). Casa num servidor próprio sempre ligado (ADR 0004), Zigbee e MQTT, Frigate local, leitor do hidrômetro, robôs pelo ESPHome e ROS 2. Política: destrancar, abrir janela/porta/portão e desligar geladeira só com toque no celular (geladeira religa sozinha); desarmar alarme, desligar câmera e apagar gravação proibidos por voz; no máximo 25 entidades expostas.
 - Núcleo AMtech (v2.13, nov/2026, ADR 0009): o setup vira um sistema conectado e autônomo sem reescrever as ferramentas. Banco central (tools/nucleo: eventos, conhecimento, tarefas, auditoria; SQLite no notebook, PostgreSQL na VM) que a triagem e o arquiteto já leem e gravam. Tokens mínimos cifrados com sops/age na VM (exceção aceita), teto de IA dos agentes US$ 20/mês, garimpo adiantado para a fase 2. Objetivo: máximo de renda com menos horas e a base das empresas do grupo; o núcleo também é o produto de automação da empresa de TI.
 - Empresa solo (v2.12, nov/2026): todas as ferramentas do contexto mestre estão no setup, cada função com principal e reserva (ADR 0008; docs/empresa-solo.md). Nenhuma linguagem é proibida (ADR 0007): Aura em .NET 10 + Next.js, Astro para sites, SvelteKit + PocketBase para MVP, Go para CLIs, Rust para firmware. Trocas: mise no lugar do fnm, Zellij no lugar do tmux, chezmoi nos dotfiles, GlitchTip e SigNoz na observabilidade, Astro nos sites, HeyForm e Formbricks no comercial, Beancount e Portfolio Performance nas finanças. Kamal em VM (ADR 0005); segredo só no KeePassXC (age e sops só para arquivo que sai da máquina); um repositório por sistema com apps/ e packages/; o que é pago liga quando uma renda pagar. Sprint de 14 dias no recesso de jan/2027.
+
+- Motor de decisão (v2.26, 11/11/2026, ADR 0014 aceita): a IA propõe, o código decide e verifica. Escada de 5 degraus (pronto → código → automação → IA local/online → eu), porta única LiteLLM com teto, cache e registro, regra de três (tarefa aprovada 3 vezes vira script), formulário de pedido e as 10 regras do perfil sênior, "100% controlado" em vez de "100% recriado", segurança no CI. Tudo em docs/ia/motor/. Versão 0.1 = escada + catálogo + registro. Nada fica congelado nem pausado (11/11, ADR 0015, revê o item 5 do ADR 0011): os temas fora do eixo estão ativos; o motor entra agora; a execução segue o roteiro e o limite de 3 frentes "agora".
 
 ## 5. Ferramentas prontas no repositório (comandos no Ubuntu)
 - Montar tudo: just instalar (scripts/wsl/instalar-tudo.sh). Base do núcleo: just lembrar "..." TIPO, just buscar "...", just tarefas. Backup: just backup (agendado às 22h30).
@@ -127,7 +132,7 @@ Fases 0, 3, 4 e 5 completas: diagnóstico, Windows (winget, BitLocker, Defender,
 | 41 | Base dos sistemas AM | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP | 9 |
 | 42 | Nuvem e deploy | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) | 8 |
 | 43 | Editora | Quando o capítulo 1 estiver pronto | 11 |
-| 44 | Dados, IA e pendrives | Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) | 12 |
+| 44 | Dados, IA e pendrives | Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) | 12 |
 | 45 | Sprint de 14 dias (Estratégia do Halter) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) | 10 |
 | 46 | Mais ofertas, uma por vez | Fev a dez/2027, uma oferta por vez | 23 |
 | 47 | Marketing pago e crescimento | A partir de fev/2027 | 11 |

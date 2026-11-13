@@ -808,7 +808,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Documentação interativa da API. No .NET 9 em diante, o Swagger saiu do modelo padrão e o Scalar é a escolha comum."
+   "descricao": "Documentação interativa da API (OpenAPI); o Scalar é a escolha comum."
   },
   {
    "id": "gis",
@@ -840,16 +840,16 @@
   {
    "id": "ef",
    "camada": "app",
-   "rotulo": "EF Core + Npgsql",
+   "rotulo": "Prisma/Drizzle|+ PostgreSQL",
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "ORM do .NET para PostgreSQL, com migrations versionadas."
+   "descricao": "ORM do TypeScript (Prisma/Drizzle) para PostgreSQL, com migrations versionadas."
   },
   {
    "id": "sig",
    "camada": "app",
-   "rotulo": "SignalR",
+   "rotulo": "Supabase Realtime",
    "tipo": "local",
    "conta": false,
    "futuro": false,
@@ -876,11 +876,11 @@
   {
    "id": "shared",
    "camada": "app",
-   "rotulo": "Serviços aura- (10)",
+   "rotulo": "Módulos do AM Gestão",
    "tipo": "local",
    "conta": false,
    "futuro": true,
-   "descricao": "aura-copilot, aura-historico (Clojure/Datomic), aura-analytics (Python/FastAPI) e os demais. Só nascem quando um sistema precisar."
+   "descricao": "Caixa, Pedidos, Financeiro e Loja. Antes eram serviços aura- separados; agora um produto só (AM Gestão)."
   },
   {
    "id": "front",
@@ -894,7 +894,7 @@
   {
    "id": "api",
    "camada": "app",
-   "rotulo": "API ASP.NET Core",
+   "rotulo": "API TypeScript|(Next/NestJS)",
    "tipo": "local",
    "conta": false,
    "futuro": false,
@@ -916,7 +916,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": true,
-   "descricao": "Busca e assistente dentro dos sistemas (AM Projeta, aura-copilot)."
+   "descricao": "Busca e assistente dentro do AM Gestão (pgvector + Ollama)."
   },
   {
    "id": "lic",
@@ -1002,7 +1002,7 @@
   {
    "id": "aspire",
    "camada": "obs",
-   "rotulo": ".NET Aspire",
+   "rotulo": "Docker Compose (dev)",
    "tipo": "local",
    "conta": false,
    "futuro": false,
@@ -1056,11 +1056,11 @@
   {
    "id": "datomic",
    "camada": "cnt",
-   "rotulo": "Datomic local",
+   "rotulo": "Histórico|(append-only)",
    "tipo": "local",
    "conta": false,
    "futuro": true,
-   "descricao": "Só quando o aura-historico existir (desvio intencional da stack)."
+   "descricao": "Cortado: aura-historico foi arquivado; histórico vira tabela append-only no PostgreSQL."
   },
   {
    "id": "docker",
@@ -1087,7 +1087,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Cache e backplane do SignalR."
+   "descricao": "Cache (opcional, quando precisar de verdade)."
   },
   {
    "id": "rmq",
@@ -1591,7 +1591,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Revisor C#, /commit, /novo-sistema-aura e os demais que você vai criar."
+   "descricao": "Revisor de código, /commit, /novo-sistema e os demais que você vai criar."
   },
   {
    "id": "oll",
@@ -1641,7 +1641,7 @@
   {
    "id": "rt",
    "camada": "lin",
-   "rotulo": ".NET 10 · Node ·|Python",
+   "rotulo": "Node/TS ·|Python",
    "tipo": "local",
    "conta": false,
    "futuro": false,
@@ -1682,6 +1682,15 @@
    "conta": false,
    "futuro": true,
    "descricao": "Linux nativo com boot próprio, sem tocar no Windows. Antes dele, o Arch portátil em pendrive ou SSD USB."
+  },
+  {
+   "id": "amtechos",
+   "camada": "lin",
+   "rotulo": "AMtech OS|(Ubuntu + setup)",
+   "tipo": "local",
+   "conta": false,
+   "futuro": true,
+   "descricao": "O dev-setup como sistema operacional (ADR 0016): os/instalar.sh transforma um Ubuntu LTS no AMtech OS, com perfis, tema, firewall, snapshots e o comando amtech. VM primeiro; depois o 2º NVMe, com o Windows intocado."
   },
   {
    "id": "tail",
@@ -2874,11 +2883,11 @@
   {
    "id": "mobile",
    "camada": "app",
-   "rotulo": "App mobile|(.NET MAUI)",
+   "rotulo": "App mobile|(React Native)",
    "tipo": "local",
    "conta": false,
    "futuro": true,
-   "descricao": "App dos sistemas AM no celular, em C# como o resto do Aura. Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack."
+   "descricao": "App do AM Gestão no celular, em React Native (reusa TypeScript). Entra em 2028; Kotlin, Swift e Flutter ficam fora para não abrir outra stack."
   },
   {
    "id": "nobra",
@@ -4937,7 +4946,7 @@
   {
    "de": "ef",
    "para": "pg",
-   "rotulo": "Npgsql"
+   "rotulo": "driver pg"
   },
   {
    "de": "api",
@@ -5027,7 +5036,7 @@
   {
    "de": "datomic",
    "para": "shared",
-   "rotulo": "aura-historico"
+   "rotulo": "histórico (Postgres)"
   },
   {
    "de": "nvim",
@@ -5482,12 +5491,12 @@
   {
    "de": "front",
    "para": "api",
-   "rotulo": "HTTP + SignalR"
+   "rotulo": "HTTP + WebSocket"
   },
   {
    "de": "api",
    "para": "pg",
-   "rotulo": "Npgsql"
+   "rotulo": "driver pg"
   },
   {
    "de": "api",
@@ -7512,7 +7521,7 @@
   {
    "de": "mobile",
    "para": "api",
-   "rotulo": "HTTP + SignalR"
+   "rotulo": "HTTP + WebSocket"
   },
   {
    "de": "nb",
@@ -8783,6 +8792,21 @@
    "de": "cc",
    "para": "professor",
    "rotulo": "escreve a aula e corrige a prova"
+  },
+  {
+   "de": "chezmoi",
+   "para": "amtechos",
+   "rotulo": "configura o usuário"
+  },
+  {
+   "de": "amtechos",
+   "para": "nvme",
+   "rotulo": "instalado no"
+  },
+  {
+   "de": "amtechos",
+   "para": "wsl",
+   "rotulo": "substitui no dia a dia"
   }
  ],
  "fluxos": [
@@ -8892,7 +8916,7 @@
     },
     {
      "bloco": "api",
-     "descricao": "A API ASP.NET Core de um sistema AM."
+     "descricao": "A API TypeScript de um sistema AM."
     },
     {
      "bloco": "tests",

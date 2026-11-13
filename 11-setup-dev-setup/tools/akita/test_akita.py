@@ -87,5 +87,18 @@ class TestAkita(unittest.TestCase):
         self.assertTrue(all("_texto" not in p and "description" not in p for p in indice), "texto do Akita não entra no repositório")
 
 
+class TestTrilha(unittest.TestCase):
+    def test_ordem_de_estudo(self):
+        posts = [{"slug": "akitando-2-b", "titulo": "[Akitando] #2 - B", "url": "u2", "data": "2018-01-02", "categoria": "akitando"},
+                 {"slug": "akitando-10-c", "titulo": "Outro título", "url": "u10", "data": "2019-01-01", "categoria": "akitando"},
+                 {"slug": "x", "titulo": "Post X", "url": "ux", "data": "2025-01-01", "categoria": "ia-e-dev-atual"}]
+        cur = {"modulos": [{"id": "m1", "titulo": "Módulo", "akita_posts": ["x", "akitando-10-c", "nao-existe"]}]}
+        md = akita.trilha_md(posts, cur, {"notas": {"x": {}}, "regras": []})
+        self.assertIn("- [x] [Post X](ux)", md)
+        self.assertLess(md.index("#2 · [B]"), md.index("#10 ★"))
+        self.assertIn("#1, #3", md)
+        self.assertNotIn("nao-existe", md)
+
+
 if __name__ == "__main__":
     unittest.main()

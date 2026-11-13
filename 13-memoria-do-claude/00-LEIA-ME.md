@@ -6,6 +6,8 @@ atualizado: 2026-10-27
 
 # 🧠 O que o Claude guardou sobre você e seus planos
 
+> **⚠️ Snapshot de 27/10/2026 — parcialmente desatualizado.** Depois dele (13/11) veio a consolidação: stack nova (TypeScript + Python + SQL; .NET como reserva), 23 sistemas → **um produto único (AM Gestão)**, mandarim cortado. Onde estas notas citarem a stack antiga ou o "império Aura", a fonte da verdade é o [[PLANO-UNICO-AMtech]] e o [[stack-tecnologica]]. Esta pasta é um retrato histórico, não o plano atual.
+
 > **Em palavras simples:** ao longo das conversas, o Claude anota fatos que você contou (projetos, decisões, metas, rotina, finanças) para lembrar nas próximas. Esta pasta é uma cópia dessas anotações, tirada em 27/10/2026, para que nenhuma decisão sua fique só dentro do Claude.
 
 - Cada linha marcada `[stated]` é algo que **você disse**, com a data da decisão quando você deu uma.

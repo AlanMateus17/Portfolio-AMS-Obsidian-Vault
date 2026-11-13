@@ -1,0 +1,54 @@
+{
+  "descricao": "Regras da escada do motor de decisão (ADR 0014). Determinísticas: palavras do pedido decidem o degrau. A IA só entra no degrau 4.",
+  "degraus": {
+    "1": {"nome": "Já existe pronto", "quem": "Reutilizar o que está no setup ou numa rota de data/recursos.json"},
+    "2": {"nome": "A regra cabe em código", "quem": "Script ou algoritmo, sempre com teste (Claude Code escreve, o CI confere)"},
+    "3": {"nome": "Dispara por evento ou horário", "quem": "Automação: n8n, cron ou GitHub Actions"},
+    "4": {"nome": "Precisa entender linguagem", "quem": "IA: local primeiro; assinatura online se falhar; API paga só com renda"},
+    "5": {"nome": "Julgamento ou mundo real", "quem": "Você (o setup prepara, você decide, aprova ou testa)"}
+  },
+  "palavras": {
+    "voce": ["aprovar", "aprova", "publicar", "publica", "pagar", "paga", "comprar", "contratar", "assinar", "decidir", "escolher", "vender", "ligar para", "enviar ao cliente", "mandar ao cliente", "testar no notebook", "testar em sala", "conversar com"],
+    "codigo": ["calcular", "calcula", "converter", "converte", "validar", "valida", "verificar", "conferir", "contar", "somar", "renomear", "organizar arquivos", "formatar", "extrair do csv", "extrair da planilha", "rateio", "imposto", "backup", "gerar pdf", "exportar", "importar", "comparar arquivos", "deduplicar", "ordenar", "checar"],
+    "automacao": ["todo dia", "toda semana", "todo mes", "todo mês", "diariamente", "semanalmente", "sempre que", "quando chegar", "ao receber", "agendar", "agendado", "webhook", "automaticamente", "lembrete", "lembrar de", "monitorar", "vigiar"],
+    "linguagem": ["escrever", "escreva", "redigir", "texto", "resumir", "resuma", "explicar", "explique", "ideia", "ideias", "post", "aula", "aulas", "roteiro", "e-mail", "email", "mensagem", "traduzir", "revisar", "planejar", "planeje", "analisar", "analise", "atividade", "questoes", "questões", "proposta", "artigo", "codigo", "código", "programar", "implementar", "arquitetura", "sistema"]
+  },
+  "modelos": {
+    "local": {"quando": ["resumir", "resuma", "classificar", "extrair", "traduzir", "formatar", "rascunho"], "destino": "Ollama (modelo local do catálogo)"},
+    "forte": {"quando": ["arquitetura", "migracao", "migração", "sistema operacional", "amtech os", "refatorar tudo", "planejamento complexo"], "destino": "Claude Code com Fable 5.2 só para o plano; Sonnet executa"},
+    "codigo": {"quando": ["codigo", "código", "programar", "implementar", "script", "bug", "teste", "repositorio", "repositório"], "destino": "Claude Code (Sonnet)"},
+    "padrao": {"destino": "Claude (chat), Sonnet com esforço médio"}
+  },
+  "sensivel": {
+    "palavras": ["senha", "contracheque", "holerite", "extrato", "irpf", "cpf", "cartao", "cartão", "aluno", "alunos", "nota do aluno", "chave pix", "bitlocker"],
+    "padroes": {
+      "cpf": "\\b\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}\\b",
+      "cnpj": "\\b\\d{2}\\.?\\d{3}\\.?\\d{3}/?\\d{4}-?\\d{2}\\b",
+      "email": "[\\w.+-]+@[\\w-]+\\.[\\w.]+",
+      "telefone": "\\(?\\b\\d{2}\\)?\\s?9?\\d{4}-?\\d{4}\\b",
+      "cartao": "\\b(?:\\d[ -]?){13,16}\\b"
+    },
+    "regra": "Dado sensível: só IA local ou código. Nunca IA online nem API."
+  },
+  "entregaveis": {
+    "aula": {"entregavel": "Doc + PDF no ensino-ti, na pasta da matéria", "pronto": "Alinhada à ementa e à apostila; o aluno resolve só com o quadro"},
+    "codigo": {"entregavel": "PR com testes no repositório certo", "pronto": "Testes e CI passando"},
+    "site": {"entregavel": "Site pela esteira (issue → PR → prévia)", "pronto": "Prévia aprovada por você e Lighthouse acima do mínimo"},
+    "financas": {"entregavel": "Cálculo em código testado, fora do GitHub se for dado pessoal", "pronto": "Conta conferida contra a fonte do dado"},
+    "negocio": {"entregavel": "Doc com a oferta, o preço e a métrica", "pronto": "Validado com pelo menos um cliente real"},
+    "padrao": {"entregavel": "Resposta no chat ou Doc, conforme o tamanho", "pronto": "Você consegue usar sem pedir de novo"}
+  },
+  "tipos": {
+    "aula": ["aula", "aulas", "atividade", "questoes", "questões", "prova", "apostila", "ementa", "aluno", "alunos", "turma"],
+    "codigo": ["codigo", "código", "script", "programar", "implementar", "bug", "teste", "repositorio", "repositório", "api", "sistema"],
+    "site": ["site", "landing", "pagina", "página", "loja"],
+    "financas": ["financas", "finanças", "imposto", "investimento", "carteira", "rateio", "caixa da casa", "rendara", "orcamento", "orçamento"],
+    "negocio": ["cliente", "clientes", "oferta", "preco", "preço", "vender", "venda", "negocio", "negócio", "proposta"]
+  },
+  "restricoes": [
+    "Hora mínima R$ 45; teto de 7 h extras por semana.",
+    "No máximo 3 frentes \"agora\" na execução; nada fica congelado (ADR 0015).",
+    "Segredos só no KeePassXC; nada de dado de aluno em IA.",
+    "Nada publicado, pago ou enviado em seu nome sem aprovação."
+  ]
+}

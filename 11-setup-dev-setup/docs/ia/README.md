@@ -22,6 +22,8 @@
 
 **Economia de tokens:** produzir mais gastando menos no Claude, com o exemplo da planta baixa, em [tokens.md](tokens.md).
 
+**Motor de decisão (nov/2026):** a escada que decide entre ferramenta pronta, código, automação, IA local, IA online ou você, com regra de três, qualidade, segurança e nuvem barata, em [motor/](motor/README.md) ([ADR 0014](../adr/0014-motor-de-decisao-e-custo-minimo.md)).
+
 ## Quanto cabe na sua máquina
 
 ```bash

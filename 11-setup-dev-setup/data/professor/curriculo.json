@@ -304,7 +304,7 @@
    "assistir": [
     {
      "plataforma": "Alura",
-     "titulo": "Testes em .NET: integre seus testes nos pipelines de CI/CD"
+     "titulo": "CI/CD: integre seus testes (Vitest/pytest) nos pipelines"
     }
    ],
    "akita": [
@@ -355,16 +355,16 @@
    "id": "o-csharp",
    "trilha": "oficio",
    "trimestre": 1,
-   "titulo": "C# do zero ao confortável: tipos, coleções, LINQ, classes e exceções",
+   "titulo": "TypeScript do zero ao confortável: tipos, arrays/map, funções de ordem superior, classes e erros",
    "objetivos": [
-    "Resolver os 3 exercícios de lógica do plano em C# sem IA",
-    "Usar List, Dictionary e LINQ com segurança",
-    "Explicar valor x referência e null"
+    "Resolver os 3 exercícios de lógica do plano em TypeScript sem IA",
+    "Usar Array, Map e métodos (map/filter/reduce) com segurança",
+    "Explicar tipos, null/undefined e narrowing"
    ],
    "prereq": [],
-   "pratica": "Escrever em C# o rebalanceamento ARCA simplificado com testes xUnit.",
+   "pratica": "Escrever em TypeScript o rebalanceamento ARCA simplificado com testes Vitest.",
    "fontes": [
-    "https://learn.microsoft.com/pt-br/dotnet/csharp/"
+    "https://www.typescriptlang.org/docs/handbook/intro.html"
    ],
    "blocos": [
     "rt"
@@ -374,23 +374,23 @@
    "assistir": [
     {
      "plataforma": "Alura",
-     "titulo": "C#: criando sua primeira aplicação"
+     "titulo": "TypeScript: evoluindo seu JavaScript"
     },
     {
      "plataforma": "Alura",
-     "titulo": "C#: aplicando a Orientação a Objetos"
+     "titulo": "JavaScript: programação orientada a objetos"
     },
     {
      "plataforma": "Alura",
-     "titulo": "C#: Trabalhando com Arrays e Coleções"
+     "titulo": "JavaScript: trabalhando com arrays e coleções"
     },
     {
      "plataforma": "Alura",
-     "titulo": "C# LINQ: explorando ferramentas de consulta"
+     "titulo": "TypeScript: tipagem avançada e generics"
     },
     {
      "plataforma": "Alura",
-     "titulo": "C# e Exceções: construa aplicações resilientes"
+     "titulo": "JavaScript: tratando erros e exceções"
     }
    ],
    "akita": [
@@ -406,19 +406,20 @@
    "id": "o-dotnet",
    "trilha": "oficio",
    "trimestre": 1,
-   "titulo": "Projeto .NET de verdade: solução, projetos, testes e configuração",
+   "titulo": "Projeto TypeScript de verdade: API (Next/NestJS), ORM, testes e configuração",
    "objetivos": [
-    "Criar solução com API, domínio e testes pelo dotnet CLI",
-    "Explicar injeção de dependência e appsettings",
-    "Rodar testes e ler a cobertura"
+    "Criar projeto com API, domínio e testes (Next.js ou NestJS)",
+    "Explicar injeção de dependência e variáveis de ambiente",
+    "Rodar testes (Vitest) e ler a cobertura"
    ],
    "prereq": [
     "o-csharp",
     "s-git"
    ],
-   "pratica": "Montar a solução do AM Rendara (só o esqueleto) com um teste passando no CI.",
+   "pratica": "Montar o esqueleto do módulo Financeiro do AM Gestão com um teste passando no CI.",
    "fontes": [
-    "https://learn.microsoft.com/pt-br/dotnet/core/"
+    "https://nextjs.org/learn",
+    "https://www.prisma.io/docs"
    ],
    "blocos": [
     "rt",
@@ -429,15 +430,15 @@
    "assistir": [
     {
      "plataforma": "Alura",
-     "titulo": ".NET: criando uma API Web com ASP.NET Core"
+     "titulo": "Node.js: criando uma API REST"
     },
     {
      "plataforma": "Alura",
-     "titulo": ".NET: persistindo dados com Entity Framework Core"
+     "titulo": "Prisma ORM: persistindo dados no PostgreSQL"
     },
     {
      "plataforma": "Alura",
-     "titulo": "Testes em .NET: criando testes de unidade com xUnit"
+     "titulo": "Testes com Vitest: testes de unidade em TypeScript"
     }
    ],
    "akita": [
@@ -649,10 +650,10 @@
    "objetivos": [
     "Ler em voz alta qualquer frase com ∀, ∃, ⇒, ⇔, ∈ e explicar o sentido",
     "Montar a tabela-verdade de proposições compostas",
-    "Traduzir uma condição de negócio para lógica e para um if em C#"
+    "Traduzir uma condição de negócio para lógica e para um if em TypeScript"
    ],
    "prereq": [],
-   "pratica": "Escrever a regra de liberação de venda do AM Kaixara como proposição, tabela-verdade e if em C#.",
+   "pratica": "Escrever a regra de liberação de venda do AM Gestão (Caixa) como proposição, tabela-verdade e if em TypeScript.",
    "fontes": [
     "https://lins-victor.github.io/pdfs/fmf.pdf"
    ],
@@ -676,7 +677,7 @@
    "objetivos": [
     "Fazer união, interseção, diferença e complementar com diagramas",
     "Explicar produto cartesiano e relação",
-    "Mostrar a mesma operação em HashSet do C# e num JOIN do SQL"
+    "Mostrar a mesma operação com Set/Map do TypeScript e num JOIN do SQL"
    ],
    "prereq": [
     "mat-linguagem"
@@ -711,7 +712,7 @@
    "prereq": [
     "mat-linguagem"
    ],
-   "pratica": "Calcular quanto custa parcelar o notebook no cartão contra pagar à vista com desconto, no papel e numa função C# testada.",
+   "pratica": "Calcular quanto custa parcelar o notebook no cartão contra pagar à vista com desconto, no papel e numa função TypeScript testada.",
    "fontes": [
     "https://www.bcb.gov.br/cidadaniafinanceira"
    ],

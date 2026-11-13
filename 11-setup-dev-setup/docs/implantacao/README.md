@@ -33,7 +33,7 @@ As datas são uma proposta para caber em umas 5 horas por semana; os gatilhos n�
 
 Antes de instalar qualquer coisa, `scripts/windows/diagnostico.ps1` lê o notebook (somente leitura): modelo, processador, memória e slots livres, placa de vídeo, discos e saúde, espaço livre, bateria, monitores, Secure Boot, TPM, criptografia, Defender, os programas do setup que já estão instalados e os que faltam, WSL, Docker, modelos do Ollama e extensões do VS Code. O relatório `diagnostico.md` diz em que passo do roteiro cada pendência se resolve. Junto com a lista das contas que você já tem e a contagem dos seus documentos, é dele que o resto do roteiro parte.
 
-Para rodar: extraia o `dev-setup.zip` (botão direito > Extrair tudo), entre na pasta que tem `RODAR-DIAGNOSTICO.cmd` e a pasta `scripts` (o Windows costuma criar `dev-setup\dev-setup`; a certa é a de dentro, e ela fica em `C:\Users\SEU_USUARIO\dev-setup`, porque todos os comandos do Windows do roteiro apontam para lá e assim funcionam de qualquer pasta) e clique com o botão direito em `RODAR-DIAGNOSTICO.cmd` > Executar como administrador. Ele entra sozinho na pasta certa e não mexe em mais nada do computador. O relatório fica em `diagnostico-AAAAMMDD`, dentro da mesma pasta.
+Para rodar: baixe o repositório com o comando do passo `diag-pasta` (instala o Git e clona em `C:\Users\SEU_USUARIO\dev-setup`, a pasta para onde todos os comandos do Windows do roteiro apontam), entre na pasta e clique com o botão direito em `RODAR-DIAGNOSTICO.cmd` > Executar como administrador. Ele entra sozinho na pasta certa e não mexe em mais nada do computador. O relatório fica em `diagnostico-AAAAMMDD`, dentro da mesma pasta.
 
 ## Pelo terminal
 

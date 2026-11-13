@@ -12,3 +12,6 @@ diagnostico-*/
 # Chave do servidor Headscale
 infra/soberania/headscale/config.yaml
 infra/soberania/.env
+
+# Worktrees das sessões do Claude Code
+.claude/worktrees/

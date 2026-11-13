@@ -28,7 +28,7 @@ flowchart TB
   L_chat["07 · Assistentes de IA (chat, pesquisa e estudo)<br/>10 blocos"]
   L_dados["06 · Dados e treino de IA<br/>22 blocos"]
   L_ia["05 · Agentes de IA e sandbox<br/>26 blocos"]
-  L_lin["04 · Linux (Ubuntu no WSL2, Arch no 2º disco)<br/>29 blocos"]
+  L_lin["04 · Linux (Ubuntu no WSL2, Arch no 2º disco)<br/>30 blocos"]
   L_win["03 · Windows 11, apps e máquinas virtuais<br/>32 blocos"]
   L_seg["02 · Segurança e cofre<br/>25 blocos"]
   L_hw["01 · Hardware<br/>26 blocos"]
@@ -81,7 +81,7 @@ flowchart TB
 | 07 | [Assistentes de IA (chat, pesquisa e estudo)](camadas/07-chat.md) | 10 | O que é código vai para o agente; o que é pesquisa e estudo fica nos assistentes e termina salvo no vault. |
 | 06 | [Dados e treino de IA](camadas/06-dados.md) | 22 | Os seus dados viram tabelas limpas e datasets; o treino pesado roda numa GPU da nuvem e o modelo volta para o Ollama do notebook. |
 | 05 | [Agentes de IA e sandbox](camadas/05-ia.md) | 26 | O agente roda dentro do ai-jail e só enxerga ~/dev/<projeto>. |
-| 04 | [Linux (Ubuntu no WSL2, Arch no 2º disco)](camadas/04-lin.md) | 29 | O código fica no ext4 do Linux; o Windows enxerga pela ponte do WSL2. |
+| 04 | [Linux (Ubuntu no WSL2, Arch no 2º disco)](camadas/04-lin.md) | 30 | O código fica no ext4 do Linux; o Windows enxerga pela ponte do WSL2. |
 | 03 | [Windows 11, apps e máquinas virtuais](camadas/03-win.md) | 32 | O Windows depende de TPM, BitLocker e Defender para ficar protegido. |
 | 02 | [Segurança e cofre](camadas/02-seg.md) | 25 | Drivers AMD e NVIDIA ligam o sistema ao hardware. |
 | 01 | [Hardware](camadas/01-hw.md) | 26 | — |
@@ -89,6 +89,7 @@ flowchart TB
 ## Princípios
 
 - O Windows cuida só do que precisa de janela, GPU e segurança; o código vive e roda no Linux (Ubuntu no WSL2). Ver [ADR 0001](adr/0001-wsl2-em-vez-de-dual-boot.md).
+- Proposta: o setup vira o AMtech OS, uma camada sobre o Ubuntu no 2º NVMe, com o Windows intocado no SSD atual. Ver [ADR 0016](adr/0016-amtech-os.md) e [os/](../os/README.md).
 - Agentes de IA trabalham dentro de sandbox e só enxergam a pasta do projeto. Ver [ADR 0002](adr/0002-agentes-de-ia-em-sandbox.md).
 - Infraestrutura por código, Azure primeiro e AWS depois. Ver [ADR 0003](adr/0003-azure-primeiro.md).
 - Produção barata em VM pelo Kamal, um deploy só. Ver [ADR 0005](adr/0005-deploy-em-vm-com-kamal.md). Contrato no OpenAPI e Zod só no front. Ver [ADR 0006](adr/0006-contratos-na-borda.md).

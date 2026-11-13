@@ -7,7 +7,7 @@
 
 > **Ligação com a camada de baixo:** O código fica no ext4 do Linux; o Windows enxerga pela ponte do WSL2.
 
-**29 blocos** · 0 precisam de conta · 5 marcados como futuro
+**30 blocos** · 0 precisam de conta · 6 marcados como futuro
 
 ## Mapa de conexões
 
@@ -18,11 +18,12 @@ flowchart LR
     n_netw["nmap · dig · curl"]
     n_wsl["Ubuntu (WSL2)"]
     n_git["Git + SSH + gh"]
-    n_rt[".NET 10 · Node · Python"]
+    n_rt["Node/TS · Python"]
     n_tex["TeX Live"]
     n_sec["gitleaks · Trivy"]
     n_dot["dotfiles"]
     n_arch["Arch + Omarchy (2º NVMe)"]
+    n_amtechos["AMtech OS (Ubuntu + setup)"]
     n_rotinas["Rotinas agendadas"]
     n_adguard["AdGuard Home (DNS)"]
     n_wireguard["WireGuard (na mão)"]
@@ -64,7 +65,7 @@ flowchart LR
     n_vm247["VM sempre ligada (Oracle grátis)"]
   end
   subgraph L_app["Aplicação: sistemas AM (Aura)"]
-    n_api["API ASP.NET Core"]
+    n_api["API TypeScript (Next/NestJS)"]
     n_status["aura-status"]
   end
   subgraph L_cnt["Containers, Kubernetes e infra como código"]
@@ -121,6 +122,7 @@ flowchart LR
   n_mise -->|"roda no Ubuntu"| n_wsl
   n_zellij -->|"roda no Ubuntu"| n_wsl
   n_yazi -->|"roda no Ubuntu"| n_wsl
+  n_amtechos -->|"substitui no dia a dia"| n_wsl
   n_git -->|"push via SSH"| n_gh
   n_sec -->|"pre-commit"| n_git
   n_status -->|"git status"| n_git
@@ -140,6 +142,8 @@ flowchart LR
   n_boot -->|"boot"| n_arch
   n_parch -->|"treino antes do 2º NVMe"| n_arch
   n_ghostty -->|"terminal do Arch"| n_arch
+  n_amtechos -->|"instalado no"| n_nvme
+  n_chezmoi -->|"configura o usuário"| n_amtechos
   n_rotinas -->|"resumo da manhã"| n_tg
   n_adguard -->|"DNS da rede"| n_tail
   n_wireguard -->|"base de"| n_tail
@@ -163,33 +167,34 @@ flowchart LR
   n_vegeta -->|"acha o teto"| n_api
   n_bpftrace -->|"latência na VM"| n_vm247
   classDef desta fill:#e2ecec,stroke:#0e3a45,color:#13262b
-  class n_nvim,n_netw,n_wsl,n_git,n_rt,n_tex,n_sec,n_dot,n_arch,n_rotinas,n_adguard,n_wireguard,n_ros2,n_just,n_termx,n_mise,n_zellij,n_yazi,n_chezmoi,n_ghostty,n_podman,n_gitlfs,n_treesitter,n_posting,n_harlequin,n_gum,n_d2,n_vegeta,n_bpftrace desta
+  class n_nvim,n_netw,n_wsl,n_git,n_rt,n_tex,n_sec,n_dot,n_arch,n_amtechos,n_rotinas,n_adguard,n_wireguard,n_ros2,n_just,n_termx,n_mise,n_zellij,n_yazi,n_chezmoi,n_ghostty,n_podman,n_gitlfs,n_treesitter,n_posting,n_harlequin,n_gum,n_d2,n_vegeta,n_bpftrace desta
 ```
 
 ## Blocos
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Neovim](#nvim) | Local · futuro | Editor de terminal da trilha Arch e Akita. Aprender aos poucos; não substitui o VS Code no começo. | passo 48.2 · 2027, conforme cada compra |
+| [Neovim](#nvim) | Local · futuro | Editor de terminal da trilha Arch e Akita. Aprender aos poucos; não substitui o VS Code no começo. | passo 49.2 · 2027, conforme cada compra |
 | [nmap · dig · curl](#netw) | Local | Diagnóstico de rede no Ubuntu: portas, DNS, requisições HTTP e captura de pacotes (tcpdump). Instalados pelo bootstrap.sh. | passo 4.4 · Semana 2 · nov/2026 |
 | [Ubuntu (WSL2)](#wsl) | Local | Onde o código vive e roda. | passo 4.1 · Semana 2 · nov/2026; passo 4.5 · Semana 2 · nov/2026 |
 | [Git + SSH + gh](#git) | Local | Versionamento e acesso ao GitHub. | passo 4.4 · Semana 2 · nov/2026; passo 4.6 · Semana 2 · nov/2026 |
-| [.NET 10 · Node · Python](#rt) | Local | Runtimes das APIs, do front e dos scripts. | passo 4.4 · Semana 2 · nov/2026 |
+| [Node/TS · Python](#rt) | Local | Runtimes das APIs, do front e dos scripts. | passo 4.4 · Semana 2 · nov/2026 |
 | [TeX Live](#tex) | Local | Compila o livro e as apostilas. | passo 4.4 · Semana 2 · nov/2026 |
 | [gitleaks · Trivy](#sec) | Local | Barra senha no commit e acha vulnerabilidades em imagens. | passo 4.4 · Semana 2 · nov/2026; passo 20.2 · Semana 5 · nov/2026; passo 20.3 · Semana 5 · nov/2026 |
 | [dotfiles](#dot) | Local | Configuração versionada do ambiente, aplicada pelo chezmoi a partir de infra/dotfiles. | passo 4.7 · Semana 2 · nov/2026 |
-| [Arch + Omarchy (2º NVMe)](#arch) | Local · futuro | Linux nativo com boot próprio, sem tocar no Windows. Antes dele, o Arch portátil em pendrive ou SSD USB. | passo 48.1 · 2027, conforme cada compra |
+| [Arch + Omarchy (2º NVMe)](#arch) | Local · futuro | Linux nativo com boot próprio, sem tocar no Windows. Antes dele, o Arch portátil em pendrive ou SSD USB. | passo 49.1 · 2027, conforme cada compra |
+| [AMtech OS (Ubuntu + setup)](#amtechos) | Local · futuro | O dev-setup como sistema operacional (ADR 0016): os/instalar.sh transforma um Ubuntu LTS no AMtech OS, com perfis, tema, firewall, snapshots e o comando amtech. VM primeiro; depois o 2º NVMe, com o Windows intocado. | passo 48.1 · Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso; passo 48.4 · Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso |
 | [Rotinas agendadas](#rotinas) | Local | Resumo da manhã no Telegram e manutenção semanal, pelo cron do Ubuntu. | passo 17.3 · Semana 4 · nov/2026; passo 17.4 · Semana 4 · nov/2026; passo 17.5 · Semana 4 · nov/2026 |
 | [AdGuard Home (DNS)](#adguard) | Local | DNS da casa com bloqueio de anúncios e rastreadores, também pelo Tailscale. | passo 30.4 · Semana 6 · nov/2026 |
 | [WireGuard (na mão)](#wireguard) | Local | Túnel montado à mão entre duas máquinas, para entender o que o Tailscale faz. | passo 30.6 · Semana 6 · nov/2026 |
-| [ROS 2 + ponte MQTT](#ros2) | Local · futuro | Robôs no Raspberry Pi com ROS 2; o mqtt_client leva os tópicos para o MQTT e o Home Assistant manda e recebe comandos. | passo 59.10 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
+| [ROS 2 + ponte MQTT](#ros2) | Local · futuro | Robôs no Raspberry Pi com ROS 2; o mqtt_client leva os tópicos para o MQTT e o Home Assistant manda e recebe comandos. | passo 60.10 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | [just (porta única de comandos)](#just) | Local | O justfile na raiz do repositório junta os comandos do setup: just check (o mesmo portão do CI), just triagem, just arquiteto, just docs, just medir. Binário único, instalado pelo bootstrap.sh. | passo 21.1 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica; passo 21.2 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica; passo 22.1 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois |
 | [Terminal moderno (zoxide, eza, fd…)](#termx) | Local | zoxide (cd que aprende), eza (ls), fd (find), btop (monitor), hyperfine (benchmark), lazygit, lazydocker e o prompt Starship. Binários únicos, instalados pelo bootstrap.sh; ripgrep, fzf e tmux já vinham; tcpdump entra junto. | passo 21.1 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [mise (runtimes e CLIs)](#mise) | Local | Principal (ADR 0008): instala e fixa Node, Go, Rust e as CLIs do setup a partir de ~/.config/mise/config.toml. O fnm fica como reserva; o Python segue no uv. | passo 21.10 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [Zellij (abas e sessões)](#zellij) | Local | Multiplexador principal (ADR 0008): atalhos visíveis, layout setup (código, servidor, lazygit, lazydocker, btop) e sessões que voltam. O tmux fica para servidores. | passo 21.11 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [yazi (arquivos no terminal)](#yazi) | Local | Gerenciador de arquivos no terminal com prévia de imagem, PDF e código. Pelo mise. | passo 21.10 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [chezmoi (dotfiles com o cofre)](#chezmoi) | Local | Principal dos dotfiles (ADR 0008): aplica infra/dotfiles (mise, Zellij, Starship, Ghostty, Neovim, yazi, Aider) e lê segredos do KeePassXC na hora, sem gravar nada no repositório. | passo 21.11 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
-| [Ghostty (terminal do Arch)](#ghostty) | Local · futuro | Terminal acelerado por GPU para o Arch nativo; abre direto na sessão do Zellij. Não tem versão para Windows, onde o Windows Terminal continua. | passo 48.7 · 2027, conforme cada compra |
+| [Ghostty (terminal do Arch)](#ghostty) | Local · futuro | Terminal acelerado por GPU para o Arch nativo; abre direto na sessão do Zellij. Não tem versão para Windows, onde o Windows Terminal continua. | passo 49.7 · 2027, conforme cada compra |
 | [Podman (containers sem root)](#podman) | Local | Containers sem root e sem serviço: roda o lab de alvo e imagens de terceiros com menos risco. O Docker Desktop segue como principal no dia a dia. | passo 21.10 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [Git LFS (arquivos grandes)](#gitlfs) | Local | Firmware, bancos do Ghidra, placas do KiCad e modelos 3D fora do histórico do Git; o Forgejo serve o LFS do espelho. | passo 21.10 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
 | [tree-sitter (AST no editor)](#treesitter) | Local | Destaque, seleção e navegação por árvore sintática no Neovim (C#, TS, Go, Rust, Python, Svelte, Astro). O Repomix e o Aider usam o mesmo parser. | passo 21.11 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
@@ -208,7 +213,7 @@ flowchart LR
 
 Editor de terminal da trilha Arch e Akita. Aprender aos poucos; não substitui o VS Code no começo.
 
-**Quando entra:** passo 48.2 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 49.2 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -242,7 +247,7 @@ Onde o código vive e roda.
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Git + SSH + gh](04-lin.md#git) | Linux (Ubuntu no WSL2, Arch no 2º disco) | terminal |
-| → envia para | [.NET 10 · Node · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | executa |
+| → envia para | [Node/TS · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | executa |
 | → envia para | [Docker + Compose](09-cnt.md#docker) | Containers, Kubernetes e infra como código | socket da engine |
 | → envia para | [PyTorch + CUDA (WSL2)](06-dados.md#torch) | Dados e treino de IA | CUDA no WSL2 |
 | ← recebe de | [Backup 3-2-1](02-seg.md#bkp) | Segurança e cofre | copia ~/dev |
@@ -258,6 +263,7 @@ Onde o código vive e roda.
 | ← recebe de | [mise (runtimes e CLIs)](04-lin.md#mise) | Linux (Ubuntu no WSL2, Arch no 2º disco) | roda no Ubuntu |
 | ← recebe de | [Zellij (abas e sessões)](04-lin.md#zellij) | Linux (Ubuntu no WSL2, Arch no 2º disco) | roda no Ubuntu |
 | ← recebe de | [yazi (arquivos no terminal)](04-lin.md#yazi) | Linux (Ubuntu no WSL2, Arch no 2º disco) | roda no Ubuntu |
+| ← recebe de | [AMtech OS (Ubuntu + setup)](04-lin.md#amtechos) | Linux (Ubuntu no WSL2, Arch no 2º disco) | substitui no dia a dia |
 
 <a id="git"></a>
 
@@ -281,7 +287,7 @@ Versionamento e acesso ao GitHub.
 
 <a id="rt"></a>
 
-### .NET 10 · Node · Python
+### Node/TS · Python
 
 *Local*
 
@@ -291,7 +297,7 @@ Runtimes das APIs, do front e dos scripts.
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | compila e roda |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | compila e roda |
 | → envia para | [Python de dados (Polars, Jupyter)](06-dados.md#pyds) | Dados e treino de IA | Python + uv |
 | ← recebe de | [Ubuntu (WSL2)](04-lin.md#wsl) | Linux (Ubuntu no WSL2, Arch no 2º disco) | executa |
 | ← recebe de | [mise (runtimes e CLIs)](04-lin.md#mise) | Linux (Ubuntu no WSL2, Arch no 2º disco) | instala Node, Go e Rust |
@@ -350,7 +356,7 @@ Configuração versionada do ambiente, aplicada pelo chezmoi a partir de infra/d
 
 Linux nativo com boot próprio, sem tocar no Windows. Antes dele, o Arch portátil em pendrive ou SSD USB.
 
-**Quando entra:** passo 48.1 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 49.1 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -359,6 +365,22 @@ Linux nativo com boot próprio, sem tocar no Windows. Antes dele, o Arch portát
 | ← recebe de | [Gerenciador de boot](03-win.md#boot) | Windows 11, apps e máquinas virtuais | boot |
 | ← recebe de | [Pendrive Arch (instalação portátil)](01-hw.md#parch) | Hardware | treino antes do 2º NVMe |
 | ← recebe de | [Ghostty (terminal do Arch)](04-lin.md#ghostty) | Linux (Ubuntu no WSL2, Arch no 2º disco) | terminal do Arch |
+
+<a id="amtechos"></a>
+
+### AMtech OS (Ubuntu + setup)
+
+*Local · futuro*
+
+O dev-setup como sistema operacional (ADR 0016): os/instalar.sh transforma um Ubuntu LTS no AMtech OS, com perfis, tema, firewall, snapshots e o comando amtech. VM primeiro; depois o 2º NVMe, com o Windows intocado.
+
+**Quando entra:** passo 48.1 · Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso; passo 48.4 · Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso ([roteiro](../implantacao/roteiro.md))
+
+| Direção | Bloco | Camada | O que passa |
+|---|---|---|---|
+| → envia para | [2º NVMe (1–4 TB)](01-hw.md#nvme) | Hardware | instalado no |
+| → envia para | [Ubuntu (WSL2)](04-lin.md#wsl) | Linux (Ubuntu no WSL2, Arch no 2º disco) | substitui no dia a dia |
+| ← recebe de | [chezmoi (dotfiles com o cofre)](04-lin.md#chezmoi) | Linux (Ubuntu no WSL2, Arch no 2º disco) | configura o usuário |
 
 <a id="rotinas"></a>
 
@@ -410,7 +432,7 @@ Túnel montado à mão entre duas máquinas, para entender o que o Tailscale faz
 
 Robôs no Raspberry Pi com ROS 2; o mqtt_client leva os tópicos para o MQTT e o Home Assistant manda e recebe comandos.
 
-**Quando entra:** passo 59.10 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 60.10 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -463,7 +485,7 @@ Principal (ADR 0008): instala e fixa Node, Go, Rust e as CLIs do setup a partir 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Ubuntu (WSL2)](04-lin.md#wsl) | Linux (Ubuntu no WSL2, Arch no 2º disco) | roda no Ubuntu |
-| → envia para | [.NET 10 · Node · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | instala Node, Go e Rust |
+| → envia para | [Node/TS · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | instala Node, Go e Rust |
 
 <a id="zellij"></a>
 
@@ -509,6 +531,7 @@ Principal dos dotfiles (ADR 0008): aplica infra/dotfiles (mise, Zellij, Starship
 |---|---|---|---|
 | → envia para | [dotfiles](04-lin.md#dot) | Linux (Ubuntu no WSL2, Arch no 2º disco) | aplica os dotfiles |
 | → envia para | [KeePassXC](02-seg.md#kee) | Segurança e cofre | lê segredos do cofre |
+| → envia para | [AMtech OS (Ubuntu + setup)](04-lin.md#amtechos) | Linux (Ubuntu no WSL2, Arch no 2º disco) | configura o usuário |
 
 <a id="ghostty"></a>
 
@@ -518,7 +541,7 @@ Principal dos dotfiles (ADR 0008): aplica infra/dotfiles (mise, Zellij, Starship
 
 Terminal acelerado por GPU para o Arch nativo; abre direto na sessão do Zellij. Não tem versão para Windows, onde o Windows Terminal continua.
 
-**Quando entra:** passo 48.7 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 49.7 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -582,7 +605,7 @@ Cliente de API no terminal, com requisições em arquivo. Reserva do Bruno; o je
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | testa a API |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | testa a API |
 
 <a id="harlequin"></a>
 
@@ -639,7 +662,7 @@ Carga HTTP em taxa constante para achar o teto de uma API, do limite de requisi�
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | acha o teto |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | acha o teto |
 
 <a id="bpftrace"></a>
 
