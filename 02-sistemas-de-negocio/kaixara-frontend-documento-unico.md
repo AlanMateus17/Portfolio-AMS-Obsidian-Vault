@@ -388,7 +388,7 @@ Se 4 de 5 pessoas completam a tarefa 1 sem pedir ajuda, o fluxo do PDV está val
 |---|---|
 | Estado de servidor | TanStack Query (React Query) |
 | Estado de UI local | Zustand |
-| Tempo real (SignalR) | Hook customizado conectando SignalR ao React Query |
+| Tempo real (Supabase Realtime) | Hook customizado conectando Supabase Realtime ao React Query |
 
 ### 6.2 Performance
 Server Components por padrão (só `"use client"` onde precisa de interatividade). Meta: LCP < 2.5s, INP < 200ms, CLS < 0.1, medido via Lighthouse.
@@ -408,7 +408,7 @@ O menu de navegação (Etapa 2.5) não é fixo — cada item consulta se o módu
 ### ✅ Checklist de execução — Etapa 6
 - [ ] Configurar TanStack Query com tempo de cache padrão definido (não usar o default genérico sem pensar)
 - [ ] Configurar Zustand só pro estado que realmente precisa ser global (carrinho em edição) — não usar pra tudo
-- [ ] Implementar o hook customizado de SignalR + React Query, testado no Dashboard primeiro
+- [ ] Implementar o hook customizado de Supabase Realtime + React Query, testado no Dashboard primeiro
 - [ ] Medir Core Web Vitals com Lighthouse antes de considerar qualquer tela pronta, não só no fim
 - [ ] Implementar modo escuro só depois do modo claro estar 100% consistente — não construir os dois em paralelo
 - [ ] Configurar geração automática do cliente de API a partir do OpenAPI, nunca escrever chamada HTTP manual

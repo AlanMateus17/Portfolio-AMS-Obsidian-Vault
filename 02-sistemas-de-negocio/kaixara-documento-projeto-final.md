@@ -59,7 +59,7 @@ Sistema de PDV (ponto de venda) e gestão de estoque multi-tenant, para pequeno/
 
 ### 2.7 Hardware de PDV e emissão fiscal — **bloco que faltava na primeira versão deste documento**
 Isso é o que uma nota sua de planejamento anterior descreve textualmente como "o que torna o AM Kaixara realmente vendável" — sem isso, o sistema é só um cadastro de produto e venda, não um PDV de verdade para varejo físico.
-- **Agente local** (.NET, Windows Service ou app em background) expondo API HTTP em `localhost`, responsável por toda comunicação com hardware conectado ao caixa
+- **Agente local** (Go — binário único — ou C#, como serviço ou app em background) expondo API HTTP em `localhost`, responsável por toda comunicação com hardware conectado ao caixa
 - **`IImpressoraFiscal`** — implementação ESC/POS para cupom não-fiscal
 - **`IGavetaDinheiro`** — abertura de gaveta via comando pela impressora
 - **`IBalanca`** — integração via porta serial, para venda por peso
@@ -73,7 +73,7 @@ Isso é o que uma nota sua de planejamento anterior descreve textualmente como "
 
 ### 2.9 Integrações de infraestrutura compartilhada
 - `aura-licensing` — verificação de módulo ativo por `tenant_id`, com cache local de 24-48h para não bloquear cliente por indisponibilidade momentânea do serviço
-- `aura-historico` (opcional, Clojure/Datomic) — registro imutável de eventos, quando ativado
+- Registro de eventos imutável (opcional) — via tabela append-only no PostgreSQL, quando ativado (o antigo `aura-historico` em Clojure/Datomic foi arquivado)
 - `aura-analytics` (opcional, Python) — previsão de demanda via Prophet/statsmodels, consumida pelo dashboard
 
 ---
@@ -184,7 +184,7 @@ Isso é o que você pediu para deixar mais claro. O AM Kaixara é o único siste
 A auditoria de escala e segurança financeira identificou que o controle de concorrência em operação de estoque (RNFT-E01) não estava formalizado como requisito em nenhum documento até agora — inclusive no que já foi desenvolvido.
 
 ### 10.2 O que isso afeta especificamente no código já escrito
-- **Entidade `Product`**: já tem `ReservedQuantity` e `ReservedUntil`, o que ajuda, mas precisa ganhar uma coluna de controle de concorrência (`RowVersion`/token de concorrência do EF Core, ou uso do `xmin` nativo do PostgreSQL) — isso é uma migration nova, não uma reescrita.
+- **Entidade `Product`**: já tem `ReservedQuantity` e `ReservedUntil`, o que ajuda, mas precisa ganhar uma coluna de controle de concorrência (`RowVersion`/token de concorrência do ORM (Prisma/Drizzle), ou uso do `xmin` nativo do PostgreSQL) — isso é uma migration nova, não uma reescrita.
 - **`ProductRepository`**: os métodos de atualização de quantidade (usados no fluxo de venda) precisam passar a usar atualização condicional (`UPDATE ... WHERE Id = @id AND RowVersion = @versaoLida`) em vez de ler-e-depois-escrever sem verificação — é o ponto exato onde duas vendas simultâneas do último item poderiam hoje, sem essa mudança, ambas serem confirmadas.
 - **Fluxo de venda no `SalesController`**: precisa tratar o caso de conflito de concorrência (zero linhas afetadas na atualização) como "estoque insuficiente, tente novamente" em vez de assumir sucesso.
 - **O que NÃO muda**: autenticação/JWT em andamento não é afetada por este ponto — pode continuar a implementação atual do Sprint 3-4 normalmente. A auditoria só afeta a camada de estoque/venda, não a de autenticação.

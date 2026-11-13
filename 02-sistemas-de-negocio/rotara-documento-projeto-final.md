@@ -37,7 +37,7 @@ Plataforma de logística de entrega multi-tenant, conectada nativamente ao AM Ka
 - Checkout com pagamento online
 
 ### 2.2 Bloco 2 — Tempo real e notificação
-- Rastreamento de entregador em tempo real (SignalR)
+- Rastreamento de entregador em tempo real (Supabase Realtime)
 - Notificação automática de status do pedido (preparando → a caminho → entregue)
 - Painel de gestão de pedido para o lojista
 

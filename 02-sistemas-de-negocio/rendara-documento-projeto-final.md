@@ -54,7 +54,7 @@ Isso faltava por completo na primeira versão: nem todo usuário do AM Rendara �
 - `IFonteDeMovimentacaoBancaria` com duas implementações: `FonteOpenFinance` (automática, mas depende de credenciamento junto ao Banco Central, fora do seu controle de prazo) e `FonteImportacaoManual` (CSV/OFX exportado pelo próprio banco do cliente, sem credenciamento, disponível desde o primeiro dia) — a segunda existe justamente para não travar o produto na dependência da primeira
 
 ### 2.4 Simulação e projeção
-- **Simulador de cenário "e se"** — transação especulativa via `aura-historico` (Clojure/Datomic, `d/with`), permitindo simular rebalanceamento antes de executar de fato
+- **Simulador de cenário "e se"** — transação especulativa (simular o rebalanceamento antes de aplicar de fato, sem gravar)
 - **Projeção de crescimento patrimonial de longo prazo** — via `aura-analytics` (Python), simulação estatística de aportes recorrentes
 
 ### 2.5 Conformidade e consultoria
@@ -137,7 +137,7 @@ O `aura-goals` já foi definido como serviço compartilhado entre AM Rendara e M
 | RNFT07 (BOLA) | Crítico aqui — vazamento de carteira de um cliente para outro é o pior cenário de falha possível neste sistema especificamente | Impede que um cliente veja a carteira/patrimônio de outro só trocando um ID na URL |
 | RNFT-E02 (idempotência de pagamento) | Cobrança de assinatura recorrente (Básico/Investidor) | Evita cobrança duplicada em caso de webhook de pagamento reenviado |
 | RNFT-E06 (reconciliação) | Reporta dados de assinatura para reconciliação central do `aura-licensing` | Detecta se algum evento de cobrança se perdeu silenciosamente |
-| Motor determinístico auditável | Requisito próprio, fora da série RNFT: as fórmulas financeiras (ARCA, Barsi, scoring) rodam em C# com estruturas imutáveis e cobertura de teste próxima de 100% | Um erro de cálculo aqui influencia decisão financeira real de terceiro — o padrão de qualidade precisa refletir esse risco |
+| Motor determinístico auditável | Requisito próprio, fora da série RNFT: as fórmulas financeiras (ARCA, Barsi, scoring) rodam em TypeScript/Python com estruturas imutáveis e cobertura de teste próxima de 100% | Um erro de cálculo aqui influencia decisão financeira real de terceiro — o padrão de qualidade precisa refletir esse risco |
 
 ---
 

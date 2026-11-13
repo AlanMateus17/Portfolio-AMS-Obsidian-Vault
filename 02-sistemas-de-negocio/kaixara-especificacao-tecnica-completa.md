@@ -155,7 +155,7 @@ Esse é o desenho exato que faz o RNFT-E01 funcionar na prática, não só o con
 ## 5. Modelo de domínio tático (DDD)
 
 - **Aggregate Root:** `Venda` — nenhuma alteração em `VendaItem` acontece direto, sempre através do agregado `Venda`, que garante a regra "venda confirmada não pode mais ser alterada"
-- **Domain Event:** `VendaConfirmadaEvent`, `VendaCanceladaEvent`, `EstoqueInsuficienteEvent` — disparados de dentro do domínio, consumidos pela camada de aplicação pra publicar na fila (nunca o domínio conhece Redis ou fila diretamente — isso é Infrastructure)
+- **Domain Event:** `VendaConfirmadaEvent`, `VendaCanceladaEvent`, `EstoqueInsuficienteEvent` — disparados de dentro do domínio, consumidos pela camada de aplicação pra publicar na fila (nunca o domínio conhece a fila ou a infraestrutura diretamente — isso é Infrastructure)
 - **Value Object:** `Dinheiro` (não usar `decimal` solto pra valor monetário — encapsular em tipo próprio evita erro de arredondamento inconsistente espalhado pelo código)
 
 ---
