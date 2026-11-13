@@ -1,178 +1,179 @@
 # PLANO ÚNICO — AMtech
 
-Data: 2026-11-13 · Alan Mateus
+Data: 2026-11-13 (atualizado para a nova realidade) · Alan Mateus
 
-> **Este é o único planejamento.** Ele substitui o Plano Unificado, o Sumário
-> Único, o Plano Mestre passo a passo e os rascunhos que criamos no caminho.
-> Todos viram referência arquivada. Se dois documentos divergirem, **este vence.**
-> A rotina diária (horários) é o próximo passo, feita a partir daqui.
+> **Este é o único planejamento.** Substitui o Plano Unificado, o Sumário Único,
+> o Plano Mestre passo a passo e os rascunhos. Todos viraram referência em
+> `99-arquivo/`. Se dois documentos divergirem, **este vence.** A rotina diária
+> (horários) é o próximo passo, feita a partir daqui.
 
 ---
 
 ## 1. O Norte e a regra única
 
 **Norte:** ser desenvolvedor sênior capaz de criar IA e entender de dinheiro,
-tendo a Grupo AMtech como veículo — trabalhando no Brasil e no exterior, e tendo
-várias fontes de renda próprias.
+tendo a Grupo AMtech como veículo — no Brasil e no exterior, com várias fontes de
+renda próprias.
 
 **A regra única:** você nunca "só estuda". **Todo estudo constrói um ativo que
-gera renda e vira portfólio.** Um movimento, quatro retornos: aprende → constrói
-→ vende → o ativo prova competência e abre vagas. Ensinar entra no meio (é renda
-e é o teste de domínio).
+gera renda e vira portfólio.** Aprende → constrói → vende → o ativo prova
+competência e abre vagas. Ensinar entra no meio (é renda e é o teste de domínio).
 
-**A regra de foco (o que evita o caos):** no máximo **um ativo sendo construído +
-um sendo testado** por vez. Estudo roda dentro dele. Todo o resto fica na fila,
-anotado, sem ocupar a cabeça. Nunca mais que isso ao mesmo tempo.
+**A regra de foco:** no máximo **um ativo sendo construído + um sendo testado**
+por vez. O resto fica na fila, anotado, sem ocupar a cabeça.
 
 ---
 
-## 2. A stack por problema (guiada por mercado, não fixa)
+## 2. A stack (recomendação — confirmar)
 
-A regra do Akita: a ferramenta certa para cada problema. Você aprende a stack
-**que o ativo da vez exige**. Fundamento forte (lógica, dados, SQL, Git) faz a
-troca de linguagem ser rápida.
+Dois pilares, guiados por mercado, não stack fixa:
 
-| Problema | Ferramenta | Por que (mercado 2026) |
-|---|---|---|
-| Web (site, painel, loja, SaaS) | TypeScript + Next.js | Maior volume de vagas e de freela |
-| API / sistema de negócio | C#/.NET, ou Python/FastAPI quando tiver IA | .NET forte no corporativo |
-| Dados e IA | Python | Líder de mercado; base de analista, big data, eng. de IA |
-| Banco de dados | SQL / PostgreSQL | Obrigatório em todo caminho |
-| CLI / ferramenta rápida | Go | Binário único; ferramentas do setup |
-| Diferencial de longo prazo | Rust ou C/C++ | Sobe no mercado; base de baixo nível (fila) |
+- **TypeScript + Next.js + PostgreSQL (Supabase)** — web, SaaS, sites, tudo que
+  vira renda rápido. Uma linguagem no front e no back = menos troca de contexto
+  (bom para TDAH e para construir sozinho com alto volume).
+- **Python** — dados, IA e finanças. Motor de crescimento e diferencial.
+- **SQL/PostgreSQL** por baixo dos dois. **Go** para ferramentas de linha de
+  comando. **C/C++ e Rust** entram pela trilha de baixo nível (ver §3).
 
-Mercado (nov/2026): Python e SQL lideram as vagas; JS/TS dominam a web; IA/ML
-crescem ~22–23% até 2030; segurança tem ~4,8 mi de vagas abertas. Fontes no fim.
+**Decisão pendente sua:** eu recomendo **tirar o .NET do centro** e usá-lo só
+quando um emprego ou cliente pagar por ele — para construir e vender produto
+rápido + IA, TS+Python abre mais portas. Como o ecossistema Aura foi desenhado em
+.NET, essa troca tem custo; **confirme antes de eu marcar como definitivo.**
+
+Por que isso protege da mudança de mercado: TS e Python são as duas apostas que o
+mercado menos vai abandonar (Python lidera vagas e IA; JS/TS dominam a web).
 
 ---
 
-## 3. As trilhas — onde cada uma entra
+## 3. As trilhas — o que é ativo e o que fica na fila
 
-Nada é descartado; cada trilha tem um horizonte. **Ativo** = agora. **Fila** =
-entra por gatilho, uma de cada vez.
+Decisões de 13/11: **mandarim removido**; **robótica mantida ativa**; **dominar
+SO/Linux mantido ativo** (construir o AM-OS continua horizonte).
 
-| Trilha | Horizonte | Entra em |
+| Trilha | Horizonte | Observação |
 |---|---|---|
-| Fundamentos + Engenharia de software (C#/.NET, SQL, testes, arquitetura) | **Ativo** | Trimestres 1–4 |
-| Web (TS/Next.js) | **Ativo** | Trimestre 1–2 |
-| Finanças e economia F0–F3 (investimentos, contabilidade, mat. financeira, tributos) | **Ativo** (leve) | Trimestres 1–3, dentro dos sistemas |
-| Matemática (livro VHSlins) | **Ativo** | Contínuo (liga à Licenciatura) |
+| Fundamentos + Engenharia de software | **Ativo** | Base de tudo |
+| Web (TS/Next.js) | **Ativo** | O que mais vira renda |
+| Python + dados + IA | **Ativo** (entra no T3–T4) | Analista, big data, eng. de IA saem daqui |
+| Finanças F0–F3 (investir, contabilidade, mat. financeira, tributos) | **Ativo** (leve) | Dentro dos sistemas |
+| Matemática (VHSlins) | **Ativo** | Liga à Licenciatura e à IA |
 | Física | **Ativo** (leve) | Sábado, ligada a hardware/robótica |
-| Inglês | **Ativo** | Contínuo, nunca pausa |
-| Redes + Linux/Arch | Fila curta | Quando a parte de deploy/segurança pedir |
-| Dados e IA (Python → ML → LLM → fine-tuning) | Fila | Depois do trimestre 4 / Passo 8 |
-| Finanças F4–F8 (valuation, mercado, econometria, quant) | Fila | Depois do trimestre 4 |
-| Segurança / pentest (+ certificações) | Fila | Depois de redes/Linux |
-| Baixo nível (C/C++, École 42, internals, AM-OS) | Fila longa | Trimestre 4+ |
-| Robótica/IoT, agro, construção civil | Fila longa | Depois do Norte andar |
-| Economia (faculdade), espanhol, mandarim | Fila longa | Depois da Licenciatura |
+| Inglês | **Ativo** | Nunca pausa |
+| **Robótica / IoT + IA embarcada** | **Ativo** | 🆕 Vaga na área + protótipos para casa e terreno + conteúdo de aula. Escopo: um protótipo útil por vez, não "dominar toda a robótica" |
+| **Linux/Arch + conceitos de SO (internals)** | **Ativo** | 🆕 Fundamento forte para dev/IA; Arch como máquina do dia a dia (estilo Akita) |
+| Redes | Fila curta | Quando deploy/segurança pedir |
+| Finanças F4–F8 (valuation, mercado, econometria) | Fila | Depois do T4 |
+| Segurança / pentest + 1 certificação | Fila | Depois de redes/Linux |
+| Baixo nível a fundo: C/C++, École 42 | Fila | Alimenta o SO e a robótica |
+| **AM-OS / AM Linux (SO próprio como produto)** | Fila longa | Dominar SO é agora; *fabricar* o seu SO é depois |
+| Economia (faculdade), espanhol | Fila longa | Depois da Licenciatura |
+| Agro, construção civil | Fila longa | Só depois do Norte andar |
 
-Os cargos que você quer (dev, analista, big data, eng. de IA, eng. de software)
-saem todos da mesma base: fundamentos + SQL + Python + engenharia. Uma base,
-vários cargos — não precisa escolher um caminho agora.
-
----
-
-## 4. Os 12 meses — a espinha do plano
-
-Calibrado em ~2h/dia reais (escola + restaurante + licenciatura + TDAH); 4h é
-bônus. Cada trimestre: um ativo construído, estudo embutido, uma renda testada.
-Baseado no `plano-eixo.md` do seu dev-setup, agora com a stack aberta.
-
-| Trim. | Ofício (construir) | Domínio (estudar junto) | Renda que testa | Repos que você toca |
-|---|---|---|---|---|
-| **1 · nov/26–jan/27** · Fundação e 1º dinheiro | Setup instalado; C#/.NET + SQL/PostgreSQL; 1 site de cliente pela esteira | Contabilidade básica (caixa × competência, DRE); carnê-leão das suas vendas; matemática VHSlins | 1 site pago; planilha do Rendara à venda; aulas particulares; 3 posts | dev-setup, github.io, catalogo-html, ensino-ti |
-| **2 · fev–abr/27** · 1º sistema em produção | ASP.NET Core, EF Core, testes, Docker, deploy; front em TS/Next.js | Matemática financeira (juros, VPL, TIR, SAC/Price) | 10 planilhas vendidas; AM Kaixara MVP com 1 pagante | dev-setup, am-kaixara (novo) |
-| **3 · mai–jul/27** · Pagamento e operação | Pix e Pix Automático, observabilidade, OWASP, PRs revisados | Tributos de empresa (Simples, Fator R, NFS-e); conciliação | 5 clientes pagantes (sites + sistema) | am-kaixara, am-rendara (novo) |
-| **4 · ago–out/27** · Senioridade visível | DDD, ADRs, performance, 1 PR aceito em projeto open source .NET | Investimentos (renda fixa, ações, balanço) — sua metodologia no Rendara | Renda própria rumo a R$ 7 mil líq./mês; 12 posts/ano | am-rendara, github.io |
-
-**Nunca pausa:** Licenciatura em Matemática, inglês, a regra de validar antes de
-construir, as regras de segurança/alunos, dormir.
+Cargos (dev, analista, big data, eng. de IA, eng. de software) saem da mesma
+base. Robótica + IA embarcada é um cruzamento extra que o mercado paga.
 
 ---
 
-## 5. As fontes de renda, em fila
+## 4. O produto único — um sistema completo, não 23
 
-Já catalogadas e pontuadas (47 ofertas). Regra: **uma construindo + uma testando**.
-As de topo da fila casam com o estudo e entram nos trimestres acima:
+Decisão de 13/11: **acabou o império de 23 sistemas.** Em vez disso, **um sistema
+só**, juntando o que faz sentido para o seu público real (restaurantes e quem
+vende online — onde você já tem procura).
 
-1. Aulas particulares · 2. Catálogo HTML (isca) · 3. Mini-curso de Lógica ·
-4. Sites para pequenas empresas · 5. Planilha do AM Rendara · 6. Templates e
-código-fonte · 7. Pacote de aulas para professores.
+**Composição proposta (confirmar nome e módulos):**
 
-As demais (sistemas AM, infoprodutos, editora, serviços locais, negócios
-físicos) ficam na fila, entram uma a uma depois da primeira venda, na ordem da
-pontuação. Negócios físicos (padaria, delivery, sushi) só depois dos 5 portões —
-não competem com o Norte agora.
-
----
-
-## 6. Os repositórios — papel de cada um
-
-| Repo | Papel | Ação |
+| Módulo | Vem de | Faz |
 |---|---|---|
-| dev-setup | Hub: plano-eixo, professor, recrutador | Fonte única; stack "por problema"; ganhar `repos.json` |
-| Portfolio-AMS-Obsidian-Vault | Cérebro: trilhas e docs | Arquivar planos concorrentes; virar referência |
-| ensino-ti | Material didático | Fonte dos infoprodutos de ensino |
-| catalogo-html | Catálogo p/ alunos | Chamada p/ mini-curso |
-| catalogo-plataforma | **Confirmar o que é** | Encaixar ou arquivar |
-| AlanMateus17.github.io | Portfólio/site | Migrar p/ stack nova no T1–T2 |
-| codigo-c- + 2 forks DIO (C) | Estudo de C | Fila (trimestre 4+) |
-| ebooks_financas | Apoio de finanças | Material da trilha F |
-| instala-SO-pendrive | Guia de hardware | Vira aula/conteúdo |
+| PDV / Caixa | AM Kaixara | Venda no balcão, ficha técnica, cardápio |
+| Pedidos / Delivery | AM Rotara | Pedido online, entrega, geolocalização |
+| Financeiro | AM Rendara | Caixa, contas, DRE, conciliação |
+| Loja online (opcional) | AM Vendra | Venda online para além do restaurante |
 
-Os repos dos sistemas AM (am-kaixara, am-rendara…) nascem no trimestre 2+, na
-organização grupo-amtech-digital.
+Nome provisório: **AM Gestão** (um produto, vários módulos). **MVP = PDV +
+Pedidos + Financeiro básico**, lançado primeiro para os restaurantes/vendedores
+que já te procuram. A loja online entra como módulo depois que o MVP vender.
 
----
-
-## 7. Como fazer com o mínimo de erro
-
-1. **Um ativo por vez.** A regra de foco é o que mais reduz erro e atraso.
-2. **Validar antes de construir.** Versão mínima barata primeiro (planilha antes
-   do sistema); só escala o que vendeu.
-3. **Professor** (como estudar): blocos de 25 min, 20/80, exemplo resolvido →
-   você tenta → prova sem consulta, revisão espaçada. Já existe no setup.
-4. **Recrutador** (provar no mercado): cada estudo vira "registro de entrevista"
-   (resposta pronta de vaga) e item de portfólio. Já existe no setup.
-5. **Confiabilidade do setup:** backup 3-2-1, tudo no Git, segredos no KeePassXC,
-   testes automatizados nos sistemas AM, esteira de segurança (`pentest/security.yml`)
-   em todo repo com código, ambiente em Docker.
-6. **Medir, não achar:** `just progresso` e o critério "pronto quando" de cada
-   trimestre decidem se avança. Se atrasar, o problema quase sempre é frente
-   demais ativa — volte à regra de foco.
+Isso é melhor que 23 sistemas por três motivos: você termina **um**, vende
+**um**, e um cliente que usa PDV + pedidos + financeiro junto dificilmente troca
+(fica preso ao valor). Os outros sistemas antigos viram, no máximo, módulos
+futuros — não produtos separados.
 
 ---
 
-## 8. A fila de longo prazo (pausado até o gatilho)
+## 5. Os 12 meses — a espinha
 
-Gatilho: fim do trimestre 4 com o critério cumprido. Aí cada item volta por
-decisão sua, **um de cada vez**: Dados e IA a fundo (fine-tuning 8B) · C/C++ e
-École 42 · AM-OS e AM Linux · segurança (eJPT, OSCP) · finanças F4–F8 e
-certificações de investimento · faculdade de Economia · espanhol e mandarim ·
-robótica/casa inteligente/agro · construção civil. Nada congelado — em ordem.
+~2h/dia reais; 4h é bônus. Cada trimestre: avança o AM Gestão, estuda o que ele
+pede, testa uma renda.
+
+| Trim. | Construir (AM Gestão + web) | Estudar junto | Renda que testa | Repos |
+|---|---|---|---|---|
+| **1 · nov/26–jan/27** | Setup; fundamentos TS/Python + SQL; 1 site de cliente | Contabilidade básica; matemática VHSlins | 1 site pago; aulas particulares; planilha do financeiro à venda; 3 posts | dev-setup, github.io, catalogo-html, ensino-ti |
+| **2 · fev–abr/27** | MVP do AM Gestão (PDV + Pedidos + Financeiro); deploy, testes, Docker | Matemática financeira | 10 planilhas vendidas; MVP rodando em 1 restaurante que já te procura | dev-setup, am-gestao (novo) |
+| **3 · mai–jul/27** | Pix/Pix Automático, loja online (módulo Vendra), observabilidade; começa Python/dados | Tributos de empresa; conciliação | 5 clientes pagantes (restaurantes + vendas online) | am-gestao |
+| **4 · ago–out/27** | IA no produto (ex.: previsão de caixa, classificação de itens); DDD, performance | Investimentos (sua metodologia no financeiro) | Renda rumo a R$ 7 mil líq./mês; 12 posts/ano | am-gestao, github.io |
+
+Robótica e SO rodam **em paralelo leve**, com saída concreta: um protótipo para
+casa/terreno por trimestre e o Arch como máquina do dia a dia — sem roubar o foco
+do AM Gestão.
+
+**Nunca pausa:** Licenciatura, inglês, validar antes de construir, regras de
+segurança/alunos, dormir.
+
+---
+
+## 6. As fontes de renda — foco em 4 que compõem
+
+De 47 para as 4 que saem do mesmo estudo e se reforçam:
+
+1. **Aulas particulares** — caixa agora.
+2. **Mini-curso de Lógica** — escala o que você ensina.
+3. **Sites para empresas** — freela com a stack nova.
+4. **AM Gestão (SaaS)** — o produto, começando pela planilha do financeiro.
+
+O resto (infoprodutos, editora, serviços locais, robótica comercial) entra **uma
+por vez, depois da primeira venda**, na ordem da pontuação. Negócios físicos
+(padaria, delivery, sushi) saem do mapa ativo.
+
+---
+
+## 7. As empresas — uma, com linhas de produto
+
+De 3 empresas para **uma com linhas**: a **Grupo AMtech** é o veículo; o
+**Instituto AMS** é a linha de cursos (nasce das suas aulas); a **Editora** fica
+pausada. Não abra 3 CNPJs — uma estrutura, vários produtos.
+
+---
+
+## 8. Como fazer com o mínimo de erro
+
+1. **Um ativo por vez** (a regra que mais reduz atraso).
+2. **Validar antes de construir** (planilha antes do sistema).
+3. **Professor** (como estudar): blocos de 25 min, 20/80, exemplo → você tenta →
+   prova sem consulta, revisão espaçada.
+4. **Recrutador** (provar no mercado): cada estudo vira registro de entrevista +
+   item de portfólio.
+5. **Confiabilidade:** backup 3-2-1, tudo no Git, segredos no KeePassXC, testes,
+   esteira de segurança (`pentest/security.yml`), Docker.
+6. **Medir, não achar:** `just progresso` e o "pronto quando" de cada trimestre.
 
 ---
 
 ## 9. O que este documento substitui
 
-Ao adotar este plano, vão para `99-arquivo/` (histórico, não apagados):
-`00-PLANO-UNIFICADO`, `00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO`,
-`00-PLANO-MESTRE-PASSO-A-PASSO`, `00-PLANO-DE-EXECUCAO-UNICO`, e os rascunhos
-`plano-estudos-amtech.md`. O `plano-eixo.md` do dev-setup é absorvido por este e
-continua sendo o que o professor lê.
+Em `99-arquivo/`: Plano Unificado, Sumário Único, Plano Mestre passo a passo e os
+rascunhos. O `plano-eixo.md` do dev-setup é absorvido por este e continua sendo o
+que o professor lê.
 
 ---
 
 ## 10. Próximo passo
 
-1. Você confirma este plano (e o que é o catalogo-plataforma).
-2. Eu consolido: coloco este plano como fonte única no dev-setup + vault (branch
-   para revisão), arquivo os concorrentes, e ponho o `repos.json`.
-3. **Aí montamos a rotina completa** — seus horários reais (escola, restaurante,
-   6h de acordar, os cães) encaixando os blocos de ofício, domínio, inglês e
-   escrita.
-4. E começamos o bloco 1 de verdade, com o professor e o recrutador.
+1. Você confirma: **(a)** a stack (tirar .NET do centro, sim/não) e **(b)** o
+   nome e os módulos do AM Gestão.
+2. Eu fecho a consolidação (este plano como fonte única + `repos.json` no
+   dev-setup), você dá merge.
+3. **Montamos a rotina** com seus horários reais.
+4. Começamos o bloco 1 com o professor e o recrutador.
 
 ---
 
