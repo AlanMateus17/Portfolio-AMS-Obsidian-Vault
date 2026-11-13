@@ -11,11 +11,11 @@ tipo: home
 > Este arquivo continua aqui como referência; nada foi apagado.
 
 
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](00-PLANO-MESTRE-PASSO-A-PASSO.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
+> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](PLANO-UNICO-AMtech.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
 
-> Este é o **mapa** do vault. Para o dia a dia, a porta de entrada é o **[Sumário Único](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** — abra ele primeiro. Este índice serve para achar um documento específico quando precisar.
+> Este é o **mapa** do vault. Para o dia a dia, a porta de entrada é o **[Sumário Único](PLANO-UNICO-AMtech.md)** — abra ele primeiro. Este índice serve para achar um documento específico quando precisar.
 
-- 🧭 **[Sumário Único de Estudo](00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)** — trilha do dia a dia (comece aqui)
+- 🧭 **[Sumário Único de Estudo](PLANO-UNICO-AMtech.md)** — trilha do dia a dia (comece aqui)
 - 📍 **[Você está aqui](CARTAO-voce-esta-aqui.md)** — o que fazer agora
 - 🧠 **[Metodologia de aprendizado](07-estudo-e-carreira/metodo-de-estudo.md)** — como estudar cada bloco
 - 📚 **[Biblioteca de recursos por passo](07-estudo-e-carreira/biblioteca-recursos-por-passo.md)**

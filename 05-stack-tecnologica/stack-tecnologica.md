@@ -89,7 +89,7 @@ Bun, Hono, Rust, Tauri, gRPC — nenhuma exceção nos 21 documentos.
 ---
 
 ## 🔗 Relacionados
-- [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md) · [inventario-portfolio-atualizado](../01-planejamento-geral/inventario-portfolio-atualizado.md) · [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) · [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [AM Kaixara](../02-sistemas-de-negocio/kaixara-documento-projeto-final.md)
+- [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md) · [inventario-portfolio-atualizado](../01-planejamento-geral/inventario-portfolio-atualizado.md) · [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) · [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [AM Kaixara](../02-sistemas-de-negocio/kaixara-documento-projeto-final.md)
 
 ---
 

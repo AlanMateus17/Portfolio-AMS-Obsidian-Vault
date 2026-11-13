@@ -9,7 +9,7 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** engenharia de software é tudo o que faz um sistema funcionar bem por anos, e não só hoje: organização do código, testes, segurança, publicação e, no seu caso, fazer contas com dinheiro sem nunca errar um centavo.
 
-> **O que este documento é:** o mapa do seu estudo autodidata de engenharia de software. A maior parte **já é a Trilha Principal** do [Sumário Único](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — aqui ela aparece organizada por área (como num currículo de faculdade), para você ver que nada ficou de fora e saber o que **acrescentar**.
+> **O que este documento é:** o mapa do seu estudo autodidata de engenharia de software. A maior parte **já é a Trilha Principal** do [Sumário Único](PLANO-UNICO-AMtech.md) — aqui ela aparece organizada por área (como num currículo de faculdade), para você ver que nada ficou de fora e saber o que **acrescentar**.
 >
 > **Detalhe técnico completo de cada camada** (o que dominar, item por item, e o critério de sênior): [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md).
 >

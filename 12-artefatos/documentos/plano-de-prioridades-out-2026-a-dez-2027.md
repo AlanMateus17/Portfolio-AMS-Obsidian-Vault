@@ -44,7 +44,7 @@ Com os dois empregos, sobram cerca de 24 h de estudo e 10 h de produção por se
 
 ## Espinha dorsal: os Passos do Sumário Único
 
-A ordem dos estudos é exatamente a do `00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md`, sem mudança. As janelas abaixo são estimativas a partir das durações do vault; ajuste pelo tempo real que você registrar no Protocolo de Fim de Bloco.
+A ordem dos estudos é exatamente a do `PLANO-UNICO-AMtech.md`, sem mudança. As janelas abaixo são estimativas a partir das durações do vault; ajuste pelo tempo real que você registrar no Protocolo de Fim de Bloco.
 
 | Passo | Conteúdo | Projeto que avança | Janela estimada |
 | --- | --- | --- | --- |
@@ -135,8 +135,8 @@ Nada aqui foi cancelado; só não recebe tempo até 2028 ou até o gatilho indic
 <!-- conexoes:inicio -->
 ## 🔗 Onde isto entra no plano
 
-- [🧭 Plano Mestre — tudo em um só passo a passo](../../00-PLANO-MESTRE-PASSO-A-PASSO.md)
-- [🎯 Plano Unificado AMS — O Mapa de Tudo](../../00-PLANO-UNIFICADO.md)
+- [🧭 Plano Mestre — tudo em um só passo a passo](../PLANO-UNICO-AMtech.md)
+- [🎯 Plano Unificado AMS — O Mapa de Tudo](../PLANO-UNICO-AMtech.md)
 - [Plano Mestre — Frentes de Estudo, Negócio e Renda](../../01-planejamento-geral/plano-mestre-frentes-alan.md)
 - [Status de Planejamento do Portfólio — o que já existe, o que falta, e o que se reaproveita de onde](../../01-planejamento-geral/status-planejamento-portfolio.md)
 

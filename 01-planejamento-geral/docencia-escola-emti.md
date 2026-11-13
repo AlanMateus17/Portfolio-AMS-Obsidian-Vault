@@ -52,4 +52,4 @@ atualizado: 2026-10-27
 
 ---
 
-🔗 Plano geral: [00-PLANO-UNIFICADO](../00-PLANO-UNIFICADO.md) · Frentes de trabalho: [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) · Todos os artefatos: [índice](../12-artefatos/00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+🔗 Plano geral: [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md) · Frentes de trabalho: [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) · Todos os artefatos: [índice](../12-artefatos/00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)

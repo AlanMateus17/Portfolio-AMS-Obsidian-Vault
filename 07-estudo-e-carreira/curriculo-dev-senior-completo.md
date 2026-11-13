@@ -7,11 +7,11 @@ atualizado: 2026-10-26
 
 # 🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas
 
-> **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [Sumário Único](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
+> **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [Sumário Único](PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
 
 > **O que este documento é:** a lista completa do que você precisa dominar tecnicamente para ser **desenvolvedor sênior** na sua stack (C#/.NET 10 + TypeScript/Next.js + PostgreSQL/Redis + Docker, com Python em paralelo), no Brasil e no exterior. Cobre **todas as camadas** (fundamentos, backend, frontend, dados, arquitetura, infraestrutura, segurança, qualidade, produção) e **todas as etapas** (requisitos → design → código → teste → deploy → operação → evolução).
 >
-> **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [Sumário Único](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
+> **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [Sumário Único](PLANO-UNICO-AMtech.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
 > 1. **Auditoria:** no início de cada Passo, abra a camada correspondente e veja se nada ficou de fora.
 > 2. **Critério de sênior:** cada camada termina com "**Sênior quando…**" — é o teste de que você domina, não de que estudou.
 > 3. **Preparação de entrevista:** a seção 15 lista o que é cobrado em vaga sênior, inclusive no exterior.

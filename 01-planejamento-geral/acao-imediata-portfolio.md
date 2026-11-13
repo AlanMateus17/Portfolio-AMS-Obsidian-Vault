@@ -43,14 +43,14 @@ Mesma pergunta que já foi resolvida pro AM Taskoro (GraphQL híbrido), ainda em
 
 ## 4. O que NÃO fazer agora
 
-- Não iniciar código novo em nenhum sistema além do AM Kaixara antes de chegar nele na sequência de estudo — ver [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md)
+- Não iniciar código novo em nenhum sistema além do AM Kaixara antes de chegar nele na sequência de estudo — ver [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md)
 - Não tratar `aura-historico`, `aura-analytics` como urgentes — não bloqueiam nenhum sistema comercial de sair do papel
 
 ---
 
 ## 🔗 Documentos relacionados
 - [status-planejamento-portfolio](status-planejamento-portfolio.md) — o inventário completo, revisado
-- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) — a ordem de estudo/desenvolvimento
+- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) — a ordem de estudo/desenvolvimento
 
 ---
 

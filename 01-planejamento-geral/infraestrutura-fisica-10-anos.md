@@ -7,7 +7,7 @@ status: completo
 # Infraestrutura Física — Arquitetura de 10 Anos
 ### Trazido de uma conversa anterior (13/08/2026) — 11 camadas, cada uma só ativa quando a frente de renda correspondente começar de verdade
 
-> **Critério geral por trás de tudo isso:** tecnologia madura e "chata" (boring tech) — LTS, padrões abertos, pouca dependência de vendor — porque é isso que sobrevive 10 anos só com manutenção, sem precisar reescrever nada. Diferente do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md) (que é sobre o que estudar), este documento é sobre **o que comprar e configurar fisicamente**, e quando.
+> **Critério geral por trás de tudo isso:** tecnologia madura e "chata" (boring tech) — LTS, padrões abertos, pouca dependência de vendor — porque é isso que sobrevive 10 anos só com manutenção, sem precisar reescrever nada. Diferente do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) (que é sobre o que estudar), este documento é sobre **o que comprar e configurar fisicamente**, e quando.
 
 ---
 
