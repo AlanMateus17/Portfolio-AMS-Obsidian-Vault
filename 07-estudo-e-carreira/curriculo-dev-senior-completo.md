@@ -65,7 +65,7 @@ atualizado: 2026-10-26
 
 ## 2. Linguagens
 
-### 2.1 C# (linguagem principal)
+### 2.1 C# (carta de reserva — detalhe só para quando puxar essa carta)
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Base | Tipos de valor × referência, `struct` × `class` × `record`, nullable reference types, pattern matching, switch expressions | P3 |
@@ -79,7 +79,7 @@ atualizado: 2026-10-26
 | Reflection e geração de código | Atributos, reflection (custo), source generators (noção) | P12 |
 | Runtime .NET | CLR, IL, JIT e tiered compilation, AOT nativo (noção), GC geracional e modos server/workstation | P11 |
 
-### 2.2 TypeScript e JavaScript
+### 2.2 TypeScript e JavaScript (linguagem principal)
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | JavaScript base | Escopo, closures, `this`, protótipos, módulos ES, desestruturação, spread | P3 |
@@ -88,7 +88,7 @@ atualizado: 2026-10-26
 | TypeScript avançado | Tipos condicionais, mapped types, template literal types, inferência; tipar respostas da API a partir do contrato OpenAPI | P5 · P12 |
 | Ferramentas | Node.js, npm/pnpm, `tsconfig`, ESLint, Prettier, bundlers (noção de como o Next empacota) | P4 |
 
-### 2.3 Python (bloco paralelo desde o Passo 3)
+### 2.3 Python (linguagem principal — dados/IA, desde o Passo 3)
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Base | Tipos, coleções, compreensões, funções, módulos, ambiente virtual (`venv`/`uv`), `pip` | Py |
@@ -113,14 +113,14 @@ Ver camada 5. É linguagem de primeira classe, não "detalhe do ORM".
 ### 2.6 C e C++
 Pela [École 42](trilha-42-circles-oficial-verificado.md): ponteiros, memória manual, Makefile, structs, alocação, depuração com `gdb`/`valgrind`. Dá o entendimento de baixo nível que diferencia o sênior.
 
-### 2.7 Clojure (decisão pendente)
-Só entra se o `aura-historico` continuar em Clojure + Datomic: programação funcional, imutabilidade, REPL, Datomic. **Gatilho:** Passo 14, quando o Rendara precisar do histórico. Se você decidir por Event Sourcing com Marten em .NET, este item sai e entra Marten na camada 7.
+### 2.7 Clojure (cortada)
+O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se precisar, vira tabela append-only no PostgreSQL. Clojure sai do currículo.
 
-**Sênior quando…** lê código desconhecido de qualquer uma das três linguagens principais e aponta o problema de desempenho ou de concorrência; escreve código idiomático em cada uma, não "C# escrito em Python".
+**Sênior quando…** lê código desconhecido das linguagens principais (TypeScript, Python, SQL) e aponta o problema de desempenho ou de concorrência; escreve código idiomático em cada uma, não "C# escrito em Python".
 
 ---
 
-## 3. Backend .NET e ASP.NET Core
+## 3. Backend — TypeScript (Next/NestJS) e Python/FastAPI · (.NET/ASP.NET = reserva)
 
 | Tópico | O que dominar | Onde |
 |---|---|---|
