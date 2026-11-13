@@ -47,8 +47,8 @@ mercado menos vai abandonar (Python lidera vagas e IA; JS/TS dominam a web).
 
 ## 3. As trilhas — o que é ativo e o que fica na fila
 
-Decisões de 13/11: **mandarim removido**; **robótica mantida ativa**; **dominar
-SO/Linux mantido ativo** (construir o AM-OS continua horizonte).
+Decisões de 13/11: **mandarim removido**; **robótica mantida ativa**; **sistema
+operacional mantido por inteiro** — é parte de concluir o seu setup.
 
 | Trilha | Horizonte | Observação |
 |---|---|---|
@@ -60,12 +60,11 @@ SO/Linux mantido ativo** (construir o AM-OS continua horizonte).
 | Física | **Ativo** (leve) | Sábado, ligada a hardware/robótica |
 | Inglês | **Ativo** | Nunca pausa |
 | **Robótica / IoT + IA embarcada** | **Ativo** | 🆕 Vaga na área + protótipos para casa e terreno + conteúdo de aula. Escopo: um protótipo útil por vez, não "dominar toda a robótica" |
-| **Linux/Arch + conceitos de SO (internals)** | **Ativo** | 🆕 Fundamento forte para dev/IA; Arch como máquina do dia a dia (estilo Akita) |
+| **Sistema operacional — Linux/Arch, internals e AMtech OS** | **Ativo** | Mantido por inteiro: parte de concluir o setup. Arch no dia a dia (estilo Akita), internals, e o AMtech OS = Linux com o dev-setup embutido |
+| Baixo nível: C/C++, École 42 | **Ativo** (leve) | Alimenta o SO e a robótica |
 | Redes | Fila curta | Quando deploy/segurança pedir |
 | Finanças F4–F8 (valuation, mercado, econometria) | Fila | Depois do T4 |
 | Segurança / pentest + 1 certificação | Fila | Depois de redes/Linux |
-| Baixo nível a fundo: C/C++, École 42 | Fila | Alimenta o SO e a robótica |
-| **AM-OS / AM Linux (SO próprio como produto)** | Fila longa | Dominar SO é agora; *fabricar* o seu SO é depois |
 | Economia (faculdade), espanhol | Fila longa | Depois da Licenciatura |
 | Agro, construção civil | Fila longa | Só depois do Norte andar |
 
