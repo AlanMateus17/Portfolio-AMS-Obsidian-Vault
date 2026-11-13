@@ -41,17 +41,26 @@ atualizado: 2026-11-13
 | Busca semântica / RAG / IA local | pgvector + Ollama + PyTorch |
 | Robótica, sensores, protótipos | C/C++ (Arduino/ESP32) · Python (Raspberry Pi) |
 | Sistema operacional / baixo nível | Linux/Arch · C/C++ · Rust |
-| Performance extrema / CLI / agente local | **Go** (carta de reserva) |
+| **Suas ferramentas, CLIs, automação, agente fiscal** | **Go** (trilha ativa — ver §3) |
 | Vaga corporativa que exige .NET | **C#** (carta de reserva) |
 
 ---
 
-## 3. Cartas de reserva (não estudo agora, puxo quando o problema aparecer)
+## 3. Go — trilha ativa (minhas ferramentas)
 
-- **Go** — binário único, ótimo para ferramentas de linha de comando e para o **agente local fiscal** do PDV (impressora ESC/POS, gaveta de dinheiro, TEF). É o lugar onde "desktop no balcão" realmente precisa de algo fora do TS.
+Go deixou de ser reserva: é a linguagem com que eu construo **as minhas ferramentas**. Binário único, rápido, fácil de distribuir. Uso para:
+
+- **CLIs e automação** do meu dia a dia e do dev-setup (organizar arquivos, gerar relatórios, rodar rotinas).
+- **Agente local fiscal** do PDV (impressora ESC/POS, gaveta de dinheiro, TEF) — binário único no balcão.
+- **Serviços de performance** quando o TS/Python não derem conta.
+
+Passo a passo próprio em [trilha-go-ferramentas](../07-estudo-e-carreira/trilha-go-ferramentas.md).
+
+## 3b. Carta de reserva
+
 - **C#/.NET** — só se eu for atrás de uma vaga corporativa de .NET, ou se o agente fiscal já existir pronto nele. Não é mais a base.
 
-> Regra: nunca adoto uma linguagem "pelo currículo". Só quando o núcleo não resolve com maturidade igual.
+> Regra: nunca adoto uma linguagem "pelo currículo". Go entrou porque resolve um problema real meu (ferramentas e o agente fiscal); o núcleo (TS+Python+SQL) continua sendo o centro.
 
 ---
 

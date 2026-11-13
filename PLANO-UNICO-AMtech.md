@@ -64,6 +64,7 @@ operacional mantido por inteiro** — é parte de concluir o seu setup.
 | Inglês | **Ativo** | Nunca pausa |
 | **Robótica / IoT + IA embarcada** | **Ativo** | 🆕 Vaga na área + protótipos para casa e terreno + conteúdo de aula. Escopo: um protótipo útil por vez, não "dominar toda a robótica" |
 | **Sistema operacional — Linux/Arch, internals e AMtech OS** | **Ativo** | Mantido por inteiro: parte de concluir o setup. Arch no dia a dia (estilo Akita), internals, e o AMtech OS = Linux com o dev-setup embutido |
+| **Go — ferramentas, CLIs, automação, agente fiscal** | **Ativo** | 🆕 A linguagem das suas ferramentas. Entra no mês 2 e volta sempre que você precisar de um binário útil. Passo a passo em [trilha-go-ferramentas](07-estudo-e-carreira/trilha-go-ferramentas.md) |
 | Baixo nível: C/C++, École 42 | **Ativo** (leve) | Alimenta o SO e a robótica |
 | Redes | Fila curta | Quando deploy/segurança pedir |
 | Finanças F4–F8 (valuation, mercado, econometria) | Fila | Depois do T4 |
@@ -105,7 +106,8 @@ futuros — não produtos separados.
 ## 5. Os 12 meses — a espinha
 
 ~2h/dia reais; 4h é bônus. Cada trimestre: avança o AM Gestão, estuda o que ele
-pede, testa uma renda.
+pede, testa uma renda. **O passo a passo mês a mês, com rotina semanal real,
+recursos e exemplos, está em [PLANO-PASSO-A-PASSO](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md).**
 
 | Trim. | Construir (AM Gestão + web) | Estudar junto | Renda que testa | Repos |
 |---|---|---|---|---|
