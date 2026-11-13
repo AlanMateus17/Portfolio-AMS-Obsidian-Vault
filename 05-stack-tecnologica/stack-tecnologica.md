@@ -1,108 +1,91 @@
 ---
 tags: [stack, portfolio-ams]
 tipo: stack
-status: completo
-atualizado: 2026-10-02
+status: definitivo
+atualizado: 2026-11-13
 ---
 
-# Stack Tecnológica — Documento Único
+# Stack Tecnológica — Documento Único (definitivo)
 
-> **Consolida três documentos antigos** (`stack-tecnologica-por-sistema`, `stack-consolidada-estudo`, `revisao-stack-tecnologica`), em três seções:
-> **A.** o que cada sistema usa · **B.** a stack consolidada por categoria (pra estudo) · **C.** a revisão (decisão de fornecedor vs. estudo genuíno).
-> Os três originais foram para `99-arquivo/`.
-
----
-
-# A. Stack por sistema
-
-## Sistemas de negócio
-- **AM Kaixara** — C#/.NET 10, ASP.NET Core Controllers, Clean Architecture + DDD; PostgreSQL; Redis; SignalR; Next.js/TS/Tailwind. Específico: agente local (.NET, Windows Service) com `IImpressoraFiscal` (ESC/POS), `IGavetaDinheiro`, `IBalanca`, `ITefService`; SQLite local (offline); instalador MSIX/WiX com Code Signing.
-- **AM Rotara** — .NET 10; PostgreSQL + **PostGIS**; Redis; SignalR. Específico: consome `aura-analytics` (OR-Tools) p/ roteirização; apps entregador/cliente (PWA vs nativo pendente).
-- **AM Rendara** — .NET 10; PostgreSQL. Específico: consome `aura-vault` (AES-256 de dado bancário), `aura-historico` (Datomic) p/ simulação "e se", `aura-analytics` (Prophet/statsmodels); motor de regra (ARCA/Barsi/Value Investing) em C# puro.
-- **AuraVet** — .NET 10; PostgreSQL + PostGIS; Cloudflare R2 (laudo/exame). Específico: consome `aura-vault` (prontuário), `aura-licensing`; app tutor Next.js PWA.
-- **AM Consertta** — .NET 10; PostgreSQL. Reaproveita PDV/estoque do AM Kaixara; consome `aura-logistics`, `aura-notifications`.
-- **Momentos/Cupido** — alvo .NET 10 (hoje protótipo Node/Express/SQLite, migração pendente); R2 (mídia). Específico: consome `aura-goals`; moderação por hash-matching (PhotoDNA/StopNCII) + humano; player Spotify.
-- **Loja Virtual** — módulo do AM Kaixara, sem stack próprio; consome `aura-logistics`.
-- **AM Predara** — .NET 10; PostgreSQL. Específico: agente de portaria (interfone IP/RFID/fechadura, fornecedor pendente); votação com log imutável (candidato a `aura-historico`).
-- **AM Canteira** — .NET 10; PostgreSQL. Específico: consome `aura-vault` (contrato); assinatura eletrônica (DocuSign/Clicksign/D4Sign pendente); app de campo offline básico.
-- **AM Saberia** — .NET 10; PostgreSQL. Específico: videoaula síncrona (Zoom/Meet ou própria pendente); consome `aura-logistics`, `aura-licensing` (B2B).
-- **AM Horaria** — .NET 10; PostgreSQL com segregação de schema p/ prontuário psicológico. Específico: consome `aura-vault` com isolamento reforçado; `aura-logistics`.
-
-## Serviços compartilhados
-- `aura-licensing` — .NET 10, PostgreSQL. Cobrança recorrente (Stripe/Vindi/Iugu/Asaas pendente).
-- `aura-goals` — .NET 10, PostgreSQL. Sem dependência externa; consumido por AM Rendara e Momentos/Cupido.
-- `aura-historico` — **Clojure + Datomic** (fora do .NET). Consumido via Redis Streams.
-- `aura-analytics` — **Python + FastAPI** (fora do .NET). Prophet/statsmodels, Google OR-Tools.
-- `aura-copilot` — provedor de LLM indefinido (externo vs auto-hospedado). Function-calling, sem RAG.
-- `aura-identity` — .NET 10, PostgreSQL. JWT centralizado, 2FA opcional por tenant.
-- `aura-notifications` — .NET 10, PostgreSQL. WhatsApp Business API (Meta/BSP pendente), SMS/e-mail (pendente).
-- `aura-support` — .NET 10, PostgreSQL. Painel interno, acesso VPN/IP allowlist.
-- `aura-logistics` — .NET 10, PostgreSQL. Correios/transportadora (pendente).
-- `aura-vault` — .NET 10. KMS/HSM gerenciado (AWS KMS/Azure Key Vault/HashiCorp Vault pendente), trilha de auditoria via `aura-historico`.
-
-## Ferramentas pessoais
-`aura-status` (console .NET, sem banco, lê Git/log/`gh`) · `aura-queue` (memória ou Redis) · `aura-secrets` (.NET, PostgreSQL, cripto local) · `aura-oncall` (extensão do `aura-notifications`).
-
-## Fora do portfólio (decisão tomada)
-Bun, Hono, Rust, Tauri, gRPC — nenhuma exceção nos 21 documentos.
+> **Filosofia (Akita): stack por problema, não stack fixa.** Núcleo pequeno e dominado; cada problema usa a ferramenta certa. Substitui o antigo stack fixo em .NET.
+> Fonte da verdade de tecnologia do portfólio. O plano completo está em [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md).
 
 ---
 
-# B. Stack consolidada por categoria (pra estudo)
+## 1. Núcleo (o que eu domino de verdade)
 
-**1. Linguagens:** C# (base, 19/21) · TypeScript (frontend) · Clojure (`aura-historico`, novo de verdade) · Python (`aura-analytics`, foco nas libs).
-**2. Runtimes:** .NET 10 · Node.js · JVM (Clojure) · Python 3.x.
-**3. Backend:** ASP.NET Core Controllers (fixo, nunca Minimal API) · FastAPI (único Python).
-**4. Frontend:** Next.js · Tailwind (+ tokens RNFT-D) · React Native (só se decidir nativo; padrão PWA).
-**5. Libs que exigem estudo:** Google OR-Tools (VRP) · Prophet/statsmodels (série temporal) · Datomic client · cripto de campo (.NET) · SQLCipher (SQLite) · ESC/POS (impressora).
-**6. Dados:** PostgreSQL · PostGIS · Datomic · SQLite (offline) · Redis · Redis Streams (mensageria).
-**7. Tempo real/assíncrono:** SignalR · Redis Streams (fila única, evita RabbitMQ/Kafka sem necessidade).
-**8. Auth/segurança:** JWT + BCrypt (centralizar em `aura-identity`) · 2FA TOTP (obrigatório no `aura-support`) · KMS/HSM (`aura-vault`) · Code Signing (AM Kaixara).
-**9. Testes:** xUnit · teste de contrato · pytest (provável, `aura-analytics`) · clojure.test.
-**10. Infra/CI-CD:** Docker/compose · GitHub Actions · AWS ou Azure (pendente) · MSIX/WiX.
-**11. Mídia:** Cloudflare R2 (AuraVet, Momentos/Cupido).
-**12. Integrações externas:** pagamento · WhatsApp · SMS/e-mail · transportadora · assinatura eletrônica · videoaula · fiscal (NFC-e/NFSe) · LLM · hardware de portaria.
-**13. Padrões transversais:** Clean Architecture + DDD · multi-tenant (`tenant_id` + RLS) · Outbox · otimização combinatória.
+**TypeScript · Python · SQL.** Tudo gira em torno disso. Aprofundar aqui antes de espalhar.
+
+- **Frontend:** Next.js + Tailwind.
+- **Backend web:** Next.js (API/route handlers) ou NestJS quando precisar de backend TS separado.
+- **Backend dados/IA:** Python + FastAPI.
+- **Banco:** PostgreSQL via **Supabase** (banco + auth + storage + realtime prontos). ORM em TS: Prisma ou Drizzle.
+- **Offline (PDV):** SQLite local, sincroniza quando volta a conexão.
+- **Geolocalização/entrega:** PostGIS (suportado pelo Supabase).
+- **Pagamentos:** Pix / Mercado Pago (Brasil) + Stripe (internacional).
+- **IA de verdade:** pandas, scikit-learn, PyTorch; **pgvector** (busca semântica/RAG) + **Ollama** (modelo local).
+- **Infra:** Docker · Git + GitHub Actions · deploy em Vercel (web) ou VPS.
 
 ---
 
-# C. Revisão — decisão de fornecedor vs. estudo genuíno
+## 2. Stack por problema
 
-**C.1 Stack fixo:** .NET 10, ASP.NET Core Controllers, Clean Arch + DDD, EF Core, PostgreSQL, Redis, SignalR, JWT+BCrypt, Docker, xUnit, GitHub Actions, TS/Next/Tailwind. **PostGIS** virou fixo (AM Rotara, AuraVet, potenc. AM Canteira).
+| Problema | Ferramenta |
+|---|---|
+| Site, painel, loja, app web | TypeScript + Next.js + Tailwind |
+| API/backend do produto | TypeScript (Next/NestJS) |
+| Dados, automação, IA/ML | Python + FastAPI |
+| Banco, login, arquivos, tempo real | PostgreSQL + Supabase |
+| PDV offline | SQLite |
+| Entrega/rotas (geoloc) | PostGIS |
+| Busca semântica / RAG / IA local | pgvector + Ollama + PyTorch |
+| Robótica, sensores, protótipos | C/C++ (Arduino/ESP32) · Python (Raspberry Pi) |
+| Sistema operacional / baixo nível | Linux/Arch · C/C++ · Rust |
+| Performance extrema / CLI / agente local | **Go** (carta de reserva) |
+| Vaga corporativa que exige .NET | **C#** (carta de reserva) |
 
-**C.2 Desvios conscientes:** Clojure+Datomic (`aura-historico`, consulta temporal) · Python+FastAPI (`aura-analytics`, ecossistema ML) · GraphQL via HotChocolate (AM Taskoro, dentro do .NET). **Critério:** só desviar quando o .NET literalmente não resolver com maturidade igual — nunca por valor de currículo.
+---
 
-**C.3 Decisões de fornecedor (escolher/integrar, não estudar):** gateway de pagamento · AWS vs Azure · WhatsApp · SMS/e-mail · transportadora · assinatura eletrônica (peso jurídico) · videoaula · hardware · KMS/HSM · Code Signing.
+## 3. Cartas de reserva (não estudo agora, puxo quando o problema aparecer)
 
-**C.4 Estudo genuíno:**
-1. Otimização combinatória / OR-Tools (VRP) — AM Rotara. Maior sinergia com Matemática.
-2. ML de série temporal (Prophet/statsmodels) — overfitting/sazonalidade.
-3. Criptografia aplicada e gestão de chave — `aura-vault`.
-4. Assinatura eletrônica e validade jurídica (ICP-Brasil vs simples/avançada) — AM Canteira/Predara.
-5. Function-calling pra IA (sem RAG) — `aura-copilot`.
-6. Acessibilidade web (WCAG) — transversal (RNFT-D04).
+- **Go** — binário único, ótimo para ferramentas de linha de comando e para o **agente local fiscal** do PDV (impressora ESC/POS, gaveta de dinheiro, TEF). É o lugar onde "desktop no balcão" realmente precisa de algo fora do TS.
+- **C#/.NET** — só se eu for atrás de uma vaga corporativa de .NET, ou se o agente fiscal já existir pronto nele. Não é mais a base.
 
-**C.5 Fora, por decisão:** mobile nativo (PWA basta); blockchain/Web3 no Aura (ByteSDCoin é projeto educacional à parte — projeto-apostas-blockchain-educacional).
+> Regra: nunca adoto uma linguagem "pelo currículo". Só quando o núcleo não resolve com maturidade igual.
 
-**C.6 Ordem de estudo:** 1) OR-Tools 2) criptografia 3) assinatura eletrônica 4) ML/function-calling 5) acessibilidade (contínua).
+---
+
+## 4. O que foi aposentado (saiu do centro)
+
+| Saiu | Era | Virou |
+|---|---|---|
+| C# como base (19/21 sistemas) | coração de tudo | carta de reserva |
+| ASP.NET Core Controllers | backend fixo | Next/NestJS + FastAPI |
+| Clojure + Datomic (`aura-historico`) | histórico temporal | cortado (1 produto só não justifica) |
+| SignalR | tempo real .NET | realtime do Supabase |
+| Redis / Redis Streams | peça fixa | opcional (só com necessidade real) |
+| EF Core | ORM fixo | Prisma / Drizzle + cliente Supabase |
+| GraphQL / HotChocolate | AM Taskoro | saiu junto com o Taskoro |
+| "stack fixa, sem exceção nos 21 docs" | regra central | **stack por problema** |
+| Mandarim | trilha de idioma | removido (foco: inglês + espanhol) |
+| Império de 23 sistemas | portfólio | **1 produto: AM Gestão** |
+
+Entrou de novo: **Supabase, Go, Rust** (antes proibido), **C/C++**, **pgvector/Ollama/PyTorch** (IA real) e **Pix/Mercado Pago/Stripe** (gateway antes pendente).
+
+---
+
+## 5. Único produto: AM Gestão
+
+Em vez de 23 sistemas, **um** produto completo, lançado como MVP e vendido:
+
+- **Caixa (PDV)** — era Kaixara. TS + SQLite offline + agente fiscal (Go/C#).
+- **Pedidos/Entrega** — era Rotara. TS + PostGIS.
+- **Financeiro** — era Rendara. TS + Python para análise.
+- **Loja online** — módulo Vendra. Next.js.
+
+MVP = Caixa + Pedidos + Financeiro. Clientes já com procura: restaurantes e vendas online.
 
 ---
 
 ## 🔗 Relacionados
-- [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md) · [inventario-portfolio-atualizado](../01-planejamento-geral/inventario-portfolio-atualizado.md) · [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) · [trilha-42-circles-oficial-verificado](../07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [AM Kaixara](../02-sistemas-de-negocio/kaixara-documento-projeto-final.md)
-
----
-
-<!-- conexoes:inicio -->
-## 🗂️ Artefatos do claude.ai sobre este assunto
-
-> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
-
-- [Ecossistema AMtech (versão de 27/10)](../12-artefatos/paginas/ecossistema-amtech-4ze2/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-4ze2/LEIA-ME.md)
-- [Ecossistema AMtech (versão de 21/10)](../12-artefatos/paginas/ecossistema-amtech-lf3a/index.html) · página interativa · [sobre](../12-artefatos/paginas/ecossistema-amtech-lf3a/LEIA-ME.md)
-- [Simulação de isolamento multi-tenant](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/index.html) · página interativa · [sobre](../12-artefatos/paginas/simulacao-de-isolamento-multi-tenant-1ezg/LEIA-ME.md)
-- [Checklist de completude — os 4 sistemas](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/index.html) · página interativa · [sobre](../12-artefatos/paginas/checklist-de-completude-os-4-sistemas-rgjt/LEIA-ME.md)
-- [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
-
-🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
-<!-- conexoes:fim -->
+- [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md) · [trilha-engenharia-software](../07-estudo-e-carreira/trilha-engenharia-software.md) · [trilha-dados-ia](../07-estudo-e-carreira/trilha-dados-ia.md) · [fontes-de-renda-completas](../01-planejamento-geral/fontes-de-renda-completas.md)

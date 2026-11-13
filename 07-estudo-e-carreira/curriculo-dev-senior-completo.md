@@ -9,7 +9,9 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [Sumário Único](PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
 
-> **O que este documento é:** a lista completa do que você precisa dominar tecnicamente para ser **desenvolvedor sênior** na sua stack (C#/.NET 10 + TypeScript/Next.js + PostgreSQL/Redis + Docker, com Python em paralelo), no Brasil e no exterior. Cobre **todas as camadas** (fundamentos, backend, frontend, dados, arquitetura, infraestrutura, segurança, qualidade, produção) e **todas as etapas** (requisitos → design → código → teste → deploy → operação → evolução).
+> **O que este documento é:** a lista completa do que você precisa dominar tecnicamente para ser **desenvolvedor sênior** na sua stack (núcleo **TypeScript/Next.js + Python/FastAPI + PostgreSQL (Supabase)** + Docker), no Brasil e no exterior. Cobre **todas as camadas** (fundamentos, backend, frontend, dados, arquitetura, infraestrutura, segurança, qualidade, produção) e **todas as etapas** (requisitos → design → código → teste → deploy → operação → evolução).
+>
+> **Nota (13/11):** o .NET saiu do centro e virou **carta de reserva**. As seções que detalham C#/.NET/ASP.NET/CLR/GC abaixo valem só para quando você puxar essa carta (vaga corporativa ou agente fiscal) — não são mais o caminho principal. O principal é TS + Python + SQL. Fonte da verdade: [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md).
 >
 > **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [Sumário Único](PLANO-UNICO-AMtech.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
 > 1. **Auditoria:** no início de cada Passo, abra a camada correspondente e veja se nada ficou de fora.
@@ -25,8 +27,8 @@ atualizado: 2026-10-26
 | # | Camada | Etapa do ciclo |
 |---|---|---|
 | 1 | Fundamentos de computação | Base de tudo |
-| 2 | Linguagens: C#, TypeScript, Python, SQL, shell | Construção |
-| 3 | Backend .NET e ASP.NET Core | Construção |
+| 2 | Linguagens: TypeScript, Python, SQL, shell (C# = reserva) | Construção |
+| 3 | Backend TS (Next/NestJS) + Python/FastAPI (.NET = reserva) | Construção |
 | 4 | Frontend: HTML, CSS, JavaScript, TypeScript, React, Next.js | Construção |
 | 5 | Banco de dados e dados | Construção e operação |
 | 6 | Design e arquitetura de software | Design |

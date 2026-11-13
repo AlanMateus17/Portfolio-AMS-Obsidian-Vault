@@ -6,7 +6,15 @@ status: completo
 
 # AM Rendara — Documento de Projeto Final
 
-Segue a estrutura fixa definida no [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
+> **⚠️ Atualização 13/11 — agora é o módulo Financeiro do AM Gestão.** Virou o
+> módulo **Financeiro** do produto único **AM Gestão** (ver
+> [PLANO-UNICO §4](../PLANO-UNICO-AMtech.md)). Stack nova: **TypeScript + Supabase
+> (PostgreSQL) + Python** para análise. As dependências antigas em `aura-*`
+> (historico/vault/analytics) foram **arquivadas**; o que elas faziam entra como
+> biblioteca Python ou recurso do Supabase. Stack completa em
+> [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md).
+
+Segue a estrutura definida no [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
 
 ---
 

@@ -171,7 +171,7 @@ O coração é separar **produto** (o que é, de forma estável) de **item de co
 
 ## Arquitetura dentro do Aura
 
-O módulo fica dentro do repositório am-rendara, na stack fixa do Aura (.NET 10 com Controllers, Clean Architecture + DDD, PostgreSQL, Next.js). Nenhum serviço novo é criado.
+O módulo fica dentro do repositório am-rendara, na stack por problema do Aura (.NET 10 com Controllers, Clean Architecture + DDD, PostgreSQL, Next.js). Nenhum serviço novo é criado.
 
 ![arquitetura do módulo Família · 4 etapas de leitura](imagens/am-rendara-modulo-familia-plano-do-sistema-de-controle-de-gastos__1.svg)
 

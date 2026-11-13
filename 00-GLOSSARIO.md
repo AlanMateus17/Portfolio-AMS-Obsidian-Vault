@@ -15,9 +15,9 @@ atualizado: 2026-10-26
 |---|---|
 | **Algoritmo** | Uma receita passo a passo para resolver um problema |
 | **Big-O** | Jeito de dizer quanto um algoritmo fica mais lento quando os dados crescem |
-| **C#** | A sua linguagem principal, da Microsoft, usada para o "cérebro" (backend) dos sistemas |
+| **C#** | Linguagem da Microsoft; era a base do portfólio, hoje é **carta de reserva** (vaga corporativa ou agente fiscal). O núcleo agora é TypeScript + Python + SQL |
 | **C / C++** | Linguagens antigas e próximas da máquina; ensinam como a memória funciona (École 42) |
-| **Clojure** | Linguagem "funcional" pensada para o `aura-historico`; ainda em decisão |
+| **Clojure** | Era pensada para o `aura-historico`; **cortada** na nova realidade (sistema arquivado) |
 | **Estrutura de dados** | Jeito de guardar dados na memória (lista, fila, árvore, tabela de busca) |
 | **JavaScript** | A linguagem que roda no navegador |
 | **TypeScript** | JavaScript com "tipos": avisa o erro antes de rodar |

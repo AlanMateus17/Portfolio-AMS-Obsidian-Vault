@@ -76,7 +76,7 @@ atualizado: 2026-10-26
 ### Etapa 2 — Janeiro e fevereiro de 2027: primeira venda de produto
 - [ ] **Setup:** fases 13 a 15 (agenda com Pix, carnê-leão, Hotmart/Kiwify, painel de vendas).
 - [ ] **Renda:** **fase 16 — lançar o mini-curso de Lógica** (gravar 5 aulas, página, isca grátis, pré-venda, primeira venda real).
-- [ ] **Estudo:** **Passo 3** (C# + TypeScript) e começar o **bloco de Python** (1–2 h/semana).
+- [ ] **Estudo:** **Passo 3** (TypeScript + Python) e **SQL** (1–2 h/semana).
 - [ ] **Decisão:** sair da escola? **Só se** a renda extra passou de R$ 1.500/mês por 2 meses. Se não, adiar.
 - *Pronto quando:* a primeira venda do curso aconteceu e foi lançada no carnê-leão.
 

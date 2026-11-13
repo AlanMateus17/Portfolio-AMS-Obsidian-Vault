@@ -215,7 +215,7 @@ São cerca de 30 indicadores em seis grupos; os cinco que mais importam no dia a
 
 ## Arquitetura e stack
 
-O sistema cabe inteiro na stack fixa do Aura e reaproveita dois serviços que já existem: aura-copilot para a IA e aura-analytics para os cálculos pesados. Nenhum serviço novo precisa ser inventado.
+O sistema cabe inteiro na stack por problema do Aura e reaproveita dois serviços que já existem: aura-copilot para a IA e aura-analytics para os cálculos pesados. Nenhum serviço novo precisa ser inventado.
 
 ![arquitetura · do documento ao indicador](imagens/sistema-de-controle-financeiro-familiar__1.svg)
 

@@ -6,6 +6,12 @@ status: completo
 
 # AM Rotara — Documento de Projeto Final
 
+> **⚠️ Atualização 13/11 — agora é o módulo Pedidos/Entrega do AM Gestão.** Virou o
+> módulo **Pedidos/Delivery** do produto único **AM Gestão** (ver
+> [PLANO-UNICO §4](../PLANO-UNICO-AMtech.md)). Stack nova: **TypeScript + Supabase
+> (PostgreSQL + PostGIS)**. Onde o texto antigo disser .NET como base, leia a stack
+> nova em [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md).
+
 > **Nota de reconciliação:** este documento trata o AM Rotara como o sistema de logística completo (pedido, roteirização, entregador, rastreamento), distinto da "Loja Virtual" (módulo de catálogo/checkout simples, dependente do AM Kaixara) — ver seção 11. Segue a estrutura fixa definida no [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md).
 
 ---

@@ -21,7 +21,7 @@ atualizado: 2026-10-26
 
 | Módulo | Tema | Pré-requisito | Aplicação no Aura |
 |---|---|---|---|
-| **IA0** | Python para quem já sabe C# | Passo 8 | Scripts, aura-analytics |
+| **IA0** | Python do zero (base do núcleo) | Passo 8 | Scripts, análise de dados do AM Gestão |
 | **IA1** | Matemática para IA | Lins Partes III, IV, VII + Cálculo | — |
 | **IA2** | Dados e engenharia de dados | IA0 + SQL dos Passos 2/5 | Pipelines do aura-analytics |
 | **IA3** | Machine learning clássico | IA1 + IA2 | Previsão de fluxo de caixa (Rendara) |

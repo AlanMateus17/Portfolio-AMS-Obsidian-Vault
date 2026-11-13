@@ -24,7 +24,7 @@ atualizado: 2026-10-26
 | **Fundamentos** (lógica, estruturas de dados, algoritmos) | Passos 1, 3 · horizonte longo §Ciência da Computação | Big-O e estruturas de dados formalmente, junto da École 42 |
 | **Requisitos e modelagem** | Seus documentos de projeto (RF/RNF, RNFT) em `02-sistemas-de-negocio` | Histórias de usuário e critérios de aceite (já usa no EPIC-01) |
 | **Banco de dados** | Passos 2, 5, 9 | Transações e níveis de isolamento a fundo (ver §financeiro) |
-| **Construção** (C#/.NET, TypeScript, Next.js) | Passos 3–5, 7 | — |
+| **Construção** (TypeScript, Next.js, Python) | Passos 3–5, 7 | — |
 | **Qualidade e testes** | Passo 6 | Testes de propriedade para regra de dinheiro |
 | **Design e arquitetura** (SOLID, padrões, Clean Architecture, DDD) | Passos 8, 12 | DDD estratégico (contextos delimitados entre os sistemas Aura) |
 | **DevOps e produção** (CI/CD, Docker, deploy, observabilidade) | Passos 2, 6, 10, 11, 12 | — |

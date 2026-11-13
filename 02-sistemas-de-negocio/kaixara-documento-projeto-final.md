@@ -6,6 +6,13 @@ status: completo
 
 # AM Kaixara — Documento de Projeto Final
 
+> **⚠️ Atualização 13/11 — agora é o módulo PDV/Caixa do AM Gestão.** Deixou de ser
+> sistema separado: virou o módulo **Caixa (PDV)** do produto único **AM Gestão**
+> (ver [PLANO-UNICO §4](../PLANO-UNICO-AMtech.md)). Stack nova: **TypeScript +
+> Supabase (PostgreSQL) + SQLite offline**, e o **agente fiscal** (ESC/POS, gaveta,
+> TEF) em **Go ou C#**. Onde o texto antigo disser C#/.NET como base, leia a stack
+> nova em [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md).
+
 > **Nota de correção:** a primeira versão deste documento estava incompleta. Ao cruzar com o histórico completo de planejamento, faltavam o bloco de hardware/emissão fiscal (seção 2.7), o modo offline (seção 2.8) e o roadmap de deploy (seção 8) — todos já decididos anteriormente, só não tinham entrado na consolidação. Corrigido abaixo.
 
 Este é o documento único de referência do AM Kaixara: tudo que o sistema vai ter ao final do desenvolvimento, consolidado a partir de tudo que já foi decidido ao longo do planejamento (stack, arquitetura, RF/RNF, pacotes comerciais) mais o que mudou agora com a auditoria de escala e segurança financeira. Serve para você avaliar de uma vez só se é exatamente isso que você quer, em vez de garimpar em documentos espalhados.

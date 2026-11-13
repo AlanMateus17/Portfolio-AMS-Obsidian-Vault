@@ -35,7 +35,7 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 
 ## 📋 Checklist completo, na ordem certa — o que falta
 
-### Camada 1 — Fundamento do stack fixo (C#/.NET)
+### Camada 1 — Fundamento do stack por problema (C#/.NET)
 - [ ] Confirmar/instalar .NET SDK 10 (ver alerta 1 acima)
 - [ ] `dotnet-ef` (global tool, pra migration do EF Core)
 - [ ] Extensão C# Dev Kit no VS Code (se for usar VS Code em vez do Visual Studio pra parte do trabalho)

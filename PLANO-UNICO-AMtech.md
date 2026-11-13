@@ -24,21 +24,24 @@ por vez. O resto fica na fila, anotado, sem ocupar a cabeça.
 
 ---
 
-## 2. A stack (recomendação — confirmar)
+## 2. A stack (definitiva — 13/11)
 
-Dois pilares, guiados por mercado, não stack fixa:
+Núcleo **TypeScript + Python + SQL**, stack por problema, não stack fixa. Detalhe
+completo em [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md).
 
 - **TypeScript + Next.js + PostgreSQL (Supabase)** — web, SaaS, sites, tudo que
   vira renda rápido. Uma linguagem no front e no back = menos troca de contexto
   (bom para TDAH e para construir sozinho com alto volume).
 - **Python** — dados, IA e finanças. Motor de crescimento e diferencial.
 - **SQL/PostgreSQL** por baixo dos dois. **Go** para ferramentas de linha de
-  comando. **C/C++ e Rust** entram pela trilha de baixo nível (ver §3).
+  comando e o agente fiscal do PDV. **C/C++ e Rust** entram pela trilha de baixo
+  nível e robótica (ver §3).
 
-**Decisão pendente sua:** eu recomendo **tirar o .NET do centro** e usá-lo só
-quando um emprego ou cliente pagar por ele — para construir e vender produto
-rápido + IA, TS+Python abre mais portas. Como o ecossistema Aura foi desenhado em
-.NET, essa troca tem custo; **confirme antes de eu marcar como definitivo.**
+**Decisão tomada: o .NET sai do centro.** Vira carta de reserva — só quando um
+emprego ou cliente pagar por ele, ou para o agente fiscal (onde Go também serve).
+TS+Python abre mais portas para construir/vender produto + IA. O que foi
+aposentado (C# base, ASP.NET, Clojure/Datomic, SignalR, EF Core, GraphQL) está
+listado no `stack-tecnologica`.
 
 Por que isso protege da mudança de mercado: TS e Python são as duas apostas que o
 mercado menos vai abandonar (Python lidera vagas e IA; JS/TS dominam a web).
@@ -167,8 +170,8 @@ que o professor lê.
 
 ## 10. Próximo passo
 
-1. Você confirma: **(a)** a stack (tirar .NET do centro, sim/não) e **(b)** o
-   nome e os módulos do AM Gestão.
+1. ✅ Stack definida (.NET fora do centro). Falta você confirmar o **nome e os
+   módulos do AM Gestão**.
 2. Eu fecho a consolidação (este plano como fonte única + `repos.json` no
    dev-setup), você dá merge.
 3. **Montamos a rotina** com seus horários reais.
