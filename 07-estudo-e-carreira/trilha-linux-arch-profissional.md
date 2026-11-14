@@ -7,7 +7,7 @@ data: 2026-09-28
 
 # 🐧 Trilha Linux/Arch Profissional
 
-> Base de infraestrutura para dev, segurança e servidores. Cada fase termina com evidência pública (commit, README, post). O que não vira evidência não entra no currículo. Ponto de entrada do dia a dia continua sendo [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md).
+> Base de infraestrutura para dev, segurança e servidores. Cada fase termina com evidência pública (commit, README, post). O que não vira evidência não entra no currículo. Ponto de entrada do dia a dia continua sendo [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md).
 
 **Regra de foco:** uma fase por vez. Repositório único desde o dia 1: `AlanMateus17/dotfiles`, que recebe configs, scripts e notas de todas as fases.
 

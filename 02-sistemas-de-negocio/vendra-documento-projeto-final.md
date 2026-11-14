@@ -8,7 +8,7 @@ status: completo
 
 > **⚠️ Atualização 13/11 — agora é o módulo Loja do AM Gestão.** Deixou de ser sistema
 > separado: é o módulo **Loja online** do produto único **AM Gestão**, acoplado ao
-> módulo **Caixa** (antes "AM Kaixara"). Onde o texto disser "AM Kaixara", leia
+> módulo **Caixa** (antes "módulo Caixa"). Onde o texto disser "módulo Caixa", leia
 > "módulo Caixa"; onde disser ".NET/C#", leia a stack nova em
 > [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) (TS + Supabase).
 
@@ -18,29 +18,29 @@ Segue a estrutura do [template-documento-projeto-final](../01-planejamento-geral
 
 ## 1. Visão do produto
 
-Módulo de e-commerce **dependente do AM Kaixara** — nunca um produto autônomo. O AM Kaixara é a fonte única de verdade de produto, preço e estoque; a Loja Virtual nunca mantém cópia própria divergente. Um pedido pago na Loja Virtual gera automaticamente uma venda no AM Kaixara, com o mesmo débito de estoque de uma venda de balcão.
+Módulo de e-commerce **dependente do módulo Caixa** — nunca um produto autônomo. O módulo Caixa é a fonte única de verdade de produto, preço e estoque; a Loja Virtual nunca mantém cópia própria divergente. Um pedido pago na Loja Virtual gera automaticamente uma venda no módulo Caixa, com o mesmo débito de estoque de uma venda de balcão.
 
-**Por que dependente, e não autônomo — decisão de modelo de negócio, não só técnica:** isso reforça a venda do AM Kaixara como base do portfólio, e a Loja Virtual como upsell natural. Se o lojista não usa o AM Kaixara, a Loja Virtual não funciona sozinha.
+**Por que dependente, e não autônomo — decisão de modelo de negócio, não só técnica:** isso reforça a venda do módulo Caixa como base do portfólio, e a Loja Virtual como upsell natural. Se o lojista não usa o módulo Caixa, a Loja Virtual não funciona sozinha.
 
-**Diferencial de inovação:** diferente de plataforma de e-commerce genérica (Nuvemshop, Loja Integrada), aqui não existe risco de estoque divergir entre canal físico e online — é o mesmo problema estrutural que o AM Rotara resolve, aplicado a e-commerce puro em vez de logística de entrega.
+**Diferencial de inovação:** diferente de plataforma de e-commerce genérica (Nuvemshop, Loja Integrada), aqui não existe risco de estoque divergir entre canal físico e online — é o mesmo problema estrutural que o módulo Pedidos resolve, aplicado a e-commerce puro em vez de logística de entrega.
 
 ---
 
 ## 2. Funcionalidades completas (estado final)
 
 ### 2.1 Catálogo e checkout
-- Catálogo público conectado ao AM Kaixara (leitura de produto/estoque em tempo real)
+- Catálogo público conectado ao módulo Caixa (leitura de produto/estoque em tempo real)
 - Checkout com pagamento online
 
-### 2.2 Integração com o AM Kaixara
-- Pedido pago gera venda automática no AM Kaixara, com o mesmo débito de estoque de uma venda de balcão
+### 2.2 Integração com o módulo Caixa
+- Pedido pago gera venda automática no módulo Caixa, com o mesmo débito de estoque de uma venda de balcão
 - Painel de gestão de pedido para o lojista
 
 ### 2.3 Rastreamento
-- Rastreamento de entrega em tempo real — reaproveitando a mesma infraestrutura de geolocalização/notificação do AM Rotara quando o lojista também usa esse sistema; para lojista sem Delivery, rastreamento fica limitado a status simples (postado/entregue), sem geolocalização ao vivo
+- Rastreamento de entrega em tempo real — reaproveitando a mesma infraestrutura de geolocalização/notificação do módulo Pedidos quando o lojista também usa esse sistema; para lojista sem Delivery, rastreamento fica limitado a status simples (postado/entregue), sem geolocalização ao vivo
 
-### 2.4 Reaproveitamento por outros sistemas
-- É a base de "loja online" reaproveitada pelo AM Consertta (seção 1.3 daquele documento) e candidata a reaproveitamento futuro pelo AuraVet (loja de produtos veterinários)
+### 2.4 Reaproveitamento por outros módulos
+- É a base de "loja online" do módulo Loja do AM Gestão
 
 ---
 
@@ -48,25 +48,25 @@ Módulo de e-commerce **dependente do AM Kaixara** — nunca um produto autônom
 
 | ID | Requisito | Para que serve |
 |---|---|---|
-| RF01 | Catálogo público deve refletir produto/estoque do AM Kaixara em tempo real, sem cópia própria divergente | É o requisito central que evita o problema mais comum de e-commerce integrado a PDV: dessincronia |
-| RF02 | Pedido pago deve gerar venda automática no AM Kaixara, com débito de estoque idêntico ao de balcão | Garante que o estoque nunca diverge entre canal, sem exigir sincronização manual |
+| RF01 | Catálogo público deve refletir produto/estoque do módulo Caixa em tempo real, sem cópia própria divergente | É o requisito central que evita o problema mais comum de e-commerce integrado a PDV: dessincronia |
+| RF02 | Pedido pago deve gerar venda automática no módulo Caixa, com débito de estoque idêntico ao de balcão | Garante que o estoque nunca diverge entre canal, sem exigir sincronização manual |
 | RF03 | Painel de gestão de pedido para o lojista (aceitar, preparar, marcar como enviado) | Dá controle operacional sem depender de você como intermediário |
-| RF04 | Rastreamento de entrega — completo se o lojista também usa o AM Rotara, básico (status simples) caso contrário | Não trava o lojista sem Delivery, mas oferece experiência superior a quem tem os dois produtos |
-| RF05 | Sistema deve recusar operar sem uma conta AM Kaixara ativa vinculada | Reforça a decisão de modelo de negócio de dependência — Loja Virtual nunca deve funcionar isolada |
+| RF04 | Rastreamento de entrega — completo se o lojista também usa o módulo Pedidos, básico (status simples) caso contrário | Não trava o lojista sem Delivery, mas oferece experiência superior a quem tem os dois produtos |
+| RF05 | Sistema deve recusar operar sem uma conta módulo Caixa ativa vinculada | Reforça a decisão de modelo de negócio de dependência — Loja Virtual nunca deve funcionar isolada |
 
 ---
 
 ## 4. Sistemas e interfaces paralelas por perfil de usuário
 
 ### 4.1 Cliente final (comprador)
-- **Cadastro:** self-service ou checkout como convidado (mesma decisão pendente já registrada no AM Rotara — vale decidir uma vez, aplicada aos dois)
+- **Cadastro:** self-service ou checkout como convidado (mesma decisão pendente já registrada no módulo Pedidos — vale decidir uma vez, aplicada aos dois)
 - **Uso:** navega catálogo, compra, acompanha pedido
-- **Suporte:** canal do lojista, não do Grupo AMtech diretamente — mesma lógica do operador de caixa do AM Kaixara
+- **Suporte:** canal do lojista, não do Grupo AMtech diretamente — mesma lógica do operador de caixa do módulo Caixa
 
-### 4.2 Lojista (já usuário do AM Kaixara)
-- **Cadastro:** não tem cadastro próprio — é uma extensão da conta AM Kaixara existente, ativada via `aura-licensing`
+### 4.2 Lojista (já usuário do módulo Caixa)
+- **Cadastro:** não tem cadastro próprio — é uma extensão da conta módulo Caixa existente, ativada via licenciamento do AM Gestão
 - **Uso:** painel de gestão de pedido (RF03)
-- **Suporte:** canal com o Grupo AMtech Digital, mesma lacuna do AM Kaixara (seção 3.2 daquele documento)
+- **Suporte:** canal com o Grupo AMtech Digital, mesma lacuna do módulo Caixa (seção 3.2 daquele documento)
 
 ### 4.3 Suporte técnico interno
 - Mesma lacuna recorrente do portfólio inteiro.
@@ -77,7 +77,7 @@ Módulo de e-commerce **dependente do AM Kaixara** — nunca um produto autônom
 
 | ID | Aplicação na Loja Virtual | Para que serve |
 |---|---|---|
-| RNFT-E01 (concorrência de estoque) | Direto — pedido na Loja Virtual decrementa o mesmo estoque do AM Kaixara, mesmo risco multicanal já mapeado em todo o portfólio | Impede vender o mesmo item por dois canais ao mesmo tempo |
+| RNFT-E01 (concorrência de estoque) | Direto — pedido na Loja Virtual decrementa o mesmo estoque do módulo Caixa, mesmo risco multicanal já mapeado em todo o portfólio | Impede vender o mesmo item por dois canais ao mesmo tempo |
 | RNFT-E02 (idempotência de pagamento) | Processa pagamento online | Evita cobrança duplicada em reenvio de webhook |
 | RNFT-E03 (fila para picos) | Relevante em campanha promocional do lojista | Evita que checkout trave inteiro por lentidão em etapa não crítica |
 | RNFT06 (LGPD) | Dado de cliente comprador, endereço de entrega | Cumpre obrigação legal |
@@ -88,21 +88,21 @@ Módulo de e-commerce **dependente do AM Kaixara** — nunca um produto autônom
 
 | Categoria | Aplicação específica na Loja Virtual |
 |---|---|
-| Consistência de estoque | Mesmo cuidado já aplicado no AM Kaixara/AM Consertta/Delivery — reforçado aqui porque é o quarto canal disputando o mesmo estoque |
+| Consistência de estoque | Mesmo cuidado já aplicado no módulo Caixa/Pedidos — reforçado aqui porque é o quarto canal disputando o mesmo estoque |
 | Dados | Dado de pagamento nunca armazenado diretamente — sempre via gateway, mesmo padrão do restante do portfólio |
-| Auditoria externa | Prioridade equivalente ao AM Kaixara, dado que processa pagamento e depende do mesmo estoque crítico |
+| Auditoria externa | Prioridade equivalente ao módulo Caixa, dado que processa pagamento e depende do mesmo estoque crítico |
 
 ---
 
 ## 7. Hardware, instalador e distribuição
 
-**Não aplicável.** SaaS puro (módulo web), sem componente físico. Ativado como módulo adicional dentro do pacote comercial do AM Kaixara via `aura-licensing`, nunca vendido isoladamente (reforça RF05).
+**Não aplicável.** SaaS puro (módulo web), sem componente físico. Ativado como módulo adicional dentro do pacote comercial do módulo Caixa via licenciamento do AM Gestão, nunca vendido isoladamente (reforça RF05).
 
 ---
 
 ## 8. Deploy e CI/CD
 
-Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml`, pipeline GitHub Actions. Por ser módulo dependente, o deploy deveria estar versionado em conjunto com o do AM Kaixara, evitando incompatibilidade de versão entre os dois.
+Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml`, pipeline GitHub Actions. Por ser módulo dependente, o deploy deveria estar versionado em conjunto com o do módulo Caixa, evitando incompatibilidade de versão entre os dois.
 
 ---
 
@@ -111,10 +111,10 @@ Mesmo padrão do restante — Dockerfile multi-stage, `docker-compose.yml`, pipe
 | Fonte | Modelo |
 |---|---|
 | Comissão por pedido online | Percentual sobre cada venda feita pela Loja Virtual |
-| Taxa de entrega | Repassada ou compartilhada entre lojista e entregador, quando integrado ao AM Rotara |
-| Módulo dentro do plano "Integrado" do AM Kaixara | Não é vendido isoladamente — é upsell natural de quem já usa o AM Kaixara, ativado via `aura-licensing` |
+| Taxa de entrega | Repassada ou compartilhada entre lojista e entregador, quando integrado ao módulo Pedidos |
+| Módulo dentro do plano "Integrado" do módulo Caixa | Não é vendido isoladamente — é upsell natural de quem já usa o módulo Caixa, ativado via licenciamento do AM Gestão |
 
-Diferente de quase todo o resto do portfólio, este documento **não lista forma de venda B2B fora do ecossistema** — a decisão de dependência do AM Kaixara (seção 1) torna isso estruturalmente incoerente com o modelo de negócio já definido.
+Diferente de quase todo o resto do portfólio, este documento **não lista forma de venda B2B fora do AM Gestão** — a decisão de dependência do módulo Caixa (seção 1) torna isso estruturalmente incoerente com o modelo de negócio já definido.
 
 ---
 
@@ -126,8 +126,8 @@ Diferente de quase todo o resto do portfólio, este documento **não lista forma
 
 ## 11. Pendências e decisões em aberto
 
-1. **Checkout como convidado vs. conta obrigatória** — mesma decisão do AM Rotara, recomendo decidir uma vez para os dois.
-2. **Comportamento de rastreamento para lojista sem AM Rotara** (RF04) — o "status simples" precisa ser especificado com mais detalhe.
-3. **Versionamento conjunto com o AM Kaixara** (seção 8) — decisão de processo de deploy ainda não formalizada.
-4. **Reaproveitamento futuro pelo AuraVet** (seção 2.4) — mencionado como candidato, não decidido.
-5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o `aura-support`, já formalizado como serviço compartilhado.
+1. **Checkout como convidado vs. conta obrigatória** — mesma decisão do módulo Pedidos, recomendo decidir uma vez para os dois.
+2. **Comportamento de rastreamento para lojista sem módulo Pedidos** (RF04) — o "status simples" precisa ser especificado com mais detalhe.
+3. **Versionamento conjunto com o módulo Caixa** (seção 8) — decisão de processo de deploy ainda não formalizada.
+4. **Reaproveitamento entre módulos** (seção 2.4) — a detalhar.
+5. **Painel de suporte técnico interno** — RESOLVIDO: reaproveita o suporte do AM Gestão, já formalizado como serviço compartilhado.

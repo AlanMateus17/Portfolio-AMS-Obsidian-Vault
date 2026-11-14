@@ -10,7 +10,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AM Kaixara — Frontend: Documento Único
+# módulo Caixa — Frontend: Documento Único
 ### Discovery → Arquitetura da Informação → Design System → UI → Prototipação → Engenharia → Acessibilidade → QA → Performance → Segurança → Lançamento (11 etapas)
 ### Substitui os 5 documentos anteriores de frontend, com as correções já integradas ao raciocínio, não em anexo separado
 
@@ -39,7 +39,7 @@ status: completo
 
 ### 1.4 Análise competitiva — **correção: seção nova, não existia antes**
 
-| Concorrente | Ponto forte | Ponto fraco | Brecha real pro AM Kaixara |
+| Concorrente | Ponto forte | Ponto fraco | Brecha real pro módulo Caixa |
 |---|---|---|---|
 | Sistema genérico de mercado (ex: Superlógica e afins) | Robusto, muitos recursos | Contrato pesado, onboarding lento, não pensado pra velocidade de operação | Venda direta ao pequeno lojista, sem venda consultiva, com foco em velocidade de uso, não em quantidade de funcionalidade |
 | Caderno/planilha (o "concorrente" mais comum de verdade) | Zero custo, zero curva de aprendizado | Sem controle de estoque real, sem histórico confiável, erro humano constante | Substituir com curva de aprendizado baixa o suficiente pra competir com "não ter sistema nenhum" |
@@ -219,7 +219,7 @@ Erro, sucesso, alerta e informação **sempre fixas**, nunca personalizáveis po
 
 Tudo até a seção 3.8 cobre cor **estática** (primária, neutro, semântica fixa). Elemento que muda de estado em tempo real — badge, gráfico, indicador de conexão — nunca tinha cor formalizada, e cada demonstração visual inventava valor novo sem virar padrão.
 
-**Paleta de visualização de dado (gráfico com múltiplas séries)** — usada em qualquer dashboard do portfólio, não só AM Kaixara:
+**Paleta de visualização de dado (gráfico com múltiplas séries)** — usada em qualquer dashboard do portfólio, não só módulo Caixa:
 | Token | Valor hex |
 |---|---|
 | `--viz-1` | `#B08D57` (dourado — série principal) |
@@ -268,7 +268,7 @@ Ordem fixa — a primeira série de qualquer gráfico novo usa sempre `--viz-1`,
 
 ## ETAPA 4 — Design Visual e Usabilidade
 
-### 4.1 Heurísticas de Nielsen aplicadas ao AM Kaixara
+### 4.1 Heurísticas de Nielsen aplicadas ao módulo Caixa
 
 | Heurística | Aplicação concreta |
 |---|---|
@@ -402,8 +402,8 @@ O cliente HTTP não é escrito manualmente endpoint por endpoint — é **gerado
 ### 6.5 Carregamento de tema por tenant em runtime — correção: não especificado antes
 Ao abrir o sistema, antes de renderizar qualquer tela: identificar o tenant (por subdomínio, ex: `lojadojoao.kaixara.com`, ou por token já autenticado) → buscar a configuração de tema daquele tenant (cor de marca, logo) → aplicar os tokens (RNFT-D) antes da primeira renderização visível, evitando "flash" de tema padrão trocando pro tema real um instante depois.
 
-### 6.6 Feature flag ligado ao `aura-licensing` — correção: não especificado antes
-O menu de navegação (Etapa 2.5) não é fixo — cada item consulta se o módulo correspondente está ativo pro tenant (via `aura-licensing`) antes de aparecer. Um tenant sem o módulo de Dashboard avançado, por exemplo, simplesmente não vê esse item no menu — não é "aparece desabilitado", é "não aparece", evitando poluição visual com funcionalidade que o cliente não contratou.
+### 6.6 Feature flag ligado ao licenciamento do AM Gestão — correção: não especificado antes
+O menu de navegação (Etapa 2.5) não é fixo — cada item consulta se o módulo correspondente está ativo pro tenant (via licenciamento do AM Gestão) antes de aparecer. Um tenant sem o módulo de Dashboard avançado, por exemplo, simplesmente não vê esse item no menu — não é "aparece desabilitado", é "não aparece", evitando poluição visual com funcionalidade que o cliente não contratou.
 
 ### ✅ Checklist de execução — Etapa 6
 - [ ] Configurar TanStack Query com tempo de cache padrão definido (não usar o default genérico sem pensar)
@@ -413,7 +413,7 @@ O menu de navegação (Etapa 2.5) não é fixo — cada item consulta se o módu
 - [ ] Implementar modo escuro só depois do modo claro estar 100% consistente — não construir os dois em paralelo
 - [ ] Configurar geração automática do cliente de API a partir do OpenAPI, nunca escrever chamada HTTP manual
 - [ ] Implementar a busca de configuração de tema antes da primeira renderização (evitar flash de tema padrão)
-- [ ] Implementar o menu condicional por módulo ativo (`aura-licensing`), testado com pelo menos 2 combinações de módulo diferentes
+- [ ] Implementar o menu condicional por módulo ativo (licenciamento do AM Gestão), testado com pelo menos 2 combinações de módulo diferentes
 
 ---
 
@@ -493,7 +493,7 @@ URL da API, chave pública de serviço externo — tudo via variável de ambient
 Se um deploy novo quebrar algo visualmente (diferente de bug de backend), o rollback do frontend precisa ser independente do rollback de backend — os dois podem falhar em momentos diferentes, não devem estar acoplados um ao outro.
 
 ### 11.5 Instrumentação e telemetria — fecha o ciclo aberto na Etapa 1.8
-As métricas de sucesso definidas no Discovery (tempo médio de venda, taxa de erro de caixa, tempo de recuperação offline) só existem de verdade se forem **medidas em produção**, não só aspiração de design. Ferramenta leve e gratuita (ex: Plausible self-hosted, ou evento customizado registrado via `aura-historico` já existente no backend) capturando: tempo entre abertura do PDV e confirmação de venda, ocorrência de erro de concorrência de estoque, tempo entre queda e recuperação de conexão.
+As métricas de sucesso definidas no Discovery (tempo médio de venda, taxa de erro de caixa, tempo de recuperação offline) só existem de verdade se forem **medidas em produção**, não só aspiração de design. Ferramenta leve e gratuita (ex: Plausible self-hosted, ou evento customizado registrado via histórico (append-only no Postgres) já existente no backend) capturando: tempo entre abertura do PDV e confirmação de venda, ocorrência de erro de concorrência de estoque, tempo entre queda e recuperação de conexão.
 
 ### ✅ Checklist de execução — Etapa 11
 - [ ] Configurar CDN pra asset estático, separado do conteúdo dinâmico
@@ -506,7 +506,7 @@ As métricas de sucesso definidas no Discovery (tempo médio de venda, taxa de e
 
 ## Definition of Done — critério de aceite geral do frontend
 
-O frontend do AM Kaixara está pronto pra apresentação quando, e só quando:
+O frontend do módulo Caixa está pronto pra apresentação quando, e só quando:
 
 - [ ] As 11 etapas têm todo checklist de execução marcado
 - [ ] O fluxo crítico (2.2) passa no teste de usabilidade com pelo menos 4 de 5 pessoas (5.4)
@@ -535,10 +535,10 @@ Substitui a necessidade de navegar entre 5 documentos separados — o raciocíni
 - [Aura Design System (Design System)](../12-artefatos/tipados/aura-design-system) · projeto (design/painel) · [sobre](../12-artefatos/tipados/aura-design-system/LEIA-ME.md)
 - [Portfólio — 3 direções visuais](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-3-direcoes-visuais-5wzl/LEIA-ME.md)
 
-**AM Kaixara**
+**módulo Caixa**
 
-- [AM Kaixara](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
-- [AM Kaixara — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
+- [módulo Caixa](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
+- [módulo Caixa — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
 - [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
 
 🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)

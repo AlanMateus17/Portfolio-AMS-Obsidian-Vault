@@ -7,7 +7,7 @@ status: completo
 # Infraestrutura Física — Arquitetura de 10 Anos
 ### Trazido de uma conversa anterior (13/08/2026) — 11 camadas, cada uma só ativa quando a frente de renda correspondente começar de verdade
 
-> **Critério geral por trás de tudo isso:** tecnologia madura e "chata" (boring tech) — LTS, padrões abertos, pouca dependência de vendor — porque é isso que sobrevive 10 anos só com manutenção, sem precisar reescrever nada. Diferente do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) (que é sobre o que estudar), este documento é sobre **o que comprar e configurar fisicamente**, e quando.
+> **Critério geral por trás de tudo isso:** tecnologia madura e "chata" (boring tech) — LTS, padrões abertos, pouca dependência de vendor — porque é isso que sobrevive 10 anos só com manutenção, sem precisar reescrever nada. Diferente do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md) (que é sobre o que estudar), este documento é sobre **o que comprar e configurar fisicamente**, e quando.
 
 ---
 
@@ -22,7 +22,7 @@ status: completo
 | 5 | Produção | Onde os SaaS ficam no ar gerando renda |
 | 6 | Segurança | Protege senhas e acessos de tudo |
 | 7 | Estudos | Matemática, idiomas, currículo pessoal |
-| 8 | Assistência Técnica | Reparo de celular/computador (AM Consertta) |
+| 8 | Assistência Técnica | Reparo de celular/computador |
 | 9 | Oficina Automotiva | Auto elétrica e som automotivo |
 | 10 | Robótica e IoT | Robôs para casa, empresa e propriedades rurais |
 | 11 | Infoprodutos | Cursos, ebooks, conteúdo pago |
@@ -78,7 +78,7 @@ Aqui não vale self-host total — é onde entra renda de verdade, precisa de up
 - Obsidian + Anki, sincronizados via NAS
 - O sistema de currículo (Topics/Subtopics/Exercises) pode rodar como mais um container na própria infra
 
-## Camada 8 — Assistência Técnica (AM Consertta)
+## Camada 8 — Assistência Técnica
 
 - Repositório de ISOs no NAS
 - Rede isolada (VLAN da Camada 2) — dispositivo de cliente nunca toca a rede de dev
@@ -109,9 +109,9 @@ Auto elétrica e som automotivo. Kit próprio, separado do resto — não compar
 | 1 | Mês 1–2 | Estação de trabalho + rede básica (Camadas 1 e 2) |
 | 2 | Mês 2–4 | NAS + backup 3-2-1 + gestão documental (Camada 3) |
 | 3 | Mês 3–6 | Ambiente de dev padronizado (Camada 4) |
-| 4 | Mês 6+ | Produção — VPS, AM Kaixara, AM Rendara (Camada 5) |
+| 4 | Mês 6+ | Produção — VPS, módulo Caixa, módulo Financeiro (Camada 5) |
 | Paralelo | Desde o início | Segurança (6) e Estudos (7) |
-| Ao abrir assistência técnica | Sob demanda | VLAN dedicada + AM Consertta (Camada 8) |
+| Ao abrir assistência técnica | Sob demanda | VLAN dedicada (Camada 8) |
 | Ao terminar curso de auto elétrica | Sob demanda | Oficina automotiva (Camada 9) |
 | Ao iniciar projeto de robótica/agro | Sob demanda | Robótica e IoT (Camada 10) |
 | Ao decidir gravar o 1º curso | Sob demanda | Infoprodutos (Camada 11) |
@@ -155,7 +155,7 @@ Montar infraestrutura é divertido e vicia — mas infraestrutura não gera rend
 ## 🔗 Documentos relacionados
 - [setup-ambiente-trabalho-final](../06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md) — a fatia de software desta arquitetura (Camada 4), já em execução no notebook atual
 - [estrutura-juridica-amtech](estrutura-juridica-amtech.md) — a gestão fiscal transversal citada na tabela de fases
-- [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) — as frentes de renda que disparam cada camada sob demanda
+- [plano-mestre-frentes-alan](../99-arquivo/planos-antigos/plano-mestre-frentes-alan.md) — as frentes de renda que disparam cada camada sob demanda
 
 ---
 

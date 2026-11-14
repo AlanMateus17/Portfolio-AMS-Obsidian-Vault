@@ -103,8 +103,8 @@ O que cada atividade exige por lei, para você ou para alguém da sua empresa:
 > Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
 
 - [Meu progresso financeiro (Dashboard)](../12-artefatos/tipados/meu-progresso-financeiro) · projeto (design/painel) · [sobre](../12-artefatos/tipados/meu-progresso-financeiro/LEIA-ME.md)
-- [Teste BESST da B3: Barsi, Bazin, Buffett e ARCA](../12-artefatos/documentos/teste-besst-da-b3-barsi-bazin-buffett-e-arca/Teste%20BESST%20da%20B3%20Barsi,%20Bazin,%20Buffett%20e%20ARCA.md)
-- [Teste BESST — Dados e cálculos](../12-artefatos/documentos/teste-besst-da-b3-barsi-bazin-buffett-e-arca/Dados%20e%20cálculos.md)
+- Teste BESST da B3: Barsi, Bazin, Buffett e ARCA
+- Teste BESST — Dados e cálculos
 - [Exercício: Fluxograma do Preço-Teto (Barsi, Bazin e ARCA)](../12-artefatos/documentos/exercicio-fluxograma-do-preco-teto-barsi-bazin-e-arca.md)
 - [Caixa da Casa 2 (versão de 17/10) · cópia 5hzp](../12-artefatos/paginas/caixa-da-casa-2-5hzp/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-2-5hzp/LEIA-ME.md)
 - [Caixa da Casa 2 (versão de 17/10) · cópia t7mj](../12-artefatos/paginas/caixa-da-casa-2-t7mj/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-2-t7mj/LEIA-ME.md)

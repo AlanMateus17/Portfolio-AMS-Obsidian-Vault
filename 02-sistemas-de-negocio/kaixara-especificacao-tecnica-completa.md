@@ -4,7 +4,7 @@ tipo: sistema-negocio
 status: completo
 ---
 
-# AM Kaixara — Especificação Técnica Completa
+# módulo Caixa — Especificação Técnica Completa
 ### Nível arquiteto/staff engineer — modelo de dados, contrato de API, fluxos, padrões de erro, threat model
 
 ---
@@ -123,8 +123,8 @@ Isso substitui a mensagem genérica "Erro 400" por erro estruturado, legível po
 4. Se QUALQUER update afetar 0 linhas → ROLLBACK, retorna 409 (Problem Details acima)
 5. Se todos afetarem 1 linha → grava venda.status = 'confirmada', COMMIT
 6. Publica evento VendaConfirmada (fila assíncrona, RNFT-E03) para:
-     - aura-notifications (avisar operador/gerente)
-     - aura-historico (auditoria)
+     - notificações (avisar operador/gerente)
+     - histórico (append-only no Postgres) (auditoria)
 7. Retorna 200 pro frontend com o recibo
 ```
 
@@ -144,7 +144,7 @@ Esse é o desenho exato que faz o RNFT-E01 funcionar na prática, não só o con
      - API real aplica o mesmo fluxo da seção 3 pra cada venda do lote
      - Se der conflito de estoque numa venda offline (vendeu mais do que existia, porque
        duas filiais venderam offline ao mesmo tempo): venda entra em status "confirmada com
-       divergência", sinalizada pro `aura-support` resolver manualmente — não trava a fila inteira
+       divergência", sinalizada pro suporte do AM Gestão resolver manualmente — não trava a fila inteira
 6. Confirmação de sincronização volta pro agente, remove da fila local
 ```
 
@@ -160,13 +160,13 @@ Esse é o desenho exato que faz o RNFT-E01 funcionar na prática, não só o con
 
 ---
 
-## 6. Threat Model (STRIDE aplicado ao AM Kaixara)
+## 6. Threat Model (STRIDE aplicado ao módulo Caixa)
 
-| Categoria STRIDE | Ameaça específica do AM Kaixara | Mitigação já prevista |
+| Categoria STRIDE | Ameaça específica do módulo Caixa | Mitigação já prevista |
 |---|---|---|
 | **S**poofing | Alguém se passar por outro operador | JWT assinado + BCrypt (RF01) |
 | **T**ampering | Manipular `row_version` pra burlar concorrência | Validação sempre no banco (WHERE clause), nunca confiar em valor vindo do cliente |
-| **R**epudiation | Operador negar ter cancelado uma venda | Log de auditoria via `aura-historico`, com identidade de quem executou cada ação |
+| **R**epudiation | Operador negar ter cancelado uma venda | Log de auditoria via histórico (append-only no Postgres), com identidade de quem executou cada ação |
 | **I**nformation Disclosure | Vazamento de preço de custo ou dado de outro tenant | RLS por `tenant_id` no banco, nunca só filtro em nível de aplicação |
 | **D**enial of Service | Rajada de requisição de venda derrubando o serviço | Rate limiting (RNFT-S) + fila assíncrona (RNFT-E03) absorvendo pico |
 | **E**levation of Privilege | Operador de caixa acessando rota de gerente | `[Authorize(Roles = "Gerente")]` verificado no backend, nunca só escondido no frontend |
@@ -191,8 +191,8 @@ Documentar esses cinco agora seria o mesmo erro já corrigido antes nesta conver
 
 > Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
 
-- [AM Kaixara](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
-- [AM Kaixara — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
+- [módulo Caixa](../12-artefatos/paginas/am-kaixara-t2ww/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-t2ww/LEIA-ME.md)
+- [módulo Caixa — Ficha técnica](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/index.html) · página interativa · [sobre](../12-artefatos/paginas/am-kaixara-ficha-tecnica-3kar/LEIA-ME.md)
 - [Lucro por Venda](../12-artefatos/paginas/lucro-por-venda-bxgr/index.html) · página interativa · [sobre](../12-artefatos/paginas/lucro-por-venda-bxgr/LEIA-ME.md)
 
 🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)

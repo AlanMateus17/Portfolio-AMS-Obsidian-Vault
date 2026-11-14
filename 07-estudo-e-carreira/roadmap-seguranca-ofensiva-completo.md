@@ -131,7 +131,7 @@ Fingerprinting (wafw00f), encoding bypass (URL simples/duplo, Unicode, HTML enti
 > [!important] Regra de ouro
 > Autorização verbal não tem valor legal no Brasil. Sempre escrito, sempre assinado, sempre guardado.
 >
-> **Conexão:** isso se conecta com a Fase 0 jurídica que o [projeta-documento-projeto-final](../02-sistemas-de-negocio/projeta-documento-projeto-final.md) e o AM Canteira/AM Saberia já preveem — a mesma disciplina de contrato e LGPD vale para prestar serviço de pentest.
+> **Conexão:** isso se conecta com a Fase 0 jurídica que o [projeta-documento-projeto-final](../99-arquivo/sistemas-antigos/projeta-documento-projeto-final.md) e o AM Canteira/AM Saberia já preveem — a mesma disciplina de contrato e LGPD vale para prestar serviço de pentest.
 
 ## 1.9 Relatório de Pentest
 Executive Summary (linguagem de negócio), Escopo/Metodologia, Sumário de Risco (CVSS v3.1), Findings (título, severidade, evidência, impacto, recomendação, referências), Narrativa de Ataque, Roadmap de Remediação, Apêndices. Ferramentas: Sysreptor, Ghostwriter, Dradis, PlexTrac.

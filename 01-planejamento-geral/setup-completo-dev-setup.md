@@ -7,7 +7,7 @@ atualizado: 2026-10-26
 
 # 🖥️ O Setup Completo — Projeto e Planejamento
 
-> Todos os passos do setup estão no [Plano Mestre](PLANO-UNICO-AMtech.md) com códigos `S-…`, distribuídos nas mesmas etapas do estudo.
+> Todos os passos do setup estão no [Plano Mestre](../PLANO-UNICO-AMtech.md) com códigos `S-…`, distribuídos nas mesmas etapas do estudo.
 
 > **Em palavras simples:** "setup" é tudo o que você usa para trabalhar: o notebook, os programas, as contas, as automações e os sistemas que fazem o trabalho repetitivo por você. O seu setup foi planejado para **três coisas ao mesmo tempo**: estudar para ser dev sênior, produzir conteúdo e aulas, e **vender** (cursos, sites, serviços). Ele está documentado num repositório privado chamado **`dev-setup`**, com scripts que instalam e conferem tudo.
 >
@@ -21,10 +21,10 @@ atualizado: 2026-10-26
 
 | Peça | O que é, em palavras simples |
 |---|---|
-| **Mapa do ecossistema** (`ecossistema.json`) | Desenho de tudo: **326 blocos** (cada programa, conta, serviço ou sistema) ligados por **609 conexões**, em **23 camadas** |
+| **Mapa do AM Gestão** (`ecossistema.json`) | Desenho de tudo: **326 blocos** (cada programa, conta, serviço ou sistema) ligados por **609 conexões**, em **23 camadas** |
 | **Roteiro de implantação** (`implantacao.json`) | A receita, em ordem: **34 fases e 253 passos**, cada passo com "pronto quando" e "quem faz" |
 | **Acompanhamento** (`acompanhamento.html`) | A página onde você marca o que já fez. Tem o filtro **"Só o que dá para fazer hoje"** (168 passos só com o notebook e contas grátis) |
-| **Portfólio** (`portfolio.json`) | As **47 ofertas** de renda, pontuadas — detalhadas em [fontes-de-renda-completas](fontes-de-renda-completas.md) |
+| **Portfólio** (`portfolio.json`) | As **47 ofertas** de renda, pontuadas — detalhadas em [fontes-de-renda-completas](../99-arquivo/planos-antigos/fontes-de-renda-completas.md) |
 | **Negócios** (`negocios.json`) | Os números dos **9 negócios de Barbacena**, com simulador |
 | **Scripts do Windows** | `diagnostico.ps1` (só lê o notebook), instalador, verificador, e o atalho `RODAR-DIAGNOSTICO.cmd` (duplo clique) |
 | **Scripts do Linux (WSL)** | `bootstrap.sh` (instala linguagens e ferramentas), cofre, laboratório de IA, nuvem, verificador |
@@ -68,14 +68,14 @@ atualizado: 2026-10-26
 | 15 | Vendas medidas | Cada venda chega sozinha ao banco e aparece no painel de lucro. | Semana 11 · jan/2027 | `S-tunel` |
 | 16 | Teste do núcleo | Os três testes de ponta a ponta passam: daqui em diante, alimentar o sistema já faz tudo sozinho. | Semana 11 · jan/2027 | `S-teste-dev` |
 | 17 | Primeira venda: o mini-curso no ar | A primeira venda real pela internet, com entrega, suporte, imposto e números no painel. | Semanas 12 a 15 · jan a fev/2027 | `S-mc-roteiro` |
-| 18 | Base dos sistemas AM | Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy. | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 | `S-template-aura` |
-| 19 | Nuvem e deploy | As contas de nuvem criadas por código, com custo sob controle. | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028) | `S-nuvem-clis` |
+| 18 | Base dos módulos do AM Gestão | Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy. | Junto dos Passos 4 a 6 da trilha de estudo (≈ mar a jun/2027): o modelo nasce no Passo 4 (API e login) e ganha testes e qualidade no Passo 6 | `S-template-aura` |
+| 19 | Nuvem e deploy | As contas de nuvem criadas por código, com custo sob controle. | Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do módulo Caixa é o Passo 10 (≈ 2028) | `S-nuvem-clis` |
 | 20 | Editora | O livro sai de um repositório com CI, pronto para virar PDF, EPUB e impressão. | Quando o capítulo 1 estiver pronto · ⏸ espera: O capítulo 1 e o seu modelo de criação prontos | `S-modelo-metodo` |
 | 21 | Dados, IA e pendrives | O laboratório de dados e de treino no ar, um modelo seu rodando no Ollama e os pendrives de Kali e Arch dando boot. | Pendrives, GPU e laboratório a partir da semana 2; Zoomcamp, dbt e Airflow junto do IA2 da Trilha de Dados e IA do vault (depois do Passo 8, ≈ 2028); dataset e treino do 8B junto do IA6 (≈ 2029) | `S-pendrive-kali` |
 | 22 | Mais ofertas, uma por vez | Cada oferta do portfólio entra na esteira na ordem da pontuação: uma em construção e uma em validação por vez. | Fev a dez/2027, uma oferta por vez · ⏸ espera: A primeira venda do mini-curso aconteceu | `S-of-meu-setup` |
 | 23 | Marketing pago e crescimento | Pôr dinheiro em anúncio só quando a venda orgânica provou a oferta. | A partir de fev/2027 · ⏸ espera: O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar | `S-ads-meta` |
 | 24 | Linux nativo e laboratório completo | Arch com boot próprio, VMs de laboratório e a segurança física em dia. | 2027, conforme cada compra | `S-nvme-arch` |
-| 25 | IA dentro dos sistemas AM | Busca e assistente com os seus dados dentro de um sistema AM. | Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5 | `S-rag-sistema` |
+| 25 | IA dentro dos módulos do AM Gestão | Busca e assistente com os seus dados dentro de um sistema AM. | Depois do Passo 9 e do IA0 da Trilha de Dados e IA (≈ 2028), junto do IA5 | `S-rag-sistema` |
 | 26 | Sistemas AM à venda | Os sistemas viram produto por assinatura. | 2027 · ⏸ espera: O primeiro sistema AM pronto e testado com um cliente | `S-saas` |
 | 27 | CNPJ e formalização | Sair do CPF na hora certa, com nota fiscal e cobrança automáticas. | Quando a renda pedir · ⏸ espera: A renda passou do valor de virada definido com o contador | `S-cnpj` |
 | 28 | Agentes do grupo | Atendimento, orçamento, cobrança e análise rodando com a sua aprovação. | Junto com o primeiro CNPJ · ⏸ espera: Clientes e vendas recorrentes | `S-ag-analista` |
@@ -127,8 +127,8 @@ atualizado: 2026-10-26
 - [infraestrutura-fisica-10-anos](infraestrutura-fisica-10-anos.md) — as 11 camadas físicas de 10 anos (estação, rede, NAS, oficina, robótica, estúdio)
 - [seguranca-e-ferramentas-todas-as-frentes](seguranca-e-ferramentas-todas-as-frentes.md)
 - [automacao-ordem-de-execucao](../06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) e [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md)
-- [aura-status](../10-ferramentas-pessoais/aura-status-documento-projeto-final.md) — o painel que mostra o estado de tudo
-- [fontes-de-renda-completas](fontes-de-renda-completas.md) — o que o setup vende
+- ferramenta de status — o painel que mostra o estado de tudo
+- [fontes-de-renda-completas](../99-arquivo/planos-antigos/fontes-de-renda-completas.md) — o que o setup vende
 - [trilha-robotica-iot](../07-estudo-e-carreira/trilha-robotica-iot.md) — casa inteligente e bancada maker (lista de 98 itens, de R$ 16,5 mil a R$ 39 mil, em 5 fases)
 
 ---

@@ -7,7 +7,7 @@ atualizado: 2026-10-02
 
 # 🌌 Mapa de Horizonte Longo — Sistemas, Baixo Nível e SO Próprio
 
-> **Camada D do [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
+> **Camada D do [00-PLANO-UNIFICADO](../PLANO-UNICO-AMtech.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
 >
 > A parte ofensiva (reverse, exploit, kernel exploitation) é só **nomeada** aqui — o detalhe vive em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md), não é duplicado.
 

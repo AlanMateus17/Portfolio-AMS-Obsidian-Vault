@@ -26,7 +26,7 @@ atualizado: 2026-10-26
 1. **Onde você quer chegar:** ser **programador sênior** (Brasil e exterior), especialista em **IA** e em **software para empresas e finanças**, dono das próprias empresas e com **certificações para atuar no mercado de investimentos**.
 2. **O dinheiro de hoje:** R$ 4.900/mês (escola + restaurante). Em 2027, se sair da escola, fica só o restaurante: R$ 2.200.
 3. **A meta:** R$ 7.000 líquidos por mês, com renda feita em casa, até o fim de 2027.
-4. **As rendas que vêm primeiro:** aulas particulares, manutenção de computador, sites com mensalidade e o mini-curso de Lógica. Depois, uma oferta nova por vez. Lista completa: [fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md).
+4. **As rendas que vêm primeiro:** aulas particulares, manutenção de computador, sites com mensalidade e o mini-curso de Lógica. Depois, uma oferta nova por vez. Lista completa: [fontes de renda](99-arquivo/planos-antigos/fontes-de-renda-completas.md).
 5. **O setup** (notebook, programas, automações) é a máquina que produz aula, conteúdo e venda: [setup completo](01-planejamento-geral/setup-completo-dev-setup.md); os documentos, fluxogramas e scripts estão na [pasta do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
 6. **O estudo** segue 14 Passos, um de cada vez: [Sumário Único](PLANO-UNICO-AMtech.md). Tudo o que um sênior precisa saber está no [currículo](07-estudo-e-carreira/curriculo-dev-senior-completo.md).
 7. **As faculdades:** Licenciatura em Matemática (agora), depois Economia e uma faculdade para IA, uma de cada vez: [formação](07-estudo-e-carreira/formacao-academica.md).
@@ -137,4 +137,4 @@ Concurso PF/PRF · desenho · violão · pós-graduações (Cybersecurity e Arqu
 
 Use a página **Auditoria do Plano** (publicada junto com esta revisão). Ela lista cada coisa que você já planejou nas conversas, na memória e nos repositórios, e mostra em qual arquivo do vault ela está. O que aparecer como "falta" é o que ainda precisa entrar.
 
-🔗 [Glossário](00-GLOSSARIO.md) · [Sumário Único](PLANO-UNICO-AMtech.md) · [Plano Unificado](PLANO-UNICO-AMtech.md) · [Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [Setup](01-planejamento-geral/setup-completo-dev-setup.md)
+🔗 [Glossário](00-GLOSSARIO.md) · [Sumário Único](PLANO-UNICO-AMtech.md) · [Plano Unificado](PLANO-UNICO-AMtech.md) · [Fontes de renda](99-arquivo/planos-antigos/fontes-de-renda-completas.md) · [Setup](01-planejamento-geral/setup-completo-dev-setup.md)

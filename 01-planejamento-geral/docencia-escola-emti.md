@@ -6,7 +6,7 @@ atualizado: 2026-10-27
 
 # 🏫 Trabalho na escola (EMTI): aulas, atividades e projetos
 
-> **Em palavras simples:** aqui fica reunido o que você produziu para dar aula: aulas prontas, listas de exercícios, gabaritos, o projeto ByteSDCoin e as pendências dos PDIs. Tudo foi criado no claude.ai e está copiado na pasta `12-artefatos`. Este material também é a base das suas aulas particulares, dos infoprodutos e do livro *Lógica e Máquina* (veja [Fontes de renda](fontes-de-renda-completas.md)).
+> **Em palavras simples:** aqui fica reunido o que você produziu para dar aula: aulas prontas, listas de exercícios, gabaritos, o projeto ByteSDCoin e as pendências dos PDIs. Tudo foi criado no claude.ai e está copiado na pasta `12-artefatos`. Este material também é a base das suas aulas particulares, dos infoprodutos e do livro *Lógica e Máquina* (veja [Fontes de renda](../99-arquivo/planos-antigos/fontes-de-renda-completas.md)).
 
 ## Banco de Dados
 
@@ -52,4 +52,4 @@ atualizado: 2026-10-27
 
 ---
 
-🔗 Plano geral: [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md) · Frentes de trabalho: [plano-mestre-frentes-alan](plano-mestre-frentes-alan.md) · Todos os artefatos: [índice](../12-artefatos/00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+🔗 Plano geral: [00-PLANO-UNIFICADO](../PLANO-UNICO-AMtech.md) · Frentes de trabalho: [plano-mestre-frentes-alan](../99-arquivo/planos-antigos/plano-mestre-frentes-alan.md) · Todos os artefatos: [índice](../12-artefatos/00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)

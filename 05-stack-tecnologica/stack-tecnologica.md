@@ -97,4 +97,4 @@ MVP = Caixa + Pedidos + Financeiro. Clientes já com procura: restaurantes e ven
 ---
 
 ## 🔗 Relacionados
-- [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md) · [trilha-engenharia-software](../07-estudo-e-carreira/trilha-engenharia-software.md) · [trilha-dados-ia](../07-estudo-e-carreira/trilha-dados-ia.md) · [fontes-de-renda-completas](../01-planejamento-geral/fontes-de-renda-completas.md)
+- [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md) · [trilha-engenharia-software](../07-estudo-e-carreira/trilha-engenharia-software.md) · [trilha-dados-ia](../07-estudo-e-carreira/trilha-dados-ia.md) · [fontes de renda (PLANO-UNICO §6)](../PLANO-UNICO-AMtech.md)
