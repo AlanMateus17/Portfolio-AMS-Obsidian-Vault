@@ -43,15 +43,48 @@ A âncora é simples e à prova de TDAH: **toda manhã, 6h–8h, é estudo**, an
 
 ---
 
-## PARTE 2 — COMO ESTUDAR (método, não força de vontade)
+## PARTE 2 — COMO ESTUDAR (o seu método completo, do Professor)
 
-Direto do seu "professor" do dev-setup, pensado pra TDAH:
+Detalhe inteiro em [metodo-de-estudo](metodo-de-estudo.md) e no `docs/professor/metodo.md` do dev-setup. Resumo fiel:
 
-1. **Blocos de 25 min** (Pomodoro), 5 de pausa. Dois ou três por sessão.
-2. **20/80:** aprenda os 20% que resolvem 80%. Não leia a doc inteira — leia o que o ativo da semana pede.
-3. **Ciclo de 4 passos por tópico:** (a) ver o conceito → (b) **você tenta sem olhar** → (c) prova sem consulta → (d) revisão espaçada (Anki no dia 1, 3, 7, 15).
-4. **Sempre aplicado:** todo conceito novo vira linha de código num ativo real no mesmo dia.
-5. **Recrutador:** cada semana vira um registro (o que aprendi, o que provei) + um item de portfólio em inglês. É assim que o estudo vira vaga.
+### 2.1 O 20/80 em DUAS passadas (o princípio que rege o plano todo)
+Cada tecnologia e cada tema tem uma **profundidade calibrada** decidida antes:
+
+- **1ª passada — "usar" (os 20% que resolvem 80%):** você aprende só o essencial que faz o ativo da semana funcionar. Não lê a documentação inteira. Vai largo e raso por tudo, rápido, construindo.
+- **2ª passada — "a fundo" (os 80% que resolvem os 20% difíceis):** só nos temas que **voltam** (os que o produto ou a vaga realmente cobram) você aprofunda — internals, casos de borda, performance. O que nunca voltou, fica na profundidade "usar" mesmo.
+
+Isso é o que te deixa **completo em 12 meses sem afogar:** primeiro a largura toda no nível "usar", depois a profundidade só onde paga. A espinha dos 12 meses (Parte 3) é a 1ª passada; a 2ª acontece dentro dela, nos meses 10–12 e sempre que um tema reaparece.
+
+### 2.2 Intercalação (por que o plano alterna as trilhas)
+Alternar assuntos no mesmo dia retém mais que estudar um em bloco (Rohrer & Taylor). É por isso que a rotina mistura ofício + setup + finanças/matemática no mesmo dia, e não "um mês só de X".
+
+### 2.3 As técnicas que você adotou
+- **Prática de recuperação:** feche o material e reconstrua de cabeça — vale mais que reler.
+- **Repetição espaçada:** revisar pouco antes de esquecer, em **1, 3, 7, 21, 60 e 120 dias** (Anki).
+- **Dificuldade desejável:** o que custa na hora (testar-se, espaçar) é o que fica. Prova < 80 → revisão volta amanhã.
+- **Exemplos com retirada de apoio:** ver resolvido → resolver com lacunas → resolver sozinho.
+- **Prática deliberada:** treinar o que ainda não domina, com retorno.
+- **Feynman (ensinar):** explicar sem jargão mostra o buraco — e você é professor.
+- **Velocidade calibrada:** estimativa é hipótese; o tempo medido corrige o plano (não vira dívida de atraso).
+- **Motivação antes da definição:** todo tópico abre por "por que isso importa".
+
+### 2.4 Blocos e protocolo de fim de bloco
+- **Blocos de 25 min** (Pomodoro), um objetivo só por bloco. **Uma porta só** (TDAH): `just professor hoje` decide o que abrir — você não escolhe.
+- **Ao fim de todo bloco:** (1) feche o material; (2) reconstrua de cabeça o que resolveu e por quê; (3) ensine em 3–5 frases sem jargão; (4) faça 1–3 cartões; (5) anote o tempo real; (6) só então avance.
+
+### 2.5 Exercícios em 4 níveis (N1–N4)
+N1 reconhecimento · N2 aplicação direta · N3 aplicação combinada e "encontre o erro" · N4 desafio / mini-projeto real. Gabarito sempre comentado.
+
+### 2.6 Ficha dupla + registro de entrevista (o estudo vira dois ativos)
+Todo estudo gera, de uma vez: **a ficha dupla** (ideia, código, por que importa) → vira material de aula; e **o registro de entrevista** (contexto, decisão + alternativa descartada, resultado com número) → vira resposta pronta para vaga. O nível 4 ("ensinou") só conta quando você dá a aula de verdade (escola, aula particular, vídeo ou post).
+
+### 2.7 As fontes e o papel de cada uma
+- **Alura** → primeira exposição em vídeo (assistir **antes** da aula).
+- **Livros do VHSlins** → teoria e exercícios no papel (base de matemática).
+- **Fabio Akita (posts/Akitando)** → visão de quem faz há 30 anos; o que conta são as regras e notas que saem, não o tempo assistindo.
+- **Documentação oficial** → a verdade sobre cada ferramenta.
+- **O Professor** → liga tudo ao seu setup, cobra, corrige e traz de volta.
+- **Regra fixa:** conteúdo de curso pago e página de livro são para você ler/assistir — **nunca vão para a IA**.
 
 ---
 
