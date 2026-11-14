@@ -6,7 +6,13 @@ status: completo
 
 # Loja Virtual — Documento de Projeto Final
 
-Segue a estrutura fixa do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Este era o documento mais imaturo do portfólio — a própria Claude sinalizou incerteza elevada na conversa em que ele foi criado. Esta versão aplica o mesmo rigor de aprofundamento antes de fechar o documento, em vez de reproduzir a versão rasa anterior.
+> **⚠️ Atualização 13/11 — agora é o módulo Loja do AM Gestão.** Deixou de ser sistema
+> separado: é o módulo **Loja online** do produto único **AM Gestão**, acoplado ao
+> módulo **Caixa** (antes "AM Kaixara"). Onde o texto disser "AM Kaixara", leia
+> "módulo Caixa"; onde disser ".NET/C#", leia a stack nova em
+> [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md) (TS + Supabase).
+
+Segue a estrutura do [template-documento-projeto-final](../01-planejamento-geral/template-documento-projeto-final.md). Este era o documento mais imaturo do portfólio — a própria Claude sinalizou incerteza elevada na conversa em que ele foi criado. Esta versão aplica o mesmo rigor de aprofundamento antes de fechar o documento, em vez de reproduzir a versão rasa anterior.
 
 ---
 
