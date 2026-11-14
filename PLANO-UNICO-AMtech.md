@@ -134,9 +134,25 @@ De 47 para as 4 que saem do mesmo estudo e se reforçam:
 3. **Sites para empresas** — freela com a stack nova.
 4. **AM Gestão (SaaS)** — o produto, começando pela planilha do financeiro.
 
-O resto (infoprodutos, editora, serviços locais, robótica comercial) entra **uma
-por vez, depois da primeira venda**, na ordem da pontuação. Negócios físicos
-(padaria, delivery, sushi) saem do mapa ativo.
+O resto entra **uma por vez, depois da primeira venda**, nesta ordem (a lista
+completa pontuada está em `99-arquivo/planos-antigos/fontes-de-renda-completas.md`):
+
+- **Ensino / infoproduto (saem do mesmo material das aulas):** mini-curso de
+  Lógica · pacote de aulas prontas para professores · aulas particulares · banco
+  de questões de TI · baralhos Anki · cursos na Udemy (PT/EN) · formações (Téc. em
+  Desenvolvimento, Matemática) · curso de finanças pessoais · comunidade paga do
+  Instituto AMS.
+- **Software / serviço (saem do AM Gestão e da stack):** planilha do financeiro →
+  AM Gestão (SaaS) · sites e lojas para empresas · automação com IA para pequenos
+  negócios · suporte remoto mensal · presença digital para comércio local ·
+  sistemas sob encomenda.
+- **Robótica:** oficinas de robótica/programação para escolas · AMtech Maker.
+- **Conteúdo / mídia:** canal em público · newsletter · afiliados · monetização.
+- **Editora (pausada):** livro *Lógica e Máquina* e derivados.
+- **Negócios físicos (fora do mapa ativo por ora):** assistência técnica · ponto
+  de retirada · delivery · sushi · cafeteria · padaria.
+
+Regra: nada disso abre antes da anterior vender. Uma por vez, pela pontuação.
 
 ---
 
