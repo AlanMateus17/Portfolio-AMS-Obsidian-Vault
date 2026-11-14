@@ -62,7 +62,7 @@ macOS: Darwin/XNU/Mach/BSD, launchd, APFS, Keychain, SIP, Gatekeeper, TCC, sandb
 iOS: iBoot, Secure Enclave, entitlements, provisioning, Data Protection, Mach-O, dyld, XPC.
 
 ### Segurança (web · redes · AD · ofensiva)
-Escopo e trilha completos em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) e [recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md). Áreas: segurança web (OWASP), pentest, wireless, AD security, reverse engineering, exploit development, kernel exploitation, malware analysis, forense digital, blue team, cloud security, segurança de containers/k8s, criptografia aplicada, segurança de hardware, IoT/embedded. **Regra permanente:** só em ambientes próprios ou autorizados.
+Escopo e trilha completos em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) e [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md). Áreas: segurança web (OWASP), pentest, wireless, AD security, reverse engineering, exploit development, kernel exploitation, malware analysis, forense digital, blue team, cloud security, segurança de containers/k8s, criptografia aplicada, segurança de hardware, IoT/embedded. **Regra permanente:** só em ambientes próprios ou autorizados.
 
 ### Sistemas Operacionais (juntar tudo)
 boot/bootloader · kernel · memória virtual · processos/scheduling · interrupts · syscalls · IPC · filesystems · drivers · networking · segurança · userland. Comparar **Linux × Windows NT × XNU**.

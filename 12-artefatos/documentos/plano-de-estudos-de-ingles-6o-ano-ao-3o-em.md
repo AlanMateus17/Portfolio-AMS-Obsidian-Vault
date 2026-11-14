@@ -633,7 +633,7 @@ Estes 129 verbos cobrem quase todo o uso real. Decore as três formas juntas, em
 - [🎯 Sumário Único de Estudo — O Único Arquivo Que Você Abre](../PLANO-UNICO-AMtech.md)
 - [Método de Estudo — Documento Único](../../07-estudo-e-carreira/metodo-de-estudo.md)
 - [Inglês e Espanhol — Integrados ao Desenvolvimento, Não Empilhados](../../07-estudo-e-carreira/ingles-espanhol-integrado.md)
-- [Como Estudar Inglês e Espanhol Corretamente — Método e Currículo Completo](../../07-estudo-e-carreira/metodo-correto-estudo-idiomas.md)
+- [Como Estudar Inglês e Espanhol Corretamente — Método e Currículo Completo](../../07-estudo-e-carreira/ingles-espanhol-integrado.md)
 
 🗂️ Voltar ao [índice dos artefatos](../00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões](../01-MAPA-DE-CONEXOES.md)
 <!-- conexoes:fim -->

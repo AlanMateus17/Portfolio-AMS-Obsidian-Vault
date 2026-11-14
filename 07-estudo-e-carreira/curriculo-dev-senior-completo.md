@@ -408,7 +408,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Processo | *Software Engineering at Google* (Winters, Manshreck e Wright) · *The Pragmatic Programmer* (Hunt e Thomas) |
 | Entrevista | *System Design Interview* (Alex Xu) |
 
-Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, Node.js, React, PostgreSQL, Docker, System Design e Software Architect ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
+Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, Node.js, React, PostgreSQL, Docker, System Design e Software Architect ([trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md)).
 
 ---
 

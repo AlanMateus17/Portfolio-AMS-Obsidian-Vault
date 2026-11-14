@@ -37,7 +37,7 @@ atualizado: 2026-10-27
 
 ## Idiomas
 
-**Notas do plano:** [Inglês e Espanhol — Integrados ao Desenvolvimento, Não Empilhados](../07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Como Estudar Inglês e Espanhol Corretamente — Método e Currículo Completo](../07-estudo-e-carreira/metodo-correto-estudo-idiomas.md)
+**Notas do plano:** [Inglês e Espanhol — Integrados ao Desenvolvimento, Não Empilhados](../07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Como Estudar Inglês e Espanhol Corretamente — Método e Currículo Completo](../07-estudo-e-carreira/ingles-espanhol-integrado.md)
 
 **Artefatos:**
 
@@ -62,7 +62,7 @@ atualizado: 2026-10-27
 
 ## Segurança ofensiva
 
-**Notas do plano:** [🛡️ Roadmap Completo — Segurança Ofensiva](../07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) · [🔗 Recursos e Links — Segurança Ofensiva](../07-estudo-e-carreira/recursos-links-seguranca-ofensiva.md)
+**Notas do plano:** [🛡️ Roadmap Completo — Segurança Ofensiva](../07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) · [🔗 Recursos e Links — Segurança Ofensiva](../07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md)
 
 **Artefatos:**
 

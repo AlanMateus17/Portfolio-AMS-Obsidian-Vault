@@ -2,7 +2,7 @@
 tags: [estudo, seguranca, pentest, red-team, roadmap, portfolio-ams]
 tipo: estudo
 status: ativo
-companion: "[recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md)"
+companion: "[roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)"
 ---
 
 # 🛡️ Roadmap Completo — Segurança Ofensiva
@@ -10,7 +10,7 @@ companion: "[recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiv
 > [!important] Como usar este documento
 > Este é um mapa de conhecimento progressivo em **6 níveis**. Cada nível é pré-requisito do próximo. Os callouts indicam recursos prioritários e erros comuns a evitar.
 >
-> **Integração com o resto do vault:** este roadmap é a versão aprofundada da Fase 12 do [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md). O ponto de entrada real na sua sequência é depois do Bloco 8 (arquitetura consolidada), rodando em paralelo — mesma posição da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md). Overlap já mapeado: rede/Linux (NetPractice e Born2beroot da 42), criptografia básica (episódios do Akitando em [integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)), OWASP defensivo (Fase 2.2). Não reestude o que essas trilhas já cobrem.
+> **Integração com o resto do vault:** este roadmap é a versão aprofundada da Fase 12 do [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md). O ponto de entrada real na sua sequência é depois do Bloco 8 (arquitetura consolidada), rodando em paralelo — mesma posição da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md). Overlap já mapeado: rede/Linux (NetPractice e Born2beroot da 42), criptografia básica (episódios do Akitando em [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md)), OWASP defensivo (Fase 2.2). Não reestude o que essas trilhas já cobrem.
 
 ---
 
@@ -327,10 +327,10 @@ FASE 6 — ESPECIALIZAÇÃO (ongoing): Cloud (CARTP/AWS) + Mobile (eMAPT) + Malw
 ---
 
 ## 🔗 Documentos relacionados
-- [recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md) — companion com todos os links, ferramentas, cursos e certificações verificados
+- [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) — companion com todos os links, ferramentas, cursos e certificações verificados
 - [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) — a Fase 12 é a versão resumida deste roadmap
 - [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — cobre a base de C/C++, rede (NetPractice) e Linux (Born2beroot)
-- [integracao-42-roadmap-akita](integracao-42-roadmap-akita.md) — episódios de criptografia/segurança do Akitando
+- [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — episódios de criptografia/segurança do Akitando
 - [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — onde a segurança ofensiva entra na ordem geral
 
 ---
@@ -348,6 +348,171 @@ Este roadmap (os 6 níveis acima) roda entrelaçado com [trilha-linux-arch-profi
 - Depois: Windows/Active Directory → baixo nível/exploit → metodologia e relatório
 
 **Regra de ouro:** nunca abrir uma fase de segurança sem o gate de Linux fechado. Só teste o que é seu ou o que você tem autorização por escrito para testar (Lei 12.737/2012).
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Trilha de Cibersegurança e Pentest](../12-artefatos/documentos/trilha-de-ciberseguranca-e-pentest.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->
+
+
+---
+
+## Recursos e links de segurança ofensiva
+
+> [!important] Companion do [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)
+> Todos os links foram verificados. Priorize sempre fonte oficial. Recurso gratuito marcado com 🆓, pago com 💲.
+
+---
+
+## 🎓 Plataformas de Prática (Labs)
+
+| Plataforma | Foco | Custo | Nível |
+|-----------|------|-------|-------|
+| **TryHackMe** 🆓💲 | Guiado, iniciante | Free / ~$14/mês | 0-2 |
+| **HackTheBox** 🆓💲 | Máquinas realistas | Free / ~$14/mês | 1-4 |
+| **HTB Academy** 💲 | Teoria + prática modular | Cubes | 0-4 |
+| **PortSwigger Web Academy** 🆓 | Web (o melhor gratuito) | Grátis | 1-3 |
+| **Proving Grounds (OffSec)** 💲 | Prep OSCP | ~$19/mês | 2-3 |
+| **VulnLab** 💲 | AD e Red Team | ~€8/mês | 3-4 |
+| **Xillutec / Sacthreat / Zhero** 💲 | AD realista | Varia | 3-4 |
+| **PentesterLab** 💲 | Web + code review | ~$20/mês | 1-3 |
+| **Vulnhub** 🆓 | VMs para baixar | Grátis | 1-3 |
+| **PwnCollege** 🆓 | Binário/exploit (ASU) | Grátis | 2-5 |
+| **CryptoHack** 🆓 | Criptografia | Grátis | 1-4 |
+| **OverTheWire** 🆓 | Wargames Linux | Grátis | 0-2 |
+| **Root-Me** 🆓💲 | Desafios variados | Freemium | 1-4 |
+| **CTFtime** 🆓 | Agenda de CTFs | Grátis | Todos |
+
+> [!tip] Progressão ideal de labs
+> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente da [metodo-de-estudo](metodo-de-estudo.md).
+
+---
+
+## 📜 Certificações — Links Oficiais
+
+**Entrada:** eJPT (INE/eLearnSecurity) — [ine.com](https://ine.com) 💲 | PNPT (TCM Security) — [certifications.tcm-sec.com](https://certifications.tcm-sec.com) 💲
+
+**Core:** OSCP (PEN-200) — [offsec.com](https://www.offsec.com) 💲💲💲 | CRTO (Zero-Point Security) — [training.zeropointsecurity.co.uk](https://training.zeropointsecurity.co.uk) 💲💲
+
+**Active Directory:** CRTP / CRTE / CARTP (Altered Security) — [alteredsecurity.com](https://www.alteredsecurity.com) 💲💲
+
+**Avançado:** OSEP / OSED / OSEE (OffSec) 💲💲💲 | GXPN / GICSP (SANS/GIAC) — [giac.org](https://www.giac.org) 💲💲💲💲
+
+**Mobile:** eMAPT (INE) 💲
+
+> [!note] Sua trilha registrada
+> No [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md): `CompTIA A+/Network+ → Security+ → CCNA (opcional) → eJPT → OSCP`. O resto é continuação além do OSCP.
+
+---
+
+## 🛠️ Ferramentas Essenciais por Categoria
+
+**Distros:** Kali Linux, ParrotOS, BlackArch, Commando VM (Windows), Flare-VM (malware analysis).
+
+**Recon/OSINT:** Nmap, Masscan, RustScan, Amass, Subfinder, theHarvester, Shodan, Censys, SpiderFoot, Recon-ng, Maltego, TruffleHog, gitleaks.
+
+**Web:** Burp Suite, OWASP ZAP, sqlmap, ffuf, feroxbuster, Gobuster, Nikto, wpscan, XSStrike, commix, tplmap, jwt_tool, nuclei.
+
+**AD/Windows:** BloodHound, SharpHound, PowerView, Impacket (suite completa), CrackMapExec/NetExec, Certipy, Rubeus, Mimikatz, Responder, ntlmrelayx, kerbrute, Coercer, Certify, Whisker.
+
+**C2:** Sliver 🆓, Havoc 🆓, Mythic 🆓, Covenant 🆓, PoshC2 🆓, Merlin 🆓, Cobalt Strike 💲💲💲.
+
+**Exploit Dev:** Immunity Debugger + Mona, x64dbg, WinDbg, GDB + GEF/pwndbg, pwntools, ROPgadget, ropper, Ghidra 🆓, IDA Free/Pro, Cutter.
+
+**Password/Hash:** Hashcat, John the Ripper, Hydra, Medusa, CeWL, hcxtools.
+
+**Pivoting:** ligolo-ng (padrão atual), chisel, socat, sshuttle, proxychains-ng.
+
+**Cloud:** Pacu, ScoutSuite, Prowler, CloudFox (AWS), ROADtools, AADInternals, GraphRunner, TokenTactics (Azure), kube-hunter, peirates (K8s).
+
+**Mobile:** apktool, jadx, MobSF, Frida, Objection, Drozer (Android), Ghidra, class-dump (iOS).
+
+**Wireless:** Aircrack-ng suite, hostapd-wpe, Kismet, hcxdumptool, Bettercap.
+
+**Detection/Blue (para entender defesa):** YARA, Sigma, Atomic Red Team, Caldera, Volatility 3, Chainsaw, Hayabusa, KAPE, Velociraptor.
+
+---
+
+## 📚 Livros Fundamentais
+
+**Base:** *The Web Application Hacker's Handbook* (Stuttard/Pinto), *Penetration Testing* (Georgia Weidman), *The Hacker Playbook 3* (Kim), *RTFM: Red Team Field Manual*.
+
+**Active Directory:** *The Dog Whisperer's Handbook* 🆓 (BloodHound), documentação ired.team 🆓, adsecurity.org 🆓.
+
+**Exploit Dev:** *Hacking: The Art of Exploitation* (Erickson), *The Shellcoder's Handbook*, *Practical Malware Analysis* (Sikorski/Honig), *Windows Internals* (Russinovich).
+
+**Evasão/Red Team:** *Evading EDR* (Matt Hand), *Antivirus Bypass Techniques*.
+
+**Web moderno:** *Real-World Bug Hunting* (Yaworski), *Bug Bounty Bootcamp* (Vickie Li).
+
+**Cloud:** *Hacking Kubernetes*, *Penetration Testing Azure for Ethical Hackers*.
+
+---
+
+## 🎥 Canais e Criadores
+
+**YouTube:** IppSec (walkthroughs HTB — essencial), John Hammond, LiveOverflow, STÖK, NahamSec, The Cyber Mentor (TCM), Conda, David Bombal, Gynvael Coldwind, 13Cubed (DFIR).
+
+**Blogs/Sites técnicos:** ired.team, adsecurity.org, harmj0y.net, thehackerrecipes.com, hausec.com, dirkjanm.io, specterops.io/blog, posts.specterops.io, PortSwigger Research, orange.tw.
+
+**Newsletters:** tl;dr sec, Return on Security, Unsupervised Learning (Daniel Miessler), Cand.
+
+---
+
+## 🇧🇷 Recursos Brasileiros
+
+**Comunidades:** Gurus of Information Security (GRIS), Mente Binária (mentebinaria.com.br 🆓 — reverse engineering em PT-BR), Papers We Love BR, DEF CON Group São Paulo.
+
+**Eventos:** H2HC (Hackers to Hackers Conference), Roadsec, BSides (SP/BH/etc.), Cryptorave, Silver Bullet.
+
+**Legislação (leitura obrigatória):** Lei 12.737/2012, Marco Civil (12.965/2014), LGPD (13.709/2018) — todas em planalto.gov.br 🆓.
+
+> [!warning] Framework legal
+> Ver seção 1.8 do [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md). Sem autorização escrita e assinada, teste = crime no Brasil. Isso vale igual para o serviço de pentest como fonte de renda.
+
+---
+
+## 🧪 Ambientes de Lab Locais (montar em casa)
+
+**AD para praticar:** GOAD (Game of Active Directory) 🆓, DetectionLab 🆓, vulnerable-AD scripts, Ludus (automação de lab).
+
+**Web vulnerável:** DVWA, OWASP Juice Shop, WebGoat, bWAPP, VAmPI (API), crAPI (API).
+
+**Malware/RE isolado:** Flare-VM + REMnux em rede isolada (host-only), snapshots sempre.
+
+> [!warning] Isolamento obrigatório
+> Malware analysis SEMPRE em VM isolada, rede host-only, snapshot antes. Nunca na máquina principal. Conecta com o `Born2beroot` da [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — a mesma disciplina de VM hardened.
+
+---
+
+## 🗓️ Rotina de Manutenção de Conhecimento
+
+- **Diário:** 1 máquina/lab ou 1 lab PortSwigger
+- **Semanal:** 1 walkthrough IppSec, ler 2-3 posts técnicos, acompanhar CVEs relevantes
+- **Mensal:** 1 CTF, revisar notas (Obsidian/CherryTree), tentar 1 técnica nova
+- **Anual:** revisar este roadmap, avaliar próxima certificação
+
+> [!tip] Note-taking
+> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio da [metodo-de-estudo](metodo-de-estudo.md): documentar para reter.
+
+---
+
+## 🔗 Documentos relacionados
+- [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) — o roadmap de 6 níveis que este companion suporta
+- [plano-estudos-basico-avancado-entrelacado](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) — Fase 12
+- [biblioteca-recursos-por-passo](biblioteca-recursos-por-passo.md) — recursos gerais de todos os outros passos do plano
+- [mapa-mestre-prioridade-total](../99-arquivo/mapa-mestre-prioridade-total.md) — onde a segurança ofensiva entra na prioridade geral
+
+---
+
+*Companion do Roadmap v3.0 — Agosto/2026. Todos os links verificados na data de criação; revisar anualmente.*
 
 ---
 

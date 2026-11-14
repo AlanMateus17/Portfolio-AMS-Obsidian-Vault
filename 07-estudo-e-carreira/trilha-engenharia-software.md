@@ -67,7 +67,7 @@ Entra **dentro dos Passos** que já constroem os módulos Caixa e Financeiro do 
 | *Release It!* | Michael Nygard | Passo 10 |
 | *Software Engineering at Google* | Winters, Manshreck e Wright | Passo 12+ |
 
-Hábitos que continuam: roadmap.sh como auditoria e Fábio Akita ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
+Hábitos que continuam: roadmap.sh como auditoria e Fábio Akita ([trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md)).
 
 ## 🌍 Sênior para o Brasil e para o exterior
 Não haverá faculdade de engenharia de software: este documento é o currículo. Para ser contratado como sênior, principalmente fora do Brasil, somam-se:

@@ -96,5 +96,37 @@ MVP = Caixa + Pedidos + Financeiro. Clientes já com procura: restaurantes e ven
 
 ---
 
+## 6. O que estudar em cada ferramenta (resumo)
+
+> O caminho dia a dia está no [PLANO-PASSO-A-PASSO](../07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md). O detalhe profundo, no [currículo sênior](../07-estudo-e-carreira/curriculo-dev-senior-completo.md). Esta tabela é a consulta rápida.
+
+| Ferramenta | O que estudar nela |
+|---|---|
+| **TypeScript** | Tipos e narrowing, generics, `async/await`, módulos, `map/filter/reduce`, tratamento de erros |
+| **Python** | Sintaxe, estruturas, funções, OOP, `venv`/pip, async |
+| **SQL** | `SELECT/WHERE/JOIN`, `GROUP BY`, window functions, índices, transações, isolamento, N+1 |
+| **Next.js** | App Router, componentes, rotas de API, Server Actions, SSR/SSG |
+| **Tailwind** | Utilitários, responsividade, temas |
+| **NestJS** | Módulos, injeção de dependência, controllers, providers |
+| **FastAPI** | Endpoints, Pydantic (validação), async, dependências |
+| **PostgreSQL** | Modelagem, constraints, transações, isolamento, índices |
+| **Supabase** | Auth, Row-Level Security, storage, realtime, client |
+| **Prisma/Drizzle** | Schema, migrations, relations, queries |
+| **SQLite** | Banco local, offline, sincronização |
+| **PostGIS** | Geolocalização, rotas · **pgvector** | busca semântica/RAG |
+| **Go** | `flag`, `os`/`filepath`, `encoding`, `os/exec`, `net/http`, goroutines/channels, cross-compile, agente fiscal |
+| **pandas** | DataFrames, limpeza, agregação · **scikit-learn** | pipelines, modelos, avaliação |
+| **PyTorch** | Tensores, redes, treino · **Ollama** | modelo local, RAG |
+| **Docker** | Dockerfile, compose, volumes, redes |
+| **Git + GitHub Actions** | Branches, PR, workflows CI |
+| **Vitest/pytest** | Testes de unidade, mocks, cobertura · **Playwright** | E2E |
+| **Pix/Mercado Pago/Stripe** | Cobrança, webhooks, idempotência |
+| **Linux/Arch** | Instalação, pacotes, systemd, shell, dotfiles |
+| **C/C++** | Ponteiros, memória, Arduino/ESP32 · **Rust** | ownership, cargo, embarcado |
+| **Raspberry Pi** | GPIO, sensores, serial · **React Native** (2028) | componentes, navegação |
+| **C# (reserva)** | Só se for atrás de vaga corporativa .NET |
+
+---
+
 ## 🔗 Relacionados
 - [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md) · [trilha-engenharia-software](../07-estudo-e-carreira/trilha-engenharia-software.md) · [trilha-dados-ia](../07-estudo-e-carreira/trilha-dados-ia.md) · [fontes de renda (PLANO-UNICO §6)](../PLANO-UNICO-AMtech.md)
