@@ -9,7 +9,7 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** é o caminho para **criar inteligência artificial**, não só usar. Começa por Python e matemática, passa por programas que aprendem com exemplos, e termina com você treinando um modelo pequeno do zero e ajustando um modelo maior com o seu próprio material.
 
-> **Objetivo:** desenvolver IA de verdade, não só consumir API: dados, ML clássico, deep learning, LLMs e fine-tuning de modelos 8B treinados com o seu próprio material, dentro do ecossistema Aura.
+> **Objetivo:** desenvolver IA de verdade, não só consumir API: dados, ML clássico, deep learning, LLMs e fine-tuning de modelos 8B treinados com o seu próprio material, dentro do AM Gestão.
 >
 > **Por que ela se encaixa tão bem no seu plano:** IA, econometria e finanças quantitativas usam **a mesma base** — Python, estatística, álgebra linear e cálculo. A Licenciatura, a faculdade de Economia e esta trilha se reforçam; você não está abrindo três frentes, está abrindo uma com três aplicações.
 >
@@ -19,14 +19,14 @@ atualizado: 2026-10-26
 
 ## 🗺️ Módulos
 
-| Módulo | Tema | Pré-requisito | Aplicação no Aura |
+| Módulo | Tema | Pré-requisito | Aplicação no AM Gestão |
 |---|---|---|---|
 | **IA0** | Python do zero (base do núcleo) | Passo 8 | Scripts, análise de dados do AM Gestão |
 | **IA1** | Matemática para IA | Lins Partes III, IV, VII + Cálculo | — |
-| **IA2** | Dados e engenharia de dados | IA0 + SQL dos Passos 2/5 | Pipelines do aura-analytics |
-| **IA3** | Machine learning clássico | IA1 + IA2 | Previsão de fluxo de caixa (Rendara) |
-| **IA4** | Deep learning | IA3 | Classificação de notas fiscais (Caixa da Casa) |
-| **IA5** | LLMs aplicados | IA0 (pode correr junto de IA3) | aura-copilot · tutor do AM Mentor |
+| **IA2** | Dados e engenharia de dados | IA0 + SQL dos Passos 2/5 | Pipelines do módulo de dados do AM Gestão |
+| **IA3** | Machine learning clássico | IA1 + IA2 | Previsão de fluxo de caixa (módulo Financeiro) |
+| **IA4** | Deep learning | IA3 | Classificação de notas fiscais (módulo Financeiro do AM Gestão) |
+| **IA5** | LLMs aplicados | IA0 (pode correr junto de IA3) | assistente de IA do AM Gestão · tutor do dev-setup (Professor) |
 | **IA6** | Treino e fine-tuning | IA4 + IA5 | Modelo próprio 8B com suas apostilas |
 | **IA7** | MLOps | IA6 + Passo 10 | Modelos em produção, monitorados |
 
@@ -34,8 +34,8 @@ atualizado: 2026-10-26
 
 ## IA0 — Python *(2–4 semanas; mais rápido porque o bloco paralelo de Python começa no Passo 3)*
 - [ ] Sintaxe, tipos, coleções, compreensões, módulos, ambiente virtual, `pytest`
-- [ ] FastAPI (é o único Python da stack: `aura-analytics`)
-- **Desenvolver:** endpoint FastAPI que recebe uma série e devolve média/desvio — o esqueleto do aura-analytics.
+- [ ] FastAPI (é o único Python da stack: o módulo de dados do AM Gestão)
+- **Desenvolver:** endpoint FastAPI que recebe uma série e devolve média/desvio — o esqueleto do módulo de dados do AM Gestão.
 - **✅ Pronto quando:** reescreve em Python um exercício do Passo 1 e testa com pytest.
 
 > O Passo 13 (Python + OR-Tools no AM Rotara) fica mais rápido: o Python já estará pronto.
@@ -56,23 +56,23 @@ atualizado: 2026-10-26
 ## IA3 — Machine learning clássico
 - [ ] Regressão linear/logística, árvores, random forest, gradient boosting
 - [ ] Validação cruzada, overfitting, métricas
-- [ ] Séries temporais (Prophet, statsmodels — já previstos no aura-analytics)
-- **Desenvolver:** previsão de fluxo de caixa no Rendara, comparada contra uma média simples (se não ganhar da média, não vai para produção).
+- [ ] Séries temporais (Prophet, statsmodels — já previstos no módulo de dados do AM Gestão)
+- **Desenvolver:** previsão de fluxo de caixa no módulo Financeiro, comparada contra uma média simples (se não ganhar da média, não vai para produção).
 - **Leitura:** *Hands-On Machine Learning* (Aurélien Géron)
 
 ## IA4 — Deep learning do zero
 - [ ] Implementar **sem biblioteca**: neurônio, rede de várias camadas, **autograd** (derivada automática) e backpropagation, só com Python e NumPy
 - [ ] Depois, o mesmo em PyTorch
 - [ ] CNN, RNN e **transformers** (a arquitetura dos LLMs)
-- **Desenvolver:** classificador de itens de NFC-e em categorias de gasto para o Caixa da Casa.
+- **Desenvolver:** classificador de itens de NFC-e em categorias de gasto para o módulo Financeiro do AM Gestão.
 - **Recursos:** *Neural Networks: Zero to Hero* (Andrej Karpathy, gratuito no YouTube) · curso Practical Deep Learning (fast.ai, gratuito)
 
 ## IA5 — LLMs aplicados
-- [ ] APIs de modelos, function calling (é o coração do `aura-copilot`)
+- [ ] APIs de modelos, function calling (é o coração do assistente de IA do AM Gestão)
 - [ ] RAG: embeddings, banco vetorial (pgvector no seu PostgreSQL), recuperação
 - [ ] Avaliação de respostas, custo, latência
 - [ ] Governança: as regras RNFT-IA01–04 que você já escreveu · segurança (prompt injection — [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) §6.1)
-- **Desenvolver:** tutor do AM Mentor que responde com base nos seus próprios capítulos do *Lógica e Máquina* (RAG), citando a seção de onde tirou a resposta.
+- **Desenvolver:** tutor do dev-setup (Professor) que responde com base nos seus próprios capítulos do *Lógica e Máquina* (RAG), citando a seção de onde tirou a resposta.
 
 ## IA6 — Treinar do zero e fine-tuning
 - [ ] **Tokenizer próprio** (BPE) e **transformer escrito do zero**
@@ -85,7 +85,7 @@ atualizado: 2026-10-26
 
 ## IA7 — MLOps
 - [ ] Servir modelo (API), versionar modelo e dado, monitorar desvio
-- **Desenvolver:** o modelo do IA3 ou IA6 rodando atrás do aura-analytics com observabilidade do Passo 10.
+- **Desenvolver:** o modelo do IA3 ou IA6 rodando atrás do módulo de dados do AM Gestão com observabilidade do Passo 10.
 
 ---
 
