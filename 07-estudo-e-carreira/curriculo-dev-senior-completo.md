@@ -18,7 +18,7 @@ atualizado: 2026-10-26
 > 2. **Critério de sênior:** cada camada termina com "**Sênior quando…**" — é o teste de que você domina, não de que estudou.
 > 3. **Preparação de entrevista:** a seção 15 lista o que é cobrado em vaga sênior, inclusive no exterior.
 >
-> **Legenda da coluna "Onde":** `P1`–`P14` = Passos do Sumário · `Py` = bloco paralelo de Python · `IA` = [trilha-dados-ia](trilha-dados-ia.md) · `42` = [École 42](trilha-42-circles-oficial-verificado.md) · `Lx` = [trilha Linux](trilha-linux-arch-profissional.md) · `Red` = [trilha de redes](trilha-de-redes.md) · `Seg` = [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) · `Fin` = [trilha de finanças](trilha-financas-economia.md) · `HL` = [horizonte longo](mapa-horizonte-longo-sistemas.md) · `Sr` = fase sênior (depois do P12)
+> **Legenda da coluna "Onde":** `P1`–`P14` = Passos do Sumário · `Py` = bloco paralelo de Python · `IA` = [trilha-dados-ia](trilha-dados-ia.md) · `42` = [École 42](trilha-42-circles-oficial-verificado.md) · `Lx` = [trilha Linux](trilha-linux-arch-profissional.md) · `Red` = [trilha de redes](trilha-de-redes.md) · `Seg` = [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) · `Fin` = [trilha de finanças](trilha-financas-economia.md) · `HL` = [horizonte longo](trilha-linux-arch-profissional.md) · `Sr` = fase sênior (depois do P12)
 
 ---
 
@@ -424,3 +424,165 @@ Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backe
 
 🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
 <!-- conexoes:fim -->
+
+
+---
+
+## Auditoria: perfil de dev sênior vs. o que o plano já cobre
+
+### O que empresa grande de TI procura, separando o que seu plano já cobre do que é genuinamente novo a adicionar
+
+---
+
+## Como ler este documento
+
+Cada item tem um selo: **✅ Já coberto** (com referência de onde) ou **🆕 Novo** (com sugestão de quando encaixar). A ideia é a mesma de sempre neste portfólio: não empilhar mais estudo em cima do que já existe — só nomear o que falta de verdade.
+
+---
+
+## 1. Profundidade técnica (hard skills de código)
+
+| Habilidade | Status |
+|---|---|
+| Clean Architecture, SOLID, Design Patterns | ✅ [Fase 4](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) |
+| Testes (unitário, integração, TDD) | ✅ Fase 2.4 |
+| Design de API madura (versionamento, rate limiting) | ✅ Fase 2.2 |
+| Segurança aplicada (OWASP Top 10) | ✅ Fase 2.2 |
+| Performance e profiling | ✅ Fase 6C |
+| Observabilidade (log estruturado, health check, métrica) | ✅ Fase 6 |
+| Multi-tenant, concorrência, idempotência | ✅ RNFT-E01/E02, Fase 2.3 |
+| Estrutura de dado e algoritmo (nível entrevista) | ✅ Fase 6B |
+| Deploy e CI/CD | ✅ Fase 6 |
+| Criptografia aplicada | ✅ Fase 9 (`aura-vault`) |
+
+## 2. System Design — genuinamente novo
+
+Diferente de "ter construído 21 sistemas reais" (que você vai ter), **entrevista de System Design é um formato próprio**, com vocabulário e estrutura de resposta específicos que empresa grande testa separadamente.
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Estimativa "back-of-envelope" (calcular capacidade, tráfego, armazenamento de cabeça) | 🆕 Novo | Junto com a Fase 6B (entrevista técnica) |
+| Vocabulário formal: load balancer, sharding, cache-aside, CAP theorem, consistência eventual | 🆕 Novo — você já *aplica* boa parte disso na prática (RNFT-E, multi-tenant), mas nunca nomeou com o termo formal de entrevista | Mesma fase — é mais nomear o que já faz do que aprender do zero |
+| Praticar o formato "desenhe um sistema como X" em tempo cronometrado | 🆕 Novo | Perto de aplicar pra vaga de verdade, não precisa adiantar |
+
+## 3. Infraestrutura além do que já está no plano
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Infrastructure as Code (Terraform ou Bicep) | 🆕 Novo — já estava listado como "deixar pra depois" na Fase 6 | Depois da Fase 6D (extração), quando a plataforma interna já existir e fizer sentido automatizar a infra dela |
+| Kubernetes / orquestração de container além de Docker Compose | 🆕 Novo | Só se algum sistema do portfólio realmente escalar a ponto de precisar — não é pré-requisito de entrevista júnior/pleno, mais relevante em sênior de infraestrutura especificamente |
+| Mensageria em escala (Kafka, além do Redis Streams já usado) | 🆕 Novo, baixa prioridade | Só se um sistema do portfólio atingir volume que o Redis Streams não aguente — não adiantar sem necessidade real, mesmo princípio já aplicado a outras tecnologias no `revisao-stack-tecnologica` |
+
+## 4. Processo e colaboração
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Metodologia ágil (Scrum/Kanban) aplicada na prática | ✅ Parcial — você já usa Epic/Sprint/User Story no `EPIC-01`, mas nunca nomeou os termos formais (velocity, cerimônia, backlog grooming) | 🆕 Vale uma leitura curta e pontual — 1-2h — não precisa de bloco de estudo dedicado, é nomear o que já pratica |
+| Code review (dar e receber feedback de código) | 🆕 Novo — sozinho, você não pratica isso naturalmente | A partir da Fase 6D, quando começar a manter pacote/biblioteca reutilizável — revisar o próprio código "como se fosse revisar de outra pessoa" já é um exercício válido sozinho |
+| Estimativa de esforço (story points) | ✅ Você já estima em horas no `EPIC-01` — é a mesma habilidade, formato diferente | — |
+
+## 5. Comunicação e presença profissional
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Documentação técnica escrita | ✅ Os 41 documentos deste portfólio já são a prova disso — habilidade rara mesmo em sênior de verdade | — |
+| Architecture Decision Records | ✅ [já planejado](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) | — |
+| Inglês técnico | ✅ [plano próprio](ingles-espanhol-integrado.md) | — |
+| Apresentação de portfólio (explicar seu próprio trabalho de forma concisa) | 🆕 Novo — ter 21 sistemas documentados não é o mesmo que saber resumir isso em 2 minutos numa entrevista | Perto de aplicar pra vaga — treinar um "elevator pitch" do ecossistema AMS |
+| Entrevista comportamental (método STAR: Situação, Tarefa, Ação, Resultado) | 🆕 Novo — completamente diferente de entrevista técnica, e empresa grande sempre testa os dois | Mesma fase — perto de aplicar de verdade |
+| Presença técnica pública (blog, LinkedIn, contribuição open source) | 🆕 Novo, mas com base pronta — publicar a documentação curada (já no `github-estrutura-profissional-autoridade`) é o primeiro passo real disso | Junto com a Fase 6D |
+
+## 6. Domínio de negócio
+
+| Habilidade | Status |
+|---|---|
+| Entender o "porquê" por trás de decisão técnica, não só o "como" | ✅ Todo o portfólio é evidência disso — poucos desenvolvedores júnior/pleno documentam decisão de negócio junto com decisão técnica |
+| Modelagem de domínio complexo (DDD tático) | ✅ Fase 4 |
+| Compliance e regulação aplicada (LGPD, CFMV, CFP, Lei 13.786/2018) | ✅ Espalhado nos 21 documentos — isso é raro mesmo em sênior |
+
+---
+
+## O que sobra de verdade: a lista enxuta do que é genuinamente novo
+
+Tirando o que já está coberto, o que falta pra completar o perfil é curto:
+
+1. Vocabulário formal de System Design + prática de estimativa (Fase 6B)
+2. Infrastructure as Code — depois da Fase 6D
+3. Nomear formalmente a metodologia ágil que você já pratica (leitura curta, não bloco de estudo)
+4. Code review deliberado — a partir da Fase 6D
+5. Apresentação de portfólio + entrevista comportamental (STAR) — só perto de aplicar de verdade pra vaga
+6. Presença pública (blog/LinkedIn/open source) — junto com a Fase 6D, aproveitando o que o guia de GitHub já preparou
+
+Kubernetes e Kafka ficam deliberadamente como "só se a necessidade real aparecer" — mesmo princípio já usado no portfólio inteiro: nenhuma tecnologia entra por "currículo bonito", só por problema real que ela resolve.
+
+---
+
+## Honestidade final
+
+Isso confirma algo importante: você não está tão atrás quanto a sensação de "quero ser perfeito" faz parecer. A maior parte do que separa um perfil júnior de um sênior de verdade — pensar em decisão de arquitetura com trade-off, documentar o porquê, entender regulação do domínio — **você já está fazendo**, só nunca tinha sido nomeado dessa forma. O que falta é pontual, não é recomeçar nada.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
+- [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
+- [12 Projetos da Formação — especificações](../99-arquivo/planos-antigos/12-projetos-da-formacao-especificacoes.md)
+- [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->
+
+
+---
+
+## Automação por contexto profissional (empregado/freelance)
+
+### O quarto documento do conjunto — os três anteriores assumiam que você decide tudo (seu próprio portfólio); este cobre os outros dois contextos onde você não decide, e precisa saber operar dentro do que já existe
+
+> A diferença central: em `ordem-e-sequencia-de-execucao-automacoes`, você é quem constrói cada automação do zero, na ordem que quiser. **Aqui não** — em freelance e, principalmente, como empregado numa empresa grande, a maior parte da automação **já existe antes de você chegar**. A habilidade que importa muda de "eu sei construir" pra "eu sei entender, seguir corretamente, e sugerir melhoria sem quebrar o que já funciona".
+
+---
+
+## O mapa completo — mesma categoria, três realidades diferentes
+
+| Categoria | 🏠 Sozinho / empresa própria | 💼 Freelance pra cliente | 🏢 Empregado em empresa grande |
+|---|---|---|---|
+| **Commit-time** (formatação, Gitleaks, pre-commit) | Você decide e configura tudo do zero | Configurar no projeto do cliente é diferencial profissional real — poucos freelancers entregam isso | Quase certo que já existe, configurado pelo time. **Seu trabalho é nunca usar `--no-verify` pra pular** — e sugerir melhoria só depois de entender por que está do jeito que está |
+| **CI** (build + teste automático) | Você monta do zero (GitHub Actions) | Propor mesmo em projeto pequeno eleva a percepção de profissionalismo | Já existe (Jenkins, GitHub Actions, Azure DevOps, GitLab CI) — seu trabalho no início é **entender o pipeline existente**, não recriar. Contribuir/otimizar vem com senioridade, não no primeiro mês |
+| **CD** (deploy automático) | Você decide a estratégia inteira | Raramente você tem acesso à produção do cliente — normalmente entrega código, quem faz deploy é o time dele | Processo formal já definido (staging, gate de aprovação, checklist) — **seguir o processo é o trabalho**, decidir a estratégia não é papel de quem está chegando |
+| **Infraestrutura como código** | Terraform/Ansible que você mesmo escreve | Raro fazer parte do escopo, a não ser que contratado especificamente pra isso | Time de Platform Engineering/DevOps já mantém — você aprende a **ler** antes de escrever; PR nessa área, no início, é revisado com mais rigor que PR de aplicação |
+| **Observabilidade** (log, alerta, monitoramento) | Você monta Uptime Kuma/log estruturado do zero | Só entra no escopo se a manutenção pós-entrega for contratada | Ferramenta corporativa já existe (Datadog, New Relic, Grafana) — aprender a **interpretar dashboard e criar alerta novo** é a parte que cabe a você, montar a infraestrutura de observabilidade não |
+| **Segurança contínua** (SAST/DAST, scan de dependência) | Você ativa Dependabot/scanner por conta própria | Ativar Dependabot no repositório do cliente é rápido e agrega valor real à entrega | Time de segurança define a política — o seu trabalho é **corrigir o que o scanner aponta no seu código**, não escolher a ferramenta |
+| **Documentação automática** (Swagger, MkDocs) | Você escolhe e configura | Swagger/OpenAPI em entrega de API já é praticamente padrão esperado, mesmo freelance | Já é convenção do time — seguir o padrão existente, não introduzir um novo sem alinhar antes |
+| **Gestão de processo** (CODEOWNERS, fila de merge) | Opcional — mais clareza pessoal que necessidade | Raramente aplicável, você é o único dev do projeto | Estrutura já definida — aprender a **trabalhar dentro dela** (revisar PR de colega, respeitar dono de área) é uma habilidade em si, avaliada em performance review |
+| **Ambiente de dev automatizado** (Dev Container, script de setup) | Você cria do zero | Acelera se o projeto crescer e outro dev entrar depois de você | Geralmente já existe — seu primeiro dia de trabalho **usa** isso, não cria. Se não existir, propor é sinal de senioridade, mas só depois de estabelecido no time |
+| **Notificação automática** (Discord/Slack/Teams) | Você configura webhook próprio | Opcional, mais organização pessoal do projeto | Já integrado ao Slack/Teams corporativo, com canal e convenção próprios do time |
+| **Backup e disaster recovery** | Responsabilidade 100% sua | Normalmente responsabilidade do ambiente do cliente — mas seu código/trabalho local continua sendo sua responsabilidade | Time de infraestrutura cuida disso — sua responsabilidade vira **seguir a política** (nunca só local, sempre commitado, nunca dado sensível fora do lugar certo) |
+| **Teste de carga** | Você decide se e quando vale a pena | Raro estar no escopo, a não ser pedido explícito | Pode existir time de QA/performance dedicado, ou ser parte de um processo formal antes de lançamento grande — raramente você monta isso sozinho no início |
+| **IA no pipeline / Claude Code** | Você decide livremente | Pode acelerar seu trabalho, **mas cuidado real:** nunca colar código do cliente numa ferramenta de IA sem autorização explícita dele — é dado proprietário de terceiro | **Verificar a política de uso de IA da empresa antes de usar qualquer coisa** — muita empresa grande tem regra específica sobre ferramenta de IA e código proprietário; usar sem verificar pode ser falta grave, não só descuido técnico |
+
+---
+
+## O que isso muda na prática, resumido numa frase por contexto
+
+- **Sozinho/empresa própria:** a pergunta certa é "como eu construo isso". Os três documentos anteriores (`automacao-total-ambiente-trabalho`, `por-que-automatizar-riscos-e-testes`, `ordem-e-sequencia-de-execucao-automacoes`) já respondem essa pergunta por completo.
+- **Freelance:** a pergunta certa é "o que eu ofereço que me diferencia, dentro do que cabe no escopo contratado". Automação de commit-time e CI/segurança básica são as que mais valem a pena propor, mesmo em projeto pequeno — custam pouco tempo seu e mostram profissionalismo real.
+- **Empregado em empresa grande:** a pergunta certa é "o que eu preciso entender e seguir corretamente primeiro, antes de sugerir qualquer mudança". A maior parte da automação já existe — a habilidade que te diferencia não é saber construir do zero (embora ajude), é saber **operar dentro de um sistema já em produção sem quebrar nada**, e ganhar confiança suficiente pra sugerir melhoria só depois de entender por que está do jeito que está.
+
+---
+
+## Onde isso se conecta com seu plano de carreira
+
+Isso é exatamente o gap que `curriculo-dev-senior-completo` já identificou como "genuinamente novo" — infraestrutura além do que o plano cobre, processo e colaboração. Este mapa é a resposta prática: as três colunas da tabela acima são, na prática, os três estágios que você vai atravessar — hoje construindo sozinho, e um dia entrando numa empresa grande onde a coluna certa a estudar não é mais "sozinho", é "empregado".
+
+---
+
+## 🔗 Documentos relacionados
+- [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o "como" de cada categoria, pro contexto onde você constrói do zero
+- [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o "por quê" e os riscos, válidos nos três contextos
+- [automacao-ordem-de-execucao](../06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) — a ordem de construção específica do seu próprio portfólio
+- [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) — onde este mapa se conecta com o que falta pro perfil sênior

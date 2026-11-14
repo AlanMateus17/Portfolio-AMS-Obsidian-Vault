@@ -99,7 +99,7 @@ Cada User Story do EPIC-01 ganha a Task "produzir a ficha dupla", logo após os 
 ---
 
 ## 🔗 Relacionados
-- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md) · [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md) · [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md)
+- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md) · [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md) · [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md)
 
 ---
 

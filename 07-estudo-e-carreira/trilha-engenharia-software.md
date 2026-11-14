@@ -28,7 +28,7 @@ atualizado: 2026-10-26
 | **Qualidade e testes** | Passo 6 | Testes de propriedade para regra de dinheiro |
 | **Design e arquitetura** (SOLID, padrões, Clean Architecture, DDD) | Passos 8, 12 | DDD estratégico (contextos delimitados entre os módulos do AM Gestão) |
 | **DevOps e produção** (CI/CD, Docker, deploy, observabilidade) | Passos 2, 6, 10, 11, 12 | — |
-| **Sistemas distribuídos** (cache, mensageria, tempo real, consistência) | Passos 9, 13 · [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md) | Mensageria (fila, outbox), consistência eventual |
+| **Sistemas distribuídos** (cache, mensageria, tempo real, consistência) | Passos 9, 13 · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) | Mensageria (fila, outbox), consistência eventual |
 | **Segurança de aplicação** | Passo 4 (OWASP) · [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) | — |
 | **Processo e gestão** (Scrum, Kanban, RAD) | EPIC-01 | — |
 | **Engenharia de sistemas financeiros** | Espalhado (RNFT-E01/E02) | 🆕 **Área própria — abaixo** |
@@ -73,8 +73,8 @@ Hábitos que continuam: roadmap.sh como auditoria e Fábio Akita ([trilha-42-cir
 Não haverá faculdade de engenharia de software: este documento é o currículo. Para ser contratado como sênior, principalmente fora do Brasil, somam-se:
 - **Inglês fluente** (leitura, escrita técnica e entrevista falada) — o maior filtro para vaga no exterior. Meta: C1. Ver [ingles-espanhol-integrado](ingles-espanhol-integrado.md).
 - **Algoritmos e estruturas de dados para entrevista** — exercícios no estilo das entrevistas técnicas internacionais, a partir do Passo 8.
-- **System design** — explicar e desenhar a arquitetura de um sistema grande em 45 minutos; o AM Gestão é o seu material de treino ([perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md)).
+- **System design** — explicar e desenhar a arquitetura de um sistema grande em 45 minutos; o AM Gestão é o seu material de treino ([curriculo-dev-senior-completo](curriculo-dev-senior-completo.md)).
 - **Portfólio público em inglês** — README, ADRs e estudos de caso dos sistemas em inglês (Inglês Fase C, Passo 9).
 - **Diploma reconhecido lá fora** — por isso a faculdade para IA (Ciência da Computação ou IA) está em [formacao-academica](formacao-academica.md).
 
-O conteúdo teórico de computação (compiladores, SO, teoria da computação — os livros de Sipser e Petzold que você já comprou) mora no [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md).
+O conteúdo teórico de computação (compiladores, SO, teoria da computação — os livros de Sipser e Petzold que você já comprou) mora no [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md).

@@ -306,7 +306,7 @@ SAST (Semgrep, SonarQube), DAST (OWASP ZAP, Burp Enterprise), SCA (Snyk, Dependa
 **Soft Skills e Comunicação Executiva:** apresentar para C-Level (risco financeiro, não CVSS), executive summary, debrief, negociação de escopo, risk quantification (FAIR model).
 
 > [!important] O gargalo real após o nível intermediário
-> Sem soft skills, o profissional fica preso como operador. Isso conecta com o [perfil-senior-completo-auditoria](perfil-senior-completo-auditoria.md) — a mesma comunicação executiva que pesa em qualquer carreira sênior de tecnologia.
+> Sem soft skills, o profissional fica preso como operador. Isso conecta com o [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) — a mesma comunicação executiva que pesa em qualquer carreira sênior de tecnologia.
 
 ---
 

@@ -91,7 +91,7 @@ O que cada atividade exige por lei, para você ou para alguém da sua empresa:
 | Contabilidade, matemática financeira, tributos, mercado, administração, empreendedorismo | [trilha-financas-economia](trilha-financas-economia.md) |
 | Segurança ofensiva (certificações CompTIA → eJPT → OSCP continuam) | [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) |
 | C/C++ (École 42) | [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) |
-| Linux, redes, baixo nível, SO próprio | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [trilha-de-redes](trilha-de-redes.md) · [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md) |
+| Linux, redes, baixo nível, SO próprio | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [trilha-de-redes](trilha-de-redes.md) · [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) |
 | Robótica e IoT | [trilha-robotica-iot](trilha-robotica-iot.md) |
 | Inglês (essencial para o exterior), espanhol | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
 
