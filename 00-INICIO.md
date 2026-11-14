@@ -5,75 +5,52 @@ tipo: home
 
 # 🏠 Portfólio AMS — Índice
 
-> **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
-> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; AM Rendara no 2º trimestre)
-> - **O que fazer hoje no setup:** `just agora` · roteiro completo na [pasta 11](11-setup-dev-setup/00-INDICE-DO-SETUP.md), espelho automático do dev-setup
-> Este arquivo continua aqui como referência; nada foi apagado.
+> **Atualizado 13/11/2026 para a nova realidade:** um produto só (**AM Gestão**) + **AMtech OS** + **dev-setup**. O império de 23 sistemas e os planos antigos foram para `99-arquivo/` (reversível, nada apagado).
 
-
-> 🧭 **Comece aqui:** [📋 Plano Mestre passo a passo](PLANO-UNICO-AMtech.md) — **todos os passos dos dois planejamentos (setup + estudo) num só lugar, com códigos** · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) — tudo em ordem e em palavras simples · [Glossário](00-GLOSSARIO.md) · [💰 Fontes de renda](01-planejamento-geral/fontes-de-renda-completas.md) · [🖥️ Setup completo](01-planejamento-geral/setup-completo-dev-setup.md) · [🗂️ Pasta do setup completo](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts do dev-setup · [🗂️ Todos os artefatos do claude.ai](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) — os 85 documentos, páginas e projetos copiados
-
-> Este é o **mapa** do vault. Para o dia a dia, a porta de entrada é o **[Sumário Único](PLANO-UNICO-AMtech.md)** — abra ele primeiro. Este índice serve para achar um documento específico quando precisar.
-
-- 🧭 **[Sumário Único de Estudo](PLANO-UNICO-AMtech.md)** — trilha do dia a dia (comece aqui)
-- 📍 **[Você está aqui](CARTAO-voce-esta-aqui.md)** — o que fazer agora
-- 🧠 **[Metodologia de aprendizado](07-estudo-e-carreira/metodo-de-estudo.md)** — como estudar cada bloco
-- 📚 **[Biblioteca de recursos por passo](07-estudo-e-carreira/biblioteca-recursos-por-passo.md)**
+> 🧭 **Comece por aqui:**
+> - **[PLANO ÚNICO](PLANO-UNICO-AMtech.md)** — o quê e por quê (fonte da verdade)
+> - **[PLANO PASSO A PASSO + ROTINA](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md)** — quando e como estudar, dia a dia
+> - [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md) — com o quê · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) · [Glossário](00-GLOSSARIO.md)
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · [método do Professor](07-estudo-e-carreira/metodo-de-estudo.md)
 
 ---
 
+## 🎯 O produto: AM Gestão (um só, vários módulos)
+- [Módulo Caixa / PDV](02-sistemas-de-negocio/kaixara-documento-projeto-final.md) ⭐ *(era AM Kaixara)* — [↳ especificação técnica](02-sistemas-de-negocio/kaixara-especificacao-tecnica-completa.md) · [↳ frontend](02-sistemas-de-negocio/kaixara-frontend-documento-unico.md)
+- [Módulo Pedidos / Delivery](02-sistemas-de-negocio/rotara-documento-projeto-final.md) *(era AM Rotara)*
+- [Módulo Financeiro](02-sistemas-de-negocio/rendara-documento-projeto-final.md) *(era AM Rendara)*
+- [Módulo Loja online](02-sistemas-de-negocio/vendra-documento-projeto-final.md) *(era AM Vendra)*
+
+> MVP = Caixa + Pedidos + Financeiro. Os outros sistemas antigos (Taskoro, Projeta, Petara, Consertta, Vynla, Predara, Canteira, Saberia, Horaria e os serviços `aura-*`) estão em [`99-arquivo/sistemas-antigos/`](99-arquivo/).
+
+## 🐧 AMtech OS + dev-setup
+- [Trilha Linux/Arch e AMtech OS](07-estudo-e-carreira/trilha-linux-arch-profissional.md) — o SO com o dev-setup embutido
+- [Pasta do dev-setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts (espelho do repo `dev-setup`)
+
+## 📚 Estudo e Carreira
+- 👉 **[PLANO PASSO A PASSO + ROTINA](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md)** ⭐ · [EPIC-01 — tarefas de agora](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md)
+- **Trilhas ativas:** [🏗️ Engenharia de Software](07-estudo-e-carreira/trilha-engenharia-software.md) · [🧭 Currículo Dev Sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) · [🛠️ Go (ferramentas)](07-estudo-e-carreira/trilha-go-ferramentas.md) · [🤖 Dados e IA](07-estudo-e-carreira/trilha-dados-ia.md) · [💹 Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md) · [🔧 Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md) · [🐧 Linux/Arch](07-estudo-e-carreira/trilha-linux-arch-profissional.md) · [École 42](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md)
+- **Paralelas / fila:** [🎓 Formação acadêmica](07-estudo-e-carreira/formacao-academica.md) · [🌐 Redes](07-estudo-e-carreira/trilha-de-redes.md) · [🛡️ Segurança ofensiva](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md)
+- **Base:** [Matemática + dev](07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) · [Inglês e espanhol](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Método de estudo](07-estudo-e-carreira/metodo-de-estudo.md) · [Método de idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) · [Integração 42 + Akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) · [Biblioteca de recursos](07-estudo-e-carreira/biblioteca-recursos-por-passo.md)
+- **Sênior:** [Perfil sênior — auditoria](07-estudo-e-carreira/perfil-senior-completo-auditoria.md) · [Horizonte longo (CC, SO, compiladores)](07-estudo-e-carreira/mapa-horizonte-longo-sistemas.md)
+
 ## 1️⃣ Planejamento Geral
-- [plano-mestre-frentes-alan](01-planejamento-geral/plano-mestre-frentes-alan.md) · [estrutura-juridica-amtech](01-planejamento-geral/estrutura-juridica-amtech.md) · [seguranca-e-ferramentas-todas-as-frentes](01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) · [infraestrutura-fisica-10-anos](01-planejamento-geral/infraestrutura-fisica-10-anos.md) · [inventario-portfolio-atualizado](01-planejamento-geral/inventario-portfolio-atualizado.md) · [template-documento-projeto-final](01-planejamento-geral/template-documento-projeto-final.md) · [status-planejamento-portfolio](01-planejamento-geral/status-planejamento-portfolio.md) · [acao-imediata-portfolio](01-planejamento-geral/acao-imediata-portfolio.md)
-
-## 2️⃣ Sistemas de Negócio (13) — padrão AM
-- [AM Kaixara](02-sistemas-de-negocio/kaixara-documento-projeto-final.md) ⭐ *— PDV, em desenvolvimento*
-  - [↳ Especificação técnica](02-sistemas-de-negocio/kaixara-especificacao-tecnica-completa.md) · [↳ Frontend](02-sistemas-de-negocio/kaixara-frontend-documento-unico.md)
-- [AM Taskoro](02-sistemas-de-negocio/taskoro-documento-projeto-final.md) *— Kanban/Scrum, exceção de stack* ([↳ decisão de stack](02-sistemas-de-negocio/taskoro-decisao-stack-portfolio.md))
-- [AM Projeta](02-sistemas-de-negocio/projeta-documento-projeto-final.md) *— diagnóstico por IA*
-- [AM Rotara](02-sistemas-de-negocio/rotara-documento-projeto-final.md) *— pedidos + geolocalização*
-- [AM Rendara](02-sistemas-de-negocio/rendara-documento-projeto-final.md) *— finanças*
-- [AM Petara](02-sistemas-de-negocio/petara-requisitos-completos.md) *— veterinária*
-- [AM Consertta](02-sistemas-de-negocio/consertta-sistema-assistencia-tecnica.md) *— assistência técnica*
-- [AM Vynla](02-sistemas-de-negocio/vynla-documento-projeto-final.md) *— relacionamentos/convites*
-- [AM Vendra](02-sistemas-de-negocio/vendra-documento-projeto-final.md) *— e-commerce*
-- [AM Predara](02-sistemas-de-negocio/predara-documento-projeto-final.md) *— condomínios*
-- [AM Canteira](02-sistemas-de-negocio/canteira-documento-projeto-final.md) *— obras*
-- [AM Saberia](02-sistemas-de-negocio/saberia-documento-projeto-final.md) *— educacional*
-- [AM Horaria](02-sistemas-de-negocio/horaria-documento-projeto-final.md) *— agendamentos*
-
-## 3️⃣ Serviços Compartilhados (10) — prefixo aura-
-- [aura-identity](03-servicos-compartilhados/aura-identity-documento-projeto-final.md) · [aura-licensing](03-servicos-compartilhados/aura-licensing-documento-projeto-final.md) · [aura-notifications](03-servicos-compartilhados/aura-notifications-documento-projeto-final.md) · [aura-support](03-servicos-compartilhados/aura-support-documento-projeto-final.md) · [aura-logistics](03-servicos-compartilhados/aura-logistics-documento-projeto-final.md) · [aura-vault](03-servicos-compartilhados/aura-vault-documento-projeto-final.md) · [aura-goals](03-servicos-compartilhados/aura-goals-documento-projeto-final.md) · [aura-historico](03-servicos-compartilhados/aura-historico-documento-projeto-final.md) · [aura-analytics](03-servicos-compartilhados/aura-analytics-documento-projeto-final.md) · [aura-copilot](03-servicos-compartilhados/aura-copilot-documento-projeto-final.md)
+- [estrutura-juridica-amtech](01-planejamento-geral/estrutura-juridica-amtech.md) · [seguranca-e-ferramentas-todas-as-frentes](01-planejamento-geral/seguranca-e-ferramentas-todas-as-frentes.md) · [infraestrutura-fisica-10-anos](01-planejamento-geral/infraestrutura-fisica-10-anos.md) · [template-documento-projeto-final](01-planejamento-geral/template-documento-projeto-final.md) · [setup-completo-dev-setup](01-planejamento-geral/setup-completo-dev-setup.md) · [💰 fontes-de-renda-completas](01-planejamento-geral/fontes-de-renda-completas.md) · [🏫 docência EMTI](01-planejamento-geral/docencia-escola-emti.md)
 
 ## 4️⃣ Documentos Transversais
 - [rnf-transversais-escala-seguranca-financeira](04-documentos-transversais/rnf-transversais-escala-seguranca-financeira.md) · [distribuicao-licenciamento-seguranca](04-documentos-transversais/distribuicao-licenciamento-seguranca.md) · [rnf-transversais-design-tema](04-documentos-transversais/rnf-transversais-design-tema.md) · [rnft-ia-governanca-geracao-ia](04-documentos-transversais/rnft-ia-governanca-geracao-ia.md) · [auditoria-escalabilidade-seguranca-financeira](04-documentos-transversais/auditoria-escalabilidade-seguranca-financeira.md)
 
 ## 5️⃣ Stack Tecnológica
-- [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md) · [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md) · [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md)
+- [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md)
 
 ## 6️⃣ Execução e Desenvolvimento
-- [setup-ambiente-trabalho-final](06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md) · [estrategia-reaproveitamento-ordem-construcao](06-execucao-e-desenvolvimento/estrategia-reaproveitamento-ordem-construcao.md) · [ordem-construcao-rf-telas-reaproveitaveis](06-execucao-e-desenvolvimento/ordem-construcao-rf-telas-reaproveitaveis.md) · [github-estrutura-profissional-autoridade](06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) · [Portfólio para vaga júnior](06-execucao-e-desenvolvimento/passo-a-passo-portfolio-vaga-junior.md) ⭐
-- Automação: [automacao-o-que-e-por-que](06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) · [automacao-o-que-e-por-que](06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) · [automacao-o-que-e-por-que](06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) · [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) · [veredito-clonar-ou-nao-ferramenta-paga](06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md) · [painel-central-arquitetura-todas-fases](06-execucao-e-desenvolvimento/painel-central-arquitetura-todas-fases.md)
-
-## 7️⃣ Estudo e Carreira
-- 👉 **[EPIC-01 — tarefas de agora](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md)** ⭐
-- Trilhas: [🐧 Linux/Arch](07-estudo-e-carreira/trilha-linux-arch-profissional.md) · [🌐 Redes](07-estudo-e-carreira/trilha-de-redes.md) · [🛡️ Segurança Ofensiva](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) · [École 42](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md)
-- 🆕 **Formação e novas trilhas (out/2026):** [🎓 Formação acadêmica](07-estudo-e-carreira/formacao-academica.md) · [💹 Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md) · [🤖 Dados e IA](07-estudo-e-carreira/trilha-dados-ia.md) · [🏗️ Engenharia de Software](07-estudo-e-carreira/trilha-engenharia-software.md) · [🧭 Currículo do Dev Sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) · [🔧 Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md)
-- [matematica-e-desenvolvimento-integrado](07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) · [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [metodo-correto-estudo-idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) · [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) · [integracao-42-roadmap-akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) · [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) · [perfil-senior-completo-auditoria](07-estudo-e-carreira/perfil-senior-completo-auditoria.md)
-
-## 🏫 Escola
-- [Trabalho na escola (EMTI): aulas, atividades e projetos](01-planejamento-geral/docencia-escola-emti.md)
+- [setup-ambiente-trabalho-final](06-execucao-e-desenvolvimento/setup-ambiente-trabalho-final.md) · [github-estrutura-profissional-autoridade](06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) · [automacao-o-que-e-por-que](06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) · [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) · [veredito-clonar-ou-nao-ferramenta-paga](06-execucao-e-desenvolvimento/veredito-clonar-ou-nao-ferramenta-paga.md)
 
 ## 8️⃣ Material Comercial
 - [presenca-digital-empresas](08-material-comercial/presenca-digital-empresas.md)
 
-## 9️⃣ Progresso
-- [00-catalogo-progresso](09-material-producao-simultanea/00-catalogo-progresso.md)
-
-## 🔟 Ferramentas Pessoais
-- [aura-status](10-ferramentas-pessoais/aura-status-documento-projeto-final.md) ⭐ · [aura-queue](10-ferramentas-pessoais/aura-queue-documento-projeto-final.md) · [aura-secrets](10-ferramentas-pessoais/aura-secrets-documento-projeto-final.md) · [aura-oncall](10-ferramentas-pessoais/aura-oncall-documento-projeto-final.md)
-
-## 🗄️ Arquivo
-- `11-setup-dev-setup/` — o repositório dev-setup inteiro (documentos, 17 fluxogramas, roteiro de 253 passos, páginas e scripts): [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
-- `12-artefatos/` — o conteúdo de todos os 85 artefatos do claude.ai (documentos, páginas, design e painel): [índice dos artefatos](12-artefatos/00-INDICE-DOS-ARTEFATOS.md) · [mapa de conexões com o plano](12-artefatos/01-MAPA-DE-CONEXOES.md).
-- `13-memoria-do-claude/` — cópia do que o Claude anotou sobre seus planos e decisões: [o que está lá](13-memoria-do-claude/00-LEIA-ME.md).
-- `99-arquivo/` — [documentos-mestre antigos](99-arquivo/00-LEIA-ME.md), substituídos pelo Sumário Único. Consulta histórica apenas. Tem também os [pacotes originais que você enviou](99-arquivo/versoes-anteriores/LEIA-ME.md) e as [conversas guardadas](99-arquivo/conversas/LEIA-ME.md).
+## 🗄️ Arquivo e espelhos
+- `11-setup-dev-setup/` — o repositório dev-setup inteiro: [índice do setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md).
+- `12-artefatos/` — os artefatos do claude.ai: [índice](12-artefatos/00-INDICE-DOS-ARTEFATOS.md).
+- `13-memoria-do-claude/` — o que o Claude anotou (snapshot): [leia-me](13-memoria-do-claude/00-LEIA-ME.md).
+- `99-arquivo/` — [planos e sistemas antigos](99-arquivo/00-LEIA-ME.md), substituídos pela consolidação. Consulta histórica.

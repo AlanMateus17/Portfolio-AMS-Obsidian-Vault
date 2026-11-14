@@ -36,7 +36,7 @@ atualizado: 2026-10-26
 | **Fullstack** | Quem faz backend e frontend |
 | **API** | A "porta" pela qual o frontend (ou outro sistema) conversa com o backend |
 | **REST** | O jeito mais comum de desenhar uma API, usando endereços e verbos (GET, POST…) |
-| **GraphQL** | Outro jeito de API, em que quem pede escolhe os campos (usado no AM Taskoro) |
+| **GraphQL** | Outro jeito de API, em que quem pede escolhe os campos (opcional; o AM Taskoro foi arquivado) |
 | **Next.js / NestJS** | Jeitos de criar o backend/API em TypeScript (o principal). ASP.NET Core faz o mesmo no .NET, hoje só na reserva |
 | **HTML / CSS** | Estrutura da página / aparência da página |
 | **React** | Biblioteca para montar telas em pedaços reutilizáveis (componentes) |
@@ -49,7 +49,7 @@ atualizado: 2026-10-26
 | **OAuth / OIDC** | Padrões para login seguro, como "entrar com Google" |
 | **Multi-tenant (`tenant_id`)** | Um sistema que atende várias empresas sem misturar os dados delas |
 | **PWA** | Site que funciona como aplicativo no celular, até sem internet |
-| **Agente local** | Programa que roda no computador do cliente (ex.: o caixa do Kaixara, que imprime e funciona offline) |
+| **Agente local** | Programa que roda no computador do cliente (ex.: o módulo Caixa do AM Gestão, que imprime e funciona offline) |
 
 ## Dados
 
@@ -59,7 +59,7 @@ atualizado: 2026-10-26
 | **PostgreSQL** | O banco de dados principal da sua stack |
 | **SQLite** | Banco pequeno que mora num arquivo; usado no caixa offline |
 | **Redis** | Memória super-rápida para guardar coisas temporárias (cache) e filas |
-| **PostGIS** | Extensão do PostgreSQL para mapas e localização (AM Rotara) |
+| **PostGIS** | Extensão do PostgreSQL para mapas e localização (módulo Pedidos do AM Gestão) |
 | **Índice** | O "índice remissivo" do banco: deixa a busca rápida |
 | **Transação** | Um conjunto de operações que acontece inteiro ou não acontece |
 | **Prisma / Drizzle** | Ferramentas do TypeScript para falar com o banco sem escrever todo o SQL na mão (equivalem ao EF Core do .NET) |
@@ -80,7 +80,7 @@ atualizado: 2026-10-26
 | **Idempotência** | Fazer a mesma operação duas vezes dá o mesmo resultado (cobrar duas vezes não cobra em dobro) |
 | **Ledger / partidas dobradas** | Livro-caixa em que todo valor sai de um lugar e entra em outro; o saldo sempre fecha |
 | **ADR** | Registro escrito de uma decisão técnica e do motivo |
-| **Ecossistema Aura / sistemas AM** | Os seus 13 sistemas de negócio (Kaixara, Rotara, Rendara…) e os 10 serviços que eles compartilham |
+| **AM Gestão** | O seu produto único, com módulos (Caixa, Pedidos, Financeiro, Loja). O antigo ecossistema Aura de 23 sistemas foi arquivado em 99-arquivo |
 
 ## Qualidade, entrega e produção
 
@@ -178,7 +178,7 @@ atualizado: 2026-10-26
 | **Pipeline de conteúdo** | A esteira que transforma uma gravação sua em várias postagens |
 | **n8n** | Ferramenta de automação ("quando acontecer X, faça Y") |
 | **Caixa da Casa** | O seu sistema de finanças pessoais e da família |
-| **aura-status** | O seu painel que mostra o estado de todos os projetos |
+| **Ferramenta de status** | Painel (Go/Python) que mostra o estado de todos os projetos (substitui o antigo aura-status em C#) |
 | **Anki** | Aplicativo de revisão com cartões, que lembra você na hora certa |
 | **École 42** | Escola de programação sem professor; você segue o currículo dela em C/C++ |
 | **roadmap.sh** | Site com mapas do que estudar em cada área |

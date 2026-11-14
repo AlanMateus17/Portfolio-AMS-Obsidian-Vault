@@ -8,7 +8,7 @@ atualizado: 2026-10-26
 # 🧭 Guia do Iniciante — Tudo o Que Você Vai Fazer, em Ordem e em Palavras Simples
 
 > **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
-> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; AM Rendara no 2º trimestre)
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · método: [Professor](11-setup-dev-setup/docs/professor/metodo.md) · plano: [Eixo de 12 meses](11-setup-dev-setup/docs/plano-eixo.md) (software + finanças; módulo Financeiro no 2º trimestre)
 > - **O que fazer hoje no setup:** `just agora` · roteiro completo na [pasta 11](11-setup-dev-setup/00-INDICE-DO-SETUP.md), espelho automático do dev-setup
 > Este arquivo continua aqui como referência; nada foi apagado.
 
@@ -50,7 +50,7 @@ atualizado: 2026-10-26
 
 - Acordar às 6h, cuidar dos cães todos os dias.
 - **Tempo real de estudo hoje: cerca de 16 h por semana.** Não 4 h por dia. Em 2027, se sair da escola, as tardes de segunda a quarta ficam livres.
-- Confira e ajuste no Caixa da Casa (aba Rotina).
+- Confira e ajuste no módulo Financeiro do AM Gestão (ou sua planilha).
 
 ---
 
@@ -61,7 +61,7 @@ atualizado: 2026-10-26
 ### Etapa 0 — Esta semana: arrumar a base
 - [ ] **Setup — Diagnóstico:** rodar o `RODAR-DIAGNOSTICO.cmd` (só lê o notebook). *Pronto quando:* você tem o relatório `diagnostico.md`.
 - [ ] **Setup — Senhas:** instalar o KeePassXC e começar a passar as contas para ele, 5 por semana. *Pronto quando:* e-mail principal e banco estão no cofre, com 2FA.
-- [ ] **Finanças:** lançar no Caixa da Casa os gastos fixos (R$ 2.045) e as parcelas do cartão. *Pronto quando:* você sabe quanto sobra por mês.
+- [ ] **Finanças:** lançar no módulo Financeiro (ou planilha) os gastos fixos (R$ 2.045) e as parcelas do cartão. *Pronto quando:* você sabe quanto sobra por mês.
 - [ ] **Estudo:** abrir o [EPIC-01](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md) e fazer a primeira User Story do **Passo 1** (lógica + matemática).
 - [ ] **Renda:** mandar mensagem para contatos e pais de alunos oferecendo **aulas particulares** e **manutenção de computador** (formatação, limpeza, troca por SSD). *Pronto quando:* a mensagem saiu.
 
@@ -83,13 +83,13 @@ atualizado: 2026-10-26
 ### Etapa 3 — Março a junho de 2027: rendas crescendo, base técnica firme
 - [ ] **Estudo:** **Passos 4, 5 e 6** (API, login, frontend com React/Next.js, banco de dados, testes).
 - [ ] **Estudo — finanças leves:** começar **contabilidade** e **matemática financeira** (módulos F1 e F2).
-- [ ] **Renda:** fase 21 — **uma oferta nova por vez**, pela pontuação: kit de aulas para professores → planilha do Caixa da Casa (testa o AM Rendara) → automação com IA para pequenos negócios.
+- [ ] **Renda:** fase 21 — **uma oferta nova por vez**, pela pontuação: kit de aulas para professores → planilha do financeiro (testa o módulo Financeiro) → automação com IA para pequenos negócios.
 - [ ] **Renda:** sites com manutenção mensal: meta de **3 a 4 clientes**.
 - [ ] **Setup:** fases 17 e 18 (base dos sistemas AM, nuvem).
-- *Pronto quando:* o Kaixara tem login e CRUD testados e existem pelo menos 2 rendas extras recorrentes.
+- *Pronto quando:* o módulo Caixa tem login e CRUD testados e existem pelo menos 2 rendas extras recorrentes.
 
 ### Etapa 4 — Julho a dezembro de 2027: bater os R$ 7 mil
-- [ ] **Estudo:** **Passo 7** (Kaixara completo: pagamento, caixa contábil, agente offline) e **Passo 8** (arquitetura).
+- [ ] **Estudo:** **Passo 7** (módulo Caixa completo: pagamento, caixa contábil, agente offline) e **Passo 8** (arquitetura).
 - [ ] **Carreira:** currículo, LinkedIn e GitHub em português e inglês; **primeiras candidaturas** a vagas de dev.
 - [ ] **Renda:** **7 clientes de manutenção de site** (paga o restaurante); aulas: 8 alunos individuais + 2 turmas online.
 - [ ] **Finanças:** reserva de 6 meses; investimentos pelo ARCA (próximo foco: ações por Barsi e Bazin).
@@ -106,7 +106,7 @@ atualizado: 2026-10-26
 - *Pronto quando:* um sistema AM tem cliente pagante e você está empregado como dev ou com renda própria acima de R$ 7 mil.
 
 ### Etapa 6 — 2029 em diante: especialização e expansão
-- [ ] **Estudo:** **Passos 13 e 14** (Rotara, Rendara, demais sistemas) + **fase sênior** (system design, entrevista em inglês).
+- [ ] **Estudo:** **Passos 13 e 14** (módulos Pedidos e Financeiro) + **fase sênior** (system design, entrevista em inglês).
 - [ ] **Trilhas:** École 42 (C/C++), segurança ofensiva (eJPT → OSCP), IA treinada do zero (modelo pequeno + ajuste fino de 8B).
 - [ ] **Certificações:** **CGA** (gestão de fundos) e **CFA** (exterior).
 - [ ] **Empresas:** negócios de Barbacena, um por vez, **só passando nos 5 portões** (onda A tecnologia → B logística → C alimentação).
@@ -121,8 +121,8 @@ atualizado: 2026-10-26
 | Anki (revisão) | Todo dia, 10–20 min |
 | Protocolo de fim de bloco (reconstruir de cabeça, ensinar em 3 frases) | Ao terminar cada sessão de estudo |
 | Estuda → ensina → grava | Cada tópico novo vira aula paga e conteúdo |
-| Revisão do Caixa da Casa | Uma vez por mês |
-| `aura-status` (painel de tudo) | Toda segunda-feira |
+| Revisão do financeiro | Uma vez por mês |
+| Ferramenta de status (painel de tudo) | Toda segunda-feira |
 | 1 conteúdo do Fábio Akita | Uma vez por semana |
 
 ---
