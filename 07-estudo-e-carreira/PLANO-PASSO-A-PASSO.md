@@ -14,6 +14,8 @@ fonte-unica: true
 >
 > **Fonte única do estudo (desde 17/11/2026):** este arquivo manda. O `docs/plano-eixo.md` e o currículo do Professor (`data/professor/curriculo.json`) no dev-setup seguem este plano ([ADR 0018](../11-setup-dev-setup/docs/adr/0018-plano-de-estudo-unico-no-vault.md)). Se os dois discordarem, vale este, e o outro é corrigido.
 >
+> **O que estudar, por área e nível:** [MAPA-DE-ESTUDO](MAPA-DE-ESTUDO.md), com um arquivo por assunto em `assuntos/`.
+>
 > **A regra que rege tudo:** você nunca "só estuda". **Cada bloco entrega um ativo** (uma ferramenta, uma parte do AM Gestão, um site, um protótipo) que vira renda e portfólio. No máximo **1 ativo sendo construído + 1 sendo testado** por vez.
 
 ---
