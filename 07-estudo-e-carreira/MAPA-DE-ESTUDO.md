@@ -4,390 +4,344 @@ tipo: indice-central
 atualizado: 2026-11-17
 ---
 
-# 🗺️ MAPA DE ESTUDO — tudo o que você vai estudar, num lugar só
+# 🗺️ MAPA DE ESTUDO — tudo o que você vai estudar, na ordem certa
 
-> **O que é:** a lista completa de áreas, assuntos e conceitos de **todos** os seus planos (vault e dev-setup), com o nível que cada um precisa e quando entra. **Não é para ler de ponta a ponta.** O dia a dia continua sendo o [Cartão](../CARTAO-voce-esta-aqui.md) ou o `just professor hoje`. Abra este mapa só para achar um assunto ou ver onde ele se encaixa.
+> **O que é:** a lista completa do que você vai estudar em **todos** os seus planos (vault e dev-setup), **em ordem de dependência**: cada assunto só aparece depois de tudo o que ele precisa. Seguindo de cima para baixo, você nunca precisa parar para voltar em algo que devia ter estudado antes.
 >
-> **Quando** e **em que ordem**: [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md) (fonte única). **Como estudar:** [metodo-de-estudo](metodo-de-estudo.md). Os arquivos `trilha-*` e o [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) viram material de referência: o que estava neles está aqui.
+> **Não é para ler de ponta a ponta.** O dia a dia continua sendo o [Cartão](../CARTAO-voce-esta-aqui.md) ou o `just professor hoje`. Este mapa diz **o quê e em que ordem**; o [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md) diz **quando** (calendário, rotina e entregáveis). Os dois seguem a mesma sequência de etapas.
+
+## As 4 regras da ordem
+
+1. **Pré-requisito antes, sempre.** Se B usa A, A vem antes, nem que seja no nível N1.
+2. **Duas passadas.** Na 1ª passada você aprende o suficiente para usar (N1–N2) **logo antes** de precisar. A 2ª passada (↻) aprofunda (N3–N4) quando o assunto volta com mais peso. Isso evita estudar tudo a fundo antes de começar, e evita também usar algo sem base.
+3. **Fundamento antes de ferramenta.** Como o computador, a rede e o banco funcionam vem antes do framework que os esconde.
+4. **Cada etapa termina num ativo.** Não se passa de etapa sem o entregável dela (critério no plano).
 
 ## Como ler cada linha
-
-**Nível-alvo** (o que "dominar" quer dizer para aquele assunto):
 
 | Nível | Nome | Quer dizer |
 |---|---|---|
 | N1 | Conhecer | Sabe o que é, para que serve e quando usar. Explica em 2 frases. |
 | N2 | Usar | Faz funcionar com documentação aberta. |
-| N3 | A fundo | Faz sem consulta, explica como funciona por dentro, resolve casos de borda e erros. |
-| N4 | Dominar | Ensina (aula dada de verdade), decide trade-offs, revisa o trabalho dos outros e o da IA. É o nível sênior. |
+| N3 | A fundo | Faz sem consulta, explica como funciona por dentro, resolve casos de borda. |
+| N4 | Dominar | Ensina, decide trade-offs, revisa o trabalho dos outros e o da IA. Nível sênior. |
 
-**Quando:** `M1`…`M12` = mês do plano de 12 meses · `T1`…`T4` = trimestre · `H` = horizonte longo, ativo no roteiro sem mês fixo · `∞` = contínuo.
-**Arquivo:** 📘 = arquivo do assunto já escrito (clique) · 📝 = será escrito na semana anterior ao estudo dele.
-**★** = cobrado em vaga de dev júnior/pleno hoje.
+**Depende de:** os números dos assuntos que precisam vir antes. **Arquivo:** 📘 escrito (clique) · 📝 será escrito pelo [protocolo de escrita](#como-cada-arquivo-é-escrito) antes de você chegar nele. **↻** = 2ª passada de um assunto que já apareceu. **★** = cobrado em vaga de dev júnior/pleno.
 
-Cada arquivo de assunto segue o [modelo](assuntos/_MODELO.md): o que é, por que existe, como funciona por baixo, conceitos, qualidades, defeitos, quando usar, erros comuns, no seu setup e no AM Gestão, o que o mercado cobra, exercícios N1–N4, fontes e critério de domínio.
+**Nunca pausam** (correm por baixo de todas as etapas): inglês (todo dia) · matemática do VHSlins (sexta, na ordem da etapa) · Licenciatura · revisão espaçada (Anki) · base do Akita (terça, na ordem desta página).
 
 ---
 
-## 00 · Aprender a aprender
+## ETAPA 0 · A base de tudo · Mês 1, semanas 1–2
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Método de estudo | Recuperação ativa, repetição espaçada (1/3/7/21/60/120 dias), intercalação, dificuldade desejável, Feynman, prática deliberada, 20/80 em 2 passadas | N4 | M1 · `b-aprender` | [metodo-de-estudo](metodo-de-estudo.md) |
-| Estudar com TDAH | Uma porta só, blocos de 25 min, um objetivo por bloco, ambiente sem distração, rotina âncora | N3 | ∞ | 📝 |
-| Ler documentação e fontes primárias | Documentação oficial, RFC, man pages, código-fonte, changelog; inglês técnico | N3 ★ | ∞ | 📝 |
-| Debugging como método | Reproduzir, isolar, hipótese, medir, corrigir, teste que prova | N4 ★ | M1→∞ | 📝 |
-| Escrita técnica | Nota, README, ADR, post, relatório; escrever para ensinar | N3 | ∞ | 📝 |
+> O que tudo depende: saber estudar, pensar com precisão e entender o que é um computador. Sem isso, cada assunto seguinte vira decoreba.
 
-## 01 · Matemática
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 0.1 | Aprender a aprender | 00 | Recuperação ativa, repetição espaçada, intercalação, Feynman, prática deliberada, 20/80, estudar com TDAH | N3 | — | [metodo-de-estudo](metodo-de-estudo.md) |
+| 0.2 | Linguagem matemática e lógica | 01 | Proposição, conectivos, tabela-verdade, quantificadores, implicação | N3 | 0.1 | 📝 |
+| 0.3 | Teoria dos conjuntos | 01 | Pertinência, inclusão, união, interseção, diferença, produto cartesiano | N3 | 0.2 | 📝 |
+| 0.4 | Como o computador funciona | 03 | Bit, byte, binário, hexadecimal, CPU, memória, programa como sequência de instruções, o que é um sistema operacional | N2 ★ | 0.1 | 📝 |
+| 0.5 | Representação de dados | 03 | Inteiros, complemento de dois, ponto flutuante IEEE 754 (por que `0.1 + 0.2 ≠ 0.3`), texto (ASCII, Unicode, UTF-8) | N2 ★ | 0.4 | 📝 |
+| 0.6 | Lógica de programação | 04 | Variável, tipo, operadores, condição, laço, função, coleção, recursão, teste de mesa | N3 ★ | 0.2, 0.4 | 📘 [logica-de-programacao](assuntos/04-ciencia-da-computacao/logica-de-programacao.md) |
+| 0.7 | Ler documentação e inglês técnico | 00 | Documentação oficial, man pages, mensagens de erro, vocabulário técnico | N2 ★ | — | 📝 |
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Linguagem matemática e lógica | Proposição, conectivos, tabela-verdade, quantificadores, implicação, demonstração | N4 | M1 · `mat-linguagem` | 📝 |
-| Teoria dos conjuntos | Pertinência, inclusão, união, interseção, diferença, complemento, produto cartesiano | N4 | M1 · `mat-conjuntos` | 📝 |
-| Teoria dos números | Divisibilidade, primos, MDC/MMC, Euclides, aritmética modular, congruência (base do RSA) | N3 | T1–T2 | 📝 |
-| Álgebra | Expressões, equações, inequações, funções, potências, logaritmos | N3 | T1–T2 · `mat-potencias-log` | 📝 |
-| Porcentagem e juros | Porcentagem, juros simples e compostos | N4 ★ | T1 · `mat-porcentagem-juros` | 📝 |
-| Estatística descritiva | Média, mediana, moda, variância, desvio-padrão, distribuição, gráficos | N3 | T2–T3 | 📝 |
-| Espaço e geometria | Geometria plana e espacial, trigonometria, vetores | N2 | T2 (PostGIS) | 📝 |
-| Contagem e probabilidade | Princípio fundamental, permutação, combinação, probabilidade, condicional, Bayes | N3 | T3 | 📝 |
-| Números complexos | Forma algébrica e trigonométrica, plano de Argand | N2 | H | 📝 |
-| Representações e símbolos | Bases numéricas, notação científica, leitura de símbolos | N3 | M1–M2 | 📝 |
-| Matemática discreta | Indução, recursão, relações, grafos, combinatória | N3 | T3 | 📝 |
-| Álgebra linear | Vetores, matrizes, multiplicação, determinante, autovalores (base de IA) | N3 | T3 | 📝 |
-| Cálculo | Limite, derivada, integral, gradiente (base de IA e física) | N2 → N3 | H | 📝 |
-| Matemática avançada | Análise real, álgebra abstrata, teoria da informação, teoria da computação | N1 → N2 | H | 📝 |
+**Ativo da etapa:** os 3 exercícios de lógica resolvidos no papel e no TS Playground.
 
-Livro-base: VHSlins, *Matemática Básica* (10 partes). Mapa capítulo a capítulo: [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md).
+## ETAPA 1 · A máquina e as ferramentas · Mês 1, semanas 2–4
 
-## 02 · Física
+> Antes de programar de verdade, você precisa operar a máquina onde o código vive: sistema operacional, terminal, controle de versão e o seu setup.
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Grandezas e medidas | SI, unidades, conversão, ordem de grandeza, notação científica | N3 | T1 · `fis-grandezas` | 📝 |
-| Eletricidade básica | Carga, tensão, corrente, resistência, lei de Ohm, potência, circuitos série/paralelo | N3 | T1 · `fis-eletricidade` | 📝 |
-| Eletromagnetismo aplicado | Indutância, capacitância, motores, sinais | N2 | T3 (robótica) | 📝 |
-| Mecânica | Cinemática, dinâmica, energia (robótica, construção) | N2 | H | 📝 |
-| Termodinâmica | Calor, energia, entropia (meta longa do plano de matemática) | N1 → N2 | H | 📝 |
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 1.1 | Sistema operacional: o essencial | 05 | Kernel, processo, arquivo, sistema de arquivos, usuário, permissão, memória (visão geral) | N2 ★ | 0.4 | 📝 |
+| 1.2 | WSL2 e virtualização | 05 | Hypervisor, máquina virtual, WSL2, onde ficam os arquivos | N2 | 1.1 | 📝 |
+| 1.3 | Terminal Linux e shell | 05 | Navegar, ler, procurar, pipes, redirecionamento, permissões, processos, variáveis de ambiente, script básico | N3 ★ | 1.1, 1.2 | 📘 [terminal-linux](assuntos/05-sistemas-operacionais/terminal-linux.md) |
+| 1.4 | Criptografia: o essencial | 13 | Hash, sal, chave simétrica e assimétrica, par de chaves, assinatura (o que cada um garante) | N1 ★ | 0.5 | 📝 |
+| 1.5 | Git e controle de versão | 08 | Commit, branch, merge, PR, conflitos, desfazer, hash do commit | N3 ★ | 1.3, 1.4 | 📘 [git](assuntos/08-engenharia-de-software/git.md) |
+| 1.6 | Segredos | 12 | KeePassXC, sops/age, variáveis de ambiente, nunca no Git | N3 ★ | 1.4, 1.5 | 📝 |
+| 1.7 | Backup e recuperação | 12 | restic, retenção, restaurar de verdade, snapshots | N3 | 1.3 | 📝 |
+| 1.8 | Containers e Docker | 12 | Imagem, container, Dockerfile, Compose, volume, porta; container × VM | N2 ★ | 1.1, 1.2, 1.3 | 📝 |
+| 1.9 | `just` e o Núcleo | 12 | Porta única de comandos, banco central, agenda, auditoria | N2 | 1.3 | 📝 |
+| 1.10 | Segurança de agentes de IA | 16 | ai-jail, sem credencial de produção, ler o comando antes de aprovar, revisar o que a IA fez | N3 | 1.3, 1.5 | 📝 |
 
-## 03 · Engenharia da computação (hardware, eletrônica e máquina)
+**Ativo da etapa:** setup instalado e operado por você; repositório `logica-ts` no GitHub com histórico limpo; um backup restaurado.
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Representação de dados | Binário, hexadecimal, complemento de dois, ponto flutuante IEEE 754, caracteres (ASCII, Unicode, UTF-8) | N4 ★ | M1–M2 · `b-computador` | 📝 |
-| Eletrônica digital | Portas lógicas, álgebra booleana, circuitos combinacionais e sequenciais, flip-flop, multiplexador | N3 | T2 | 📝 |
-| Arquitetura de computadores | CPU, ULA, registradores, ciclo de instrução, pipeline, cache L1/L2/L3, barramentos, memória, I/O | N4 | T2 · `b-hardware` | 📝 |
-| Organização e desempenho | Hierarquia de memória, localidade, interrupções, DMA, multicore | N3 | T2–T3 | 📝 |
-| Armazenamento | HD, SSD, NVMe, sistemas de arquivos, RAID | N3 | T2 · `b-armazenamento` | 📝 |
-| Montagem e manutenção | Componentes, diagnóstico, BIOS/UEFI, POST (base das suas aulas e da assistência técnica) | N4 | ∞ | 📝 |
-| Sistemas embarcados | Microcontrolador, GPIO, PWM, ADC, I2C, SPI, UART, firmware | N3 | T3 → H | 📝 |
-| Assembly | x86-64 e ARM64, registradores, chamadas de função, stack frame | N2 → N3 | H | 📝 |
+## ETAPA 2 · Programar de verdade · Mês 1 (fim) → Mês 2
 
-## 04 · Ciência da computação
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 2.1 | TypeScript: fundamentos | 07 | Tipos, inferência, union, funções, objetos, `type`/`interface`, arrays, `map/filter/reduce`, módulos | N2 ★ | 0.5, 0.6, 1.3 | 📘 [typescript-fundamentos](assuntos/07-linguagens/typescript-fundamentos.md) |
+| 2.2 | Programação funcional: o essencial | 04 | Função pura, imutabilidade, função de ordem superior, closure, composição | N2 ★ | 2.1 | 📝 |
+| 2.3 | Estruturas de dados básicas e Big-O | 04 | Array, lista, pilha, fila, hash map, set; noção de O(1), O(n), O(n²) | N2 ★ | 0.6, 2.1 | 📝 |
+| 2.4 | Testes automatizados: o essencial | 08 | Teste de unidade, asserção, caso-limite, Vitest, rodar no terminal | N2 ★ | 2.1 | 📝 |
+| 2.5 | Debugging como método | 00 | Reproduzir, isolar, hipótese, depurador, teste que prova | N2 ★ | 2.1, 2.4 | 📝 |
+| 2.6 | Erros e assincronia: o essencial | 07 | `try/catch`, `Promise`, `async/await`, o que é I/O | N2 ★ | 1.1, 2.1 | 📝 |
+| 2.7 | Porcentagem e juros | 01 | Porcentagem, aumento e desconto, juros simples e compostos | N3 ★ | 0.2 | 📝 |
+| 2.8 | Representações e potências | 01 | Bases numéricas, potências, notação científica, logaritmos (base do Big-O) | N2 | 0.5 | 📝 |
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Lógica de programação | Variável, tipo, condição, laço, função, coleção, recursão | N4 ★ | M1 | 📘 [logica-de-programacao](assuntos/04-ciencia-da-computacao/logica-de-programacao.md) |
-| Complexidade de algoritmos | Big-O de tempo e espaço, melhor/pior/médio caso, amortizado | N4 ★ | T2–T3 | 📝 |
-| Estruturas de dados | Array, lista ligada, pilha, fila, deque, hash table, árvores (BST, balanceada, heap, trie), grafos | N4 ★ | T2–T3 · `b-estruturas` | 📝 |
-| Algoritmos clássicos | Ordenação, busca binária, BFS/DFS, Dijkstra, topológica, programação dinâmica, guloso, backtracking, dois ponteiros, janela deslizante | N4 ★ | T3–T4 | 📝 |
-| Paradigmas de programação | Imperativo, procedural, orientado a objetos, funcional, lógico, concorrente | N3 | T1–T2 · `b-linguagens` | 📝 |
-| Programação orientada a objetos | Classe, objeto, encapsulamento, herança, polimorfismo, abstração, composição, interfaces, SOLID | N4 ★ | T1 (classes) · T4 (design) | 📘 [poo](assuntos/04-ciencia-da-computacao/poo.md) |
-| Programação funcional | Função pura, imutabilidade, função de ordem superior, closure, composição, map/filter/reduce | N3 ★ | M1–M2 | 📝 |
-| Compiladores e interpretadores | Léxico, sintaxe, AST, compilação, interpretação, JIT, bytecode, gramáticas (BNF) | N2 | T2 · `b-armazenamento` → H | 📝 |
-| Teoria da computação | Autômatos, linguagens formais, máquina de Turing, computabilidade (Sipser) | N2 | H | 📝 |
-| Teoria da informação | Entropia, compressão, códigos de correção de erro (Shannon) | N2 | H · `b-linux-boot` | 📝 |
+**Ativo da etapa:** `logica-ts` com testes passando no terminal; um script TypeScript que lê CSV e gera relatório.
 
-## 05 · Sistemas operacionais
+## ETAPA 3 · Como a web funciona · Mês 2
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Terminal Linux e shell | Navegar, ler, procurar, pipes, redirecionamento, variáveis, scripts | N4 ★ | M1 · `s-terminal` | 📘 [terminal-linux](assuntos/05-sistemas-operacionais/terminal-linux.md) |
-| Conceitos de SO | Processo, thread, escalonamento, memória virtual, sistema de arquivos, syscalls, I/O bloqueante e não bloqueante | N4 ★ | T1–T2 · `b-backend`, `b-memoria` | 📝 |
-| Concorrência e paralelismo | Condição de corrida, deadlock, mutex, semáforo, atomicidade, async × paralelismo, event loop | N4 ★ | T2 · `b-concorrencia` | 📝 |
-| Gerenciamento de memória | Stack × heap, alocação, coletor de lixo, vazamento, ponteiros | N3 ★ | T2 · `b-memoria` | 📝 |
-| Linux administração | Usuários, permissões, systemd, pacotes, logs, cron/timers, SSH | N3 ★ | T1–T2 | 📝 |
-| WSL2 e virtualização | Hypervisor, VM, WSL2, containers × VMs | N3 | M1 · `b-linux-wsl` | 📝 |
-| Arch Linux | Instalação manual, pacman/AUR, Wayland/Hyprland, Omarchy | N3 | T2 | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) |
-| Boot e sistemas de arquivos | BIOS/UEFI, bootloader, kernel, init, ext4, BTRFS, snapshots | N3 | T4 · `b-linux-boot` | 📝 |
-| Linux internals | Kernel, VFS, drivers, módulos, LFS/BLFS | N2 → N3 | H | 📝 |
-| Windows internals | Arquitetura NT, Win32/NT API, registro, NTFS, ACL/SID/tokens, UAC, PowerShell | N2 → N3 | H | 📝 |
-| macOS e iOS internals | Darwin/XNU, launchd, APFS, SIP, Gatekeeper, Secure Enclave, Mach-O | N1 → N2 | H | 📝 |
-| SO próprio | AMtech OS (camada sobre Ubuntu), AM Linux, AM-OS | N3 | T4 → H | 📝 |
+> Antes do primeiro site no ar: o que acontece entre digitar um endereço e a página aparecer.
 
-## 06 · Redes de computadores
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 3.1 | Redes: o essencial | 06 | Camadas TCP/IP, IP, porta, cliente-servidor, TCP × UDP, DNS | N2 ★ | 1.1, 1.3 | 📝 |
+| 3.2 | HTTP e HTTPS | 06 | Métodos, status, cabeçalhos, cookies, cache, CORS, TLS (usa 1.4) | N2 ★ | 3.1, 1.4 | 📝 |
+| 3.3 | A jornada de uma requisição | 06 | DNS → TCP → TLS → HTTP → servidor → resposta; proxy, CDN | N2 ★ | 3.1, 3.2 | 📝 |
+| 3.4 | Diagnóstico de rede | 06 | ping, dig, curl, ss, ferramentas do navegador | N2 ★ | 3.1 | 📝 |
+| 3.5 | HTML e CSS | 09 | Semântica, formulários, box model, flexbox, grid, responsivo | N3 ★ | 3.2 | 📝 |
+| 3.6 | JavaScript no navegador | 09 | DOM, eventos, `fetch`, armazenamento | N2 ★ | 2.1, 2.6, 3.5 | 📝 |
+| 3.7 | React | 09 | Componentes, props, estado, hooks, renderização | N2 ★ | 3.6 | 📝 |
+| 3.8 | Next.js e Tailwind | 09 | Rotas, server e client components, estilos utilitários | N2 ★ | 3.7 | 📝 |
+| 3.9 | CI/CD: o essencial | 12 | GitHub Actions, testes a cada push, `just check` como portão | N2 ★ | 1.5, 2.4 | 📝 |
+| 3.10 | Deploy de site | 12 | Vercel, Hostinger por push, domínio e DNS (usa 3.1) | N2 ★ | 3.8, 3.9 | 📝 |
+| 3.11 | Revisar código de IA (R-1) | 16 | Checklist de PR, ler diff, explicar cada linha | N2 ★ | 1.5, 2.4 | 📝 |
+| 3.12 | Go: ferramentas (Go-1, Go-2) | 07 | Tipos, structs, funções, erros como valor, binário, arquivos | N2 | 1.3, 2.1 | [trilha-go-ferramentas](trilha-go-ferramentas.md) |
+| 3.13 | Contabilidade: o essencial | 18 | Débito e crédito, regime de caixa e competência, fluxo de caixa | N2 | 2.7 | 📝 |
+| 3.14 | Preço de serviço | 18 | Hora mínima, custo, margem, proposta | N2 | 2.7, 3.13 | 📝 |
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Camadas e pacotes | Modelo OSI e TCP/IP, encapsulamento, quadro, pacote, segmento | N4 ★ | T1 · `b-redes-1` | 📝 |
-| Sinais e erros | Transmissão digital, modulação, paridade, checksum, CRC | N2 | T1 · `b-redes-1` | 📝 |
-| Endereçamento | IPv4, IPv6, máscara, sub-redes (CIDR), portas, MAC, ARP | N4 ★ | T1 | 📝 |
-| Protocolos principais | TCP × UDP, handshake, DNS, DHCP, HTTP/1.1, HTTP/2, HTTP/3, TLS, ICMP | N4 ★ | T1 · `b-redes-2` | 📝 |
-| Sockets e cliente-servidor | Socket TCP/UDP, porta, bind/listen/accept, WebSocket | N3 ★ | T1 · `b-redes-2` | 📝 |
-| A jornada de uma requisição | Do navegador ao servidor e de volta: DNS, TCP, TLS, HTTP, proxy, balanceador | N4 ★ | T1 | 📝 |
-| Infraestrutura de rede | Switch, roteador, VLAN, NAT, firewall, proxy, balanceador de carga, CDN | N3 | T2 | 📝 |
-| Roteamento | Tabela de rotas, gateway, roteamento estático e dinâmico (OSPF, BGP noção) | N2 → N3 | T3 → H (CCNA) | 📝 |
-| SSH, VPN e rede segura | Túnel SSH, chaves, VPN (WireGuard), Tailscale, NAS | N3 | T3 · `b-redes-3` | 📝 |
-| Wi-Fi | Padrões 802.11, canais, WPA2/WPA3 | N2 | H | 📝 |
-| Diagnóstico de rede | ping, traceroute, dig, curl, ss, tcpdump, Wireshark | N3 ★ | T1 → ∞ | 📝 |
-| Rede da casa e do setup | Servidor da casa, Zigbee, MQTT, Tailscale, rede isolada do laboratório | N3 | T2–T3 | [trilha-de-redes](trilha-de-redes.md) |
+**Ativo da etapa:** 1 site de cliente no ar pela esteira, com PRs revisados; 1 CLI em Go que você usa.
 
-Certificações ligadas: CompTIA Network+ (T2–T3), CCNA (opcional, H).
+## ETAPA 4 · Dados e back-end · Mês 3
 
-## 07 · Linguagens de programação
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 4.1 | Modelagem relacional | 10 | Entidade, relacionamento, chave primária e estrangeira, normalização | N2 ★ | 0.3, 2.3 | 📝 |
+| 4.2 | SQL | 07 | SELECT, WHERE, JOIN, GROUP BY, subconsulta, INSERT/UPDATE/DELETE, DDL (álgebra de conjuntos aplicada) | N3 ★ | 0.3, 4.1 | 📝 |
+| 4.3 | PostgreSQL: o essencial | 10 | Tipos, constraints, índices (noção de B-tree), transação e ACID (noção) | N2 ★ | 4.2, 1.8 | 📝 |
+| 4.4 | POO | 04 | Classe, objeto, encapsulamento, interface, polimorfismo, composição, injeção de dependência | N2 ★ | 2.1, 2.2 | 📘 [poo](assuntos/04-ciencia-da-computacao/poo.md) |
+| 4.5 | Requisitos e histórias | 08 | Requisito funcional e não funcional, história de usuário, critério de aceite | N2 ★ | — | 📝 |
+| 4.6 | Arquitetura em camadas: o essencial | 08 | Domínio separado de infraestrutura, repository, por que a regra não conhece o banco | N2 ★ | 4.4 | 📝 |
+| 4.7 | APIs REST e contratos | 09 | Recursos, rotas, status corretos, OpenAPI, paginação, validação com Zod | N2 ★ | 3.2, 2.1 | 📝 |
+| 4.8 | Back-end com NestJS | 09 | Módulos, controllers, providers, injeção de dependência | N2 ★ | 4.4, 4.6, 4.7 | 📝 |
+| 4.9 | ORM e migrations | 10 | Prisma/Drizzle, migration versionada, relacionamentos, N+1 | N2 ★ | 4.3, 4.8 | 📝 |
+| 4.10 | Autenticação e autorização | 09 | Senha com hash (usa 1.4), sessão, cookie, JWT, OAuth (noção), RBAC, Row-Level Security | N2 ★ | 1.4, 3.2, 4.8 | 📝 |
+| 4.11 | OWASP Top 10 | 13 | Injeção, controle de acesso quebrado, XSS, SSRF, configuração insegura | N2 ★ | 3.2, 4.2, 4.10 | 📝 |
+| 4.12 | Testes de integração e teste antes do código (R-2) | 08 | Teste de API, banco de teste, escrever o teste e deixar o agente implementar | N2 ★ | 2.4, 4.8 | 📝 |
+| 4.13 | Como a IA funciona: o essencial | 15 | Token, contexto, modelo, prompt, alucinação, custo | N1 ★ | 0.4 | 📝 |
+| 4.14 | IA em TypeScript (IA-T1) | 15 | Chamar modelo pela API, saída estruturada validada com Zod, custo por chamada | N2 ★ | 4.7, 4.13 | 📝 |
+| 4.15 | Arduino: primeiro protótipo | 19 | Entradas, saídas, sensor, LED (usa a eletricidade da física) | N2 | 0.6, física T1 | [trilha-robotica-iot](trilha-robotica-iot.md) |
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| TypeScript e JavaScript | Tipos, inferência, union, generics, funções de ordem superior, closures, classes, módulos, erros, event loop, async/await | N4 ★ | M1 → T4 · `o-csharp` | 📘 [typescript-fundamentos](assuntos/07-linguagens/typescript-fundamentos.md) |
-| SQL | SELECT, JOIN, GROUP BY, subconsulta, window functions, DDL, transações | N4 ★ | M1 → T3 · `o-sql` | 📝 |
-| Python | Sintaxe, tipos, coleções, funções, classes, módulos, ambientes virtuais, typing | N3 ★ | T3 (M7) | 📝 |
-| Go | Tipos, structs, interfaces, goroutines, channels, erros como valor, módulos, binário único | N3 | T1 (M2) → T4 | [trilha-go-ferramentas](trilha-go-ferramentas.md) |
-| Shell (Bash) | Script, variáveis, condições, laços, funções, set -euo pipefail, ShellCheck | N3 ★ | M1 → T2 | 📝 |
-| C | Ponteiros, memória manual, structs, compilação, Makefile, depuração (gdb, valgrind) | N3 | H (École 42) | [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) |
-| C++ | RAII, classes, templates, STL, smart pointers | N3 | H (École 42) | idem |
-| Rust | Ownership, borrowing, lifetimes, traits (firmware e SO) | N2 | H | 📝 |
-| C# / .NET | Carta de reserva: vaga corporativa ou agente fiscal | N2 | só se puxar a carta | [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) §2.1 |
+**Ativo da etapa:** esqueleto do AM Gestão com API, banco, autenticação e teste no CI; planilha do financeiro à venda; 1ª chamada de IA no produto.
 
-## 08 · Engenharia de software
+## ETAPA 5 · O produto com dinheiro de verdade · Meses 4–5
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Git e controle de versão | Commit, branch, merge, rebase, PR, conflitos, desfazer, histórico limpo, tags | N4 ★ | M1 · `s-git` | 📘 [git](assuntos/08-engenharia-de-software/git.md) |
-| Requisitos | Requisito funcional e não funcional, história de usuário, critério de aceite, escopo | N3 ★ | T1–T2 | 📝 |
-| Modelagem | UML essencial (classes, sequência, casos de uso), diagrama ER, C4 | N3 | T2 | 📝 |
-| Processos ágeis | Scrum, Kanban, RAD, backlog, sprint, retrospectiva, métricas de fluxo | N3 ★ | T1 → ∞ | 📝 |
-| Código limpo | Nomes, funções pequenas, coesão, acoplamento, comentários úteis | N4 ★ | T1 → T4 | 📝 |
-| Princípios SOLID | SRP, OCP, LSP, ISP, DIP | N4 ★ | T4 (M10) | 📝 |
-| Padrões de projeto | Strategy, Factory, Adapter, Observer, Repository, Decorator, Dependency Injection | N3 ★ | T4 (M10) | 📝 |
-| Refatoração | Code smells, refatorar com teste, passos pequenos (Fowler) | N4 ★ | T4 (M10) | 📝 |
-| Testes | Unidade, integração, cenário/E2E, propriedade, mocks, cobertura, TDD, teste que reproduz o bug | N4 ★ | T1 (M3) → T2 · `o-dotnet` | 📝 |
-| Arquitetura de software | Camadas, hexagonal (ports & adapters), Clean Architecture, monólito modular × microsserviços | N4 ★ | T4 (M10) | 📝 |
-| Domain-Driven Design | Linguagem ubíqua, entidades, objetos de valor, agregados, contextos delimitados | N3 | T4 (M10) | 📝 |
-| Decisões e documentação | ADR, README, documentação de API (OpenAPI), changelog, versionamento semântico | N4 ★ | T1 → ∞ | 📝 |
-| Revisão de código | Revisar PR humano e de IA, checklist, comentários úteis | N4 ★ | T1 (M2, Trilha R) | 📝 |
-| Estimativa e planejamento | Estimativa como hipótese, fatiamento, entrega incremental | N3 | ∞ | 📝 |
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 5.1 | Dinheiro no código | 17 | Centavos inteiros, decimal × float (usa 0.5), arredondamento, moeda | N3 ★ | 0.5, 2.1 | 📝 |
+| 5.2 | Concorrência e paralelismo | 05 | Processo × thread, condição de corrida, deadlock, mutex, event loop por dentro | N2 ★ | 1.1, 2.6 | 📝 |
+| 5.3 | ↻ Transações a fundo | 10 | Níveis de isolamento, locks, concorrência otimista, deadlock no banco | N3 ★ | 4.3, 5.2 | 📝 |
+| 5.4 | Idempotência e pagamentos | 17 | Chave de idempotência, retry seguro, efeito externo irreversível | N3 | 4.7, 5.3 | 📝 |
+| 5.5 | Matemática financeira | 18 | Juros compostos, VPL, TIR, SAC, Price | N3 | 2.7 | 📝 |
+| 5.6 | Ledger de partidas dobradas | 17 | Lançamento, débito/crédito (usa 3.13), saldo derivado, imutabilidade | N3 | 3.13, 5.1, 5.3 | 📝 |
+| 5.7 | SQLite e offline | 10 | Banco local, sincronização, conflito | N2 | 4.3, 5.3 | 📝 |
+| 5.8 | Go: HTTP e agente fiscal (Go-3 a Go-6) | 07 | CSV/JSON, automação, servidor HTTP, impressora ESC/POS | N2 | 3.12, 3.2 | [trilha-go-ferramentas](trilha-go-ferramentas.md) |
+| 5.9 | Fiscal | 17 | NFC-e, NFS-e, o papel do agente local | N2 | 5.8 | 📝 |
+| 5.10 | Especificação para agentes (R-3) | 16 | CLAUDE.md por projeto, pedido sem ambiguidade, regras do produto | N3 | 3.11, 4.12 | 📝 |
+| 5.11 | Linux: administração | 05 | Usuários, systemd, pacotes, logs, timers | N2 ★ | 1.3 | 📝 |
+| 5.12 | SSH e acesso remoto | 06 | Chaves (usa 1.4), túnel, servidor remoto | N2 ★ | 1.4, 3.1 | 📝 |
+| 5.13 | Deploy em servidor e os 12 fatores | 12 | VPS, Docker em produção, Kamal, configuração no ambiente, rollback de um comando | N2 ★ | 1.8, 3.10, 5.11, 5.12 | 📝 |
+| 5.14 | Geometria e PostGIS | 01 · 10 | Coordenadas, distância, SRID, consulta espacial | N2 | 4.3 | 📝 |
+| 5.15 | Vetores: o essencial | 01 | Vetor, comprimento, produto escalar, similaridade de cosseno | N2 | 2.8 | 📝 |
+| 5.16 | RAG e embeddings (IA-T2) | 15 | Embedding (usa 5.15), chunking, pgvector, busca por similaridade, citação | N2 ★ | 4.14, 5.15, 4.3 | 📝 |
+| 5.17 | Tempo real | 11 | WebSocket, SSE (pedidos em tempo real) | N1 | 3.2 | 📝 |
 
-## 09 · Desenvolvimento web
+**Ativo da etapa:** módulo Caixa com impressão real; MVP (Caixa + Pedidos + Financeiro) rodando num restaurante; busca com IA no produto.
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| HTML e CSS | Semântica, formulários, box model, flexbox, grid, responsivo | N4 ★ | T1 (M2) | 📝 (base: seu Catálogo do HTML) |
-| JavaScript no navegador | DOM, eventos, fetch, armazenamento, módulos | N3 ★ | T1 (M2) | 📝 |
-| HTTP para devs | Métodos, status, cabeçalhos, cookies, cache, CORS | N4 ★ | T1 · `b-redes-2` | 📝 |
-| React | Componentes, props, estado, hooks, renderização | N3 ★ | T1 (M2) | 📝 |
-| Next.js | Rotas, server e client components, server actions, cache, deploy | N3 ★ | T1 (M2) → T2 | 📝 |
-| Tailwind e design de interface | Utilitários, design system, acessibilidade básica | N3 | T1 (M2) | 📝 |
-| APIs | REST, GraphQL (noção), OpenAPI, versionamento, paginação, idempotência | N4 ★ | T1 (M3) | 📝 |
-| Validação e contratos | Zod, validar na borda, tipos compartilhados | N3 ★ | T1 (M3) | 📝 |
-| Autenticação e autorização | Sessão, cookie, JWT, OAuth2/OIDC, RBAC, Row-Level Security | N4 ★ | T1 (M3) | 📝 |
-| Back-end em TypeScript | NestJS, injeção de dependência, middlewares, filas | N3 ★ | T1 (M3) → T2 | 📝 |
-| Back-end em Python | FastAPI, Pydantic, async | N3 | T3 | 📝 |
-| Performance web | Core Web Vitals, cache, compressão, lazy loading | N3 | T3 · `b-testes-perf` | 📝 |
-| Acessibilidade | WCAG, semântica, teclado, leitor de tela | N2 | T2 | 📝 |
+## ETAPA 6 · Produção de verdade · Mês 6
 
-## 10 · Banco de dados e dados
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 6.1 | Observabilidade | 12 | Logs estruturados, métricas, traces, alertas | N2 ★ | 5.13 | 📝 |
+| 6.2 | ↻ Testes a fundo | 08 | Testes de propriedade, cenário/E2E, mocks, cobertura | N3 ★ | 4.12, 5.4 | 📝 |
+| 6.3 | Avaliar IA (R-4) | 15 · 16 | Conjunto de perguntas com resposta esperada, nota no CI | N2 | 5.16, 3.9 | 📝 |
+| 6.4 | Modelagem de ameaças | 13 | STRIDE, ativos, superfície de ataque | N2 | 4.11 | 📝 |
+| 6.5 | LGPD e privacidade | 13 | Dados pessoais, bases legais, incidente | N2 ★ | 4.10 | 📝 |
+| 6.6 | Segurança do Linux e da rede | 13 | Hardening, firewall, SSH seguro, mínimo privilégio | N2 | 5.11, 5.12 | 📝 |
+| 6.7 | DevSecOps | 13 | CodeQL, Trivy, Dependabot, gitleaks, revisão automática de PR | N2 ★ | 3.9, 4.11 | 📝 |
+| 6.8 | Relato de incidente | 13 | Linha do tempo, causa, correção, prevenção | N2 | 6.1 | 📝 |
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Modelagem relacional | Entidades, relacionamentos, chaves, normalização (1FN–3FN), quando desnormalizar | N4 ★ | T1 | 📝 |
-| PostgreSQL | Tipos, constraints, índices, EXPLAIN, extensões, backup | N4 ★ | T1 → T3 | 📝 |
-| Transações | ACID, níveis de isolamento, locks, concorrência otimista, deadlock | N4 ★ | T2 (M4) | 📝 |
-| Índices e desempenho | B-tree, índice composto, cobertura, plano de execução, N+1 | N4 ★ | T2 → T3 · `b-escala` | 📝 |
-| ORM e migrations | Prisma/Drizzle, migrations versionadas, expand-contract | N3 ★ | T1 (M3) | 📝 |
-| SQLite e offline | SQLite local, sincronização, conflito | N3 | T2 (M4) | 📝 |
-| PostGIS | Geometria, SRID, consultas espaciais | N2 | T2 (M5) | 📝 |
-| pgvector | Embeddings, busca por similaridade, índices vetoriais | N3 | T2 (M5) | 📝 |
-| Redis e cache | Chave-valor, TTL, invalidação, filas | N2 | T4 | 📝 |
-| NoSQL | Documento, coluna, grafo; quando usar | N2 | T3 · `b-bancos` | 📝 |
-| Engenharia de dados | ETL/ELT, pipelines, data warehouse, qualidade de dados | N2 → N3 | T3 → H | [trilha-dados-ia](trilha-dados-ia.md) IA2 |
+**Ativo da etapa:** MVP estável com alertas, backup restaurado, rollback testado; 10 planilhas vendidas.
 
-## 11 · Sistemas distribuídos e escalabilidade
+## ETAPA 7 · Dados, Python e IA · Meses 7–9
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Escalabilidade | Vertical × horizontal, gargalo, stateless, balanceamento | N3 ★ | T3 · `b-escala` → T4 | 📝 |
-| Cache | Onde cachear, invalidação, cache-aside, CDN | N3 ★ | T4 (M11) | 📝 |
-| Mensageria | Filas, pub/sub, outbox, idempotência do consumidor, retry, dead letter | N3 | T4 (M11) | 📝 |
-| Consistência | Consistência eventual, CAP/PACELC, relógios, conflitos | N2 → N3 | T4 (M11) | 📝 |
-| Tempo real | WebSocket, SSE, SignalR (noção) | N2 | T2 (pedidos) | 📝 |
-| System design | Requisitos, estimativa de carga, desenho, trade-offs em 45 min | N4 ★ | T4 (M10–M11) | 📝 |
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 7.1 | Estatística descritiva | 01 | Média, mediana, variância, desvio-padrão, distribuições, gráficos | N3 | 2.7 | 📝 |
+| 7.2 | Python | 07 | Sintaxe, tipos, coleções, funções, classes, módulos, ambientes virtuais | N3 ★ | 2.1, 4.4 | 📝 |
+| 7.3 | Python para dados | 15 | NumPy, pandas, visualização, notebooks | N2 ★ | 7.1, 7.2 | 📝 |
+| 7.4 | ↻ SQL avançado e índices | 10 | Window functions, CTE, EXPLAIN, índice composto, plano de execução | N3 ★ | 4.2, 2.3 | 📝 |
+| 7.5 | ↻ Estruturas de dados: árvores e grafos | 04 | Árvore de busca, balanceada, heap, trie, grafo (base dos índices B-tree) | N3 ★ | 2.3 | 📝 |
+| 7.6 | Contagem e probabilidade | 01 | Combinação, permutação, probabilidade condicional, Bayes | N3 | 0.3, 7.1 | 📝 |
+| 7.7 | Álgebra linear | 01 | Matrizes, multiplicação, transformações, autovalores (noção) | N2 → N3 | 5.15 | 📝 |
+| 7.8 | Machine learning clássico | 15 | Regressão, classificação, validação, overfitting, scikit-learn | N2 | 7.3, 7.6, 7.7 | 📝 |
+| 7.9 | Back-end em Python | 09 | FastAPI, Pydantic, async | N2 | 7.2, 4.7 | 📝 |
+| 7.10 | Tributação brasileira | 18 | Simples Nacional, Fator R, NFS-e, carnê-leão, conciliação | N2 | 3.13 | 📝 |
+| 7.11 | Pix e Pix Automático | 17 | API do Pix, QR Code, webhooks, devolução (usa 5.4) | N2 | 5.4 | 📝 |
+| 7.12 | Custo e roteamento de IA (R-5) | 15 · 16 | Tokens, cache de prompt, IA local × online, modelo certo por tarefa | N3 | 4.14, 6.3 | 📝 |
+| 7.13 | Gerenciamento de memória | 05 | Stack × heap, coletor de lixo, vazamento, ponteiros (noção) | N2 ★ | 5.2 | 📝 |
+| 7.14 | Arquitetura de computadores | 03 | CPU por dentro, cache, hierarquia de memória, GPU, memória de vídeo (por que um modelo de 8B pesa) | N2 | 0.4, 7.13 | 📝 |
+| 7.15 | Deep learning: o essencial | 15 | Rede neural, gradiente, treino, transformer (noção), PyTorch | N1 → N2 | 7.7, 7.8 | 📝 |
+| 7.16 | IA local | 15 | Ollama, quantização, memória de GPU, Hugging Face | N2 | 7.14, 5.16 | 📝 |
+| 7.17 | ↻ Conceitos de SO | 05 | Escalonamento, memória virtual, syscalls, I/O bloqueante × não bloqueante | N3 ★ | 5.2, 7.13 | 📝 |
+| 7.18 | ESP32 e Raspberry Pi | 19 | Wi-Fi, MQTT, GPIO, Linux embarcado | N2 | 4.15, 5.11 | 📝 |
 
-## 12 · DevOps, nuvem e infraestrutura
+**Ativo da etapa:** dashboard de dados do produto; 5 clientes pagantes; assistente com IA local no AM Gestão.
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Containers | Imagem, container, Dockerfile, Compose, volumes, rede, namespaces e cgroups | N4 ★ | M1 · `s-docker`, `b-containers` | 📝 |
-| CI/CD | GitHub Actions, pipeline, portão (`just check`), cache, artefatos | N4 ★ | T1 · `s-ci` | 📝 |
-| Deploy | Vercel, VPS, Kamal, Hostinger por push, rollback de um comando, staging, feature flag | N3 ★ | T1 → T2 · `s-deploy` | 📝 |
-| Os 12 fatores | Configuração no ambiente, processos stateless, logs como fluxo | N3 ★ | T2 · `b-containers` | 📝 |
-| Observabilidade | Logs estruturados, métricas, traces, alertas, Uptime Kuma | N3 ★ | T2 (M6) | 📝 |
-| Backup e recuperação | restic, retenção, restauração ensaiada, snapshots | N4 | M1 · `s-backup` | 📝 |
-| Segredos | KeePassXC, sops/age, variáveis de ambiente, nunca no Git | N4 ★ | M1 · `s-segredos` | 📝 |
-| Infraestrutura como código | Terraform, Ansible, receitas idempotentes | N2 → N3 | T4 → H | 📝 |
-| Kubernetes | Pod, deployment, service, ingress (noção para vaga) | N1 → N2 | H | 📝 |
-| Nuvem | Azure (AZ-900, AI-200), AWS (Cloud Practitioner), custos | N2 → N3 | T3 → H | 📝 |
-| Homelab | Servidor da casa, VMs, rede isolada, monitoramento | N3 | T2 → H | 📝 |
+## ETAPA 8 · Senioridade · Meses 10–12
 
-## 13 · Segurança defensiva (AppSec, blue team)
+| # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
+|---|---|---|---|---|---|---|
+| 8.1 | ↻ POO e princípios SOLID | 04 · 08 | SRP, OCP, LSP, ISP, DIP; composição × herança com argumento | N4 ★ | 4.4, 4.6 | 📘 [poo](assuntos/04-ciencia-da-computacao/poo.md) |
+| 8.2 | Padrões de projeto | 08 | Strategy, Factory, Adapter, Observer, Repository, Decorator | N3 ★ | 8.1 | 📝 |
+| 8.3 | Código limpo e refatoração | 08 | Code smells, refatorar com teste, passos pequenos | N4 ★ | 6.2, 8.1 | 📝 |
+| 8.4 | ↻ Arquitetura de software | 08 | Hexagonal, Clean Architecture, monólito modular × microsserviços, ADR | N4 ★ | 4.6, 8.1 | 📝 |
+| 8.5 | Domain-Driven Design | 08 | Linguagem ubíqua, entidade, objeto de valor, agregado, contexto delimitado | N3 | 8.4 | 📝 |
+| 8.6 | Modelagem e documentação | 08 | UML essencial, C4, OpenAPI, README e ADR públicos | N3 | 8.4 | 📝 |
+| 8.7 | Performance e escalabilidade | 11 | Medir antes, gargalo, stateless, balanceamento | N3 ★ | 6.1, 7.4 | 📝 |
+| 8.8 | Cache | 11 | Onde cachear, invalidação, Redis, CDN | N3 ★ | 8.7 | 📝 |
+| 8.9 | Mensageria | 11 | Filas, pub/sub, outbox, idempotência do consumidor (usa 5.4) | N3 | 5.4, 8.7 | 📝 |
+| 8.10 | Consistência em sistemas distribuídos | 11 | Consistência eventual, CAP/PACELC, conflitos | N2 → N3 | 5.3, 8.9 | 📝 |
+| 8.11 | ↻ Algoritmos clássicos e complexidade | 04 | Ordenação, busca binária, BFS/DFS, Dijkstra, programação dinâmica, guloso, backtracking, Big-O formal | N4 ★ | 7.5, 2.8 | 📝 |
+| 8.12 | System design | 11 | Requisitos, estimativa de carga, desenho, trade-offs em 45 min | N4 ★ | 8.4, 8.7–8.10 | 📝 |
+| 8.13 | Orquestrar agentes (R-6) | 16 | Worktrees, agentes em paralelo, revisão automática de PR | N3 | 5.10, 7.12 | 📝 |
+| 8.14 | Entrevista técnica | 24 | Algoritmos em voz alta, system design, comportamental (STAR) | N4 ★ | 8.11, 8.12 | 📝 |
+| 8.15 | Portfólio e GitHub em inglês | 24 | Estudos de caso, ADRs, contribuição open source | N3 ★ | 8.6 | 📝 |
+| 8.16 | Finanças corporativas e valuation | 18 | Fluxo de caixa descontado, múltiplos, análise de balanço (usa 5.5) | N2 | 5.5 | 📝 |
+| 8.17 | Boot, sistemas de arquivos e o AMtech OS | 05 | BIOS/UEFI, bootloader, init, BTRFS, snapshots, camada sobre Ubuntu | N3 | 7.17, 5.11 | 📝 |
 
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Criptografia | Hash, sal, simétrica (AES), assimétrica (RSA, curvas elípticas), assinatura, certificados, TLS, PKI | N3 ★ | T2 · `b-cripto` → T4 · `b-cripto-pratica` | 📝 |
-| OWASP Top 10 | Injeção, quebra de controle de acesso, falhas criptográficas, SSRF, XSS, configuração insegura | N4 ★ | T1 (M3) | 📝 |
-| OWASP API Top 10 | BOLA, autenticação quebrada, exposição excessiva, rate limit | N3 ★ | T1 (M3) → T2 | 📝 |
-| Modelagem de ameaças | STRIDE, ativos, superfícies de ataque, mitigação | N3 | T2 | 📝 |
-| DevSecOps | Análise estática (CodeQL), dependências (Trivy, Dependabot), segredos (gitleaks), revisão automática | N3 ★ | T1 → T3 | 📝 |
-| LGPD e privacidade | Dados pessoais, bases legais, minimização, incidente | N3 ★ | T2 | 📝 |
-| Segurança do Linux e da rede | Hardening, firewall, SSH seguro, atualizações, mínimo privilégio | N3 | T2 | 📝 |
-| Segurança de agentes de IA | Sandbox (ai-jail), sem credencial de produção, injeção de prompt, revisão de PR | N4 | M1 · `s-ia-segura` | 📝 |
-| Blue team e resposta a incidente | Logs, detecção, SIEM (noção), relato de incidente | N2 → N3 | T3 → H | 📝 |
-| Forense digital | Coleta de evidência, linha do tempo, análise de memória e disco | N2 | H | 📝 |
-
-## 14 · Segurança ofensiva (pentest e red team)
-
-> Tudo aqui só em laboratório próprio ou com autorização por escrito (`escopo.py`). Trilha completa: [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md).
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Metodologia e lei | PTES, OWASP Testing Guide, escopo, autorização, Lei 12.737, Marco Civil, LGPD | N4 | H (antes de tudo) | 📝 |
-| Reconhecimento | OSINT, enumeração de DNS e subdomínios, varredura de portas (nmap), fingerprinting | N3 | H | 📝 |
-| Web hacking | Injeção SQL, XSS, CSRF, SSRF, IDOR, upload, desserialização, Burp Suite | N4 | H (eJPT, BSCP) | 📝 |
-| Bypass e evasão | WAF evasion, burlar proxy e firewall (túneis, `b-redes-3`), bypass de autenticação e de controles do cliente, evasão de antivírus/EDR, bypass de UAC/AMSI (noção) | N3 | H (BSCP → OSEP) | 📝 |
-| Escalada de privilégios | Linux (SUID, sudo, cron, kernel) e Windows (serviços, tokens, registro) | N3 | H (OSCP) | 📝 |
-| Active Directory | Kerberos, NTLM, enumeração, kerberoasting, movimento lateral, kill chain | N3 | H (OSCP) | 📝 |
-| Pivoting e tunneling | Port forwarding, SOCKS, chisel, ligolo | N3 | H (OSCP) | 📝 |
-| Wireless | WPA2/WPA3, handshake, ataques de rede sem fio | N2 | H | 📝 |
-| Desenvolvimento de exploit | Buffer overflow, ROP, shellcode, mitigações (ASLR, DEP, canário) | N3 | H (OSED) | 📝 |
-| Engenharia reversa | Ghidra, depurador, assembly, análise estática e dinâmica, binários .NET/Java | N3 | H | 📝 |
-| Análise de malware | Sandbox, comportamento, indicadores de comprometimento | N2 | H | 📝 |
-| C2 e OPSEC | Frameworks de comando e controle, OPSEC, deception | N2 | H (OSEP) | 📝 |
-| Engenharia social | Phishing (só em exercício autorizado), pretexto, conscientização | N2 | H | 📝 |
-| Cloud e mobile security | IAM mal configurado, buckets, Android/iOS básico | N2 | H | 📝 |
-| Relatório de pentest | CVSS, evidência, recomendação, sumário executivo | N4 | H | 📝 |
-
-Certificações: CompTIA A+/Network+ → Security+ → eJPT → BSCP → OSCP → OSWE/OSEP.
-
-## 15 · IA, dados e machine learning
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| LLMs na prática | Token, contexto, temperatura, prompt, saída estruturada, chamada de ferramenta | N4 ★ | T1 (M3) · `b-ia` | 📝 |
-| IA em TypeScript | Vercel AI SDK, Zod para saída, custo por chamada, streaming | N3 ★ | T1 (M3) | 📝 |
-| RAG e embeddings | Embedding, chunking, busca vetorial, reranking, citação de fonte | N4 ★ | T2 (M5) | 📝 |
-| Avaliação de IA (evals) | Conjunto de teste, métrica, regressão, LLM como juiz | N3 ★ | T2 (M6) | 📝 |
-| Agentes e MCP | Loop de ferramenta, MCP, orquestração, limites e custos | N3 ★ | T2 → T4 | 📝 |
-| Otimização de uso de modelos | Tokens, cache de prompt, roteamento local/online, modelo certo por tarefa | N4 | T3 (M8) | 📝 |
-| Python para dados | NumPy, pandas, visualização, notebooks | N3 ★ | T3 (M7) | 📝 |
-| Machine learning clássico | Regressão, classificação, árvores, validação, overfitting, scikit-learn | N3 | T3 (M8) | 📝 |
-| Deep learning | Redes neurais, backpropagation, PyTorch, CNN, transformer | N2 → N3 | T3 (M9) → H | 📝 |
-| IA local | Ollama, quantização, memória de GPU, modelos do Hugging Face | N3 | T3 (M9) | 📝 |
-| Treinar e ajustar modelos | Treinar do zero (pequeno), fine-tuning, LoRA/QLoRA, modelo de 8B | N2 → N3 | H | [trilha-dados-ia](trilha-dados-ia.md) IA6 |
-| MLOps | Versionar dados e modelos, servir, monitorar | N2 | H | idem IA7 |
-| Voz e visão | Whisper, Piper, Frigate (Jarvis e casa) | N2 | H | 📝 |
-
-## 16 · Trabalhar com agentes de IA (Trilha R)
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Revisar código de IA | Checklist de PR, ler diff, explicar cada linha | N4 ★ | T1 (M2) · R-1 | 📝 |
-| Teste antes do código | Especificar pelo teste, o agente implementa, o teste decide | N4 ★ | T1 (M3) · R-2 | 📝 |
-| Especificação e regras | CLAUDE.md, pedido sem ambiguidade, contexto mínimo suficiente | N4 | T2 (M4) · R-3 | 📝 |
-| Avaliar a IA | Evals no CI | N3 | T2 (M6) · R-4 | 📝 |
-| Custo e roteamento | Medir tokens, decidir código/local/online | N4 | T3 (M8) · R-5 | 📝 |
-| Orquestrar agentes | Worktrees, agentes em paralelo, revisão automática de PR | N3 | T4 (M11) · R-6 | 📝 |
-
-## 17 · Engenharia de sistemas financeiros
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Dinheiro no código | Decimal × float, centavos inteiros, arredondamento bancário, moeda | N4 ★ | T2 (M4) | 📝 |
-| Idempotência e pagamentos | Chave de idempotência, retry seguro, efeitos externos irreversíveis | N4 | T2 (M4) | 📝 |
-| Ledger de partidas dobradas | Lançamento, débito e crédito, saldo derivado, imutabilidade | N4 | T2 (M5) | 📝 |
-| Conciliação | Extrato × sistema, divergências, fechamento | N3 | T3 (M8) | 📝 |
-| Pix e Pix Automático | API do Pix, QR Code, webhooks, devolução | N3 | T3 (M8) | 📝 |
-| Fiscal | NFC-e/NFS-e, impressora ESC/POS, agente fiscal local | N3 | T2 (M4) | 📝 |
-
-## 18 · Finanças e economia
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Finanças pessoais e investimentos | Orçamento, reserva, renda fixa, ações, FIIs, ARCA, aporte e rebalanceamento | N4 | ∞ (F0) | [trilha-financas-economia](trilha-financas-economia.md) |
-| Contabilidade | Regime de caixa e competência, débito/crédito, balanço, DRE, fluxo de caixa | N3 | T1 (F1) · `f-*` | 📝 |
-| Matemática financeira | Juros compostos, VPL, TIR, SAC, Price, valor do dinheiro no tempo | N4 | T2 (F2) | 📝 |
-| Tributação brasileira | Simples Nacional, Fator R, NFS-e, carnê-leão, MEI × ME | N3 | T3 (F3) | 📝 |
-| Preço de serviço | Hora mínima, custo, margem, proposta | N3 | T1 · `f-preco` | 📝 |
-| Finanças corporativas e valuation | Fluxo de caixa descontado, múltiplos, análise de balanço | N3 | T4 (F4) | 📝 |
-| Mercado financeiro e regulação | CVM, ANBIMA, B3, fundos, regras de recomendação | N3 | H (F5) | 📝 |
-| Economia | Micro, macro, inflação, juros, câmbio, econometria | N2 → N3 | H (F6, faculdade) | 📝 |
-| Finanças quantitativas | Séries temporais, risco, otimização de carteira | N2 | H (F8) | 📝 |
-
-Certificações: CNPI → registro de consultor CVM → CGA/CGE → CFP → CFA.
-
-## 19 · Robótica, IoT e automação
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Arduino | Sketch, entradas e saídas, sensores, atuadores | N3 | T1 (M3) | [trilha-robotica-iot](trilha-robotica-iot.md) |
-| ESP32 e IoT | Wi-Fi, MQTT, deep sleep, OTA | N3 | T3 | 📝 |
-| Raspberry Pi | Linux embarcado, GPIO, câmera | N3 | T3 | 📝 |
-| Casa inteligente | Home Assistant, Zigbee, automações, Jarvis por voz | N3 | T3 → H | 📝 |
-| Robótica móvel | Motores, controle PID, visão, ROS (noção) | N2 | H | 📝 |
-| Agro | Sensores de solo, irrigação, projeto escolar | N3 | H | 📝 |
-
-## 20 · Blockchain
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Fundamentos de blockchain | Hash, assinatura, consenso, generais bizantinos, carteira | N3 | H | 📝 |
-| Ethereum e contratos | EVM, Solidity, tokens, rede de teste (ByteSDCoin, AMtech OS) | N2 → N3 | H | 📝 |
-
-## 21 · Empreendedorismo, marketing e vendas
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Validar antes de construir | Problema, cliente, MVP, beta, portão de venda | N4 | ∞ | 📝 |
-| Empreendedorismo | Modelo de negócio, custos, formalização (CPF, MEI, ME), contrato | N3 | ∞ | 📝 |
-| Marketing digital | Posicionamento, conteúdo, funil, SEO, tráfego pago | N3 | T2 → ∞ | 📝 |
-| Vendas | Proposta, negociação, objeções, pós-venda | N3 | T1 → ∞ | 📝 |
-| Infoprodutos | Curso, template, lançamento, plataforma (Hotmart) | N3 | T2 → ∞ | 📝 |
-| Consultoria | Diagnóstico, escopo, entrega, preço | N3 | H | 📝 |
-
-## 22 · Construção civil pela TI
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| BIM e IFC | Bonsai/FreeCAD, IFC, quantitativos | N2 | H | 📝 |
-| Orçamento de obra | SINAPI, composição de custos | N2 | H | 📝 |
-
-## 23 · Idiomas
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Inglês | Vocabulário técnico, leitura de documentação, escuta, fala, escrita, entrevista (meta C1) | N4 ★ | ∞ | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
-| Espanhol | Falsos cognatos, pronúncia, verbos irregulares (meta B2) | N3 | depois do B1 em inglês | idem |
-
-## 24 · Carreira, comunicação e ensino
-
-| Assunto | Conceitos | Nível | Quando | Arquivo |
-|---|---|---|---|---|
-| Entrevista técnica | Algoritmos em voz alta, system design, comportamental (STAR), registros do recrutador | N4 ★ | T4 (M11) → ∞ | 📝 |
-| Portfólio e GitHub | READMEs, estudos de caso, ADRs públicos, contribuição open source | N3 ★ | T1 → T4 | 📝 |
-| Didática | Planejar aula, avaliar, motivação antes da definição (Licenciatura e EMTI) | N4 | ∞ | 📝 |
-| Produção de conteúdo | Post técnico mensal, vídeo, curso | N3 | ∞ | 📝 |
-
-## 25 · Formação formal
-
-| Formação | O que cobra | Quando |
-|---|---|---|
-| Licenciatura em Matemática | Disciplinas do curso | em curso |
-| ENEM 2027 | Linguagens, humanas, natureza, matemática e redação | 2027 |
-| Ciências Econômicas | Micro, macro, econometria, contabilidade | depois da Licenciatura |
-| Ciência da Computação ou graduação em IA | Fundamentos formais de computação e IA | escolha pendente |
-
-Detalhe: [formacao-academica](formacao-academica.md).
+**Ativo da etapa:** AM Gestão refatorado com system design documentado; portfólio em inglês; AMtech OS v1; renda rumo a R$ 7 mil/mês.
 
 ---
 
-## Como um 📝 vira 📘
+## HORIZONTE · Depois dos 12 meses, ativo no roteiro
 
-Na semana anterior ao estudo de um assunto, o arquivo dele é escrito a partir do [modelo](assuntos/_MODELO.md) e salvo em `assuntos/<área>/<assunto>.md`. A linha aqui troca de 📝 para 📘 com o link. Escrever todos de uma vez geraria arquivos rasos e desatualizados; escrever na véspera deixa cada um com o que você já sabe e com o mercado do momento.
+> Mesma regra: cada linha só depois das que ela cita. As trilhas do horizonte andam uma pesada por vez.
+
+### H1 · Ciência da computação e baixo nível
+
+| # | Assunto | Conceitos | Nível | Depende de |
+|---|---|---|---|---|
+| H1.1 | Eletrônica digital | Portas lógicas, álgebra booleana (usa 0.2), circuitos combinacionais e sequenciais | N3 | 0.2, 7.14 |
+| H1.2 | C | Ponteiros, memória manual, structs, Makefile, gdb, valgrind (École 42, Circles 00–02) | N3 | 7.13, 1.3 |
+| H1.3 | Assembly | x86-64 e ARM64, registradores, stack frame | N2 → N3 | H1.1, H1.2 |
+| H1.4 | C++ | RAII, classes, templates, STL (École 42, Circles 03–06) | N3 | H1.2, 8.1 |
+| H1.5 | Compiladores e interpretadores | Léxico, AST, gramática (BNF), JIT, bytecode | N2 → N3 | H1.2, 7.5 |
+| H1.6 | Teoria da computação | Autômatos, linguagens formais, máquina de Turing (Sipser) | N2 | 0.2, 7.6 |
+| H1.7 | Teoria da informação | Entropia, compressão, códigos de erro (Shannon) | N2 | 7.6 |
+| H1.8 | Sistemas embarcados | Microcontrolador, GPIO, PWM, I2C, SPI, UART, firmware | N3 | H1.1, H1.2, 7.18 |
+| H1.9 | Rust | Ownership, borrowing, lifetimes, traits | N2 | H1.2 |
+| H1.10 | Linux internals | Kernel, VFS, drivers, módulos, LFS/BLFS | N3 | 7.17, H1.2 |
+| H1.11 | Windows internals | Arquitetura NT, Win32/NT API, registro, NTFS, tokens, UAC | N3 | 7.17 |
+| H1.12 | macOS e iOS internals | Darwin/XNU, launchd, APFS, SIP, Secure Enclave, Mach-O | N2 | 7.17 |
+| H1.13 | AM Linux e AM-OS | Distribuição própria e sistema operacional próprio | N3 | H1.10, H1.3, 8.17 |
+
+### H2 · Redes a fundo
+
+| # | Assunto | Conceitos | Nível | Depende de |
+|---|---|---|---|---|
+| H2.1 | ↻ Endereçamento e sub-redes | IPv4, IPv6, CIDR, MAC, ARP | N4 | 3.1 |
+| H2.2 | Sinais e correção de erros | Transmissão digital, paridade, checksum, CRC | N2 | 3.1, H1.7 |
+| H2.3 | Infraestrutura de rede | Switch, roteador, VLAN, NAT, firewall, proxy, balanceador, CDN | N3 | H2.1 |
+| H2.4 | Roteamento | Tabelas, gateway, OSPF e BGP (noção) | N3 | H2.3 |
+| H2.5 | VPN e rede segura | WireGuard, Tailscale, NAS, rede isolada do laboratório | N3 | 5.12, H2.3 |
+| H2.6 | Wi-Fi | 802.11, canais, WPA2/WPA3 | N2 | H2.3 |
+| H2.7 | ↻ Diagnóstico avançado | tcpdump, Wireshark | N3 | 3.4, H2.3 |
+
+Certificações: CompTIA Network+ → CCNA (opcional).
+
+### H3 · Segurança ofensiva
+
+> Só em laboratório próprio ou com autorização por escrito. Trilha completa: [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md).
+
+| # | Assunto | Conceitos | Nível | Depende de |
+|---|---|---|---|---|
+| H3.1 | ↻ Criptografia a fundo | AES, RSA (usa H6.1), curvas elípticas, certificados, PKI | N3 | 1.4, H6.1 |
+| H3.2 | Metodologia e lei | PTES, OWASP Testing Guide, escopo, autorização, Lei 12.737, Marco Civil | N4 | 6.4 |
+| H3.3 | Reconhecimento | OSINT, DNS, varredura de portas (nmap), fingerprinting | N3 | H2.3, H3.2 |
+| H3.4 | Web hacking | SQLi, XSS, CSRF, SSRF, IDOR, upload, desserialização, Burp Suite | N4 | 4.11, H3.3 |
+| H3.5 | Bypass e evasão | WAF evasion, burlar proxy e firewall (túneis), bypass de autenticação e de controles do cliente, evasão de antivírus/EDR, bypass de UAC/AMSI | N3 | H3.4, H2.5, H1.11 |
+| H3.6 | Escalada de privilégios | Linux (SUID, sudo, cron, kernel) e Windows (serviços, tokens, registro) | N3 | H1.10, H1.11 |
+| H3.7 | Active Directory | Kerberos, NTLM, enumeração, kerberoasting, movimento lateral | N3 | H1.11, H3.6 |
+| H3.8 | Pivoting e tunneling | Port forwarding, SOCKS, chisel, ligolo | N3 | H2.5, H3.6 |
+| H3.9 | Wireless | Ataques a WPA2/WPA3 | N2 | H2.6 |
+| H3.10 | Engenharia reversa | Ghidra, depurador, análise estática e dinâmica | N3 | H1.3 |
+| H3.11 | Desenvolvimento de exploit | Buffer overflow, ROP, shellcode, ASLR, DEP | N3 | H1.3, H3.10 |
+| H3.12 | Análise de malware | Sandbox, comportamento, indicadores | N2 | H3.10 |
+| H3.13 | C2 e OPSEC | Comando e controle, OPSEC, deception | N2 | H3.5, H3.8 |
+| H3.14 | Engenharia social | Só em exercício autorizado; conscientização | N2 | H3.2 |
+| H3.15 | Cloud e mobile security | IAM, buckets, Android e iOS básicos | N2 | H5.3, H1.12 |
+| H3.16 | Relatório de pentest | CVSS, evidência, recomendação, sumário executivo | N4 | H3.4 |
+| H3.17 | Blue team e forense | Detecção, SIEM (noção), linha do tempo, análise de memória e disco | N2 → N3 | 6.8, H3.12 |
+
+Certificações: CompTIA A+ e Network+ → Security+ → eJPT → BSCP → OSCP → OSWE e OSEP.
+
+### H4 · IA a fundo
+
+| # | Assunto | Conceitos | Nível | Depende de |
+|---|---|---|---|---|
+| H4.1 | Cálculo | Limite, derivada, integral, gradiente | N3 | H6.2, 7.7 |
+| H4.2 | ↻ Deep learning | Backpropagation, CNN, transformer por dentro | N3 | H4.1, 7.15 |
+| H4.3 | Engenharia de dados | ETL/ELT, pipelines, qualidade de dados, data warehouse | N3 | 7.3, 7.4 |
+| H4.4 | Agentes e MCP | Loop de ferramentas, MCP, orquestração, limites | N3 | 8.13, 7.12 |
+| H4.5 | Treinar e ajustar modelos | Treino pequeno do zero, fine-tuning, LoRA/QLoRA, modelo de 8B | N3 | H4.2, 7.16 |
+| H4.6 | MLOps | Versionar dados e modelos, servir, monitorar | N2 | H4.5, 6.1 |
+| H4.7 | Voz e visão | Whisper, Piper, Frigate (Jarvis e casa) | N2 | 7.16 |
+
+### H5 · Infraestrutura e nuvem a fundo
+
+| # | Assunto | Conceitos | Nível | Depende de |
+|---|---|---|---|---|
+| H5.1 | Infraestrutura como código | Terraform, Ansible, receitas idempotentes | N3 | 5.13 |
+| H5.2 | Kubernetes | Pod, deployment, service, ingress | N2 | 1.8, H2.3 |
+| H5.3 | Nuvem | Azure (AZ-900, AI-200), AWS (Cloud Practitioner), custos | N3 | 5.13 |
+| H5.4 | Homelab | Servidor da casa, VMs, rede isolada, monitoramento | N3 | H2.5, 6.1 |
+| H5.5 | Arch Linux e Omarchy | Instalação manual, pacman/AUR, Wayland/Hyprland | N3 | 5.11, 8.17 |
+
+### H6 · Matemática, física e economia a fundo
+
+| # | Assunto | Conceitos | Nível | Depende de |
+|---|---|---|---|---|
+| H6.1 | Teoria dos números | Divisibilidade, primos, Euclides, aritmética modular | N3 | 0.2 |
+| H6.2 | Álgebra e funções | Equações, inequações, funções (VHSlins) | N3 | 0.2 |
+| H6.3 | Matemática discreta | Indução, relações, grafos, combinatória | N3 | 0.3, 7.6 |
+| H6.4 | Números complexos | Forma algébrica e trigonométrica | N2 | H6.2 |
+| H6.5 | Matemática avançada | Análise real, álgebra abstrata, topologia, EDO | N1 → N2 | H4.1 |
+| H6.6 | Física: mecânica, eletromagnetismo, termodinâmica | Cinemática, dinâmica, energia, indutância, calor, entropia | N2 | H4.1 |
+| H6.7 | Mercado financeiro e regulação | CVM, ANBIMA, B3, fundos, regras de recomendação | N3 | 8.16 |
+| H6.8 | Economia | Micro, macro, inflação, juros, câmbio, econometria (faculdade) | N3 | 7.1, 8.16 |
+| H6.9 | Finanças quantitativas | Séries temporais, risco, otimização de carteira | N2 | H6.8, 7.8 |
+
+O livro do VHSlins anda às sextas na ordem das etapas (a parte de cada etapa está no [mapa capítulo a capítulo](matematica-e-desenvolvimento-integrado.md)); H6.1 e H6.2 podem começar antes, pelo livro, sem esperar o fim dos 12 meses. Física: grandezas e eletricidade no T1 (sábado), antes de 4.15. Certificações de finanças: CNPI → consultor CVM → CGA/CGE → CFP → CFA.
+
+### H7 · Outras frentes
+
+| # | Assunto | Conceitos | Depende de |
+|---|---|---|---|
+| H7.1 | Casa inteligente e Jarvis | Home Assistant, Zigbee, automações, voz | 7.18, H4.7 |
+| H7.2 | Robótica móvel e agro | Motores, PID, visão, sensores de solo | 7.18, H6.6 |
+| H7.3 | Blockchain | Hash e assinatura (usa 1.4), consenso, Ethereum, contratos | H3.1, 8.10 |
+| H7.4 | Construção civil pela TI | BIM/IFC, SINAPI | 7.2 |
+| H7.5 | Empreendedorismo, marketing e vendas | Validar antes de construir, funil, tráfego pago, proposta, infoprodutos, consultoria | contínuo desde a Etapa 3 |
+| H7.6 | Didática e produção de conteúdo | Planejar aula, avaliar, post técnico mensal, curso | contínuo |
+| H7.7 | Espanhol | Depois do B1 em inglês | inglês B1 |
+| H7.8 | Formação formal | Licenciatura (em curso), ENEM 2027, Ciências Econômicas, CC ou IA | [formacao-academica](formacao-academica.md) |
+
+---
+
+## Como cada arquivo é escrito
+
+Para não estudar conteúdo raso, desatualizado ou com erro, cada 📝 só vira 📘 depois destes passos:
+
+1. **Fonte primária primeiro:** documentação oficial, especificação ou livro de referência, na **versão atual** (anotada no arquivo).
+2. **Pesquisa do momento:** o que mudou recentemente e o que o mercado cobra hoje, com fonte e data.
+3. **Akita:** só episódios e posts que tratam do assunto de verdade, conferidos antes de citar.
+4. **Todo código do arquivo é executado** antes de entrar (TypeScript, Python, shell), com a versão usada anotada.
+5. **Conferência dos fatos:** datas, nomes e números checados contra a fonte; o que não deu para confirmar sai do arquivo.
+6. **Cabeçalho de validade:** `verificado-em`, versões e fontes. Se a versão mudar muito, o arquivo volta para revisão.
+7. **Profundidade de verdade:** cada arquivo segue o [modelo](assuntos/_MODELO.md) inteiro, com o "como funciona por baixo" e exercícios N1–N4; nada de resumo de uma tela.
+
+Os 5 arquivos 📘 escritos antes desta ordem (lógica, terminal, Git, TypeScript e POO) **passam por esse protocolo de novo** antes de serem estudados.

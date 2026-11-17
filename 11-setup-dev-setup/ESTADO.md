@@ -61,3 +61,4 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-12: v2.29: AMtech OS 0.1 (os/, ADR 0016 em proposta): Ubuntu + os/instalar.sh, perfis e comando amtech. Próximo: testar numa VM do VirtualBox (os/README.md) e usar uma semana antes de decidir o ADR.
 - 2026-11-17: v2.30: stack nova (ADR 0017) trazida do espelho do vault para cá; plano de estudo único no vault (ADR 0018); trilha base do Akita (24 módulos) no Professor; semana do Professor = rotina real, domingo de folga.
 - 2026-11-17: regra reforçada: a pasta 11 do vault não se edita à mão; mudança no setup é feita aqui e espelhada (just docs / just vault-espelho).
+- 2026-11-17: v2.31: vault ganhou o MAPA-DE-ESTUDO em etapas por pré-requisito (0 a 8 + horizonte) e um protocolo de escrita dos arquivos de assunto; trilha base do Professor segue a mesma ordem.

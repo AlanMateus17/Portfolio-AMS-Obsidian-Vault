@@ -97,6 +97,8 @@ Todo estudo gera, de uma vez: **a ficha dupla** (ideia, código, por que importa
 
 ## PARTE 3 — O PASSO A PASSO DE 12 MESES
 
+**A ordem dos assuntos vem do [MAPA-DE-ESTUDO](MAPA-DE-ESTUDO.md)** (etapas por pré-requisito: nada é usado antes de ter base). Cada mês abaixo diz quais etapas ele cobre e o que entrega.
+
 Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/entregável.** As trilhas se alternam, mas as "nunca-pausam" (inglês, matemática, Licenciatura, física leve) correm por baixo o tempo todo.
 
 ### 🟢 TRIMESTRE 1 — Fundamentos viram o primeiro dinheiro (nov/26–jan/27)
@@ -106,16 +108,17 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 #### Mês 1 (nov) — Setup + lógica + TypeScript do zero
 - **Foco:** deixar a máquina pronta, **aprender a operar o setup** e começar a programar de verdade em TS.
 - **Passo a passo (semana a semana; o dia a dia está no [Cartão](../CARTAO-voce-esta-aqui.md)):**
-  - **Semana 1 (17–23/11):** TS no Playground (tipos, condição, laço, função, array) + os 3 exercícios de lógica **em TypeScript, sem IA** + Matemática Cap. 1.
-  - **Semana 2 (24–30/11), setup instalado:** módulos do Professor `s-terminal` e `s-git` intercalados com TS (`map/filter/reduce`, `async/await`) + SQLBolt até `JOIN` + Matemática Cap. 2 + Akita `b-aprender`.
-  - **Semana 3 (01–07/12):** `s-just`, `s-segredos` e **`s-ia-segura`** (Claude Code com segurança e **revisão do que a IA fez**) + PostgreSQL local + Akita `b-computador`.
-  - **Semana 4 (08–13/12):** `s-backup`, `s-docker`, `s-nucleo` + começo de 1 site simples + Akita `b-linux-wsl` + refazer os 3 exercícios de cabeça (prova do mês).
+  - **Semana 1 (17–23/11) · Etapa 0:** como o computador funciona e representação de dados (0.4, 0.5) + lógica de programação no TS Playground com os 3 exercícios, **sem IA** (0.6) + Matemática Cap. 1, lógica (0.2).
+  - **Semana 2 (24–30/11) · Etapas 0 → 1, setup instalado:** Matemática Cap. 2, conjuntos (0.3) + sistema operacional essencial e WSL2 (1.1, 1.2) + `s-terminal` (1.3) + Akita `b-aprender`.
+  - **Semana 3 (01–07/12) · Etapa 1:** criptografia essencial (1.4) + `s-git` (1.5) + `s-segredos` (1.6) + `s-backup` (1.7) + Akita `b-computador`.
+  - **Semana 4 (08–13/12) · Etapas 1 → 2:** `s-docker`, `s-just`, `s-nucleo`, `s-ia-segura` (1.8–1.10) + TypeScript de verdade no terminal com testes (2.1, 2.4) + refazer os 3 exercícios de cabeça, agora com testes (prova do mês).
 - **Recursos:** [TS Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) · [SQLBolt](https://sqlbolt.com/) · [roadmap.sh/typescript](https://roadmap.sh/typescript).
 - **Entregável:** ambiente reproduzível (`setup-dev.sh`) + repositório de exercícios de lógica em TS + começo de 1 site simples. **Renda:** primeiras aulas particulares.
 
 #### Mês 2 (dez) — Web (Next.js) + SQL + **Go começa (ferramentas)**
-- **Foco:** colocar um site no ar e fabricar sua primeira ferramenta.
+- **Foco:** colocar um site no ar e fabricar sua primeira ferramenta. **Etapas 2 (fim) e 3.**
 - **Passo a passo:**
+  0. **Antes do site (Etapa 2 → 3):** funcional essencial, estruturas de dados básicas e Big-O, debugging, assincronia (2.2–2.6); depois **redes essenciais, HTTP/HTTPS e a jornada de uma requisição** (3.1–3.4), e só então HTML/CSS, JavaScript no navegador e React (3.5–3.7).
   1. **Next.js + Tailwind:** páginas, componentes, deploy na Vercel.
   2. **PostgreSQL via Supabase:** criar banco, tabela, consulta do app.
   3. **Go-1 e Go-2** ([trilha-go-ferramentas](trilha-go-ferramentas.md)): primeiro binário + organizador de arquivos.
@@ -126,8 +129,9 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Entregável:** **1 site de cliente no ar (pago)** + 1 CLI em Go que você usa no dia a dia.
 
 #### Mês 3 (jan) — Backend TS + API + banco a fundo + segurança
-- **Foco:** sair do "site" para "sistema" — API, banco sério, segurança.
+- **Foco:** sair do "site" para "sistema" — API, banco sério, segurança. **Etapa 4.**
 - **Passo a passo:**
+  0. **Antes da API:** modelagem relacional e SQL (4.1, 4.2), **POO** e arquitetura em camadas essencial (4.4, 4.6), requisitos (4.5). NestJS só depois de POO.
   1. **API** em Next/NestJS: rotas, validação com Zod, status corretos.
   2. **ORM (Prisma/Drizzle):** migrations, relacionamentos, evitar N+1.
   3. **Segurança (Passo 4):** OWASP Top 10, autenticação, Row-Level Security do Supabase.
@@ -140,8 +144,9 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 ### 🟡 TRIMESTRE 2 — O produto nasce e roda num cliente (fev–abr/27)
 
 #### Mês 4 (fev) — AM Gestão: módulo **Caixa (PDV)** + Go no agente fiscal
-- **Foco:** o coração do produto, com dinheiro correto.
+- **Foco:** o coração do produto, com dinheiro correto. **Etapa 5 (5.1–5.10).**
 - **Passo a passo:**
+  0. **Antes do Caixa:** concorrência e paralelismo (5.2), depois transações a fundo (5.3).
   1. **Engenharia financeira (Passo 3/5):** dinheiro em `decimal` nunca `float`; arredondamento; idempotência de pagamento; concorrência otimista.
   2. **PDV offline:** SQLite local + sincronização quando a conexão volta.
   3. **Go-5 e Go-6:** servidor HTTP local + **agente fiscal** (impressora ESC/POS).
@@ -151,7 +156,9 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Entregável:** módulo **Caixa** funcionando com impressão real.
 
 #### Mês 5 (mar) — AM Gestão: **Pedidos + Financeiro** + deploy
+- **Etapa 5 (5.11–5.17).**
 - **Passo a passo:**
+  0. **Antes do servidor e da IA:** Linux administração e SSH (5.11, 5.12) antes do deploy em VPS; vetores essencial (5.15) antes do RAG.
   1. **Pedidos/Delivery:** PostGIS (geolocalização, rotas).
   2. **Financeiro:** ledger de partidas dobradas (todo movimento = débito+crédito).
   3. **Deploy + Docker + CI/CD:** subir o MVP num servidor.
@@ -161,6 +168,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Entregável:** **MVP (Caixa+Pedidos+Financeiro) rodando em 1 restaurante** que já te procura.
 
 #### Mês 6 (abr) — Produção de verdade: testes + observabilidade
+- **Etapa 6.**
 - **Passo a passo:**
   1. **Observabilidade (Passo 10):** logs estruturados, métricas, o que quebrou e por quê.
   2. **Testes de propriedade** para a regra de dinheiro (dispara 100 pagamentos, cobra 1).
@@ -172,6 +180,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 ### 🟠 TRIMESTRE 3 — Dados, Python e os primeiros clientes pagantes (mai–jul/27)
 
 #### Mês 7 (mai) — **Python** começa + dados
+- **Etapa 7 (meses 7–9).** Estatística (7.1) vem antes de pandas; probabilidade e álgebra linear (7.6, 7.7) antes de machine learning.
 - **Passo a passo:**
   1. **Python do zero→confortável** (reusa a lógica que você já tem de TS): [trilha-dados-ia](trilha-dados-ia.md) IA0.
   2. **pandas:** analisar os dados reais do AM Gestão (vendas, caixa).
@@ -200,6 +209,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 ### 🔵 TRIMESTRE 4 — Sênior, portfólio e lançamento (ago–out/27)
 
 #### Mês 10 (ago) — Arquitetura + performance + DDD
+- **Etapa 8 (meses 10–12).**
 - **Passo a passo:**
   1. **SOLID, padrões, Clean Architecture, DDD** (Passos 8/12) — ler *Refactoring* e *DDD*.
   2. **Performance e escalabilidade.**

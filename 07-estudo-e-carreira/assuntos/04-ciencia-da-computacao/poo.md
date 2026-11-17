@@ -6,6 +6,7 @@ quando: T1 (classes, M1–M3) · T4 (design, M10)
 professor: o-csharp (classes e erros em TypeScript)
 prereq: [logica-de-programacao, typescript-fundamentos]
 status: a-estudar
+verificado-em: pendente (reescrever pelo protocolo antes de estudar)
 atualizado: 2026-11-17
 ---
 

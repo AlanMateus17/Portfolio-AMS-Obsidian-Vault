@@ -6,6 +6,7 @@ quando: M1 (semana 2)
 professor: s-terminal
 prereq: []
 status: a-estudar
+verificado-em: pendente (reescrever pelo protocolo antes de estudar)
 atualizado: 2026-11-17
 ---
 

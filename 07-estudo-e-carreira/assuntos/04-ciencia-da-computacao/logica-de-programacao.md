@@ -6,6 +6,7 @@ quando: M1 (semana 1)
 professor: o-csharp (primeiro bloco)
 prereq: []
 status: estudando
+verificado-em: pendente (reescrever pelo protocolo antes de estudar)
 atualizado: 2026-11-17
 ---
 

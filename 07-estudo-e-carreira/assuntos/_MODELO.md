@@ -5,6 +5,8 @@ tipo: modelo
 
 # Modelo de arquivo de assunto
 
+> Todo arquivo segue o **protocolo de escrita** do [MAPA](../MAPA-DE-ESTUDO.md#como-cada-arquivo-é-escrito): fonte primária na versão atual, código executado, fatos conferidos, `verificado-em` preenchido.
+>
 > Copie este arquivo para `assuntos/<área>/<assunto>.md` e preencha. Um arquivo por assunto. Ele serve para três coisas ao mesmo tempo: **estudar**, **revisar** (Anki e provas) e **dar aula** (é a base da ficha dupla e do livro *Lógica e Máquina*).
 
 ## Como este modelo junta as três fontes
@@ -23,7 +25,11 @@ nivel-alvo: N1 | N2 | N3 | N4
 quando: M1 | T2 | H ...
 professor: <id do módulo no curriculo.json, se houver>
 prereq: [<assuntos que precisam vir antes>]
+etapa: <número no MAPA, ex.: 0.4>
 status: a-estudar | estudando | dominado | ensinado
+verificado-em: AAAA-MM-DD
+versoes: [<ex.: TypeScript 5.x, Node 24>]
+fontes-conferidas: [<links das fontes primárias usadas>]
 atualizado: AAAA-MM-DD
 ---
 

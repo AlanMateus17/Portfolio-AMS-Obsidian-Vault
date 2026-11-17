@@ -2,6 +2,11 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.31.0] - 2026-11-17
+
+### Alterado
+- Trilha `base` do Professor reordenada por pré-requisito, na mesma ordem do MAPA-DE-ESTUDO do vault (etapas 0 a 8): computador e criptografia antes de Git e segredos, redes antes da web, como a IA funciona antes da 1ª chamada de IA, SSH antes do deploy em servidor.
+
 ## [2.30.0] - 2026-11-17
 
 ### Alterado

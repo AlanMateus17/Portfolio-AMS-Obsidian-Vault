@@ -9,7 +9,7 @@ atualizado: 2026-11-17
 > **Uma porta só.** Quando o setup estiver instalado, quem manda é o `just professor hoje`. Ele segue o mesmo plano e a mesma semana deste cartão. **Até lá, quem manda é este cartão.**
 > Plano completo (só para consulta): [PLANO-PASSO-A-PASSO](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md) · tudo o que você vai estudar: [MAPA-DE-ESTUDO](07-estudo-e-carreira/MAPA-DE-ESTUDO.md)
 
-**Fase atual:** Trimestre 1 → **Mês 1: setup + lógica + TypeScript do zero** (17/11 a ~13/12)
+**Fase atual:** Trimestre 1 → Mês 1 → **Etapa 0: a base de tudo** (depois Etapa 1, a máquina e as ferramentas)
 **Ativo que este mês entrega:** repositório `logica-ts` com os 3 exercícios resolvidos em TypeScript, sem IA
 
 > O Mês 1 começou na metade de novembro, então o plano inteiro anda ~2 semanas para frente. Isso não é atraso: estimativa é hipótese, e o tempo medido corrige o plano.
@@ -19,27 +19,28 @@ atualizado: 2026-11-17
 ## ✅ Todo dia (nunca pausa)
 - [ ] **Inglês 20–30 min** (Anki + 1 vídeo ou 1 página de documentação em inglês)
 
-## 🗓️ Semana 1 — 17 a 23/11 · TypeScript básico + os 3 exercícios
+## 🗓️ Semana 1 — 17 a 23/11 · Etapa 0: a base de tudo
 
 | Dia | Bloco | O que fazer | Feito |
 |---|---|---|---|
-| Ter 17 | — | Só o inglês. O slot do Akita (6h–7h) já passou; ele começa na terça que vem. | [ ] |
-| Qua 18 | 6–8h | Ler antes: [lógica de programação](07-estudo-e-carreira/assuntos/04-ciencia-da-computacao/logica-de-programacao.md) e [TypeScript](07-estudo-e-carreira/assuntos/07-linguagens/typescript-fundamentos.md), seções 1 a 4. Abrir o [TS Playground](https://www.typescriptlang.org/play) (não precisa esperar o setup). Variáveis, tipos (`string`, `number`, `boolean`) e `if/else`. | [ ] |
-| Qui 19 | 6–11h | Laços (`for`, `while`), funções e arrays. Depois o **exercício 1: carrinho com desconto**, sem IA. | [ ] |
-| Sex 20 | 6–11h | **Matemática VHSlins, Cap. 1** (Linguagem Matemática), no papel. Depois 1 bloco revendo TS de cabeça. | [ ] |
-| Sáb 21 | 6–13h | Conferir o ambiente que o setup instalou (WSL2, Git, Node, Docker). Depois `map/filter/reduce` + **exercício 2: escada de inadimplência** + SQLBolt, lições 1–3. | [ ] |
+| Ter 17 | — | Só o inglês. | [ ] |
+| Qua 18 | 6–8h | **0.4 e 0.5: como o computador funciona e representação de dados** (bits, binário, CPU e memória, por que `0.1 + 0.2` não dá `0.3`). Arquivo do assunto + Akita #80. | [ ] |
+| Qui 19 | 6–11h | **0.6 lógica de programação** no [TS Playground](https://www.typescriptlang.org/play): variáveis, condição, laço, função, lista. Depois o **exercício 1: carrinho com desconto**, sem IA. | [ ] |
+| Sex 20 | 6–11h | **0.2 Matemática VHSlins, Cap. 1** (linguagem matemática e lógica), no papel. Depois 1 bloco revendo a lógica de cabeça. | [ ] |
+| Sáb 21 | 6–13h | **Exercício 2: escada de inadimplência** + física: grandezas. Conferir se o setup terminou de instalar (só olhar, sem estudar terminal ainda). | [ ] |
 | Dom 22 | — | **Folga.** Só 30 min de Anki. | [ ] |
-| Seg 23 | 6–8h e 20–22h | **Exercício 3: rebalanceamento ARCA simplificado.** À noite: criar o repo `logica-ts`, subir os 3 exercícios e ver `async/await` (introdução). | [ ] |
+| Seg 23 | 6–8h e 20–22h | **Exercício 3: rebalanceamento ARCA simplificado.** À noite: teste de mesa dos 3 exercícios, no papel. | [ ] |
 
-## 🗓️ Semana 2 — 24 a 30/11 · operar o setup + fechar a lógica
+## 🗓️ Semana 2 — 24 a 30/11 · Etapa 0 → Etapa 1
 - [ ] **Ter 24, 6–7h:** Akita `b-aprender` (#76 e #65) + nota de 5 frases
-- [ ] Professor `s-terminal` e `s-git` (com o setup instalado: `just professor hoje`); arquivos: [terminal](07-estudo-e-carreira/assuntos/05-sistemas-operacionais/terminal-linux.md) e [Git](07-estudo-e-carreira/assuntos/08-engenharia-de-software/git.md)
-- [ ] TS: `async/await` a fundo + tipos próprios (`type`, `interface`)
-- [ ] SQLBolt até `JOIN`
-- [ ] **Matemática VHSlins, Cap. 2** (Teoria dos Conjuntos), na sexta
+- [ ] **0.3 Matemática VHSlins, Cap. 2** (conjuntos), na sexta
+- [ ] **1.1 e 1.2:** sistema operacional essencial e WSL2
+- [ ] **1.3 Terminal Linux** (`s-terminal` no `just professor hoje`)
 - [ ] Refazer os 3 exercícios **de cabeça**, com o material fechado
 
-**Semanas 3 e 4 (01–13/12):** `s-just`, `s-segredos`, `s-ia-segura`, `s-backup`, `s-docker`, `s-nucleo`, PostgreSQL local, começo de 1 site simples, Akita `b-computador` e `b-linux-wsl`. O detalhe dia a dia entra aqui quando a Semana 2 fechar.
+**Semanas 3 e 4 (01–13/12):** criptografia essencial, Git (aí sim nasce o repo `logica-ts`), segredos, backup, Docker, `just`, Núcleo, segurança de agentes; e TypeScript no terminal com testes. O detalhe dia a dia entra aqui quando a Semana 2 fechar.
+
+> Os arquivos dos assuntos de cada semana são escritos e conferidos antes dela, pelo protocolo do [MAPA](07-estudo-e-carreira/MAPA-DE-ESTUDO.md#como-cada-arquivo-é-escrito).
 
 ---
 

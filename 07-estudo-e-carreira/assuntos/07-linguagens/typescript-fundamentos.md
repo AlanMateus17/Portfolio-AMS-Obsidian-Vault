@@ -6,6 +6,7 @@ quando: M1 → T4
 professor: o-csharp (TypeScript do zero ao confortável) · o-dotnet (projeto TypeScript de verdade)
 prereq: [logica-de-programacao]
 status: estudando
+verificado-em: pendente (reescrever pelo protocolo antes de estudar)
 atualizado: 2026-11-17
 ---
 

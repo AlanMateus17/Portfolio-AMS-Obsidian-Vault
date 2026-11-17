@@ -74,13 +74,13 @@ Cada módulo do currículo, na ordem em que o Professor ensina, com os posts do 
 - [ ] [[Akitando] #60 - Entendendo WSL 2 | E uma curta história sobre Windows NT](https://akitaonrails.com/2019/09/04/akitando-60-entendendo-wsl-2-e-uma-curta-historia-sobre-windows-nt/)
 - [ ] [[Akitando] #54 - O Guia DEFINITIVO de UBUNTU para Devs Iniciantes](https://akitaonrails.com/2019/07/12/akitando-54-o-guia-definitivo-de-ubuntu-para-devs-iniciantes/)
 
+**b-cripto · Criptografia básica: hash, chave simétrica e assimétrica**
+- [ ] [[Akitando] #67 - Entendendo Conceitos Básicos de CRIPTOGRAFIA | Parte 1/2](https://akitaonrails.com/2019/11/21/akitando-67-entendendo-conceitos-basicos-de-criptografia-parte-1-2/)
+- [ ] [[Akitando] #68 - Entendendo Conceitos Básicos de CRIPTOGRAFIA | Parte 2/2](https://akitaonrails.com/2019/11/26/akitando-68-entendendo-conceitos-basicos-de-criptografia-parte-2-2/)
+
 **b-iniciante · O que todo programador precisa saber antes da linguagem, e de onde veio o front-end**
 - [ ] [[Akitando] #38 - Conhecimentos Básicos para Iniciantes em Programação | Série Começando aos 40](https://akitaonrails.com/2019/02/06/akitando-38-conhecimentos-basicos-para-iniciantes-em-programacao-serie-comecando-aos-40/)
 - [ ] [[Akitando] #39 - A História do Front-End para Iniciantes em Programação | Série "Começando aos 40](https://akitaonrails.com/2019/02/13/akitando-39-a-historia-do-front-end-para-iniciantes-em-programacao-serie-comecando-aos-40/)
-
-**b-backend · Back-end para iniciantes: processos, servidores e o que roda do outro lado**
-- [ ] [[Akitando] #40 - Entendendo Back-End para Iniciantes em Programação (Parte 1) | Série "Começando aos 40](https://akitaonrails.com/2019/02/20/akitando-40-entendendo-back-end-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40/)
-- [ ] [[Akitando] #41 - Entendendo Back-End para Iniciantes em Programação (Parte 2) | Série "Começando aos 40](https://akitaonrails.com/2019/02/27/akitando-41-entendendo-back-end-para-iniciantes-em-programacao-parte-2-serie-comecando-aos-40/)
 
 **b-redes-1 · Redes, parte 1 e 2: como dado vira sinal e como erros são detectados**
 - [ ] [[Akitando] #121 - Introdução a Redes: Como Dados viram Ondas? | Parte 1](https://akitaonrails.com/2022/07/01/akitando-121-entendendo-transferencia-de-sinais-digitais-introducao-a-redes-parte-1/)
@@ -90,25 +90,21 @@ Cada módulo do currículo, na ordem em que o Professor ensina, com os posts do 
 - [ ] [[Akitando] #123 - Como sua Internet Funciona | Introdução a Redes Parte 3](https://akitaonrails.com/2022/07/23/akitando-123-como-sua-internet-funciona-introducao-a-redes-parte-3/)
 - [ ] [[Akitando] #124 - Como Funciona Sockets, Cliente, Servidor e a Web? | Introdução a Redes Parte 4](https://akitaonrails.com/2022/08/04/akitando-124-como-funciona-sockets-cliente-servidor-e-a-web-introducao-a-redes-parte-4/)
 
+**b-backend · Back-end para iniciantes: processos, servidores e o que roda do outro lado**
+- [ ] [[Akitando] #40 - Entendendo Back-End para Iniciantes em Programação (Parte 1) | Série "Começando aos 40](https://akitaonrails.com/2019/02/20/akitando-40-entendendo-back-end-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40/)
+- [ ] [[Akitando] #41 - Entendendo Back-End para Iniciantes em Programação (Parte 2) | Série "Começando aos 40](https://akitaonrails.com/2019/02/27/akitando-41-entendendo-back-end-para-iniciantes-em-programacao-parte-2-serie-comecando-aos-40/)
+
+**b-ia · Como o ChatGPT funciona e o que IAs conseguem fazer**
+- [ ] [[Akitando] #142 - Entendendo COMO ChatGPT Funciona - Rodando sua Própria IA ](https://akitaonrails.com/2023/06/19/akitando-142-entendendo-como-chatgpt-funciona-rodando-sua-propria-ia/)
+- [ ] [[Akitando] #148 - O que IAs podem fazer? | Exemplos de Ferramentas](https://akitaonrails.com/2023/11/29/akitando-148-o-que-ias-podem-fazer-exemplos-de-ferramentas/)
+
 **b-concorrencia · Concorrência e paralelismo: threads, processos e async**
 - [ ] [[Akitando] #43 - Concorrência e Paralelismo (Parte 1) | Entendendo Back-End para Iniciantes (Parte 3)](https://akitaonrails.com/2019/03/13/akitando-43-concorrencia-e-paralelismo-parte-1-entendendo-back-end-para-iniciantes-parte-3/)
 - [ ] [[Akitando] #44 - Concorrência e Paralelismo (Parte 2) | Entendendo Back-end para Iniciantes (Parte 4)](https://akitaonrails.com/2019/03/20/akitando-44-concorrencia-e-paralelismo-parte-2-entendendo-back-end-para-iniciantes-parte-4/)
 
-**b-memoria · Gerenciamento de memória: stack, heap e coletor de lixo**
-- [ ] [[Akitando] #45 - Gerenciamento de Memória (Parte 1) | Entendendo Back-end para Iniciantes  (Parte 5)](https://akitaonrails.com/2019/03/27/akitando-45-gerenciamento-de-memoria-parte-1-entendendo-back-end-para-iniciantes-parte-5/)
-- [ ] [[Akitando] #46 - Gerenciamento de Memória (Parte 2) | Entendendo Back-end para Iniciantes (Parte 6)](https://akitaonrails.com/2019/04/03/akitando-46-gerenciamento-de-memoria-parte-2-entendendo-back-end-para-iniciantes-parte-6/)
-
-**b-cripto · Criptografia básica: hash, chave simétrica e assimétrica**
-- [ ] [[Akitando] #67 - Entendendo Conceitos Básicos de CRIPTOGRAFIA | Parte 1/2](https://akitaonrails.com/2019/11/21/akitando-67-entendendo-conceitos-basicos-de-criptografia-parte-1-2/)
-- [ ] [[Akitando] #68 - Entendendo Conceitos Básicos de CRIPTOGRAFIA | Parte 2/2](https://akitaonrails.com/2019/11/26/akitando-68-entendendo-conceitos-basicos-de-criptografia-parte-2-2/)
-
-**b-hardware · Memória de 16 a 64 bits e a história de CPUs e GPUs**
-- [ ] [[Akitando] #97 - Só Precisamos de 640 kB de Memória? | 16-bits até 64-bits!](https://akitaonrails.com/2021/05/13/akitando-97-so-precisamos-de-640-kb-de-memoria-16-bits-ate-64-bits/)
-- [ ] [[Akitando] #98 - A Longa História de CPUs e GPUs | Jogos de Windows em Linux??](https://akitaonrails.com/2021/05/26/akitando-98-a-longa-historia-de-cpus-e-gpus-jogos-de-windows-em-linux/)
-
-**b-armazenamento · Dispositivos de armazenamento e linguagem compilada vs interpretada**
-- [ ] [[Akitando #101] Tudo que Você Queria Saber Sobre Dispositivos de Armazenamento](https://akitaonrails.com/2021/07/06/akitando-101-tudo-que-voce-queria-saber-sobre-dispositivos-de-armazenamento/)
-- [ ] [[Akitando] #117 - Linguagem Compilada vs Interpretada | Qual é melhor?](https://akitaonrails.com/2022/04/15/akitando-117-linguagem-compilada-vs-interpretada-qual-e-melhor/)
+**b-redes-3 · Redes, parte 5 e 6: SSH, proxies, VPN e rede segura**
+- [ ] [[Akitando] #125 - Burlando Proxies e Firewalls | Introdução a Redes Parte 5 - SSH](https://akitaonrails.com/2022/08/17/akitando-125-burlando-proxies-e-firewalls-introducao-a-redes-parte-5-ssh/)
+- [ ] [[Akitando] #126 - Criando uma Rede Segura | Introdução a Redes Parte 6 - VPN e NAS](https://akitaonrails.com/2022/08/29/akitando-126-criando-uma-rede-segura-introducao-a-redes-parte-6-vpn-e-nas/)
 
 **b-devops · DevOps para iniciantes: do código ao servidor**
 - [ ] [[Akitando] #47 - Entendendo "Devops" para Iniciantes em Programação (Parte 1) | Série "Começando aos 40](https://akitaonrails.com/2019/04/10/akitando-47-entendendo-devops-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40/)
@@ -118,37 +114,37 @@ Cada módulo do currículo, na ordem em que o Professor ensina, com os posts do 
 - [ ] [[Akitando #139] - Entendendo Como Containers Funcionam](https://akitaonrails.com/2023/03/02/akitando-139-entendendo-como-containers-funcionam/)
 - [ ] [[Akitando] #113 - A Forma Ideal de Projetos Web | Os 12 Fatores](https://akitaonrails.com/2022/01/29/akitando-113-a-forma-ideal-de-projetos-web-os-12-fatores/)
 
-**b-redes-3 · Redes, parte 5 e 6: SSH, proxies, VPN e rede segura**
-- [ ] [[Akitando] #125 - Burlando Proxies e Firewalls | Introdução a Redes Parte 5 - SSH](https://akitaonrails.com/2022/08/17/akitando-125-burlando-proxies-e-firewalls-introducao-a-redes-parte-5-ssh/)
-- [ ] [[Akitando] #126 - Criando uma Rede Segura | Introdução a Redes Parte 6 - VPN e NAS](https://akitaonrails.com/2022/08/29/akitando-126-criando-uma-rede-segura-introducao-a-redes-parte-6-vpn-e-nas/)
-
 **b-testes-perf · Testes, estimativa e as 4 técnicas para deixar uma app web rápida**
 - [ ] [[Akitando] #130 - Rant: Projetos, TESTES e Estimativa??? | Rated-R](https://akitaonrails.com/2022/10/25/akitando-130-rant-projetos-testes-e-estimativa-rated-r/)
 - [ ] [[Akitando] #133 - Tornando sua App Web Mais Rápida! | 4 Técnicas de Otimização](https://akitaonrails.com/2022/12/12/akitando-133-tornando-sua-app-web-mais-rapida-4-tecnicas-de-otimizacao/)
-
-**b-escala · Como um sistema escala e como um banco SQL funciona por dentro**
-- [ ] [[Akitando] #110 - Como fazer o Ingresso.com escalar? | Conceitos Intermediários de Web](https://akitaonrails.com/2021/12/08/akitando-110-como-fazer-o-ingresso-com-escalar-conceitos-intermediarios-de-web/)
-- [ ] [[Akitando] #118 - Fiz um servidor de "SQL"?? | Entendendo Banco de Dados](https://akitaonrails.com/2022/05/09/akitando-118-fiz-um-servidor-de-sql-entendendo-banco-de-dados/)
-
-**b-estruturas · Estruturas de dados: árvores e grafos**
-- [ ] [[Akitando] #95 - Árvores: O Começo de TUDO | Estruturas de Dados e Algoritmos](https://akitaonrails.com/2021/04/06/akitando-95-arvores-o-comeco-de-tudo/)
-- [ ] [[Akitando #140] Desbloqueando o "Algoritmo" do Twitter - Introdução a Grafos](https://akitaonrails.com/2023/04/11/akitando-140-desbloqueando-o-algoritmo-do-twitter-introducao-a-grafos/)
 
 **b-bancos · Bancos de dados, dos primórdios ao big data, e quando usar NoSQL**
 - [ ] [[Akitando] #143 - Discutindo sobre Banco de Dados - Dos primórdios a Big Data](https://akitaonrails.com/2023/07/22/akitando-143-discutindo-sobre-banco-de-dados-dos-primordios-a-big-data/)
 - [ ] [[Akitando] #49 - Devo usar NOSQL? | "ENDGAME" para Iniciantes em Programação | Série "Começando aos 40](https://akitaonrails.com/2019/04/24/akitando-49-devo-usar-nosql-endgame-para-iniciantes-em-programacao-serie-comecando-aos-40/)
 
-**b-ia · Como o ChatGPT funciona e o que IAs conseguem fazer**
-- [ ] [[Akitando] #142 - Entendendo COMO ChatGPT Funciona - Rodando sua Própria IA ](https://akitaonrails.com/2023/06/19/akitando-142-entendendo-como-chatgpt-funciona-rodando-sua-propria-ia/)
-- [ ] [[Akitando] #148 - O que IAs podem fazer? | Exemplos de Ferramentas](https://akitaonrails.com/2023/11/29/akitando-148-o-que-ias-podem-fazer-exemplos-de-ferramentas/)
+**b-estruturas · Estruturas de dados: árvores e grafos**
+- [ ] [[Akitando] #95 - Árvores: O Começo de TUDO | Estruturas de Dados e Algoritmos](https://akitaonrails.com/2021/04/06/akitando-95-arvores-o-comeco-de-tudo/)
+- [ ] [[Akitando #140] Desbloqueando o "Algoritmo" do Twitter - Introdução a Grafos](https://akitaonrails.com/2023/04/11/akitando-140-desbloqueando-o-algoritmo-do-twitter-introducao-a-grafos/)
+
+**b-memoria · Gerenciamento de memória: stack, heap e coletor de lixo**
+- [ ] [[Akitando] #45 - Gerenciamento de Memória (Parte 1) | Entendendo Back-end para Iniciantes  (Parte 5)](https://akitaonrails.com/2019/03/27/akitando-45-gerenciamento-de-memoria-parte-1-entendendo-back-end-para-iniciantes-parte-5/)
+- [ ] [[Akitando] #46 - Gerenciamento de Memória (Parte 2) | Entendendo Back-end para Iniciantes (Parte 6)](https://akitaonrails.com/2019/04/03/akitando-46-gerenciamento-de-memoria-parte-2-entendendo-back-end-para-iniciantes-parte-6/)
+
+**b-hardware · Memória de 16 a 64 bits e a história de CPUs e GPUs**
+- [ ] [[Akitando] #97 - Só Precisamos de 640 kB de Memória? | 16-bits até 64-bits!](https://akitaonrails.com/2021/05/13/akitando-97-so-precisamos-de-640-kb-de-memoria-16-bits-ate-64-bits/)
+- [ ] [[Akitando] #98 - A Longa História de CPUs e GPUs | Jogos de Windows em Linux??](https://akitaonrails.com/2021/05/26/akitando-98-a-longa-historia-de-cpus-e-gpus-jogos-de-windows-em-linux/)
+
+**b-armazenamento · Dispositivos de armazenamento e linguagem compilada vs interpretada**
+- [ ] [[Akitando #101] Tudo que Você Queria Saber Sobre Dispositivos de Armazenamento](https://akitaonrails.com/2021/07/06/akitando-101-tudo-que-voce-queria-saber-sobre-dispositivos-de-armazenamento/)
+- [ ] [[Akitando] #117 - Linguagem Compilada vs Interpretada | Qual é melhor?](https://akitaonrails.com/2022/04/15/akitando-117-linguagem-compilada-vs-interpretada-qual-e-melhor/)
+
+**b-escala · Como um sistema escala e como um banco SQL funciona por dentro**
+- [ ] [[Akitando] #110 - Como fazer o Ingresso.com escalar? | Conceitos Intermediários de Web](https://akitaonrails.com/2021/12/08/akitando-110-como-fazer-o-ingresso-com-escalar-conceitos-intermediarios-de-web/)
+- [ ] [[Akitando] #118 - Fiz um servidor de "SQL"?? | Entendendo Banco de Dados](https://akitaonrails.com/2022/05/09/akitando-118-fiz-um-servidor-de-sql-entendendo-banco-de-dados/)
 
 **b-linux-boot · Como um Linux dá boot e como a compressão de dados funciona**
 - [ ] [[Akitando] #127 - Como Funciona o Boot de um Linux? | O que tem num LiveCD?](https://akitaonrails.com/2022/09/12/akitando-127-como-funciona-o-boot-de-um-linux-o-que-tem-num-livecd/)
 - [ ] [[Akitando] #116 - De 5 Tera a 25 Giga | Compressão de Dados e Multimídia](https://akitaonrails.com/2022/03/23/akitando-116-de-5-tera-a-25-giga-compressao-de-dados-e-multimidia/)
-
-**b-cripto-pratica · Criptografia na prática e o que 16 linguagens em 16 dias ensinam**
-- [ ] [[Akitando] #147 - Criptografia na Prática - Certificados, BitTorrent, Git, Bitcoin](https://akitaonrails.com/2023/11/10/akitando-147-criptografia-na-pratica-certificados-bittorrent-git-bitcoin/)
-- [ ] [[Akitando] #145 - 16 Linguagens em 16 Dias: Minha Saga da Rinha de Backend](https://akitaonrails.com/2023/09/20/akitando-145-16-linguagens-em-16-dias-minha-saga-da-rinha-de-backend/)
 
 **b-linguagens · Sua linguagem não é especial: o que é comum a todas**
 - [ ] [[Akitando] #15 - Sua Linguagem NÃO É Especial! (Parte 1)](https://akitaonrails.com/2018/10/02/akitando-15-sua-linguagem-nao-e-especial-parte-1/)
@@ -157,6 +153,10 @@ Cada módulo do currículo, na ordem em que o Professor ensina, com os posts do 
 **b-oficio · O livro mais clássico de software e como empreender com software sem errar**
 - [ ] [[Akitando] #23 - The MM-M: O Melhor Livro de Software?](https://akitaonrails.com/2018/11/01/akitando-23-the-mm-m-o-melhor-livro-de-software/)
 - [ ] [[Akitando] #104 - RANT: Empreendendo com Software do JEITO ERRADO!](https://akitaonrails.com/2021/09/28/akitando-104-rant-empreendendo-com-software-do-jeito-errado/)
+
+**b-cripto-pratica · Criptografia na prática e o que 16 linguagens em 16 dias ensinam**
+- [ ] [[Akitando] #147 - Criptografia na Prática - Certificados, BitTorrent, Git, Bitcoin](https://akitaonrails.com/2023/11/10/akitando-147-criptografia-na-pratica-certificados-bittorrent-git-bitcoin/)
+- [ ] [[Akitando] #145 - 16 Linguagens em 16 Dias: Minha Saga da Rinha de Backend](https://akitaonrails.com/2023/09/20/akitando-145-16-linguagens-em-16-dias-minha-saga-da-rinha-de-backend/)
 
 ## 2. Akitando completo, em ordem de episódio
 
