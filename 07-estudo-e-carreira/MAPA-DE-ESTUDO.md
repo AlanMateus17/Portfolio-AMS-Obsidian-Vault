@@ -38,7 +38,7 @@ atualizado: 2026-11-17
 
 | # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
 |---|---|---|---|---|---|---|
-| 0.1 | Aprender a aprender | 00 | Recuperação ativa, repetição espaçada, intercalação, Feynman, prática deliberada, 20/80, estudar com TDAH | N3 | — | [metodo-de-estudo](metodo-de-estudo.md) |
+| 0.1 | Aprender a aprender | 00 | Recuperação ativa, prática espaçada, intercalação, autoexplicação, ensinar, prática deliberada, sono, estudar com TDAH, mitos a evitar | N3 | — | 📘 [aprender-a-aprender](assuntos/00-aprender-a-aprender/aprender-a-aprender.md) |
 | 0.2 | Linguagem matemática e lógica | 01 | Proposição, conectivos, tabela-verdade, quantificadores, implicação | N3 | 0.1 | 📝 |
 | 0.3 | Teoria dos conjuntos | 01 | Pertinência, inclusão, união, interseção, diferença, produto cartesiano | N3 | 0.2 | 📝 |
 | 0.4 | Como o computador funciona | 03 | Bit, byte, binário, hexadecimal, CPU, memória, programa como sequência de instruções, o que é um sistema operacional | N2 ★ | 0.1 | 📝 |

@@ -5,6 +5,8 @@ status: completo
 atualizado: 2026-10-02
 ---
 
+> ⚠️ **Substituído em 17/11/2026** por [aprender-a-aprender](assuntos/00-aprender-a-aprender/aprender-a-aprender.md) (assunto 0.1 do MAPA, com fontes conferidas). Este arquivo fica só como histórico.
+
 # Método de Estudo — Documento Único
 
 > **Desde 06/11/2026 a porta do dia mudou** ([ADR 0013](../11-setup-dev-setup/docs/adr/0013-um-vault-e-o-plano-mestre.md)). No Ubuntu do WSL:
