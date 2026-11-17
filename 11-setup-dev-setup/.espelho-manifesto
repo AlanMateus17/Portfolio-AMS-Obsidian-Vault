@@ -431,6 +431,8 @@ tools/recrutador/recrutador.py
 tools/recrutador/test_recrutador.py
 tools/recursos/recursos.py
 tools/recursos/test_recursos.py
+tools/registro/registro.py
+tools/registro/test_registro.py
 tools/remoto/bot.py
 tools/remoto/fila.py
 tools/remoto/test_bot.py

@@ -85,13 +85,17 @@ N1 reconhecimento · N2 aplicação direta · N3 aplicação combinada e "encont
 ### 2.6 Ficha dupla + registro de entrevista (o estudo vira dois ativos)
 Todo estudo gera, de uma vez: **a ficha dupla** (ideia, código, por que importa) → vira material de aula; e **o registro de entrevista** (contexto, decisão + alternativa descartada, resultado com número) → vira resposta pronta para vaga. O nível 4 ("ensinou") só conta quando você dá a aula de verdade (escola, aula particular, vídeo ou post).
 
-### 2.6b Registro de leitura (tudo o que você lê entra no setup)
+### 2.6b Registros no setup (leitura, erros, atritos e fichas)
 Toda sessão de leitura (livro, documentação, post do Akita) é registrada no setup, para o Professor, o Recrutador, as fichas e o conteúdo poderem usar:
 1. **Antes:** `just livros para ETAPA` diz o que ler para o assunto e se falta comprar algum livro (`just livros comprar` mostra a lista na ordem em que vai precisar).
 2. **Depois de ler:** feche o livro e faça o protocolo de fim de bloco. Então registre: `just livros ler LIVRO --trecho "cap. 1-2" --min 50 --assunto 0.4 --nota "o que entendi, com as minhas palavras"`.
 3. O registro fica no vault em `07-estudo-e-carreira/leituras.md`. **Só entram as suas palavras:** página de livro nunca vai para o registro, para o Git nem para a IA (nota longa demais é recusada).
 4. `just livros lidos` mostra o que você já leu e os minutos por livro.
 5. Livro comprado: `just livros marcar LIVRO tenho`.
+6. **Errou num exercício ou na prova?** `just erro ETAPA "o erro" --certo "o certo"`. Vai para o caderno de erros (`07-estudo-e-carreira/caderno-de-erros.md`), que vira cartão e volta nas revisões. `just erros` lista.
+7. **Algo do setup travou, foi lento ou manual?** `just atrito "o que aconteceu" --area X`. Vai para `06-execucao-e-desenvolvimento/atritos-do-setup.md`; `just atritos` mostra o que já apareceu 3 vezes e deve virar script.
+8. **Ficha dupla e registro de entrevista:** o `just professor fechar ID MINUTOS` cria o arquivo; você preenche.
+9. **Não crie** resumos de livro, notas soltas por aula nem cópias de explicação da IA. O código dos exercícios vai para o repositório (`logica-ts`), não para nota.
 
 ### 2.7 As fontes e o papel de cada uma
 - **Alura** → primeira exposição em vídeo (assistir **antes** da aula).

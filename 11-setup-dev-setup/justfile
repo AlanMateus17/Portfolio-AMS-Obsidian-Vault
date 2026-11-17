@@ -169,9 +169,26 @@ progresso empresa="":
 professor *args:
     python3 tools/professor/professor.py {{args}}
 
+# Caderno de erros e atritos do setup (uma linha, sem abrir arquivo): just erro 0.2 "o erro" --certo "o certo" | just atrito "o que travou" --area backup
+[positional-arguments]
+erro *args:
+    python3 tools/registro/registro.py erro "$@"
+
+[positional-arguments]
+erros *args:
+    python3 tools/registro/registro.py erros "$@"
+
+[positional-arguments]
+atrito *args:
+    python3 tools/registro/registro.py atrito "$@"
+
+atritos:
+    python3 tools/registro/registro.py atritos
+
 # Biblioteca: just livros lista | para ETAPA | comprar | ler LIVRO --trecho T --min N --assunto ETAPA --nota "..." | lidos | marcar LIVRO tenho
+[positional-arguments]
 livros *args:
-    python3 tools/biblioteca/biblioteca.py {{args}}
+    python3 tools/biblioteca/biblioteca.py "$@"
 
 # Recrutador: just recrutador semana | entrevista FORMATO [--empresa X] [--vaga arq.txt] [--claude] | registrar FORMATO NOTA | progresso
 recrutador *args:

@@ -19,6 +19,7 @@ atualizado: 2026-11-17
 ## ✅ Todo dia (nunca pausa)
 - [ ] **Inglês 20–30 min** (Anki + 1 vídeo ou 1 página de documentação em inglês)
 - [ ] **Leu algo? Registre:** `just livros ler LIVRO --trecho ... --min ... --assunto ... --nota "com as suas palavras"`
+- [ ] **Errou?** `just erro ETAPA "o erro" --certo "o certo"` · **O setup travou?** `just atrito "..." --area ...`
 
 ## 🛒 Comprar agora
 - [ ] **Código**, Charles Petzold, 2ª edição (Bookman, 2023), ISBN 9788582606315: livro do 0.4 e 0.5. Até chegar, use o arquivo do assunto, o Akita #80 e #81 e o site grátis do livro (codehiddenlanguage.com). Quando chegar: `just livros marcar petzold-codigo tenho`.

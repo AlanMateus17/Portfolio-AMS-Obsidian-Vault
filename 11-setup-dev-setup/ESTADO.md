@@ -64,3 +64,4 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-17: v2.31: vault ganhou o MAPA-DE-ESTUDO em etapas por pré-requisito (0 a 8 + horizonte) e um protocolo de escrita dos arquivos de assunto; trilha base do Professor segue a mesma ordem.
 - 2026-11-17: repositório público AlanMateus17/mapa-de-estudo criado (MAPA em etapas + arquivos de assunto verificados); o vault ficou com o calendário (PLANO-PASSO-A-PASSO e Cartão).
 - 2026-11-17: v2.32: Biblioteca (just livros) e registro de leitura no vault; comprar o Código (Petzold, Bookman 2023) antes do 0.4.
+- 2026-11-17: v2.33: just erro / just atrito (caderno de erros e atritos do setup no vault, ADR 0020).

@@ -2,6 +2,14 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.33.0] - 2026-11-17
+
+### Adicionado
+- Caderno de erros e atritos do setup (ADR 0020): `just erro`, `just erros`, `just atrito`, `just atritos`, gravando em um arquivo só cada no vault.
+
+### Corrigido
+- `just erro`, `just atrito` e `just livros` perdiam as aspas dos argumentos (`{{args}}` separa as palavras); agora usam `[positional-arguments]` e `"$@"`. Outras receitas com `*args` e textos entre aspas (como `just professor escutei`) podem ter o mesmo problema.
+
 ## [2.32.0] - 2026-11-17
 
 ### Adicionado
