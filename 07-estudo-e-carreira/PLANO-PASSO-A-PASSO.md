@@ -85,6 +85,14 @@ N1 reconhecimento · N2 aplicação direta · N3 aplicação combinada e "encont
 ### 2.6 Ficha dupla + registro de entrevista (o estudo vira dois ativos)
 Todo estudo gera, de uma vez: **a ficha dupla** (ideia, código, por que importa) → vira material de aula; e **o registro de entrevista** (contexto, decisão + alternativa descartada, resultado com número) → vira resposta pronta para vaga. O nível 4 ("ensinou") só conta quando você dá a aula de verdade (escola, aula particular, vídeo ou post).
 
+### 2.6b Registro de leitura (tudo o que você lê entra no setup)
+Toda sessão de leitura (livro, documentação, post do Akita) é registrada no setup, para o Professor, o Recrutador, as fichas e o conteúdo poderem usar:
+1. **Antes:** `just livros para ETAPA` diz o que ler para o assunto e se falta comprar algum livro (`just livros comprar` mostra a lista na ordem em que vai precisar).
+2. **Depois de ler:** feche o livro e faça o protocolo de fim de bloco. Então registre: `just livros ler LIVRO --trecho "cap. 1-2" --min 50 --assunto 0.4 --nota "o que entendi, com as minhas palavras"`.
+3. O registro fica no vault em `07-estudo-e-carreira/leituras.md`. **Só entram as suas palavras:** página de livro nunca vai para o registro, para o Git nem para a IA (nota longa demais é recusada).
+4. `just livros lidos` mostra o que você já leu e os minutos por livro.
+5. Livro comprado: `just livros marcar LIVRO tenho`.
+
 ### 2.7 As fontes e o papel de cada uma
 - **Alura** → primeira exposição em vídeo (assistir **antes** da aula).
 - **Livros do VHSlins** → teoria e exercícios no papel (base de matemática).
@@ -246,6 +254,7 @@ Correm por baixo do mês inteiro, em blocos pequenos e fixos:
 | **Física (leve)** | Sábado | Ligada a hardware/robótica |
 | **Base do Akita** | Terça, 6h–7h | 1 episódio por semana + nota de 5 frases. Ordem na Parte 4.2; o Professor entrega (trilha `base`) |
 | **Revisar código de IA (Trilha R)** | Dentro do ofício, desde o Mês 2 | Checklist e etapas na Parte 4.1 |
+| **Registro de leitura** | Depois de cada leitura | `just livros ler ...` (seção 2.6b) |
 | **Revisão espaçada (Anki)** | 10 min/dia + 30 min no domingo | O que trava sem isso, você esquece |
 
 ### 4.1 Trilha R — trabalhar com agentes de IA (o que o mercado e o seu setup cobram)

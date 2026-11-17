@@ -52,6 +52,7 @@ docs:
     python3 tools/negocios/gerar.py
     python3 tools/cockpit/gerar.py
     python3 tools/akita/akita.py docs
+    python3 tools/biblioteca/biblioteca.py docs
     python3 tools/nucleo/agenda.py rapido --doc
     python3 tools/vault/espelho.py --se-existir
 
@@ -69,6 +70,7 @@ check:
     python3 tools/negocios/gerar.py --check
     python3 tools/cockpit/gerar.py --check
     python3 tools/akita/akita.py docs --check
+    python3 tools/biblioteca/biblioteca.py docs --check
     python3 tools/nucleo/agenda.py rapido --check
     python3 -m unittest discover -s tools -p "test_gerar_docs.py" -q
     for d in tools/*/; do if ls "$d"test_*.py >/dev/null 2>&1; then python3 -m unittest discover -s "$d" -q; fi; done
@@ -166,6 +168,10 @@ progresso empresa="":
 # Professor: just professor hoje | trilha | aula ID | praticei ID | prova ID | corrigir ID | ensinei ID | cartoes | ferramenta BLOCO
 professor *args:
     python3 tools/professor/professor.py {{args}}
+
+# Biblioteca: just livros lista | para ETAPA | comprar | ler LIVRO --trecho T --min N --assunto ETAPA --nota "..." | lidos | marcar LIVRO tenho
+livros *args:
+    python3 tools/biblioteca/biblioteca.py {{args}}
 
 # Recrutador: just recrutador semana | entrevista FORMATO [--empresa X] [--vaga arq.txt] [--claude] | registrar FORMATO NOTA | progresso
 recrutador *args:

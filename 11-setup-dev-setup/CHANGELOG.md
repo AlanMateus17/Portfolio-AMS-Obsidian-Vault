@@ -2,6 +2,12 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.32.0] - 2026-11-17
+
+### Adicionado
+- Biblioteca (ADR 0019): `data/biblioteca.json` com os livros do estudo e os assuntos do mapa em que cada um entra; `just livros para ETAPA | comprar | ler | lidos | marcar`; registro de leituras no vault (`07-estudo-e-carreira/leituras.md`), só com notas nas palavras do Alan; `docs/biblioteca.md` gerado e conferido no `just check`.
+- `repos.json`: repositório `mapa-de-estudo`.
+
 ## [2.31.0] - 2026-11-17
 
 ### Alterado

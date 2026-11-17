@@ -13,6 +13,7 @@ RODAR-DIAGNOSTICO.cmd
 config/marca.md
 data/akita/indice.json
 data/akita/regras.json
+data/biblioteca.json
 data/certificacoes.json
 data/custos.json
 data/ecossistema.json
@@ -51,12 +52,14 @@ docs/adr/0015-nada-pausado.md
 docs/adr/0016-amtech-os.md
 docs/adr/0017-nucleo-ts-python-dotnet-reserva.md
 docs/adr/0018-plano-de-estudo-unico-no-vault.md
+docs/adr/0019-biblioteca-e-registro-de-leitura.md
 docs/akita/README.md
 docs/akita/contexto-setup.md
 docs/akita/trilha-estudo.md
 docs/arquitetura-exemplo.d2
 docs/arquitetura.md
 docs/auditoria.md
+docs/biblioteca.md
 docs/boas-praticas.md
 docs/camadas/01-hw.md
 docs/camadas/02-seg.md
@@ -340,6 +343,8 @@ tools/akita/akita.py
 tools/akita/test_akita.py
 tools/avaliador/avaliar.py
 tools/avaliador/test_avaliar.py
+tools/biblioteca/biblioteca.py
+tools/biblioteca/test_biblioteca.py
 tools/carreira/certificacoes.py
 tools/carreira/test_certificacoes.py
 tools/cockpit/cockpit.template.html

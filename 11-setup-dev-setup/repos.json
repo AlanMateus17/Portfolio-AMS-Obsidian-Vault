@@ -16,6 +16,12 @@
       "stack": ["Markdown"]
     },
     {
+      "nome": "mapa-de-estudo",
+      "papel": "Material de estudo publico: MAPA em etapas por pre-requisito e um arquivo verificado por assunto (o que estudar e em que ordem); o calendario fica no vault",
+      "status": "ativo",
+      "stack": ["Markdown"]
+    },
+    {
       "nome": "ensino-ti",
       "papel": "Material de ensino: cursos EMTI (Tecnico em Informatica / Desenvolvimento de Sistemas) e versao online",
       "status": "ativo",

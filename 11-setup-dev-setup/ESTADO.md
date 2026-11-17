@@ -62,3 +62,5 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-17: v2.30: stack nova (ADR 0017) trazida do espelho do vault para cá; plano de estudo único no vault (ADR 0018); trilha base do Akita (24 módulos) no Professor; semana do Professor = rotina real, domingo de folga.
 - 2026-11-17: regra reforçada: a pasta 11 do vault não se edita à mão; mudança no setup é feita aqui e espelhada (just docs / just vault-espelho).
 - 2026-11-17: v2.31: vault ganhou o MAPA-DE-ESTUDO em etapas por pré-requisito (0 a 8 + horizonte) e um protocolo de escrita dos arquivos de assunto; trilha base do Professor segue a mesma ordem.
+- 2026-11-17: repositório público AlanMateus17/mapa-de-estudo criado (MAPA em etapas + arquivos de assunto verificados); o vault ficou com o calendário (PLANO-PASSO-A-PASSO e Cartão).
+- 2026-11-17: v2.32: Biblioteca (just livros) e registro de leitura no vault; comprar o Código (Petzold, Bookman 2023) antes do 0.4.
