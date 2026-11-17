@@ -7,7 +7,7 @@ atualizado: 2026-11-17
 # 📍 Você Está Aqui
 
 > **Uma porta só.** Quando o setup estiver instalado, quem manda é o `just professor hoje`. Ele segue o mesmo plano e a mesma semana deste cartão. **Até lá, quem manda é este cartão.**
-> Plano completo (só para consulta): [PLANO-PASSO-A-PASSO](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md) · tudo o que você vai estudar: [MAPA-DE-ESTUDO](07-estudo-e-carreira/MAPA-DE-ESTUDO.md)
+> Plano completo (só para consulta): [PLANO-PASSO-A-PASSO](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md) · tudo o que você vai estudar: [mapa-de-estudo](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md)
 
 **Fase atual:** Trimestre 1 → Mês 1 → **Etapa 0: a base de tudo** (depois Etapa 1, a máquina e as ferramentas)
 **Ativo que este mês entrega:** repositório `logica-ts` com os 3 exercícios resolvidos em TypeScript, sem IA
@@ -40,7 +40,7 @@ atualizado: 2026-11-17
 
 **Semanas 3 e 4 (01–13/12):** criptografia essencial, Git (aí sim nasce o repo `logica-ts`), segredos, backup, Docker, `just`, Núcleo, segurança de agentes; e TypeScript no terminal com testes. O detalhe dia a dia entra aqui quando a Semana 2 fechar.
 
-> Os arquivos dos assuntos de cada semana são escritos e conferidos antes dela, pelo protocolo do [MAPA](07-estudo-e-carreira/MAPA-DE-ESTUDO.md#como-cada-arquivo-é-escrito).
+> Os arquivos dos assuntos de cada semana são escritos e conferidos antes dela, pelo protocolo do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md#como-cada-arquivo-é-escrito).
 
 ---
 

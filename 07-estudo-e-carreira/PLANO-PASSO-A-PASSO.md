@@ -14,7 +14,7 @@ fonte-unica: true
 >
 > **Fonte única do estudo (desde 17/11/2026):** este arquivo manda. O `docs/plano-eixo.md` e o currículo do Professor (`data/professor/curriculo.json`) no dev-setup seguem este plano ([ADR 0018](../11-setup-dev-setup/docs/adr/0018-plano-de-estudo-unico-no-vault.md)). Se os dois discordarem, vale este, e o outro é corrigido.
 >
-> **O que estudar, por área e nível:** [MAPA-DE-ESTUDO](MAPA-DE-ESTUDO.md), com um arquivo por assunto em `assuntos/`.
+> **O que estudar, por área e nível:** repositório [mapa-de-estudo](https://github.com/AlanMateus17/mapa-de-estudo), com um arquivo por assunto.
 >
 > **A regra que rege tudo:** você nunca "só estuda". **Cada bloco entrega um ativo** (uma ferramenta, uma parte do AM Gestão, um site, um protótipo) que vira renda e portfólio. No máximo **1 ativo sendo construído + 1 sendo testado** por vez.
 
@@ -97,7 +97,7 @@ Todo estudo gera, de uma vez: **a ficha dupla** (ideia, código, por que importa
 
 ## PARTE 3 — O PASSO A PASSO DE 12 MESES
 
-**A ordem dos assuntos vem do [MAPA-DE-ESTUDO](MAPA-DE-ESTUDO.md)** (etapas por pré-requisito: nada é usado antes de ter base). Cada mês abaixo diz quais etapas ele cobre e o que entrega.
+**A ordem dos assuntos vem do [mapa-de-estudo](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md)** (etapas por pré-requisito: nada é usado antes de ter base). Cada mês abaixo diz quais etapas ele cobre e o que entrega.
 
 Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/entregável.** As trilhas se alternam, mas as "nunca-pausam" (inglês, matemática, Licenciatura, física leve) correm por baixo o tempo todo.
 

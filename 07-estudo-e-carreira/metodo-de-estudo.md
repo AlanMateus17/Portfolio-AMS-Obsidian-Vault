@@ -5,7 +5,7 @@ status: completo
 atualizado: 2026-10-02
 ---
 
-> ⚠️ **Substituído em 17/11/2026** por [aprender-a-aprender](assuntos/00-aprender-a-aprender/aprender-a-aprender.md) (assunto 0.1 do MAPA, com fontes conferidas). Este arquivo fica só como histórico.
+> ⚠️ **Substituído em 17/11/2026** por [aprender-a-aprender](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md) (assunto 0.1 do MAPA, com fontes conferidas). Este arquivo fica só como histórico.
 
 # Método de Estudo — Documento Único
 
