@@ -813,6 +813,652 @@
    "akita_posts": [
     "coisas-que-iniciantes-ignoram-sobre-pcs"
    ]
+  },
+  {
+   "id": "b-aprender",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "Aprender a aprender: por que dói e como estudar sem se enganar",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [],
+   "pratica": "Escrever as 5 regras de estudo que você vai seguir, ligando cada uma a uma técnica do método do Professor.",
+   "fontes": [
+    "https://akitaonrails.com/2020/04/01/akitando-76-guia-definitivo-de-aprendendo-a-aprender-a-maior-bronca-da-sua-vida-rated-r/",
+    "https://akitaonrails.com/2019/10/23/akitando-65-a-dor-de-aprender-que-cursos-livros/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-76-guia-definitivo-de-aprendendo-a-aprender-a-maior-bronca-da-sua-vida-rated-r",
+    "akitando-65-a-dor-de-aprender-que-cursos-livros"
+   ]
+  },
+  {
+   "id": "b-computador",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "Como um computador funciona por dentro: bits, CPU, memória e instruções",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-aprender"
+   ],
+   "pratica": "Explicar, sem jargão e em 5 frases, o que acontece entre apertar uma tecla e a letra aparecer na tela.",
+   "fontes": [
+    "https://akitaonrails.com/2020/06/04/akitando-80-o-guia-hardcore-de-introducao-a-computacao/",
+    "https://akitaonrails.com/2020/06/18/akitando-81-aprendendo-sobre-computadores-com-super-mario-do-jeito-hardcore/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-80-o-guia-hardcore-de-introducao-a-computacao",
+    "akitando-81-aprendendo-sobre-computadores-com-super-mario-do-jeito-hardcore"
+   ]
+  },
+  {
+   "id": "b-linux-wsl",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "Linux e WSL2: o que é o sistema que você usa todo dia",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-computador"
+   ],
+   "pratica": "Desenhar onde ficam o Windows, a VM do WSL2 e os seus arquivos, e por que o projeto deve ficar no lado Linux.",
+   "fontes": [
+    "https://akitaonrails.com/2019/09/04/akitando-60-entendendo-wsl-2-e-uma-curta-historia-sobre-windows-nt/",
+    "https://akitaonrails.com/2019/07/12/akitando-54-o-guia-definitivo-de-ubuntu-para-devs-iniciantes/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-60-entendendo-wsl-2-e-uma-curta-historia-sobre-windows-nt",
+    "akitando-54-o-guia-definitivo-de-ubuntu-para-devs-iniciantes"
+   ]
+  },
+  {
+   "id": "b-iniciante",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "O que todo programador precisa saber antes da linguagem, e de onde veio o front-end",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-linux-wsl"
+   ],
+   "pratica": "Listar os conceitos básicos do episódio e marcar quais você já usa no Mês 1 e quais ainda não.",
+   "fontes": [
+    "https://akitaonrails.com/2019/02/06/akitando-38-conhecimentos-basicos-para-iniciantes-em-programacao-serie-comecando-aos-40/",
+    "https://akitaonrails.com/2019/02/13/akitando-39-a-historia-do-front-end-para-iniciantes-em-programacao-serie-comecando-aos-40/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-38-conhecimentos-basicos-para-iniciantes-em-programacao-serie-comecando-aos-40",
+    "akitando-39-a-historia-do-front-end-para-iniciantes-em-programacao-serie-comecando-aos-40"
+   ]
+  },
+  {
+   "id": "b-backend",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "Back-end para iniciantes: processos, servidores e o que roda do outro lado",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-iniciante"
+   ],
+   "pratica": "Explicar o caminho de uma requisição até o banco e de volta, usando o site do Mês 2 como exemplo.",
+   "fontes": [
+    "https://akitaonrails.com/2019/02/20/akitando-40-entendendo-back-end-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40/",
+    "https://akitaonrails.com/2019/02/27/akitando-41-entendendo-back-end-para-iniciantes-em-programacao-parte-2-serie-comecando-aos-40/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-40-entendendo-back-end-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40",
+    "akitando-41-entendendo-back-end-para-iniciantes-em-programacao-parte-2-serie-comecando-aos-40"
+   ]
+  },
+  {
+   "id": "b-redes-1",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "Redes, parte 1 e 2: como dado vira sinal e como erros são detectados",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-backend"
+   ],
+   "pratica": "Explicar paridade e checksum com um exemplo de 8 bits feito à mão.",
+   "fontes": [
+    "https://akitaonrails.com/2022/07/01/akitando-121-entendendo-transferencia-de-sinais-digitais-introducao-a-redes-parte-1/",
+    "https://akitaonrails.com/2022/07/13/akitando-122-detecao-e-correcao-de-erros-introducao-a-redes-parte-2/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-121-entendendo-transferencia-de-sinais-digitais-introducao-a-redes-parte-1",
+    "akitando-122-detecao-e-correcao-de-erros-introducao-a-redes-parte-2"
+   ]
+  },
+  {
+   "id": "b-redes-2",
+   "trilha": "base",
+   "trimestre": 1,
+   "titulo": "Redes, parte 3 e 4: como a internet funciona, sockets, cliente e servidor",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-redes-1"
+   ],
+   "pratica": "Abrir um socket TCP com um script de 10 linhas e explicar cada linha.",
+   "fontes": [
+    "https://akitaonrails.com/2022/07/23/akitando-123-como-sua-internet-funciona-introducao-a-redes-parte-3/",
+    "https://akitaonrails.com/2022/08/04/akitando-124-como-funciona-sockets-cliente-servidor-e-a-web-introducao-a-redes-parte-4/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-123-como-sua-internet-funciona-introducao-a-redes-parte-3",
+    "akitando-124-como-funciona-sockets-cliente-servidor-e-a-web-introducao-a-redes-parte-4"
+   ]
+  },
+  {
+   "id": "b-concorrencia",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "Concorrência e paralelismo: threads, processos e async",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-redes-2"
+   ],
+   "pratica": "Explicar por que async/await do TypeScript não é paralelismo, com um exemplo que prova.",
+   "fontes": [
+    "https://akitaonrails.com/2019/03/13/akitando-43-concorrencia-e-paralelismo-parte-1-entendendo-back-end-para-iniciantes-parte-3/",
+    "https://akitaonrails.com/2019/03/20/akitando-44-concorrencia-e-paralelismo-parte-2-entendendo-back-end-para-iniciantes-parte-4/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-43-concorrencia-e-paralelismo-parte-1-entendendo-back-end-para-iniciantes-parte-3",
+    "akitando-44-concorrencia-e-paralelismo-parte-2-entendendo-back-end-para-iniciantes-parte-4"
+   ]
+  },
+  {
+   "id": "b-memoria",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "Gerenciamento de memória: stack, heap e coletor de lixo",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-concorrencia"
+   ],
+   "pratica": "Explicar por que dinheiro em float dá errado e o que acontece na memória num vazamento.",
+   "fontes": [
+    "https://akitaonrails.com/2019/03/27/akitando-45-gerenciamento-de-memoria-parte-1-entendendo-back-end-para-iniciantes-parte-5/",
+    "https://akitaonrails.com/2019/04/03/akitando-46-gerenciamento-de-memoria-parte-2-entendendo-back-end-para-iniciantes-parte-6/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-45-gerenciamento-de-memoria-parte-1-entendendo-back-end-para-iniciantes-parte-5",
+    "akitando-46-gerenciamento-de-memoria-parte-2-entendendo-back-end-para-iniciantes-parte-6"
+   ]
+  },
+  {
+   "id": "b-cripto",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "Criptografia básica: hash, chave simétrica e assimétrica",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-memoria"
+   ],
+   "pratica": "Explicar como o sops/age do seu setup protege um segredo, com as palavras certas.",
+   "fontes": [
+    "https://akitaonrails.com/2019/11/21/akitando-67-entendendo-conceitos-basicos-de-criptografia-parte-1-2/",
+    "https://akitaonrails.com/2019/11/26/akitando-68-entendendo-conceitos-basicos-de-criptografia-parte-2-2/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-67-entendendo-conceitos-basicos-de-criptografia-parte-1-2",
+    "akitando-68-entendendo-conceitos-basicos-de-criptografia-parte-2-2"
+   ]
+  },
+  {
+   "id": "b-hardware",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "Memória de 16 a 64 bits e a história de CPUs e GPUs",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-cripto"
+   ],
+   "pratica": "Explicar por que um modelo de IA de 8B precisa de tanta memória de vídeo.",
+   "fontes": [
+    "https://akitaonrails.com/2021/05/13/akitando-97-so-precisamos-de-640-kb-de-memoria-16-bits-ate-64-bits/",
+    "https://akitaonrails.com/2021/05/26/akitando-98-a-longa-historia-de-cpus-e-gpus-jogos-de-windows-em-linux/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-97-so-precisamos-de-640-kb-de-memoria-16-bits-ate-64-bits",
+    "akitando-98-a-longa-historia-de-cpus-e-gpus-jogos-de-windows-em-linux"
+   ]
+  },
+  {
+   "id": "b-armazenamento",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "Dispositivos de armazenamento e linguagem compilada vs interpretada",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-hardware"
+   ],
+   "pratica": "Comparar um binário Go com um script TypeScript: o que acontece quando cada um roda.",
+   "fontes": [
+    "https://akitaonrails.com/2021/07/06/akitando-101-tudo-que-voce-queria-saber-sobre-dispositivos-de-armazenamento/",
+    "https://akitaonrails.com/2022/04/15/akitando-117-linguagem-compilada-vs-interpretada-qual-e-melhor/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-101-tudo-que-voce-queria-saber-sobre-dispositivos-de-armazenamento",
+    "akitando-117-linguagem-compilada-vs-interpretada-qual-e-melhor"
+   ]
+  },
+  {
+   "id": "b-devops",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "DevOps para iniciantes: do código ao servidor",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-armazenamento"
+   ],
+   "pratica": "Desenhar o caminho do seu commit até o ar no AM Gestão e marcar onde a IA entra.",
+   "fontes": [
+    "https://akitaonrails.com/2019/04/10/akitando-47-entendendo-devops-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40/",
+    "https://akitaonrails.com/2019/04/17/akitando-48-entendendo-devops-para-iniciantes-em-programacao-parte-2-serie-comecando-aos-40/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-47-entendendo-devops-para-iniciantes-em-programacao-parte-1-serie-comecando-aos-40",
+    "akitando-48-entendendo-devops-para-iniciantes-em-programacao-parte-2-serie-comecando-aos-40"
+   ]
+  },
+  {
+   "id": "b-containers",
+   "trilha": "base",
+   "trimestre": 2,
+   "titulo": "Como containers funcionam e os 12 fatores de uma aplicação web",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-devops"
+   ],
+   "pratica": "Conferir o AM Gestão contra os 12 fatores e anotar os que faltam.",
+   "fontes": [
+    "https://akitaonrails.com/2023/03/02/akitando-139-entendendo-como-containers-funcionam/",
+    "https://akitaonrails.com/2022/01/29/akitando-113-a-forma-ideal-de-projetos-web-os-12-fatores/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-139-entendendo-como-containers-funcionam",
+    "akitando-113-a-forma-ideal-de-projetos-web-os-12-fatores"
+   ]
+  },
+  {
+   "id": "b-redes-3",
+   "trilha": "base",
+   "trimestre": 3,
+   "titulo": "Redes, parte 5 e 6: SSH, proxies, VPN e rede segura",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-containers"
+   ],
+   "pratica": "Explicar o túnel SSH que você usa para chegar à VM e o que a VPN protege.",
+   "fontes": [
+    "https://akitaonrails.com/2022/08/17/akitando-125-burlando-proxies-e-firewalls-introducao-a-redes-parte-5-ssh/",
+    "https://akitaonrails.com/2022/08/29/akitando-126-criando-uma-rede-segura-introducao-a-redes-parte-6-vpn-e-nas/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-125-burlando-proxies-e-firewalls-introducao-a-redes-parte-5-ssh",
+    "akitando-126-criando-uma-rede-segura-introducao-a-redes-parte-6-vpn-e-nas"
+   ]
+  },
+  {
+   "id": "b-testes-perf",
+   "trilha": "base",
+   "trimestre": 3,
+   "titulo": "Testes, estimativa e as 4 técnicas para deixar uma app web rápida",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-redes-3"
+   ],
+   "pratica": "Medir uma tela do AM Gestão antes e depois de aplicar uma das técnicas.",
+   "fontes": [
+    "https://akitaonrails.com/2022/10/25/akitando-130-rant-projetos-testes-e-estimativa-rated-r/",
+    "https://akitaonrails.com/2022/12/12/akitando-133-tornando-sua-app-web-mais-rapida-4-tecnicas-de-otimizacao/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-130-rant-projetos-testes-e-estimativa-rated-r",
+    "akitando-133-tornando-sua-app-web-mais-rapida-4-tecnicas-de-otimizacao"
+   ]
+  },
+  {
+   "id": "b-escala",
+   "trilha": "base",
+   "trimestre": 3,
+   "titulo": "Como um sistema escala e como um banco SQL funciona por dentro",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-testes-perf"
+   ],
+   "pratica": "Explicar o que muda no AM Gestão com 100 restaurantes em vez de 1.",
+   "fontes": [
+    "https://akitaonrails.com/2021/12/08/akitando-110-como-fazer-o-ingresso-com-escalar-conceitos-intermediarios-de-web/",
+    "https://akitaonrails.com/2022/05/09/akitando-118-fiz-um-servidor-de-sql-entendendo-banco-de-dados/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-110-como-fazer-o-ingresso-com-escalar-conceitos-intermediarios-de-web",
+    "akitando-118-fiz-um-servidor-de-sql-entendendo-banco-de-dados"
+   ]
+  },
+  {
+   "id": "b-estruturas",
+   "trilha": "base",
+   "trimestre": 3,
+   "titulo": "Estruturas de dados: árvores e grafos",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-escala"
+   ],
+   "pratica": "Implementar uma árvore de busca binária em Python e explicar o índice B-tree do Postgres com ela.",
+   "fontes": [
+    "https://akitaonrails.com/2021/04/06/akitando-95-arvores-o-comeco-de-tudo/",
+    "https://akitaonrails.com/2023/04/11/akitando-140-desbloqueando-o-algoritmo-do-twitter-introducao-a-grafos/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-95-arvores-o-comeco-de-tudo",
+    "akitando-140-desbloqueando-o-algoritmo-do-twitter-introducao-a-grafos"
+   ]
+  },
+  {
+   "id": "b-bancos",
+   "trilha": "base",
+   "trimestre": 3,
+   "titulo": "Bancos de dados, dos primórdios ao big data, e quando usar NoSQL",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-estruturas"
+   ],
+   "pratica": "Justificar por escrito por que o AM Gestão usa Postgres e onde caberia outra coisa.",
+   "fontes": [
+    "https://akitaonrails.com/2023/07/22/akitando-143-discutindo-sobre-banco-de-dados-dos-primordios-a-big-data/",
+    "https://akitaonrails.com/2019/04/24/akitando-49-devo-usar-nosql-endgame-para-iniciantes-em-programacao-serie-comecando-aos-40/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-143-discutindo-sobre-banco-de-dados-dos-primordios-a-big-data",
+    "akitando-49-devo-usar-nosql-endgame-para-iniciantes-em-programacao-serie-comecando-aos-40"
+   ]
+  },
+  {
+   "id": "b-ia",
+   "trilha": "base",
+   "trimestre": 3,
+   "titulo": "Como o ChatGPT funciona e o que IAs conseguem fazer",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-bancos"
+   ],
+   "pratica": "Explicar token, contexto e embedding usando o assistente do AM Gestão como exemplo.",
+   "fontes": [
+    "https://akitaonrails.com/2023/06/19/akitando-142-entendendo-como-chatgpt-funciona-rodando-sua-propria-ia/",
+    "https://akitaonrails.com/2023/11/29/akitando-148-o-que-ias-podem-fazer-exemplos-de-ferramentas/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-142-entendendo-como-chatgpt-funciona-rodando-sua-propria-ia",
+    "akitando-148-o-que-ias-podem-fazer-exemplos-de-ferramentas"
+   ]
+  },
+  {
+   "id": "b-linux-boot",
+   "trilha": "base",
+   "trimestre": 4,
+   "titulo": "Como um Linux dá boot e como a compressão de dados funciona",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-ia"
+   ],
+   "pratica": "Descrever o boot do AMtech OS etapa por etapa.",
+   "fontes": [
+    "https://akitaonrails.com/2022/09/12/akitando-127-como-funciona-o-boot-de-um-linux-o-que-tem-num-livecd/",
+    "https://akitaonrails.com/2022/03/23/akitando-116-de-5-tera-a-25-giga-compressao-de-dados-e-multimidia/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-127-como-funciona-o-boot-de-um-linux-o-que-tem-num-livecd",
+    "akitando-116-de-5-tera-a-25-giga-compressao-de-dados-e-multimidia"
+   ]
+  },
+  {
+   "id": "b-cripto-pratica",
+   "trilha": "base",
+   "trimestre": 4,
+   "titulo": "Criptografia na prática e o que 16 linguagens em 16 dias ensinam",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-linux-boot"
+   ],
+   "pratica": "Explicar como o Git usa hash e o que a Rinha de Backend mostra sobre escolher linguagem.",
+   "fontes": [
+    "https://akitaonrails.com/2023/11/10/akitando-147-criptografia-na-pratica-certificados-bittorrent-git-bitcoin/",
+    "https://akitaonrails.com/2023/09/20/akitando-145-16-linguagens-em-16-dias-minha-saga-da-rinha-de-backend/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-147-criptografia-na-pratica-certificados-bittorrent-git-bitcoin",
+    "akitando-145-16-linguagens-em-16-dias-minha-saga-da-rinha-de-backend"
+   ]
+  },
+  {
+   "id": "b-linguagens",
+   "trilha": "base",
+   "trimestre": 4,
+   "titulo": "Sua linguagem não é especial: o que é comum a todas",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-cripto-pratica"
+   ],
+   "pratica": "Escrever o mesmo exercício de lógica em TS, Python e Go e listar o que muda de verdade.",
+   "fontes": [
+    "https://akitaonrails.com/2018/10/02/akitando-15-sua-linguagem-nao-e-especial-parte-1/",
+    "https://akitaonrails.com/2018/10/04/akitando-16-sua-linguagem-nao-e-especial-parte-2/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-15-sua-linguagem-nao-e-especial-parte-1",
+    "akitando-16-sua-linguagem-nao-e-especial-parte-2"
+   ]
+  },
+  {
+   "id": "b-oficio",
+   "trilha": "base",
+   "trimestre": 4,
+   "titulo": "O livro mais clássico de software e como empreender com software sem errar",
+   "objetivos": [
+    "Assistir ou ler os 2 episódios do Akita antes da prática",
+    "Explicar o conceito central em 3 a 5 frases, sem jargão",
+    "Ligar o conceito a algo que você já usa no setup ou no AM Gestão"
+   ],
+   "prereq": [
+    "b-linguagens"
+   ],
+   "pratica": "Aplicar as lições ao plano do AM Gestão e escrever 3 decisões que mudam.",
+   "fontes": [
+    "https://akitaonrails.com/2018/11/01/akitando-23-the-mm-m-o-melhor-livro-de-software/",
+    "https://akitaonrails.com/2021/09/28/akitando-104-rant-empreendendo-com-software-do-jeito-errado/"
+   ],
+   "blocos": [],
+   "profundidade": "usar",
+   "estimado_min": 60,
+   "akita": [],
+   "akita_posts": [
+    "akitando-23-the-mm-m-o-melhor-livro-de-software",
+    "akitando-104-rant-empreendendo-com-software-do-jeito-errado"
+   ]
   }
  ]
 }

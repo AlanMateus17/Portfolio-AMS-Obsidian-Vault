@@ -50,6 +50,7 @@ docs/adr/0014-motor-de-decisao-e-custo-minimo.md
 docs/adr/0015-nada-pausado.md
 docs/adr/0016-amtech-os.md
 docs/adr/0017-nucleo-ts-python-dotnet-reserva.md
+docs/adr/0018-plano-de-estudo-unico-no-vault.md
 docs/akita/README.md
 docs/akita/contexto-setup.md
 docs/akita/trilha-estudo.md

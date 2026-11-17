@@ -2756,7 +2756,7 @@ cd ~/dev/dev-setup && just recrutador semana
 - As de inglês, no app do Claude com o modo de voz. A partir do trimestre 3, uma por mês com uma pessoa de verdade. Liga ao critério do trimestre 4: entrevista em inglês sem travar.
 - Implanta: Recrutadores
 
-### 24.5 Trimestre 1: 1 cliente de site pago, Caixa da Casa usado 3 meses, planilha do AM Rendara à venda, 3 posts
+### 24.5 Trimestre 1: 1 cliente de site pago, 1 CLI em Go, planilha do financeiro à venda, esqueleto do AM Gestão com teste no CI, 1ª chamada de IA em TypeScript
 
 **Você** · 1 h 00 min
 
@@ -2772,7 +2772,7 @@ cd ~/dev/dev-setup && just agora software
 - Revisão no fim do trimestre: seguir, ajustar ou mudar o eixo, com o motivo anotado (just lembrar "..." padrao).
 - Implanta: Sites para pequenas empresas · Caixa da Casa / AM Rendara · Site pessoal + blog (Jekyll)
 
-### 24.6 Trimestre 2: 10 planilhas vendidas e o AM Rendara (MVP) com 1 usuário pagante em produção, com backup restaurado e rollback testado
+### 24.6 Trimestre 2: 10 planilhas vendidas e o AM Gestão (MVP) num restaurante real, com busca com IA avaliada no CI, backup restaurado e rollback testado
 
 **Você** · 1 h 00 min
 
@@ -2781,7 +2781,7 @@ cd ~/dev/dev-setup && just agora software
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && just triagem "AM Rendara MVP"
+cd ~/dev/dev-setup && just triagem "AM Gestão MVP"
 ```
 
 - [ ] **Pronto quando:** Itens cumpridos até 30/abr/2027

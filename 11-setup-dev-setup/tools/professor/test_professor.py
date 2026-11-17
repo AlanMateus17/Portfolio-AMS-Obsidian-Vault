@@ -62,7 +62,8 @@ class TestProfessor(unittest.TestCase):
 
     def test_semana_e_entrada(self):
         self.assertEqual(professor.trilhas_do_dia(date(2026, 11, 8)), (), "domingo é folga")
-        self.assertIn("matematica", professor.trilhas_do_dia(date(2026, 11, 10)))
+        self.assertIn("matematica", professor.trilhas_do_dia(date(2026, 11, 13)))
+        self.assertEqual(professor.trilhas_do_dia(date(2026, 11, 10)), ("base",), "terça é o slot curto do Akita")
         self.assertIn("fisica", professor.trilhas_do_dia(date(2026, 11, 7)))
         m = professor.modulo("o-dotnet")
         self.assertTrue(any("Alura" in ln for ln in professor.entrada(m)))

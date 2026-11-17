@@ -54,7 +54,7 @@ class TestTriagem(unittest.TestCase):
 
     def test_pacote_tem_stack_e_instrucao(self):
         txt = pacote("atendimento", ECO, MAPA)
-        self.assertIn(".NET 10", txt)
+        self.assertIn("TypeScript", txt)
         self.assertIn("Responda seco", txt)
         self.assertIn("Chatwoot", txt)
 

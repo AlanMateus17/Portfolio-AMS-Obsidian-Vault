@@ -41,11 +41,14 @@ CURRICULO = RAIZ / "data" / "professor" / "curriculo.json"
 CONTEXTO = RAIZ / "docs" / "akita" / "contexto-setup.md"
 INTERVALOS = (1, 3, 7, 21, 60, 120)
 APROVA = 80
-TRILHAS = {"oficio": "Ofício (2 h)", "setup": "Operar o setup (dentro das 2 h de ofício)",
-           "financas": "Domínio: finanças (1 h)", "matematica": "Domínio: matemática (1 h)", "fisica": "Física (1 bloco)"}
-# A semana fixa (docs/plano-eixo.md): ofício e setup todo dia útil; o domínio alterna; física no sábado; domingo é folga.
-SEMANA = {0: ("oficio", "setup", "financas"), 1: ("oficio", "setup", "matematica"), 2: ("oficio", "setup", "financas"),
-          3: ("oficio", "setup", "matematica"), 4: ("oficio", "setup", "financas"), 5: ("fisica", "matematica"), 6: ()}
+TRILHAS = {"oficio": "Ofício (âncora 6h-8h)", "setup": "Operar o setup (dentro do ofício)",
+           "financas": "Domínio: finanças (bloco de quinta)", "matematica": "Matemática VHSlins (sexta de manhã)",
+           "fisica": "Física (sábado)", "base": "Base do Akita (terça, 6h-7h)"}
+# A semana fixa, sobre os horários reais (vault: 07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md, Parte 1):
+# segunda e quarta âncora técnica; terça só o slot curto de leitura (base do Akita); quinta o bloco profundo;
+# sexta matemática; sábado ofício leve + física; domingo é folga (só a revisão do Anki).
+SEMANA = {0: ("oficio", "setup"), 1: ("base",), 2: ("oficio", "setup"),
+          3: ("oficio", "setup", "financas"), 4: ("matematica",), 5: ("oficio", "fisica"), 6: ()}
 
 
 def trilhas_do_dia(dia: date | None = None) -> tuple[str, ...]:

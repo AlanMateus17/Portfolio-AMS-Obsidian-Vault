@@ -112,6 +112,6 @@ hoje → aula (3 blocos de 25 min) → fechar (protocolo + ficha) → prática n
 - **Conteúdo de curso pago** (Alura, Rocketseat, Udemy, Finclass). Continua sendo para você assistir, nunca para a IA reproduzir.
 - **Vídeos e podcast do Akita como estudo.** O seu plano antigo dizia que eles "não contam como estudo", porque são passivos. A Escola Akita mudou isso: o que conta são as regras e notas que saem deles, não o tempo assistindo.
 
-## 8. Uma divergência para você decidir
+## 8. A divergência das horas (resolvida em 17/11/2026)
 
-O plano do vault (out/2026) mandava **calibrar em 2 h por dia e tratar as 4 h como bônus**. O plano do eixo (nov/2026) foi montado com 4 h por dia. O Professor funciona com os dois. Se a semana real fechar perto das 2 h, o critério de cada trimestre precisa ser revisto em vez de virar dívida de atraso.
+O plano do vault calibrava em cerca de 20 h por semana e o plano do eixo em 4 h por dia. Decisão no [ADR 0018](../adr/0018-plano-de-estudo-unico-no-vault.md): **vale a calibração de ~20 h por semana**, com domingo de folga. O que passar disso é bônus. Se a semana real fechar abaixo, o critério do trimestre é revisto em vez de virar dívida de atraso.

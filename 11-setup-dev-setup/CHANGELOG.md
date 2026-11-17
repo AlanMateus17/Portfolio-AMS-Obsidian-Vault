@@ -2,6 +2,19 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.30.0] - 2026-11-17
+
+### Alterado
+- Stack nova chega de verdade ao setup: as mudanças de 13/11 (ADR 0017, TypeScript + Python + SQL, AM Gestão como produto único, .NET como reserva) tinham ficado só no espelho da pasta 11 do vault. Agora estão aqui: currículo do Professor, camadas, ADRs, triagem, gerador de docs e `repos.json`.
+- Plano de estudo único (ADR 0018): o `PLANO-PASSO-A-PASSO.md` do vault é a fonte; `docs/plano-eixo.md` vira resumo dele. Semana do Professor segue a rotina real (terça = base do Akita, sexta = matemática, domingo de folga), calibrada em ~20 h por semana.
+- Marcos dos trimestres 1 e 2 no roteiro falam em AM Gestão no lugar de AM Rendara.
+
+### Adicionado
+- Trilha `base` no Professor: 24 módulos com os episódios de fundamentos do Akita (computador, Linux, back-end, redes, concorrência, memória, criptografia, hardware, devops, estruturas de dados, bancos, IA), 2 por módulo, um módulo por semana.
+
+### Corrigido
+- Teste da triagem ainda esperava ".NET 10" no pacote do arquiteto.
+
 ## [2.29.0] - 2026-11-12
 
 ### Adicionado

@@ -59,3 +59,5 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-12: pendente do Alan: merge do PR #4, apagar os 6 arquivos soltos do modelo em ~/dev/dev-setup, diagnóstico como Administrador, backup inicial no disco externo; relatório em ~/dev/RELATORIO-INSTALACAO.md.
 - 2026-11-12: v2.28.2: just ligar rodou no notebook (fila no ar, LiteLLM no ar, linger, tarefa AMtech WSL e vmIdleTimeout=-1); o Ollama falhou por falta do zstd, corrigido no ligar-tudo.sh e no bootstrap.sh.
 - 2026-11-12: v2.29: AMtech OS 0.1 (os/, ADR 0016 em proposta): Ubuntu + os/instalar.sh, perfis e comando amtech. Próximo: testar numa VM do VirtualBox (os/README.md) e usar uma semana antes de decidir o ADR.
+- 2026-11-17: v2.30: stack nova (ADR 0017) trazida do espelho do vault para cá; plano de estudo único no vault (ADR 0018); trilha base do Akita (24 módulos) no Professor; semana do Professor = rotina real, domingo de folga.
+- 2026-11-17: regra reforçada: a pasta 11 do vault não se edita à mão; mudança no setup é feita aqui e espelhada (just docs / just vault-espelho).

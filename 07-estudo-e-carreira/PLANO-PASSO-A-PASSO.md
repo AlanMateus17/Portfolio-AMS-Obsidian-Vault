@@ -2,7 +2,8 @@
 tags: [estudo, rotina, passo-a-passo, portfolio-ams]
 tipo: plano
 status: ativo
-atualizado: 2026-11-13
+atualizado: 2026-11-17
+fonte-unica: true
 ---
 
 # 🧭 PLANO PASSO A PASSO + ROTINA — 12 meses
@@ -10,6 +11,8 @@ atualizado: 2026-11-13
 > **O que é:** o caminho exato, semana a semana e mês a mês, para você sair do lugar e virar o profissional mais completo possível em até 12 meses — alternando **todas** as trilhas (TS, Go, Python/dados/IA, SQL, matemática, finanças, inglês, física, robótica, sistema operacional, baixo nível) sem largar nenhuma.
 >
 > **Como ler:** o [[PLANO-UNICO-AMtech]] diz *o quê e por quê*; a [[stack-tecnologica]] diz *com o quê*; **este diz quando e como, dia a dia.** O detalhe profundo de cada área está nas trilhas (links no fim).
+>
+> **Fonte única do estudo (desde 17/11/2026):** este arquivo manda. O `docs/plano-eixo.md` e o currículo do Professor (`data/professor/curriculo.json`) no dev-setup seguem este plano ([ADR 0018](../11-setup-dev-setup/docs/adr/0018-plano-de-estudo-unico-no-vault.md)). Se os dois discordarem, vale este, e o outro é corrigido.
 >
 > **A regra que rege tudo:** você nunca "só estuda". **Cada bloco entrega um ativo** (uma ferramenta, uma parte do AM Gestão, um site, um protótipo) que vira renda e portfólio. No máximo **1 ativo sendo construído + 1 sendo testado** por vez.
 
@@ -24,22 +27,24 @@ A âncora é simples e à prova de TDAH: **toda manhã, 6h–8h, é estudo**, an
 | Dia | Manhã (6h–) | Tarde | Noite |
 |---|---|---|---|
 | **Segunda** | 6–8h âncora técnica (foco do mês) | Escola | **Bloco profundo 20–22h** (AM Gestão — sem restaurante!) |
-| **Terça** | 6–7h leitura/inglês (escola de manhã) | Escola | Restaurante (até 22h) |
+| **Terça** | 6–7h **base do Akita** (1 episódio + nota) | Escola | Restaurante (até 22h) |
 | **Quarta** | 6–8h âncora técnica | Escola | Restaurante |
 | **Quinta** | **6–11h bloco profundo** (AM Gestão + trilha par) — seu maior dia | Livre → cães / Licenciatura | Restaurante |
 | **Sexta** | 6–11h matemática (VHSlins) + Licenciatura + revisão | Escola+restaurante (12:55–23h) | — |
-| **Sábado** | **6–13h: Go (ferramentas) + robótica/SO + física (leve)** | Restaurante (15–23h) | — |
-| **Domingo** | **6–13h: Python/dados/IA + revisão espaçada + portfólio/recrutador** | Restaurante (15–23h) | — |
+| **Sábado** | **6–13h: ofício leve (Go a partir do Mês 2) + robótica/SO + física** | Restaurante (15–23h) | — |
+| **Domingo** | **Folga.** Só a revisão do Anki (30 min) e a Licenciatura quando houver prazo | Restaurante (15–23h) | — |
 
 **Blocos fixos da semana:**
-- **Âncora diária 6h–8h** (seg, qua) e 6h–7h (ter) → o foco técnico do mês.
+- **Âncora 6h–8h** (seg, qua) → o foco técnico do mês. **Terça 6h–7h** → 1 episódio da base do Akita (Parte 4.2).
 - **Inglês todo dia, 20–30 min** → nunca pausa. Documentação em inglês, 1 vídeo, Anki. Encaixe no café/deslocamento.
 - **Cães** → logo após a âncora ou no meio-dia; parte fixa da rotina, não "tempo perdido".
 - **Dois blocos profundos de semana:** segunda à noite + quinta de manhã (os dois maiores vazios que você tem).
-- **Fim de semana de manhã** → os blocos pesados (Go, Python/dados, robótica/SO, revisão).
-- **Licenciatura** → quinta à tarde + domingo; ajuste aos prazos reais da faculdade.
+- **Sábado de manhã** → o bloco pesado do fim de semana (Go, robótica/SO, física).
+- **Domingo é folga** → um dia inteiro sem estudo por semana é parte do plano, não atraso. Com escola, restaurante e Licenciatura, sem folga o plano quebra em poucas semanas.
+- **Entrevista (recrutador)** → 45 min uma vez por semana, dentro do bloco de quinta.
+- **Licenciatura** → quinta à tarde; domingo só quando houver prazo.
 
-**Conta de horas:** ~2h/dia na âncora + 2 blocos profundos (seg noite, qui manhã) + 3 manhãs de fim de semana ≈ **18–22h/semana reais**, com margem. Em semana corrida, só a âncora já mantém o ritmo.
+**Conta de horas:** âncoras (seg, qua) + terça curta + 2 blocos profundos (seg noite, qui manhã) + sexta + sábado ≈ **18–20h/semana reais**. **O plano é calibrado nessas ~20h; as 4h/dia do plano antigo do setup viram bônus, nunca dívida.** Em semana corrida, só a âncora já mantém o ritmo.
 
 ---
 
@@ -94,14 +99,15 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 
 ### 🟢 TRIMESTRE 1 — Fundamentos viram o primeiro dinheiro (nov/26–jan/27)
 
+> **Calendário real:** o estudo começou em **17/11/2026**. Cada mês abaixo anda ~2 semanas para frente (Mês 1 = 17/11 a 13/12, Mês 2 = 14/12 a ~10/01, e assim por diante). Os nomes dos meses ficam como referência.
+
 #### Mês 1 (nov) — Setup + lógica + TypeScript do zero
-- **Foco:** deixar a máquina pronta e começar a programar de verdade em TS.
-- **Passo a passo:**
-  1. **SO (leve):** montar o ambiente — WSL2/Arch, Git, Node, Python, Go, Docker, VS Code. Isso já é a trilha de SO começando.
-  2. **Lógica (Passo 1):** refazer os 3 exercícios de lógica **em TypeScript**, sem IA.
-  3. **TS:** tipos, arrays, `map/filter/reduce`, funções, `async/await`.
-  4. **SQL básico:** `SELECT`, `WHERE`, `JOIN` num PostgreSQL local.
-  5. **Matemática (VHSlins):** bloco 1, integrada.
+- **Foco:** deixar a máquina pronta, **aprender a operar o setup** e começar a programar de verdade em TS.
+- **Passo a passo (semana a semana; o dia a dia está no [Cartão](../CARTAO-voce-esta-aqui.md)):**
+  - **Semana 1 (17–23/11):** TS no Playground (tipos, condição, laço, função, array) + os 3 exercícios de lógica **em TypeScript, sem IA** + Matemática Cap. 1.
+  - **Semana 2 (24–30/11), setup instalado:** módulos do Professor `s-terminal` e `s-git` intercalados com TS (`map/filter/reduce`, `async/await`) + SQLBolt até `JOIN` + Matemática Cap. 2 + Akita `b-aprender`.
+  - **Semana 3 (01–07/12):** `s-just`, `s-segredos` e **`s-ia-segura`** (Claude Code com segurança e **revisão do que a IA fez**) + PostgreSQL local + Akita `b-computador`.
+  - **Semana 4 (08–13/12):** `s-backup`, `s-docker`, `s-nucleo` + começo de 1 site simples + Akita `b-linux-wsl` + refazer os 3 exercícios de cabeça (prova do mês).
 - **Recursos:** [TS Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) · [SQLBolt](https://sqlbolt.com/) · [roadmap.sh/typescript](https://roadmap.sh/typescript).
 - **Entregável:** ambiente reproduzível (`setup-dev.sh`) + repositório de exercícios de lógica em TS + começo de 1 site simples. **Renda:** primeiras aulas particulares.
 
@@ -113,6 +119,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
   3. **Go-1 e Go-2** ([trilha-go-ferramentas](trilha-go-ferramentas.md)): primeiro binário + organizador de arquivos.
   4. **Git fluente** + GitHub Actions básico (rodar teste a cada push).
   5. **Finanças F0 (leve):** contabilidade básica — débito/crédito.
+  6. **Trilha R-1 (revisar código de IA):** o site do cliente sai pela esteira do setup (issue → agente → PR); você **revisa cada PR com o checklist** (Parte 4.1) antes do merge.
 - **Recursos:** [Next.js Learn](https://nextjs.org/learn) · [Supabase Docs](https://supabase.com/docs) · [Tour of Go](https://go.dev/tour/).
 - **Entregável:** **1 site de cliente no ar (pago)** + 1 CLI em Go que você usa no dia a dia.
 
@@ -122,8 +129,9 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
   1. **API** em Next/NestJS: rotas, validação com Zod, status corretos.
   2. **ORM (Prisma/Drizzle):** migrations, relacionamentos, evitar N+1.
   3. **Segurança (Passo 4):** OWASP Top 10, autenticação, Row-Level Security do Supabase.
-  4. **Testes (Vitest):** primeiro teste de unidade e de API.
-  5. **Robótica (paralelo, sábado):** primeiro protótipo — LED/sensor no Arduino/ESP32.
+  4. **Testes (Vitest):** primeiro teste de unidade e de API. **Teste antes de pedir código ao agente** (Trilha R-2): você escreve o teste, o agente implementa, o teste decide.
+  5. **IA em TypeScript (IA-T1):** chamar um modelo pela API (Vercel AI SDK), saída estruturada validada com Zod, custo por chamada medido. Exemplo: classificar despesas da planilha do financeiro. **Não precisa de Python.**
+  6. **Robótica (paralelo, sábado):** primeiro protótipo — LED/sensor no Arduino/ESP32.
 - **Recursos:** [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [Prisma Docs](https://www.prisma.io/docs) · [Vitest](https://vitest.dev/guide/).
 - **Entregável:** **planilha do financeiro à venda** + esqueleto do AM Gestão com teste no CI + protótipo 1. **Renda:** aulas + site + planilha.
 
@@ -136,6 +144,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
   2. **PDV offline:** SQLite local + sincronização quando a conexão volta.
   3. **Go-5 e Go-6:** servidor HTTP local + **agente fiscal** (impressora ESC/POS).
   4. **Matemática financeira:** juros, porcentagem aplicada ao PDV.
+  5. **Trilha R-3:** um `CLAUDE.md` por projeto com as regras do AM Gestão (dinheiro, migrations, o que o agente nunca faz), incluindo as regras do Akita aprovadas (AK-0008, AK-0016, AK-0018).
 - **Recursos:** [trilha-go-ferramentas](trilha-go-ferramentas.md) Go-5/Go-6 · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) (camada banco/testes).
 - **Entregável:** módulo **Caixa** funcionando com impressão real.
 
@@ -145,6 +154,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
   2. **Financeiro:** ledger de partidas dobradas (todo movimento = débito+crédito).
   3. **Deploy + Docker + CI/CD:** subir o MVP num servidor.
   4. **SO (paralelo):** Arch como máquina do dia a dia (daily driver).
+  5. **IA-T2 (RAG em TypeScript):** pgvector no próprio Postgres + embeddings; busca "como faço X?" na ajuda do AM Gestão. Primeira feature de IA que um cliente vê.
 - **Recursos:** [PostGIS](https://postgis.net/documentation/) · [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md).
 - **Entregável:** **MVP (Caixa+Pedidos+Financeiro) rodando em 1 restaurante** que já te procura.
 
@@ -152,6 +162,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Passo a passo:**
   1. **Observabilidade (Passo 10):** logs estruturados, métricas, o que quebrou e por quê.
   2. **Testes de propriedade** para a regra de dinheiro (dispara 100 pagamentos, cobra 1).
+  2b. **Trilha R-4 (avaliar IA):** um conjunto de 20 perguntas reais com resposta esperada para a busca do Mês 5; roda no CI e mostra se a IA piorou depois de cada mudança.
   3. **Go (ferramenta 3):** CLI de deploy/monitoramento.
   4. **Inglês Fase B:** documentação técnica só em inglês a partir daqui.
 - **Entregável:** MVP estável + **10 planilhas vendidas** + começo da base de clientes.
@@ -172,12 +183,13 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
   1. **scikit-learn:** primeiro modelo simples (previsão de caixa / classificação de itens).
   2. **Pix / Pix Automático** no produto.
   3. **Finanças:** tributos de empresa, conciliação.
+  4. **Trilha R-5 (custo de IA):** o roteador do setup decide código, IA local ou IA online por tarefa; medir tokens e custo de cada feature de IA do AM Gestão.
 - **Recursos:** [scikit-learn](https://scikit-learn.org/stable/getting_started.html) · [Pix — Banco Central](https://www.bcb.gov.br/estabilidadefinanceira/pix).
 - **Entregável:** **5 clientes pagantes** + 1ª feature de dados no produto.
 
 #### Mês 9 (jul) — **IA de verdade** (RAG/local) + SO internals
 - **Passo a passo:**
-  1. **pgvector + Ollama:** busca semântica / assistente dentro do AM Gestão.
+  1. **Ollama + Python:** levar o RAG do Mês 5 para IA local (sem custo por chamada) e virar assistente dentro do AM Gestão.
   2. **PyTorch (noção):** entender o que há por baixo.
   3. **SO internals + C/C++ (leve):** processos, memória, arquivos.
 - **Recursos:** [pgvector](https://github.com/pgvector/pgvector) · [Ollama](https://ollama.com/) · [trilha-dados-ia](trilha-dados-ia.md) IA5–IA7.
@@ -198,6 +210,7 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
   1. **Cache, filas/outbox, consistência eventual** (ler *Designing Data-Intensive Applications*).
   2. **Algoritmos para entrevista** + **system design** (explicar um sistema grande em 45 min).
   3. **Portfólio público em inglês:** README, ADRs e estudos de caso dos seus sistemas.
+  4. **Trilha R-6 (orquestrar agentes):** vários agentes em paralelo no setup (worktrees, revisão automática de PR que trata a descrição como não verificada, regra AK-0017), com você como revisor final.
 - **Entregável:** **portfólio em inglês + registros de entrevista** (recrutador) — pronto para aplicar a vagas, inclusive fora.
 
 #### Mês 12 (out) — AMtech OS + loja online + consolidação
@@ -217,16 +230,46 @@ Correm por baixo do mês inteiro, em blocos pequenos e fixos:
 |---|---|---|
 | **Inglês** | Todo dia, 20–30 min | Doc em inglês, 1 vídeo, Anki. Meta C1. [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
 | **Matemática (VHSlins)** | Sexta de manhã | Integrada à programação e à Licenciatura. [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) |
-| **Licenciatura em Matemática** | Quinta tarde + domingo | Prazos reais da faculdade mandam |
+| **Licenciatura em Matemática** | Quinta tarde (domingo só com prazo) | Prazos reais da faculdade mandam |
 | **Física (leve)** | Sábado | Ligada a hardware/robótica |
-| **Revisão espaçada (Anki)** | Domingo + 10 min/dia | O que trava sem isso, você esquece |
+| **Base do Akita** | Terça, 6h–7h | 1 episódio por semana + nota de 5 frases. Ordem na Parte 4.2; o Professor entrega (trilha `base`) |
+| **Revisar código de IA (Trilha R)** | Dentro do ofício, desde o Mês 2 | Checklist e etapas na Parte 4.1 |
+| **Revisão espaçada (Anki)** | 10 min/dia + 30 min no domingo | O que trava sem isso, você esquece |
+
+### 4.1 Trilha R — trabalhar com agentes de IA (o que o mercado e o seu setup cobram)
+
+O seu setup é feito para a IA escrever e você conferir. Isso só funciona se **você souber revisar melhor do que a IA escreve**. Regra fixa: **aprendizado novo é sem IA; produção é com IA e com revisão sua.**
+
+| Etapa | Mês | O que treinar | Prova de que aprendeu |
+|---|---|---|---|
+| R-1 | 2 | Revisar PR do agente com checklist | Nenhum PR do site entra sem o checklist preenchido |
+| R-2 | 3 | Teste antes do código: você escreve o teste, o agente implementa | 3 features do AM Gestão feitas assim |
+| R-3 | 4 | Especificação e regras: `CLAUDE.md` por projeto, pedido sem ambiguidade | O agente erra menos na 2ª semana do que na 1ª (anote) |
+| R-4 | 6 | Avaliar IA: conjunto de perguntas com resposta esperada no CI | A busca do AM Gestão tem nota e a nota não cai |
+| R-5 | 8 | Custo: tokens, roteador local/online, cache | Custo por feature de IA medido e no painel |
+| R-6 | 11 | Orquestrar vários agentes e revisar em lote | 1 semana com 3 agentes em paralelo sem quebrar a main |
+
+**Checklist de revisão (R-1 em diante):** (1) eu sei explicar cada linha? (2) tem teste que falha sem a mudança? (3) dinheiro, data e fuso estão certos? (4) entrou segredo, dependência nova ou permissão a mais? (5) o que acontece se der erro no meio? (6) dá para reverter com um comando?
+
+### 4.2 Base do Akita — os fundamentos de computação, em ordem
+
+O que o Akita insiste que todo programador precisa entender por baixo da linguagem: como o computador funciona, sistema operacional, redes, concorrência, memória, criptografia, estruturas de dados e bancos. Cada módulo tem 2 episódios; o Professor entrega um por vez, na terça (`just professor hoje`). Os posts práticos (Git, Docker, backup, segredos, ai-jail) já vêm junto com os módulos de setup.
+
+| Trimestre | Módulos (trilha `base` do Professor) |
+|---|---|
+| T1 | `b-aprender` (#76, #65) · `b-computador` (#80, #81) · `b-linux-wsl` (#60, #54) · `b-iniciante` (#38, #39) · `b-backend` (#40, #41) · `b-redes-1` (#121, #122) · `b-redes-2` (#123, #124) |
+| T2 | `b-concorrencia` (#43, #44) · `b-memoria` (#45, #46) · `b-cripto` (#67, #68) · `b-hardware` (#97, #98) · `b-armazenamento` (#101, #117) · `b-devops` (#47, #48) · `b-containers` (#139, #113) |
+| T3 | `b-redes-3` (#125, #126) · `b-testes-perf` (#130, #133) · `b-escala` (#110, #118) · `b-estruturas` (#95, #140) · `b-bancos` (#143, #49) · `b-ia` (#142, #148) |
+| T4 | `b-linux-boot` (#127, #116) · `b-cripto-pratica` (#147, #145) · `b-linguagens` (#15, #16) · `b-oficio` (#23, #104) |
+
+Lista completa e links: `docs/akita/trilha-estudo.md` no dev-setup. As regras que o setup extrai dos posts novos (`just akita pendentes`) são outra coisa: decidem como o setup trabalha, não o que você estuda.
 
 ---
 
 ## PARTE 5 — COMO SABER QUE ESTÁ DANDO CERTO (checkpoints)
 
-- **Fim do T1:** 1 site pago, 1 CLI em Go, planilha à venda, ambiente redondo.
-- **Fim do T2:** MVP do AM Gestão num restaurante real + 10 planilhas vendidas.
+- **Fim do T1:** 1 site pago, 1 CLI em Go, planilha à venda, ambiente redondo, 1ª chamada de IA em TS, 7 módulos da base do Akita, R-1 e R-2 em uso.
+- **Fim do T2:** MVP do AM Gestão num restaurante real + 10 planilhas vendidas + busca com IA (RAG em TS) avaliada no CI.
 - **Fim do T3:** 5 clientes pagantes + IA no produto + Python/dados sólidos.
 - **Fim do T4:** portfólio sênior em inglês + AMtech OS + renda rumo a R$ 7k/mês.
 - **Semanal:** `just progresso` no dev-setup + 1 registro de recrutador.

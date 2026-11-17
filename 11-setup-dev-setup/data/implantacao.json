@@ -2783,7 +2783,7 @@
     },
     {
      "id": "eixo-t1",
-     "titulo": "Trimestre 1: 1 cliente de site pago, Caixa da Casa usado 3 meses, planilha do AM Rendara à venda, 3 posts",
+     "titulo": "Trimestre 1: 1 cliente de site pago, 1 CLI em Go, planilha do financeiro à venda, esqueleto do AM Gestão com teste no CI, 1ª chamada de IA em TypeScript",
      "quem": "voce",
      "pronto": "Os quatro itens cumpridos até 31/jan/2027",
      "tempo_min": 60,
@@ -2801,11 +2801,11 @@
     },
     {
      "id": "eixo-t2",
-     "titulo": "Trimestre 2: 10 planilhas vendidas e o AM Rendara (MVP) com 1 usuário pagante em produção, com backup restaurado e rollback testado",
+     "titulo": "Trimestre 2: 10 planilhas vendidas e o AM Gestão (MVP) num restaurante real, com busca com IA avaliada no CI, backup restaurado e rollback testado",
      "quem": "voce",
      "pronto": "Itens cumpridos até 30/abr/2027",
      "tempo_min": 60,
-     "comando": "cd ~/dev/dev-setup && just triagem \"AM Rendara MVP\"",
+     "comando": "cd ~/dev/dev-setup && just triagem \"AM Gestão MVP\"",
      "nota": "Se a planilha não vender 10, o sistema não nasce: muda a oferta, não o código.",
      "decisao": true,
      "empresas": [
