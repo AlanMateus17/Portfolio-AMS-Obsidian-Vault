@@ -144,7 +144,7 @@ flowchart LR
 |---|---|---|---|
 | [E-mail profissional (enviar e receber)](#mail) | Remoto · precisa de conta | contato@seu-dominio. O roteamento da Cloudflare só recebe; para enviar, é preciso um provedor de e-mail. | passo 36.4 · Semanas 6 e 7 · dez/2026 |
 | [Domínio (Registro.br)](#dom) | Remoto · precisa de conta | Seu domínio .com.br, registrado no seu CPF. Os nameservers apontam para a Cloudflare. | passo 36.3 · Semanas 6 e 7 · dez/2026 |
-| [Site pessoal + blog (Jekyll)](#site) | Remoto | alanmateus17.github.io: portfólio, blog e newsletter. Migra do Jekyll para o Astro (ADR 0008). | passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.7 · Semanas 6 e 7 · dez/2026; passo 46.1 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Site pessoal + blog (Jekyll)](#site) | Remoto | alanmateus17.github.io: portfólio, blog e newsletter. Migra do Jekyll para o Astro (ADR 0008). | passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.8 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.7 · Semanas 6 e 7 · dez/2026; passo 46.1 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Instituto AMS](#inst) | Remoto | Site dos cursos: páginas de venda que levam ao checkout. | passo 36.8 · Semanas 6 e 7 · dez/2026; passo 40.1 · Semanas 12 a 15 · jan a fev/2027; passo 40.7 · Semanas 12 a 15 · jan a fev/2027 |
 | [Site Grupo AMtech](#amsite) | Remoto | Site institucional da empresa: serviços, sistemas AM e contato. | passo 23.7 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 36.9 · Semanas 6 e 7 · dez/2026 |
 | [Catálogo do HTML](#catal) | Remoto | Site didático para os alunos publicarem os próprios sites. | passo 36.9 · Semanas 6 e 7 · dez/2026; passo 46.2 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
@@ -199,7 +199,7 @@ Seu domínio .com.br, registrado no seu CPF. Os nameservers apontam para a Cloud
 
 alanmateus17.github.io: portfólio, blog e newsletter. Migra do Jekyll para o Astro (ADR 0008).
 
-**Quando entra:** passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.7 · Semanas 6 e 7 · dez/2026; passo 46.1 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.8 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.7 · Semanas 6 e 7 · dez/2026; passo 46.1 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

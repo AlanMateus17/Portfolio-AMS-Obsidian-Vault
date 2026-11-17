@@ -228,7 +228,7 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 | **🏗️ Engenharia de Software** — não é trilha nova: é o mapa da Trilha Principal por área + engenharia de sistemas financeiros. O detalhe técnico completo de cada camada está no [currículo sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) | Já (é a própria Trilha Principal) | — | [trilha-engenharia-software](07-estudo-e-carreira/trilha-engenharia-software.md) |
 | **🔧 Robótica e IoT** — R1 ativo pelo projeto agro da escola | R1 já · resto com gatilho | — | [trilha-robotica-iot](07-estudo-e-carreira/trilha-robotica-iot.md) |
 | **Trilha 42** — Circles 00-06, sua stack primeiro depois nativo C/C++ | Depois do Passo 8 | ~7-12 meses ⚠️ | [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) (é a versão corrigida — use esta, não a contagem citada em outros arquivos) |
-| **Pentest/OSCP** | Depois do Passo 8 (mesmo gatilho da Trilha 42) | 1-2 anos | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md), [recursos-links-seguranca-ofensiva](07-estudo-e-carreira/recursos-links-seguranca-ofensiva.md) |
+| **Pentest/OSCP** | Depois do Passo 8 (mesmo gatilho da Trilha 42) | 1-2 anos | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md), [recursos-links-seguranca-ofensiva](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) |
 | **Espanhol** | Passo 12 (Inglês já em B1-B2) | Mais rápido que o Inglês | [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) |
 | **Python + OR-Tools** | Passo 13, no bloco de roteirização | 5-7 semanas | detalhe dentro do próprio Passo 13 acima |
 | **Perfil sênior** (System Design, IaC) | Depois do Passo 12 | Pontual, não bloco longo | [perfil-senior-completo-auditoria](07-estudo-e-carreira/perfil-senior-completo-auditoria.md) |
@@ -241,11 +241,11 @@ Reserve um bloco fixo por semana pra elas (ex: 2 das suas 9h) sem deixar a Trilh
 
 | Hábito | Frequência | Detalhe |
 |---|---|---|
-| **roadmap.sh** — auditoria cruzada | Início de cada Passo grande (3, 8, 9, 10) | [integracao-42-roadmap-akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) |
-| **Fábio Akita** (blog/YouTube/podcast) | 1 conteúdo/semana | [integracao-42-roadmap-akita](07-estudo-e-carreira/integracao-42-roadmap-akita.md) |
+| **roadmap.sh** — auditoria cruzada | Início de cada Passo grande (3, 8, 9, 10) | [integracao-42-roadmap-akita](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) |
+| **Fábio Akita** (blog/YouTube/podcast) | 1 conteúdo/semana | [integracao-42-roadmap-akita](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) |
 | **Produção didática simultânea** (ficha dupla) | A cada tópico novo de matemática+código | [metodo-de-estudo](07-estudo-e-carreira/metodo-de-estudo.md) |
 | **`aura-status`** — rodar o painel central | Toda segunda-feira (ou depois de qualquer deploy) | [aura-status-documento-projeto-final](10-ferramentas-pessoais/aura-status-documento-projeto-final.md), rotina completa em [automacao-ordem-de-execucao](06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) |
-| **Anki** (repetição espaçada) | Diário, 10-20 min | [metodo-correto-estudo-idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) |
+| **Anki** (repetição espaçada) | Diário, 10-20 min | [metodo-correto-estudo-idiomas](07-estudo-e-carreira/ingles-espanhol-integrado.md) |
 | **Finanças pessoais e investimentos (F0)** — Finclass + revisão da carteira pelos métodos ARCA/Barsi/Bazin/Graham/Buffett | 1 bloco/semana + revisão mensal no Caixa da Casa | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) §F0 |
 | **Administração e negócios (F7)** — precificação, vendas, funil | Doses pequenas, puxadas pela renda extra | [trilha-financas-economia](07-estudo-e-carreira/trilha-financas-economia.md) §F7 |
 

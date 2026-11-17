@@ -105,7 +105,7 @@ Isso confirma algo importante: você não está tão atrás quanto a sensação 
 
 - [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
 - [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
-- [12 Projetos da Formação — especificações](../12-artefatos/documentos/12-projetos-da-formacao-especificacoes.md)
+- [12 Projetos da Formação — especificações](../99-arquivo/planos-antigos/12-projetos-da-formacao-especificacoes.md)
 - [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
 
 🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)

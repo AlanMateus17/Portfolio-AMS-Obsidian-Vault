@@ -125,7 +125,7 @@ Site pessoal/portfólio (personal-site) · Blog (blog) · Instituto AMS (institu
 | Banco de dados (SQL/Postgres/Redis) | Sumário Passos 2, 5, 9 | A |
 | DevOps/Docker/CI-CD/deploy/cloud | Sumário Passos 2, 6, 10, 12 | A |
 | Matemática | [matematica-e-desenvolvimento-integrado](07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) + licenciatura | B |
-| Inglês · Espanhol | [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [metodo-correto-estudo-idiomas](07-estudo-e-carreira/metodo-correto-estudo-idiomas.md) | B/C |
+| Inglês · Espanhol | [ingles-espanhol-integrado](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [metodo-correto-estudo-idiomas](07-estudo-e-carreira/ingles-espanhol-integrado.md) | B/C |
 | Linux/Arch · Redes | [trilha-linux-arch-profissional](07-estudo-e-carreira/trilha-linux-arch-profissional.md) · [trilha-de-redes](07-estudo-e-carreira/trilha-de-redes.md) | B/C |
 | École 42 · C/C++ | [trilha-42-circles-oficial-verificado](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) | C |
 | Segurança ofensiva (eJPT→OSCP→...) | [roadmap-seguranca-ofensiva-completo](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md) | C→D |

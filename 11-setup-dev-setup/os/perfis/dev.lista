@@ -1,0 +1,14 @@
+# Perfil Dev: programação, containers nativos e VMs (KVM). O resto da stack vem do dev-setup (bootstrap.sh).
+build-essential
+python3-venv
+pipx
+shellcheck
+sqlite3
+postgresql-client
+neovim
+docker.io
+docker-compose-v2
+podman
+qemu-system-x86
+libvirt-daemon-system
+virt-manager

@@ -1,7 +1,9 @@
 # 0003 · Azure como primeira nuvem, AWS como segunda
 
-- **Status:** aceita
+- **Status:** aceita, atualizada pela [0017](0017-nucleo-ts-python-dotnet-reserva.md)
 - **Data:** 2026-10-20
+
+> **Atualização (13/11, ADR 0017):** com o núcleo em TS/Python (não mais .NET), o deploy primário passou a ser **Vercel + VPS**. Azure/AWS viram estudo e portfólio, não a primeira nuvem padrão.
 
 ## Contexto
 

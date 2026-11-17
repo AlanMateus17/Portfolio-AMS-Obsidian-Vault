@@ -19,6 +19,20 @@ class TestBot(unittest.TestCase):
     def test_ajuda(self):
         self.assertIn("/status", responder("/ajuda"))
 
+    def test_pedir_vazio_nao_enfileira(self):
+        self.assertIn("Escreva o pedido", responder("/pedir"))
+
+    def test_pedir_enfileira(self):
+        with tempfile.TemporaryDirectory() as t:
+            os.environ["FILA_DIR"] = t
+            sys.modules.pop("fila", None)
+            try:
+                self.assertIn("Na fila", responder("/pedir criar uma página"))
+                self.assertEqual(len(list(Path(t).glob("2*.json"))), 1)
+            finally:
+                os.environ.pop("FILA_DIR")
+                sys.modules.pop("fila", None)
+
     def test_env_legivel_por_outros_recusado(self):
         with tempfile.TemporaryDirectory() as t:
             p = Path(t) / "telegram.env"

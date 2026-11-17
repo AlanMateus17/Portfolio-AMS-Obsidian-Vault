@@ -70,7 +70,7 @@ flowchart LR
     n_selo["Selo Editora AMS Silva"]
   end
   subgraph L_app["Aplicação: sistemas AM (Aura)"]
-    n_api["API ASP.NET Core"]
+    n_api["API TypeScript (Next/NestJS)"]
     n_nkaix["AM Kaixara (PDV e cardápio)"]
     n_nrot["AM Rotara (entregas)"]
   end
@@ -141,15 +141,15 @@ flowchart LR
 |---|---|---|---|
 | [Registro de marca (INPI)](#inpi) | Remoto · precisa de conta | Proteger AMtech, Instituto AMS e os nomes AM antes de investir na marca. Pode ser pedido no seu CPF; confira no INPI o desconto disponível para pessoa física. | passo 23.2 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 37.17 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.1 · Semanas 12 a 15 · jan a fev/2027 |
 | [Termos, privacidade (LGPD) e contratos](#legal) | Local | Termos de uso, política de privacidade nos sites e contrato padrão de serviço. Obrigatório antes de coletar e-mail ou vender. | passo 23.4 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 37.4 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Certificado digital (e-CNPJ)](#ecnpj) | Remoto · precisa de conta · futuro | Só quando houver CNPJ: emissão de nota por API e assinatura de documentos da empresa. | passo 51.2 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
-| [API de NFS-e (ex.: Focus NFe)](#nfapi) | Remoto · precisa de conta · futuro | Só quando houver CNPJ. Implementa o seu IEmissorFiscal: os sistemas AM emitem nota sozinhos. | passo 51.3 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
-| [CNPJ (futuro)](#cnpj) | Remoto · precisa de conta · futuro | Ainda não. Quando a renda crescer, MEI ou SLU. Até lá, tudo no seu CPF. | passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 51.1 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
+| [Certificado digital (e-CNPJ)](#ecnpj) | Remoto · precisa de conta · futuro | Só quando houver CNPJ: emissão de nota por API e assinatura de documentos da empresa. | passo 52.2 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
+| [API de NFS-e (ex.: Focus NFe)](#nfapi) | Remoto · precisa de conta · futuro | Só quando houver CNPJ. Implementa o seu IEmissorFiscal: os sistemas AM emitem nota sozinhos. | passo 52.3 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
+| [CNPJ (futuro)](#cnpj) | Remoto · precisa de conta · futuro | Ainda não. Quando a renda crescer, MEI ou SLU. Até lá, tudo no seu CPF. | passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 52.1 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
 | [gov.br (prata ou ouro)](#govbr) | Remoto · precisa de conta | Acesso ao carnê-leão online e à declaração do Imposto de Renda. | passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 37.1 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Carnê-leão (Receita Federal)](#nfse) | Remoto · precisa de conta | Todo mês você lança o que recebeu de compradores (Hotmart, Kiwify, aulas, sites) e do exterior (Udemy) e paga o DARF até o último dia útil do mês seguinte. | passo 37.18 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.10 · Semanas 12 a 15 · jan a fev/2027 |
 | [Declaração anual do IR](#irpf) | Remoto · precisa de conta | Os valores lançados no carnê-leão entram sozinhos na declaração. | passo 37.19 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Conta bancária separada (CPF)](#banco) | Remoto · precisa de conta | Uma conta só para receber vendas e serviços, separada do salário. Facilita o carnê-leão e a futura passagem para CNPJ. | passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 37.2 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Contador](#conta) | Físico | Uma consulta para montar o carnê-leão do jeito certo e dizer a partir de que renda vale abrir CNPJ. | passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.3 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Caixa da Casa / AM Rendara](#caixa) | Local | Controle financeiro pessoal e da empresa (seu sistema). | passo 16.1 · Dez/2026; passo 16.2 · Dez/2026; passo 16.3 · Dez/2026; passo 16.4 · Dez/2026; passo 16.5 · Dez/2026; passo 16.6 · Dez/2026; passo 16.7 · Dez/2026; passo 16.8 · Dez/2026; passo 20.10 · Semana 5 · nov/2026; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Contador](#conta) | Físico | Uma consulta para montar o carnê-leão do jeito certo e dizer a partir de que renda vale abrir CNPJ. | passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.7 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.3 · Semanas 8 a 10 · dez/2026 a jan/2027 |
+| [Caixa da Casa / AM Rendara](#caixa) | Local | Controle financeiro pessoal e da empresa (seu sistema). | passo 16.1 · Dez/2026; passo 16.2 · Dez/2026; passo 16.3 · Dez/2026; passo 16.4 · Dez/2026; passo 16.5 · Dez/2026; passo 16.6 · Dez/2026; passo 16.7 · Dez/2026; passo 16.8 · Dez/2026; passo 20.10 · Semana 5 · nov/2026; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Financeiro local](#financas) | Local | Importa extratos, categoriza, resume o mês e aplica a sua cascata. Dados em ~/financas, fora do GitHub. | passo 15.1 · Dez/2026; passo 15.2 · Dez/2026; passo 15.3 · Dez/2026; passo 15.4 · Dez/2026 |
 | [Documenso (assinatura)](#documenso) | Local | Contratos assinados online com validade, código aberto, no lugar de serviços pagos. | passo 23.4 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [Invoice Ninja (orçamentos)](#invoiceninja) | Local | Orçamentos, faturas e cobrança recorrente de serviços. Código aberto. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
@@ -159,7 +159,7 @@ flowchart LR
 | [Ghostfolio (painel do patrimônio)](#ghostfolio) | Remoto · precisa de conta | Painel do patrimônio no celular, auto-hospedado. O cálculo fica no Portfolio Performance. | passo 16.11 · Dez/2026 |
 | [Actual Budget (envelopes)](#actual) | Local | Orçamento pessoal por envelopes, base zero, local-first. O Caixa da Casa segue para o rateio da família. | passo 15.7 · Dez/2026 |
 | [Firefly III (reserva)](#firefly) | Remoto · precisa de conta | Fluxo de caixa com importação de extrato: reserva do financeiro.py, para comparar. | passo 15.8 · Dez/2026 |
-| [Akaunting (contabilidade CNPJ)](#akaunting) | Remoto · precisa de conta | Contabilidade e faturas do CNPJ quando abrir; complementa o contador, não o substitui. | passo 51.5 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
+| [Akaunting (contabilidade CNPJ)](#akaunting) | Remoto · precisa de conta | Contabilidade e faturas do CNPJ quando abrir; complementa o contador, não o substitui. | passo 52.5 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
 
 <a id="inpi"></a>
 
@@ -201,7 +201,7 @@ Termos de uso, política de privacidade nos sites e contrato padrão de serviço
 
 Só quando houver CNPJ: emissão de nota por API e assinatura de documentos da empresa.
 
-**Quando entra:** passo 51.2 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 52.2 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -215,11 +215,11 @@ Só quando houver CNPJ: emissão de nota por API e assinatura de documentos da e
 
 Só quando houver CNPJ. Implementa o seu IEmissorFiscal: os sistemas AM emitem nota sozinhos.
 
-**Quando entra:** passo 51.3 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 52.3 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | IEmissorFiscal |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | IEmissorFiscal |
 | ← recebe de | [Certificado digital (e-CNPJ)](19-emp.md#ecnpj) | Pessoa física: impostos e finanças | autentica |
 
 <a id="cnpj"></a>
@@ -230,7 +230,7 @@ Só quando houver CNPJ. Implementa o seu IEmissorFiscal: os sistemas AM emitem n
 
 Ainda não. Quando a renda crescer, MEI ou SLU. Até lá, tudo no seu CPF.
 
-**Quando entra:** passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 51.1 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 52.1 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -328,7 +328,7 @@ Uma conta só para receber vendas e serviços, separada do salário. Facilita o 
 
 Uma consulta para montar o carnê-leão do jeito certo e dizer a partir de que renda vale abrir CNPJ.
 
-**Quando entra:** passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.3 · Semanas 8 a 10 · dez/2026 a jan/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.7 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.3 · Semanas 8 a 10 · dez/2026 a jan/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -345,7 +345,7 @@ Uma consulta para montar o carnê-leão do jeito certo e dizer a partir de que r
 
 Controle financeiro pessoal e da empresa (seu sistema).
 
-**Quando entra:** passo 16.1 · Dez/2026; passo 16.2 · Dez/2026; passo 16.3 · Dez/2026; passo 16.4 · Dez/2026; passo 16.5 · Dez/2026; passo 16.6 · Dez/2026; passo 16.7 · Dez/2026; passo 16.8 · Dez/2026; passo 20.10 · Semana 5 · nov/2026; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.4 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 16.1 · Dez/2026; passo 16.2 · Dez/2026; passo 16.3 · Dez/2026; passo 16.4 · Dez/2026; passo 16.5 · Dez/2026; passo 16.6 · Dez/2026; passo 16.7 · Dez/2026; passo 16.8 · Dez/2026; passo 20.10 · Semana 5 · nov/2026; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -496,7 +496,7 @@ Fluxo de caixa com importação de extrato: reserva do financeiro.py, para compa
 
 Contabilidade e faturas do CNPJ quando abrir; complementa o contador, não o substitui.
 
-**Quando entra:** passo 51.5 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 52.5 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

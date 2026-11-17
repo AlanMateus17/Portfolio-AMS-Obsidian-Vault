@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(just *)",
+      "Bash(bash scripts/wsl/*)",
+      "Bash(python3 tools/*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git fetch*)",
+      "Bash(git pull*)",
+      "Bash(git switch*)",
+      "Bash(git checkout -b *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(gh auth status*)",
+      "Bash(gh run *)",
+      "Bash(gh pr view*)",
+      "Bash(gh pr list*)",
+      "Bash(systemctl --user *)",
+      "Bash(journalctl --user *)",
+      "Bash(docker ps*)",
+      "Bash(docker compose ps*)",
+      "Bash(ollama list*)",
+      "Bash(curl -fsS -m *)"
+    ],
+    "deny": [
+      "Read(./infra/**/.env)",
+      "Read(**/*.kdbx)",
+      "Read(~/.config/amtech/**)",
+      "Read(~/.ssh/**)",
+      "Read(~/financas/**)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push origin main*)",
+      "Bash(git reset --hard*)",
+      "Bash(gh pr merge*)",
+      "Bash(gh repo delete*)",
+      "Bash(sudo rm *)",
+      "Bash(mkfs*)",
+      "Bash(dd *)"
+    ]
+  }
+}

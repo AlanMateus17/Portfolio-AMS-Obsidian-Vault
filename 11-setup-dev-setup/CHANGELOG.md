@@ -2,6 +2,119 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.29.0] - 2026-11-12
+
+### Adicionado
+- AMtech OS 0.1 (`os/`, ADR 0016 em proposta): o dev-setup como sistema operacional, uma camada sobre o Ubuntu 24.04 ou mais novo, no mesmo modelo do Omarchy sobre o Arch. `os/instalar.sh` transforma um Ubuntu recém-instalado (nativo ou VM, nunca o WSL) no AMtech OS: pacotes por perfil (`dev`, `escola`, `empresa`, `seguranca`, `criador`, listas em `os/perfis`), driver NVIDIA com `--com-nvidia`, firewall e atualização de segurança diária, usuário no grupo docker, snapper e o primeiro snapshot quando a raiz é Btrfs, `/etc/amtech-release`, papel de parede e padrões do GNOME pelo dconf (só padrões, nada travado), mensagem no terminal e o preparador do dev-setup nos perfis dev e seguranca. Não mexe em disco nem em partição; `--simular` mostra tudo antes.
+- Comando `amtech` (status, saude, atualizar com snapshot antes, snapshots, sobre). `just os-simular` e `just os-instalar`.
+- `os/README.md`: teste no VirtualBox passo a passo, perfis, voltar atrás, cuidados no notebook (2º NVMe, Secure Boot, criptografia antes de snapshot, USBGuard desligado) e as próximas versões.
+- Instalador não quebra quando o Docker oficial (docker-ce/containerd.io) já está instalado: mantém o que existe e deixa o docker.io de fora. Achado na instalação real do perfil dev num Ubuntu 24.04 de teste.
+- Bloco `amtechos` no ecossistema, fase "AMtech OS: o setup como sistema operacional" no roteiro (VM, uma semana de uso, decidir o ADR, 2º NVMe, edição Community) e a oferta `amtechos` no portfólio (fila, derivada do `setuppro`).
+
+### Alterado
+- `scripts/wsl/bootstrap.sh` e `verificar.sh` reconhecem o Linux nativo: sem `/etc/wsl.conf` fora do WSL, e o aviso do Docker aponta para o `os/instalar.sh` em vez do Docker Desktop.
+- ShellCheck do CI e do `just check` cobre `os/instalar.sh` e `os/amtech`.
+
+## [2.28.2] - 2026-11-12
+
+### Corrigido
+- `just ligar` instala o `zstd` antes do Ollama, e o `bootstrap.sh` passa a trazer o `zstd` nos pacotes base. O instalador do Ollama agora exige `zstd` para extrair; sem ele, a etapa 3/7 falhava ("This version requires zstd for extraction") e os dois modelos não baixavam. Achado na instalação real do notebook.
+- `just ligar` espera até 30 s o Ollama responder antes de baixar os modelos. Logo depois de instalar, o `ollama pull` falhava com "could not connect to ollama server" e era preciso rodar o `just ligar` outra vez.
+
+## [2.28.1] - 2026-11-12
+
+### Corrigido
+- `scripts/wsl/padronizar-repo.sh` não aplica mais o modelo de repositório no próprio dev-setup. O `just instalar` (etapa 4, `--todos`) criava `docs/adr/0001-modelo.md`, `.claude/settings.json` e mais 4 arquivos soltos em `~/dev/dev-setup`; o ADR modelo colidia com o ADR 0001 e o `just check` falhava em `test_importar_adrs_e_recusas_reais` (23 != 24). Achado na instalação real do notebook.
+
+## [2.28.0] - 2026-11-11
+
+### Adicionado
+- Celular ligado ao setup (`docs/operacao/celular.md`): `just ligar` (scripts/wsl/ligar-tudo.sh) confere o systemd e o linger, instala o que falta (Claude Code, Ollama com qwen2.5-coder:7b e qwen2.5:7b, aider), sobe o LiteLLM se houver Docker, grava e liga os serviços `amtech-fila`, `amtech-remoto` (Claude Code Remote Control em modo servidor, uma worktree por sessão) e `amtech-bot`, e chama `scripts/windows/manter-ligado.ps1` (tarefa no login, `vmIdleTimeout=-1`, sem dormir só na tomada; `-Desfazer` volta). `just ligado`, `just desligar`, `--simular`.
+- Fila de pedidos (`tools/remoto/fila.py`, `just pedir`, `just fila`, `/pedir` e `/fila` no Telegram): motor de decisão primeiro, worktree separada por pedido, motores em ordem Claude Code → aider + cota grátis (LiteLLM ou Gemini direto) → aider + Ollama local; dado sensível só local; limite do Claude detectado põe o Claude em pausa por 5 h; commit no ramo, PR em rascunho e aviso no Telegram; nunca faz merge. Testes.
+- LiteLLM: modelo `local-codigo` e reserva `gratis → gratis-cf → reserva → local`.
+
+### Alterado
+- Fase `f-remoto` do roteiro vira "Celular ligado ao setup": `re-servico` passa a ser `just ligar`; passos novos `re-remoto`, `re-gemini` e `re-teste`.
+
+## [2.27.0] - 2026-11-11
+
+### Adicionado
+- Motor de decisão 0.1 (`tools/motor`, `data/motor/regras.json`, `just motor`): desce a escada de 5 degraus sem chamar IA (portão humano, pronto no setup, código, automação, linguagem), detecta dado sensível (CPF, CNPJ, e-mail, telefone, cartão, senha, aluno, contracheque) e manda só para IA local ou código, escolhe o modelo no degrau 4 (local, Claude Code com Fable só para planejar, Sonnet) e mostra o formulário pré-preenchido pelo tipo de tarefa. Catálogo = rotas de `data/recursos.json` + blocos do ecossistema. Registro no Núcleo (`motor.decisao`, `motor.custo`, `motor.resultado`) e `just motor-relatorio` com gasto por ferramenta e candidatas à regra de três. Testes no CI.
+
+## [2.26.0] - 2026-11-11
+
+### Adicionado
+- Motor de decisão e custo mínimo de IA (`docs/ia/motor/`, ADR 0014 proposta): 7 arquivos de contexto com tudo o que foi planejado em 11/11/2026. Modelos Claude e Fable 5.2, chat x API e economia de tokens; os 7 erros recorrentes, as 10 regras e o formulário de pedido do perfil sênior, com o que o setup preenche e o que é do Alan, e o plano de 30 dias; a escada de 5 degraus, o que é determinístico e o roteador local com o papel de cada ferramenta; a regra de três (tarefa repetida vira cache, template ou script); as 6 peças anti-erro e as 7 lacunas de sênior com as ferramentas de cada uma; engenharia reversa, dissecação em 4 níveis, construir x usar, as 3 camadas e Hugging Face; e o que vai para a nuvem gastando pouco. Ligado no índice de IA e no CONTINUAR.md. ADR 0014 aceito: nada fica congelado; o motor entra agora.
+
+### Alterado
+- Nada fica pausado (ADR 0015, revê o item 5 do ADR 0011): 42, AM-OS, pentest, treino de IA, robótica, agro, construção, idiomas, segunda faculdade, certificações de investimentos e estudo de dados voltam a ativos, na ordem do roteiro e dentro do limite de 3 frentes "agora". AM Taskoro sai de "pausado" para a fila. Roteiro e portfólio regerados.
+
+## [2.25.1] - 2026-11-10
+
+### Adicionado
+- Trilha de estudo do Akita (`just akita trilha`, `docs/akita/trilha-estudo.md`): a ordem de ESTUDAR, separada da fila (que é a ordem de extrair regras, com a era da IA primeiro). Primeiro os posts ligados a cada módulo do Professor, na ordem do currículo; depois os 147 episódios do Akitando com post no blog, em ordem de episódio, com ★ nos que já estão no currículo e [x] nos que já têm nota; e como usar os dois podcasts do Spotify. Gerada no `just docs` e conferida no `just check`; teste.
+
+## [2.25.0] - 2026-11-09
+
+### Adicionado
+- Recrutador (`tools/recrutador`, `data/recrutador/formatos.json`, `docs/recrutador`, `just recrutador`): 9 formatos de entrevista simulada, nacionais e internacionais, liberados por trimestre do eixo (triagem de RH, técnica .NET, defesa de case, domínio de fintech, conversa em inglês, coding e system design no estilo big tech, seleção remota internacional, Leadership Principles). Monta o entrevistador para colar no Claude (modo de voz nas de inglês) ou abre no terminal, com a vaga real e as suas histórias do vault; registra a nota de 1 a 4 no Núcleo, mostra a evolução e escolhe o treino da semana pelo ponto fraco. Modelo das 8 histórias STAR; passos `rec-historias` e `rec-semanal` no roteiro; 45 min por semana no plano do eixo. Testes e CI.
+
+## [2.24.9] - 2026-11-08
+
+### Corrigido
+- `--reorganizar` no Windows: lê a saída do keepassxc-cli como UTF-8. Antes o "·" dos títulos com usuário chegava estragado e essas entradas não saíam do grupo Outros. Mais sites reconhecidos.
+
+## [2.24.8] - 2026-11-08
+
+### Corrigido
+- `senhas_csv.py`: título com barra (usuário salvo como "Mozilla/5.0...") não quebra mais a gravação; mais sites reconhecidos (bancos por app, Governo de MG, vagas, compras); grupo novo 12 Carreira e vagas; palavra com "=" casa só o endereço exato (x.com não pega netflix.com).
+
+### Adicionado
+- `--reorganizar`: move do grupo 11 Outros para o grupo certo o que as regras já reconhecem, sem duplicar nada.
+
+## [2.24.7] - 2026-11-08
+
+### Corrigido
+- `kp-organizar` acha o arquivo exportado pelo nome em português ("Senhas do Chrome.csv") ou em inglês, pegando o mais recente em Downloads.
+
+## [2.24.6] - 2026-11-08
+
+### Adicionado
+- `senhas_csv.py --cofre`: grava as senhas exportadas direto no Cofre.kdbx pelo keepassxc-cli (senha mestra pedida uma vez; senhas pela entrada padrão, nunca na linha de comando; sem CSV intermediário), `--so-grupos` cria os 13 grupos numerados e `--bloqueio MIN` liga o bloqueio automático no keepassxc.ini. Testado com o keepassxc-cli 2.7.6; testes. O passo `kp-organizar` apaga o arquivo exportado no fim.
+
+## [2.24.5] - 2026-11-08
+
+### Mudado
+- `senhas_csv.py` organiza o cofre em grupos numerados do seu jeito (00 Essenciais a 11 Outros, com AMtech, Instituto e Editora e Escola separados), marca TROCAR na nota das senhas repetidas ou curtas e roda no Windows (passo `kp-organizar` em PowerShell, antes do WSL).
+
+## [2.24.4] - 2026-11-08
+
+### Corrigido
+- `backup-inicial` ignora o arquivo interno de trava do OneDrive (nome .GUID), que fica sempre em uso (erro 32) e marcava a pasta OneDrive como falha sem motivo.
+
+## [2.24.3] - 2026-11-08
+
+### Corrigido
+- `backup-inicial` grava o detalhe de cada pasta em C:\Users\SEU_USUARIO\backup-inicial.log (fora das pastas copiadas), para saber por que uma pasta falhou (antes o erro sumia).
+
+## [2.24.2] - 2026-11-08
+
+### Corrigido
+- `backup-inicial` confere antes se cabe no disco (e para com uma mensagem clara em vez de 400 linhas de "Espaço insuficiente"), inclui a pasta do OneDrive e mostra quantas pastas falharam.
+
+## [2.24.1] - 2026-11-08
+
+### Corrigido
+- Passos `diag-pasta`, `clonar` e `repo-criar` sem caminho de exemplo: o dev-setup vem do GitHub por git clone (o ZIP do GitHub se chama dev-setup-main e quebrava o comando antigo), o Ubuntu copia do Windows sem SEU_USUARIO e o repositório que já existe no GitHub não é recriado.
+
+## [2.24.0] - 2026-11-08
+
+### Adicionado
+- Trilha rápida (`data/implantacao-rapida.json`, `just rapido`, `docs/implantacao/trilha-rapida.md`): 50 passos do roteiro em 7 sessões de 2 a 3 horas, do Windows ao primeiro cliente. Cada sessão separa o que roda sozinho, o que fazer em paralelo enquanto o script roda e o que vem depois; o resto do roteiro espera. O .md serve para as sessões 1 e 2, antes do WSL existir. Conferida no `just check` e no CI; testes.
+
+### Corrigido
+- `just agora` dizia "Ubuntu do WSL" também para comandos de PowerShell. Agora diz o terminal certo (PowerShell do Windows, Ubuntu do WSL ou navegador), pela mesma regra do roteiro.
+
 ## [2.23.0] - 2026-11-07
 
 ### Adicionado

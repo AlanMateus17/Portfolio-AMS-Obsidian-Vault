@@ -4,6 +4,10 @@ model_list:
     litellm_params:
       model: ollama/qwen2.5:7b
       api_base: http://host.docker.internal:11434
+  - model_name: local-codigo     # o aider da fila usa quando o pedido é código e tudo online acabou
+    litellm_params:
+      model: ollama/qwen2.5-coder:7b
+      api_base: http://host.docker.internal:11434
   - model_name: rapido
     litellm_params:
       model: anthropic/claude-haiku-5-5
@@ -37,6 +41,7 @@ router_settings:
   fallbacks:
     - forte: [rapido]
     - rapido: [gratis, gratis-cf, barato, reserva, local]
+    - gratis: [gratis-cf, reserva, local]   # a fila do celular usa "gratis"; sem cota, cai no local
 litellm_settings:
   max_budget: 20          # US$ por mês no total; passou, recusa
   budget_duration: 30d

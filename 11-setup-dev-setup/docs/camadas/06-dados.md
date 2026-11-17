@@ -71,7 +71,7 @@ flowchart LR
   end
   subgraph L_lin["Linux (Ubuntu no WSL2, Arch no 2º disco)"]
     n_harlequin["harlequin (SQL no terminal)"]
-    n_rt[".NET 10 · Node · Python"]
+    n_rt["Node/TS · Python"]
     n_wsl["Ubuntu (WSL2)"]
   end
   subgraph L_win["Windows 11, apps e máquinas virtuais"]
@@ -137,28 +137,28 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Python de dados (Polars, Jupyter)](#pyds) | Local | Polars, pandas e JupyterLab num projeto uv em ~/dev/lab-ia. A base de toda a trilha de dados e de IA. | passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [DuckDB + Parquet](#duck) | Local | Banco analítico que roda dentro do Python e lê Parquet direto. Faz no notebook o que muita empresa faz num data warehouse. | passo 33.4 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [dbt Core](#dbt) | Local | Transforma as tabelas brutas (vendas, gastos, publicações) em modelos limpos e testados, com SQL versionado no Git. | passo 44.7 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Airflow (orquestração)](#orq) | Local | Agenda e acompanha as rotinas de dados: extrair das plataformas, rodar o dbt, avisar se falhar. É o orquestrador mais pedido em vaga. Roda em Docker. | passo 44.8 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Spark (PySpark)](#spark) | Local | Processamento distribuído. No notebook roda em modo local, o suficiente para aprender a API que as empresas usam com volumes grandes. | passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Seus datasets (só conteúdo seu)](#dset) | Local | Pares de pergunta e resposta tirados das suas notas, exercícios, livro e aulas que você gravou. Nada de aulas da Udemy, DIO, Alura ou de terceiros; dados de alunos só com consentimento, e de menores só com autorização dos responsáveis. | passo 44.10 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [PyTorch + CUDA (WSL2)](#torch) | Local | Base do treino de redes neurais. A GTX 1650 (Turing, 4 GB) tem suporte no CUDA do WSL2: serve para aprender, treinar modelos pequenos e testar código antes de pagar GPU. | passo 44.3 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Hugging Face (modelos e Hub)](#hf) | Remoto · precisa de conta | Transformers, PEFT, TRL e Datasets; no Hub ficam os modelos base e, em repositórios privados, os seus datasets e adaptadores. | passo 44.9 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Unsloth (QLoRA)](#unsl) | Local | Fine-tuning com pouca memória. Um 8B em QLoRA pede no mínimo 6 GB de VRAM: não cabe nos 4 GB da GTX 1650, então o treino do 8B roda no Kaggle ou numa GPU alugada. | passo 44.11 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Kaggle · Colab (GPU grátis)](#kgl) | Remoto · precisa de conta | Notebooks com GPU T4 de 16 GB sem pagar: o Kaggle dá 30 horas por semana, com sessões de até 9 horas. Suficiente para o primeiro fine-tuning de um 8B. | passo 29.1 · 2027, depois do primeiro fine-tuning de 8B; passo 29.3 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.11 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [MLflow (experimentos)](#mlflow) | Local | Registra cada treino: dados usados, parâmetros, métricas e o modelo gerado. Sem isso você não sabe qual versão ficou melhor. | passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [Avaliação dos modelos](#evals) | Local | Um conjunto de perguntas com respostas certas, separado do treino. O modelo novo só substitui o anterior se ganhar nele. | passo 44.10 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.12 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
-| [llama.cpp (GGUF)](#gguf) | Local | Converte e quantiza o modelo treinado para GGUF, o formato que o Ollama carrega no notebook. | passo 27.3 · Semana 6 · nov/2026 a dez/2026; passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.12 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) |
+| [Python de dados (Polars, Jupyter)](#pyds) | Local | Polars, pandas e JupyterLab num projeto uv em ~/dev/lab-ia. A base de toda a trilha de dados e de IA. | passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [DuckDB + Parquet](#duck) | Local | Banco analítico que roda dentro do Python e lê Parquet direto. Faz no notebook o que muita empresa faz num data warehouse. | passo 33.4 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [dbt Core](#dbt) | Local | Transforma as tabelas brutas (vendas, gastos, publicações) em modelos limpos e testados, com SQL versionado no Git. | passo 44.7 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Airflow (orquestração)](#orq) | Local | Agenda e acompanha as rotinas de dados: extrair das plataformas, rodar o dbt, avisar se falhar. É o orquestrador mais pedido em vaga. Roda em Docker. | passo 44.8 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Spark (PySpark)](#spark) | Local | Processamento distribuído. No notebook roda em modo local, o suficiente para aprender a API que as empresas usam com volumes grandes. | passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Seus datasets (só conteúdo seu)](#dset) | Local | Pares de pergunta e resposta tirados das suas notas, exercícios, livro e aulas que você gravou. Nada de aulas da Udemy, DIO, Alura ou de terceiros; dados de alunos só com consentimento, e de menores só com autorização dos responsáveis. | passo 44.10 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [PyTorch + CUDA (WSL2)](#torch) | Local | Base do treino de redes neurais. A GTX 1650 (Turing, 4 GB) tem suporte no CUDA do WSL2: serve para aprender, treinar modelos pequenos e testar código antes de pagar GPU. | passo 44.3 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Hugging Face (modelos e Hub)](#hf) | Remoto · precisa de conta | Transformers, PEFT, TRL e Datasets; no Hub ficam os modelos base e, em repositórios privados, os seus datasets e adaptadores. | passo 44.9 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Unsloth (QLoRA)](#unsl) | Local | Fine-tuning com pouca memória. Um 8B em QLoRA pede no mínimo 6 GB de VRAM: não cabe nos 4 GB da GTX 1650, então o treino do 8B roda no Kaggle ou numa GPU alugada. | passo 44.11 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Kaggle · Colab (GPU grátis)](#kgl) | Remoto · precisa de conta | Notebooks com GPU T4 de 16 GB sem pagar: o Kaggle dá 30 horas por semana, com sessões de até 9 horas. Suficiente para o primeiro fine-tuning de um 8B. | passo 29.1 · 2027, depois do primeiro fine-tuning de 8B; passo 29.3 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.11 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [MLflow (experimentos)](#mlflow) | Local | Registra cada treino: dados usados, parâmetros, métricas e o modelo gerado. Sem isso você não sabe qual versão ficou melhor. | passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [Avaliação dos modelos](#evals) | Local | Um conjunto de perguntas com respostas certas, separado do treino. O modelo novo só substitui o anterior se ganhar nele. | passo 44.10 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.12 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
+| [llama.cpp (GGUF)](#gguf) | Local | Converte e quantiza o modelo treinado para GGUF, o formato que o Ollama carrega no notebook. | passo 27.3 · Semana 6 · nov/2026 a dez/2026; passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.12 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
 | [Paperless-ngx](#paperless) | Local | Arquivo de documentos da casa e da escola com busca no texto (OCR em português). Local. | passo 19.1 · Dez/2026; passo 19.2 · Dez/2026 |
 | [Grocy](#grocy) | Local | Estoque da casa, ração e remédios dos cães, validade e lista de compras. | passo 19.1 · Dez/2026; passo 19.3 · Dez/2026 |
 | [vLLM (GPU alugada)](#vllm) | Local | Serve um modelo grande numa GPU por hora, ligado ao gateway, só enquanto precisa. | passo 29.4 · 2027, depois do primeiro fine-tuning de 8B; passo 29.5 · 2027, depois do primeiro fine-tuning de 8B |
 | [Destilação](#destilacao) | Local | Modelo grande gera exemplos da sua tarefa; um modelo pequeno aprende a imitá-lo. | passo 29.3 · 2027, depois do primeiro fine-tuning de 8B |
 | [Metabase (painéis)](#metabase) | Local | Painéis e perguntas sobre vendas, clientes e conteúdo sem programar, em cima do banco de métricas. Local. | passo 33.1 · Com a primeira página de venda no ar (jan/2027) e por etapas |
 | [Análises de cliente (RFM, LTV, churn)](#analises) | Local | Quem compra mais, quem está sumindo, quanto vale cada cliente e previsão de receita, em Python/DuckDB. | passo 33.4 · Com a primeira página de venda no ar (jan/2027) e por etapas |
-| [LeRobot (robôs que aprendem)](#lerobot) | Local | Biblioteca da Hugging Face para gravar demonstrações, treinar políticas (ACT, SmolVLA) e rodar no robô. | passo 60.7 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino |
-| [Docling + Granite- Docling (documentos)](#docling) | Local | Converte PDF, foto e NFC-e em Markdown e JSON com tabelas: Caixa da Casa, documentos da escola, ABNT e acervo. | passo 60.5 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino |
-| [SINAPI (custos de MG, Caixa)](#sinapi) | Remoto | Custos de referência da construção por estado, todo mês, em Excel: base das estimativas, sempre com mês e UF. | passo 61.8 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
+| [LeRobot (robôs que aprendem)](#lerobot) | Local | Biblioteca da Hugging Face para gravar demonstrações, treinar políticas (ACT, SmolVLA) e rodar no robô. | passo 61.7 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino |
+| [Docling + Granite- Docling (documentos)](#docling) | Local | Converte PDF, foto e NFC-e em Markdown e JSON com tabelas: Caixa da Casa, documentos da escola, ABNT e acervo. | passo 61.5 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino |
+| [SINAPI (custos de MG, Caixa)](#sinapi) | Remoto | Custos de referência da construção por estado, todo mês, em Excel: base das estimativas, sempre com mês e UF. | passo 62.8 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 
 <a id="pyds"></a>
 
@@ -168,12 +168,12 @@ flowchart LR
 
 Polars, pandas e JupyterLab num projeto uv em ~/dev/lab-ia. A base de toda a trilha de dados e de IA.
 
-**Quando entra:** passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [DuckDB + Parquet](06-dados.md#duck) | Dados e treino de IA | consulta Parquet |
-| ← recebe de | [.NET 10 · Node · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | Python + uv |
+| ← recebe de | [Node/TS · Python](04-lin.md#rt) | Linux (Ubuntu no WSL2, Arch no 2º disco) | Python + uv |
 | ← recebe de | [Airflow (orquestração)](06-dados.md#orq) | Dados e treino de IA | extrações agendadas |
 | ← recebe de | [Zoomcamp de dados + cursos de IA](14-est.md#dez) | Estudo e carreira | projetos dos módulos |
 
@@ -185,7 +185,7 @@ Polars, pandas e JupyterLab num projeto uv em ~/dev/lab-ia. A base de toda a tri
 
 Banco analítico que roda dentro do Python e lê Parquet direto. Faz no notebook o que muita empresa faz num data warehouse.
 
-**Quando entra:** passo 33.4 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 33.4 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -203,7 +203,7 @@ Banco analítico que roda dentro do Python e lê Parquet direto. Faz no notebook
 
 Transforma as tabelas brutas (vendas, gastos, publicações) em modelos limpos e testados, com SQL versionado no Git.
 
-**Quando entra:** passo 44.7 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.7 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -220,7 +220,7 @@ Transforma as tabelas brutas (vendas, gastos, publicações) em modelos limpos e
 
 Agenda e acompanha as rotinas de dados: extrair das plataformas, rodar o dbt, avisar se falhar. É o orquestrador mais pedido em vaga. Roda em Docker.
 
-**Quando entra:** passo 44.8 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.8 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -236,7 +236,7 @@ Agenda e acompanha as rotinas de dados: extrair das plataformas, rodar o dbt, av
 
 Processamento distribuído. No notebook roda em modo local, o suficiente para aprender a API que as empresas usam com volumes grandes.
 
-**Quando entra:** passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -251,7 +251,7 @@ Processamento distribuído. No notebook roda em modo local, o suficiente para ap
 
 Pares de pergunta e resposta tirados das suas notas, exercícios, livro e aulas que você gravou. Nada de aulas da Udemy, DIO, Alura ou de terceiros; dados de alunos só com consentimento, e de menores só com autorização dos responsáveis.
 
-**Quando entra:** passo 44.10 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.10 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -271,7 +271,7 @@ Pares de pergunta e resposta tirados das suas notas, exercícios, livro e aulas 
 
 Base do treino de redes neurais. A GTX 1650 (Turing, 4 GB) tem suporte no CUDA do WSL2: serve para aprender, treinar modelos pequenos e testar código antes de pagar GPU.
 
-**Quando entra:** passo 44.3 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.3 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -288,7 +288,7 @@ Base do treino de redes neurais. A GTX 1650 (Turing, 4 GB) tem suporte no CUDA d
 
 Transformers, PEFT, TRL e Datasets; no Hub ficam os modelos base e, em repositórios privados, os seus datasets e adaptadores.
 
-**Quando entra:** passo 44.9 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.9 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -306,7 +306,7 @@ Transformers, PEFT, TRL e Datasets; no Hub ficam os modelos base e, em repositó
 
 Fine-tuning com pouca memória. Um 8B em QLoRA pede no mínimo 6 GB de VRAM: não cabe nos 4 GB da GTX 1650, então o treino do 8B roda no Kaggle ou numa GPU alugada.
 
-**Quando entra:** passo 44.11 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.11 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -326,7 +326,7 @@ Fine-tuning com pouca memória. Um 8B em QLoRA pede no mínimo 6 GB de VRAM: nã
 
 Notebooks com GPU T4 de 16 GB sem pagar: o Kaggle dá 30 horas por semana, com sessões de até 9 horas. Suficiente para o primeiro fine-tuning de um 8B.
 
-**Quando entra:** passo 29.1 · 2027, depois do primeiro fine-tuning de 8B; passo 29.3 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.11 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 29.1 · 2027, depois do primeiro fine-tuning de 8B; passo 29.3 · 2027, depois do primeiro fine-tuning de 8B; passo 44.9 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.11 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -343,7 +343,7 @@ Notebooks com GPU T4 de 16 GB sem pagar: o Kaggle dá 30 horas por semana, com s
 
 Registra cada treino: dados usados, parâmetros, métricas e o modelo gerado. Sem isso você não sabe qual versão ficou melhor.
 
-**Quando entra:** passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -357,7 +357,7 @@ Registra cada treino: dados usados, parâmetros, métricas e o modelo gerado. Se
 
 Um conjunto de perguntas com respostas certas, separado do treino. O modelo novo só substitui o anterior se ganhar nele.
 
-**Quando entra:** passo 44.10 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.12 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 44.10 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.12 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -372,7 +372,7 @@ Um conjunto de perguntas com respostas certas, separado do treino. O modelo novo
 
 Converte e quantiza o modelo treinado para GGUF, o formato que o Ollama carrega no notebook.
 
-**Quando entra:** passo 27.3 · Semana 6 · nov/2026 a dez/2026; passo 44.4 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028); passo 44.12 · Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 27.3 · Semana 6 · nov/2026 a dez/2026; passo 44.4 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015); passo 44.12 · Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -474,7 +474,7 @@ Quem compra mais, quem está sumindo, quanto vale cada cliente e previsão de re
 
 Biblioteca da Hugging Face para gravar demonstrações, treinar políticas (ACT, SmolVLA) e rodar no robô.
 
-**Quando entra:** passo 60.7 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 61.7 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -491,7 +491,7 @@ Biblioteca da Hugging Face para gravar demonstrações, treinar políticas (ACT,
 
 Converte PDF, foto e NFC-e em Markdown e JSON com tabelas: Caixa da Casa, documentos da escola, ABNT e acervo.
 
-**Quando entra:** passo 60.5 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 61.5 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -506,7 +506,7 @@ Converte PDF, foto e NFC-e em Markdown e JSON com tabelas: Caixa da Casa, docume
 
 Custos de referência da construção por estado, todo mês, em Excel: base das estimativas, sempre com mês e UF.
 
-**Quando entra:** passo 61.8 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 62.8 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

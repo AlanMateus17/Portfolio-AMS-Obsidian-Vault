@@ -50,10 +50,11 @@ ECO = RAIZ / "data" / "ecossistema.json"
 MAPA = RAIZ / "data" / "mapa.json"
 ADRS = RAIZ / "docs" / "adr"
 
-STACK = ("Sistemas AM: C#/.NET 10 · ASP.NET Core (Controllers) · Clean Architecture + DDD · PostgreSQL · Redis · "
-         "SignalR · Next.js com TypeScript, Tailwind e Zod · Docker · GitHub Actions · deploy em VM pelo Kamal (ADR 0005). "
-         "Fora do Aura, a melhor ferramenta para o trabalho (ADR 0007): Astro (sites), SvelteKit + PocketBase (MVP), "
-         "Go (CLIs), Rust (firmware), Python (dados e IA). Cada sistema: apps/web, apps/api, packages/core, packages/db.")
+STACK = ("AM Gestão (produto único): TypeScript (Next.js/NestJS) · Python/FastAPI · PostgreSQL (Supabase) · "
+         "SQLite offline · Docker · GitHub Actions · deploy Vercel/VPS. Agente fiscal em Go ou C#. "
+         ".NET/C# é carta de reserva (ADR 0017). Fora do produto, a melhor ferramenta para o trabalho (ADR 0007): "
+         "Astro (sites), PocketBase (MVP), Go (CLIs), Rust (firmware/SO), Python (dados e IA). "
+         "Cada sistema: apps/web, apps/api, packages/core, packages/db.")
 REGRAS = [
     "Uma ferramenta por função: se o setup já tem uma que faz isso, use-a; ferramenta nova só com ADR.",
     "Infraestrutura é container pronto e aberto; só a regra de negócio que gera faturamento é programada.",

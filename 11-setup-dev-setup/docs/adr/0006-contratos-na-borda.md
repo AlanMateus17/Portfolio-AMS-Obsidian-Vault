@@ -1,11 +1,13 @@
 # 0006 · Contratos na borda: OpenAPI no backend, Zod no front
 
-- **Status:** aceita
+- **Status:** aceita, simplificada pela [0017](0017-nucleo-ts-python-dotnet-reserva.md)
 - **Data:** 2026-11-06
+
+> **Atualização (13/11, ADR 0017):** com o backend agora em **TypeScript**, o Zod roda nativamente no back **e** no front — a tensão abaixo deixou de existir. Contrato único em Zod nas duas pontas; no serviço Python, validação com Pydantic. OpenAPI continua como contrato de API.
 
 ## Contexto
 
-O contexto mestre exige "contratos estritos de dados em tempo de execução via Zod" em todo o sistema. Zod é uma biblioteca de TypeScript: no backend .NET 10 do Aura ela não existe. Adotar Zod no backend obrigaria a trocar o ASP.NET Core por Node (Fastify), abrindo uma segunda stack.
+O contexto mestre exige "contratos estritos de dados em tempo de execução via Zod" em todo o sistema. Quando o backend era .NET, Zod (biblioteca de TypeScript) não existia lá, e adotá-la obrigaria a trocar o ASP.NET Core por Node — ver atualização acima: isso deixou de ser um problema.
 
 O que o contexto mestre quer de verdade é: nenhum dado entra ou sai do sistema sem ser validado contra um contrato.
 

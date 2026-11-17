@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prepara o Ubuntu (24.04 ou mais novo) do WSL2 para o setup: ferramentas, linguagens, segurança, agentes e pastas.
+# Prepara o Ubuntu (24.04 ou mais novo) do WSL2, ou o AMtech OS nativo (os/instalar.sh chama este script), para o setup: ferramentas, linguagens, segurança, agentes e pastas.
 # Seguro para rodar várias vezes: o que já está pronto é pulado.
 #
 #   bash scripts/wsl/bootstrap.sh --simular                      # mostra o que faria, sem mudar nada
@@ -49,9 +49,12 @@ echo "Registro em: $LOG"
 [[ $SIMULAR -eq 1 ]] && echo "MODO: SIMULAR (nada será alterado)"
 
 # ------------------------------------------------------------------ 0. ambiente
-if grep -qi microsoft /proc/version 2>/dev/null; then linha "ambiente" "WSL" "OK"; else linha "ambiente" "WSL" "AVISO" "não parece WSL; seguindo assim mesmo"; fi
+NO_WSL=0; grep -qi microsoft /proc/version 2>/dev/null && NO_WSL=1
+if [[ $NO_WSL -eq 1 ]]; then linha "ambiente" "WSL" "OK"; else linha "ambiente" "Linux nativo" "OK" "AMtech OS ou Ubuntu em VM"; fi
 if [[ "$(ps -p 1 -o comm= 2>/dev/null)" == "systemd" ]]; then
   linha "ambiente" "systemd" "OK"
+elif [[ $NO_WSL -eq 0 ]]; then
+  linha "ambiente" "systemd" "AVISO" "não é o PID 1 (container?); serviços e timers não vão subir"
 elif [[ $SIMULAR -eq 1 ]]; then
   linha "ambiente" "systemd" "CRIARIA" "/etc/wsl.conf com systemd=true"
 else
@@ -60,7 +63,7 @@ else
 fi
 
 # ------------------------------------------------------------------ 1. pacotes do sistema
-PACOTES=(build-essential curl wget git unzip zip jq ripgrep fzf tmux zsh ca-certificates gnupg
+PACOTES=(build-essential curl wget git unzip zip zstd jq ripgrep fzf tmux zsh ca-certificates gnupg
          bubblewrap restic pandoc sqlite3 postgresql-client python3-venv shellcheck openssh-client
          nmap bind9-dnsutils)
 FALTAM=()
@@ -181,9 +184,10 @@ if [[ $FALTA_P -eq 0 ]]; then linha "pastas" "pastas dev e AMtech" "JA TEM"
 elif [[ $SIMULAR -eq 1 ]]; then linha "pastas" "pastas dev e AMtech" "CRIARIA" "$FALTA_P pasta(s)"
 else mkdir -p "${PASTAS[@]}"; linha "pastas" "pastas dev e AMtech" "CRIADO" "$FALTA_P pasta(s)"; fi
 
-# ------------------------------------------------------------------ 9. Docker (vem do Docker Desktop)
-if tem docker && docker info >/dev/null 2>&1; then linha "docker" "Docker no WSL" "OK" "$(docker version --format '{{.Server.Version}}' 2>/dev/null)"
-else linha "docker" "Docker no WSL" "MANUAL" "Docker Desktop > Settings > Resources > WSL integration > ${WSL_DISTRO_NAME:-Ubuntu}"; fi
+# ------------------------------------------------------------------ 9. Docker (no WSL vem do Docker Desktop; no Linux nativo, do os/instalar.sh)
+if tem docker && docker info >/dev/null 2>&1; then linha "docker" "Docker" "OK" "$(docker version --format '{{.Server.Version}}' 2>/dev/null)"
+elif [[ $NO_WSL -eq 1 ]]; then linha "docker" "Docker no WSL" "MANUAL" "Docker Desktop > Settings > Resources > WSL integration > ${WSL_DISTRO_NAME:-Ubuntu}"
+else linha "docker" "Docker nativo" "MANUAL" "bash os/instalar.sh (perfil dev) instala o Docker; depois saia e entre na sessão"; fi
 
 echo
 if [[ $SIMULAR -eq 1 ]]; then echo "Simulação pronta. Rode sem --simular para aplicar."

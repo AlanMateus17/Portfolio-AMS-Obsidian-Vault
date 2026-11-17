@@ -7,16 +7,18 @@ atualizado: 2026-10-26
 
 # 🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas
 
-> **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [Sumário Único](PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
+> **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [Sumário Único](../PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
 
-> **O que este documento é:** a lista completa do que você precisa dominar tecnicamente para ser **desenvolvedor sênior** na sua stack (C#/.NET 10 + TypeScript/Next.js + PostgreSQL/Redis + Docker, com Python em paralelo), no Brasil e no exterior. Cobre **todas as camadas** (fundamentos, backend, frontend, dados, arquitetura, infraestrutura, segurança, qualidade, produção) e **todas as etapas** (requisitos → design → código → teste → deploy → operação → evolução).
+> **O que este documento é:** a lista completa do que você precisa dominar tecnicamente para ser **desenvolvedor sênior** na sua stack (núcleo **TypeScript/Next.js + Python/FastAPI + PostgreSQL (Supabase)** + Docker), no Brasil e no exterior. Cobre **todas as camadas** (fundamentos, backend, frontend, dados, arquitetura, infraestrutura, segurança, qualidade, produção) e **todas as etapas** (requisitos → design → código → teste → deploy → operação → evolução).
 >
-> **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [Sumário Único](PLANO-UNICO-AMtech.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
+> **Nota (13/11):** o .NET saiu do centro e virou **carta de reserva**. As seções que detalham C#/.NET/ASP.NET/CLR/GC abaixo valem só para quando você puxar essa carta (vaga corporativa ou agente fiscal) — não são mais o caminho principal. O principal é TS + Python + SQL. Fonte da verdade: [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md).
+>
+> **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [Sumário Único](../PLANO-UNICO-AMtech.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
 > 1. **Auditoria:** no início de cada Passo, abra a camada correspondente e veja se nada ficou de fora.
 > 2. **Critério de sênior:** cada camada termina com "**Sênior quando…**" — é o teste de que você domina, não de que estudou.
 > 3. **Preparação de entrevista:** a seção 15 lista o que é cobrado em vaga sênior, inclusive no exterior.
 >
-> **Legenda da coluna "Onde":** `P1`–`P14` = Passos do Sumário · `Py` = bloco paralelo de Python · `IA` = [trilha-dados-ia](trilha-dados-ia.md) · `42` = [École 42](trilha-42-circles-oficial-verificado.md) · `Lx` = [trilha Linux](trilha-linux-arch-profissional.md) · `Red` = [trilha de redes](trilha-de-redes.md) · `Seg` = [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) · `Fin` = [trilha de finanças](trilha-financas-economia.md) · `HL` = [horizonte longo](mapa-horizonte-longo-sistemas.md) · `Sr` = fase sênior (depois do P12)
+> **Legenda da coluna "Onde":** `P1`–`P14` = Passos do Sumário · `Py` = bloco paralelo de Python · `IA` = [trilha-dados-ia](trilha-dados-ia.md) · `42` = [École 42](trilha-42-circles-oficial-verificado.md) · `Lx` = [trilha Linux](trilha-linux-arch-profissional.md) · `Red` = [trilha de redes](trilha-de-redes.md) · `Seg` = [roadmap de segurança](roadmap-seguranca-ofensiva-completo.md) · `Fin` = [trilha de finanças](trilha-financas-economia.md) · `HL` = [horizonte longo](trilha-linux-arch-profissional.md) · `Sr` = fase sênior (depois do P12)
 
 ---
 
@@ -25,8 +27,8 @@ atualizado: 2026-10-26
 | # | Camada | Etapa do ciclo |
 |---|---|---|
 | 1 | Fundamentos de computação | Base de tudo |
-| 2 | Linguagens: C#, TypeScript, Python, SQL, shell | Construção |
-| 3 | Backend .NET e ASP.NET Core | Construção |
+| 2 | Linguagens: TypeScript, Python, SQL, shell (C# = reserva) | Construção |
+| 3 | Backend TS (Next/NestJS) + Python/FastAPI (.NET = reserva) | Construção |
 | 4 | Frontend: HTML, CSS, JavaScript, TypeScript, React, Next.js | Construção |
 | 5 | Banco de dados e dados | Construção e operação |
 | 6 | Design e arquitetura de software | Design |
@@ -63,7 +65,7 @@ atualizado: 2026-10-26
 
 ## 2. Linguagens
 
-### 2.1 C# (linguagem principal)
+### 2.1 C# (carta de reserva — detalhe só para quando puxar essa carta)
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Base | Tipos de valor × referência, `struct` × `class` × `record`, nullable reference types, pattern matching, switch expressions | P3 |
@@ -77,7 +79,7 @@ atualizado: 2026-10-26
 | Reflection e geração de código | Atributos, reflection (custo), source generators (noção) | P12 |
 | Runtime .NET | CLR, IL, JIT e tiered compilation, AOT nativo (noção), GC geracional e modos server/workstation | P11 |
 
-### 2.2 TypeScript e JavaScript
+### 2.2 TypeScript e JavaScript (linguagem principal)
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | JavaScript base | Escopo, closures, `this`, protótipos, módulos ES, desestruturação, spread | P3 |
@@ -86,7 +88,7 @@ atualizado: 2026-10-26
 | TypeScript avançado | Tipos condicionais, mapped types, template literal types, inferência; tipar respostas da API a partir do contrato OpenAPI | P5 · P12 |
 | Ferramentas | Node.js, npm/pnpm, `tsconfig`, ESLint, Prettier, bundlers (noção de como o Next empacota) | P4 |
 
-### 2.3 Python (bloco paralelo desde o Passo 3)
+### 2.3 Python (linguagem principal — dados/IA, desde o Passo 3)
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Base | Tipos, coleções, compreensões, funções, módulos, ambiente virtual (`venv`/`uv`), `pip` | Py |
@@ -111,14 +113,14 @@ Ver camada 5. É linguagem de primeira classe, não "detalhe do ORM".
 ### 2.6 C e C++
 Pela [École 42](trilha-42-circles-oficial-verificado.md): ponteiros, memória manual, Makefile, structs, alocação, depuração com `gdb`/`valgrind`. Dá o entendimento de baixo nível que diferencia o sênior.
 
-### 2.7 Clojure (decisão pendente)
-Só entra se o `aura-historico` continuar em Clojure + Datomic: programação funcional, imutabilidade, REPL, Datomic. **Gatilho:** Passo 14, quando o Rendara precisar do histórico. Se você decidir por Event Sourcing com Marten em .NET, este item sai e entra Marten na camada 7.
+### 2.7 Clojure (cortada)
+O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se precisar, vira tabela append-only no PostgreSQL. Clojure sai do currículo.
 
-**Sênior quando…** lê código desconhecido de qualquer uma das três linguagens principais e aponta o problema de desempenho ou de concorrência; escreve código idiomático em cada uma, não "C# escrito em Python".
+**Sênior quando…** lê código desconhecido das linguagens principais (TypeScript, Python, SQL) e aponta o problema de desempenho ou de concorrência; escreve código idiomático em cada uma, não "C# escrito em Python".
 
 ---
 
-## 3. Backend .NET e ASP.NET Core
+## 3. Backend — TypeScript (Next/NestJS) e Python/FastAPI · (.NET/ASP.NET = reserva)
 
 | Tópico | O que dominar | Onde |
 |---|---|---|
@@ -130,9 +132,9 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Autenticação e autorização | JWT, refresh token, cookies, **OAuth 2.0 e OpenID Connect** (fluxos authorization code + PKCE, client credentials), políticas e claims, autorização por recurso, multi-tenant com `tenant_id` + RLS | P4 · P12 |
 | Design de API REST | Recursos, verbos e status corretos, paginação (offset × cursor), filtros, ordenação, versionamento, idempotência com `Idempotency-Key`, ETag e concorrência otimista, HATEOAS (noção) | P4 · P7 |
 | Documentação de API | OpenAPI, geração de cliente TypeScript a partir do contrato | P4 · P5 |
-| GraphQL | HotChocolate, schema, resolvers, problema N+1 com DataLoader (AM Taskoro) | P14 |
-| Tempo real | SignalR (hubs, grupos, escala com backplane Redis) | P9 |
-| Tarefas em segundo plano | `BackgroundService`, `IHostedService`, filas, agendamento | P9 · P12 |
+| GraphQL (opcional) | Conceito, schema, resolvers, N+1 com DataLoader; em TS use Apollo Server ou Yoga. Só se um projeto pedir | P14 |
+| Tempo real | Supabase Realtime (ou WebSocket): canais, presença, escala | P9 |
+| Tarefas em segundo plano | Filas e workers (BullMQ no Node, Celery/RQ no Python), agendamento | P9 · P12 |
 | Logging | `ILogger`, logs estruturados, níveis, correlação por requisição | P4 · P10 |
 | Resiliência | Retry, timeout, circuit breaker com Polly / `Microsoft.Extensions.Http.Resilience`, `HttpClientFactory` | P9 |
 | Caching | `IMemoryCache`, `IDistributedCache` com Redis, output caching, invalidação | P9 |
@@ -173,7 +175,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 |---|---|---|
 | App Router | Layouts, rotas aninhadas, loading e error boundaries | P4 |
 | Renderização | Server Components × Client Components, SSR, SSG, ISR, streaming; quando cada um faz sentido | P4 · P9 |
-| Dados | Buscar no servidor, cache do Next, revalidação, Server Actions (e quando preferir chamar a API .NET) | P5 |
+| Dados | Buscar no servidor, cache do Next, revalidação, Server Actions (e quando preferir chamar a API no servidor) | P5 |
 | Autenticação no front | Sessão, middleware de rota, proteção de páginas | P4 |
 | Exportação estática | Sites dos clientes de freela na Hostinger | P4 |
 | Internacionalização | Português, inglês e espanhol (produtos para fora do Brasil) | Sr |
@@ -200,7 +202,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Plano de execução | `EXPLAIN ANALYZE`, seq scan × index scan, estatísticas, `VACUUM` e autovacuum | P2 · P11 |
 | Transações | ACID, **níveis de isolamento** (read committed, repeatable read, serializable) e as anomalias de cada um, locks, deadlock, `SELECT … FOR UPDATE`, concorrência otimista × pessimista | P5 · P7 |
 | PostgreSQL específico | JSONB, enums, constraints e `CHECK`, **Row-Level Security**, extensões (PostGIS, pgvector), funções e triggers (com moderação) | P4 · P9 · IA5 |
-| EF Core a fundo | Migrations, relacionamentos, tracking × `AsNoTracking`, N+1 e `Include`, consultas compiladas, SQL bruto, `RowVersion`; quando usar **Dapper** | P5 · P11 |
+| ORM a fundo (Prisma/Drizzle) | Migrations, relacionamentos, N+1 e `include`/eager load, SQL bruto quando preciso, controle de concorrência (`version`); cliente Supabase e quando descer pro SQL puro | P5 · P11 |
 | Migrações sem parar o sistema | Expandir e contrair (adicionar coluna, migrar dado, remover depois), migração em produção com rollback | P10 |
 | Operação | Backup e **teste de restauração**, point-in-time recovery, réplica de leitura, connection pooling (PgBouncer), particionamento de tabela | P10 · Sr |
 | Redis | Tipos (string, hash, list, set, sorted set, stream), TTL, padrões de cache (cache-aside, write-through), invalidação, locks distribuídos e seus riscos, Redis Streams como fila | P9 |
@@ -225,7 +227,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | **DDD tático** | Entidade, objeto de valor, agregado e sua fronteira de consistência, repositório, serviço de domínio, eventos de domínio | P8 |
 | **DDD estratégico** | Contextos delimitados, linguagem ubíqua, mapa de contexto entre os sistemas Aura | P12 |
 | CQRS | Separar leitura e escrita; quando vale a complexidade | P12 |
-| Event Sourcing | Estado como sequência de eventos; base do `aura-historico` (Datomic ou Marten) | P14 |
+| Event Sourcing (opcional) | Estado como sequência de eventos; se precisar de histórico, tabela append-only no PostgreSQL | P14 |
 | Monolito modular × microsserviços | Por que começar modular; custo real de distribuir | P12 |
 | Decisões registradas | ADRs (você já usa) | P12 |
 | Modelagem e diagramas | Modelo C4 (contexto, contêiner, componente), diagramas de sequência | P8 · P12 |
@@ -256,15 +258,15 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Estratégia | Pirâmide e "troféu" de testes, o que testar em cada camada, cobertura como sinal e não meta | P6 |
-| Unitário | **xUnit**, AAA, test doubles (mock, stub, fake) com Moq, testes legíveis | P6 |
+| Unitário | **Vitest** (TS) e **pytest** (Python), AAA, test doubles (mock, stub, fake), testes legíveis | P6 |
 | Integração | `WebApplicationFactory`, **Testcontainers** com PostgreSQL e Redis reais | P6 |
 | Contrato | Teste de contrato da API (consumidor × provedor) | P12 |
 | E2E | **Playwright**, testes estáveis (sem `sleep`), dados de teste | P6 |
 | TDD | Ciclo vermelho-verde-refatorar, quando ajuda e quando atrapalha | P6 |
 | Testes de propriedade | Gerar entradas aleatórias para regras de dinheiro (FsCheck) | P7 |
-| Mutação | Medir a qualidade dos testes (Stryker.NET) | Sr |
+| Mutação | Medir a qualidade dos testes (Stryker-JS, mutmut no Python) | Sr |
 | Carga | **k6**: carga, estresse, pico, duração | P11 |
-| Análise estática | Analyzers do .NET, ESLint, CodeQL, SonarQube (noção) | P6 |
+| Análise estática | ESLint/Biome (TS), ruff (Python), CodeQL, SonarQube (noção) | P6 |
 | Revisão de código | O que olhar num PR: correção, legibilidade, segurança, teste | P6 · Sr |
 
 **Sênior quando…** uma refatoração grande passa em produção sem susto porque os testes certos existiam — e o time confia na suíte.
@@ -313,7 +315,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Os três sinais | Logs estruturados, métricas, **tracing distribuído** com **OpenTelemetry** | P10 |
-| Ferramentas | Serilog/OTel no .NET, Grafana/Prometheus (ou equivalente), Uptime Kuma (já planejado) | P10 |
+| Ferramentas | Pino/OpenTelemetry (Node), structlog (Python), Grafana/Prometheus (ou equivalente), Uptime Kuma (já planejado) | P10 |
 | SLI, SLO e orçamento de erro | Definir o que é "funcionando" para cada sistema | Sr |
 | Alertas | Alertar no sintoma do usuário, não em cada métrica; evitar fadiga de alerta (`aura-oncall`) | P10 |
 | Incidentes | Resposta a incidente, comunicação, **postmortem sem culpa** | Sr |
@@ -329,7 +331,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Tópico | O que dominar | Onde |
 |---|---|---|
 | Medir antes | Profiling (dotnet-trace, dotnet-counters, PerfView), **BenchmarkDotNet**, flame graphs | P11 |
-| Memória no .NET | Alocações, GC, pooling (`ArrayPool`), `Span<T>` | P11 |
+| Memória (Node/Python) | Heap e GC, evitar vazamentos, streams/buffers, perfis de memória | P11 |
 | Banco | Índices, consultas, pool de conexões, réplica de leitura | P11 · Sr |
 | Cache | Onde cachear (navegador, CDN, aplicação, banco), invalidação | P9 · P11 |
 | Escala | Vertical × horizontal, aplicação sem estado, filas para picos | P12 · Sr |
@@ -344,7 +346,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 
 | Tópico | O que dominar | Onde |
 |---|---|---|
-| Windows Service em .NET | `BackgroundService` como serviço do Windows, instalação, logs no Event Viewer | P7 |
+| Agente local (Go ou C#, reserva) | Serviço em background no balcão (impressora fiscal, gaveta, TEF), instalação, logs | P7 |
 | Offline-first | SQLite local, fila de sincronização, resolução de conflito quando a internet volta | P7 |
 | Periféricos | Impressora fiscal/térmica (ESC/POS), gaveta de dinheiro, balança, TEF — atrás de interfaces (`IImpressoraFiscal`, `IGavetaDinheiro`, `IBalanca`, `ITefService`) | P7 |
 | Comunicação | Porta serial e USB, comunicação local com o navegador | P7 |
@@ -406,7 +408,7 @@ Só entra se o `aura-historico` continuar em Clojure + Datomic: programação fu
 | Processo | *Software Engineering at Google* (Winters, Manshreck e Wright) · *The Pragmatic Programmer* (Hunt e Thomas) |
 | Entrevista | *System Design Interview* (Alex Xu) |
 
-Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, ASP.NET Core, React, PostgreSQL, Docker, System Design e Software Architect ([integracao-42-roadmap-akita](integracao-42-roadmap-akita.md)).
+Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backend, Frontend, Node.js, React, PostgreSQL, Docker, System Design e Software Architect ([trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md)).
 
 ---
 
@@ -417,8 +419,170 @@ Auditoria cruzada contínua: [roadmap.sh](https://roadmap.sh/roadmaps) — Backe
 
 - [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
 - [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
-- [12 Projetos da Formação — especificações](../12-artefatos/documentos/12-projetos-da-formacao-especificacoes.md)
+- [12 Projetos da Formação — especificações](../99-arquivo/planos-antigos/12-projetos-da-formacao-especificacoes.md)
 - [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
 
 🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
 <!-- conexoes:fim -->
+
+
+---
+
+## Auditoria: perfil de dev sênior vs. o que o plano já cobre
+
+### O que empresa grande de TI procura, separando o que seu plano já cobre do que é genuinamente novo a adicionar
+
+---
+
+## Como ler este documento
+
+Cada item tem um selo: **✅ Já coberto** (com referência de onde) ou **🆕 Novo** (com sugestão de quando encaixar). A ideia é a mesma de sempre neste portfólio: não empilhar mais estudo em cima do que já existe — só nomear o que falta de verdade.
+
+---
+
+## 1. Profundidade técnica (hard skills de código)
+
+| Habilidade | Status |
+|---|---|
+| Clean Architecture, SOLID, Design Patterns | ✅ [Fase 4](../99-arquivo/plano-estudos-basico-avancado-entrelacado.md) |
+| Testes (unitário, integração, TDD) | ✅ Fase 2.4 |
+| Design de API madura (versionamento, rate limiting) | ✅ Fase 2.2 |
+| Segurança aplicada (OWASP Top 10) | ✅ Fase 2.2 |
+| Performance e profiling | ✅ Fase 6C |
+| Observabilidade (log estruturado, health check, métrica) | ✅ Fase 6 |
+| Multi-tenant, concorrência, idempotência | ✅ RNFT-E01/E02, Fase 2.3 |
+| Estrutura de dado e algoritmo (nível entrevista) | ✅ Fase 6B |
+| Deploy e CI/CD | ✅ Fase 6 |
+| Criptografia aplicada | ✅ Fase 9 (`aura-vault`) |
+
+## 2. System Design — genuinamente novo
+
+Diferente de "ter construído 21 sistemas reais" (que você vai ter), **entrevista de System Design é um formato próprio**, com vocabulário e estrutura de resposta específicos que empresa grande testa separadamente.
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Estimativa "back-of-envelope" (calcular capacidade, tráfego, armazenamento de cabeça) | 🆕 Novo | Junto com a Fase 6B (entrevista técnica) |
+| Vocabulário formal: load balancer, sharding, cache-aside, CAP theorem, consistência eventual | 🆕 Novo — você já *aplica* boa parte disso na prática (RNFT-E, multi-tenant), mas nunca nomeou com o termo formal de entrevista | Mesma fase — é mais nomear o que já faz do que aprender do zero |
+| Praticar o formato "desenhe um sistema como X" em tempo cronometrado | 🆕 Novo | Perto de aplicar pra vaga de verdade, não precisa adiantar |
+
+## 3. Infraestrutura além do que já está no plano
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Infrastructure as Code (Terraform ou Bicep) | 🆕 Novo — já estava listado como "deixar pra depois" na Fase 6 | Depois da Fase 6D (extração), quando a plataforma interna já existir e fizer sentido automatizar a infra dela |
+| Kubernetes / orquestração de container além de Docker Compose | 🆕 Novo | Só se algum sistema do portfólio realmente escalar a ponto de precisar — não é pré-requisito de entrevista júnior/pleno, mais relevante em sênior de infraestrutura especificamente |
+| Mensageria em escala (Kafka, além do Redis Streams já usado) | 🆕 Novo, baixa prioridade | Só se um sistema do portfólio atingir volume que o Redis Streams não aguente — não adiantar sem necessidade real, mesmo princípio já aplicado a outras tecnologias no `revisao-stack-tecnologica` |
+
+## 4. Processo e colaboração
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Metodologia ágil (Scrum/Kanban) aplicada na prática | ✅ Parcial — você já usa Epic/Sprint/User Story no `EPIC-01`, mas nunca nomeou os termos formais (velocity, cerimônia, backlog grooming) | 🆕 Vale uma leitura curta e pontual — 1-2h — não precisa de bloco de estudo dedicado, é nomear o que já pratica |
+| Code review (dar e receber feedback de código) | 🆕 Novo — sozinho, você não pratica isso naturalmente | A partir da Fase 6D, quando começar a manter pacote/biblioteca reutilizável — revisar o próprio código "como se fosse revisar de outra pessoa" já é um exercício válido sozinho |
+| Estimativa de esforço (story points) | ✅ Você já estima em horas no `EPIC-01` — é a mesma habilidade, formato diferente | — |
+
+## 5. Comunicação e presença profissional
+
+| Habilidade | Status | Quando estudar |
+|---|---|---|
+| Documentação técnica escrita | ✅ Os 41 documentos deste portfólio já são a prova disso — habilidade rara mesmo em sênior de verdade | — |
+| Architecture Decision Records | ✅ [já planejado](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) | — |
+| Inglês técnico | ✅ [plano próprio](ingles-espanhol-integrado.md) | — |
+| Apresentação de portfólio (explicar seu próprio trabalho de forma concisa) | 🆕 Novo — ter 21 sistemas documentados não é o mesmo que saber resumir isso em 2 minutos numa entrevista | Perto de aplicar pra vaga — treinar um "elevator pitch" do ecossistema AMS |
+| Entrevista comportamental (método STAR: Situação, Tarefa, Ação, Resultado) | 🆕 Novo — completamente diferente de entrevista técnica, e empresa grande sempre testa os dois | Mesma fase — perto de aplicar de verdade |
+| Presença técnica pública (blog, LinkedIn, contribuição open source) | 🆕 Novo, mas com base pronta — publicar a documentação curada (já no `github-estrutura-profissional-autoridade`) é o primeiro passo real disso | Junto com a Fase 6D |
+
+## 6. Domínio de negócio
+
+| Habilidade | Status |
+|---|---|
+| Entender o "porquê" por trás de decisão técnica, não só o "como" | ✅ Todo o portfólio é evidência disso — poucos desenvolvedores júnior/pleno documentam decisão de negócio junto com decisão técnica |
+| Modelagem de domínio complexo (DDD tático) | ✅ Fase 4 |
+| Compliance e regulação aplicada (LGPD, CFMV, CFP, Lei 13.786/2018) | ✅ Espalhado nos 21 documentos — isso é raro mesmo em sênior |
+
+---
+
+## O que sobra de verdade: a lista enxuta do que é genuinamente novo
+
+Tirando o que já está coberto, o que falta pra completar o perfil é curto:
+
+1. Vocabulário formal de System Design + prática de estimativa (Fase 6B)
+2. Infrastructure as Code — depois da Fase 6D
+3. Nomear formalmente a metodologia ágil que você já pratica (leitura curta, não bloco de estudo)
+4. Code review deliberado — a partir da Fase 6D
+5. Apresentação de portfólio + entrevista comportamental (STAR) — só perto de aplicar de verdade pra vaga
+6. Presença pública (blog/LinkedIn/open source) — junto com a Fase 6D, aproveitando o que o guia de GitHub já preparou
+
+Kubernetes e Kafka ficam deliberadamente como "só se a necessidade real aparecer" — mesmo princípio já usado no portfólio inteiro: nenhuma tecnologia entra por "currículo bonito", só por problema real que ela resolve.
+
+---
+
+## Honestidade final
+
+Isso confirma algo importante: você não está tão atrás quanto a sensação de "quero ser perfeito" faz parecer. A maior parte do que separa um perfil júnior de um sênior de verdade — pensar em decisão de arquitetura com trade-off, documentar o porquê, entender regulação do domínio — **você já está fazendo**, só nunca tinha sido nomeado dessa forma. O que falta é pontual, não é recomeçar nada.
+
+---
+
+<!-- conexoes:inicio -->
+## 🗂️ Artefatos do claude.ai sobre este assunto
+
+> Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
+
+- [Currículo — Alan Mateus](../12-artefatos/documentos/curriculo-alan-mateus.md)
+- [Portfólio AMtech](../12-artefatos/paginas/portfolio-amtech-mbj1/index.html) · página interativa · [sobre](../12-artefatos/paginas/portfolio-amtech-mbj1/LEIA-ME.md)
+- [12 Projetos da Formação — especificações](../99-arquivo/planos-antigos/12-projetos-da-formacao-especificacoes.md)
+- [Guia de Terminal: Git, GitHub, PowerShell e Git Bash](../12-artefatos/documentos/guia-de-terminal-git-github-powershell-e-git-bash.md)
+
+🗺️ Mapa completo de quais artefatos entram em cada parte do plano: [mapa de conexões](../12-artefatos/01-MAPA-DE-CONEXOES.md)
+<!-- conexoes:fim -->
+
+
+---
+
+## Automação por contexto profissional (empregado/freelance)
+
+### O quarto documento do conjunto — os três anteriores assumiam que você decide tudo (seu próprio portfólio); este cobre os outros dois contextos onde você não decide, e precisa saber operar dentro do que já existe
+
+> A diferença central: em `ordem-e-sequencia-de-execucao-automacoes`, você é quem constrói cada automação do zero, na ordem que quiser. **Aqui não** — em freelance e, principalmente, como empregado numa empresa grande, a maior parte da automação **já existe antes de você chegar**. A habilidade que importa muda de "eu sei construir" pra "eu sei entender, seguir corretamente, e sugerir melhoria sem quebrar o que já funciona".
+
+---
+
+## O mapa completo — mesma categoria, três realidades diferentes
+
+| Categoria | 🏠 Sozinho / empresa própria | 💼 Freelance pra cliente | 🏢 Empregado em empresa grande |
+|---|---|---|---|
+| **Commit-time** (formatação, Gitleaks, pre-commit) | Você decide e configura tudo do zero | Configurar no projeto do cliente é diferencial profissional real — poucos freelancers entregam isso | Quase certo que já existe, configurado pelo time. **Seu trabalho é nunca usar `--no-verify` pra pular** — e sugerir melhoria só depois de entender por que está do jeito que está |
+| **CI** (build + teste automático) | Você monta do zero (GitHub Actions) | Propor mesmo em projeto pequeno eleva a percepção de profissionalismo | Já existe (Jenkins, GitHub Actions, Azure DevOps, GitLab CI) — seu trabalho no início é **entender o pipeline existente**, não recriar. Contribuir/otimizar vem com senioridade, não no primeiro mês |
+| **CD** (deploy automático) | Você decide a estratégia inteira | Raramente você tem acesso à produção do cliente — normalmente entrega código, quem faz deploy é o time dele | Processo formal já definido (staging, gate de aprovação, checklist) — **seguir o processo é o trabalho**, decidir a estratégia não é papel de quem está chegando |
+| **Infraestrutura como código** | Terraform/Ansible que você mesmo escreve | Raro fazer parte do escopo, a não ser que contratado especificamente pra isso | Time de Platform Engineering/DevOps já mantém — você aprende a **ler** antes de escrever; PR nessa área, no início, é revisado com mais rigor que PR de aplicação |
+| **Observabilidade** (log, alerta, monitoramento) | Você monta Uptime Kuma/log estruturado do zero | Só entra no escopo se a manutenção pós-entrega for contratada | Ferramenta corporativa já existe (Datadog, New Relic, Grafana) — aprender a **interpretar dashboard e criar alerta novo** é a parte que cabe a você, montar a infraestrutura de observabilidade não |
+| **Segurança contínua** (SAST/DAST, scan de dependência) | Você ativa Dependabot/scanner por conta própria | Ativar Dependabot no repositório do cliente é rápido e agrega valor real à entrega | Time de segurança define a política — o seu trabalho é **corrigir o que o scanner aponta no seu código**, não escolher a ferramenta |
+| **Documentação automática** (Swagger, MkDocs) | Você escolhe e configura | Swagger/OpenAPI em entrega de API já é praticamente padrão esperado, mesmo freelance | Já é convenção do time — seguir o padrão existente, não introduzir um novo sem alinhar antes |
+| **Gestão de processo** (CODEOWNERS, fila de merge) | Opcional — mais clareza pessoal que necessidade | Raramente aplicável, você é o único dev do projeto | Estrutura já definida — aprender a **trabalhar dentro dela** (revisar PR de colega, respeitar dono de área) é uma habilidade em si, avaliada em performance review |
+| **Ambiente de dev automatizado** (Dev Container, script de setup) | Você cria do zero | Acelera se o projeto crescer e outro dev entrar depois de você | Geralmente já existe — seu primeiro dia de trabalho **usa** isso, não cria. Se não existir, propor é sinal de senioridade, mas só depois de estabelecido no time |
+| **Notificação automática** (Discord/Slack/Teams) | Você configura webhook próprio | Opcional, mais organização pessoal do projeto | Já integrado ao Slack/Teams corporativo, com canal e convenção próprios do time |
+| **Backup e disaster recovery** | Responsabilidade 100% sua | Normalmente responsabilidade do ambiente do cliente — mas seu código/trabalho local continua sendo sua responsabilidade | Time de infraestrutura cuida disso — sua responsabilidade vira **seguir a política** (nunca só local, sempre commitado, nunca dado sensível fora do lugar certo) |
+| **Teste de carga** | Você decide se e quando vale a pena | Raro estar no escopo, a não ser pedido explícito | Pode existir time de QA/performance dedicado, ou ser parte de um processo formal antes de lançamento grande — raramente você monta isso sozinho no início |
+| **IA no pipeline / Claude Code** | Você decide livremente | Pode acelerar seu trabalho, **mas cuidado real:** nunca colar código do cliente numa ferramenta de IA sem autorização explícita dele — é dado proprietário de terceiro | **Verificar a política de uso de IA da empresa antes de usar qualquer coisa** — muita empresa grande tem regra específica sobre ferramenta de IA e código proprietário; usar sem verificar pode ser falta grave, não só descuido técnico |
+
+---
+
+## O que isso muda na prática, resumido numa frase por contexto
+
+- **Sozinho/empresa própria:** a pergunta certa é "como eu construo isso". Os três documentos anteriores (`automacao-total-ambiente-trabalho`, `por-que-automatizar-riscos-e-testes`, `ordem-e-sequencia-de-execucao-automacoes`) já respondem essa pergunta por completo.
+- **Freelance:** a pergunta certa é "o que eu ofereço que me diferencia, dentro do que cabe no escopo contratado". Automação de commit-time e CI/segurança básica são as que mais valem a pena propor, mesmo em projeto pequeno — custam pouco tempo seu e mostram profissionalismo real.
+- **Empregado em empresa grande:** a pergunta certa é "o que eu preciso entender e seguir corretamente primeiro, antes de sugerir qualquer mudança". A maior parte da automação já existe — a habilidade que te diferencia não é saber construir do zero (embora ajude), é saber **operar dentro de um sistema já em produção sem quebrar nada**, e ganhar confiança suficiente pra sugerir melhoria só depois de entender por que está do jeito que está.
+
+---
+
+## Onde isso se conecta com seu plano de carreira
+
+Isso é exatamente o gap que `curriculo-dev-senior-completo` já identificou como "genuinamente novo" — infraestrutura além do que o plano cobre, processo e colaboração. Este mapa é a resposta prática: as três colunas da tabela acima são, na prática, os três estágios que você vai atravessar — hoje construindo sozinho, e um dia entrando numa empresa grande onde a coluna certa a estudar não é mais "sozinho", é "empregado".
+
+---
+
+## 🔗 Documentos relacionados
+- [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o "como" de cada categoria, pro contexto onde você constrói do zero
+- [automacao-o-que-e-por-que](../06-execucao-e-desenvolvimento/automacao-o-que-e-por-que.md) — o "por quê" e os riscos, válidos nos três contextos
+- [automacao-ordem-de-execucao](../06-execucao-e-desenvolvimento/automacao-ordem-de-execucao.md) — a ordem de construção específica do seu próprio portfólio
+- [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) — onde este mapa se conecta com o que falta pro perfil sênior

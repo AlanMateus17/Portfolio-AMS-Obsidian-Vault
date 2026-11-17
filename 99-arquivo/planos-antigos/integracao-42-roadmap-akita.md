@@ -15,7 +15,7 @@ status: completo
 Escola sem professor, aprendizado peer-to-peer, currículo em árvore de projetos. O Common Core confirmado (pesquisado agora, não de memória): `libft` (reimplementar função da biblioteca C padrão) → `born2beroot` (VM Linux hardened) → `ft_printf` → `get_next_line` → `push_swap`/`so_long`/`fract-ol` (algoritmo/gráfico) → `pipex`/`minitalk` (processo Unix) → `philosophers` (concorrência com mutex/semáforo) → `minishell` (shell próprio) → `cub3d`/`net_practice` → módulos de C++ → `webserv` (servidor HTTP do zero) → `ft_transcendence` (projeto final full stack).
 
 ### A honestidade que precisa vir primeiro
-Adotar esse currículo inteiro significa **aprender C e C++ do zero**, como trilha completa — não é adicionar um projeto, é adicionar uma segunda linguagem de sistemas com peso comparável ao próprio C#/.NET. Aplicando a mesma régua de 3 perguntas já usada nesta conversa (resolve problema real agora? existe forma mais simples? vai reaparecer ou é uso único?), a maior parte do currículo **não passa** — seria o mesmo erro de proporção já corrigido com Clojure/Datomic, agora em escala maior.
+Adotar esse currículo inteiro significa **aprender C e C++ como trilha completa de sistemas**. Na nova realidade, C/C++ **entra sim** — mas pela trilha de **Sistema Operacional e Robótica** (ativa, leve), não pelo currículo inteiro da 42. Aplicando a régua de 3 perguntas (resolve problema real agora? existe forma mais simples? vai reaparecer ou é uso único?), a maior parte dos projetos da 42 **não passa** como estudo dedicado — o C/C++ que você precisa vem aplicado ao SO e aos protótipos, não em dezenas de exercícios isolados.
 
 ### O que entra — critério de valor real, baixo custo de linguagem nova
 
@@ -23,13 +23,13 @@ Adotar esse currículo inteiro significa **aprender C e C++ do zero**, como tril
 |---|---|---|
 | **`born2beroot`** (VM Linux, SSH, hardening, política de senha) | ✅ Entra | Não exige C — é Linux/ops puro, e conecta direto com a Fase 6 (deploy) já existente. Fazer esse projeto de verdade antes do primeiro deploy real do AM Kaixara é preparo genuíno, não currículo por currículo |
 | **`net_practice`** (configuração de rede/IP) | ✅ Entra | Mesma lógica — sem custo de linguagem nova, fortalece exatamente o tipo de conhecimento de infraestrutura que a Fase 6 e a Fase 12 (pentest) já exigem |
-| **Conceito de `webserv`** (construir servidor HTTP do zero) | ⚠️ Entra, mas **não em C++** | O valor real é entender o que o ASP.NET Core abstrai por baixo — isso dá pra fazer em C# mesmo (um servidor HTTP mínimo usando só `Socket`/`TcpListener`, sem framework), sem pagar o custo de aprender C++ só pra isso |
-| `libft`, `ft_printf`, `get_next_line`, `minishell`, `philosophers`, `cub3d`, módulos C++ | ❌ Não entram | Alto custo de linguagem nova (C/C++), baixo retorno incremental dado que você já vai aprender concorrência, algoritmo e manipulação de string dentro do próprio C#/.NET nas fases já planejadas |
+| **Conceito de `webserv`** (construir servidor HTTP do zero) | ⚠️ Entra, mas **não em C++** | O valor real é entender o que o Next.js/Node abstrai por baixo — dá pra fazer em TypeScript (um servidor HTTP mínimo usando só `http`/`net` do Node, sem framework), sem custo de linguagem nova |
+| `libft`, `ft_printf`, `get_next_line`, `minishell`, `philosophers`, `cub3d`, módulos C++ | ❌ Não como exercício isolado | Concorrência, algoritmo e manipulação de string você já aprende dentro do próprio TS/Python; o C/C++ necessário vem aplicado na trilha de SO/robótica |
 
 ### Onde isso entra no plano
 - `born2beroot`: antes do **Passo 10** (Produção real) do `passo-a-passo-mestre-desde-o-inicio` — fazer esse projeto como preparo direto pro primeiro deploy
 - `net_practice`: mesma janela, complementar
-- Servidor HTTP mínimo em C#: como exercício de aprofundamento dentro da **Fase 2.2** (ASP.NET Core) — construir o mínimo antes de usar o framework completo, pra sentir na pele o que ele resolve
+- Servidor HTTP mínimo em TypeScript (`http`/`net` do Node): exercício de aprofundamento no **backend web** — construir o mínimo antes de usar o Next.js/NestJS completo, pra sentir o que ele resolve
 
 ---
 
@@ -43,7 +43,7 @@ Diferente de currículo com progressão própria, o uso certo de roadmap.sh é c
 | Roadmap | Link | Cruza com |
 |---|---|---|
 | Backend | [roadmap.sh/backend](https://roadmap.sh/backend) | Passos 3-8 (fundamento geral de backend) |
-| ASP.NET Core | [roadmap.sh/aspnet-core](https://roadmap.sh/aspnet-core) | Passos 3-5 — específico do seu framework |
+| Next.js / Node | [roadmap.sh/nodejs](https://roadmap.sh/nodejs) · [roadmap.sh/react](https://roadmap.sh/react) | Passos 3-5 — seu backend/front em TypeScript |
 | Índice geral (todos os roadmaps: PostgreSQL, Docker, System Design, C, C++, Git/GitHub, SQL, DevOps, Kubernetes) | [roadmap.sh/roadmaps](https://roadmap.sh/roadmaps) | Praticamente todo o plano — use pra achar o roadmap certo de cada tecnologia específica na hora de cada Passo |
 
 ### Como usar sem virar mais uma trilha
@@ -79,7 +79,7 @@ O canal tem 150+ episódios ao todo — esta lista é o recorte que cruza direto
 ## Resumo — o que muda de verdade no plano
 
 1. **Duas adições concretas de baixo custo:** `Born2beroot` e `NetPractice`, antes da Fase 6 (Produção)
-2. **Um exercício adaptado, não importado:** servidor HTTP mínimo em C#, dentro da Fase 2.2, em vez do `webserv` em C++
+2. **Um exercício adaptado, não importado:** servidor HTTP mínimo em TypeScript (Node), no backend web, em vez do `webserv` em C++
 3. **roadmap.sh:** checklist de auditoria cruzada no início de cada bloco grande, não currículo próprio
 4. **Fábio Akita:** consumo semanal leve, contínuo, sem fase nem critério de conclusão — cultura de indústria, não currículo técnico
 5. **O resto do currículo da 42** (a maior parte, em C/C++ puro) fica de fora — não por falta de qualidade, mas porque o custo de abrir uma segunda linguagem de sistemas inteira não se paga dado o que você já tem pela frente

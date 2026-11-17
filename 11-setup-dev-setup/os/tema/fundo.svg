@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3840 2160" width="3840" height="2160">
+  <!-- Papel de parede do AMtech OS, nas cores do tema escuro da marca (data/marcas/amtech.json). -->
+  <defs>
+    <radialGradient id="luz" cx="72%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#16323A"/>
+      <stop offset="0.55" stop-color="#112429"/>
+      <stop offset="1" stop-color="#0B1A1E"/>
+    </radialGradient>
+    <pattern id="grade" width="96" height="96" patternUnits="userSpaceOnUse">
+      <path d="M96 0H0V96" fill="none" stroke="#24414A" stroke-width="1" opacity="0.45"/>
+    </pattern>
+    <linearGradient id="fio" x1="0" x2="1">
+      <stop offset="0" stop-color="#D9A85E" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#D9A85E"/>
+      <stop offset="1" stop-color="#D9A85E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="3840" height="2160" fill="url(#luz)"/>
+  <rect width="3840" height="2160" fill="url(#grade)"/>
+  <!-- Trilhas de circuito ligando o monograma ao resto da tela -->
+  <g fill="none" stroke="#7FC4C9" stroke-width="3" opacity="0.35" stroke-linecap="round">
+    <path d="M2208 880 H2700 V700 H3440"/>
+    <path d="M2208 1180 H2560 V1720 H3260"/>
+    <path d="M1632 880 H1200 V640 H400"/>
+    <path d="M1632 1180 H1300 V1840 H620"/>
+  </g>
+  <g fill="#7FC4C9" opacity="0.6">
+    <circle cx="3440" cy="700" r="9"/><circle cx="3260" cy="1720" r="9"/>
+    <circle cx="400" cy="640" r="9"/><circle cx="620" cy="1840" r="9"/>
+  </g>
+  <!-- Monograma AM -->
+  <g transform="translate(1920 1020)">
+    <rect x="-288" y="-288" width="576" height="576" rx="72" fill="#0E3A45" stroke="#7FC4C9" stroke-width="6"/>
+    <text x="0" y="78" text-anchor="middle" font-family="DejaVu Sans, Inter, sans-serif" font-weight="700"
+          font-size="236" letter-spacing="-6" fill="#E9EEEC">AM</text>
+  </g>
+  <rect x="1620" y="1384" width="600" height="4" fill="url(#fio)"/>
+  <text x="1920" y="1500" text-anchor="middle" font-family="DejaVu Sans, Inter, sans-serif" font-size="64"
+        letter-spacing="18" fill="#9AAEB0">AMTECH OS</text>
+</svg>

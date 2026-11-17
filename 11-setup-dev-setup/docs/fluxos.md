@@ -87,7 +87,7 @@ flowchart LR
 ```mermaid
 flowchart LR
   s0["1. Next.js + Aura Design System"]
-  s1["2. API ASP.NET Core"]
+  s1["2. API TypeScript (Next/NestJS)"]
   s2["3. Testes: xUnit, Playwright, k6"]
   s3["4. GitHub Actions"]
   s4["5. GitHub Pages"]
@@ -104,7 +104,7 @@ flowchart LR
 ```
 
 1. **[Next.js + Aura Design System](camadas/11-app.md#front)**: As telas em Next.js com o Aura Design System.
-2. **[API ASP.NET Core](camadas/11-app.md#api)**: A API ASP.NET Core de um sistema AM.
+2. **[API TypeScript (Next/NestJS)](camadas/11-app.md#api)**: A API TypeScript de um sistema AM.
 3. **[Testes: xUnit, Playwright, k6](camadas/11-app.md#tests)**: Testes de unidade, integração e tela.
 4. **[GitHub Actions](camadas/12-nuvem.md#gha)**: O Actions mostra os testes passando (selo verde).
 5. **[GitHub Pages](camadas/12-nuvem.md#ghp)**: O Pages publica o portfólio.

@@ -1,12 +1,14 @@
 # 0007 · Poliglota por função: a melhor ferramenta para cada trabalho
 
-- **Status:** aceita
+- **Status:** aceita, atualizada pela [0017](0017-nucleo-ts-python-dotnet-reserva.md)
 - **Data:** 2026-11-06
 - **Substitui:** a lista de tecnologias rejeitadas (Bun, Hono, Rust, Tauri, gRPC) e a regra de stack única
 
+> **Atualização (13/11, ADR 0017):** o núcleo passou a ser **TypeScript + Python + SQL** e o **.NET virou carta de reserva**. Onde esta ADR diz "Aura continua em .NET" e "Sistemas AM = C#/.NET", leia a 0017: os sistemas AM são **um produto único (AM Gestão) em TS + Python + Supabase**.
+
 ## Contexto
 
-Até aqui o setup tinha uma stack fixa (.NET 10 com Next.js) e uma lista de tecnologias proibidas. O Alan decidiu (06/11/2026) que não quer limite de linguagem para desenvolver e empreender: quer ser produtivo com a melhor ferramenta para cada trabalho.
+Até aqui o setup tinha uma stack por problema (.NET 10 com Next.js) e uma lista de tecnologias proibidas. O Alan decidiu (06/11/2026) que não quer limite de linguagem para desenvolver e empreender: quer ser produtivo com a melhor ferramenta para cada trabalho.
 
 ## Decisão
 

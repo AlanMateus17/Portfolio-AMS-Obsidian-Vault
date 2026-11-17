@@ -227,6 +227,7 @@ def gerar_arquitetura(eco: dict, por_camada: dict) -> str:
     out.append("")
     out.append("## Princípios\n")
     out.append("- O Windows cuida só do que precisa de janela, GPU e segurança; o código vive e roda no Linux (Ubuntu no WSL2). Ver [ADR 0001](adr/0001-wsl2-em-vez-de-dual-boot.md).")
+    out.append("- Proposta: o setup vira o AMtech OS, uma camada sobre o Ubuntu no 2º NVMe, com o Windows intocado no SSD atual. Ver [ADR 0016](adr/0016-amtech-os.md) e [os/](../os/README.md).")
     out.append("- Agentes de IA trabalham dentro de sandbox e só enxergam a pasta do projeto. Ver [ADR 0002](adr/0002-agentes-de-ia-em-sandbox.md).")
     out.append("- Infraestrutura por código, Azure primeiro e AWS depois. Ver [ADR 0003](adr/0003-azure-primeiro.md).")
     out.append("- Produção barata em VM pelo Kamal, um deploy só. Ver [ADR 0005](adr/0005-deploy-em-vm-com-kamal.md). Contrato no OpenAPI e Zod só no front. Ver [ADR 0006](adr/0006-contratos-na-borda.md).")
@@ -405,7 +406,7 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
         out.append(f"| {num(eco, c['id']):02d} | [{c['titulo']}](docs/camadas/{arquivo_camada(eco, c['id'])}) | {len(bl)} | {destaque} |")
     out += ["",
             "## Stack\n",
-            "Sistemas AM: C#/.NET 10 · ASP.NET Core (Controllers) · Clean Architecture + DDD · PostgreSQL · Redis · SignalR · Next.js, TypeScript, Tailwind e Zod · Docker · GitHub Actions · Kamal. Fora deles, a melhor ferramenta para cada trabalho ([ADR 0007](docs/adr/0007-poliglota-por-funcao.md)): Astro para sites, SvelteKit e PocketBase para MVPs, Go para CLIs, Rust para firmware, Python para dados e IA. Principal e reserva de cada função no [ADR 0008](docs/adr/0008-trocas-de-ferramenta-principal.md).\n",
+            "AM Gestão (produto único): **TypeScript (Next.js/NestJS) · Python/FastAPI · PostgreSQL (Supabase) · SQLite offline · Docker · GitHub Actions**; agente fiscal em **Go** ou C#. **.NET/C# é carta de reserva** (vaga corporativa ou agente fiscal) — ver [ADR 0017](docs/adr/0017-nucleo-ts-python-dotnet-reserva.md). Fora do produto, a melhor ferramenta para cada trabalho ([ADR 0007](docs/adr/0007-poliglota-por-funcao.md)): Astro para sites, PocketBase para MVPs, Go para CLIs, Rust para firmware/SO, Python para dados e IA.\n",
             "## Como este repositório funciona\n",
             "```mermaid", "flowchart LR",
             '  D["data/ecossistema.json<br/>data/mapa.json"] --> G["tools/gerar_docs.py"]',
@@ -437,6 +438,7 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
             "  adr/                decisões de arquitetura",
             "  index.html          diagrama interativo (gerado)",
             "  mapa.html           sistemas, nuvens, pilha, mercado e ordem de estudo (gerado)",
+            "os/                  AMtech OS: instalar.sh (Ubuntu → AMtech OS), perfis, tema e o comando amtech",
             "scripts/windows/      instalar.ps1, verificar.ps1, extensões do VS Code e o inventário do Windows",
             "scripts/wsl/          bootstrap.sh, nuvem.sh, verificar.sh e ativar-pipeline.sh",
             "infra/automacao/      n8n, banco de métricas, Grafana e Uptime Kuma (Docker Compose)",
@@ -449,7 +451,7 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
             "justfile              porta única de comandos (check, triagem, arquiteto, docs, ci-local)",
             "```\n",
             "## Status\n",
-            "Em construção por fases. A fase 1 (Windows, WSL2, Docker e .NET) está em andamento; o restante segue o [roteiro de estudo](docs/roteiro.md).\n",
+            "Em construção por fases. A fase 1 (Windows, WSL2, Docker, Node/TS e Python) está em andamento; o restante segue o [roteiro de estudo](docs/roteiro.md).\n",
             "## Licença\n",
             "[MIT](LICENSE)\n"]
     return "\n".join(out)

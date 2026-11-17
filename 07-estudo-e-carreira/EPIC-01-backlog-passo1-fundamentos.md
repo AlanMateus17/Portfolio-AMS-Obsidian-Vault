@@ -14,11 +14,11 @@ status: completo
 | Campo | Valor |
 |---|---|
 | **Epic** | EPIC-01 — Fundamentos |
-| **Objetivo** | Dominar lógica de programação e matemática básica o suficiente para iniciar C# com fundamento real, sem lacuna |
+| **Objetivo** | Dominar lógica de programação e matemática básica o suficiente para iniciar TypeScript com fundamento real, sem lacuna |
 | **Duração estimada** | 2-3 semanas (9h/semana ≈ 18-27h totais) |
 | **Definição de pronto do Epic** | Todas as User Stories abaixo com status "Done", critério de aceite validado em cada uma |
 | **Dependência** | Nenhuma — ponto de partida do projeto inteiro |
-| **Bloqueia** | EPIC-02 (C# Fundamentals) não inicia sem este Epic em "Done" |
+| **Bloqueia** | EPIC-02 (TypeScript Fundamentals) não inicia sem este Epic em "Done" |
 
 ---
 
@@ -223,7 +223,7 @@ status: completo
 | Sprint 4 | US-12, US-13, US-14 | 5h30 | A fazer |
 | **Total do Epic** | 14 User Stories, 32 Tasks | **~30h** | — |
 
-Com 9h/semana, isso é **~3,3 semanas** — a Parte II inteira do livro (Teoria dos Números — Naturais/Inteiros, Aritmética Modular, Racionais, Aplicações Aritméticas, Sequências, Reais) fica **fora** deste Epic de propósito, entrando no próximo (EPIC-02, junto com Git/SQL/C#), porque é densa demais pra caber no Passo 1 sem prejudicar a profundidade.
+Com 9h/semana, isso é **~3,3 semanas** — a Parte II inteira do livro (Teoria dos Números — Naturais/Inteiros, Aritmética Modular, Racionais, Aplicações Aritméticas, Sequências, Reais) fica **fora** deste Epic de propósito, entrando no próximo (EPIC-02, junto com Git/SQL/TS), porque é densa demais pra caber no Passo 1 sem prejudicar a profundidade.
 
 ---
 

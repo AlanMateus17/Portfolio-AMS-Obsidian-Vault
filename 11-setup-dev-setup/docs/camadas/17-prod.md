@@ -152,8 +152,8 @@ flowchart LR
 | [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
 | [Livro Lógica e Máquina](#livro) | Local | Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impresso, kit, curso e site saem da mesma fonte. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos); passo 43.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Aulas particulares](#aulas) | Físico | Seus estudos viram aula paga. | passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Sites para pequenas empresas](#sites) | Local | Freelance em Barbacena: sites e lojas. | passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
-| [Sistemas AM (SaaS)](#saas) | Remoto · futuro | AM Kaixara, AM Rendara e os demais, vendidos por assinatura. | passo 50.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [Sites para pequenas empresas](#sites) | Local | Freelance em Barbacena: sites e lojas. | passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Sistemas AM (SaaS)](#saas) | Remoto · futuro | AM Kaixara, AM Rendara e os demais, vendidos por assinatura. | passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
 | [Esteira de sites (issue → PR → ar)](#esteira) | Local | Ficha como issue, agente abre o PR, CI confere HTML, links e acessibilidade, a rotina do Claude revisa, você aprova a prévia e o merge publica na Hostinger. Modelo em infra/templates/esteira-site. | passo 28.3 · Semana 6 · nov/2026 a dez/2026; passo 28.4 · Semana 6 · nov/2026 a dez/2026; passo 28.5 · Semana 6 · nov/2026 a dez/2026 |
 
 <a id="curso"></a>
@@ -262,7 +262,7 @@ Seus estudos viram aula paga.
 
 Freelance em Barbacena: sites e lojas.
 
-**Quando entra:** passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.3 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -285,7 +285,7 @@ Freelance em Barbacena: sites e lojas.
 
 AM Kaixara, AM Rendara e os demais, vendidos por assinatura.
 
-**Quando entra:** passo 50.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

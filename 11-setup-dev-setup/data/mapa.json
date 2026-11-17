@@ -65,7 +65,7 @@
    "detalhes": [
     {
      "k": "Por quê",
-     "v": "A stack do Aura é .NET 10; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft."
+     "v": "A stack do Aura é TypeScript/Python; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft."
     },
     {
      "k": "Certificações",
@@ -209,7 +209,7 @@
   {
    "etapa": "Fundação",
    "quando": "Agora até dez/2027 · Passos 1 a 8 da trilha de estudo do vault",
-   "o_que": "Terminar o núcleo do setup; C#/.NET, SQL, Python, Git, Docker Compose e testes. Entregar o primeiro sistema AM com CI no GitHub Actions. Isso já atende a maioria das vagas júnior .NET."
+   "o_que": "Terminar o núcleo do setup; TypeScript/Python, SQL, Python, Git, Docker Compose e testes. Entregar o primeiro sistema AM com CI no GitHub Actions. Isso já atende a maioria das vagas júnior .NET."
   },
   {
    "etapa": "Nuvem Azure",
@@ -298,7 +298,7 @@
   },
   {
    "nome": "aura-mcp",
-   "tipo": "Servidor MCP em C#",
+   "tipo": "Servidor MCP em TypeScript",
    "fase": "f3",
    "descricao": "Expõe ao agente o catálogo dos 13 sistemas, ADRs e o vault. Projeto de portfólio de IA com sua stack."
   },
@@ -310,7 +310,7 @@
   },
   {
    "nome": "aura-status",
-   "tipo": "Ferramenta C#",
+   "tipo": "Ferramenta (Go/Python)",
    "fase": "f2",
    "descricao": "Painel de repos, backup, Dependabot e estudos. Depois, módulo da Waybar no Arch."
   },
@@ -324,7 +324,7 @@
    "nome": "AMtech Dev Edition",
    "tipo": "Scripts sobre o Omarchy",
    "fase": "fut",
-   "descricao": "Sua edição do Arch com tema Aura e ambiente .NET."
+   "descricao": "Sua edição do Arch com tema Aura e ambiente Node/Python."
   },
   {
    "nome": "Pipeline de treino AMtech",
@@ -354,7 +354,7 @@
   },
   {
    "item": "Mobile nativo (Kotlin, Swift, Flutter)",
-   "motivo": "Abriria outra stack. O app mobile entra em 2028 com .NET MAUI, na mesma linguagem do Aura (fase Distribuído, plataforma e segunda nuvem)."
+   "motivo": "Abriria outra stack. O app mobile entra em 2028 com React Native, na mesma linguagem do Aura (fase Distribuído, plataforma e segunda nuvem)."
   },
   {
    "item": "OpenClaw",

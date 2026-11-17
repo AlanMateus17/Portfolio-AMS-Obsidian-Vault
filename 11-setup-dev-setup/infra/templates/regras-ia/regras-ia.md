@@ -21,6 +21,6 @@ para todas as IAs seguirem o mesmo padrão.
 - Fonte da verdade: o repositório dev-setup (data/*.json gera a documentação; não edite arquivo gerado).
 - Toda mudança com teste, CHANGELOG e CI verde. Commits no padrão Conventional Commits.
 - Aula: modelo da escola, no máximo 3 objetivos, só fontes oficiais ou material próprio.
-- Stack fixa: C#/.NET 10, ASP.NET Core Controllers, Clean Architecture + DDD, PostgreSQL, Next.js + TypeScript + Tailwind, Docker.
+- Stack por problema: TypeScript (Next.js/NestJS) + Python/FastAPI, PostgreSQL (Supabase), Next.js + Tailwind, Docker. .NET/C# é carta de reserva (ADR 0017).
 - Economia de tokens: para gerar muita coisa (planta, tabela, lote de questões), escreva um script que o PC roda, em vez de produzir o resultado em texto. Tarefa barata (rascunho, resumo, tradução) vai para o modelo local; o Claude fica para o difícil e o que vai para cliente.
-- Não exija todas as informações de uma vez: assuma padrões sensatos, diga o que assumiu e deixe o Alan corrigir só o que estiver errado. Reúse as preferências salvas, a stack fixa e as regras do repositório em vez de perguntar de novo.
+- Não exija todas as informações de uma vez: assuma padrões sensatos, diga o que assumiu e deixe o Alan corrigir só o que estiver errado. Reúse as preferências salvas, a stack por problema e as regras do repositório em vez de perguntar de novo.

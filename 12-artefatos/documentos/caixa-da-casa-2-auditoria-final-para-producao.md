@@ -204,7 +204,7 @@ Para resolver o problema de verdade, faltam sobretudo coisas que tiram trabalho 
 
 ## Arquitetura para produção
 
-Recomendo levar o sistema para a stack fixa do Aura, como AM Rendara: .NET 10 com Controllers, PostgreSQL com Row-Level Security por família, Redis, Next.js e Docker. As regras de `src/dominio` são portadas, não reinventadas.
+Recomendo levar o sistema para a stack por problema do Aura, como AM Rendara: .NET 10 com Controllers, PostgreSQL com Row-Level Security por família, Redis, Next.js e Docker. As regras de `src/dominio` são portadas, não reinventadas.
 
 ![arquitetura proposta · clientes, API, dados e fontes oficiais](imagens/caixa-da-casa-2-auditoria-final-para-producao__1.svg)
 
@@ -223,7 +223,7 @@ Como portar sem perder o que já foi validado: transformar os casos dos testes a
 
 - [ ] **Fase 0 agora?** Posso corrigir B1 a B5, S1, R1 e U2 no artefato atual, com testes, antes de você lançar os dados reais. Recomendo fazer antes de lançar.
 - [ ] **Compartilhar com a Claudia só depois do S1.** Sem as regras de acesso, quem recebe o link de uso pode apagar as contas da casa.
-- [ ] **Stack do produto.** O caminho .NET segue o Aura e o AM Rendara, mas exige portar o domínio para C#. A outra opção é um backend em TypeScript, que reaproveita `src/dominio` sem porta, mas é um desvio da stack fixa.
+- [ ] **Stack do produto.** O caminho .NET segue o Aura e o AM Rendara, mas exige portar o domínio para C#. A outra opção é um backend em TypeScript, que reaproveita `src/dominio` sem porta, mas é um desvio da stack por problema.
 - [ ] **Caixa da Casa como produto próprio ou como módulo do AM Rendara.** O escopo dos dois já se sobrepõe (finanças pessoais, ARCA).
 - [ ] **Investimentos para clientes.** O sistema só aplica as regras que o próprio cliente define, sem recomendação, ou vira consultoria registrada na CVM com o sócio. Decidir com parecer de advogado.
 - [ ] **Quando pagar Open Finance.** O agregador mais barato do relato custa R$ 540/mês mais R$ 1.500 de entrada; só se paga com clientes.

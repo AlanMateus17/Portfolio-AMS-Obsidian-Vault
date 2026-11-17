@@ -74,7 +74,7 @@ flowchart LR
   end
   subgraph L_app["Aplicação: sistemas AM (Aura)"]
     n_ai["IA: RAG + pgvector"]
-    n_api["API ASP.NET Core"]
+    n_api["API TypeScript (Next/NestJS)"]
     n_front["Next.js + Aura Design System"]
   end
   subgraph L_chat["Assistentes de IA (chat, pesquisa e estudo)"]
@@ -375,7 +375,7 @@ Revisão de código, arquitetura, ADR, testes, incidentes, crítica de design e 
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API ASP.NET Core](11-app.md#api) | Aplicação: sistemas AM (Aura) | revisão e arquitetura |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | revisão e arquitetura |
 
 <a id="pfin"></a>
 

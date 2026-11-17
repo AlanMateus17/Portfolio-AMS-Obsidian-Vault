@@ -12,6 +12,24 @@ default:
 triagem pedido *opcoes:
     python3 tools/triagem/triagem.py triar "{{pedido}}" {{opcoes}}
 
+# Motor de decisão (ADR 0014): qual degrau da escada resolve o pedido, sem chamar IA: just motor "calcular o rateio"
+motor pedido:
+    python3 tools/motor/motor.py decidir "{{pedido}}"
+
+# Registra o gasto de uma chamada de IA: just motor-custo claude sonnet --entrada 12000 --saida 1800 --usd 0.06
+motor-custo ferramenta modelo *opcoes:
+    python3 tools/motor/motor.py custo {{ferramenta}} {{modelo}} {{opcoes}}
+
+# Marca se a decisão deu certo (alimenta a regra de três): just motor-ok 7   |   just motor-refazer 7
+motor-ok id:
+    python3 tools/motor/motor.py resultado {{id}} ok
+motor-refazer id:
+    python3 tools/motor/motor.py resultado {{id}} refazer
+
+# Decisões por degrau, gasto e o que já pode virar script: just motor-relatorio
+motor-relatorio:
+    python3 tools/motor/motor.py relatorio
+
 # Pacote de contexto para o Claude (só imprime, gasta zero token): just arquiteto "módulo de aporte do AM Rendara"
 arquiteto pedido:
     python3 tools/triagem/triagem.py arquitetar "{{pedido}}"
@@ -34,6 +52,7 @@ docs:
     python3 tools/negocios/gerar.py
     python3 tools/cockpit/gerar.py
     python3 tools/akita/akita.py docs
+    python3 tools/nucleo/agenda.py rapido --doc
     python3 tools/vault/espelho.py --se-existir
 
 # O portão antes de cada commit: dados, documentação gerada, testes e segredos (o mesmo que o CI confere)
@@ -50,10 +69,11 @@ check:
     python3 tools/negocios/gerar.py --check
     python3 tools/cockpit/gerar.py --check
     python3 tools/akita/akita.py docs --check
+    python3 tools/nucleo/agenda.py rapido --check
     python3 -m unittest discover -s tools -p "test_gerar_docs.py" -q
     for d in tools/*/; do if ls "$d"test_*.py >/dev/null 2>&1; then python3 -m unittest discover -s "$d" -q; fi; done
     if command -v gitleaks >/dev/null; then gitleaks git --no-banner -v . >/dev/null; else echo "gitleaks ausente: rode o bootstrap"; fi
-    if command -v shellcheck >/dev/null; then shellcheck -S warning scripts/wsl/*.sh infra/automacao/*.sh infra/automacao/sql/*.sh; fi
+    if command -v shellcheck >/dev/null; then shellcheck -S warning scripts/wsl/*.sh infra/automacao/*.sh infra/automacao/sql/*.sh os/instalar.sh os/amtech; fi
 
 # Roda o CI do GitHub Actions na sua máquina, sem push (precisa do Docker): just ci-local
 ci-local:
@@ -71,6 +91,14 @@ conversa:
 # Mede antes de mudar de stack: just medir "python3 tools/gerar_docs.py --check"
 medir comando:
     hyperfine --warmup 2 "{{comando}}"
+
+# AMtech OS: mostra o que o instalador faria (rode numa VM ou no Linux nativo; veja os/README.md)
+os-simular perfil="dev":
+    bash os/instalar.sh --perfil {{perfil}} --simular
+
+# AMtech OS: transforma este Ubuntu no AMtech OS: just os-instalar dev "Alan Mateus" voce@exemplo.com
+os-instalar perfil="dev" nome="" email="":
+    bash os/instalar.sh --perfil {{perfil}} {{ if nome != "" { "--nome '" + nome + "'" } else { "" } }} {{ if email != "" { "--email " + email } else { "" } }}
 
 # Confere o que está instalado no Ubuntu
 verificar:
@@ -119,6 +147,10 @@ tarefas:
 agora empresa="":
     python3 tools/nucleo/agenda.py agora {{ if empresa != "" { "--empresa " + empresa } else { "" } }}
 
+# O caminho mais curto: o setup funcionando e as 3 empresas prontas para vender, em 7 sessões: just rapido  ·  just rapido --todas
+rapido *opcao:
+    python3 tools/nucleo/agenda.py rapido {{opcao}}
+
 # Só as decisões que são suas: just decisoes software
 decisoes empresa="":
     python3 tools/nucleo/agenda.py decisoes {{ if empresa != "" { "--empresa " + empresa } else { "" } }}
@@ -135,6 +167,10 @@ progresso empresa="":
 professor *args:
     python3 tools/professor/professor.py {{args}}
 
+# Recrutador: just recrutador semana | entrevista FORMATO [--empresa X] [--vaga arq.txt] [--claude] | registrar FORMATO NOTA | progresso
+recrutador *args:
+    python3 tools/recrutador/recrutador.py {{args}}
+
 # Escola Akita: just akita sincronizar | indexar | fila | notar SLUG | lote | pendentes | aprovar ID | aplicar ID
 akita *args:
     python3 tools/akita/akita.py {{args}}
@@ -150,3 +186,23 @@ vault-espelho *opcao:
 # Backup agora (o mesmo do agendamento das 22h30)
 backup:
     bash scripts/wsl/backup.sh
+
+# Liga o setup para o celular (Ollama, modelos, aider, LiteLLM, fila, bot, Remote Control): just ligar  ·  só ver: just ligar --simular
+ligar *opcao:
+    bash scripts/wsl/ligar-tudo.sh {{opcao}}
+
+# O que está no ar agora (serviços, Ollama, LiteLLM, últimos pedidos)
+ligado:
+    bash scripts/wsl/ligar-tudo.sh --status
+
+# Para os serviços do celular (não desinstala nada)
+desligar:
+    bash scripts/wsl/ligar-tudo.sh --desligar
+
+# Manda um pedido para a fila (o mesmo do /pedir no Telegram): just pedir "@catalogo-html corrigir o menu"
+pedir texto:
+    python3 tools/remoto/fila.py adicionar "{{texto}}"
+
+# Pedidos da fila e se o Claude está em pausa por limite
+fila:
+    python3 tools/remoto/fila.py listar

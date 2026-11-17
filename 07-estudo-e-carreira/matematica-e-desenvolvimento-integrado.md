@@ -38,7 +38,7 @@ status: completo
 
 ---
 
-### Passo 2-3 (Git/SQL + início de C#) — Parte II, capítulos 3-6
+### Passo 2-3 (Git/SQL + início de TypeScript) — Parte II, capítulos 3-6
 A Parte II é a mais densa do livro inteiro, e merece o próprio bloco de tempo, não uma inclusão parcial no Passo 1.
 
 | Capítulo | Conteúdo real (via subtópico) | Conexão |
@@ -50,7 +50,7 @@ A Parte II é a mais densa do livro inteiro, e merece o próprio bloco de tempo,
 
 ---
 
-### Passo 2-6 (junto com C#/Frontend/Arquitetura) — restante da Parte II + Parte IV início
+### Passo 2-6 (junto com TS/Frontend/Arquitetura) — restante da Parte II + Parte IV início
 | Capítulo | Conteúdo | Conexão |
 |---|---|---|
 | 7. Sequências Numéricas | Recorrência, somas telescópicas, PA, PG | Recorrência matemática = recursão em código, mesma semana que US-06 |
@@ -102,6 +102,21 @@ A Parte II é a mais densa do livro inteiro, e merece o próprio bloco de tempo,
 ## O que fica igual
 
 A observação sobre Física continua valendo — o livro não cobre física, então a recomendação de tratá-la como trilha separada permanece intacta.
+
+---
+
+## Física (trilha leve, mora aqui)
+
+O livro de matemática não cobre física, então ela entra como bloco leve, de fim de semana, **sempre ligada a algo concreto** — não física abstrata de vestibular.
+
+- **Por que estudar:** dá base para robótica/IoT (sensores, motores, energia) e para entender hardware de verdade. Liga com a [trilha-robotica-iot](trilha-robotica-iot.md).
+- **O que estudar (nesta ordem, aplicado):**
+  1. **Eletricidade básica** — tensão, corrente, resistência, Lei de Ohm, circuitos (direto no Arduino/ESP32).
+  2. **Mecânica básica** — força, movimento, torque (para motores e protótipos).
+  3. **Energia e potência** — consumo, baterias, dissipação (para projetos que rodam sozinhos).
+  4. **Ondas e sinais** (leve) — só o necessário para sensores e comunicação.
+- **Como:** cada conceito vira uma montagem no protótipo da vez (ex.: medir tensão de um sensor, dimensionar um motor). Recurso: canais de eletrônica aplicada + a documentação do componente.
+- **Ritmo:** sábado, junto com robótica. Nunca compete com o AM Gestão.
 
 ---
 

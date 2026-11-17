@@ -1,5 +1,7 @@
 # 0011 · Eixo profundo: software para finanças, dentro do Grupo AMtech Digital
 
+> **Revisto em parte pelo [ADR 0015](0015-nada-pausado.md) (11/11/2026):** o item 5 (pausas com gatilho) foi retirado. O eixo continua; os temas da lista estão ativos.
+
 - **Status:** aceita
 - **Data:** 2026-11-06
 

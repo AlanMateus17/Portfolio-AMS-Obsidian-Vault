@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+# amtech: o comando do AMtech OS. Instalado em /usr/local/bin/amtech pelo os/instalar.sh.
+#
+#   amtech                 estado do sistema (o mesmo que amtech status)
+#   amtech sobre           versão, perfil e base
+#   amtech atualizar       snapshot (se a raiz for Btrfs), atualiza o sistema e o dev-setup
+#   amtech atualizar --simular
+#   amtech snapshots       lista os pontos de volta
+#   amtech saude           discos (SMART), temperatura e bateria
+#   amtech ajuda
+set -euo pipefail
+
+RELEASE=/etc/amtech-release
+SETUP="${AMTECH_SETUP:-$HOME/dev/dev-setup}"
+tem() { command -v "$1" >/dev/null 2>&1; }
+SUDO="sudo"; [[ $EUID -eq 0 ]] && SUDO=""
+valor() { [[ -r $RELEASE ]] && sed -n "s/^$1=\"\{0,1\}\([^\"]*\)\"\{0,1\}$/\1/p" "$RELEASE" | head -1; }
+raiz_btrfs() { [[ "$(findmnt -no FSTYPE / 2>/dev/null)" == "btrfs" ]]; }
+linha() { local LC_ALL=C.UTF-8; local n=$((14 - ${#1})); ((n < 0)) && n=0; printf '  %s%*s %s\n' "$1" "$n" "" "$2"; }  # ${#} conta letras, não bytes
+
+sobre() {
+  if [[ ! -r $RELEASE ]]; then echo "AMtech OS não instalado aqui (falta $RELEASE). Rode: bash os/instalar.sh"; return 1; fi
+  echo "AMtech OS $(valor VERSAO)"
+  linha "Perfil" "$(valor PERFIL)"
+  linha "Base" "$(valor BASE)"
+  linha "Instalado em" "$(valor INSTALADO_EM)"
+}
+
+status() {
+  sobre || true
+  echo
+  linha "Kernel" "$(uname -r)"
+  linha "Ligado há" "$(uptime -p 2>/dev/null | sed 's/^up //')"
+  linha "Disco /" "$(df -h / | awk 'NR==2{print $3" de "$2" ("$5")"}')"
+  linha "Memória" "$(free -h | awk '/^Mem/{print $3" de "$2}')"
+  if raiz_btrfs && tem snapper; then
+    linha "Snapshots" "$($SUDO snapper -c root list 2>/dev/null | tail -n +3 | wc -l) (amtech snapshots)"
+  else
+    linha "Snapshots" "indisponível (raiz não é Btrfs)"
+  fi
+  if tem ufw; then linha "Firewall" "$($SUDO ufw status 2>/dev/null | head -1 | sed 's/Status: //')"; fi
+  if tem docker; then
+    if docker info >/dev/null 2>&1; then linha "Docker" "$(docker ps -q | wc -l) container(s) rodando"
+    else linha "Docker" "sem acesso (saia e entre na sessão para valer o grupo docker)"; fi
+  fi
+  if tem nvidia-smi; then linha "GPU" "$(nvidia-smi --query-gpu=name,temperature.gpu --format=csv,noheader 2>/dev/null | sed 's/, / · /')°C"; fi
+  if tem apt; then linha "Atualizações" "$(apt list --upgradable 2>/dev/null | grep -c upgradable || true) pendente(s) (amtech atualizar)"; fi
+  if [[ -d $SETUP/.git ]]; then linha "dev-setup" "$(git -C "$SETUP" log -1 --format='%h · %cr' 2>/dev/null)"; fi
+}
+
+saude() {
+  echo "Discos (SMART):"
+  if tem smartctl; then
+    discos=$(lsblk -dno NAME,TYPE 2>/dev/null | awk '$2=="disk" && $1 !~ /^zram/{print $1}' || true)
+    [[ -z $discos ]] && linha "-" "nenhum disco visível (container?)"
+    for d in $discos; do
+      r=$($SUDO smartctl -H "/dev/$d" 2>/dev/null | grep -Ei 'result|status' | head -1 | sed 's/.*: *//' || true)
+      linha "/dev/$d" "${r:-sem SMART (comum em VM)}"
+    done
+  else linha "-" "instale smartmontools"; fi
+  echo "Temperatura:"
+  if tem sensors; then
+    t=$(sensors 2>/dev/null | grep -E '°C' | head -6 || true)
+    if [[ -n $t ]]; then while IFS= read -r l; do printf '  %s\n' "$l"; done <<<"$t"; else linha "-" "nenhum sensor visível (comum em VM)"; fi
+  else linha "-" "instale lm-sensors"; fi
+  echo "Bateria:"
+  b=""; for x in /sys/class/power_supply/BAT*; do [[ -d $x ]] && { b=$x; break; }; done
+  if [[ -n $b && -r $b/energy_full && -r $b/energy_full_design ]]; then
+    linha "Capacidade" "$(( $(cat "$b/energy_full") * 100 / $(cat "$b/energy_full_design") ))% da original"
+  elif [[ -n $b && -r $b/charge_full && -r $b/charge_full_design ]]; then
+    linha "Capacidade" "$(( $(cat "$b/charge_full") * 100 / $(cat "$b/charge_full_design") ))% da original"
+  else linha "-" "sem bateria (desktop ou VM)"; fi
+}
+
+atualizar() {
+  local simular=0
+  [[ ${1:-} == "--simular" ]] && simular=1
+  if raiz_btrfs && tem snapper; then
+    if [[ $simular -eq 1 ]]; then echo "CRIARIA snapshot 'antes de amtech atualizar'"
+    else $SUDO snapper -c root create --description "antes de amtech atualizar" && echo "Snapshot criado."; fi
+  else
+    echo "AVISO: sem snapshot (raiz não é Btrfs). A atualização segue sem ponto de volta."
+  fi
+  if [[ $simular -eq 1 ]]; then
+    echo "RODARIA apt update + full-upgrade; snap refresh; git pull --ff-only em $SETUP"; return 0
+  fi
+  $SUDO apt-get update
+  $SUDO apt-get -y full-upgrade
+  if tem snap; then $SUDO snap refresh || true; fi
+  if [[ -d $SETUP/.git ]]; then
+    if git -C "$SETUP" diff --quiet && git -C "$SETUP" diff --cached --quiet; then
+      git -C "$SETUP" pull --ff-only && echo "dev-setup atualizado. Para aplicar a configuração: chezmoi apply"
+    else
+      echo "dev-setup com mudanças não salvas: não puxei nada. Faça commit e rode de novo."
+    fi
+  fi
+  [[ -f /var/run/reboot-required ]] && echo "Reinicie para terminar a atualização."
+  return 0
+}
+
+snapshots() {
+  if raiz_btrfs && tem snapper; then
+    $SUDO snapper -c root list
+    echo
+    echo "Para voltar: escolha o snapshot no menu de boot ou veja os/README.md (Voltar atrás)."
+  else
+    echo "Sem snapshots: a raiz não é Btrfs. Na instalação de verdade, escolha Btrfs (os/README.md)."
+  fi
+}
+
+case "${1:-status}" in
+  status) status ;;
+  sobre) sobre ;;
+  saude|saúde) saude ;;
+  atualizar) shift; atualizar "${1:-}" ;;
+  snapshots) snapshots ;;
+  ajuda|-h|--help) sed -n '2,10p' "$0" | sed 's/^# \{0,1\}//' ;;
+  *) echo "Comando desconhecido: $1 (amtech ajuda)" >&2; exit 64 ;;
+esac

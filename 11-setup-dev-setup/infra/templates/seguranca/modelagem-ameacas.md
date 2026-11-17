@@ -21,7 +21,7 @@ Desenhe (Mermaid, Excalidraw) as caixas: navegador → API → banco, e marque c
 
 ```mermaid
 flowchart LR
-  U["Navegador do caixa"] -->|HTTPS + token| API["API ASP.NET Core"]
+  U["Navegador do caixa"] -->|HTTPS + token| API["API TypeScript (Next/NestJS)"]
   API --> DB[("PostgreSQL")]
   API -->|webhook| GW["Gateway de pagamento"]
 ```
@@ -43,8 +43,8 @@ Para cada caixa e cada seta, pergunte as seis letras. Anote só o que se aplica.
 
 - [ ] Toda regra de negócio e toda checagem de permissão roda no servidor; o cliente (web, app, desktop) é só tela.
 - [ ] Nenhum segredo no código ou no front: connection string, chave de API e senha vêm do cofre ou de variável de ambiente.
-- [ ] Senhas com hash próprio para senha (ASP.NET Core Identity / PBKDF2, Argon2), nunca SHA puro.
-- [ ] Consultas parametrizadas (EF Core) em todo lugar; nada de SQL montado com texto do usuário.
+- [ ] Senhas com hashing dedicado (bcrypt ou argon2), nunca SHA puro.
+- [ ] Consultas parametrizadas (ORM: Prisma/Drizzle) em todo lugar; nada de SQL montado com texto do usuário.
 - [ ] Saída codificada no HTML (Razor/React já fazem; cuidado com `dangerouslySetInnerHTML` e `Html.Raw`).
 - [ ] Cookies `HttpOnly`, `Secure`, `SameSite`; HTTPS obrigatório (HSTS).
 - [ ] Cabeçalhos de segurança: CSP, X-Content-Type-Options, Referrer-Policy.

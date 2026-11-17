@@ -48,7 +48,7 @@ Você vai errar gramática e pronúncia por muito tempo — isso é esperado e n
 ### B1 (Intermediário) — início da Fase B
 **Gramática:** presente perfeito, condicional tipo 1 e 2, modais (can/could/should/must/have to), voz passiva básica, orações relativas (who/which/that)
 **Vocabulário:** trabalho, tecnologia básica, descrever processo passo a passo, expressar opinião simples
-**Como estudar:** aqui entra o **input compreensível técnico** (1.1) — ler documentação oficial do .NET em inglês, já que o conteúdo você entende, só o idioma é novo
+**Como estudar:** aqui entra o **input compreensível técnico** (1.1) — ler documentação oficial (TypeScript, Next.js, Python) em inglês, já que o conteúdo você entende, só o idioma é novo
 **Técnica:** leitura extensiva de documentação técnica + Anki continuando pra vocabulário novo encontrado nela (adicione ao baralho toda palavra nova que aparecer na doc)
 
 ### B2 (Intermediário-avançado) — meta mínima pra entrevista técnica, Fase B avançada/C

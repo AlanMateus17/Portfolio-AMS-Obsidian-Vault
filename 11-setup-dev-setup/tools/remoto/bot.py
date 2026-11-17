@@ -10,7 +10,8 @@ Uso:
     python tools/remoto/bot.py                 # fica ouvindo (rode como serviço, ver o roteiro)
     python tools/remoto/bot.py --avisar "texto"  # outros scripts mandam aviso para o seu celular
 
-Comandos: /ajuda /status /resumo /radar. Nunca recebe senha, nunca executa texto vindo da conversa.
+Comandos: /ajuda /status /resumo /radar /pedir /fila. Nunca recebe senha, nunca executa texto vindo da conversa
+como comando: /pedir só guarda o pedido na fila (tools/remoto/fila.py), que trabalha numa worktree separada.
 """
 from __future__ import annotations
 
@@ -30,8 +31,9 @@ COMANDOS = {
     "/status": ["bash", str(RAIZ / "scripts" / "wsl" / "verificar.sh")],
     "/resumo": ["bash", str(RAIZ / "scripts" / "wsl" / "resumo-manha.sh"), "--texto"],
 }
-AJUDA = ("Comandos:\n/status – o setup está ok?\n/resumo – resumo do dia\n/radar – últimas oportunidades aprovadas\n"
-         "/ajuda – esta lista\n\nNunca mande senha por aqui.")
+AJUDA = ("Comandos:\n/pedir TEXTO – manda um pedido para a fila (use @repo no começo para outro repositório)\n"
+         "/fila – como estão os pedidos\n/status – o setup está ok?\n/resumo – resumo do dia\n"
+         "/radar – últimas oportunidades aprovadas\n/ajuda – esta lista\n\nNunca mande senha por aqui.")
 
 
 def carregar_env(caminho: Path = ENV) -> dict:
@@ -61,6 +63,21 @@ def responder(texto: str, raiz: Path = RAIZ) -> str:
     if cmd == "/radar":
         r = Path.home() / "radar.md"
         return r.read_text(encoding="utf-8")[:3500] if r.exists() else "Ainda não há radar.md. Rode o radar primeiro."
+    if cmd == "/pedir":
+        resto = texto.strip().split(None, 1)
+        if len(resto) < 2:
+            return "Escreva o pedido depois do /pedir. Ex.: /pedir criar a página de vendas do curso de lógica"
+        sys.path.insert(0, str(raiz / "tools" / "remoto"))
+        import fila  # noqa: PLC0415
+        item = fila.adicionar(resto[1])
+        return f"Na fila: {item['id']} ({item['repo']}). Aviso aqui quando terminar."
+    if cmd == "/fila":
+        try:
+            out = subprocess.run([sys.executable, str(raiz / "tools" / "remoto" / "fila.py"), "listar"],
+                                 capture_output=True, text=True, timeout=60).stdout
+        except Exception as e:  # noqa: BLE001
+            return f"Falhou: {e}"
+        return (out.strip() or "Fila vazia.")[-3500:]
     if cmd in COMANDOS:
         try:
             out = subprocess.run(COMANDOS[cmd], capture_output=True, text=True, timeout=120).stdout

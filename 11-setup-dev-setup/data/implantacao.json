@@ -7,11 +7,11 @@
    "passos": [
     {
      "id": "diag-pasta",
-     "titulo": "Extrair o dev-setup.zip e deixar a pasta em C:\\Users\\SEU_USUARIO\\dev-setup",
+     "titulo": "Baixar o dev-setup do GitHub para C:\\Users\\SEU_USUARIO\\dev-setup",
      "quem": "voce",
-     "pronto": "Pasta C:\\Users\\SEU_USUARIO\\dev-setup com RODAR-DIAGNOSTICO.cmd e as pastas scripts, data e docs logo dentro dela; nenhuma outra cópia em Downloads",
+     "pronto": "Pasta C:\\Users\\SEU_USUARIO\\dev-setup com RODAR-DIAGNOSTICO.cmd e as pastas scripts, data e docs logo dentro dela (o Git pede o login do GitHub no navegador uma vez)",
      "tempo_min": 5,
-     "comando": "if (Test-Path $HOME\\dev-setup) { Write-Host \"Ja existe $HOME\\dev-setup\" } else { Expand-Archive \"$HOME\\Downloads\\dev-setup.zip\" \"$env:TEMP\\dsx\" -Force; Move-Item \"$env:TEMP\\dsx\\dev-setup\" \"$HOME\\dev-setup\"; Remove-Item \"$env:TEMP\\dsx\" -Recurse; Write-Host \"Pronto: $HOME\\dev-setup\" }",
+     "comando": "if (Test-Path $HOME\\dev-setup) { Write-Host \"Ja existe $HOME\\dev-setup\" } else { winget install --id Git.Git -e --accept-source-agreements --accept-package-agreements; & \"$env:ProgramFiles\\Git\\cmd\\git.exe\" clone https://github.com/AlanMateus17/dev-setup.git \"$HOME\\dev-setup\" }",
      "nota": "Botão direito no zip > Extrair tudo. O Windows costuma criar dev-setup\\dev-setup: recorte a pasta de dentro (a que tem a pasta scripts) e cole em C:\\Users\\SEU_USUARIO, a pasta com o seu nome. Apague as cópias que sobraram em Downloads, como \"dev-setup (1)\". Todos os comandos do Windows deste roteiro apontam para esse lugar, então funcionam de qualquer pasta, até da System32 onde o PowerShell de Administrador abre. O comando extrai o zip que está em Downloads e põe a pasta no lugar; baixar o zip da conversa é pelo navegador.",
      "blocos": []
     },
@@ -85,11 +85,11 @@
    "passos": [
     {
      "id": "backup-inicial",
-     "titulo": "Copiar documentos, fotos e projetos para um disco externo",
+     "titulo": "Copiar documentos, fotos e projetos para um disco externo ou pendrive",
      "quem": "voce",
-     "pronto": "Disco externo com a cópia conferida (abra alguns arquivos)",
+     "pronto": "Mensagem \"Copiado: ... 0 pasta(s) com erro\" e alguns arquivos abertos no disco para conferir. Troque E: pela letra certa (Get-Volume); a partição RUFUS_BOOT de um pendrive de instalação tem 0 GB e não serve",
      "tempo_min": 60,
-     "comando": "$d = 'E:'; if (-not (Test-Path \"$d\\\")) { Write-Host \"Nao existe o disco $d. Conecte o disco externo e veja a letra com: Get-Volume\" } else { foreach ($p in 'Desktop','Downloads','Documents','Pictures','Videos','Music','dev','dev-setup','source') { if (Test-Path \"$HOME\\$p\") { robocopy \"$HOME\\$p\" \"$d\\backup-inicial\\$p\" /E /R:1 /W:1 /XJ /NFL /NDL /NP } } }",
+     "comando": "$d = 'E:'; if (-not (Test-Path \"$d\\\")) { Write-Host \"Nao existe o disco $d (veja a letra com Get-Volume)\" } else { $pastas = @('Desktop','Documents','Pictures','Videos','Music','OneDrive','dev','dev-setup','source','Downloads') | Where-Object { Test-Path \"$HOME\\$_\" }; $precisa = (Get-ChildItem -Path ($pastas | ForEach-Object { \"$HOME\\$_\" }) -Recurse -File -Force -ErrorAction SilentlyContinue | Measure-Object Length -Sum).Sum; $livre = (Get-PSDrive $d.TrimEnd(':')).Free; if ($precisa -gt $livre) { Write-Host (\"Nao cabe: precisa {0:N1} GB e $d tem {1:N1} GB livres. Tire 'Downloads' da lista ou use um disco maior.\" -f ($precisa/1GB), ($livre/1GB)) } else { $log = \"$HOME\\backup-inicial.log\"; Remove-Item $log -ErrorAction SilentlyContinue; $falhas = 0; foreach ($p in $pastas) { robocopy \"$HOME\\$p\" \"$d\\backup-inicial\\$p\" /E /R:1 /W:1 /XJ /XF \".????????-????-????-????-????????????\" /NFL /NDL /NP /NJH \"/LOG+:$log\"; if ($LASTEXITCODE -ge 8) { $falhas++; Write-Host \"Falhou: $p (veja ERRO em $log)\" } }; Write-Host (\"Copiado: {0:N1} GB para $d\\backup-inicial, {1} pasta(s) com erro\" -f ($precisa/1GB), $falhas) } }",
      "nota": "Troque E: pela letra do disco externo (Get-Volume lista os discos; o seu notebook só tem o C:). Acrescente à lista as pastas suas que ficam direto na pasta do usuário, como o cofre do Obsidian. O robocopy copia sem apagar nada do notebook; rodar de novo só copia o que mudou. Se as suas pastas estiverem no OneDrive, troque $HOME\\$p por $HOME\\OneDrive\\$p.",
      "blocos": [
       "ext"
@@ -156,7 +156,7 @@
      "pronto": "Arquivo Cofre.kdbx em Documentos\\Cofre abre com a senha mestra; bloqueio automático depois de 5 minutos parado",
      "tempo_min": 30,
      "comando": "winget install --id KeePassXCTeam.KeePassXC -e; New-Item -ItemType Directory -Force \"$HOME\\Documents\\Cofre\" | Out-Null; & \"$env:ProgramFiles\\KeePassXC\\keepassxc-cli.exe\" db-create --set-password \"$HOME\\Documents\\Cofre\\Cofre.kdbx\"",
-     "nota": "Gere a senha mestra no próprio KeePassXC (Ferramentas > Gerador de senhas > Frase-senha, 6 palavras) e decore nos primeiros dias. Ela é a única senha que você precisa saber de cor e não pode ser usada em nenhum outro lugar. Não use arquivo-chave: se perder o arquivo, perde o cofre. Ninguém, nem o Claude, precisa ver o cofre ou a senha mestra. Para gerar a senha mestra no terminal: & \"$env:ProgramFiles\\KeePassXC\\keepassxc-cli.exe\" diceware -W 6 (anote no papel do kit e rode cls para limpar a tela). O db-create pergunta a senha sem mostrar nem gravar no histórico.",
+     "nota": "Gere a senha mestra no próprio KeePassXC (Ferramentas > Gerador de senhas > Frase-senha, 6 palavras) e decore nos primeiros dias. Ela é a única senha que você precisa saber de cor e não pode ser usada em nenhum outro lugar. Não use arquivo-chave: se perder o arquivo, perde o cofre. Ninguém, nem o Claude, precisa ver o cofre ou a senha mestra. Para gerar a senha mestra no terminal: & \"$env:ProgramFiles\\KeePassXC\\keepassxc-cli.exe\" diceware -W 6 (anote no papel do kit e rode cls para limpar a tela). O db-create pergunta a senha sem mostrar nem gravar no histórico. Depois de criar, os grupos numerados e o bloqueio automático saem por comando (feche o KeePassXC antes): py $HOME\\dev-setup\\tools\\organizar\\senhas_csv.py --cofre \"$HOME\\Documents\\Cofre\\Cofre.kdbx\" --so-grupos --bloqueio 5",
      "blocos": [
       "kee"
      ]
@@ -190,7 +190,7 @@
     },
     {
      "id": "kp-organizar",
-     "titulo": "Preparar o CSV exportado do Chrome/Google para o KeePassXC",
+     "titulo": "Gravar as senhas exportadas do Chrome direto no cofre, já em grupos",
      "quem": "script",
      "pronto": "keepassxc-importar.csv pronto e lista de senhas repetidas (só nomes de sites)",
      "tempo_min": 5,
@@ -198,8 +198,8 @@
       "organizar",
       "kee"
      ],
-     "comando": "python3 ~/dev/dev-setup/tools/organizar/senhas_csv.py \"/mnt/c/Users/SEU_USUARIO/Downloads/Chrome Passwords.csv\"",
-     "nota": "Nenhuma senha aparece na tela. Depois de importar, apague os dois CSVs."
+     "comando": "$f = (Get-ChildItem \"$HOME\\Downloads\\*.csv\" | Where-Object Name -match 'Chrome|Senhas|Passwords' | Sort-Object LastWriteTime -Descending | Select-Object -First 1).FullName; if (-not $f) { Write-Host \"Nao achei o CSV exportado em Downloads: exporte em chrome://password-manager/settings\" } else { Write-Host \"Usando $f\"; py $HOME\\dev-setup\\tools\\organizar\\senhas_csv.py $f --cofre \"$HOME\\Documents\\Cofre\\Cofre.kdbx\"; if ($LASTEXITCODE -eq 0) { Remove-Item $f; Write-Host \"Arquivo exportado apagado.\" } }",
+     "nota": "Roda no Windows (py) antes do WSL existir. Pede a senha mestra uma vez, sem mostrar; as senhas vão para o keepassxc-cli pela entrada padrão, nunca pela linha de comando nem pela tela, e nenhum CSV de importação é criado. Grava cada conta no grupo certo (00 Essenciais a 11 Outros), marca TROCAR na nota das repetidas ou curtas e apaga o arquivo exportado no fim. Sem --cofre, o script gera o CSV para importar pela janela."
     },
     {
      "id": "senhas-importar",
@@ -209,7 +209,7 @@
      "tempo_min": 30,
      "comando": "Start-Process chrome 'chrome://password-manager/settings'",
      "fora": "Os navegadores só exportam senhas pela janela de configurações, e o KeePassXC só importa CSV pela janela dele (Banco de dados > Importar).",
-     "nota": "Exporte em chrome://password-manager/settings, edge://wallet/passwords e passwords.google.com. O CSV é a lista de todas as suas senhas em texto puro: importe na hora, apague com Shift+Delete e não deixe em Downloads, no Drive, no e-mail nem no repositório. Não mande esse arquivo para ninguém, nem para o Claude. Só depois de conferir o cofre apague as senhas dos navegadores e desligue 'Oferecer para salvar senhas'.",
+     "nota": "Exporte em chrome://password-manager/settings (e edge://wallet/passwords, se usar o Edge) e rode o passo kp-organizar, que grava direto no cofre e apaga o arquivo. O CSV é a lista de todas as suas senhas em texto puro: não deixe em Downloads, no Drive, no e-mail nem no repositório, e não mande para ninguém, nem para o Claude. Só depois de conferir o cofre apague as senhas dos navegadores e desligue 'Oferecer para salvar senhas'.",
      "blocos": [
       "kee",
       "nav"
@@ -520,11 +520,11 @@
     },
     {
      "id": "clonar",
-     "titulo": "Copiar este repositório para ~/dev/dev-setup",
+     "titulo": "Copiar o dev-setup do Windows para ~/dev/dev-setup (com o GitHub como origem)",
      "quem": "voce",
      "pronto": "Pasta ~/dev/dev-setup com os arquivos",
      "tempo_min": 5,
-     "comando": "mkdir -p ~/dev && cp -r /mnt/c/Users/SEU_USUARIO/dev-setup ~/dev/dev-setup",
+     "comando": "mkdir -p ~/dev && { [ -d ~/dev/dev-setup ] || git clone \"$(wslpath \"$(cmd.exe /c 'echo %USERPROFILE%' 2>/dev/null | tr -d '\\r')\")/dev-setup\" ~/dev/dev-setup; } && git -C ~/dev/dev-setup remote set-url origin git@github.com:AlanMateus17/dev-setup.git && ls ~/dev/dev-setup",
      "nota": "Troque SEU_USUARIO pelo seu usuário do Windows. Depois que o repositório estiver no GitHub, use git clone.",
      "blocos": []
     },
@@ -628,11 +628,11 @@
    "passos": [
     {
      "id": "repo-criar",
-     "titulo": "Criar o repositório privado e enviar o setup",
+     "titulo": "Ligar o repositório ao GitHub (cria só se ainda não existir)",
      "quem": "script",
      "pronto": "Repositório AlanMateus17/dev-setup privado com o código",
      "tempo_min": 5,
-     "comando": "cd ~/dev/dev-setup && git init -q 2>/dev/null; git add -A && git commit -qm 'chore: setup inicial' ; gh repo create AlanMateus17/dev-setup --private --source . --push",
+     "comando": "cd ~/dev/dev-setup && if gh repo view AlanMateus17/dev-setup >/dev/null 2>&1; then git pull --ff-only && echo \"Ja existe no GitHub: so atualizei\"; else git add -A && git commit -qm \"chore: setup inicial\"; gh repo create AlanMateus17/dev-setup --private --source . --push; fi",
      "nota": "Se você usar o zip, o histórico de commits não vem junto; o repositório começa com um commit novo, já assinado.",
      "blocos": [
       "gh"
@@ -1851,9 +1851,9 @@
   },
   {
    "id": "f-remoto",
-   "titulo": "Comandos remotos pelo Telegram",
-   "objetivo": "Status, resumo e radar no celular, respondendo só ao seu chat.",
-   "quando": "Semana 5 · nov/2026",
+   "titulo": "Celular ligado ao setup (com e sem Claude)",
+   "objetivo": "Do celular: sessão do Claude Code no notebook (Remote Control) e pedidos pelo Telegram que seguem com cota grátis e modelo local quando o Claude acaba.",
+   "quando": "Agora · nov/2026",
    "passos": [
     {
      "id": "re-bot",
@@ -1893,14 +1893,51 @@
     },
     {
      "id": "re-servico",
-     "titulo": "Deixar o bot rodando como serviço",
+     "titulo": "Ligar tudo com um comando (Ollama, modelos, aider, LiteLLM, fila, bot, Remote Control)",
      "quem": "script",
-     "pronto": "systemctl --user status amtech-bot ativo",
-     "tempo_min": 5,
+     "pronto": "just ligado mostra amtech-fila e ollama no ar",
+     "tempo_min": 30,
      "blocos": [
       "tg"
      ],
-     "comando": "mkdir -p ~/.config/systemd/user && printf '[Unit]\\nDescription=Bot AMtech\\n[Service]\\nExecStart=/usr/bin/python3 %%h/dev/dev-setup/tools/remoto/bot.py\\nRestart=always\\n[Install]\\nWantedBy=default.target\\n' > ~/.config/systemd/user/amtech-bot.service && systemctl --user daemon-reload && systemctl --user enable --now amtech-bot"
+     "comando": "cd ~/dev/dev-setup && just ligar --simular && just ligar",
+     "nota": "Seguro para rodar de novo. A primeira vez baixa ~9 GB de modelos. O Windows pede administrador uma vez (tarefa no login e energia na tomada)."
+    },
+    {
+     "id": "re-remoto",
+     "titulo": "Aceitar o Remote Control uma vez e abrir a sessão no app do Claude",
+     "quem": "voce",
+     "pronto": "Sessão 'Setup AMtech' aparece no app do Claude (aba Code) e responde",
+     "tempo_min": 10,
+     "blocos": [
+      "tg"
+     ],
+     "comando": "cd ~/dev/dev-setup && claude remote-control",
+     "nota": "Responda y, y e 2 (worktree); leia o QR com o celular; Ctrl+C; depois: touch ~/.config/amtech/remoto-aceito && just ligar. Exige plano Pro ou Max."
+    },
+    {
+     "id": "re-gemini",
+     "titulo": "Colar a chave grátis do Gemini (AI Studio) em infra/ia/.env e guardar no KeePassXC",
+     "quem": "voce",
+     "pronto": "GEMINI_API_KEY preenchida; just ligado sem aviso de cota grátis",
+     "tempo_min": 5,
+     "blocos": [
+      "tg",
+      "kee"
+     ],
+     "fora": "Feito em aistudio.google.com com a sua conta; é o degrau entre o Claude e o modelo local na fila."
+    },
+    {
+     "id": "re-teste",
+     "titulo": "Testar a fila pelo celular: /pedir num repositório de teste",
+     "quem": "voce",
+     "pronto": "Aviso no Telegram com o ramo ou o PR em rascunho",
+     "tempo_min": 10,
+     "blocos": [
+      "tg"
+     ],
+     "comando": "cd ~/dev/dev-setup && just pedir \"adicionar uma linha de teste no FILA-TESTE.md\" && just fila",
+     "nota": "Revise o PR em rascunho no app do GitHub. A fila nunca faz merge."
     },
     {
      "id": "re-whatsapp",
@@ -2412,7 +2449,7 @@
      "id": "nuc-garimpo",
      "titulo": "Fase 2: garimpo de código do pedido ao PR",
      "quem": "claude",
-     "pronto": "just garimpo \"validar CPF em C#\" abre um PR com o trecho, os testes, a licença e a origem",
+     "pronto": "just garimpo \"validar CPF em TypeScript\" abre um PR com o trecho, os testes, a licença e a origem",
      "tempo_min": 480,
      "comando": "cd ~/dev/dev-setup && claude \"Passo nuc-garimpo do roteiro: garimpo de código do pedido ao PR\"",
      "blocos": [
@@ -2681,17 +2718,17 @@
   {
    "id": "f-eixo",
    "titulo": "Eixo de 12 meses: dev sênior de software para finanças",
-   "objetivo": "Um eixo profundo (software como ofício, finanças como domínio, o Grupo AMtech Digital como veículo) com critério de pronto por trimestre; o resto fica pausado com gatilho (ADR 0011).",
+   "objetivo": "Um eixo profundo (software como ofício, finanças como domínio, o Grupo AMtech Digital como veículo) com critério de pronto por trimestre; nada fica pausado: os temas fora do eixo seguem ativos, na ordem do roteiro (ADR 0011, revisto pelo ADR 0015).",
    "quando": "Nov/2026 a out/2027, revisão no fim de cada trimestre",
    "passos": [
     {
      "id": "eixo-cortes",
-     "titulo": "Confirmar o que fica pausado até o fim do ano 1 (42, AM-OS, pentest, treino de IA, robótica, agro, construção, idiomas extras)",
+     "titulo": "Confirmar a ordem dos temas fora do eixo (42, AM-OS, pentest, treino de IA, robótica, agro, construção, idiomas extras), todos ativos",
      "quem": "voce",
-     "pronto": "Lista de pausas confirmada ou ajustada por você em docs/plano-eixo.md",
+     "pronto": "Ordem confirmada ou ajustada por você em docs/plano-eixo.md",
      "tempo_min": 20,
      "comando": "cd ~/dev/dev-setup && less docs/plano-eixo.md",
-     "nota": "Pausar não é apagar: cada item volta com o gatilho do trimestre 4. Vetar uma pausa é decisão sua; anote o motivo.",
+     "nota": "Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 3 frentes \"agora\".",
      "decisao": true,
      "empresas": [
       "software"
@@ -2712,6 +2749,36 @@
      ],
      "blocos": [
       "cgws"
+     ]
+    },
+    {
+     "id": "rec-historias",
+     "titulo": "Escrever as 8 histórias reais para entrevista (STAR) no vault",
+     "quem": "voce",
+     "pronto": "07-estudo-e-carreira/recrutador/historias.md com 8 histórias, cada uma com situação, tarefa, a SUA ação e resultado com número",
+     "tempo_min": 90,
+     "comando": "cd ~/dev/dev-setup && mkdir -p ~/dev/notas/07-estudo-e-carreira/recrutador && cp -n docs/recrutador/historias-modelo.md ~/dev/notas/07-estudo-e-carreira/recrutador/historias.md",
+     "nota": "O entrevistador usa estas histórias para aprofundar e nunca inventa experiência por você. Ficam no vault, fora do GitHub. Nada de nome de aluno.",
+     "empresas": [
+      "software"
+     ],
+     "blocos": [
+      "recr"
+     ]
+    },
+    {
+     "id": "rec-semanal",
+     "titulo": "Simulação de entrevista da semana (nacional ou internacional)",
+     "quem": "voce",
+     "pronto": "Uma simulação por semana registrada com just recrutador registrar; os formatos do trimestre ficam PRONTOS em just recrutador progresso",
+     "tempo_min": 45,
+     "comando": "cd ~/dev/dev-setup && just recrutador semana",
+     "nota": "As de inglês, no app do Claude com o modo de voz. A partir do trimestre 3, uma por mês com uma pessoa de verdade. Liga ao critério do trimestre 4: entrevista em inglês sem travar.",
+     "empresas": [
+      "software"
+     ],
+     "blocos": [
+      "recr"
      ]
     },
     {
@@ -2776,7 +2843,7 @@
      "pronto": "Itens cumpridos até 31/out/2027; decisão sobre o que sai da pausa",
      "tempo_min": 60,
      "comando": "cd ~/dev/dev-setup && just progresso",
-     "nota": "O gatilho das pausas: com o trimestre 4 cumprido, um item pausado volta por vez.",
+     "nota": "Sem gatilho de pausa desde o ADR 0015: os temas fora do eixo andam junto, na ordem do roteiro.",
      "decisao": true,
      "empresas": [
       "software"
@@ -2877,7 +2944,7 @@
      "pronto": "Cada curso em data/professor/curriculo.json confirmado no catálogo; os já feitos anotados (o módulo começa pela prova de entrada)",
      "tempo_min": 30,
      "fora": "No site da Alura, com a sua conta. O setup não entra na sua conta: os nomes vieram do catálogo público.",
-     "nota": "Os cursos de C# e .NET, Git, Docker e PostgreSQL do trimestre 1 já estão ligados aos módulos. A Alura é fraca em finanças e não tem física: ali a base é o livro e as fontes oficiais.",
+     "nota": "Os cursos de TypeScript e Python, Git, Docker e PostgreSQL do trimestre 1 já estão ligados aos módulos. A Alura é fraca em finanças e não tem física: ali a base é o livro e as fontes oficiais.",
      "blocos": [
       "professor"
      ]
@@ -4926,7 +4993,7 @@
      "pronto": "Sistema exemplo sobe com 'dotnet run' e passa nos testes",
      "tempo_min": 120,
      "comando": "cd ~/dev/dev-setup && claude \"Passo template-aura do roteiro: Gerar o modelo de sistema com /novo-sistema-aura\"",
-     "nota": "Clean Architecture + DDD, EF Core com Npgsql, multi-tenant com RLS, SignalR com Redis, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com xUnit, Playwright e k6.",
+     "nota": "Clean Architecture + DDD, Prisma/Drizzle, multi-tenant com RLS, Supabase Realtime, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com xUnit, Playwright e k6.",
      "blocos": [
       "clean",
       "ef",
@@ -4954,11 +5021,11 @@
     },
     {
      "id": "observabilidade-dev",
-     "titulo": "Ligar a observabilidade do dev: .NET Aspire, OpenTelemetry, Prometheus, Seq, Mailpit e Caddy",
+     "titulo": "Ligar a observabilidade do dev: Docker Compose, OpenTelemetry, Prometheus, Seq, Mailpit e Caddy",
      "quem": "claude",
-     "pronto": "Painel do Aspire mostra trace de uma requisição; e-mail de teste cai no Mailpit",
+     "pronto": "Painel do Docker Compose mostra trace de uma requisição; e-mail de teste cai no Mailpit",
      "tempo_min": 60,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo observabilidade-dev do roteiro: Ligar a observabilidade do dev: .NET Aspire, OpenTelemetry, Prometheus, Seq, Mailpit e Caddy\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo observabilidade-dev do roteiro: Ligar a observabilidade do dev: Docker Compose, OpenTelemetry, Prometheus, Seq, Mailpit e Caddy\"",
      "blocos": [
       "aspire",
       "otel",
@@ -5526,7 +5593,7 @@
      "decisao": true
     }
    ],
-   "quando": "Pendrives e laboratório podem começar já; dados (Zoomcamp, dbt, Airflow) e treino de IA ficam pausados até o fim do trimestre 4 do eixo (ADR 0011, ≈ 2028)"
+   "quando": "Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015)"
   },
   {
    "id": "f-sprint",
@@ -6021,9 +6088,9 @@
     },
     {
      "id": "of-pausadas",
-     "titulo": "Revisar a cada trimestre as ofertas pausadas (AM Taskoro)",
+     "titulo": "Revisar a cada trimestre as ofertas em fila (AM Taskoro)",
      "quem": "voce",
-     "pronto": "Decisão anotada: retomar ou manter pausada",
+     "pronto": "Decisão anotada: avançar ou manter na fila",
      "tempo_min": 30,
      "fora": "Decisão sua; os números e as opções já estão no roteiro e no portfólio.",
      "blocos": [
@@ -6260,6 +6327,74 @@
    "gatilho": "O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar"
   },
   {
+   "id": "f-amtechos",
+   "titulo": "AMtech OS: o setup como sistema operacional",
+   "objetivo": "O dev-setup instalável como sistema: testado numa VM, depois no 2º NVMe com o Windows intocado, e por fim como produto (ADR 0016).",
+   "quando": "Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso",
+   "passos": [
+    {
+     "id": "os-vm",
+     "titulo": "Testar o AMtech OS numa VM do VirtualBox (Ubuntu LTS + os/instalar.sh)",
+     "quem": "voce",
+     "pronto": "Na VM, o comando amtech mostra o estado e o papel de parede da marca aparece",
+     "tempo_min": 120,
+     "comando": "bash os/instalar.sh --simular",
+     "nota": "Passo a passo em os/README.md. Rode dentro da VM, nunca no WSL: lá o instalador recusa.",
+     "blocos": [
+      "amtechos",
+      "vbox"
+     ]
+    },
+    {
+     "id": "os-semana",
+     "titulo": "Usar a VM por uma semana e anotar o que faltou ou incomodou",
+     "quem": "voce",
+     "pronto": "Lista no vault com o que faltou; ela vira a versão 0.2",
+     "tempo_min": 60,
+     "fora": "Uso real do sistema; as anotações vão para o vault.",
+     "blocos": []
+    },
+    {
+     "id": "os-adr",
+     "titulo": "Aceitar ou ajustar o ADR 0016 (AMtech OS no 2º NVMe, Arch + Omarchy em VM e pendrive)",
+     "quem": "voce",
+     "pronto": "ADR 0016 com status aceita (ou a sua mudança registrada)",
+     "tempo_min": 15,
+     "fora": "Decisão sua, ao revisar o PR.",
+     "blocos": []
+    },
+    {
+     "id": "os-nativo",
+     "titulo": "Instalar o AMtech OS no 2º NVMe, com o Windows intocado no SSD atual",
+     "quem": "voce",
+     "pronto": "Escolha entre AMtech OS e Windows ao ligar; amtech mostra o perfil dev e a GPU NVIDIA",
+     "tempo_min": 240,
+     "comando": "bash os/instalar.sh --perfil dev --com-nvidia --nome \"Alan Mateus\" --email SEU_EMAIL",
+     "precisa": [
+      "compra"
+     ],
+     "nota": "Confira duas vezes o disco escolhido na instalação. Notebook: prefira criptografia a snapshots se o instalador não der os dois (os/README.md).",
+     "blocos": [
+      "amtechos",
+      "nvme",
+      "boot"
+     ]
+    },
+    {
+     "id": "os-oferta",
+     "titulo": "Preparar a edição Community e a oferta do AMtech OS",
+     "quem": "claude",
+     "pronto": "Versão sem nada pessoal publicada e página da oferta no Instituto AMS",
+     "tempo_min": 300,
+     "fora": "Depois de alguns meses de uso próprio sem problema (o portão da oferta).",
+     "blocos": [],
+     "ofertas": [
+      "amtechos"
+     ]
+    }
+   ]
+  },
+  {
    "id": "f24",
    "titulo": "Linux nativo e laboratório completo",
    "objetivo": "Arch com boot próprio, VMs de laboratório e a segurança física em dia.",
@@ -6426,11 +6561,11 @@
     },
     {
      "id": "servicos-aura",
-     "titulo": "Serviços aura- compartilhados, só quando um sistema precisar",
+     "titulo": "Módulos do AM Gestão, só quando um sistema precisar",
      "quem": "claude",
      "pronto": "Um serviço compartilhado usado por dois sistemas",
      "tempo_min": 600,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo servicos-aura do roteiro: Serviços aura- compartilhados, só quando um sistema precisar\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo servicos-aura do roteiro: Módulos do AM Gestão, só quando um sistema precisar\"",
      "blocos": [
       "shared",
       "datomic"
@@ -6792,11 +6927,11 @@
     },
     {
      "id": "mobile",
-     "titulo": "App mobile dos sistemas AM com .NET MAUI",
+     "titulo": "App mobile dos sistemas AM com React Native",
      "quem": "claude",
      "pronto": "App publicado para teste interno",
      "tempo_min": 1200,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo mobile do roteiro: App mobile dos sistemas AM com .NET MAUI\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo mobile do roteiro: App mobile dos sistemas AM com React Native\"",
      "blocos": [
       "mobile"
      ]
@@ -7161,7 +7296,7 @@
      "pronto": "Marco do ano definido",
      "tempo_min": 15,
      "blocos": [],
-     "fora": "Horizonte longo; pausado até o fim do ano 1 do eixo (ADR 0011)."
+     "fora": "Horizonte longo; ativo desde o ADR 0015, na ordem do roteiro."
     },
     {
      "id": "est-ebtt",

@@ -4,7 +4,7 @@
 
 [← Operação do grupo](README.md)
 
-Todas as 108 ofertas do grupo num catálogo só: o que já existe, o que está planejado e 75 fontes de renda novas que saem do que você já tem. A versão interativa, com filtros, é [`portfolio.html`](portfolio.html).
+Todas as 109 ofertas do grupo num catálogo só: o que já existe, o que está planejado e 76 fontes de renda novas que saem do que você já tem. A versão interativa, com filtros, é [`portfolio.html`](portfolio.html).
 
 ## Como a fila é decidida
 
@@ -35,7 +35,7 @@ A semana do arsenal:
 | Agora | 3 | 1 |
 | Próxima da fila | 7 | 4 |
 | Manter (já funciona) | 1 | 1 |
-| Fila com portão | 62 | 37 |
+| Fila com portão | 63 | 37 |
 | 2027, se a tarde ficar livre | 14 | 1 |
 | Decidir depois (capital alto) | 13 | 0 |
 | Descartar | 8 | 4 |
@@ -106,6 +106,7 @@ A semana do arsenal:
 | Professor conteudista EAD | AMtech Educação · Instituto AMS | Ativa que vale a pena | 60% | 16 | Bom por hora porque a Fábrica faz o grosso. Leia o contrato: o direito costuma ficar com a instituição. |
 | Blocos e kits de componentes de interface | AMtech Software | Passiva | 90% | 15 | Junto com os templates. |
 | Templates Next.js/Tailwind em inglês | AMtech Software | Passiva | 90% | 15 | Esforço inicial alto; depois do Setup profissional. |
+| AMtech OS (sistema pronto para programar, baseado em Ubuntu) | AMtech Software | Ativa que vale a pena | 70% | 15 | Você é o primeiro cliente: usar alguns meses antes de vender. A venda nasce do setuppro e puxa revenda de notebooks, suporte remoto e aulas. |
 | Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | AMtech Mídia | Passiva | 70% | 15 | Começa quando o estudo gerar conteúdo toda semana. |
 | Curso: segurança e engenharia reversa para devs | AMtech Educação · Instituto AMS | Passiva | 80% | 15 | Portão: eJPT e 3 relatórios de ensaio, para ensinar o que já fez. Material vem do seu estudo, sem copiar curso pago. |
 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) | AMtech Educação · Instituto AMS | Passiva | 80% | 15 | Depende de seleção; usa os cursos já gravados. |
@@ -131,7 +132,7 @@ A semana do arsenal:
 | Traduções do livro | Editora AMS Silva | Passiva | 80% | 11 | Depois do livro vender em português. |
 | Bug bounty e pentest | AMtech Digital (serviços remotos e B2B) | Ativa | 10% | 11 | Portão: eJPT e laboratórios. Renda irregular; vale pelo histórico que abre a AMtech Segurança. |
 | Perito em informática judicial | AMtech Digital (serviços remotos e B2B) | Ativa | 20% | 11 | Portão: estudo de perícia forense e cadastro no TJMG. |
-| AM Taskoro (gestão de projetos ágeis) | AMtech Software | Passiva | 70% | 10 | Pausado por você. |
+| AM Taskoro (gestão de projetos ágeis) | AMtech Software | Passiva | 70% | 10 | Despausado em 11/11/2026 (ADR 0015); segue na fila. |
 
 ### 2027, se a tarde ficar livre
 
@@ -190,7 +191,7 @@ Nenhuma renda é 100% automática: alguém cria uma vez, aprova e atende a exce�
 | Quanto o setup faz | Ofertas | Ativas agora ou próximas |
 |---|---:|---:|
 | O setup faz tudo, menos criar uma vez e aprovar (85% ou mais) | 28 | 5 |
-| O setup faz a maior parte; você atende exceções (50% a 84%) | 44 | 2 |
+| O setup faz a maior parte; você atende exceções (50% a 84%) | 45 | 2 |
 | Depende da sua hora ou de parceiro (menos de 50%) | 36 | 3 |
 
 ### Ordem de construção
@@ -202,13 +203,13 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | 1 | **Comandos e aprovações pelo Telegram**: Você aprova posts, vê vendas e recebe alertas pelo celular, só do seu número. | Construir | todas | Mini-curso Lógica de Programação, Aulas particulares, AM Mentor: banco de exercícios com correção, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier), Notebooks e PCs: comprar, consertar e revender, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Plano de negócios e viabilidade financeira para quem vai abrir empresa, Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-remoto |
 | 2 | **Painel de lucro e retorno por hora**: Lucro e R$ por hora sua de cada renda; marca quem ficou abaixo da hora mínima. | Parcial (falta ligar) | todas | Mini-curso Lógica de Programação, Aulas particulares, AM Mentor: banco de exercícios com correção, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier), Notebooks e PCs: comprar, consertar e revender, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Plano de negócios e viabilidade financeira para quem vai abrir empresa, Verificador e formatador ABNT automático (TCC, artigos, relatórios) | painel-lucro |
 | 3 | **Registro de horas**: Mede as horas suas em cada renda (ActivityWatch) para calcular o retorno por hora. | Construir | 36 | Aulas particulares, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier), Notebooks e PCs: comprar, consertar e revender, Plano de negócios e viabilidade financeira para quem vai abrir empresa | au-horas |
-| 4 | **Atendimento de primeiro nível**: Responde as dúvidas frequentes com base no seu material e passa para você o que não souber. | Construir | 23 | Mini-curso Lógica de Programação, AM Mentor: banco de exercícios com correção, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-suporte |
+| 4 | **Atendimento de primeiro nível**: Responde as dúvidas frequentes com base no seu material e passa para você o que não souber. | Construir | 24 | Mini-curso Lógica de Programação, AM Mentor: banco de exercícios com correção, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-suporte |
 | 5 | **Cobrança recorrente e controle de acesso**: Cobra todo mês, corta o acesso de quem não paga e avisa antes. | Construir | 28 | AM Mentor: banco de exercícios com correção, Sites e lojas para pequenas empresas, Fábrica de documentos para professores de MG (assinatura), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-recorrencia |
 | 6 | **CRM, proposta, contrato e cobrança**: Registra o cliente, gera proposta e contrato de modelo e cobra. | Parcial (falta ligar) | 39 | Aulas particulares, Sites e lojas para pequenas empresas, Plano de negócios e viabilidade financeira para quem vai abrir empresa | crm |
-| 7 | **Checkout, entrega e área do cliente**: Recebe o pagamento (Hotmart, Kiwify ou Stripe), libera o acesso e manda o recibo, sem você. | Parcial (falta ligar) | 23 | Mini-curso Lógica de Programação, Setup profissional (curso, template e configuração remota), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | plataformas |
+| 7 | **Checkout, entrega e área do cliente**: Recebe o pagamento (Hotmart, Kiwify ou Stripe), libera o acesso e manda o recibo, sem você. | Parcial (falta ligar) | 24 | Mini-curso Lógica de Programação, Setup profissional (curso, template e configuração remota), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | plataformas |
 | 8 | **Funil de e-mails e isca gratuita**: Captura o contato com consentimento e manda a sequência de e-mails até a oferta. | Construir | 12 | Mini-curso Lógica de Programação, AM Mentor: banco de exercícios com correção, Fábrica de documentos para professores de MG (assinatura), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-funil |
 | 9 | **Estudo vira produto**: Das suas anotações de estudo, gera rascunho de aula, exercícios, cartões Anki e roteiro de vídeo para você revisar. | Construir | 13 | Mini-curso Lógica de Programação, Aulas particulares, AM Mentor: banco de exercícios com correção | au-esteira |
-| 10 | **Cortes, legendas e dublagem com a sua voz**: Corta, legenda e dubla os vídeos. Só a sua voz, nunca a de alunos. | Parcial (falta ligar) | 13 | Mini-curso Lógica de Programação, Setup profissional (curso, template e configuração remota) | au-midia |
+| 10 | **Cortes, legendas e dublagem com a sua voz**: Corta, legenda e dubla os vídeos. Só a sua voz, nunca a de alunos. | Parcial (falta ligar) | 14 | Mini-curso Lógica de Programação, Setup profissional (curso, template e configuração remota) | au-midia |
 | 11 | **Publicação agendada com aprovação**: Agenda posts, vídeos e artigos; nada vai ao ar sem o seu ok. | Parcial (falta ligar) | 15 | Mini-curso Lógica de Programação | au-publicacao |
 | 12 | **Manutenção automática de sites**: Atualiza, faz backup e monitora os sites dos clientes; avisa só quando algo quebra. | Parcial (falta ligar) | 3 | Sites e lojas para pequenas empresas | kuma-monitores |
 | 13 | **Estoque, ordem de serviço e parceiros**: Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Kaixara). | Construir | 20 | Notebooks e PCs: comprar, consertar e revender | au-estoque |
@@ -217,7 +218,7 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | 16 | **Radar de revenda**: Lê os alertas de busca salvos e avisa só o que passa da hora mínima. | Construir | 5 | Notebooks e PCs: comprar, consertar e revender | ar-radar |
 | 17 | **Busca semanal de editais e oportunidades**: Procura editais de conteudista, crédito, fomento e seleções e resume os que servem. | Construir | 4 | — | au-editais |
 | 18 | **Conciliação e relatório financeiro de clientes**: Importa extratos, concilia e gera o relatório mensal de cada cliente. | Construir | 1 | — | au-financeiro |
-| 19 | **CI que testa e publica pacotes**: Testa e publica templates, plugins e kits a cada versão. | Já existe | 20 | Setup profissional (curso, template e configuração remota) | ci-verde |
+| 19 | **CI que testa e publica pacotes**: Testa e publica templates, plugins e kits a cada versão. | Já existe | 21 | Setup profissional (curso, template e configuração remota) | ci-verde |
 | 20 | **Cascata e ARCA**: Mostra a fase da cascata e quanto aportar pelo seu método (Caixa da Casa, depois Rendara). | Já existe | 4 | — | — |
 
 ### O que o setup faz sozinho, por oferta
@@ -264,6 +265,7 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | AM Kaixara (PDV, ficha técnica, cardápio) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
 | AM Rotara (pedidos e entregas) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
 | AM Taskoro (gestão de projetos ágeis) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
+| AMtech OS (sistema pronto para programar, baseado em Ubuntu) | Fila com portão | 70% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
 | Adoção do livro por escolas | Fila com portão | 70% | CRM, proposta, contrato e cobrança, Checkout, entrega e área do cliente |
 | App de delivery com a marca do restaurante (white-label) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
 | Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | Fila com portão | 70% | Estudo vira produto, Cortes, legendas e dublagem com a sua voz, Publicação agendada com aprovação |
@@ -350,101 +352,102 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | 11 | Canal com rosto: construindo o Grupo AMtech em público · **nova** | AMtech Mídia | Ideia | Digital | 15 | Gravar 1 vídeo por semana mostrando uma decisão real (números do planejador, setup, aula) | passo 47.7 · A partir de fev/2027 |
 | 12 | Cursos dublados por IA em inglês e espanhol (só a sua voz) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Dublar o mini-curso quando estiver gravado | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 13 | Fábrica de documentos para professores de MG (assinatura) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Usar a Fábrica por 1 bimestre em você mesmo e mostrar a 5 colegas | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 14 | Kit do livro e edição do professor | Editora AMS Silva | Ideia | Digital | 15 | Depois do volume 1 | passo 53.2 · Depois do primeiro livro |
+| 14 | Kit do livro e edição do professor | Editora AMS Silva | Ideia | Digital | 15 | Depois do volume 1 | passo 54.2 · Depois do primeiro livro |
 | 15 | Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Digital | 15 | Separar 3 modelos do motor financeiro dos negócios | passo 46.23 · Fev a dez/2027, uma oferta por vez |
 | 16 | Newsletter (patrocínio e vendas) | AMtech Mídia | Validação | Digital | 15 | Fazer a isca grátis e a sequência de boas-vindas | passo 40.8 · Semanas 12 a 15 · jan a fev/2027 |
 | 17 | Setup profissional (curso, template e configuração remota) · **nova** | AMtech Software | Ideia | Digital | 15 | Tirar do seu setup tudo o que é pessoal e gravar a primeira aula | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 18 | Templates de automação n8n · **nova** | AMtech Software | Ideia | Digital | 15 | Publicar as 3 automações que você mais usa | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 19 | Versões dos cursos na Udemy (português e inglês) | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Publicar o mini-curso depois do lançamento próprio | passo 40.11 · Semanas 12 a 15 · jan a fev/2027 |
-| 20 | App de delivery com a marca do restaurante (white-label) · **nova** | AMtech Software | Ideia | Digital | 14 | Oferecer a 3 restaurantes que pagam 23% ao iFood | passo 50.5 · 2027 |
+| 20 | App de delivery com a marca do restaurante (white-label) · **nova** | AMtech Software | Ideia | Digital | 14 | Oferecer a 3 restaurantes que pagam 23% ao iFood | passo 51.5 · 2027 |
 | 21 | Dividendos, FIIs e renda fixa (cascata e ARCA) · **nova** | Patrimônio (investimentos) | Ideia | Digital | 14 | Seguir a cascata: cartão quitado e reserva cheia antes da bolsa | passo 11.7 · Semana 4 · nov/2026 |
 | 22 | Plano de negócios e viabilidade financeira para quem vai abrir empresa · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 14 | Transformar o seu planejador de negócios num modelo e fazer 2 planos de teste | passo 46.23 · Fev a dez/2027, uma oferta por vez |
 | 23 | Presença digital para comércio local (Google Perfil, redes, avaliações) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 14 | Oferecer a 5 clientes de sites como complemento | passo 46.9 · Fev a dez/2027, uma oferta por vez |
 | 24 | [Sites e lojas para pequenas empresas](../negocios/01-software-house.md) | AMtech Software | Validação | Produtizado | 14 | Criar 3 pacotes fixos com preço público | passo 11.4 · Semana 4 · nov/2026 |
 | 25 | Suporte remoto e planos mensais para empresas · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 14 | Fechar 3 empresas com o plano de R$ 250 | passo 46.11 · Fev a dez/2027, uma oferta por vez |
-| 26 | Adoção do livro por escolas · **nova** | Editora AMS Silva | Ideia | Produtizado | 13 | Piloto na sua própria escola, se permitido | passo 53.4 · Depois do primeiro livro |
+| 26 | Adoção do livro por escolas · **nova** | Editora AMS Silva | Ideia | Produtizado | 13 | Piloto na sua própria escola, se permitido | passo 54.4 · Depois do primeiro livro |
 | 27 | Aulas particulares | AMtech Educação · Instituto AMS | Validação | Local | 13 | Publicar a agenda com pagamento antecipado | passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | 28 | Blocos e kits de componentes de interface · **nova** | AMtech Software | Ideia | Digital | 13 | Separar 10 blocos dos templates | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 29 | Conferência automática de documentos para coordenações e escolas · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 13 | Usar na sua própria escola por um bimestre (sem dado de aluno) e levar o resultado à coordenação | passo 14.7 · Semanas 5 e 6 · nov/2026 |
 | 30 | Implantação de ficha técnica e engenharia de cardápio · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 13 | Usar o restaurante onde você trabalha como estudo de caso, se o dono aceitar | passo 46.12 · Fev a dez/2027, uma oferta por vez |
-| 31 | [Laudo de segurança dos sites que você mantém](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Software | Ideia | Produtizado | 13 | Ensaiar o serviço completo no seu próprio site (escopo, testes, relatório) | passo 58.16 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| 31 | [Laudo de segurança dos sites que você mantém](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Software | Ideia | Produtizado | 13 | Ensaiar o serviço completo no seu próprio site (escopo, testes, relatório) | passo 59.16 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | 32 | Monetização das plataformas (YouTube, Instagram) | AMtech Mídia | Ideia | Digital | 13 | Consequência dos canais; não é meta em si | passo 47.9 · A partir de fev/2027 |
 | 33 | Templates Next.js/Tailwind em inglês · **nova** | AMtech Software | Ideia | Digital | 13 | Publicar 1 template a partir do Aura Design System | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 34 | Templates e código-fonte | AMtech Educação · Instituto AMS | Validação | Digital | 13 | Empacotar o primeiro frontend já pronto com documentação | passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| 35 | AM Kaixara (PDV, ficha técnica, cardápio) | AMtech Software | Construção | Digital | 12 | Rodar primeiro num cliente piloto pagante | passo 50.2 · 2027 |
+| 35 | AM Kaixara (PDV, ficha técnica, cardápio) | AMtech Software | Construção | Digital | 12 | Rodar primeiro num cliente piloto pagante | passo 51.2 · 2027 |
 | 36 | AM Mentor: banco de exercícios com correção | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Começar com o Capítulo 1 do livro em YAML | passo 46.13 · Fev a dez/2027, uma oferta por vez |
-| 37 | [Assistência técnica](../negocios/02-assistencia-e-pecas.md) | AMtech Campo (presencial, por parceiros) | Ideia | Local | 12 | Começar atendendo em casa e por agendamento antes de alugar a loja | passo 56.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 38 | [Canais sem rosto (YouTube, TikTok, Instagram, Facebook)](../marketing/README.md) | AMtech Mídia | Construção | Digital | 12 | Publicar 3 vídeos por semana por 8 semanas e medir | passo 46.14 · Fev a dez/2027, uma oferta por vez |
-| 39 | [Curso: segurança e engenharia reversa para devs](../seguranca/README.md) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Transformar o crackme da aula e o lab de ataque nas 3 primeiras aulas | passo 58.17 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| 40 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Candidatar-se com o mini-curso como amostra | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 41 | Elaboração e revisão de questões · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 12 | Montar um portfólio de 20 questões e se candidatar | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 42 | Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Só depois do mini-curso vender 100 cópias | passo 47.10 · A partir de fev/2027 |
-| 43 | [Livro Lógica e Máquina](../editora/README.md) | Editora AMS Silva | Construção | Digital | 12 | Entregar o Capítulo 1 para avaliação | passo 43.11 · Quando o capítulo 1 estiver pronto |
-| 44 | Mentoria de organização financeira e palestras em empresas (sem recomendar ativos) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 12 | Testar com 3 pessoas usando o seu método da cascata | passo 46.23 · Fev a dez/2027, uma oferta por vez |
-| 45 | PC montado e entregue configurado · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 12 | Achar 1 técnico parceiro e fazer 3 montagens você mesmo para criar o checklist | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 46 | AM Rotara (pedidos e entregas) | AMtech Software | Ideia | Digital | 11 | Nasce junto com a AM Entregas | passo 50.3 · 2027 |
-| 47 | [AMtech Maker (robótica e automação)](../negocios/03-produtos-proprios.md) | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 11 | Primeiro kit sem rádio testado com seus alunos | passo 56.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 48 | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 11 | Fazer a rotina completa num negócio conhecido por 2 meses e virar checklist | passo 46.23 · Fev a dez/2027, uma oferta por vez |
-| 49 | Camisetas e canecas sob demanda (dev e professor) · **nova** | AMtech Mídia | Ideia | Digital | 11 | Subir 10 estampas que saíram do seu conteúdo | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 50 | Celulares: comprar, consertar e revender · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Depois dos notebooks passarem no portão | passo 11.5 · Semana 4 · nov/2026 |
-| 51 | Comunidade paga do Instituto AMS | AMtech Educação · Instituto AMS | Ideia | Digital | 11 | Só com 200 alunos pagantes | passo 46.15 · Fev a dez/2027, uma oferta por vez |
-| 52 | Formatação ABNT de TCC (só formatar e revisar) · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 11 | Fazer o verificador automático e testar em 3 trabalhos | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 53 | Instrutor horista (SENAC, SENAI, prefeitura) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 11 | Só se a tarde ficar livre em 2027 | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 54 | Licença do AM Delivery para outras cidades · **nova** | AMtech Software | Ideia | Produtizado | 11 | Só depois de Barbacena dar lucro por 6 meses | passo 56.5 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 55 | Livros técnicos e didáticos usados · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Digital | 11 | Experimento com 10 livros | passo 11.5 · Semana 4 · nov/2026 |
-| 56 | Notebooks e PCs: comprar, consertar e revender · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Criar as buscas salvas e rodar o radar 4 semanas sem comprar, só medindo | passo 11.5 · Semana 4 · nov/2026 |
-| 57 | Oficinas de robótica e programação para escolas · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 11 | Montar o plano de 8 encontros com o kit | passo 46.16 · Fev a dez/2027, uma oferta por vez |
-| 58 | Parceiro de ERP (Bling, Tiny, Omie): implantação e comissão · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 11 | Entrar no programa de parceiros quando um cliente de sites pedir gestão | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 59 | Parceria DIO | AMtech Educação · Instituto AMS | Ideia | Digital | 11 | Publicar 3 artigos e um projeto na DIO | passo 37.6 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| 60 | Peças de máquinas sucateadas (RAM, SSD, placas) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Junto com os notebooks | passo 11.5 · Semana 4 · nov/2026 |
-| 61 | [Peças e acessórios sem estoque](../negocios/02-assistencia-e-pecas.md) | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Só junto com a assistência | passo 56.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 62 | Professor conteudista EAD · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 11 | Ligar a busca semanal de editais | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 63 | Recuperação de dados (intermediação com laboratório) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Fechar parceria com 1 laboratório | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 64 | [Sistemas sob encomenda](../negocios/01-software-house.md) | AMtech Software | Ideia | Produtizado | 11 | Primeiro cliente via loja ou indicação, com 50% de entrada | passo 46.17 · Fev a dez/2027, uma oferta por vez |
-| 65 | Aula de sushi e sushiman para eventos · **nova** | Negócios físicos | Ideia | Local | 10 | Testar 2 eventos com amigos pagantes; confirme as regras sanitárias para preparo na casa do cliente | passo 46.18 · Fev a dez/2027, uma oferta por vez |
-| 66 | [Automação BIM e modelagem para escritórios de engenharia e arquitetura](../construcao/README.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 10 | Publicar 3 scripts úteis de IFC no GitHub e oferecer a 2 escritórios de Barbacena | passo 61.11 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
-| 67 | Formação em Matemática | AMtech Educação · Instituto AMS | Ideia | Digital | 10 | Usar os capítulos de matemática do livro como base | passo 47.10 · A partir de fev/2027 |
-| 68 | Freela internacional em dólar (Upwork) · **nova** | AMtech Software | Ideia | Produtizado | 10 | Perfil no Upwork quando o inglês chegar ao B1 | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 69 | Gestão de tráfego pago para o comércio local · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 10 | Testar primeiro nas suas próprias ofertas | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 70 | [Ponto de retirada (Shopee e Mercado Livre)](../negocios/04-ponto-de-retirada.md) | Negócios físicos | Ideia | Local | 10 | Junto com a loja | passo 56.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 71 | [Segurança digital para pequenas empresas](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 10 | Documentar 3 casos (começando pelo seu) como checklist | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 72 | Workshops presenciais para pequenos empresários (IA, planilhas, presença digital) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 10 | Fazer um piloto com 10 vagas | passo 46.19 · Fev a dez/2027, uma oferta por vez |
-| 73 | [AM Obra: diário, medição, compras e estimativa para pequenas construtoras](../construcao/README.md) · **nova** | AMtech Software | Ideia | Digital | 9 | Entrevistar 5 mestres de obra e engenheiros da região antes de escrever código | passo 61.12 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
-| 74 | Aulas de informática e celular para idosos · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 9 | Só se a tarde ficar livre em 2027 | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 75 | Captação de crédito e editais para pequenos negócios (Pronampe, BDMG, Sebrae, FAPEMIG) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 9 | Ligar a busca de editais e fazer o primeiro pedido para um negócio seu | passo 46.23 · Fev a dez/2027, uma oferta por vez |
-| 76 | Curso de finanças pessoais (conteúdo próprio) | AMtech Educação · Instituto AMS | Ideia | Digital | 9 | Validar com a planilha do Caixa da Casa antes do curso | passo 47.10 · A partir de fev/2027 |
-| 77 | Modelos 3D e projetos Arduino para download · **nova** | AMtech Mídia | Ideia | Digital | 9 | Nenhum: só publicar o que sair das aulas | passo 11.8 · Semana 4 · nov/2026 |
-| 78 | Plugin WordPress com versão Pro · **nova** | AMtech Software | Ideia | Digital | 9 | Escolher o problema a partir dos pedidos dos clientes de sites | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 79 | [Automação e monitoramento para sítios e produtores (AMtech Campo)](../ia/hugging-face.md) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 8 | Irrigação da horta e bebedouro funcionando na sua casa por 3 meses, com o painel | passo 60.16 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino |
-| 80 | Avaliação de respostas de IA (DataAnnotation, Outlier) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 8 | Fazer o cadastro e o teste de entrada (quem pede pagamento para você entrar é golpe) | passo 11.3 · Semana 4 · nov/2026 |
-| 81 | Colônia de férias tech (robótica e programação) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 8 | Só em 2027, em janeiro ou julho | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 82 | Consultoria de investimentos (AM Rendara premium, com sócia certificada) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 8 | Só quando a sócia estiver certificada e registrada | passo 57.5 · Contínuo, desde a semana 2 |
-| 83 | Edição de vídeo para lojas e criadores · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 8 | Nenhum: a IA de corte fica só no seu canal | passo 11.8 · Semana 4 · nov/2026 |
-| 84 | Kits e placas de robótica (Tindie e Mercado Livre) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 8 | Validar 1 kit com pré-venda | passo 56.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 85 | Licença do ByteSDCoin para escolas (sem aposta) · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 8 | Revisão jurídica e um piloto em outra escola | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 86 | Traduções do livro | Editora AMS Silva | Ideia | Digital | 8 | Depois de 500 cópias em português | passo 53.5 · Depois do primeiro livro |
-| 87 | Fotos e vídeos em bancos de imagens · **nova** | AMtech Mídia | Ideia | Digital | 7 | Nenhum: experimento sem prazo | passo 11.8 · Semana 4 · nov/2026 |
-| 88 | Redes Wi-Fi e câmeras com monitoramento mensal · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 7 | Achar 1 instalador parceiro | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 89 | [AM Entregas](../negocios/05-logistica-e-entregas.md) | Negócios físicos | Ideia | Local | 6 | Fase B, depois do portão da loja | passo 56.4 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 90 | AM Taskoro (gestão de projetos ágeis) | AMtech Software | Pausado | Digital | 6 | Fica como projeto de portfólio até o Kaixara ter clientes | passo 46.20 · Fev a dez/2027, uma oferta por vez |
-| 91 | Aluguel de kits de robótica · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 6 | Depois do AMtech Maker | passo 56.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 92 | Jogo educativo de lógica (itch.io e Steam) · **nova** | AMtech Software | Ideia | Digital | 6 | Nenhum por enquanto | passo 11.8 · Semana 4 · nov/2026 |
-| 93 | [AM Delivery](../negocios/06-delivery-multiempresas.md) | Negócios físicos | Ideia | Local | 5 | Fase B2 | passo 56.5 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 94 | Mercadinho autônomo em condomínio · **nova** | Negócios físicos | Ideia | Local | 5 | Kaixara com autoatendimento e conversa com 1 síndico | passo 56.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 95 | Máquina de venda de lanches · **nova** | Negócios físicos | Ideia | Local | 5 | Só com capital próprio e um ponto validado | passo 56.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 96 | Português para estrangeiros (Preply, italki) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 5 | Perfil quando o inglês chegar ao básico | passo 46.22 · Fev a dez/2027, uma oferta por vez |
-| 97 | Sites de nicho com anúncios · **nova** | AMtech Mídia | Ideia | Digital | 5 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
-| 98 | Aplicador e fiscal de provas · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 4 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
-| 99 | [Bug bounty e pentest](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 4 | Laboratórios Apprentice da PortSwigger, eJPT e o primeiro report no BugHunt | passo 58.15 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| 100 | [Pentest completo para empresas (AMtech Segurança)](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 4 | OSCP, contrato e termo revisados por advogado e seguro de responsabilidade profissional | passo 58.19 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| 101 | [Sushi (delivery)](../negocios/07-sushi.md) | Negócios físicos | Ideia | Local | 4 | Fase C1 | passo 56.6 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 102 | [Cafeteria](../negocios/08-cafeteria.md) | Negócios físicos | Ideia | Local | 3 | Fase C3, dentro da padaria | passo 56.8 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 103 | Casa inteligente para clientes (Home Assistant) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 3 | Montar primeiro a sua casa | passo 56.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 104 | Fotos de produto para lojas do Mercado Livre · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 3 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
-| 105 | Perito em informática judicial · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 3 | Estudar perícia forense | passo 57.4 · Contínuo, desde a semana 2 |
-| 106 | Testes de software pagos por bug · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 3 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
-| 107 | [Padaria com café da manhã e almoço](../negocios/09-padaria-e-almoco.md) | Negócios físicos | Ideia | Local | 1 | Fase C2 | passo 56.7 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 108 | Motos e carros: compra e revenda · **nova** | Negócios físicos | Ideia | Local | -1 | Nenhum antes de capital próprio, CNPJ e vistoria cautelar | passo 56.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 37 | [AMtech OS (sistema pronto para programar, baseado em Ubuntu)](../../os/README.md) · **nova** | AMtech Software | Construção | Digital | 12 | Testar a versão 0.1 numa VM por uma semana (os/README.md) | passo 48.5 · Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso |
+| 38 | [Assistência técnica](../negocios/02-assistencia-e-pecas.md) | AMtech Campo (presencial, por parceiros) | Ideia | Local | 12 | Começar atendendo em casa e por agendamento antes de alugar a loja | passo 57.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 39 | [Canais sem rosto (YouTube, TikTok, Instagram, Facebook)](../marketing/README.md) | AMtech Mídia | Construção | Digital | 12 | Publicar 3 vídeos por semana por 8 semanas e medir | passo 46.14 · Fev a dez/2027, uma oferta por vez |
+| 40 | [Curso: segurança e engenharia reversa para devs](../seguranca/README.md) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Transformar o crackme da aula e o lab de ataque nas 3 primeiras aulas | passo 59.17 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| 41 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Candidatar-se com o mini-curso como amostra | passo 46.21 · Fev a dez/2027, uma oferta por vez |
+| 42 | Elaboração e revisão de questões · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 12 | Montar um portfólio de 20 questões e se candidatar | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 43 | Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Só depois do mini-curso vender 100 cópias | passo 47.10 · A partir de fev/2027 |
+| 44 | [Livro Lógica e Máquina](../editora/README.md) | Editora AMS Silva | Construção | Digital | 12 | Entregar o Capítulo 1 para avaliação | passo 43.11 · Quando o capítulo 1 estiver pronto |
+| 45 | Mentoria de organização financeira e palestras em empresas (sem recomendar ativos) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 12 | Testar com 3 pessoas usando o seu método da cascata | passo 46.23 · Fev a dez/2027, uma oferta por vez |
+| 46 | PC montado e entregue configurado · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 12 | Achar 1 técnico parceiro e fazer 3 montagens você mesmo para criar o checklist | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 47 | AM Rotara (pedidos e entregas) | AMtech Software | Ideia | Digital | 11 | Nasce junto com a AM Entregas | passo 51.3 · 2027 |
+| 48 | [AMtech Maker (robótica e automação)](../negocios/03-produtos-proprios.md) | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 11 | Primeiro kit sem rádio testado com seus alunos | passo 57.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 49 | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 11 | Fazer a rotina completa num negócio conhecido por 2 meses e virar checklist | passo 46.23 · Fev a dez/2027, uma oferta por vez |
+| 50 | Camisetas e canecas sob demanda (dev e professor) · **nova** | AMtech Mídia | Ideia | Digital | 11 | Subir 10 estampas que saíram do seu conteúdo | passo 46.21 · Fev a dez/2027, uma oferta por vez |
+| 51 | Celulares: comprar, consertar e revender · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Depois dos notebooks passarem no portão | passo 11.5 · Semana 4 · nov/2026 |
+| 52 | Comunidade paga do Instituto AMS | AMtech Educação · Instituto AMS | Ideia | Digital | 11 | Só com 200 alunos pagantes | passo 46.15 · Fev a dez/2027, uma oferta por vez |
+| 53 | Formatação ABNT de TCC (só formatar e revisar) · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 11 | Fazer o verificador automático e testar em 3 trabalhos | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 54 | Instrutor horista (SENAC, SENAI, prefeitura) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 11 | Só se a tarde ficar livre em 2027 | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 55 | Licença do AM Delivery para outras cidades · **nova** | AMtech Software | Ideia | Produtizado | 11 | Só depois de Barbacena dar lucro por 6 meses | passo 57.5 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 56 | Livros técnicos e didáticos usados · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Digital | 11 | Experimento com 10 livros | passo 11.5 · Semana 4 · nov/2026 |
+| 57 | Notebooks e PCs: comprar, consertar e revender · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Criar as buscas salvas e rodar o radar 4 semanas sem comprar, só medindo | passo 11.5 · Semana 4 · nov/2026 |
+| 58 | Oficinas de robótica e programação para escolas · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 11 | Montar o plano de 8 encontros com o kit | passo 46.16 · Fev a dez/2027, uma oferta por vez |
+| 59 | Parceiro de ERP (Bling, Tiny, Omie): implantação e comissão · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 11 | Entrar no programa de parceiros quando um cliente de sites pedir gestão | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 60 | Parceria DIO | AMtech Educação · Instituto AMS | Ideia | Digital | 11 | Publicar 3 artigos e um projeto na DIO | passo 37.6 · Semanas 8 a 10 · dez/2026 a jan/2027 |
+| 61 | Peças de máquinas sucateadas (RAM, SSD, placas) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Junto com os notebooks | passo 11.5 · Semana 4 · nov/2026 |
+| 62 | [Peças e acessórios sem estoque](../negocios/02-assistencia-e-pecas.md) | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Só junto com a assistência | passo 57.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 63 | Professor conteudista EAD · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 11 | Ligar a busca semanal de editais | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 64 | Recuperação de dados (intermediação com laboratório) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 11 | Fechar parceria com 1 laboratório | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 65 | [Sistemas sob encomenda](../negocios/01-software-house.md) | AMtech Software | Ideia | Produtizado | 11 | Primeiro cliente via loja ou indicação, com 50% de entrada | passo 46.17 · Fev a dez/2027, uma oferta por vez |
+| 66 | Aula de sushi e sushiman para eventos · **nova** | Negócios físicos | Ideia | Local | 10 | Testar 2 eventos com amigos pagantes; confirme as regras sanitárias para preparo na casa do cliente | passo 46.18 · Fev a dez/2027, uma oferta por vez |
+| 67 | [Automação BIM e modelagem para escritórios de engenharia e arquitetura](../construcao/README.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 10 | Publicar 3 scripts úteis de IFC no GitHub e oferecer a 2 escritórios de Barbacena | passo 62.11 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
+| 68 | Formação em Matemática | AMtech Educação · Instituto AMS | Ideia | Digital | 10 | Usar os capítulos de matemática do livro como base | passo 47.10 · A partir de fev/2027 |
+| 69 | Freela internacional em dólar (Upwork) · **nova** | AMtech Software | Ideia | Produtizado | 10 | Perfil no Upwork quando o inglês chegar ao B1 | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 70 | Gestão de tráfego pago para o comércio local · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 10 | Testar primeiro nas suas próprias ofertas | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 71 | [Ponto de retirada (Shopee e Mercado Livre)](../negocios/04-ponto-de-retirada.md) | Negócios físicos | Ideia | Local | 10 | Junto com a loja | passo 57.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 72 | [Segurança digital para pequenas empresas](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 10 | Documentar 3 casos (começando pelo seu) como checklist | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 73 | Workshops presenciais para pequenos empresários (IA, planilhas, presença digital) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 10 | Fazer um piloto com 10 vagas | passo 46.19 · Fev a dez/2027, uma oferta por vez |
+| 74 | [AM Obra: diário, medição, compras e estimativa para pequenas construtoras](../construcao/README.md) · **nova** | AMtech Software | Ideia | Digital | 9 | Entrevistar 5 mestres de obra e engenheiros da região antes de escrever código | passo 62.12 · Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
+| 75 | Aulas de informática e celular para idosos · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 9 | Só se a tarde ficar livre em 2027 | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 76 | Captação de crédito e editais para pequenos negócios (Pronampe, BDMG, Sebrae, FAPEMIG) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 9 | Ligar a busca de editais e fazer o primeiro pedido para um negócio seu | passo 46.23 · Fev a dez/2027, uma oferta por vez |
+| 77 | Curso de finanças pessoais (conteúdo próprio) | AMtech Educação · Instituto AMS | Ideia | Digital | 9 | Validar com a planilha do Caixa da Casa antes do curso | passo 47.10 · A partir de fev/2027 |
+| 78 | Modelos 3D e projetos Arduino para download · **nova** | AMtech Mídia | Ideia | Digital | 9 | Nenhum: só publicar o que sair das aulas | passo 11.8 · Semana 4 · nov/2026 |
+| 79 | Plugin WordPress com versão Pro · **nova** | AMtech Software | Ideia | Digital | 9 | Escolher o problema a partir dos pedidos dos clientes de sites | passo 46.21 · Fev a dez/2027, uma oferta por vez |
+| 80 | [Automação e monitoramento para sítios e produtores (AMtech Campo)](../ia/hugging-face.md) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 8 | Irrigação da horta e bebedouro funcionando na sua casa por 3 meses, com o painel | passo 61.16 · Modelos em dez/2026 (nada a comprar); SO-101 na primeira compra de robótica de 2027; Reachy Mini e LeKiwi depois do primeiro treino |
+| 81 | Avaliação de respostas de IA (DataAnnotation, Outlier) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 8 | Fazer o cadastro e o teste de entrada (quem pede pagamento para você entrar é golpe) | passo 11.3 · Semana 4 · nov/2026 |
+| 82 | Colônia de férias tech (robótica e programação) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 8 | Só em 2027, em janeiro ou julho | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 83 | Consultoria de investimentos (AM Rendara premium, com sócia certificada) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 8 | Só quando a sócia estiver certificada e registrada | passo 58.5 · Contínuo, desde a semana 2 |
+| 84 | Edição de vídeo para lojas e criadores · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 8 | Nenhum: a IA de corte fica só no seu canal | passo 11.8 · Semana 4 · nov/2026 |
+| 85 | Kits e placas de robótica (Tindie e Mercado Livre) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 8 | Validar 1 kit com pré-venda | passo 57.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 86 | Licença do ByteSDCoin para escolas (sem aposta) · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 8 | Revisão jurídica e um piloto em outra escola | passo 46.21 · Fev a dez/2027, uma oferta por vez |
+| 87 | Traduções do livro | Editora AMS Silva | Ideia | Digital | 8 | Depois de 500 cópias em português | passo 54.5 · Depois do primeiro livro |
+| 88 | Fotos e vídeos em bancos de imagens · **nova** | AMtech Mídia | Ideia | Digital | 7 | Nenhum: experimento sem prazo | passo 11.8 · Semana 4 · nov/2026 |
+| 89 | Redes Wi-Fi e câmeras com monitoramento mensal · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 7 | Achar 1 instalador parceiro | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 90 | [AM Entregas](../negocios/05-logistica-e-entregas.md) | Negócios físicos | Ideia | Local | 6 | Fase B, depois do portão da loja | passo 57.4 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 91 | AM Taskoro (gestão de projetos ágeis) | AMtech Software | Ideia | Digital | 6 | Fica como projeto de portfólio até o Kaixara ter clientes | passo 46.20 · Fev a dez/2027, uma oferta por vez |
+| 92 | Aluguel de kits de robótica · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 6 | Depois do AMtech Maker | passo 57.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 93 | Jogo educativo de lógica (itch.io e Steam) · **nova** | AMtech Software | Ideia | Digital | 6 | Nenhum por enquanto | passo 11.8 · Semana 4 · nov/2026 |
+| 94 | [AM Delivery](../negocios/06-delivery-multiempresas.md) | Negócios físicos | Ideia | Local | 5 | Fase B2 | passo 57.5 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 95 | Mercadinho autônomo em condomínio · **nova** | Negócios físicos | Ideia | Local | 5 | Kaixara com autoatendimento e conversa com 1 síndico | passo 57.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 96 | Máquina de venda de lanches · **nova** | Negócios físicos | Ideia | Local | 5 | Só com capital próprio e um ponto validado | passo 57.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 97 | Português para estrangeiros (Preply, italki) · **nova** | AMtech Educação · Instituto AMS | Ideia | Local | 5 | Perfil quando o inglês chegar ao básico | passo 46.22 · Fev a dez/2027, uma oferta por vez |
+| 98 | Sites de nicho com anúncios · **nova** | AMtech Mídia | Ideia | Digital | 5 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
+| 99 | Aplicador e fiscal de provas · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 4 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
+| 100 | [Bug bounty e pentest](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 4 | Laboratórios Apprentice da PortSwigger, eJPT e o primeiro report no BugHunt | passo 59.15 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| 101 | [Pentest completo para empresas (AMtech Segurança)](../seguranca/03-empresa-de-pentest.md) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 4 | OSCP, contrato e termo revisados por advogado e seguro de responsabilidade profissional | passo 59.19 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| 102 | [Sushi (delivery)](../negocios/07-sushi.md) | Negócios físicos | Ideia | Local | 4 | Fase C1 | passo 57.6 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 103 | [Cafeteria](../negocios/08-cafeteria.md) | Negócios físicos | Ideia | Local | 3 | Fase C3, dentro da padaria | passo 57.8 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 104 | Casa inteligente para clientes (Home Assistant) · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 3 | Montar primeiro a sua casa | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 105 | Fotos de produto para lojas do Mercado Livre · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Local | 3 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
+| 106 | Perito em informática judicial · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 3 | Estudar perícia forense | passo 58.4 · Contínuo, desde a semana 2 |
+| 107 | Testes de software pagos por bug · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Local | 3 | Nenhum | passo 11.8 · Semana 4 · nov/2026 |
+| 108 | [Padaria com café da manhã e almoço](../negocios/09-padaria-e-almoco.md) | Negócios físicos | Ideia | Local | 1 | Fase C2 | passo 57.7 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| 109 | Motos e carros: compra e revenda · **nova** | Negócios físicos | Ideia | Local | -1 | Nenhum antes de capital próprio, CNPJ e vistoria cautelar | passo 57.10 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
 
 ## Fontes de renda novas
 
@@ -475,6 +478,7 @@ Ideias que nasceram do cruzamento entre os negócios, as aulas, o livro e o setu
 | Implantação de ficha técnica e engenharia de cardápio | AM Kaixara (PDV, ficha técnica, cardápio) | projeto | Usar o restaurante onde você trabalha como estudo de caso, se o dono aceitar | 13 |
 | Laudo de segurança dos sites que você mantém | Sites e lojas para pequenas empresas | na mensalidade + laudo avulso | Ensaiar o serviço completo no seu próprio site (escopo, testes, relatório) | 13 |
 | Templates Next.js/Tailwind em inglês | Templates e código-fonte, Setup profissional (curso, template e configuração remota) | venda única, em dólar | Publicar 1 template a partir do Aura Design System | 13 |
+| AMtech OS (sistema pronto para programar, baseado em Ubuntu) | Setup profissional (curso, template e configuração remota) | grátis (Community) + configuração remota, notebooks prontos, plano mensal e licença para escolas | Testar a versão 0.1 numa VM por uma semana (os/README.md) | 12 |
 | Curso: segurança e engenharia reversa para devs | Mini-curso Lógica de Programação | venda única | Transformar o crackme da aula e o lab de ataque nas 3 primeiras aulas | 12 |
 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) | Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | royalties | Candidatar-se com o mini-curso como amostra | 12 |
 | Elaboração e revisão de questões | — | por questão | Montar um portfólio de 20 questões e se candidatar | 12 |
@@ -567,6 +571,7 @@ flowchart LR
   templates["Templates e código-fonte"]
   kaixara["AM Kaixara"]
   ammentor["AM Mentor: banco de exercícios c…"]
+  amtechos["AMtech OS"]
   assist["Assistência técnica"]
   dark["Canais sem rosto"]
   cursoseg["Curso: segurança e engenharia re…"]
@@ -659,6 +664,7 @@ flowchart LR
   setuppro --> templatesint
   sites --> templates
   livro --> ammentor
+  setuppro --> amtechos
   minicurso --> dark
   minicurso --> cursoseg
   formti --> royalties
@@ -718,7 +724,7 @@ flowchart LR
   redescftv --> casainteligente
   kaixara --> padaria
   classDef nova fill:#f3e7d3,stroke:#8a5e22,color:#13262b
-  class aulasprof,abnt-auto,automacaoia,simulados,anki,calculadoras,buildpublic,dublagem,fabricaprof,modelosfin,setuppro,n8ntemplates,whitelabel,planonegocio,agencialocal,remoto,adocao,uikits,docs-escolas,consultoriaresto,auditsites,templatesint,cursoseg,royalties,mentoriafin,pcmontado,bpofin,camisetas,revenda-celulares,abnt,senac,licencadelivery,revenda-livros,revenda-notebooks,oficinas,erp,revenda-pecas,recuperacao,automacaobim,freelausd,trafego,segurancapme,workshop,amobra,idosos,credito-editais,pluginwp,agrotec,colonia,consultoriainv,kitstindie,redescftv,aluguelkits,jogo,mercadinho,vending,bugbounty,pentestpro,casainteligente nova
+  class aulasprof,abnt-auto,automacaoia,simulados,anki,calculadoras,buildpublic,dublagem,fabricaprof,modelosfin,setuppro,n8ntemplates,whitelabel,planonegocio,agencialocal,remoto,adocao,uikits,docs-escolas,consultoriaresto,auditsites,templatesint,amtechos,cursoseg,royalties,mentoriafin,pcmontado,bpofin,camisetas,revenda-celulares,abnt,senac,licencadelivery,revenda-livros,revenda-notebooks,oficinas,erp,revenda-pecas,recuperacao,automacaobim,freelausd,trafego,segurancapme,workshop,amobra,idosos,credito-editais,pluginwp,agrotec,colonia,consultoriainv,kitstindie,redescftv,aluguelkits,jogo,mercadinho,vending,bugbounty,pentestpro,casainteligente nova
 ```
 
 ## Por frente
@@ -779,6 +785,7 @@ flowchart LR
 | Laudo de segurança dos sites que você mantém | na mensalidade + laudo avulso | laudo do conferir.py, ZAP passivo agendado, relatório pelo modelo | revisar os achados, explicar ao cliente | laudos entregues e clientes que sobem de plano |
 | Templates Next.js/Tailwind em inglês | venda única, em dólar | testes, demonstração e publicação pelo CI | construir, suporte | vendas por mês |
 | AM Kaixara (PDV, ficha técnica, cardápio) | recorrente | onboarding, cobrança Pix Automático, suporte de primeiro nível | vendas iniciais | MRR e cancelamento |
+| AMtech OS (sistema pronto para programar, baseado em Ubuntu) | grátis (Community) + configuração remota, notebooks prontos, plano mensal e licença para escolas | instalador, atualizações, verificador | suporte, configuração remota | instalações por mês e clientes pagantes |
 | AM Rotara (pedidos e entregas) | recorrente | roteirização, repasse, notificações | suporte | entregas roteirizadas |
 | Licença do AM Delivery para outras cidades | licença + royalties | instância por cidade | contrato e treinamento | cidades licenciadas |
 | Sistemas sob encomenda | projeto | CI/CD, testes, documentação | descoberta e arquitetura | margem por projeto |
@@ -880,14 +887,13 @@ flowchart LR
 
 | Estágio | Ofertas |
 |---|---:|
-| Ideia | 96 |
+| Ideia | 97 |
 | Validação | 6 |
-| Construção | 4 |
+| Construção | 5 |
 | Lançado | 1 |
-| Pausado | 1 |
 
 | Escala | Ofertas |
 |---|---:|
-| Digital (custo por cliente perto de zero) | 46 |
+| Digital (custo por cliente perto de zero) | 47 |
 | Produtizado (pacote repetível) | 32 |
 | Local (depende de gente e lugar) | 30 |

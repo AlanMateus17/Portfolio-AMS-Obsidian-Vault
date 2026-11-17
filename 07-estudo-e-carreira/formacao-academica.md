@@ -9,7 +9,7 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** aqui está o que você vai ter de **diploma** (faculdades), de **certificado** (provas do mercado de investimentos) e o que vai aprender **sozinho**. Também diz quais certificados a lei exige para recomendar investimentos e criar fundos.
 
-> **Objetivo de carreira (out/2026):** ser **programador sênior** na stack definida (C#/.NET + TypeScript/Next.js, com Python em paralelo), especializado em **IA desenvolvida e treinada do zero** e em **software para administração, empreendedorismo e finanças**, trabalhando no Brasil e principalmente no exterior. No lado financeiro, ter **as certificações do setor de investimentos** para recomendar investimentos e criar os próprios fundos sem barreira regulatória.
+> **Objetivo de carreira (out/2026):** ser **programador sênior** na stack definida (núcleo TypeScript/Next.js + Python/FastAPI + SQL; C#/.NET como carta de reserva), especializado em **IA desenvolvida e treinada do zero** e em **software para administração, empreendedorismo e finanças**, trabalhando no Brasil e principalmente no exterior. No lado financeiro, ter **as certificações do setor de investimentos** para recomendar investimentos e criar os próprios fundos sem barreira regulatória.
 >
 > **Decisões de out/2026:** sai o concurso PF/PRF, desenho e violão. **Saem as pós-graduações** (Cybersecurity e Arquitetura). **Engenharia de software é só autodidata**, sem faculdade. Entra a **faculdade de Ciências Econômicas**.
 
@@ -91,9 +91,9 @@ O que cada atividade exige por lei, para você ou para alguém da sua empresa:
 | Contabilidade, matemática financeira, tributos, mercado, administração, empreendedorismo | [trilha-financas-economia](trilha-financas-economia.md) |
 | Segurança ofensiva (certificações CompTIA → eJPT → OSCP continuam) | [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) |
 | C/C++ (École 42) | [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) |
-| Linux, redes, baixo nível, SO próprio | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [trilha-de-redes](trilha-de-redes.md) · [mapa-horizonte-longo-sistemas](mapa-horizonte-longo-sistemas.md) |
+| Linux, redes, baixo nível, SO próprio | [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [trilha-de-redes](trilha-de-redes.md) · [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) |
 | Robótica e IoT | [trilha-robotica-iot](trilha-robotica-iot.md) |
-| Inglês (essencial para o exterior), espanhol, mandarim | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
+| Inglês (essencial para o exterior), espanhol | [ingles-espanhol-integrado](ingles-espanhol-integrado.md) |
 
 ---
 
@@ -103,8 +103,8 @@ O que cada atividade exige por lei, para você ou para alguém da sua empresa:
 > Documentos e páginas que você criou no claude.ai e que detalham esta parte do plano. Todos estão copiados na pasta `12-artefatos`.
 
 - [Meu progresso financeiro (Dashboard)](../12-artefatos/tipados/meu-progresso-financeiro) · projeto (design/painel) · [sobre](../12-artefatos/tipados/meu-progresso-financeiro/LEIA-ME.md)
-- [Teste BESST da B3: Barsi, Bazin, Buffett e ARCA](../12-artefatos/documentos/teste-besst-da-b3-barsi-bazin-buffett-e-arca/Teste%20BESST%20da%20B3%20Barsi,%20Bazin,%20Buffett%20e%20ARCA.md)
-- [Teste BESST — Dados e cálculos](../12-artefatos/documentos/teste-besst-da-b3-barsi-bazin-buffett-e-arca/Dados%20e%20cálculos.md)
+- Teste BESST da B3: Barsi, Bazin, Buffett e ARCA
+- Teste BESST — Dados e cálculos
 - [Exercício: Fluxograma do Preço-Teto (Barsi, Bazin e ARCA)](../12-artefatos/documentos/exercicio-fluxograma-do-preco-teto-barsi-bazin-e-arca.md)
 - [Caixa da Casa 2 (versão de 17/10) · cópia 5hzp](../12-artefatos/paginas/caixa-da-casa-2-5hzp/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-2-5hzp/LEIA-ME.md)
 - [Caixa da Casa 2 (versão de 17/10) · cópia t7mj](../12-artefatos/paginas/caixa-da-casa-2-t7mj/index.html) · página interativa · [sobre](../12-artefatos/paginas/caixa-da-casa-2-t7mj/LEIA-ME.md)

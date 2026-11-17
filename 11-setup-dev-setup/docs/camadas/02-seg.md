@@ -164,28 +164,28 @@ flowchart LR
 |---|---|---|---|
 | [Commits assinados (chave SSH)](#sign) | Local | Selo Verified no GitHub: prova que o commit é seu. Usa a chave SSH que você já tem. | passo 4.6 · Semana 2 · nov/2026; passo 39.1 · Semana 11 · jan/2027 |
 | [restic (backup criptografado)](#restic) | Local | Backup criptografado e incremental para o disco externo e para a nuvem (ex.: armazenamento do seu plano Google). | passo 7.1 · Semana 3 · nov/2026; passo 7.4 · Semana 3 · nov/2026; passo 10.7 · Semana 4 · nov/2026; passo 22.2 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois |
-| [Chave física (YubiKey)](#ykey) | Físico · futuro | 2FA à prova de phishing para GitHub, Google e Microsoft. | passo 48.5 · 2027, conforme cada compra |
+| [Chave física (YubiKey)](#ykey) | Físico · futuro | 2FA à prova de phishing para GitHub, Google e Microsoft. | passo 49.5 · 2027, conforme cada compra |
 | [TPM + Secure Boot](#tpm) | Físico | Só sistema assinado dá boot. Para usar os pendrives de Kali e Arch, o Secure Boot precisa ser desligado; suspenda o BitLocker antes, senão o Windows pede a chave de recuperação. | passo 3.3 · Semana 1 · out/2026 |
 | [BitLocker](#bitl) | Local | Disco criptografado; chave guardada fora da máquina. | passo 3.3 · Semana 1 · out/2026 |
 | [Defender + Firewall](#def) | Local | Antivírus e bloqueio de rede. | passo 3.4 · Semana 1 · out/2026 |
-| [KeePassXC](#kee) | Local | Cofre de todas as senhas das contas marcadas com o ponto dourado. | passo 2.1 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.2 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.4 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.5 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.6 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.8 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.9 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.10 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.11 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.12 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.13 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.14 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.15 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.16 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 18.1 · Semana 5 · nov/2026 |
+| [KeePassXC](#kee) | Local | Cofre de todas as senhas das contas marcadas com o ponto dourado. | passo 2.1 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.2 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.4 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.5 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.6 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.8 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.9 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.10 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.11 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.12 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.13 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.14 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.15 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.16 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 18.1 · Agora · nov/2026; passo 18.6 · Agora · nov/2026 |
 | [App 2FA (celular)](#tfa) | Local | Segundo fator de todas as contas. | passo 1.4 · Semana 1 · out/2026; passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026 |
 | [Backup 3-2-1](#bkp) | Local | GitHub + disco externo + (depois) NAS. | passo 2.11 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 7.1 · Semana 3 · nov/2026; passo 7.2 · Semana 3 · nov/2026; passo 7.3 · Semana 3 · nov/2026; passo 8.2 · Semanas 3 e 4 · nov/2026 |
 | [Organizadores](#organizar) | Local | Downloads por tipo (sem apagar nada) e exportação de senhas pronta para o KeePassXC. | passo 2.4 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 17.2 · Semana 4 · nov/2026 |
 | [Segredos do cofre (keepassxc-cli)](#segredos) | Local | O comando recebe o segredo direto do KeePassXC, sem .env em texto puro. | passo 20.6 · Semana 5 · nov/2026 |
 | [Teste de restauração](#restauracao) | Local | Restaura o último backup numa pasta temporária e confere. Backup não testado não conta. | passo 20.7 · Semana 5 · nov/2026 |
-| [Lab de engenharia reversa](#relab) | Local | Ghidra, ILSpy, gdb e strace (scripts/wsl/ferramentas-re.sh) para estudar binários seus, crackmes e a aula dos alunos. Binário de terceiro só com autorização escrita. Padrão sala limpa: alvos/ (binários brutos, fora do Git) → specs/ (o protocolo em Markdown) → src/ (reimplementação limpa em C# ou TypeScript, sem copiar código do alvo). | passo 58.1 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [GhidraMCP (IA no Ghidra)](#ghidramcp) | Local | Servidor MCP que deixa o Claude listar, renomear e explicar funções no Ghidra. Binário de cliente só com modelo local (Ollama) e cláusula no contrato. | passo 58.3 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [Lab de ataque (Juice Shop, WebGoat)](#labseg) | Local | infra/lab-seguranca: aplicações vulneráveis de propósito, presas em 127.0.0.1, para treinar o OWASP Top 10 sem tocar em sistema real. | passo 58.5 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [Kit de pentest (Burp, ZAP, nmap…)](#kitpent) | Local | Ferramentas maduras do mercado na VM Kali: Burp Suite, OWASP ZAP, nmap, ffuf, nuclei, sqlmap e Metasploit. Usar, não reescrever. | passo 58.9 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [AppSec nos seus sistemas](#appsec) | Local | Modelagem de ameaças (STRIDE), checklist ASVS e ZAP na homologação, por cima do gitleaks, Trivy e Semgrep do repositório padrão. | passo 58.10 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [Guarda de escopo (autorização)](#escopo) | Local | tools/seguranca/escopo.py: nenhum teste roda sem termo assinado, dentro da janela e do escopo; cada comando fica registrado. | passo 58.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [Relatório de pentest (CVSS)](#relpent) | Local | tools/seguranca/relatorio.py e cvss.py: do sumário executivo ao registro de atividades, com a nota CVSS 3.1 calculada, nunca escrita à mão. | passo 58.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [Política do Jarvis (níveis de risco)](#politica) | Local | tools/jarvis/politica.py: livre, voz, celular ou proibido por ação; destrancar, abrir janela e desligar geladeira nunca só por voz. | passo 59.3 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
-| [Lab de alvo isolado (rede sem internet)](#labalvo) | Local | O software que você estudou roda numa rede sem internet, só com o atacante: containers (scripts/wsl/lab-alvo.sh) ou VMs Kali e Alvo no VirtualBox (scripts/windows/lab-alvo.ps1), com foto para desfazer o ataque. | passo 58.6 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Lab de engenharia reversa](#relab) | Local | Ghidra, ILSpy, gdb e strace (scripts/wsl/ferramentas-re.sh) para estudar binários seus, crackmes e a aula dos alunos. Binário de terceiro só com autorização escrita. Padrão sala limpa: alvos/ (binários brutos, fora do Git) → specs/ (o protocolo em Markdown) → src/ (reimplementação limpa em C# ou TypeScript, sem copiar código do alvo). | passo 59.1 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [GhidraMCP (IA no Ghidra)](#ghidramcp) | Local | Servidor MCP que deixa o Claude listar, renomear e explicar funções no Ghidra. Binário de cliente só com modelo local (Ollama) e cláusula no contrato. | passo 59.3 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Lab de ataque (Juice Shop, WebGoat)](#labseg) | Local | infra/lab-seguranca: aplicações vulneráveis de propósito, presas em 127.0.0.1, para treinar o OWASP Top 10 sem tocar em sistema real. | passo 59.5 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Kit de pentest (Burp, ZAP, nmap…)](#kitpent) | Local | Ferramentas maduras do mercado na VM Kali: Burp Suite, OWASP ZAP, nmap, ffuf, nuclei, sqlmap e Metasploit. Usar, não reescrever. | passo 59.9 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [AppSec nos seus sistemas](#appsec) | Local | Modelagem de ameaças (STRIDE), checklist ASVS e ZAP na homologação, por cima do gitleaks, Trivy e Semgrep do repositório padrão. | passo 59.10 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Guarda de escopo (autorização)](#escopo) | Local | tools/seguranca/escopo.py: nenhum teste roda sem termo assinado, dentro da janela e do escopo; cada comando fica registrado. | passo 59.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Relatório de pentest (CVSS)](#relpent) | Local | tools/seguranca/relatorio.py e cvss.py: do sumário executivo ao registro de atividades, com a nota CVSS 3.1 calculada, nunca escrita à mão. | passo 59.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Política do Jarvis (níveis de risco)](#politica) | Local | tools/jarvis/politica.py: livre, voz, celular ou proibido por ação; destrancar, abrir janela e desligar geladeira nunca só por voz. | passo 60.3 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
+| [Lab de alvo isolado (rede sem internet)](#labalvo) | Local | O software que você estudou roda numa rede sem internet, só com o atacante: containers (scripts/wsl/lab-alvo.sh) ou VMs Kali e Alvo no VirtualBox (scripts/windows/lab-alvo.ps1), com foto para desfazer o ataque. | passo 59.6 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | [age · sops (arquivos cifrados)](#age) | Local | age cifra arquivos que saem da máquina (exportações, entregas a cliente, cópia extra do cofre); sops cifra configurações de VM guardadas fora do Git. Segredo do dia a dia segue só no KeePassXC. | passo 21.12 · Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
-| [gocryptfs (pasta dos alvos cifrada)](#gocryptfs) | Local | A pasta dos alvos da sala limpa fica cifrada mesmo com o disco aberto: agentes, backups e sincronização só veem bytes embaralhados. | passo 58.21 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [radare2 (triagem de binários)](#radare2) | Local | Triagem rápida e scripts (r2pipe) antes de abrir o Ghidra, que segue como descompilador principal. | passo 58.20 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [gocryptfs (pasta dos alvos cifrada)](#gocryptfs) | Local | A pasta dos alvos da sala limpa fica cifrada mesmo com o disco aberto: agentes, backups e sincronização só veem bytes embaralhados. | passo 59.21 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [radare2 (triagem de binários)](#radare2) | Local | Triagem rápida e scripts (r2pipe) antes de abrir o Ghidra, que segue como descompilador principal. | passo 59.20 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | [Política de autonomia](#politicaaut) | Local · futuro | Cada ação de agente tem um nível: automático, avisa, pede ok (toque no Telegram) ou proibido. Botão de parar tudo. Estende a política do Jarvis a todo o setup. | passo 22.7 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 23.6 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada |
 
 <a id="sign"></a>
@@ -227,7 +227,7 @@ Backup criptografado e incremental para o disco externo e para a nuvem (ex.: arm
 
 2FA à prova de phishing para GitHub, Google e Microsoft.
 
-**Quando entra:** passo 48.5 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 49.5 · 2027, conforme cada compra ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -285,7 +285,7 @@ Antivírus e bloqueio de rede.
 
 Cofre de todas as senhas das contas marcadas com o ponto dourado.
 
-**Quando entra:** passo 2.1 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.2 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.4 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.5 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.6 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.8 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.9 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.10 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.11 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.12 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.13 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.14 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.15 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.16 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 18.1 · Semana 5 · nov/2026 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 2.1 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.2 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.3 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.4 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.5 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.6 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.8 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.9 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.10 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.11 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.12 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.13 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.14 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.15 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 2.16 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 18.1 · Agora · nov/2026; passo 18.6 · Agora · nov/2026 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -384,7 +384,7 @@ Restaura o último backup numa pasta temporária e confere. Backup não testado 
 
 Ghidra, ILSpy, gdb e strace (scripts/wsl/ferramentas-re.sh) para estudar binários seus, crackmes e a aula dos alunos. Binário de terceiro só com autorização escrita. Padrão sala limpa: alvos/ (binários brutos, fora do Git) → specs/ (o protocolo em Markdown) → src/ (reimplementação limpa em C# ou TypeScript, sem copiar código do alvo).
 
-**Quando entra:** passo 58.1 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.1 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -403,7 +403,7 @@ Ghidra, ILSpy, gdb e strace (scripts/wsl/ferramentas-re.sh) para estudar binári
 
 Servidor MCP que deixa o Claude listar, renomear e explicar funções no Ghidra. Binário de cliente só com modelo local (Ollama) e cláusula no contrato.
 
-**Quando entra:** passo 58.3 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.3 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -419,7 +419,7 @@ Servidor MCP que deixa o Claude listar, renomear e explicar funções no Ghidra.
 
 infra/lab-seguranca: aplicações vulneráveis de propósito, presas em 127.0.0.1, para treinar o OWASP Top 10 sem tocar em sistema real.
 
-**Quando entra:** passo 58.5 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.5 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -433,7 +433,7 @@ infra/lab-seguranca: aplicações vulneráveis de propósito, presas em 127.0.0.
 
 Ferramentas maduras do mercado na VM Kali: Burp Suite, OWASP ZAP, nmap, ffuf, nuclei, sqlmap e Metasploit. Usar, não reescrever.
 
-**Quando entra:** passo 58.9 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.9 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -454,7 +454,7 @@ Ferramentas maduras do mercado na VM Kali: Burp Suite, OWASP ZAP, nmap, ffuf, nu
 
 Modelagem de ameaças (STRIDE), checklist ASVS e ZAP na homologação, por cima do gitleaks, Trivy e Semgrep do repositório padrão.
 
-**Quando entra:** passo 58.10 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.10 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -470,7 +470,7 @@ Modelagem de ameaças (STRIDE), checklist ASVS e ZAP na homologação, por cima 
 
 tools/seguranca/escopo.py: nenhum teste roda sem termo assinado, dentro da janela e do escopo; cada comando fica registrado.
 
-**Quando entra:** passo 58.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -485,7 +485,7 @@ tools/seguranca/escopo.py: nenhum teste roda sem termo assinado, dentro da janel
 
 tools/seguranca/relatorio.py e cvss.py: do sumário executivo ao registro de atividades, com a nota CVSS 3.1 calculada, nunca escrita à mão.
 
-**Quando entra:** passo 58.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.13 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -502,7 +502,7 @@ tools/seguranca/relatorio.py e cvss.py: do sumário executivo ao registro de ati
 
 tools/jarvis/politica.py: livre, voz, celular ou proibido por ação; destrancar, abrir janela e desligar geladeira nunca só por voz.
 
-**Quando entra:** passo 59.3 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 60.3 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -517,7 +517,7 @@ tools/jarvis/politica.py: livre, voz, celular ou proibido por ação; destrancar
 
 O software que você estudou roda numa rede sem internet, só com o atacante: containers (scripts/wsl/lab-alvo.sh) ou VMs Kali e Alvo no VirtualBox (scripts/windows/lab-alvo.ps1), com foto para desfazer o ataque.
 
-**Quando entra:** passo 58.6 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.6 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -550,7 +550,7 @@ age cifra arquivos que saem da máquina (exportações, entregas a cliente, cóp
 
 A pasta dos alvos da sala limpa fica cifrada mesmo com o disco aberto: agentes, backups e sincronização só veem bytes embaralhados.
 
-**Quando entra:** passo 58.21 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.21 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -564,7 +564,7 @@ A pasta dos alvos da sala limpa fica cifrada mesmo com o disco aberto: agentes, 
 
 Triagem rápida e scripts (r2pipe) antes de abrir o Ghidra, que segue como descompilador principal.
 
-**Quando entra:** passo 58.20 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 59.20 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

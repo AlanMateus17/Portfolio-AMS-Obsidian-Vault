@@ -4,9 +4,9 @@ cliente: Cliente {shape: person}
 web: apps/web (Next.js) {
   zod: Zod na borda
 }
-api: apps/api (ASP.NET Core) {
+api: apps/api (TypeScript) {
   core: packages/core (regras puras)
-  db: packages/db (EF Core)
+  db: packages/db (Prisma/Drizzle)
 }
 pg: PostgreSQL {shape: cylinder}
 obs: SigNoz + GlitchTip

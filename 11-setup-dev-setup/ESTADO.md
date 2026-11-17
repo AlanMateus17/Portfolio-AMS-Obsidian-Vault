@@ -24,7 +24,8 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-02: v2.9: tools/git/taguear.py (tag de todas as versões do CHANGELOG de uma vez, no notebook) e docs/boas-praticas.md (git, versões, tags, segurança, qualidade, backup, licenças); passo el-tags. Tags não enviam por esta sessão: rodar no notebook com git fetch --unshallow.
 - 2026-11-02: v2.10: tag automática no push (hook scripts/git-hooks/pre-push + taguear.py --ultima); ligar com git config core.hooksPath scripts/git-hooks. Daqui ainda não envia tag; no notebook, sim.
 - 2026-11-06: v2.11: contexto mestre da empresa solo integrado (docs/empresa-solo.md): justfile como porta única, tools/triagem (montar, colar ou construir; pacote do arquiteto), ADR 0005 Kamal em VM e ADR 0006 Zod só no front; 17 decisões novas em fora-do-setup.
-- 2026-11-06: stack fixa mantida (.NET 10); o cronograma de 14 dias virou as ofertas automacaoia (Chatwoot) e rendara (planilha primeiro), ambas na fila; venda segue no CPF. .claudeignore não existe: vale permissions.deny no .claude/settings.json.
+- 2026-11-06: stack por problema mantida; o cronograma de 14 dias virou as ofertas automacaoia (Chatwoot) e rendara (planilha primeiro), ambas na fila; venda segue no CPF. .claudeignore não existe: vale permissions.deny no .claude/settings.json.
+- 2026-11-13 (ADR 0017): núcleo passou a ser TypeScript + Python + SQL; .NET virou carta de reserva; 23 sistemas → produto único AM Gestão. Fonte: portfolio-ams/PLANO-UNICO-AMtech.md.
 - 2026-11-06: próximo: fase Empresa solo (rodar o bootstrap, just check, triagem antes de qualquer ideia nova). Pendências do Alan continuam as mesmas (senhas, ActivityWatch, R$ 45 e 7 h).
 - 2026-11-06: v2.11.1: delta dos 5 módulos absorvido (sala limpa no lab, link do grep.app no arquiteto); Soft Serve, monorepo, VM paga na AWS/Azure agora, Astro, Plausible, Plunk, Akaunting e HeyForm ficaram de fora com motivo.
 - 2026-11-06: v2.12: TODAS as ferramentas do contexto mestre entraram, cada função com principal e reserva (ADR 0008); nenhuma linguagem proibida (ADR 0007). Fases novas: Soberania (VM, dez/2026) e Sprint de 14 dias (recesso de jan/2027).
@@ -43,4 +44,18 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-06: v2.20: Alura (assistir antes) e VHSlins (ler antes) ligados aos módulos; trilhas de matemática e física; semana fixa no just professor hoje; aula termina com roteiro para dar a aula.
 - 2026-11-06: v2.21: posts do Akita escolhidos por módulo no Professor; regras aprovadas entram no núcleo; podcasts viram nota de escuta (just professor escutei); bug das tags do índice do Akita corrigido.
 - 2026-11-06: v2.22: um vault só (ADR 0013): o seu Portfolio-AMS-Obsidian-Vault em ~/dev/notas, com o dev-setup espelhado na pasta 11 (just vault-espelho); plano mestre = eixo + Professor.
+- 2026-11-09: v2.25: Recrutador com 9 formatos de entrevista simulada (just recrutador semana).
+- 2026-11-08: v2.24: trilha rápida em 7 sessões (just rapido; docs/implantacao/trilha-rapida.md antes do WSL); just agora mostra o terminal certo.
 - 2026-11-07: v2.23: sites das 3 empresas prontos pelo modelo Astro (just site amtech|instituto|editora; --checar mostra o que falta); roteiro por empresa (just agora instituto|editora); docs/empresas/README.md.
+- 2026-11-11: v2.26: motor de decisão e custo mínimo de IA (docs/ia/motor, ADR 0014): escada de 5 degraus, porta única LiteLLM, regra de três, formulário de pedido, perfil sênior, segurança no CI, nuvem barata.
+- 2026-11-11: nada fica pausado nem congelado (ADR 0015): 42, AM-OS, pentest, treino de IA, robótica, agro, construção, idiomas, dados e AM Taskoro voltam a ativos; a ordem segue o roteiro e o limite de 3 frentes "agora".
+- 2026-11-11: pendente do Alan: escolher a oferta que sai primeiro, revisar o PR #2, confirmar a skill arquiteto-de-prompt e a linguagem do roteador.
+- 2026-11-11: v2.27: motor de decisão 0.1 pronto (just motor "pedido", motor-custo, motor-ok/refazer, motor-relatorio). Falta rodar nucleo.py iniciar no notebook e usar antes de cada tarefa.
+- 2026-11-11: v2.28: celular ligado ao setup. just ligar sobe Ollama, aider, LiteLLM, fila, bot e Remote Control; /pedir no Telegram segue sem crédito do Claude (Claude → Gemini grátis → Ollama), sempre em ramo/PR rascunho.
+- 2026-11-11: pendente do Alan: no notebook, just ligar → aceitar o claude remote-control uma vez → chave do Gemini em infra/ia/.env → bot do Telegram (re-bot, re-env, re-id) → /pedir de teste.
+- 2026-11-11: contexto de instalação autônoma (docs/implantacao/INSTALACAO-AUTONOMA.md) para outra conta do Claude instalar a parte técnica até 25/11 e registrar tudo em ~/dev/RELATORIO-INSTALACAO.md.
+- 2026-11-12: instalação autônoma, dia 1: trilha em 12/50 conferidos (repositório, extensões, Ubuntu, Docker no WSL, bootstrap, gh, CI, login do Claude no Ubuntu); just instalar aplicado e just ligar --simular da v2.28 passou na máquina real.
+- 2026-11-12: v2.28.1: padronizar-repo.sh pula o próprio dev-setup (o just instalar criava docs/adr/0001-modelo.md e quebrava o just check).
+- 2026-11-12: pendente do Alan: merge do PR #4, apagar os 6 arquivos soltos do modelo em ~/dev/dev-setup, diagnóstico como Administrador, backup inicial no disco externo; relatório em ~/dev/RELATORIO-INSTALACAO.md.
+- 2026-11-12: v2.28.2: just ligar rodou no notebook (fila no ar, LiteLLM no ar, linger, tarefa AMtech WSL e vmIdleTimeout=-1); o Ollama falhou por falta do zstd, corrigido no ligar-tudo.sh e no bootstrap.sh.
+- 2026-11-12: v2.29: AMtech OS 0.1 (os/, ADR 0016 em proposta): Ubuntu + os/instalar.sh, perfis e comando amtech. Próximo: testar numa VM do VirtualBox (os/README.md) e usar uma semana antes de decidir o ADR.

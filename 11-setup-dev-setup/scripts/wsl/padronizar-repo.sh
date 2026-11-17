@@ -9,6 +9,9 @@ MODELO="$RAIZ/infra/templates/repo-padrao"
 aplicar() {
   local repo="$1" n=0
   [[ -d "$repo/.git" ]] || { echo "pulando $repo (não é repositório git)"; return 0; }
+  # O próprio dev-setup não recebe o modelo: ele já tem o padrão dele, e o docs/adr/0001-modelo.md
+  # colidiria com o ADR 0001 de verdade (quebrava o just check depois do just instalar).
+  [[ "$(cd "$repo" && pwd -P)" == "$(cd "$RAIZ" && pwd -P)" ]] && { echo "pulando $repo (é o próprio dev-setup)"; return 0; }
   while IFS= read -r f; do
     rel="${f#"$MODELO"/}"; [[ "$rel" == "LEIA.md" ]] && continue
     if [[ ! -e "$repo/$rel" ]]; then mkdir -p "$(dirname "$repo/$rel")"; cp "$f" "$repo/$rel"; n=$((n + 1)); echo "  + $rel"; fi

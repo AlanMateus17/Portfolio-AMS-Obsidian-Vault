@@ -7,7 +7,7 @@ atualizado: 2026-10-02
 
 # 🌌 Mapa de Horizonte Longo — Sistemas, Baixo Nível e SO Próprio
 
-> **Camada D do [00-PLANO-UNIFICADO](PLANO-UNICO-AMtech.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
+> **Camada D do [00-PLANO-UNIFICADO](../PLANO-UNICO-AMtech.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
 >
 > A parte ofensiva (reverse, exploit, kernel exploitation) é só **nomeada** aqui — o detalhe vive em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md), não é duplicado.
 
@@ -20,7 +20,7 @@ MATEMÁTICA  (já corre na licenciatura + livro do Lins)
    ▼
 LÓGICA · ALGORITMOS · ESTRUTURAS DE DADOS        → já no núcleo (Camada A)
    ▼
-C · C++ · Python · JS/TS · C#                    → C/C++ vem pela École 42
+TypeScript · Python · SQL · C/C++ · Rust         → C/C++ e Rust vêm pela trilha de SO/robótica
    ▼
 LINUX + WINDOWS (internals)                      → Linux já começa na Camada C
    ▼
@@ -62,7 +62,7 @@ macOS: Darwin/XNU/Mach/BSD, launchd, APFS, Keychain, SIP, Gatekeeper, TCC, sandb
 iOS: iBoot, Secure Enclave, entitlements, provisioning, Data Protection, Mach-O, dyld, XPC.
 
 ### Segurança (web · redes · AD · ofensiva)
-Escopo e trilha completos em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) e [recursos-links-seguranca-ofensiva](recursos-links-seguranca-ofensiva.md). Áreas: segurança web (OWASP), pentest, wireless, AD security, reverse engineering, exploit development, kernel exploitation, malware analysis, forense digital, blue team, cloud security, segurança de containers/k8s, criptografia aplicada, segurança de hardware, IoT/embedded. **Regra permanente:** só em ambientes próprios ou autorizados.
+Escopo e trilha completos em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md) e [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md). Áreas: segurança web (OWASP), pentest, wireless, AD security, reverse engineering, exploit development, kernel exploitation, malware analysis, forense digital, blue team, cloud security, segurança de containers/k8s, criptografia aplicada, segurança de hardware, IoT/embedded. **Regra permanente:** só em ambientes próprios ou autorizados.
 
 ### Sistemas Operacionais (juntar tudo)
 boot/bootloader · kernel · memória virtual · processos/scheduling · interrupts · syscalls · IPC · filesystems · drivers · networking · segurança · userland. Comparar **Linux × Windows NT × XNU**.

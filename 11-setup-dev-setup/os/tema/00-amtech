@@ -1,0 +1,31 @@
+# Padrões do AMtech OS para o GNOME (banco de sistema do dconf: /etc/dconf/db/local.d/00-amtech).
+# São só padrões: qualquer mudança que a pessoa fizer nas Configurações vale por cima. Nada aqui é travado.
+
+[org/gnome/desktop/background]
+picture-uri='file:///usr/share/backgrounds/amtech/fundo.svg'
+picture-uri-dark='file:///usr/share/backgrounds/amtech/fundo.svg'
+picture-options='zoom'
+primary-color='#0B1A1E'
+
+[org/gnome/desktop/screensaver]
+picture-uri='file:///usr/share/backgrounds/amtech/fundo.svg'
+primary-color='#0B1A1E'
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+monospace-font-name='Fira Code 11'
+clock-show-weekday=true
+show-battery-percentage=true
+
+[org/gnome/mutter]
+dynamic-workspaces=false
+edge-tiling=true
+
+[org/gnome/desktop/wm/preferences]
+num-workspaces=4
+button-layout='appmenu:minimize,maximize,close'
+
+[org/gnome/desktop/privacy]
+remember-recent-files=false
+report-technical-problems=false
+send-software-usage-stats=false

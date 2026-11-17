@@ -40,7 +40,7 @@ O app recebe por Pix e cartão por um intermediador de pagamento com split (a pa
 
 ## Produto
 
-- **App do cliente** (Next.js como PWA primeiro; loja de apps quando houver volume), **painel do lojista** (cardápio, horários, pausa, pedidos em tempo real por SignalR) e **app do entregador**, todos do mesmo AM Rotara.
+- **App do cliente** (Next.js como PWA primeiro; loja de apps quando houver volume), **painel do lojista** (cardápio, horários, pausa, pedidos em tempo real (Supabase Realtime)) e **app do entregador**, todos do mesmo AM Rotara.
 - Cardápio com foto, adicionais, tempo de preparo e estoque do dia.
 - Impressão automática do pedido na cozinha do lojista.
 

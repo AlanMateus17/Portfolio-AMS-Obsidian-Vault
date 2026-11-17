@@ -1,0 +1,79 @@
+{
+  "_comment": "Mapa dos repositorios do Alan e o papel de cada um no plano unico (AM Gestao + estudo). Atualizado 2026-11-13, ADR 0017. Fonte da verdade do plano: Portfolio-AMS-Obsidian-Vault/PLANO-UNICO-AMtech.md",
+  "nucleo_stack": ["TypeScript", "Python", "SQL"],
+  "reserva": ["Go", "C#/.NET"],
+  "repos": [
+    {
+      "nome": "dev-setup",
+      "papel": "Setup e operacao (o cerebro): ferramentas, IAs, professor, recrutador, rendas, ADRs",
+      "status": "ativo",
+      "stack": ["Markdown", "Go (CLI)", "Python"]
+    },
+    {
+      "nome": "Portfolio-AMS-Obsidian-Vault",
+      "papel": "Vault de planejamento e estudo; fonte da verdade do plano (PLANO-UNICO) e da stack",
+      "status": "ativo",
+      "stack": ["Markdown"]
+    },
+    {
+      "nome": "ensino-ti",
+      "papel": "Material de ensino: cursos EMTI (Tecnico em Informatica / Desenvolvimento de Sistemas) e versao online",
+      "status": "ativo",
+      "stack": ["Markdown", "HTML/CSS/JS"]
+    },
+    {
+      "nome": "AlanMateus17.github.io",
+      "papel": "Site pessoal / portfolio. Migrar de Jekyll para a stack propria (Next.js) quando chegar a vez",
+      "status": "ativo",
+      "stack": ["Jekyll -> Next.js"]
+    },
+    {
+      "nome": "catalogo-html",
+      "papel": "Site didatico de HTML/CSS/JS para os alunos criarem e publicarem os proprios sites",
+      "status": "ativo",
+      "stack": ["HTML/CSS/JS"]
+    },
+    {
+      "nome": "catalogo-plataforma",
+      "papel": "A confirmar com o Alan: provavelmente catalogo/plataforma de cursos (Instituto AMS). Revisar e decidir manter ou fundir",
+      "status": "revisar",
+      "stack": ["a confirmar"]
+    },
+    {
+      "nome": "codigo-c-",
+      "papel": "Exercicios em C. Fila de estudo de baixo nivel / trilha SO e robotica",
+      "status": "estudo",
+      "stack": ["C"]
+    },
+    {
+      "nome": "instala-o-do-S.O-windows-pendrive",
+      "papel": "Tutorial de instalacao de SO. Material de aula / trilha SO",
+      "status": "estudo",
+      "stack": ["Markdown"]
+    },
+    {
+      "nome": "ebooks_financas",
+      "papel": "Material de financas. Insumo para infoprodutos",
+      "status": "estudo",
+      "stack": ["PDF/Markdown"]
+    },
+    {
+      "nome": "Cursos-TI/desafio-cadastro-das-cartas-no-super-trunfo-AlanMateus17",
+      "papel": "Fork de desafio de curso (C). Estudo concluido",
+      "status": "arquivar",
+      "stack": ["C"]
+    },
+    {
+      "nome": "Cursos-TI/desafio-batalha-naval-AlanMateus17",
+      "papel": "Fork de desafio de curso (C). Estudo concluido",
+      "status": "arquivar",
+      "stack": ["C"]
+    }
+  ],
+  "produto_unico": {
+    "nome": "AM Gestao",
+    "modulos": ["Caixa/PDV (era Kaixara)", "Pedidos/Entrega (era Rotara)", "Financeiro (era Rendara)", "Loja online (Vendra)"],
+    "mvp": ["Caixa", "Pedidos", "Financeiro"],
+    "stack": ["TypeScript (Next/NestJS)", "Python/FastAPI", "PostgreSQL (Supabase)", "SQLite offline", "Go/C# (agente fiscal)"]
+  }
+}

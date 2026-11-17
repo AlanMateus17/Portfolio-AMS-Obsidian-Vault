@@ -20,6 +20,7 @@ e só a aprovada vira tarefa para o Claude, que abre PR para você revisar.
     python3 tools/akita/akita.py pendentes              # regras esperando a sua decisão
     python3 tools/akita/akita.py aprovar AK-0003        |  recusar AK-0004 "motivo"  |  ja-segue AK-0001 "onde"
     python3 tools/akita/akita.py aplicar AK-0003        # o comando para o Claude aplicar (PR, sem merge)
+    python3 tools/akita/akita.py trilha                 # a ordem de ESTUDAR (Professor + Akitando por episódio + podcasts)
     python3 tools/akita/akita.py docs [--check]         # docs/akita/README.md a partir de data/akita/regras.json
 """
 from __future__ import annotations
@@ -45,6 +46,8 @@ REGRAS = DADOS / "regras.json"
 INDICE = DADOS / "indice.json"
 CONTEXTO = RAIZ / "docs" / "akita" / "contexto-setup.md"
 DOC = RAIZ / "docs" / "akita" / "README.md"
+DOC_TRILHA = RAIZ / "docs" / "akita" / "trilha-estudo.md"
+CURRICULO = RAIZ / "data" / "professor" / "curriculo.json"
 TIPOS = ("regra", "dica", "alerta", "pratica", "ferramenta")
 AREAS = ("ia", "dev", "infra", "seguranca", "negocio", "carreira", "hardware", "dados")
 ESTADOS = ("nova", "aprovada", "aplicada", "ja-segue", "recusada", "nao-se-aplica", "substituida")
@@ -287,6 +290,53 @@ def gerar_doc(d: dict) -> str:
     return "\n".join(o)
 
 
+# ---------- trilha de estudo ----------
+
+def episodio(post: dict) -> int | None:
+    """Número do episódio do Akitando, pelo título ([Akitando] #12) ou pelo slug (akitando-12-...)."""
+    m = re.search(r"\[Akitando\]\s*#(\d+)", post["titulo"]) or re.match(r"akitando-(\d+)-", post["slug"])
+    return int(m.group(1)) if m else None
+
+
+def trilha_md(posts: list[dict], curriculo: dict, d: dict) -> str:
+    """A ordem de estudo: primeiro os posts que o Professor liga a cada módulo (na ordem do currículo e dos trimestres),
+    depois o Akitando inteiro em ordem de episódio. A fila (just akita fila) é outra coisa: é a ordem de extrair regras."""
+    por_slug = {p["slug"]: p for p in posts}
+    feitos = set(d["notas"])
+    marca = lambda slug: "x" if slug in feitos else " "  # noqa: E731
+    o = ["<!-- GERADO por tools/akita/akita.py docs a partir de data/akita/indice.json e data/professor/curriculo.json. -->",
+         "# Trilha de estudo do Akita", "",
+         "Duas ordens, cada uma para um uso. A **fila** (`just akita fila`) é a ordem de **extrair regras** para o setup: a era da IA primeiro. "
+         "Esta página é a ordem de **estudar**: [x] quer dizer que o post já tem nota na Escola Akita.", "",
+         "## 1. Junto com o Professor (siga esta primeiro)", "",
+         "Cada módulo do currículo, na ordem em que o Professor ensina, com os posts do Akita que entram nele. "
+         "Leia (ou assista) o post na semana do módulo, antes da prática.", ""]
+    for m in curriculo["modulos"]:
+        slugs = [s for s in m.get("akita_posts", []) if s in por_slug]
+        if not slugs:
+            continue
+        o.append(f"**{m['id']} · {m['titulo']}**")
+        o += [f"- [{marca(s)}] [{por_slug[s]['titulo']}]({por_slug[s]['url']})" for s in slugs]
+        o.append("")
+    eps = sorted(((episodio(p), p) for p in posts if episodio(p)), key=lambda t: t[0])
+    faltam = [n for n in range(1, eps[-1][0] + 1) if n not in {e for e, _ in eps}] if eps else []
+    o += ["## 2. Akitando completo, em ordem de episódio", "",
+          f"{len(eps)} episódios com post no blog (o post tem a transcrição e os links). "
+          "Use esta lista para o que não está no currículo. Ela não é uma trilha pronta: o canal mistura aula técnica com vlog, cinema e "
+          "opinião (os primeiros episódios são de viagem e cripto). O que ela garante é a ordem dentro das séries, como Introdução a Redes "
+          "e Entendendo Back-end, partes 1, 2, 3... ★ marca o episódio que já está no currículo do Professor. "
+          + (f"Sem post no blog, só no YouTube: {', '.join('#' + str(n) for n in faltam)}." if faltam else ""), ""]
+    no_curriculo = {x for m in curriculo["modulos"] for x in m.get("akita_posts", [])}
+    o += [f"- [{marca(p['slug'])}] #{n}{' ★' if p['slug'] in no_curriculo else ''} · [{re.sub(r'^\[Akitando\]\s*#\d+\s*-\s*', '', p['titulo'])}]({p['url']}) ({p['data'][:4]})" for n, p in eps]
+    o += ["", "## 3. Os podcasts no Spotify", "",
+          "- **The M.Akita Chronicles** é semanal e de notícias: não precisa de ordem nem de fazer os antigos. Escute o da semana; "
+          "o que valer vira nota com `just professor escutei`.",
+          "- **Akitando no Spotify** é o áudio dos mesmos vídeos: siga a ordem da seção 2. Escutar no ônibus conta como primeira passada; "
+          "o estudo de verdade é ler o post, fazer a nota (`just akita notar SLUG`) e aprovar as regras.",
+          "- O setup não lê o Spotify: a lista de episódios dos podcasts não está aqui, só a dos posts do blog.", ""]
+    return "\n".join(o)
+
+
 # ---------- CLI ----------
 
 def _post(slug: str) -> dict:
@@ -332,6 +382,7 @@ def main(argv: list[str] | None = None) -> int:
         c = s.add_parser(nome); c.add_argument("id"); c.add_argument("motivo", nargs="?", default="")
     s.add_parser("aplicar").add_argument("id")
     s.add_parser("docs").add_argument("--check", action="store_true")
+    s.add_parser("trilha")
     args = ap.parse_args(argv)
     d = carregar_regras()
     try:
@@ -405,9 +456,15 @@ def main(argv: list[str] | None = None) -> int:
                       f"O que muda no setup: {r['no_setup']} Siga o CLAUDE.md, rode just check, abra um PR e NÃO faça merge.")
             print("Ubuntu do WSL, na pasta do setup:")
             print(f"cd ~/dev/dev-setup && ai-jail claude {json.dumps(pedido, ensure_ascii=False)}")
+        elif args.cmd == "trilha":
+            print(trilha_md(json.loads(INDICE.read_text(encoding="utf-8")), json.loads(CURRICULO.read_text(encoding="utf-8")), d))
         elif args.cmd == "docs":
             texto = gerar_doc(d)
+            trilha = trilha_md(json.loads(INDICE.read_text(encoding="utf-8")), json.loads(CURRICULO.read_text(encoding="utf-8")), d)
             if args.check:
+                if not DOC_TRILHA.exists() or DOC_TRILHA.read_text(encoding="utf-8") != trilha:
+                    print("docs/akita/trilha-estudo.md desatualizado. Rode: python3 tools/akita/akita.py docs", file=sys.stderr)
+                    return 1
                 if not DOC.exists() or DOC.read_text(encoding="utf-8") != texto:
                     print("docs/akita/README.md desatualizado. Rode: python3 tools/akita/akita.py docs", file=sys.stderr)
                     return 1
@@ -415,7 +472,8 @@ def main(argv: list[str] | None = None) -> int:
             else:
                 DOC.parent.mkdir(parents=True, exist_ok=True)
                 DOC.write_text(texto, encoding="utf-8")
-                print(f"Gerado {DOC.relative_to(RAIZ)}")
+                DOC_TRILHA.write_text(trilha, encoding="utf-8")
+                print(f"Gerado {DOC.relative_to(RAIZ)} e {DOC_TRILHA.relative_to(RAIZ)}")
     except (ValueError, subprocess.CalledProcessError) as erro:
         print(erro, file=sys.stderr)
         return 2

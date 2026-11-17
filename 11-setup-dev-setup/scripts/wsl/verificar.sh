@@ -29,7 +29,7 @@ cmd() {  # cmd <item> <comando> <como instalar> [obrigatorio]
 }
 
 # Ambiente
-grep -qi microsoft /proc/version 2>/dev/null && r ambiente WSL OK "$(uname -r | cut -c1-40)" || r ambiente WSL AVISO "não parece WSL" 0
+if grep -qi microsoft /proc/version 2>/dev/null; then r ambiente WSL OK "$(uname -r | cut -c1-40)"; elif [[ -r /etc/amtech-release ]]; then r ambiente "AMtech OS" OK "$(uname -r | cut -c1-40)"; else r ambiente WSL AVISO "não parece WSL" 0; fi
 [[ "$(ps -p 1 -o comm= 2>/dev/null)" == "systemd" ]] && r ambiente systemd OK "" || r ambiente systemd FALTA "bootstrap.sh configura; depois wsl --shutdown"
 
 # Ferramentas
