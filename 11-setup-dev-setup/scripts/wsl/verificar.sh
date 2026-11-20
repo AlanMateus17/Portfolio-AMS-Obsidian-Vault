@@ -59,6 +59,7 @@ else r ferramenta "GPU no WSL" AVISO "atualize o driver NVIDIA no Windows" 0; fi
 cmd "TeX Live" latexmk "bootstrap.sh (sem --sem-tex)" 0
 cmd "Whisper local" whisper-ctranslate2 "bootstrap.sh --com-whisper" 0
 if command -v docker >/dev/null 2>&1 && docker info >/dev/null 2>&1; then r ferramenta Docker OK "$(docker version --format '{{.Server.Version}}' 2>/dev/null)"
+elif command -v docker >/dev/null 2>&1 && [[ "$(docker context show 2>/dev/null)" == "desktop-linux" ]]; then r ferramenta Docker FALTA "abra o Docker Desktop no Windows (contexto desktop-linux sem resposta)"
 else r ferramenta Docker FALTA "Docker Desktop > Settings > Resources > WSL integration"; fi
 
 # Git e GitHub

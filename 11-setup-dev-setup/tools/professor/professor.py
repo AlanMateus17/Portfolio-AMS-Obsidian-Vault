@@ -105,6 +105,15 @@ def pasta_fichas() -> Path:
     return Path(os.environ.get("PROFESSOR_FICHAS") or vault() / "09-material-producao-simultanea" / "fichas-duplas")
 
 
+def etapa_do_modulo(mid: str) -> str | None:
+    """A etapa do mapa-de-estudo ligada a este módulo em data/aulas.json (ADR 0021), se houver."""
+    arq = RAIZ / "data" / "aulas.json"
+    if not arq.exists():
+        return None
+    etapas = json.loads(arq.read_text(encoding="utf-8")).get("etapas", {})
+    return next((e for e, info in etapas.items() if info.get("professor") == mid), None)
+
+
 def curriculo() -> dict:
     return json.loads(CURRICULO.read_text(encoding="utf-8"))
 
@@ -403,10 +412,14 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Nota {nota} ({veredito}). Próxima revisão em {intervalo} dia(s): {prox}.")
         elif args.cmd == "fechar":
             m = modulo(args.id)
-            ficha = pasta_fichas() / f"{m['id']}.md"
-            if not ficha.exists():
-                ficha.parent.mkdir(parents=True, exist_ok=True)
-                ficha.write_text(FICHA.replace("{titulo}", m["titulo"]), encoding="utf-8")
+            etapa = etapa_do_modulo(m["id"])
+            if etapa:  # módulo ligado a uma etapa do mapa: a ficha única do assunto substitui a ficha dupla
+                ficha = f"a ficha do assunto (just ficha {etapa}; no fim, just colher {etapa})"
+            else:
+                ficha = pasta_fichas() / f"{m['id']}.md"
+                if not ficha.exists():
+                    ficha.parent.mkdir(parents=True, exist_ok=True)
+                    ficha.write_text(FICHA.replace("{titulo}", m["titulo"]), encoding="utf-8")
             estimado = m.get("estimado_min", 75)
             nuc.evento(con, "professor.bloco", {"modulo": m["id"], "minutos": args.minutos, "estimado": estimado}, fonte="professor")
             print(PROTOCOLO.replace("{titulo}", m["titulo"]).replace("{ficha}", str(ficha)).replace("{id}", m["id"])

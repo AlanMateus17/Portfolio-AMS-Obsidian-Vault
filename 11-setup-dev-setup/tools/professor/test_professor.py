@@ -89,6 +89,15 @@ class TestProfessor(unittest.TestCase):
         self.assertIn("Perguntas de recuperação", pedido)
         self.assertNotIn("{titulo}", pedido)
 
+    def test_modulos_ligados_ao_mapa_existem(self):
+        ids = {m["id"] for m in professor.curriculo()["modulos"]}
+        aulas = json.loads((professor.RAIZ / "data" / "aulas.json").read_text(encoding="utf-8"))
+        for etapa, info in aulas["etapas"].items():
+            if info.get("professor"):
+                self.assertIn(info["professor"], ids, etapa)
+                self.assertEqual(professor.etapa_do_modulo(info["professor"]), etapa)
+        self.assertIsNone(professor.etapa_do_modulo("modulo-que-nao-existe"))
+
 
 if __name__ == "__main__":
     unittest.main()

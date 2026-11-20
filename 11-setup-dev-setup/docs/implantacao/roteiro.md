@@ -4430,7 +4430,7 @@ cd ~/dev/dev-setup && claude "Passo caixa do roteiro: Começar o Caixa da Casa n
 ```
 
 - [ ] **Pronto quando:** Entradas e saídas do mês lançadas, separando casa e vendas
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Caixa da Casa / AM Rendara
 
 <a id="f15"></a>
@@ -5283,7 +5283,7 @@ cd ~/dev && npx sv create am-rendara-mvp
 ```
 
 - [ ] **Pronto quando:** Ativos e transações gravados no PocketBase e listados na tela
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: PocketBase (MVP antes do Aura) · SvelteKit (apps pequenos)
 
 ### 45.8 Dia 10: lógica dos 4 quadrantes do ARCA e do aporte, com Zod e Vitest
@@ -5297,7 +5297,7 @@ cd ~/dev/dev-setup && claude "Passo halter-d10 do roteiro: lógica dos 4 quadran
 ```
 
 - [ ] **Pronto quando:** Testes do rebalanceamento e do aporte passando
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Zod · Biome · Vitest (front)
 
 ### 45.9 Dias 11 e 12: Pix do Asaas e a landing page em Astro
@@ -5311,7 +5311,7 @@ cd ~/dev/dev-setup && claude "Passo halter-d11 do roteiro: Pix do Asaas e a land
 ```
 
 - [ ] **Pronto quando:** Um Pix de teste libera o plano Pro (R$ 29 a R$ 49/mês)
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Pix Automático + gateway (ex.: Asaas) · Astro (sites de conteúdo)
 
 ### 45.10 Dias 13 e 14: testes E2E, deploy pelo Kamal e 50 testadores
@@ -5326,7 +5326,7 @@ cd ~/dev/am-rendara-mvp && npx playwright test
 
 - [ ] **Pronto quando:** Playwright verde, MVP no ar com réplica no R2 e o post no TabNews publicado
 - Publicar no TabNews só com a sua aprovação.
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Testes: xUnit, Playwright, k6 · Kamal (deploy em VM por SSH) · Litestream (SQLite no R2)
 
 <a id="f22"></a>
@@ -5383,7 +5383,7 @@ cd ~/dev/dev-setup && claude "Passo of-catalogo do roteiro: Pôr no Catálogo do
 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
 - [ ] **Pronto quando:** 10 planilhas vendidas
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Caixa da Casa / AM Rendara · Hotmart
 
 ### 46.5 Automação com IA para pequenos negócios: 1 implantação grátis em troca de caso
@@ -5483,7 +5483,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
 - [ ] **Pronto quando:** 24 vídeos publicados e o resultado medido
-- **Oferta:** Canais sem rosto (YouTube, TikTok, Instagram, Facebook)
+- **Oferta:** Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir)
 - Implanta: Agente editor de conteúdo · YouTube
 
 ### 46.15 Comunidade paga do Instituto AMS
@@ -5871,7 +5871,7 @@ cd ~/dev/dev-setup && claude "Passo kaixara do roteiro: AM Kaixara: PDV, cardáp
 ```
 
 - [ ] **Pronto quando:** Rodando num negócio real
-- **Oferta:** AM Kaixara (PDV, ficha técnica, cardápio)
+- **Oferta:** AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio)
 - Implanta: AM Kaixara (PDV e cardápio)
 
 ### 51.3 AM Rotara: pedidos, rotas e mapas
@@ -5885,7 +5885,7 @@ cd ~/dev/dev-setup && claude "Passo rotara do roteiro: AM Rotara: pedidos, rotas
 ```
 
 - [ ] **Pronto quando:** Entregas rastreadas no mapa em tempo real
-- **Oferta:** AM Rotara (pedidos e entregas)
+- **Oferta:** AM Gestão SaaS: Rotara (pedidos e entregas)
 - Implanta: AM Rotara (entregas) · PostGIS + MapLibre
 
 ### 51.4 Módulos do AM Gestão, só quando um sistema precisar

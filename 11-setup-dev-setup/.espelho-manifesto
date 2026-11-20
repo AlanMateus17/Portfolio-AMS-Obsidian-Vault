@@ -13,6 +13,7 @@ RODAR-DIAGNOSTICO.cmd
 config/marca.md
 data/akita/indice.json
 data/akita/regras.json
+data/aulas.json
 data/biblioteca.json
 data/certificacoes.json
 data/custos.json
@@ -29,6 +30,7 @@ data/motor/regras.json
 data/negocios.json
 data/portfolio.json
 data/professor/curriculo.json
+data/professor/mapa-assuntos.json
 data/recrutador/formatos.json
 data/recursos.json
 data/softwares.json
@@ -53,6 +55,8 @@ docs/adr/0016-amtech-os.md
 docs/adr/0017-nucleo-ts-python-dotnet-reserva.md
 docs/adr/0018-plano-de-estudo-unico-no-vault.md
 docs/adr/0019-biblioteca-e-registro-de-leitura.md
+docs/adr/0020-caderno-de-erros-e-atritos.md
+docs/adr/0021-ficha-do-assunto-e-colheita.md
 docs/akita/README.md
 docs/akita/contexto-setup.md
 docs/akita/trilha-estudo.md
@@ -350,6 +354,8 @@ tools/carreira/test_certificacoes.py
 tools/cockpit/cockpit.template.html
 tools/cockpit/gerar.py
 tools/cockpit/test_cockpit.py
+tools/colher/colher.py
+tools/colher/test_colher.py
 tools/construcao/ifc_resumo.py
 tools/construcao/test_ifc_resumo.py
 tools/conteudo/README.md
@@ -422,7 +428,9 @@ tools/organizar/test_organizar.py
 tools/portfolio/portfolio.py
 tools/portfolio/portfolio.template.html
 tools/portfolio/test_portfolio.py
+tools/professor/mapa.py
 tools/professor/professor.py
+tools/professor/test_mapa.py
 tools/professor/test_professor.py
 tools/radar/radar.example.toml
 tools/radar/radar.py
@@ -455,3 +463,4 @@ tools/triagem/test_triagem.py
 tools/triagem/triagem.py
 tools/vault/espelho.py
 tools/vault/test_espelho.py
+tools/vault/test_scripts_vault.py

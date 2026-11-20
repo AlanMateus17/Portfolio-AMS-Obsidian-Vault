@@ -11,6 +11,7 @@
    "id": "s-terminal",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.3",
    "titulo": "Terminal Linux no WSL: navegar, ler, procurar e encadear comandos",
    "objetivos": [
     "Explicar o que é o WSL2 e onde ficam os arquivos do Linux e do Windows",
@@ -43,6 +44,7 @@
    "id": "s-git",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.5",
    "titulo": "Git e GitHub: commit, branch, PR e como desfazer sem medo",
    "objetivos": [
     "Explicar working tree, staging e commit com um desenho",
@@ -88,6 +90,7 @@
    "id": "s-just",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.9",
    "titulo": "just: a porta única de comandos do setup",
    "objetivos": [
     "Ler o justfile e dizer o que cada receita chama",
@@ -111,6 +114,7 @@
    "id": "s-backup",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.7",
    "titulo": "Backup com restic: como o seu setup se protege e como restaurar",
    "objetivos": [
     "Explicar a regra 3-2-1 e onde estão as suas 3 cópias",
@@ -144,6 +148,7 @@
    "id": "s-segredos",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.6",
    "titulo": "Segredos: KeePassXC, sops e age, e por que senha nunca vai para o Git",
    "objetivos": [
     "Separar o que vai no cofre, o que vai cifrado com age e o que nunca sai da máquina",
@@ -179,6 +184,7 @@
    "id": "s-docker",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.8",
    "titulo": "Containers: Docker e Compose sem mistério",
    "objetivos": [
     "Explicar imagem, container, volume e rede",
@@ -218,6 +224,7 @@
    "id": "s-ia-segura",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.10",
    "titulo": "Claude Code com segurança: ai-jail, contexto e revisão do que a IA fez",
    "objetivos": [
     "Explicar o que o ai-jail deixa e não deixa o agente ver",
@@ -254,6 +261,7 @@
    "id": "s-nucleo",
    "trilha": "setup",
    "trimestre": 1,
+   "etapa": "1.9",
    "titulo": "O Núcleo: banco central, lembrar, buscar, agenda e auditoria",
    "objetivos": [
     "Explicar as 4 tabelas do núcleo e para que serve cada uma",
@@ -283,6 +291,7 @@
    "id": "s-ci",
    "trilha": "setup",
    "trimestre": 2,
+   "etapa": "3.9",
    "titulo": "CI: GitHub Actions e o just check como portão",
    "objetivos": [
     "Ler o workflow docs.yml e dizer o que cada etapa confere",
@@ -321,6 +330,7 @@
    "id": "s-deploy",
    "trilha": "setup",
    "trimestre": 2,
+   "etapa": "3.10",
    "titulo": "Deploy: Hostinger por push e Kamal em VM",
    "objetivos": [
     "Explicar o caminho do commit até o ar em cada um",
@@ -355,6 +365,7 @@
    "id": "o-csharp",
    "trilha": "oficio",
    "trimestre": 1,
+   "etapa": "2.1",
    "titulo": "TypeScript do zero ao confortável: tipos, arrays/map, funções de ordem superior, classes e erros",
    "objetivos": [
     "Resolver os 3 exercícios de lógica do plano em TypeScript sem IA",
@@ -406,6 +417,7 @@
    "id": "o-dotnet",
    "trilha": "oficio",
    "trimestre": 1,
+   "etapa": "4.8",
    "titulo": "Projeto TypeScript de verdade: API (Next/NestJS), ORM, testes e configuração",
    "objetivos": [
     "Criar projeto com API, domínio e testes (Next.js ou NestJS)",
@@ -454,6 +466,7 @@
    "id": "o-sql",
    "trilha": "oficio",
    "trimestre": 1,
+   "etapa": "4.2",
    "titulo": "SQL e PostgreSQL: modelar, consultar e não perder dado",
    "objetivos": [
     "Modelar 3 tabelas com chaves e restrições",
@@ -493,6 +506,7 @@
    "id": "o-astro",
    "trilha": "oficio",
    "trimestre": 1,
+   "etapa": "3.5",
    "titulo": "Site de cliente em Astro: do kit de sites até o ar",
    "objetivos": [
     "Criar páginas e componentes em Astro",
@@ -525,6 +539,7 @@
    "id": "f-caixa-competencia",
    "trilha": "financas",
    "trimestre": 1,
+   "etapa": "3.13",
    "titulo": "Regime de caixa e de competência: quando o dinheiro conta",
    "objetivos": [
     "Explicar a diferença com 3 exemplos do seu dia a dia",
@@ -546,6 +561,7 @@
    "id": "f-fluxo-caixa",
    "trilha": "financas",
    "trimestre": 1,
+   "etapa": "3.13",
    "titulo": "Fluxo de caixa: projetar o mês e não ser pego de surpresa",
    "objetivos": [
     "Montar um fluxo de caixa de 3 meses",
@@ -572,6 +588,7 @@
    "id": "f-dre",
    "trilha": "financas",
    "trimestre": 1,
+   "etapa": "3.13",
    "titulo": "DRE simples: receita, custo, despesa e lucro de verdade",
    "objetivos": [
     "Montar a DRE de um mês",
@@ -595,6 +612,7 @@
    "id": "f-carne-leao",
    "trilha": "financas",
    "trimestre": 1,
+   "etapa": "7.10",
    "titulo": "Carnê-leão: declarar o que você vende no CPF",
    "objetivos": [
     "Saber o que entra, o prazo e como se calcula",
@@ -619,6 +637,7 @@
    "id": "f-preco",
    "trilha": "financas",
    "trimestre": 1,
+   "etapa": "3.14",
    "titulo": "Preço de serviço: hora mínima, custo e margem",
    "objetivos": [
     "Calcular a sua hora mínima a partir dos custos e da meta",
@@ -646,6 +665,7 @@
    "id": "mat-linguagem",
    "trilha": "matematica",
    "trimestre": 1,
+   "etapa": "0.2",
    "titulo": "Linguagem matemática: símbolos, proposições e como ler uma definição",
    "objetivos": [
     "Ler em voz alta qualquer frase com ∀, ∃, ⇒, ⇔, ∈ e explicar o sentido",
@@ -673,6 +693,7 @@
    "id": "mat-conjuntos",
    "trilha": "matematica",
    "trimestre": 1,
+   "etapa": "0.3",
    "titulo": "Teoria dos conjuntos: operações, relações e o elo com bancos de dados",
    "objetivos": [
     "Fazer união, interseção, diferença e complementar com diagramas",
@@ -703,6 +724,7 @@
    "id": "mat-porcentagem-juros",
    "trilha": "matematica",
    "trimestre": 1,
+   "etapa": "2.7",
    "titulo": "Porcentagem e juros: a matemática que todo preço e todo empréstimo esconde",
    "objetivos": [
     "Calcular aumento, desconto e variação percentual sem errar a base",
@@ -733,6 +755,7 @@
    "id": "mat-potencias-log",
    "trilha": "matematica",
    "trimestre": 1,
+   "etapa": "2.8",
    "titulo": "Potências, raízes e logaritmos: crescimento, juros compostos e Big-O",
    "objetivos": [
     "Aplicar as propriedades de potências e logaritmos",
@@ -767,6 +790,8 @@
    "id": "fis-grandezas",
    "trilha": "fisica",
    "trimestre": 1,
+   "etapa": null,
+   "etapa_motivo": "o mapa não tem física básica nas etapas 0–8 (só H6.6, no horizonte, depois de cálculo); o módulo segue como base do Professor sem assunto correspondente",
    "titulo": "Grandezas, unidades e notação científica: a base de toda física",
    "objetivos": [
     "Converter unidades do SI e prefixos (mili, micro, quilo, mega)",
@@ -790,6 +815,8 @@
    "id": "fis-eletricidade",
    "trilha": "fisica",
    "trimestre": 1,
+   "etapa": null,
+   "etapa_motivo": "o mapa não tem física básica nas etapas 0–8 (só H6.6, no horizonte, depois de cálculo); o módulo segue como base do Professor sem assunto correspondente",
    "titulo": "Eletricidade básica: carga, tensão, corrente, resistência, lei de Ohm e potência",
    "objetivos": [
     "Explicar tensão, corrente e resistência com uma analogia e com a definição",
@@ -818,6 +845,7 @@
    "id": "b-aprender",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "0.1",
    "titulo": "Aprender a aprender: por que dói e como estudar sem se enganar",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -843,6 +871,7 @@
    "id": "b-computador",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "0.4",
    "titulo": "Como um computador funciona por dentro: bits, CPU, memória e instruções",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -870,6 +899,7 @@
    "id": "b-linux-wsl",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "1.1",
    "titulo": "Linux e WSL2: o que é o sistema que você usa todo dia",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -897,6 +927,7 @@
    "id": "b-cripto",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "1.4",
    "titulo": "Criptografia básica: hash, chave simétrica e assimétrica",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -924,6 +955,7 @@
    "id": "b-iniciante",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "0.6",
    "titulo": "O que todo programador precisa saber antes da linguagem, e de onde veio o front-end",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -951,6 +983,7 @@
    "id": "b-redes-1",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "3.1",
    "titulo": "Redes, parte 1 e 2: como dado vira sinal e como erros são detectados",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -978,6 +1011,7 @@
    "id": "b-redes-2",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "3.1",
    "titulo": "Redes, parte 3 e 4: como a internet funciona, sockets, cliente e servidor",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1005,6 +1039,7 @@
    "id": "b-backend",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "3.3",
    "titulo": "Back-end para iniciantes: processos, servidores e o que roda do outro lado",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1032,6 +1067,7 @@
    "id": "b-ia",
    "trilha": "base",
    "trimestre": 1,
+   "etapa": "4.13",
    "titulo": "Como o ChatGPT funciona e o que IAs conseguem fazer",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1059,6 +1095,7 @@
    "id": "b-concorrencia",
    "trilha": "base",
    "trimestre": 2,
+   "etapa": "5.2",
    "titulo": "Concorrência e paralelismo: threads, processos e async",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1086,6 +1123,7 @@
    "id": "b-redes-3",
    "trilha": "base",
    "trimestre": 2,
+   "etapa": "5.12",
    "titulo": "Redes, parte 5 e 6: SSH, proxies, VPN e rede segura",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1113,6 +1151,7 @@
    "id": "b-devops",
    "trilha": "base",
    "trimestre": 2,
+   "etapa": "3.9",
    "titulo": "DevOps para iniciantes: do código ao servidor",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1140,6 +1179,7 @@
    "id": "b-containers",
    "trilha": "base",
    "trimestre": 2,
+   "etapa": "1.8",
    "titulo": "Como containers funcionam e os 12 fatores de uma aplicação web",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1167,6 +1207,7 @@
    "id": "b-testes-perf",
    "trilha": "base",
    "trimestre": 2,
+   "etapa": "2.4",
    "titulo": "Testes, estimativa e as 4 técnicas para deixar uma app web rápida",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1194,6 +1235,7 @@
    "id": "b-bancos",
    "trilha": "base",
    "trimestre": 3,
+   "etapa": "4.3",
    "titulo": "Bancos de dados, dos primórdios ao big data, e quando usar NoSQL",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1221,6 +1263,7 @@
    "id": "b-estruturas",
    "trilha": "base",
    "trimestre": 3,
+   "etapa": "7.5",
    "titulo": "Estruturas de dados: árvores e grafos",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1248,6 +1291,7 @@
    "id": "b-memoria",
    "trilha": "base",
    "trimestre": 3,
+   "etapa": "7.13",
    "titulo": "Gerenciamento de memória: stack, heap e coletor de lixo",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1275,6 +1319,7 @@
    "id": "b-hardware",
    "trilha": "base",
    "trimestre": 3,
+   "etapa": "7.14",
    "titulo": "Memória de 16 a 64 bits e a história de CPUs e GPUs",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1302,6 +1347,7 @@
    "id": "b-armazenamento",
    "trilha": "base",
    "trimestre": 3,
+   "etapa": "7.14",
    "titulo": "Dispositivos de armazenamento e linguagem compilada vs interpretada",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1329,6 +1375,7 @@
    "id": "b-escala",
    "trilha": "base",
    "trimestre": 4,
+   "etapa": "8.7",
    "titulo": "Como um sistema escala e como um banco SQL funciona por dentro",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1356,6 +1403,7 @@
    "id": "b-linux-boot",
    "trilha": "base",
    "trimestre": 4,
+   "etapa": "8.17",
    "titulo": "Como um Linux dá boot e como a compressão de dados funciona",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1383,6 +1431,7 @@
    "id": "b-linguagens",
    "trilha": "base",
    "trimestre": 4,
+   "etapa": "H1.5",
    "titulo": "Sua linguagem não é especial: o que é comum a todas",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1410,6 +1459,7 @@
    "id": "b-oficio",
    "trilha": "base",
    "trimestre": 4,
+   "etapa": "8.3",
    "titulo": "O livro mais clássico de software e como empreender com software sem errar",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",
@@ -1437,6 +1487,7 @@
    "id": "b-cripto-pratica",
    "trilha": "base",
    "trimestre": 4,
+   "etapa": "H3.1",
    "titulo": "Criptografia na prática e o que 16 linguagens em 16 dias ensinam",
    "objetivos": [
     "Assistir ou ler os 2 episódios do Akita antes da prática",

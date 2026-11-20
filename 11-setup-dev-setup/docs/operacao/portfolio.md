@@ -19,7 +19,7 @@ A pontuação ordena; quem decide é a [ordem de execução](07-ordem-de-execuca
 
 ## Arsenal: o que entra agora e o que não dá
 
-**Regras:** hora mínima de **R$ 45** por hora sua em trabalho ativo extra; teto de **7 horas** extras por semana; no máximo **3 rendas em "agora"**; portão para a próxima entrar: 3 meses seguidos se pagando no painel; corte: abaixo da hora mínima por 2 meses: delegar ou cortar.
+**Regras:** hora mínima de **R$ 45** por hora sua em trabalho ativo extra; teto de **7 horas** extras por semana; no máximo **4 rendas em "agora"**; portão para a próxima entrar: 3 meses seguidos se pagando no painel; corte: abaixo da hora mínima por 2 meses: delegar ou cortar.
 
 **Facilidade = sinergia + demanda + (6 − esforço) + (6 − capital)** (de 4 a 20): quanto maior, mais rápido vira dinheiro com o que você já tem.
 
@@ -30,100 +30,112 @@ A semana do arsenal:
 - Estudo da manhã: o setup transforma em aula, exercício, cartão Anki e roteiro (15 min de revisão)
 - Domingo, sono e cães: intocáveis
 
+### Ondas do plano
+
+Só rendas passivas entram nas ondas (decisão de 18/11). Onda 0 = agora; a onda seguinte entra quando uma da atual passar no portão. Rendas ativas ficam fora das ondas.
+
+| Onda | Ofertas |
+|---|---|
+| Onda 0: agora | Catálogo do HTML (gratuito), Mini-curso Lógica de Programação, Planilha do AM Gestão (finanças), Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) |
+| Onda 1 | Afiliados (ferramentas, livros, equipamentos que você usa), Baralhos Anki de TI e concursos, Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira), Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples), Versões dos cursos na Udemy (português e inglês), Templates e código-fonte |
+| Onda 2 | Pacote de aulas prontas para professores de informática, Banco de questões de TI para concursos (PF, PRF, Forças Armadas), Canal com rosto: construindo o Grupo AMtech em público, Cursos dublados por IA em inglês e espanhol (só a sua voz), Fábrica de documentos para professores de MG (assinatura), Newsletter (patrocínio e vendas), Blocos e kits de componentes de interface, Monetização das plataformas (YouTube, Instagram), Templates Next.js/Tailwind em inglês, AM Mentor: banco de exercícios com correção |
+| Onda 3 | Dividendos, FIIs e renda fixa (cascata e ARCA), AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio), Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas), Livro Lógica e Máquina, AM Gestão SaaS: Rotara (pedidos e entregas), Camisetas e canecas sob demanda (dev e professor), Comunidade paga do Instituto AMS |
+| Ativas, fora das ondas | 55 ofertas (ver tabelas abaixo) |
+
+**Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir):**
+
+- Primer Code: lógica e programação
+- Bancada Dev: setup e ferramentas
+- nome a definir: finanças (nome a definir (Bolso Exato está ocupado))
+
 | Veredito | Ofertas | Passivas |
 |---|---:|---:|
-| Agora | 3 | 1 |
-| Próxima da fila | 7 | 4 |
-| Manter (já funciona) | 1 | 1 |
-| Fila com portão | 63 | 37 |
+| Agora | 4 | 4 |
+| Próxima da fila | 6 | 6 |
+| Manter (já funciona) | 0 | 0 |
+| Fila com portão | 63 | 33 |
 | 2027, se a tarde ficar livre | 14 | 1 |
 | Decidir depois (capital alto) | 13 | 0 |
-| Descartar | 8 | 4 |
+| Descartar | 9 | 4 |
 
 ### Agora
 
 | Oferta | Marca | Perfil | Automático | Facilidade | Por quê |
 |---|---|---|---:|---:|---|
-| Mini-curso Lógica de Programação | AMtech Educação · Instituto AMS | Passiva | 85% | 18 | O material já existe e, pronto, vende 24h. Grava no bloco de sábado. |
-| Sites e lojas para pequenas empresas | AMtech Software | Ativa que vale a pena | 70% | 18 | Caixa rápido para quitar o cartão e manutenção mensal recorrente; é a sua regra para sair do restaurante. |
-| Avaliação de respostas de IA (DataAnnotation, Outlier) | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 0% | 16 | Começa sem custo, ocupa só as brechas e paga em dólar. Sai se ficar abaixo da hora mínima. |
+| Catálogo do HTML (gratuito) | AMtech Educação · Instituto AMS | Passiva | 95% | 18 | Onda 0 do plano (decisão de 18/11). Já está no ar e é a isca gratuita; só manter. |
+| Mini-curso Lógica de Programação | AMtech Educação · Instituto AMS | Passiva | 85% | 18 | Onda 0 do plano (decisão de 18/11). O material já existe e, pronto, vende 24h. Grava no bloco de sábado. |
+| Planilha do AM Gestão (finanças) | AMtech Software | Passiva | 80% | 17 | Onda 0 do plano (decisão de 18/11). Valida primeiro pela planilha Cascata. |
+| Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | AMtech Mídia | Passiva | 70% | 15 | Onda 0 do plano (decisão de 18/11). Começa quando o estudo gerar conteúdo toda semana. |
 
 ### Próximas, nesta ordem
 
 | Ordem | Oferta | Marca | Perfil | Automático | Facilidade | Por quê |
 |---:|---|---|---|---:|---:|---|
-| 1 | AM Mentor: banco de exercícios com correção | AMtech Educação · Instituto AMS | Passiva | 90% | 14 | Já existe no seu Desktop; falta ligar cobrança e acesso. |
-| 2 | Aulas particulares | AMtech Educação · Instituto AMS | Ativa que vale a pena | 30% | 19 | Em turma online, 1 hora sua vale vários alunos e a gravação vira curso. Entra com o mini-curso no ar servindo de isca. |
-| 3 | Notebooks e PCs: comprar, consertar e revender | AMtech Campo (presencial, por parceiros) | Ativa que vale a pena | 40% | 16 | Usa a sua bancada e o radar. Só continua se passar da hora mínima por 2 meses. |
-| 4 | Fábrica de documentos para professores de MG (assinatura) | AMtech Educação · Instituto AMS | Passiva | 85% | 17 | Você constrói a Fábrica para si; vender é abrir para outros. Dado de aluno nunca entra. |
-| 5 | Setup profissional (curso, template e configuração remota) | AMtech Software | Passiva | 85% | 17 | Você já está construindo; falta empacotar. |
-| 6 | Plano de negócios e viabilidade financeira para quem vai abrir empresa | AMtech Economia (finanças e empreendedorismo) | Ativa que vale a pena | 60% | 18 | O motor financeiro e o planejador já existem no setup; você só adapta para o cliente. |
-| 7 | Verificador e formatador ABNT automático (TCC, artigos, relatórios) | AMtech Educação · Instituto AMS | Passiva | 90% | 18 | Escala sem a sua hora: o aluno envia o .docx e recebe o laudo e o arquivo corrigido. Só formatação e conferência, nunca escrever o trabalho. |
-
-### Manter
-
-| Oferta | Marca | Perfil | Automático | Facilidade | Por quê |
-|---|---|---|---:|---:|---|
-| Catálogo do HTML (gratuito) | AMtech Educação · Instituto AMS | Passiva | 95% | 18 | Já está no ar e é a isca gratuita; só manter. |
+| 1 | Baralhos Anki de TI e concursos | AMtech Educação · Instituto AMS | Passiva | 95% | 17 | Onda 1 do plano (decisão de 18/11): entra quando uma da onda 0 passar no portão. Sai do seu estudo; esforço quase zero. |
+| 2 | Templates e código-fonte | AMtech Educação · Instituto AMS | Passiva | 90% | 16 | Onda 1 do plano (decisão de 18/11): entra quando uma da onda 0 passar no portão. Sai de cada site entregue; empacotar sem custo extra. |
+| 3 | Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | AMtech Economia (finanças e empreendedorismo) | Passiva | 90% | 17 | Onda 1 do plano (decisão de 18/11): entra quando uma da onda 0 passar no portão. Sai do motor financeiro que já existe; vende sozinho. |
+| 4 | Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | AMtech Economia (finanças e empreendedorismo) | Passiva | 90% | 17 | Onda 1 do plano (decisão de 18/11): entra quando uma da onda 0 passar no portão. Isca que traz clientes para a mentoria, o BPO e os modelos. Atualizar as regras quando a lei mudar. |
+| 5 | Versões dos cursos na Udemy (português e inglês) | AMtech Educação · Instituto AMS | Passiva | 90% | 17 | Onda 1 do plano (decisão de 18/11): entra quando uma da onda 0 passar no portão. Reaproveita os cursos gravados. |
+| 6 | Afiliados (ferramentas, livros, equipamentos que você usa) | AMtech Mídia | Passiva | 90% | 18 | Onda 1 do plano (decisão de 18/11): entra quando uma da onda 0 passar no portão. Links nas páginas e vídeos que já vão existir. |
 
 ### Fila com portão (da mais fácil para a mais difícil)
 
 | Oferta | Marca | Perfil | Automático | Facilidade | Por quê |
 |---|---|---|---:|---:|---|
 | Automação com IA para pequenos negócios (WhatsApp, n8n, agenda) | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 60% | 19 | Mensalidade, e cada automação vira template; depois do primeiro cliente de sites. |
-| Afiliados (ferramentas, livros, equipamentos que você usa) | AMtech Mídia | Passiva | 90% | 18 | Links nas páginas e vídeos que já vão existir. |
-| Pacote de aulas prontas para professores de informática | AMtech Educação · Instituto AMS | Passiva | 90% | 18 | Entra junto com a Fábrica para professores. |
+| Aulas particulares | AMtech Educação · Instituto AMS | Ativa que vale a pena | 30% | 19 | Renda ativa: fora das ondas do plano (decisão de 18/11); só atende o que chegar, sem prospectar. Em turma online, 1 hora sua vale vários alunos e a gravação vira curso. Entra com o mini-curso no ar servindo de isca. |
+| Pacote de aulas prontas para professores de informática | AMtech Educação · Instituto AMS | Passiva | 90% | 18 | Onda 2 do plano (decisão de 18/11). Entra junto com a Fábrica para professores. |
+| Verificador e formatador ABNT automático (TCC, artigos, relatórios) | AMtech Educação · Instituto AMS | Passiva | 90% | 18 | Fora das ondas do plano (decisão de 18/11). Escala sem a sua hora: o aluno envia o .docx e recebe o laudo e o arquivo corrigido. Só formatação e conferência, nunca escrever o trabalho. |
+| Plano de negócios e viabilidade financeira para quem vai abrir empresa | AMtech Economia (finanças e empreendedorismo) | Ativa que vale a pena | 60% | 18 | Fora das ondas do plano (decisão de 18/11). O motor financeiro e o planejador já existem no setup; você só adapta para o cliente. |
 | Presença digital para comércio local (Google Perfil, redes, avaliações) | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 50% | 18 | Junto com a automação com IA. |
+| Sites e lojas para pequenas empresas | AMtech Software | Ativa que vale a pena | 70% | 18 | Renda ativa: fora das ondas do plano (decisão de 18/11); só atende o que chegar, sem prospectar. Caixa rápido para quitar o cartão e manutenção mensal recorrente; é a sua regra para sair do restaurante. |
 | Suporte remoto e planos mensais para empresas | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 60% | 18 | Contratos mensais com empresas; depois dos primeiros clientes de sites. |
-| AM Rendara (finanças), começando pela planilha | AMtech Software | Passiva | 80% | 17 | Valida primeiro pela planilha Cascata. |
-| Banco de questões de TI para concursos (PF, PRF, Forças Armadas) | AMtech Educação · Instituto AMS | Passiva | 90% | 17 | Produto, não estudo seu; depois do AM Mentor. |
-| Baralhos Anki de TI e concursos | AMtech Educação · Instituto AMS | Passiva | 95% | 17 | Sai do seu estudo; esforço quase zero. |
-| Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | AMtech Economia (finanças e empreendedorismo) | Passiva | 90% | 17 | Isca que traz clientes para a mentoria, o BPO e os modelos. Atualizar as regras quando a lei mudar. |
-| Canal com rosto: construindo o Grupo AMtech em público | AMtech Mídia | Passiva | 70% | 17 | Sai do bloco de produção de sábado. |
-| Cursos dublados por IA em inglês e espanhol (só a sua voz) | AMtech Educação · Instituto AMS | Passiva | 90% | 17 | Depois que houver curso gravado. Nunca a voz de alunos. |
+| Banco de questões de TI para concursos (PF, PRF, Forças Armadas) | AMtech Educação · Instituto AMS | Passiva | 90% | 17 | Onda 2 do plano (decisão de 18/11). Produto, não estudo seu; depois do AM Mentor. |
+| Canal com rosto: construindo o Grupo AMtech em público | AMtech Mídia | Passiva | 70% | 17 | Onda 2 do plano (decisão de 18/11). Sai do bloco de produção de sábado. |
+| Cursos dublados por IA em inglês e espanhol (só a sua voz) | AMtech Educação · Instituto AMS | Passiva | 90% | 17 | Onda 2 do plano (decisão de 18/11). Depois que houver curso gravado. Nunca a voz de alunos. |
+| Fábrica de documentos para professores de MG (assinatura) | AMtech Educação · Instituto AMS | Passiva | 85% | 17 | Onda 2 do plano (decisão de 18/11). Você constrói a Fábrica para si; vender é abrir para outros. Dado de aluno nunca entra. |
 | Kit do livro e edição do professor | Editora AMS Silva | Passiva | 90% | 17 | Depois do livro. |
-| Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | AMtech Economia (finanças e empreendedorismo) | Passiva | 90% | 17 | Sai do motor financeiro que já existe; vende sozinho. |
-| Newsletter (patrocínio e vendas) | AMtech Mídia | Passiva | 80% | 17 | Junto com o canal. |
+| Newsletter (patrocínio e vendas) | AMtech Mídia | Passiva | 80% | 17 | Onda 2 do plano (decisão de 18/11). Junto com o canal. |
+| Setup profissional (curso, template e configuração remota) | AMtech Software | Passiva | 85% | 17 | Fora das ondas do plano (decisão de 18/11). Você já está construindo; falta empacotar. |
 | Templates de automação n8n | AMtech Software | Passiva | 90% | 17 | Sai das suas automações; esforço baixo. |
-| Versões dos cursos na Udemy (português e inglês) | AMtech Educação · Instituto AMS | Passiva | 90% | 17 | Reaproveita os cursos gravados. |
-| Laudo de segurança dos sites que você mantém | AMtech Software | Ativa que vale a pena | 65% | 17 | Portão: ensaio no seu site e eJPT. Só nos sites que você mantém, com cláusula no contrato; aumenta o valor da mensalidade. |
+| Laudo de segurança dos sites que você mantém | AMtech Software | Ativa que vale a pena | 65% | 17 | Renda ativa: fora das ondas do plano (decisão de 18/11); só atende o que chegar, sem prospectar. Portão: ensaio no seu site e eJPT. Só nos sites que você mantém, com cláusula no contrato; aumenta o valor da mensalidade. |
 | Elaboração e revisão de questões | AMtech Educação · Instituto AMS | Ativa que vale a pena | 50% | 17 | Reaproveita o seu ecossistema de avaliações. |
 | Mentoria de organização financeira e palestras em empresas (sem recomendar ativos) | AMtech Economia (finanças e empreendedorismo) | Ativa que vale a pena | 40% | 17 | Orçamento, dívidas e reserva. Recomendar ativo ou gerir dinheiro de terceiros exige certificação e registro (CVM): fica fora. |
 | Formatação ABNT de TCC (só formatar e revisar) | AMtech Educação · Instituto AMS | Ativa | 50% | 17 | Ganho baixo e sazonal; só nas temporadas, se sobrar hora. Nunca escrever o trabalho pelo aluno. |
 | Recuperação de dados (intermediação com laboratório) | AMtech Campo (presencial, por parceiros) | Ativa | 10% | 17 | Você só coleta e entrega, por comissão; entra com a assistência. |
 | App de delivery com a marca do restaurante (white-label) | AMtech Software | Passiva | 70% | 16 | Depende do AM Delivery. |
-| Dividendos, FIIs e renda fixa (cascata e ARCA) | Patrimônio (investimentos) | Passiva | 95% | 16 | A cascata manda: só depois do cartão quitado e da reserva cheia. As decisões são suas. |
+| Dividendos, FIIs e renda fixa (cascata e ARCA) | Patrimônio (investimentos) | Passiva | 95% | 16 | Onda 3 do plano (decisão de 18/11). A cascata manda: só depois do cartão quitado e da reserva cheia. As decisões são suas. |
 | Adoção do livro por escolas | Editora AMS Silva | Passiva | 70% | 16 | Depois do livro e do kit. |
 | Conferência automática de documentos para coordenações e escolas | AMtech Educação · Instituto AMS | Passiva | 85% | 16 | A coordenação recebe dezenas de planejamentos por semana; o verificador aponta o que falta. Nada de dados de aluno. |
-| Monetização das plataformas (YouTube, Instagram) | AMtech Mídia | Passiva | 95% | 16 | Consequência do canal crescer. |
-| Templates e código-fonte | AMtech Educação · Instituto AMS | Passiva | 90% | 16 | Sai de cada site entregue; empacotar sem custo extra. |
+| Monetização das plataformas (YouTube, Instagram) | AMtech Mídia | Passiva | 95% | 16 | Onda 2 do plano (decisão de 18/11). Consequência do canal crescer. |
 | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) | AMtech Economia (finanças e empreendedorismo) | Ativa que vale a pena | 65% | 16 | Recorrente e delegável a um assistente depois do checklist. É gestão financeira, não contabilidade: escrituração e impostos ficam com o contador. |
 | Celulares: comprar, consertar e revender | AMtech Campo (presencial, por parceiros) | Ativa que vale a pena | 40% | 16 | Checklist rígido: IMEI, conta Google ou iCloud removida, recibo com CPF. |
 | Livros técnicos e didáticos usados | AMtech Campo (presencial, por parceiros) | Ativa que vale a pena | 70% | 16 | Margem pequena; envio quase automático. |
+| Notebooks e PCs: comprar, consertar e revender | AMtech Campo (presencial, por parceiros) | Ativa que vale a pena | 40% | 16 | Fora das ondas do plano (decisão de 18/11). Usa a sua bancada e o radar. Só continua se passar da hora mínima por 2 meses. |
 | Parceiro de ERP (Bling, Tiny, Omie): implantação e comissão | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 50% | 16 | Recorrência antes do Kaixara ficar pronto. |
 | Peças de máquinas sucateadas (RAM, SSD, placas) | AMtech Campo (presencial, por parceiros) | Ativa que vale a pena | 40% | 16 | Aproveita o que sobra da revenda de notebooks. |
 | Peças e acessórios sem estoque | AMtech Campo (presencial, por parceiros) | Ativa que vale a pena | 70% | 16 | Sem estoque; entra com a revenda de notebooks. |
 | Professor conteudista EAD | AMtech Educação · Instituto AMS | Ativa que vale a pena | 60% | 16 | Bom por hora porque a Fábrica faz o grosso. Leia o contrato: o direito costuma ficar com a instituição. |
-| Blocos e kits de componentes de interface | AMtech Software | Passiva | 90% | 15 | Junto com os templates. |
-| Templates Next.js/Tailwind em inglês | AMtech Software | Passiva | 90% | 15 | Esforço inicial alto; depois do Setup profissional. |
+| Blocos e kits de componentes de interface | AMtech Software | Passiva | 90% | 15 | Onda 2 do plano (decisão de 18/11). Junto com os templates. |
+| Templates Next.js/Tailwind em inglês | AMtech Software | Passiva | 90% | 15 | Onda 2 do plano (decisão de 18/11). Esforço inicial alto; depois do Setup profissional. |
 | AMtech OS (sistema pronto para programar, baseado em Ubuntu) | AMtech Software | Ativa que vale a pena | 70% | 15 | Você é o primeiro cliente: usar alguns meses antes de vender. A venda nasce do setuppro e puxa revenda de notebooks, suporte remoto e aulas. |
-| Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | AMtech Mídia | Passiva | 70% | 15 | Começa quando o estudo gerar conteúdo toda semana. |
 | Curso: segurança e engenharia reversa para devs | AMtech Educação · Instituto AMS | Passiva | 80% | 15 | Portão: eJPT e 3 relatórios de ensaio, para ensinar o que já fez. Material vem do seu estudo, sem copiar curso pago. |
 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) | AMtech Educação · Instituto AMS | Passiva | 80% | 15 | Depende de seleção; usa os cursos já gravados. |
-| Camisetas e canecas sob demanda (dev e professor) | AMtech Mídia | Passiva | 95% | 15 | Ganho baixo, mas trabalho quase zero. Nada de personagens ou marcas de terceiros. |
-| Comunidade paga do Instituto AMS | AMtech Educação · Instituto AMS | Ativa que vale a pena | 60% | 15 | Exige presença constante; só com uma base de alunos já pagando. |
+| Camisetas e canecas sob demanda (dev e professor) | AMtech Mídia | Passiva | 95% | 15 | Onda 3 do plano (decisão de 18/11). Ganho baixo, mas trabalho quase zero. Nada de personagens ou marcas de terceiros. |
+| Comunidade paga do Instituto AMS | AMtech Educação · Instituto AMS | Ativa que vale a pena | 60% | 15 | Onda 3 do plano (decisão de 18/11). Exige presença constante; só com uma base de alunos já pagando. |
 | Parceria DIO | AMtech Educação · Instituto AMS | Passiva | 70% | 15 | Depende de convite da plataforma. |
-| Sistemas sob encomenda | AMtech Software | Ativa que vale a pena | 40% | 15 | Só projetos acima da hora mínima. |
+| Sistemas sob encomenda | AMtech Software | Ativa que vale a pena | 40% | 15 | Renda ativa: fora das ondas do plano (decisão de 18/11); só atende o que chegar, sem prospectar. Só projetos acima da hora mínima. |
 | Automação BIM e modelagem para escritórios de engenharia e arquitetura | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 60% | 15 | É TI aplicada à construção: você automatiza e modela, o engenheiro ou arquiteto revisa e assina. Portão: os 3 scripts e um escritório parceiro. |
 | Freela internacional em dólar (Upwork) | AMtech Software | Ativa que vale a pena | 30% | 15 | Portão: inglês B1. |
 | Segurança digital para pequenas empresas | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 50% | 15 | Só a parte técnica; a jurídica da LGPD fica com advogado. |
 | Captação de crédito e editais para pequenos negócios (Pronampe, BDMG, Sebrae, FAPEMIG) | AMtech Economia (finanças e empreendedorismo) | Ativa que vale a pena | 45% | 15 | Paga bem quando aprova; depende do plano de negócios pronto. Nunca prometer aprovação. |
-| AM Kaixara (PDV, ficha técnica, cardápio) | AMtech Software | Passiva | 70% | 14 | Projeto de portfólio; venda só depois de validar. |
-| Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | AMtech Educação · Instituto AMS | Passiva | 85% | 14 | Depois que o mini-curso validar a demanda. |
-| Livro Lógica e Máquina | Editora AMS Silva | Passiva | 85% | 14 | Escrita contínua nos blocos de estudo; lançamento pela Editora. |
+| AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | AMtech Software | Passiva | 70% | 14 | Onda 3 do plano (decisão de 18/11). Projeto de portfólio; venda só depois de validar. |
+| AM Mentor: banco de exercícios com correção | AMtech Educação · Instituto AMS | Passiva | 90% | 14 | Onda 2 do plano (decisão de 18/11). Já existe no seu Desktop; falta ligar cobrança e acesso. |
+| Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | AMtech Educação · Instituto AMS | Passiva | 85% | 14 | Onda 3 do plano (decisão de 18/11). Depois que o mini-curso validar a demanda. |
+| Livro Lógica e Máquina | Editora AMS Silva | Passiva | 85% | 14 | Onda 3 do plano (decisão de 18/11). Escrita contínua nos blocos de estudo; lançamento pela Editora. |
 | Licença do AM Delivery para outras cidades | AMtech Software | Passiva | 70% | 14 | Depende do AM Delivery funcionando em Barbacena. |
 | Português para estrangeiros (Preply, italki) | AMtech Educação · Instituto AMS | Ativa | 0% | 14 | Hora pura; portão: inglês básico. |
-| AM Rotara (pedidos e entregas) | AMtech Software | Passiva | 70% | 13 | Depende do Kaixara. |
+| AM Gestão SaaS: Rotara (pedidos e entregas) | AMtech Software | Passiva | 70% | 13 | Onda 3 do plano (decisão de 18/11). Depende do Kaixara. |
 | Formação em Matemática | AMtech Educação · Instituto AMS | Passiva | 85% | 13 | Depende do livro pronto. |
 | Curso de finanças pessoais (conteúdo próprio) | AMtech Educação · Instituto AMS | Passiva | 85% | 13 | Cuidado regulatório (não recomendar ativo); depois da planilha validar. |
 | Plugin WordPress com versão Pro | AMtech Software | Passiva | 75% | 13 | Suporte contínuo; o problema tem que vir dos clientes. |
@@ -175,6 +187,7 @@ A semana do arsenal:
 
 | Oferta | Marca | Perfil | Automático | Facilidade | Por quê |
 |---|---|---|---:|---:|---|
+| Avaliação de respostas de IA (DataAnnotation, Outlier) | AMtech Digital (serviços remotos e B2B) | Ativa que vale a pena | 0% | 16 | só rendas passivas (decisão de 18/11) |
 | Edição de vídeo para lojas e criadores | AMtech Digital (serviços remotos e B2B) | Ativa | 60% | 15 | Margem pequena. |
 | Aplicador e fiscal de provas | AMtech Digital (serviços remotos e B2B) | Ativa | 0% | 14 | Ganho baixo e ocupa o fim de semana inteiro. |
 | Modelos 3D e projetos Arduino para download | AMtech Mídia | Passiva | 80% | 13 | Ganho baixo; só publicar o que já existir. |
@@ -190,9 +203,9 @@ Nenhuma renda é 100% automática: alguém cria uma vez, aprova e atende a exce�
 
 | Quanto o setup faz | Ofertas | Ativas agora ou próximas |
 |---|---:|---:|
-| O setup faz tudo, menos criar uma vez e aprovar (85% ou mais) | 28 | 5 |
+| O setup faz tudo, menos criar uma vez e aprovar (85% ou mais) | 28 | 8 |
 | O setup faz a maior parte; você atende exceções (50% a 84%) | 45 | 2 |
-| Depende da sua hora ou de parceiro (menos de 50%) | 36 | 3 |
+| Depende da sua hora ou de parceiro (menos de 50%) | 36 | 0 |
 
 ### Ordem de construção
 
@@ -200,82 +213,82 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 
 | # | Automação | Estado | Destrava | Rendas de agora e próximas | Passo |
 |---:|---|---|---:|---|---|
-| 1 | **Comandos e aprovações pelo Telegram**: Você aprova posts, vê vendas e recebe alertas pelo celular, só do seu número. | Construir | todas | Mini-curso Lógica de Programação, Aulas particulares, AM Mentor: banco de exercícios com correção, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier), Notebooks e PCs: comprar, consertar e revender, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Plano de negócios e viabilidade financeira para quem vai abrir empresa, Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-remoto |
-| 2 | **Painel de lucro e retorno por hora**: Lucro e R$ por hora sua de cada renda; marca quem ficou abaixo da hora mínima. | Parcial (falta ligar) | todas | Mini-curso Lógica de Programação, Aulas particulares, AM Mentor: banco de exercícios com correção, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier), Notebooks e PCs: comprar, consertar e revender, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Plano de negócios e viabilidade financeira para quem vai abrir empresa, Verificador e formatador ABNT automático (TCC, artigos, relatórios) | painel-lucro |
-| 3 | **Registro de horas**: Mede as horas suas em cada renda (ActivityWatch) para calcular o retorno por hora. | Construir | 36 | Aulas particulares, Sites e lojas para pequenas empresas, Avaliação de respostas de IA (DataAnnotation, Outlier), Notebooks e PCs: comprar, consertar e revender, Plano de negócios e viabilidade financeira para quem vai abrir empresa | au-horas |
-| 4 | **Atendimento de primeiro nível**: Responde as dúvidas frequentes com base no seu material e passa para você o que não souber. | Construir | 24 | Mini-curso Lógica de Programação, AM Mentor: banco de exercícios com correção, Fábrica de documentos para professores de MG (assinatura), Setup profissional (curso, template e configuração remota), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-suporte |
-| 5 | **Cobrança recorrente e controle de acesso**: Cobra todo mês, corta o acesso de quem não paga e avisa antes. | Construir | 28 | AM Mentor: banco de exercícios com correção, Sites e lojas para pequenas empresas, Fábrica de documentos para professores de MG (assinatura), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-recorrencia |
-| 6 | **CRM, proposta, contrato e cobrança**: Registra o cliente, gera proposta e contrato de modelo e cobra. | Parcial (falta ligar) | 39 | Aulas particulares, Sites e lojas para pequenas empresas, Plano de negócios e viabilidade financeira para quem vai abrir empresa | crm |
-| 7 | **Checkout, entrega e área do cliente**: Recebe o pagamento (Hotmart, Kiwify ou Stripe), libera o acesso e manda o recibo, sem você. | Parcial (falta ligar) | 24 | Mini-curso Lógica de Programação, Setup profissional (curso, template e configuração remota), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | plataformas |
-| 8 | **Funil de e-mails e isca gratuita**: Captura o contato com consentimento e manda a sequência de e-mails até a oferta. | Construir | 12 | Mini-curso Lógica de Programação, AM Mentor: banco de exercícios com correção, Fábrica de documentos para professores de MG (assinatura), Verificador e formatador ABNT automático (TCC, artigos, relatórios) | au-funil |
-| 9 | **Estudo vira produto**: Das suas anotações de estudo, gera rascunho de aula, exercícios, cartões Anki e roteiro de vídeo para você revisar. | Construir | 13 | Mini-curso Lógica de Programação, Aulas particulares, AM Mentor: banco de exercícios com correção | au-esteira |
-| 10 | **Cortes, legendas e dublagem com a sua voz**: Corta, legenda e dubla os vídeos. Só a sua voz, nunca a de alunos. | Parcial (falta ligar) | 14 | Mini-curso Lógica de Programação, Setup profissional (curso, template e configuração remota) | au-midia |
-| 11 | **Publicação agendada com aprovação**: Agenda posts, vídeos e artigos; nada vai ao ar sem o seu ok. | Parcial (falta ligar) | 15 | Mini-curso Lógica de Programação | au-publicacao |
-| 12 | **Manutenção automática de sites**: Atualiza, faz backup e monitora os sites dos clientes; avisa só quando algo quebra. | Parcial (falta ligar) | 3 | Sites e lojas para pequenas empresas | kuma-monitores |
-| 13 | **Estoque, ordem de serviço e parceiros**: Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Kaixara). | Construir | 20 | Notebooks e PCs: comprar, consertar e revender | au-estoque |
-| 14 | **Agenda com pagamento antecipado e lembretes**: O cliente escolhe o horário, paga antes e recebe lembrete (Cal.com). | Parcial (falta ligar) | 10 | Aulas particulares | agenda |
-| 15 | **Fábrica de aulas e documentos**: Gera aulas e documentos da escola no modelo exigido, a partir das regras e das ementas. Dado de aluno nunca entra. | Construir | 6 | Fábrica de documentos para professores de MG (assinatura) | au-fabrica |
-| 16 | **Radar de revenda**: Lê os alertas de busca salvos e avisa só o que passa da hora mínima. | Construir | 5 | Notebooks e PCs: comprar, consertar e revender | ar-radar |
-| 17 | **Busca semanal de editais e oportunidades**: Procura editais de conteudista, crédito, fomento e seleções e resume os que servem. | Construir | 4 | — | au-editais |
+| 1 | **Comandos e aprovações pelo Telegram**: Você aprova posts, vê vendas e recebe alertas pelo celular, só do seu número. | Construir | todas | Mini-curso Lógica de Programação, Templates e código-fonte, Catálogo do HTML (gratuito), Versões dos cursos na Udemy (português e inglês), Baralhos Anki de TI e concursos, Planilha do AM Gestão (finanças), Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir), Afiliados (ferramentas, livros, equipamentos que você usa), Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples), Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | au-remoto |
+| 2 | **Painel de lucro e retorno por hora**: Lucro e R$ por hora sua de cada renda; marca quem ficou abaixo da hora mínima. | Parcial (falta ligar) | todas | Mini-curso Lógica de Programação, Templates e código-fonte, Catálogo do HTML (gratuito), Versões dos cursos na Udemy (português e inglês), Baralhos Anki de TI e concursos, Planilha do AM Gestão (finanças), Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir), Afiliados (ferramentas, livros, equipamentos que você usa), Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples), Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | painel-lucro |
+| 3 | **Atendimento de primeiro nível**: Responde as dúvidas frequentes com base no seu material e passa para você o que não souber. | Construir | 24 | Mini-curso Lógica de Programação, Templates e código-fonte, Planilha do AM Gestão (finanças), Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | au-suporte |
+| 4 | **Estudo vira produto**: Das suas anotações de estudo, gera rascunho de aula, exercícios, cartões Anki e roteiro de vídeo para você revisar. | Construir | 13 | Mini-curso Lógica de Programação, Versões dos cursos na Udemy (português e inglês), Baralhos Anki de TI e concursos, Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | au-esteira |
+| 5 | **Publicação agendada com aprovação**: Agenda posts, vídeos e artigos; nada vai ao ar sem o seu ok. | Parcial (falta ligar) | 15 | Mini-curso Lógica de Programação, Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir), Afiliados (ferramentas, livros, equipamentos que você usa), Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | au-publicacao |
+| 6 | **Cortes, legendas e dublagem com a sua voz**: Corta, legenda e dubla os vídeos. Só a sua voz, nunca a de alunos. | Parcial (falta ligar) | 14 | Mini-curso Lógica de Programação, Versões dos cursos na Udemy (português e inglês), Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | au-midia |
+| 7 | **Funil de e-mails e isca gratuita**: Captura o contato com consentimento e manda a sequência de e-mails até a oferta. | Construir | 12 | Mini-curso Lógica de Programação, Catálogo do HTML (gratuito), Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | au-funil |
+| 8 | **Checkout, entrega e área do cliente**: Recebe o pagamento (Hotmart, Kiwify ou Stripe), libera o acesso e manda o recibo, sem você. | Parcial (falta ligar) | 24 | Mini-curso Lógica de Programação, Templates e código-fonte, Baralhos Anki de TI e concursos, Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | plataformas |
+| 9 | **Cobrança recorrente e controle de acesso**: Cobra todo mês, corta o acesso de quem não paga e avisa antes. | Construir | 28 | Planilha do AM Gestão (finanças) | au-recorrencia |
+| 10 | **CRM, proposta, contrato e cobrança**: Registra o cliente, gera proposta e contrato de modelo e cobra. | Parcial (falta ligar) | 39 | — | crm |
+| 11 | **Registro de horas**: Mede as horas suas em cada renda (ActivityWatch) para calcular o retorno por hora. | Construir | 36 | — | au-horas |
+| 12 | **Estoque, ordem de serviço e parceiros**: Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Kaixara). | Construir | 20 | — | au-estoque |
+| 13 | **Agenda com pagamento antecipado e lembretes**: O cliente escolhe o horário, paga antes e recebe lembrete (Cal.com). | Parcial (falta ligar) | 10 | — | agenda |
+| 14 | **Fábrica de aulas e documentos**: Gera aulas e documentos da escola no modelo exigido, a partir das regras e das ementas. Dado de aluno nunca entra. | Construir | 6 | — | au-fabrica |
+| 15 | **Radar de revenda**: Lê os alertas de busca salvos e avisa só o que passa da hora mínima. | Construir | 5 | — | ar-radar |
+| 16 | **Busca semanal de editais e oportunidades**: Procura editais de conteudista, crédito, fomento e seleções e resume os que servem. | Construir | 4 | — | au-editais |
+| 17 | **Manutenção automática de sites**: Atualiza, faz backup e monitora os sites dos clientes; avisa só quando algo quebra. | Parcial (falta ligar) | 3 | — | kuma-monitores |
 | 18 | **Conciliação e relatório financeiro de clientes**: Importa extratos, concilia e gera o relatório mensal de cada cliente. | Construir | 1 | — | au-financeiro |
-| 19 | **CI que testa e publica pacotes**: Testa e publica templates, plugins e kits a cada versão. | Já existe | 21 | Setup profissional (curso, template e configuração remota) | ci-verde |
-| 20 | **Cascata e ARCA**: Mostra a fase da cascata e quanto aportar pelo seu método (Caixa da Casa, depois Rendara). | Já existe | 4 | — | — |
+| 19 | **CI que testa e publica pacotes**: Testa e publica templates, plugins e kits a cada versão. | Já existe | 21 | Templates e código-fonte, Catálogo do HTML (gratuito), Planilha do AM Gestão (finanças), Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples), Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | ci-verde |
+| 20 | **Cascata e ARCA**: Mostra a fase da cascata e quanto aportar pelo seu método (Caixa da Casa, depois Rendara). | Já existe | 4 | Planilha do AM Gestão (finanças) | — |
 
 ### O que o setup faz sozinho, por oferta
 
 | Oferta | Veredito | Automático | Usa |
 |---|---|---:|---|
-| Baralhos Anki de TI e concursos | Fila com portão | 95% | Checkout, entrega e área do cliente, Estudo vira produto |
+| Baralhos Anki de TI e concursos | Próxima da fila | 95% | Checkout, entrega e área do cliente, Estudo vira produto |
 | Camisetas e canecas sob demanda (dev e professor) | Fila com portão | 95% | Publicação agendada com aprovação |
-| Catálogo do HTML (gratuito) | Manter (já funciona) | 95% | CI que testa e publica pacotes, Funil de e-mails e isca gratuita |
+| Catálogo do HTML (gratuito) | Agora | 95% | CI que testa e publica pacotes, Funil de e-mails e isca gratuita |
 | Dividendos, FIIs e renda fixa (cascata e ARCA) | Fila com portão | 95% | Cascata e ARCA |
 | Monetização das plataformas (YouTube, Instagram) | Fila com portão | 95% | Publicação agendada com aprovação, Cortes, legendas e dublagem com a sua voz |
-| AM Mentor: banco de exercícios com correção | Próxima da fila | 90% | Cobrança recorrente e controle de acesso, Estudo vira produto, Atendimento de primeiro nível, Funil de e-mails e isca gratuita |
-| Afiliados (ferramentas, livros, equipamentos que você usa) | Fila com portão | 90% | Publicação agendada com aprovação |
+| AM Mentor: banco de exercícios com correção | Fila com portão | 90% | Cobrança recorrente e controle de acesso, Estudo vira produto, Atendimento de primeiro nível, Funil de e-mails e isca gratuita |
+| Afiliados (ferramentas, livros, equipamentos que você usa) | Próxima da fila | 90% | Publicação agendada com aprovação |
 | Banco de questões de TI para concursos (PF, PRF, Forças Armadas) | Fila com portão | 90% | Cobrança recorrente e controle de acesso, Estudo vira produto, Atendimento de primeiro nível |
 | Blocos e kits de componentes de interface | Fila com portão | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes |
-| Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | Fila com portão | 90% | Funil de e-mails e isca gratuita, CI que testa e publica pacotes, Publicação agendada com aprovação |
+| Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | Próxima da fila | 90% | Funil de e-mails e isca gratuita, CI que testa e publica pacotes, Publicação agendada com aprovação |
 | Cursos dublados por IA em inglês e espanhol (só a sua voz) | Fila com portão | 90% | Cortes, legendas e dublagem com a sua voz, Checkout, entrega e área do cliente |
 | Jogo educativo de lógica (itch.io e Steam) | Descartar | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes |
 | Kit do livro e edição do professor | Fila com portão | 90% | Checkout, entrega e área do cliente, Atendimento de primeiro nível |
-| Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | Fila com portão | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Atendimento de primeiro nível |
+| Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | Próxima da fila | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Atendimento de primeiro nível |
 | Pacote de aulas prontas para professores de informática | Fila com portão | 90% | Checkout, entrega e área do cliente, Fábrica de aulas e documentos, Atendimento de primeiro nível |
 | Templates Next.js/Tailwind em inglês | Fila com portão | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Atendimento de primeiro nível |
 | Templates de automação n8n | Fila com portão | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes |
-| Templates e código-fonte | Fila com portão | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Atendimento de primeiro nível |
-| Verificador e formatador ABNT automático (TCC, artigos, relatórios) | Próxima da fila | 90% | Checkout, entrega e área do cliente, Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, Funil de e-mails e isca gratuita |
-| Versões dos cursos na Udemy (português e inglês) | Fila com portão | 90% | Cortes, legendas e dublagem com a sua voz, Estudo vira produto |
+| Templates e código-fonte | Próxima da fila | 90% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Atendimento de primeiro nível |
+| Verificador e formatador ABNT automático (TCC, artigos, relatórios) | Fila com portão | 90% | Checkout, entrega e área do cliente, Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, Funil de e-mails e isca gratuita |
+| Versões dos cursos na Udemy (português e inglês) | Próxima da fila | 90% | Cortes, legendas e dublagem com a sua voz, Estudo vira produto |
 | Conferência automática de documentos para coordenações e escolas | Fila com portão | 85% | CRM, proposta, contrato e cobrança, Cobrança recorrente e controle de acesso, Fábrica de aulas e documentos |
 | Curso de finanças pessoais (conteúdo próprio) | Fila com portão | 85% | Checkout, entrega e área do cliente, Funil de e-mails e isca gratuita, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
 | Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | Fila com portão | 85% | Checkout, entrega e área do cliente, Funil de e-mails e isca gratuita, Estudo vira produto, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
 | Formação em Matemática | Fila com portão | 85% | Checkout, entrega e área do cliente, Funil de e-mails e isca gratuita, Estudo vira produto, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
-| Fábrica de documentos para professores de MG (assinatura) | Próxima da fila | 85% | Fábrica de aulas e documentos, Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, Funil de e-mails e isca gratuita |
+| Fábrica de documentos para professores de MG (assinatura) | Fila com portão | 85% | Fábrica de aulas e documentos, Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, Funil de e-mails e isca gratuita |
 | Livro Lógica e Máquina | Fila com portão | 85% | Checkout, entrega e área do cliente, Funil de e-mails e isca gratuita, Publicação agendada com aprovação |
 | Mini-curso Lógica de Programação | Agora | 85% | Checkout, entrega e área do cliente, Funil de e-mails e isca gratuita, Estudo vira produto, Cortes, legendas e dublagem com a sua voz, Publicação agendada com aprovação, Atendimento de primeiro nível |
-| Setup profissional (curso, template e configuração remota) | Próxima da fila | 85% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
-| AM Rendara (finanças), começando pela planilha | Fila com portão | 80% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes, Cascata e ARCA |
+| Setup profissional (curso, template e configuração remota) | Fila com portão | 85% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
 | Curso: segurança e engenharia reversa para devs | Fila com portão | 80% | Checkout, entrega e área do cliente, Funil de e-mails e isca gratuita, Estudo vira produto, Publicação agendada com aprovação |
 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) | Fila com portão | 80% | Cortes, legendas e dublagem com a sua voz, Estudo vira produto |
 | Fotos e vídeos em bancos de imagens | Descartar | 80% | Publicação agendada com aprovação |
 | Modelos 3D e projetos Arduino para download | Descartar | 80% | Publicação agendada com aprovação |
 | Newsletter (patrocínio e vendas) | Fila com portão | 80% | Funil de e-mails e isca gratuita, Publicação agendada com aprovação, Estudo vira produto |
+| Planilha do AM Gestão (finanças) | Agora | 80% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes, Cascata e ARCA |
 | Traduções do livro | Fila com portão | 80% | Checkout, entrega e área do cliente |
 | AM Obra: diário, medição, compras e estimativa para pequenas construtoras | 2027, se a tarde ficar livre | 75% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
 | Plugin WordPress com versão Pro | Fila com portão | 75% | Cobrança recorrente e controle de acesso, CI que testa e publica pacotes, Atendimento de primeiro nível |
-| AM Kaixara (PDV, ficha técnica, cardápio) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
-| AM Rotara (pedidos e entregas) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
+| AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
+| AM Gestão SaaS: Rotara (pedidos e entregas) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
 | AM Taskoro (gestão de projetos ágeis) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
 | AMtech OS (sistema pronto para programar, baseado em Ubuntu) | Fila com portão | 70% | Checkout, entrega e área do cliente, CI que testa e publica pacotes, Cortes, legendas e dublagem com a sua voz, Atendimento de primeiro nível |
 | Adoção do livro por escolas | Fila com portão | 70% | CRM, proposta, contrato e cobrança, Checkout, entrega e área do cliente |
 | App de delivery com a marca do restaurante (white-label) | Fila com portão | 70% | Cobrança recorrente e controle de acesso, Atendimento de primeiro nível, CI que testa e publica pacotes |
-| Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | Fila com portão | 70% | Estudo vira produto, Cortes, legendas e dublagem com a sua voz, Publicação agendada com aprovação |
+| Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | Agora | 70% | Estudo vira produto, Cortes, legendas e dublagem com a sua voz, Publicação agendada com aprovação |
 | Canal com rosto: construindo o Grupo AMtech em público | Fila com portão | 70% | Cortes, legendas e dublagem com a sua voz, Publicação agendada com aprovação |
 | Licença do AM Delivery para outras cidades | Fila com portão | 70% | CRM, proposta, contrato e cobrança, Cobrança recorrente e controle de acesso |
 | Livros técnicos e didáticos usados | Fila com portão | 70% | Radar de revenda, Estoque, ordem de serviço e parceiros |
 | Parceria DIO | Fila com portão | 70% | Cortes, legendas e dublagem com a sua voz |
 | Peças e acessórios sem estoque | Fila com portão | 70% | Estoque, ordem de serviço e parceiros, Checkout, entrega e área do cliente |
 | Sites de nicho com anúncios | Descartar | 70% | Publicação agendada com aprovação |
-| Sites e lojas para pequenas empresas | Agora | 70% | CRM, proposta, contrato e cobrança, Manutenção automática de sites, Cobrança recorrente e controle de acesso, Registro de horas |
+| Sites e lojas para pequenas empresas | Fila com portão | 70% | CRM, proposta, contrato e cobrança, Manutenção automática de sites, Cobrança recorrente e controle de acesso, Registro de horas |
 | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) | Fila com portão | 65% | CRM, proposta, contrato e cobrança, Cobrança recorrente e controle de acesso, Conciliação e relatório financeiro de clientes, Registro de horas |
 | Laudo de segurança dos sites que você mantém | Fila com portão | 65% | Manutenção automática de sites, Cobrança recorrente e controle de acesso, CRM, proposta, contrato e cobrança |
 | Automação BIM e modelagem para escritórios de engenharia e arquitetura | Fila com portão | 60% | CRM, proposta, contrato e cobrança, CI que testa e publica pacotes, Registro de horas |
@@ -285,7 +298,7 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | Licença do ByteSDCoin para escolas (sem aposta) | Fila com portão | 60% | CRM, proposta, contrato e cobrança, CI que testa e publica pacotes |
 | Mercadinho autônomo em condomínio | Decidir depois (capital alto) | 60% | Estoque, ordem de serviço e parceiros |
 | Máquina de venda de lanches | Decidir depois (capital alto) | 60% | Estoque, ordem de serviço e parceiros |
-| Plano de negócios e viabilidade financeira para quem vai abrir empresa | Próxima da fila | 60% | CRM, proposta, contrato e cobrança, Registro de horas |
+| Plano de negócios e viabilidade financeira para quem vai abrir empresa | Fila com portão | 60% | CRM, proposta, contrato e cobrança, Registro de horas |
 | Professor conteudista EAD | Fila com portão | 60% | Busca semanal de editais e oportunidades, Fábrica de aulas e documentos, Registro de horas |
 | Suporte remoto e planos mensais para empresas | Fila com portão | 60% | CRM, proposta, contrato e cobrança, Cobrança recorrente e controle de acesso, Manutenção automática de sites, Atendimento de primeiro nível, Registro de horas |
 | Automação e monitoramento para sítios e produtores (AMtech Campo) | 2027, se a tarde ficar livre | 50% | CRM, proposta, contrato e cobrança, Cobrança recorrente e controle de acesso, Registro de horas |
@@ -304,13 +317,13 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | Aluguel de kits de robótica | Decidir depois (capital alto) | 40% | Agenda com pagamento antecipado e lembretes, Estoque, ordem de serviço e parceiros, CRM, proposta, contrato e cobrança |
 | Celulares: comprar, consertar e revender | Fila com portão | 40% | Radar de revenda, Estoque, ordem de serviço e parceiros, Registro de horas |
 | Mentoria de organização financeira e palestras em empresas (sem recomendar ativos) | Fila com portão | 40% | Agenda com pagamento antecipado e lembretes, CRM, proposta, contrato e cobrança, Cascata e ARCA, Registro de horas |
-| Notebooks e PCs: comprar, consertar e revender | Próxima da fila | 40% | Radar de revenda, Estoque, ordem de serviço e parceiros, Registro de horas |
+| Notebooks e PCs: comprar, consertar e revender | Fila com portão | 40% | Radar de revenda, Estoque, ordem de serviço e parceiros, Registro de horas |
 | PC montado e entregue configurado | 2027, se a tarde ficar livre | 40% | CRM, proposta, contrato e cobrança, Estoque, ordem de serviço e parceiros, Registro de horas |
 | Peças de máquinas sucateadas (RAM, SSD, placas) | Fila com portão | 40% | Radar de revenda, Estoque, ordem de serviço e parceiros |
 | Sistemas sob encomenda | Fila com portão | 40% | CRM, proposta, contrato e cobrança, CI que testa e publica pacotes, Registro de horas |
 | AM Entregas | Decidir depois (capital alto) | 30% | Estoque, ordem de serviço e parceiros, CRM, proposta, contrato e cobrança |
 | Assistência técnica | Decidir depois (capital alto) | 30% | Estoque, ordem de serviço e parceiros, CRM, proposta, contrato e cobrança, Registro de horas |
-| Aulas particulares | Próxima da fila | 30% | Agenda com pagamento antecipado e lembretes, CRM, proposta, contrato e cobrança, Estudo vira produto, Registro de horas |
+| Aulas particulares | Fila com portão | 30% | Agenda com pagamento antecipado e lembretes, CRM, proposta, contrato e cobrança, Estudo vira produto, Registro de horas |
 | Cafeteria | Decidir depois (capital alto) | 30% | Estoque, ordem de serviço e parceiros |
 | Consultoria de investimentos (AM Rendara premium, com sócia certificada) | Fila com portão | 30% | CRM, proposta, contrato e cobrança, Cobrança recorrente e controle de acesso, Cascata e ARCA |
 | Fotos de produto para lojas do Mercado Livre | Descartar | 30% | CRM, proposta, contrato e cobrança |
@@ -331,7 +344,7 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | Recuperação de dados (intermediação com laboratório) | Fila com portão | 10% | Estoque, ordem de serviço e parceiros, CRM, proposta, contrato e cobrança |
 | Aplicador e fiscal de provas | Descartar | 0% | Registro de horas |
 | Aula de sushi e sushiman para eventos | 2027, se a tarde ficar livre | 0% | Agenda com pagamento antecipado e lembretes, CRM, proposta, contrato e cobrança, Registro de horas |
-| Avaliação de respostas de IA (DataAnnotation, Outlier) | Agora | 0% | Registro de horas |
+| Avaliação de respostas de IA (DataAnnotation, Outlier) | Descartar | 0% | Registro de horas |
 | Português para estrangeiros (Preply, italki) | Fila com portão | 0% | Agenda com pagamento antecipado e lembretes, Registro de horas |
 | Testes de software pagos por bug | Descartar | 0% | Registro de horas |
 
@@ -344,17 +357,17 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | 3 | [Mini-curso Lógica de Programação](../marketing/README.md) | AMtech Educação · Instituto AMS | Construção | Digital | 16 | Gravar as 5 primeiras aulas e abrir a pré-venda com a isca grátis | passo 40.3 · Semanas 12 a 15 · jan a fev/2027 |
 | 4 | Pacote de aulas prontas para professores de informática · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 16 | Empacotar uma disciplina que você já leciona (planos, slides, avaliações) | passo 46.3 · Fev a dez/2027, uma oferta por vez |
 | 5 | Verificador e formatador ABNT automático (TCC, artigos, relatórios) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 16 | Publicar a versão web (Horizons) com o verificador e cobrar por documento; testar com 10 universitários | passo 14.7 · Semanas 5 e 6 · nov/2026 |
-| 6 | AM Rendara (finanças), começando pela planilha | AMtech Software | Validação | Digital | 15 | Vender a planilha do Caixa da Casa antes de construir o sistema | passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| 7 | Automação com IA para pequenos negócios (WhatsApp, n8n, agenda) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 15 | Implantar de graça em um negócio conhecido em troca de caso e depoimento | passo 45.3 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| 8 | Banco de questões de TI para concursos (PF, PRF, Forças Armadas) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Publicar 50 questões comentadas grátis e medir a procura | passo 46.6 · Fev a dez/2027, uma oferta por vez |
-| 9 | Baralhos Anki de TI e concursos · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Gerar o primeiro baralho do Capítulo 1 | passo 46.7 · Fev a dez/2027, uma oferta por vez |
-| 10 | Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Digital | 15 | Publicar 1 calculadora no site com as regras do Caixa da Casa | passo 46.23 · Fev a dez/2027, uma oferta por vez |
-| 11 | Canal com rosto: construindo o Grupo AMtech em público · **nova** | AMtech Mídia | Ideia | Digital | 15 | Gravar 1 vídeo por semana mostrando uma decisão real (números do planejador, setup, aula) | passo 47.7 · A partir de fev/2027 |
-| 12 | Cursos dublados por IA em inglês e espanhol (só a sua voz) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Dublar o mini-curso quando estiver gravado | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 13 | Fábrica de documentos para professores de MG (assinatura) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Usar a Fábrica por 1 bimestre em você mesmo e mostrar a 5 colegas | passo 46.21 · Fev a dez/2027, uma oferta por vez |
-| 14 | Kit do livro e edição do professor | Editora AMS Silva | Ideia | Digital | 15 | Depois do volume 1 | passo 54.2 · Depois do primeiro livro |
-| 15 | Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Digital | 15 | Separar 3 modelos do motor financeiro dos negócios | passo 46.23 · Fev a dez/2027, uma oferta por vez |
-| 16 | Newsletter (patrocínio e vendas) | AMtech Mídia | Validação | Digital | 15 | Fazer a isca grátis e a sequência de boas-vindas | passo 40.8 · Semanas 12 a 15 · jan a fev/2027 |
+| 6 | Automação com IA para pequenos negócios (WhatsApp, n8n, agenda) · **nova** | AMtech Digital (serviços remotos e B2B) | Ideia | Produtizado | 15 | Implantar de graça em um negócio conhecido em troca de caso e depoimento | passo 45.3 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| 7 | Banco de questões de TI para concursos (PF, PRF, Forças Armadas) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Publicar 50 questões comentadas grátis e medir a procura | passo 46.6 · Fev a dez/2027, uma oferta por vez |
+| 8 | Baralhos Anki de TI e concursos · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Gerar o primeiro baralho do Capítulo 1 | passo 46.7 · Fev a dez/2027, uma oferta por vez |
+| 9 | Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Digital | 15 | Publicar 1 calculadora no site com as regras do Caixa da Casa | passo 46.23 · Fev a dez/2027, uma oferta por vez |
+| 10 | Canal com rosto: construindo o Grupo AMtech em público · **nova** | AMtech Mídia | Ideia | Digital | 15 | Gravar 1 vídeo por semana mostrando uma decisão real (números do planejador, setup, aula) | passo 47.7 · A partir de fev/2027 |
+| 11 | Cursos dublados por IA em inglês e espanhol (só a sua voz) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Dublar o mini-curso quando estiver gravado | passo 46.21 · Fev a dez/2027, uma oferta por vez |
+| 12 | Fábrica de documentos para professores de MG (assinatura) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Usar a Fábrica por 1 bimestre em você mesmo e mostrar a 5 colegas | passo 46.21 · Fev a dez/2027, uma oferta por vez |
+| 13 | Kit do livro e edição do professor | Editora AMS Silva | Ideia | Digital | 15 | Depois do volume 1 | passo 54.2 · Depois do primeiro livro |
+| 14 | Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Digital | 15 | Separar 3 modelos do motor financeiro dos negócios | passo 46.23 · Fev a dez/2027, uma oferta por vez |
+| 15 | Newsletter (patrocínio e vendas) | AMtech Mídia | Validação | Digital | 15 | Fazer a isca grátis e a sequência de boas-vindas | passo 40.8 · Semanas 12 a 15 · jan a fev/2027 |
+| 16 | Planilha do AM Gestão (finanças) | AMtech Software | Validação | Digital | 15 | Vender a planilha do Caixa da Casa antes de construir o sistema | passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | 17 | Setup profissional (curso, template e configuração remota) · **nova** | AMtech Software | Ideia | Digital | 15 | Tirar do seu setup tudo o que é pessoal e gravar a primeira aula | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 18 | Templates de automação n8n · **nova** | AMtech Software | Ideia | Digital | 15 | Publicar as 3 automações que você mais usa | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 19 | Versões dos cursos na Udemy (português e inglês) | AMtech Educação · Instituto AMS | Ideia | Digital | 15 | Publicar o mini-curso depois do lançamento próprio | passo 40.11 · Semanas 12 a 15 · jan a fev/2027 |
@@ -373,11 +386,11 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | 32 | Monetização das plataformas (YouTube, Instagram) | AMtech Mídia | Ideia | Digital | 13 | Consequência dos canais; não é meta em si | passo 47.9 · A partir de fev/2027 |
 | 33 | Templates Next.js/Tailwind em inglês · **nova** | AMtech Software | Ideia | Digital | 13 | Publicar 1 template a partir do Aura Design System | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 34 | Templates e código-fonte | AMtech Educação · Instituto AMS | Validação | Digital | 13 | Empacotar o primeiro frontend já pronto com documentação | passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| 35 | AM Kaixara (PDV, ficha técnica, cardápio) | AMtech Software | Construção | Digital | 12 | Rodar primeiro num cliente piloto pagante | passo 51.2 · 2027 |
+| 35 | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | AMtech Software | Construção | Digital | 12 | Rodar primeiro num cliente piloto pagante | passo 51.2 · 2027 |
 | 36 | AM Mentor: banco de exercícios com correção | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Começar com o Capítulo 1 do livro em YAML | passo 46.13 · Fev a dez/2027, uma oferta por vez |
 | 37 | [AMtech OS (sistema pronto para programar, baseado em Ubuntu)](../../os/README.md) · **nova** | AMtech Software | Construção | Digital | 12 | Testar a versão 0.1 numa VM por uma semana (os/README.md) | passo 48.5 · Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso |
 | 38 | [Assistência técnica](../negocios/02-assistencia-e-pecas.md) | AMtech Campo (presencial, por parceiros) | Ideia | Local | 12 | Começar atendendo em casa e por agendamento antes de alugar a loja | passo 57.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 39 | [Canais sem rosto (YouTube, TikTok, Instagram, Facebook)](../marketing/README.md) | AMtech Mídia | Construção | Digital | 12 | Publicar 3 vídeos por semana por 8 semanas e medir | passo 46.14 · Fev a dez/2027, uma oferta por vez |
+| 39 | [Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir)](../marketing/README.md) | AMtech Mídia | Construção | Digital | 12 | Publicar 3 vídeos por semana por 8 semanas e medir | passo 46.14 · Fev a dez/2027, uma oferta por vez |
 | 40 | [Curso: segurança e engenharia reversa para devs](../seguranca/README.md) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Transformar o crackme da aula e o lab de ataque nas 3 primeiras aulas | passo 59.17 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | 41 | Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) · **nova** | AMtech Educação · Instituto AMS | Ideia | Digital | 12 | Candidatar-se com o mini-curso como amostra | passo 46.21 · Fev a dez/2027, uma oferta por vez |
 | 42 | Elaboração e revisão de questões · **nova** | AMtech Educação · Instituto AMS | Ideia | Produtizado | 12 | Montar um portfólio de 20 questões e se candidatar | passo 46.22 · Fev a dez/2027, uma oferta por vez |
@@ -385,7 +398,7 @@ Primeiro as que destravam as rendas de agora e as próximas; depois as que destr
 | 44 | [Livro Lógica e Máquina](../editora/README.md) | Editora AMS Silva | Construção | Digital | 12 | Entregar o Capítulo 1 para avaliação | passo 43.11 · Quando o capítulo 1 estiver pronto |
 | 45 | Mentoria de organização financeira e palestras em empresas (sem recomendar ativos) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 12 | Testar com 3 pessoas usando o seu método da cascata | passo 46.23 · Fev a dez/2027, uma oferta por vez |
 | 46 | PC montado e entregue configurado · **nova** | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 12 | Achar 1 técnico parceiro e fazer 3 montagens você mesmo para criar o checklist | passo 57.9 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 47 | AM Rotara (pedidos e entregas) | AMtech Software | Ideia | Digital | 11 | Nasce junto com a AM Entregas | passo 51.3 · 2027 |
+| 47 | AM Gestão SaaS: Rotara (pedidos e entregas) | AMtech Software | Ideia | Digital | 11 | Nasce junto com a AM Entregas | passo 51.3 · 2027 |
 | 48 | [AMtech Maker (robótica e automação)](../negocios/03-produtos-proprios.md) | AMtech Campo (presencial, por parceiros) | Ideia | Produtizado | 11 | Primeiro kit sem rádio testado com seus alunos | passo 57.3 · Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
 | 49 | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) · **nova** | AMtech Economia (finanças e empreendedorismo) | Ideia | Produtizado | 11 | Fazer a rotina completa num negócio conhecido por 2 meses e virar checklist | passo 46.23 · Fev a dez/2027, uma oferta por vez |
 | 50 | Camisetas e canecas sob demanda (dev e professor) · **nova** | AMtech Mídia | Ideia | Digital | 11 | Subir 10 estampas que saíram do seu conteúdo | passo 46.21 · Fev a dez/2027, uma oferta por vez |
@@ -461,13 +474,13 @@ Ideias que nasceram do cruzamento entre os negócios, as aulas, o livro e o setu
 | Banco de questões de TI para concursos (PF, PRF, Forças Armadas) | Livro Lógica e Máquina, AM Mentor: banco de exercícios com correção | recorrente | Publicar 50 questões comentadas grátis e medir a procura | 15 |
 | Baralhos Anki de TI e concursos | Livro Lógica e Máquina | venda única | Gerar o primeiro baralho do Capítulo 1 | 15 |
 | Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | afiliados e captação de clientes | Publicar 1 calculadora no site com as regras do Caixa da Casa | 15 |
-| Canal com rosto: construindo o Grupo AMtech em público | Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | anúncios, patrocínio e confiança | Gravar 1 vídeo por semana mostrando uma decisão real (números do planejador, setup, aula) | 15 |
+| Canal com rosto: construindo o Grupo AMtech em público | Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | anúncios, patrocínio e confiança | Gravar 1 vídeo por semana mostrando uma decisão real (números do planejador, setup, aula) | 15 |
 | Cursos dublados por IA em inglês e espanhol (só a sua voz) | Versões dos cursos na Udemy (português e inglês) | venda única, em dólar | Dublar o mini-curso quando estiver gravado | 15 |
 | Fábrica de documentos para professores de MG (assinatura) | Pacote de aulas prontas para professores de informática | mensal | Usar a Fábrica por 1 bimestre em você mesmo e mostrar a 5 colegas | 15 |
-| Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | AM Rendara (finanças), começando pela planilha, Plano de negócios e viabilidade financeira para quem vai abrir empresa | venda única | Separar 3 modelos do motor financeiro dos negócios | 15 |
+| Modelos financeiros para empresas (fluxo de caixa, DRE gerencial, precificação, valuation simples) | Planilha do AM Gestão (finanças), Plano de negócios e viabilidade financeira para quem vai abrir empresa | venda única | Separar 3 modelos do motor financeiro dos negócios | 15 |
 | Setup profissional (curso, template e configuração remota) | Templates e código-fonte | venda única + serviço | Tirar do seu setup tudo o que é pessoal e gravar a primeira aula | 15 |
 | Templates de automação n8n | Automação com IA para pequenos negócios (WhatsApp, n8n, agenda) | venda única | Publicar as 3 automações que você mais usa | 15 |
-| App de delivery com a marca do restaurante (white-label) | AM Delivery, AM Rotara (pedidos e entregas) | mensalidade | Oferecer a 3 restaurantes que pagam 23% ao iFood | 14 |
+| App de delivery com a marca do restaurante (white-label) | AM Delivery, AM Gestão SaaS: Rotara (pedidos e entregas) | mensalidade | Oferecer a 3 restaurantes que pagam 23% ao iFood | 14 |
 | Dividendos, FIIs e renda fixa (cascata e ARCA) | — | rendimentos | Seguir a cascata: cartão quitado e reserva cheia antes da bolsa | 14 |
 | Plano de negócios e viabilidade financeira para quem vai abrir empresa | Implantação de ficha técnica e engenharia de cardápio | por plano | Transformar o seu planejador de negócios num modelo e fazer 2 planos de teste | 14 |
 | Presença digital para comércio local (Google Perfil, redes, avaliações) | Sites e lojas para pequenas empresas, Automação com IA para pequenos negócios (WhatsApp, n8n, agenda) | mensalidade | Oferecer a 5 clientes de sites como complemento | 14 |
@@ -475,7 +488,7 @@ Ideias que nasceram do cruzamento entre os negócios, as aulas, o livro e o setu
 | Adoção do livro por escolas | Livro Lógica e Máquina, Kit do livro e edição do professor | licença por aluno | Piloto na sua própria escola, se permitido | 13 |
 | Blocos e kits de componentes de interface | Templates Next.js/Tailwind em inglês | venda única, em dólar | Separar 10 blocos dos templates | 13 |
 | Conferência automática de documentos para coordenações e escolas | Fábrica de documentos para professores de MG (assinatura) | licença por escola | Usar na sua própria escola por um bimestre (sem dado de aluno) e levar o resultado à coordenação | 13 |
-| Implantação de ficha técnica e engenharia de cardápio | AM Kaixara (PDV, ficha técnica, cardápio) | projeto | Usar o restaurante onde você trabalha como estudo de caso, se o dono aceitar | 13 |
+| Implantação de ficha técnica e engenharia de cardápio | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | projeto | Usar o restaurante onde você trabalha como estudo de caso, se o dono aceitar | 13 |
 | Laudo de segurança dos sites que você mantém | Sites e lojas para pequenas empresas | na mensalidade + laudo avulso | Ensaiar o serviço completo no seu próprio site (escopo, testes, relatório) | 13 |
 | Templates Next.js/Tailwind em inglês | Templates e código-fonte, Setup profissional (curso, template e configuração remota) | venda única, em dólar | Publicar 1 template a partir do Aura Design System | 13 |
 | AMtech OS (sistema pronto para programar, baseado em Ubuntu) | Setup profissional (curso, template e configuração remota) | grátis (Community) + configuração remota, notebooks prontos, plano mensal e licença para escolas | Testar a versão 0.1 numa VM por uma semana (os/README.md) | 12 |
@@ -484,8 +497,8 @@ Ideias que nasceram do cruzamento entre os negócios, as aulas, o livro e o setu
 | Elaboração e revisão de questões | — | por questão | Montar um portfólio de 20 questões e se candidatar | 12 |
 | Mentoria de organização financeira e palestras em empresas (sem recomendar ativos) | Curso de finanças pessoais (conteúdo próprio) | por pacote ou palestra | Testar com 3 pessoas usando o seu método da cascata | 12 |
 | PC montado e entregue configurado | Assistência técnica | taxa de montagem e configuração | Achar 1 técnico parceiro e fazer 3 montagens você mesmo para criar o checklist | 12 |
-| BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) | Sites e lojas para pequenas empresas, AM Rendara (finanças), começando pela planilha | mensalidade | Fazer a rotina completa num negócio conhecido por 2 meses e virar checklist | 11 |
-| Camisetas e canecas sob demanda (dev e professor) | Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | comissão por peça | Subir 10 estampas que saíram do seu conteúdo | 11 |
+| BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) | Sites e lojas para pequenas empresas, Planilha do AM Gestão (finanças) | mensalidade | Fazer a rotina completa num negócio conhecido por 2 meses e virar checklist | 11 |
+| Camisetas e canecas sob demanda (dev e professor) | Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | comissão por peça | Subir 10 estampas que saíram do seu conteúdo | 11 |
 | Celulares: comprar, consertar e revender | Notebooks e PCs: comprar, consertar e revender | margem por unidade | Depois dos notebooks passarem no portão | 11 |
 | Formatação ABNT de TCC (só formatar e revisar) | — | por trabalho | Fazer o verificador automático e testar em 3 trabalhos | 11 |
 | Instrutor horista (SENAC, SENAI, prefeitura) | Aulas particulares | por hora | Só se a tarde ficar livre em 2027 | 11 |
@@ -511,7 +524,7 @@ Ideias que nasceram do cruzamento entre os negócios, as aulas, o livro e o setu
 | Automação e monitoramento para sítios e produtores (AMtech Campo) | Casa inteligente para clientes (Home Assistant) | instalação + mensalidade do painel | Irrigação da horta e bebedouro funcionando na sua casa por 3 meses, com o painel | 8 |
 | Avaliação de respostas de IA (DataAnnotation, Outlier) | — | por hora, em dólar | Fazer o cadastro e o teste de entrada (quem pede pagamento para você entrar é golpe) | 8 |
 | Colônia de férias tech (robótica e programação) | Oficinas de robótica e programação para escolas | por semana | Só em 2027, em janeiro ou julho | 8 |
-| Consultoria de investimentos (AM Rendara premium, com sócia certificada) | AM Rendara (finanças), começando pela planilha | mensalidade ou taxa sobre patrimônio | Só quando a sócia estiver certificada e registrada | 8 |
+| Consultoria de investimentos (AM Rendara premium, com sócia certificada) | Planilha do AM Gestão (finanças) | mensalidade ou taxa sobre patrimônio | Só quando a sócia estiver certificada e registrada | 8 |
 | Edição de vídeo para lojas e criadores | — | por vídeo | Nenhum: a IA de corte fica só no seu canal | 8 |
 | Kits e placas de robótica (Tindie e Mercado Livre) | AMtech Maker (robótica e automação) | margem por kit | Validar 1 kit com pré-venda | 8 |
 | Licença do ByteSDCoin para escolas (sem aposta) | — | licença anual | Revisão jurídica e um piloto em outra escola | 8 |
@@ -519,7 +532,7 @@ Ideias que nasceram do cruzamento entre os negócios, as aulas, o livro e o setu
 | Redes Wi-Fi e câmeras com monitoramento mensal | Suporte remoto e planos mensais para empresas | instalação + mensalidade | Achar 1 instalador parceiro | 7 |
 | Aluguel de kits de robótica | AMtech Maker (robótica e automação) | por evento | Depois do AMtech Maker | 6 |
 | Jogo educativo de lógica (itch.io e Steam) | AM Mentor: banco de exercícios com correção | venda única | Nenhum por enquanto | 6 |
-| Mercadinho autônomo em condomínio | AM Kaixara (PDV, ficha técnica, cardápio) | margem dos produtos | Kaixara com autoatendimento e conversa com 1 síndico | 5 |
+| Mercadinho autônomo em condomínio | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | margem dos produtos | Kaixara com autoatendimento e conversa com 1 síndico | 5 |
 | Máquina de venda de lanches | Mercadinho autônomo em condomínio | margem dos produtos | Só com capital próprio e um ponto validado | 5 |
 | Português para estrangeiros (Preply, italki) | — | por hora, em dólar | Perfil quando o inglês chegar ao básico | 5 |
 | Sites de nicho com anúncios | — | anúncios | Nenhum | 5 |
@@ -542,7 +555,6 @@ flowchart LR
   minicurso["Mini-curso Lógica de Programação"]
   aulasprof["Pacote de aulas prontas para pro…"]
   abnt-auto["Verificador e formatador ABNT au…"]
-  rendara["AM Rendara"]
   automacaoia["Automação com IA para pequenos n…"]
   simulados["Banco de questões de TI para con…"]
   anki["Baralhos Anki de TI e concursos"]
@@ -552,6 +564,7 @@ flowchart LR
   fabricaprof["Fábrica de documentos para profe…"]
   kitlivro["Kit do livro e edição do professor"]
   modelosfin["Modelos financeiros para empresas"]
+  rendara["Planilha do AM Gestão"]
   setuppro["Setup profissional"]
   n8ntemplates["Templates de automação n8n"]
   udemy["Versões dos cursos na Udemy"]
@@ -569,18 +582,18 @@ flowchart LR
   monetizacao["Monetização das plataformas"]
   templatesint["Templates Next.js/Tailwind em in…"]
   templates["Templates e código-fonte"]
-  kaixara["AM Kaixara"]
+  kaixara["AM Gestão SaaS: Kaixara"]
   ammentor["AM Mentor: banco de exercícios c…"]
   amtechos["AMtech OS"]
   assist["Assistência técnica"]
-  dark["Canais sem rosto"]
+  dark["Canais sem rosto: Primer Code, B…"]
   cursoseg["Curso: segurança e engenharia re…"]
   royalties["Cursos em plataformas que pagam …"]
   formti["Formação Téc. em Desenvolvimento…"]
   livro["Livro Lógica e Máquina"]
   mentoriafin["Mentoria de organização financei…"]
   pcmontado["PC montado e entregue configurado"]
-  rotara["AM Rotara"]
+  rotara["AM Gestão SaaS: Rotara"]
   maker["AMtech Maker"]
   bpofin["BPO financeiro para pequenas emp…"]
   camisetas["Camisetas e canecas sob demanda"]
@@ -776,7 +789,7 @@ flowchart LR
 
 | Oferta | Receita | Automático | Fica com você | Métrica |
 |---|---|---|---|---|
-| AM Rendara (finanças), começando pela planilha | venda única, depois recorrente | planilha → sistema | suporte | vendas da planilha |
+| Planilha do AM Gestão (finanças) | venda única, depois recorrente | planilha → sistema | suporte | vendas da planilha |
 | Setup profissional (curso, template e configuração remota) | venda única + serviço | entrega do template, vídeos, verificador automático | gravar, suporte | vendas por mês |
 | Templates de automação n8n | venda única | exportação das suas automações | documentar | vendas por mês |
 | App de delivery com a marca do restaurante (white-label) | mensalidade | provisionamento automático | venda | lojas ativas |
@@ -784,9 +797,9 @@ flowchart LR
 | Blocos e kits de componentes de interface | venda única, em dólar | publicação pelo CI | construir | vendas por mês |
 | Laudo de segurança dos sites que você mantém | na mensalidade + laudo avulso | laudo do conferir.py, ZAP passivo agendado, relatório pelo modelo | revisar os achados, explicar ao cliente | laudos entregues e clientes que sobem de plano |
 | Templates Next.js/Tailwind em inglês | venda única, em dólar | testes, demonstração e publicação pelo CI | construir, suporte | vendas por mês |
-| AM Kaixara (PDV, ficha técnica, cardápio) | recorrente | onboarding, cobrança Pix Automático, suporte de primeiro nível | vendas iniciais | MRR e cancelamento |
+| AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | recorrente | onboarding, cobrança Pix Automático, suporte de primeiro nível | vendas iniciais | MRR e cancelamento |
 | AMtech OS (sistema pronto para programar, baseado em Ubuntu) | grátis (Community) + configuração remota, notebooks prontos, plano mensal e licença para escolas | instalador, atualizações, verificador | suporte, configuração remota | instalações por mês e clientes pagantes |
-| AM Rotara (pedidos e entregas) | recorrente | roteirização, repasse, notificações | suporte | entregas roteirizadas |
+| AM Gestão SaaS: Rotara (pedidos e entregas) | recorrente | roteirização, repasse, notificações | suporte | entregas roteirizadas |
 | Licença do AM Delivery para outras cidades | licença + royalties | instância por cidade | contrato e treinamento | cidades licenciadas |
 | Sistemas sob encomenda | projeto | CI/CD, testes, documentação | descoberta e arquitetura | margem por projeto |
 | Freela internacional em dólar (Upwork) | por projeto, em dólar | propostas e contratos modelo | executar | R$ por hora |
@@ -859,7 +872,7 @@ flowchart LR
 | Canal com rosto: construindo o Grupo AMtech em público | anúncios, patrocínio e confiança | cortes automáticos, legendas | gravar sua rotina e decisões | inscritos e vendas atribuídas |
 | Newsletter (patrocínio e vendas) | patrocínio e vendas | envio, segmentação, sequências | escrever 1 edição por semana | inscritos e cliques |
 | Monetização das plataformas (YouTube, Instagram) | anúncios | — | — | receita por mil visualizações |
-| Canais sem rosto (YouTube, TikTok, Instagram, Facebook) | anúncios e tráfego para produtos | roteiro assistido, voz clonada, corte, agendamento no melhor horário | aprovar e revisar | retenção e cliques para os produtos |
+| Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir) | anúncios e tráfego para produtos | roteiro assistido, voz clonada, corte, agendamento no melhor horário | aprovar e revisar | retenção e cliques para os produtos |
 | Camisetas e canecas sob demanda (dev e professor) | comissão por peça | impressão, cobrança e envio pela plataforma | criar as estampas, uma vez | vendas por mês |
 | Modelos 3D e projetos Arduino para download | venda única | publicação | modelar | downloads |
 | Fotos e vídeos em bancos de imagens | por download | legenda e envio em lote | fotografar | receita por mês |

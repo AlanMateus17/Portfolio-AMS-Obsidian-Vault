@@ -65,3 +65,10 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-17: repositório público AlanMateus17/mapa-de-estudo criado (MAPA em etapas + arquivos de assunto verificados); o vault ficou com o calendário (PLANO-PASSO-A-PASSO e Cartão).
 - 2026-11-17: v2.32: Biblioteca (just livros) e registro de leitura no vault; comprar o Código (Petzold, Bookman 2023) antes do 0.4.
 - 2026-11-17: v2.33: just erro / just atrito (caderno de erros e atritos do setup no vault, ADR 0020).
+- 2026-11-17: v2.34: just diag, just ficha e just colher (o estudo vira aula, livro, minicurso, Anki e banco de exercícios de uma vez, ADR 0021).
+- 2026-11-20: v2.34.1 (PR rascunho setup/2026-11-18-correcoes): padronizar-repo.sh pula o vault, vault.sh reconhece PLANO-UNICO/Cartão, instalar.ps1 com 20GB e 12 processadores, aviso do Docker Desktop, .gitignore da soberania. github-sync fica para o notebook (arquivos só existem lá).
+- 2026-11-20: v2.35.0 (PR rascunho setup/2026-11-18-alinhamento): cada módulo do Professor aponta para um assunto do MAPA.md (campo etapa) e o just check confere a ordem pelos pré-requisitos do mapa.
+- 2026-11-20: rendas pela decisão de 18/11: só passivas em ondas (onda 0 = mini-curso, canais sem rosto, planilha do AM Gestão, catálogo; máximo 4); avaliação de IA descartada; sites, aulas, encomenda e laudo como ativas fora das ondas.
+- 2026-11-20: canais sem rosto = Primer Code, Bancada Dev e finanças (nome a definir; Bolso Exato ocupado).
+- 2026-11-20: CONTINUAR.md reescrito pela realidade pós-13/11 (ADR 0017 e 0018, AM Gestão, repositório público, mapa-de-estudo).
+- 2026-11-20: feito remotamente, sem o notebook ligado ao Claude: as tarefas A e B da missão de 18/11 e a receita github-sync ficaram para o notebook.

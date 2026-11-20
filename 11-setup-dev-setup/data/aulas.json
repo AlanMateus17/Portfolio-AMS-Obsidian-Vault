@@ -1,0 +1,28 @@
+{
+  "_comment": "Liga cada etapa do mapa-de-estudo às aulas que ela vira (componentes do repositório ensino-ti) e às ofertas do portfolio.json que recebem material. Usado por just ficha e just colher (ADR 0021).",
+  "secoes": {
+    "Explicação": ["livro", "minicurso", "aulas"],
+    "Exemplo resolvido": ["livro", "minicurso"],
+    "Exercícios": ["ammentor", "anki", "simulados"],
+    "Aula": ["escola"]
+  },
+  "etapas": {
+    "0.1": {
+      "titulo": "Aprender a aprender",
+      "professor": "b-aprender",
+      "componentes": [
+        "tecnico-em-desenvolvimento-de-sistemas/1-ano/introducao-pensamento-computacional-e-carreira",
+        "tecnico-em-informatica/2-ano/gestao-do-tempo"
+      ]
+    },
+    "0.2": {
+      "titulo": "Linguagem matemática e lógica",
+      "professor": "mat-linguagem",
+      "componentes": [
+        "tecnico-em-informatica/1-ano/logica-de-programacao",
+        "tecnico-em-desenvolvimento-de-sistemas/1-ano/introducao-a-logica",
+        "tecnico-em-desenvolvimento-de-sistemas/2-ano/matematica-discreta"
+      ]
+    }
+  }
+}
