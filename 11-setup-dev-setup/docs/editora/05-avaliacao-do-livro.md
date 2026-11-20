@@ -36,6 +36,6 @@ Pelo que o projeto já tem, os candidatos mais fortes são:
 2. **Sistemas reais como fio condutor:** os sistemas AM como exemplo que atravessa os volumes.
 3. **Livro verificável:** todo código testado, todo gabarito conferido, errata pública. Quase nenhum didático brasileiro faz isso.
 4. **Livro + site + curso + Anki da mesma fonte:** o aluno nunca perde o lugar.
-5. **Três trilhas:** livro, sistemas Aura e École 42, com certificados.
+5. **Três trilhas:** livro, AM Gestão e École 42, com certificados.
 
 A avaliação diz quais deles já aparecem no texto e quais ainda são só intenção.

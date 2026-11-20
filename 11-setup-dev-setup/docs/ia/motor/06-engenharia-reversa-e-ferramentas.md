@@ -50,13 +50,13 @@ Começar por: LiteLLM, Ollama, n8n, Docker (abertos, nível 4 sem risco jurídic
 
 - **Sala limpa:** uma etapa estuda só o comportamento e escreve a especificação; outra implementa do zero (template `infra/templates/sala-limpa`).
 - **Caixa-preta:** registrar entradas e saídas e transformar em testes de caracterização; seguro contra dependência de fornecedor.
-- **Legado próprio:** extrair as regras do Caixa da Casa para especificação antes de reescrever no AM Rendara (.NET).
+- **Legado próprio:** extrair as regras do Caixa da Casa para especificação antes de reescrever no Financeiro do AM Gestão (TypeScript).
 - **Laboratório:** falhas nas próprias cópias, como já planejado.
 
 ## Migração sem quebrar
 
 - **Estrangulamento (strangler fig):** trocar o sistema velho por partes.
-- **Adaptadores:** como as interfaces do Aura (`IFonteDeEstoque`, `IEmissorFiscal` etc.), aplicadas a toda ferramenta externa.
+- **Adaptadores:** como as interfaces do AM Gestão (`IFonteDeEstoque`, `IEmissorFiscal` etc.), aplicadas a toda ferramenta externa.
 - **Modo sombra:** novo e velho em paralelo, resultados comparados, sem efeito real.
 - **Migrações versionadas com desfazer.**
 

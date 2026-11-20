@@ -22,7 +22,7 @@ As camadas 4 a 6 já estão no repositório padrão (`infra/templates/repo-padra
 
 ## O erro que nenhum scanner acha
 
-A falha mais comum em sistema de pequena empresa não é técnica, é de autorização: a rota confere se a pessoa está logada, mas não se o dado é dela (IDOR). No AM Kaixara isso seria um caixa vendo o fechamento de outra loja. A defesa:
+A falha mais comum em sistema de pequena empresa não é técnica, é de autorização: a rota confere se a pessoa está logada, mas não se o dado é dela (IDOR). No AM Gestão isso seria um caixa vendo o fechamento de outra loja. A defesa:
 
 - Toda consulta filtra pelo dono (tenant, loja, usuário) no servidor, de preferência num filtro padrão do ORM (Prisma/Drizzle).
 - Toda rota tem política de autorização explícita; rota sem política falha no teste.
@@ -34,7 +34,7 @@ Para ver onde a sua arquitetura erra, compare com projetos grandes e documentado
 
 1. Escolha uma funcionalidade (criar pedido).
 2. Siga o caminho dela da API até o banco no projeto de referência.
-3. Faça o mesmo no AM Kaixara.
+3. Faça o mesmo no AM Gestão.
 4. Cada diferença vira uma ADR: adotar, adaptar ou manter o seu jeito, com o motivo.
 
 | Repositório | O que observar |
@@ -43,7 +43,7 @@ Para ver onde a sua arquitetura erra, compare com projetos grandes e documentado
 | `kgrzybek/modular-monolith-with-ddd` | Monólito modular com DDD: padrões aplicáveis em qualquer stack, inclusive o AM Gestão |
 | `jasontaylordev/CleanArchitecture` e `ardalis/CleanArchitecture` | Organização de camadas, validação e testes |
 | `bitwarden/server` | Produto real em .NET com segurança como requisito central |
-| `donnemartin/system-design-primer` | Teoria de escala para quando o Aura crescer |
+| `donnemartin/system-design-primer` | Teoria de escala para quando o AM Gestão crescer |
 
 ## Checklist antes de publicar qualquer versão
 

@@ -4,7 +4,7 @@ Peças prontas para copiar. O guia completo está em [docs/seguranca](../../../d
 
 | Arquivo | Para quê | Onde vai |
 |---|---|---|
-| `modelagem-ameacas.md` | STRIDE + checklist ASVS de cada sistema seu | `docs/seguranca/ameacas.md` do sistema (ex.: AM Kaixara) |
+| `modelagem-ameacas.md` | STRIDE + checklist ASVS de cada sistema seu | `docs/seguranca/ameacas.md` do sistema (ex.: AM Gestão) |
 | `dast-zap.yml` | Varredura passiva do ZAP na homologação, toda segunda | `.github/workflows/` do sistema |
 | `autorizacao-modelo.md` | Termo que o cliente assina antes de qualquer teste | Pasta do cliente, fora do GitHub (revisado por advogado antes do 1º contrato) |
 | `escopo.example.toml` | O termo em formato que a guarda lê | `~/clientes/NOME/escopo.toml` |

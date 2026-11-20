@@ -10,7 +10,7 @@ Nada é vendido sem ter passado pela esteira; nada é feito uma vez só: cada tr
 
 ```mermaid
 flowchart LR
-  C["Catálogo único<br/>109 ofertas pontuadas<br/>arsenal com vereditos"] --> E["Esteira<br/>ideia → validação → construção<br/>→ lançamento → escala"]
+  C["Catálogo único<br/>98 ofertas pontuadas<br/>arsenal com vereditos"] --> E["Esteira<br/>ideia → validação → construção<br/>→ lançamento → escala"]
   E --> Q["Padrão de qualidade<br/>por tipo de oferta"]
   Q --> V["Venda e entrega"]
   V --> D["Clientes e dados<br/>CRM único, LGPD"]
@@ -28,7 +28,7 @@ flowchart LR
 
 1. [Esteira de ofertas](01-esteira-de-ofertas.md): os estágios, os portões entre eles e o que o setup faz em cada um
 2. [Marca e presença](02-marca-e-presenca.md): arquitetura de marcas, papel de cada rede, Google Perfil da Empresa, avaliações e uma rotina que cabe na sua semana
-3. [Flywheel de conteúdo](03-flywheel-de-conteudo.md): como uma aula, um reparo, um capítulo ou um prato viram dez peças de conteúdo
+3. [Flywheel de conteúdo](03-flywheel-de-conteudo.md): como uma aula, um reparo ou um capítulo viram dez peças de conteúdo
 4. [Automação e escala](04-automacao-e-escala.md): os níveis de automação, os agentes do grupo e a alavanca de escala de cada tipo de oferta
 5. [Padrão de qualidade](05-padrao-de-qualidade.md): o que é "pronto" para cada tipo de oferta e o ciclo de melhoria
 6. [Clientes e dados](06-clientes-e-dados.md): CRM único, consentimento, jornadas entre ofertas e os números de cada uma

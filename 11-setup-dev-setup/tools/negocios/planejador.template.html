@@ -116,10 +116,7 @@ const ORDEM = [
   {fase:"A1", ids:["software"], portao:"3 meses de lucro e 10 clientes pagantes"},
   {fase:"A2", ids:["loja","produtos"], portao:"Loja acima do equilíbrio por 3 meses e técnico que abre e fecha sem você"},
   {fase:"B1", ids:["entregas"], portao:"1.000 entregas por mês e 5 contratos fixos"},
-  {fase:"B2", ids:["delivery"], portao:"20 lojistas ativos e 1.500 pedidos por mês"},
-  {fase:"C1", ids:["sushi"], portao:"Lucro por 3 meses e sushiman que toca a noite sem você"},
-  {fase:"C2", ids:["padaria"], portao:"Gerente no comando e CMV na meta por 3 meses"},
-  {fase:"C3", ids:["cafeteria"], portao:"Dentro da padaria o investimento cai para cerca de R$ 30 mil"}
+  {fase:"B2", ids:["delivery"], portao:"20 lojistas ativos e 1.500 pedidos por mês"}
 ];
 
 /* ---------- motor (mesmas fórmulas de financas.py) ---------- */
@@ -180,7 +177,7 @@ function renderGroup(){
     return `<tr><td><button class="btn" style="min-height:32px;padding:4px 10px;font-weight:500" data-go="${n.id}">${esc(curto(n))}</button></td><td class="num">${brl(r.investimento)}</td><td class="num">${brl(r.fixos)}</td><td class="num">${brl(r.receita)}</td><td class="num">${brl(r.lucro)}</td><td class="num">${brl(r.lucro70)}</td><td class="num">${brl(r.pe)}</td><td>${tag}</td><td class="num">${brl(r.capital)}</td></tr>`;}).join("");
   $("vGroup").innerHTML=`
   <div class="kpis four">
-    <div class="kpi hero"><span class="k">Capital mínimo para abrir os nove</span><span class="v">${brl(capTotal)}</span><span class="s">Investimento + prejuízo da rampa + ${P.reserva_meses} meses de reserva, somados</span></div>
+    <div class="kpi hero"><span class="k">Capital mínimo para abrir todos</span><span class="v">${brl(capTotal)}</span><span class="s">Investimento + prejuízo da rampa + ${P.reserva_meses} meses de reserva, somados</span></div>
     <div class="kpi"><span class="k">Lucro do grupo no alvo</span><span class="v">${brl(lucroTot)}</span><span class="s">por mês, tudo funcionando</span></div>
     <div class="kpi"><span class="k">Lucro a 70% do alvo</span><span class="v${l70<0?' neg':''}">${brl(l70)}</span><span class="s">por mês, cenário conservador</span></div>
     <div class="kpi"><span class="k">Receita anual do grupo</span><span class="v">${brl(recAno)}</span><span class="s">${recAno>4800000?'<span class="pill warn">acima de R$ 4,8 mi somados</span>':'dentro do limite somado do Simples'}</span></div>

@@ -9,27 +9,29 @@ Ficar conhecido não é estar em todas as redes todos os dias. É ser a referên
 ```mermaid
 flowchart TB
   AM["Alan Mateus<br/>professor, dev, ex-sushiman<br/>(a pessoa que dá confiança)"]
-  AM --> IA["Instituto AMS<br/>cursos, aulas, formações"]
-  AM --> ED["Editora AMS Silva<br/>livros"]
-  AM --> AT["AMtech<br/>software, serviços, Maker"]
-  AT --> LO["Negócios locais<br/>marca própria + 'um negócio Grupo AMtech'"]
-  AM -.-> DK["Canais sem rosto<br/>marca temática, ligada ao Instituto"]
+  AM --> G["Grupo AMtech Digital<br/>o nome-mãe"]
+  G --> SW["AMtech Software<br/>AM Gestão e suítes"]
+  G --> IN["Instituto AMS Silva<br/>cursos e professores"]
+  G --> MD["AMtech Mídia<br/>Primer Code, Bancada Dev, finanças"]
+  G --> MK["AMtech Maker<br/>robótica, automação, serviços e loja"]
+  G --> LG["AM Logística<br/>pedidos e entregas"]
+  AM --> ED["Editora AMS Silva<br/>livros (pausada)"]
 ```
 
 - **Você é o guarda-chuva.** A sua história (do primeiro emprego como sushiman à sala de aula e ao código) é o que nenhum concorrente copia. Conte o quanto quiser; é escolha sua o que fica privado.
-- **Instituto AMS, Editora AMS Silva e AMtech** são as marcas de produto. Cada uma tem página e perfil, mas todas apontam para você e entre si.
-- **Os negócios locais** têm nome próprio (o cliente do sushi não precisa saber de SaaS) com o endosso discreto "um negócio Grupo AMtech" no site e no rodapé.
-- **Canais sem rosto** têm marca temática (ex.: lógica, matemática, finanças) e levam ao Instituto AMS. Rótulo de conteúdo feito com IA sempre que a plataforma pedir.
+- **As 6 empresas** ([Empresas do grupo](../empresas.md)) são as marcas de produto. Cada uma tem a sua vitrine para o cliente ([vitrines](../vitrines/README.md)), e todas apontam para você e entre si.
+- **Maker e Logística** começam vendendo software; quando virarem negócio local, usam nome próprio com o endosso discreto "uma empresa Grupo AMtech" no site e no rodapé.
+- **Os canais sem rosto** (Primer Code, Bancada Dev e o de finanças) são da AMtech Mídia e levam aos produtos do Instituto e da AMtech Software. Rótulo de conteúdo feito com IA sempre que a plataforma pedir.
 
 ## O papel de cada canal
 
 | Canal | Papel | Para quais ofertas | Ritmo sustentável |
 |---|---|---|---|
 | **Instagram** | Vitrine e prova social; Reels para alcance | Todas | 3 Reels + 2 carrosséis por semana, agendados |
-| **YouTube** | Busca e profundidade; o vídeo que vende o curso | Instituto, livro, build in public, Maker | 1 vídeo longo por semana + cortes |
+| **YouTube** | Busca e profundidade; o vídeo que vende o curso | Os 3 canais da Mídia, Instituto, livro, build in public, Maker | 1 vídeo longo por semana + cortes |
 | **TikTok** | Alcance de público novo | Instituto, canais sem rosto | Os mesmos cortes dos Reels |
 | **LinkedIn** | B2B e carreira | Software, automação com IA, vaga de dev | 2 posts por semana |
-| **Google Perfil da Empresa** | O canal local mais importante | Loja, assistência, restaurantes, serviços | 1 post e fotos novas por semana; resposta a avaliações em 24 h |
+| **Google Perfil da Empresa** | O canal local mais importante | AMtech Maker (assistência e loja, na fase 2), clientes locais do AM Gestão | 1 post e fotos novas por semana; resposta a avaliações em 24 h |
 | **WhatsApp Business** | Conversão e atendimento | Tudo que vende para pessoa da cidade | Catálogo atualizado; respostas rápidas |
 | **Newsletter** | A audiência que é sua | Instituto, livro, afiliados | 1 edição por semana |
 | **GitHub** | Prova técnica | Software, vaga de dev, templates | Commits do dia a dia |

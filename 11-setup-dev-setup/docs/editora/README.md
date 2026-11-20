@@ -2,6 +2,8 @@
 
 [← Índice da documentação](../README.md)
 
+**Pausada desde 20/11/2026:** o conteúdo dos livros é estruturado agora, a publicação fica para depois. Os livros, volume por volume, estão em [Livros](livros.md).
+
 A editora que publica os livros de Alan Mateus, começando por **Lógica e Máquina**, construída dentro do setup: o livro é escrito, testado, diagramado e publicado como um projeto de software, com o mesmo rigor do código.
 
 ## A ideia em uma frase
@@ -35,6 +37,7 @@ flowchart LR
 9. [Nível do livro e concursos](09-nivel-e-concursos.md): um caminho único, autocontido, com domínio total para prova e para o trabalho; PF, PRF e Forças Armadas
 10. [Imagens e figuras](10-imagens-e-figuras.md): busca automática em acervos com filtro de licença, figuras geradas por código
 11. [Automação e método](11-automacao-e-metodo.md): o seu passo a passo dentro do pipeline e o que é automático
+12. [Livros](livros.md): cada livro, volume por volume, com os capítulos ligados ao mapa-de-estudo e o estado de cada um (gerado)
 
 ## O que já existe
 

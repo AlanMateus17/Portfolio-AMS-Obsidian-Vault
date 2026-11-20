@@ -12,7 +12,7 @@ Você já produz conteúdo o tempo todo: dá aula, escreve o livro, programa, co
 | **Capítulo do livro** | Post de blog, 5 cards de conceito, baralho Anki, vídeo explicando o capítulo, edição da newsletter | Livro, Anki, AM Mentor, Instituto |
 | **Projeto de software** | Estudo de caso, vídeo "como eu construí", template vendável, post no LinkedIn, artigo na DIO | Software, templates, vaga de dev, DIO |
 | **Reparo na assistência** | Antes e depois, dica curta de manutenção, post no Google Perfil, pergunta frequente no site | Assistência, plano mensal, curso de manutenção |
-| **Prato ou ficha técnica** | Vídeo de preparo, foto do cardápio, post no Google Perfil, conteúdo de gestão de restaurante | Restaurantes, consultoria de cardápio, Kaixara |
+| **Cliente do AM Gestão** | Caso de uso (com autorização), antes e depois do caixa, post no Google Perfil, conteúdo de gestão para pequenos negócios | AM Gestão, Kit Finanças, canal de finanças |
 | **Decisão de negócio** (planejador, setup, número do mês) | Vídeo de build in public, post no LinkedIn, edição da newsletter | Canal com rosto, autoridade, software |
 | **Seu estudo do dia** | Card de revisão, post curto "aprendi hoje", aula particular | Aulas, Instituto, canais sem rosto |
 

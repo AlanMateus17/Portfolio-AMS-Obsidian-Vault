@@ -48,14 +48,14 @@ O caminho comum é contratar entregadores como MEI (CNAE 5320-2/02, permitido no
 
 ```mermaid
 flowchart LR
-  P["Pedido<br/>empresa, vendedor, app"] --> R["AM Rotara<br/>agrupa e roteiriza"]
+  P["Pedido<br/>empresa, vendedor, app"] --> R["AM Gestão · Pedidos<br/>agrupa e roteiriza"]
   R --> D["Despachante<br/>atribui ao entregador"]
   D --> E["Entregador<br/>app com rota e foto"]
   E -->|"foto, assinatura, geolocalização"| C["Comprovante<br/>para o cliente"]
   C --> F["Fechamento semanal<br/>repasse por Pix"]
 ```
 
-- **Roteirização** no AM Rotara (PostGIS + MapLibre, já previsto no setup), com rota agrupada por região: é o que torna o Flex lucrativo.
+- **Roteirização** no Pedidos do AM Gestão (PostGIS + MapLibre, já previsto no setup), com rota agrupada por região: é o que torna o Flex lucrativo.
 - **Prova de entrega:** foto, nome de quem recebeu e geolocalização. Sem isso, não há como contestar extravio.
 - **Seguro de carga** e de responsabilidade civil, e regras de valor máximo por volume.
 - **Repasse semanal** aos entregadores pelo extrato do sistema, sem conta de cabeça.

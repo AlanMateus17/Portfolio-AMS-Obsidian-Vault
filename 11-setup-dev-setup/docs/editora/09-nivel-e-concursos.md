@@ -28,7 +28,7 @@
 | Contagem e probabilidade | princípio multiplicativo, permutações, combinações, probabilidade | senhas, testes, IA, questões de concurso |
 | Estatística | média, mediana, desvio, distribuições | dados, desempenho, ciência de dados |
 | Matrizes e vetores | operações, transformações | gráficos, IA, redes neurais |
-| Grafos | caminhos, árvores, busca | redes, rotas (AM Rotara), algoritmos |
+| Grafos | caminhos, árvores, busca | redes, rotas (Pedidos do AM Gestão), algoritmos |
 | Cálculo | limites, derivadas, gradiente, integral | otimização, aprendizado de máquina |
 | Física | carga, tensão, corrente, resistência, potência, Ohm | hardware, eletrônica, robótica |
 | Física | sinais, frequência, ondas, ruído | redes, Wi-Fi, transmissão |

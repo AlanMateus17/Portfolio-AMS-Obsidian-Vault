@@ -73,7 +73,7 @@ O Hub tem pontos de partida, não soluções prontas: todo modelo de campo preci
 | `Francesco/weed-crop-aerial`, CropAndWeed | Datasets para detectar erva daninha em foto (drone ou câmera fixa) | Ponto de partida para um modelo seu, treinado no Kaggle |
 | ESP32 com rádio LoRa (SX1276/SX1262) | Sensores a centenas de metros da casa, onde o Wi-Fi não chega | Ponto a ponto primeiro; LoRaWAN com ChirpStack só com muitos sensores |
 
-**Negócio de agro (AMtech Campo)**
+**Negócio de agro (AMtech Maker, serviços de campo)**
 
 O que der certo na horta e no curral vira produto para sítios e produtores da região: o "Automação rural (irrigação, caixa d'água, sensores)" de [docs/negocios](../negocios/03-produtos-proprios.md), agora com painel no Home Assistant, avisos no celular e contagem por câmera. Produto com rádio vendido no Brasil precisa de homologação da Anatel: comece instalando placas já homologadas e vendendo o serviço e o painel.
 

@@ -47,7 +47,7 @@
   },
   "restricoes": [
     "Hora mínima R$ 45; teto de 7 h extras por semana.",
-    "No máximo 3 frentes \"agora\" na execução; nada fica congelado (ADR 0015).",
+    "No máximo 4 rendas \"agora\" na execução (onda 0); nada fica congelado (ADR 0015).",
     "Segredos só no KeePassXC; nada de dado de aluno em IA.",
     "Nada publicado, pago ou enviado em seu nome sem aprovação."
   ]

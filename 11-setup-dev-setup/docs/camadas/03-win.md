@@ -93,7 +93,7 @@ flowchart LR
     n_speckle["Speckle (modelos na web)"]
     n_vm247["VM sempre ligada (Oracle grátis)"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_api["API TypeScript (Next/NestJS)"]
     n_front["Next.js + Aura Design System"]
     n_oapi["OpenAPI + Scalar"]
@@ -575,8 +575,8 @@ Banco de dados e testes de API.
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [PostgreSQL](09-cnt.md#pg) | Containers, Kubernetes e infra como código | porta 5432 |
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTP (Bruno) |
-| ← recebe de | [OpenAPI + Scalar](11-app.md#oapi) | Aplicação: sistemas AM (Aura) | Bruno importa |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | HTTP (Bruno) |
+| ← recebe de | [OpenAPI + Scalar](11-app.md#oapi) | Aplicação: AM Gestão e as suítes AM | Bruno importa |
 
 <a id="nav"></a>
 
@@ -590,7 +590,7 @@ Testes, DevTools e acesso a todas as contas web.
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | localhost:3000 |
+| → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: AM Gestão e as suítes AM | localhost:3000 |
 | → envia para | [Hotmart](20-venda.md#hotm) | Plataformas de venda e recebimento | painel web |
 | ← recebe de | [Claude in Chrome + uso do computador](08-clc.md#cchr) | Claude: recursos, conectores e plugins | opera o navegador |
 

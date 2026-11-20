@@ -64,7 +64,7 @@ Proposta em 11/11/2026: especificação profissional → no máximo 3 perguntas 
 
 ## Plano de 30 dias (11/11 a 11/12/2026)
 
-- **Semana 1:** salvar a skill e usar o formulário; registrar as frentes novas (todas ativas, nada congelado); escolher UMA oferta para ser a primeira na ordem de execução (site para pequeno negócio, minicurso de Lógica ou planilha AM Rendara).
+- **Semana 1:** salvar a skill e usar o formulário; registrar as frentes novas (todas ativas, nada congelado); escolher UMA oferta para ser a primeira na ordem de execução (desde 20/11: minicurso de Lógica, com a planilha do AM Gestão em teste).
 - **Semana 2:** `just instalar` e só as fases que a oferta usa; critério de pronto em uma linha.
 - **Semana 3:** versão 0.1 vendável; uma conversa por tarefa.
 - **Semana 4:** à venda, mostrada a 10 pessoas do público certo; revisão (mudanças de decisão, uso do formulário, renda).

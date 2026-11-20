@@ -64,7 +64,7 @@ flowchart LR
     n_repopadrao["Repositório padrão"]
     n_vm247["VM sempre ligada (Oracle grátis)"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_api["API TypeScript (Next/NestJS)"]
     n_status["aura-status"]
   end
@@ -280,7 +280,7 @@ Versionamento e acesso ao GitHub.
 | → envia para | [GitHub](12-nuvem.md#gh) | Nuvem, código e entrega | push via SSH |
 | ← recebe de | [Ubuntu (WSL2)](04-lin.md#wsl) | Linux (Ubuntu no WSL2, Arch no 2º disco) | terminal |
 | ← recebe de | [gitleaks · Trivy](04-lin.md#sec) | Linux (Ubuntu no WSL2, Arch no 2º disco) | pre-commit |
-| ← recebe de | [aura-status](11-app.md#status) | Aplicação: sistemas AM (Aura) | git status |
+| ← recebe de | [aura-status](11-app.md#status) | Aplicação: AM Gestão e as suítes AM | git status |
 | ← recebe de | [Claude Code](05-ia.md#cc) | Agentes de IA e sandbox | commit com sua revisão |
 | ← recebe de | [Git LFS (arquivos grandes)](04-lin.md#gitlfs) | Linux (Ubuntu no WSL2, Arch no 2º disco) | binários fora do histórico |
 | ← recebe de | [Aider + Ollama (nível R$ 0)](05-ia.md#aider) | Agentes de IA e sandbox | commits pequenos |
@@ -297,7 +297,7 @@ Runtimes das APIs, do front e dos scripts.
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | compila e roda |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | compila e roda |
 | → envia para | [Python de dados (Polars, Jupyter)](06-dados.md#pyds) | Dados e treino de IA | Python + uv |
 | ← recebe de | [Ubuntu (WSL2)](04-lin.md#wsl) | Linux (Ubuntu no WSL2, Arch no 2º disco) | executa |
 | ← recebe de | [mise (runtimes e CLIs)](04-lin.md#mise) | Linux (Ubuntu no WSL2, Arch no 2º disco) | instala Node, Go e Rust |
@@ -605,7 +605,7 @@ Cliente de API no terminal, com requisições em arquivo. Reserva do Bruno; o je
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | testa a API |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | testa a API |
 
 <a id="harlequin"></a>
 
@@ -662,7 +662,7 @@ Carga HTTP em taxa constante para achar o teto de uma API, do limite de requisi�
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | acha o teto |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | acha o teto |
 
 <a id="bpftrace"></a>
 

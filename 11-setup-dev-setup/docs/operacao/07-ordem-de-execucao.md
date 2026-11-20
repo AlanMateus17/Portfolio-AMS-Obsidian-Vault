@@ -2,58 +2,32 @@
 
 [← Operação do grupo](README.md)
 
-O catálogo tem 109 ofertas, cada uma com veredito no [arsenal de rendas](portfolio.md#arsenal-o-que-entra-agora-e-o-que-não-dá). Fazer todas ao mesmo tempo garante que nenhuma fique boa. Esta página decide o que entra agora, o que espera e por quê, dentro das horas que você realmente tem e da sua aposta dos próximos 12 meses: **vaga de dev + renda própria**.
+O catálogo tem 98 ofertas, cada uma com veredito no [arsenal de rendas](portfolio.md#arsenal-o-que-entra-agora-e-o-que-não-dá). Fazer todas ao mesmo tempo garante que nenhuma fique boa. Esta página decide o que entra agora, o que espera e por quê, dentro das horas que você realmente tem e da aposta do [PLANO-UNICO](../../CONTINUAR.md): **todo estudo constrói um ativo que gera renda e vira portfólio**.
 
 ## As regras
 
 1. **Uma oferta em construção e uma em validação por vez.** A próxima só entra quando uma delas passa de estágio ou é pausada.
-2. **A fila segue a pontuação do [portfólio](portfolio.md)**, com duas exceções: o que ajuda a vaga de dev sobe, e os negócios físicos só andam pelos portões de [Negócios do grupo](../negocios/00-estrutura-e-ordem.md).
+2. **A fila segue as ondas do [portfólio](portfolio.md)** (só rendas passivas nas ondas, decisão de 18/11), com duas exceções: o que ajuda a vaga de dev sobe, e as fases físicas só andam pelos gatilhos de [Empresas do grupo](../empresas.md).
 3. **Toda oferta nova nasce de algo que já existe** (sinergia alta) ou espera.
 4. **Nada de construir antes de validar.**
 
 ## As horas da semana
 
-Com escola e restaurante, as janelas livres são as manhãs de segunda, quarta, quinta e sexta e a tarde de quinta. Uma divisão possível de cerca de 14 horas por semana (ajuste para a sua realidade):
+A semana segue a rotina real do [plano de estudo](../adr/0018-plano-de-estudo-unico-no-vault.md) (cerca de 20 horas; domingo é folga). Dentro dela, as rendas usam os dois blocos fixos das regras do [portfólio](portfolio.md): **quinta 13h–16h30** (negócio: vender, atender) e **sábado 9h30–12h30** (produção: gravar e revisar o que o estudo gerou). O projeto de software da vez conta também como portfólio para a vaga de dev: a mesma hora serve às duas metas.
 
-| Bloco | Quando | Horas | Para quê |
-|---|---|---:|---|
-| Estudo da stack | Manhãs de segunda e quarta | 5 | Vaga de dev (prioridade 1 da aposta) |
-| Construção da oferta da vez | Sexta de manhã + parte da quinta | 4 | A única oferta em construção |
-| Gravação e conteúdo | Quinta de manhã | 2 | Peça-pilar da semana |
-| Revisão e agendamento | Quinta à tarde | 1,5 | O que os agentes prepararam |
-| Aprovações e respostas | 15 min por dia | 1,5 | Celular |
+## A sequência (decisão de 20/11/2026)
 
-O projeto de software da oferta da vez conta também como portfólio para a vaga de dev: é a mesma hora servindo às duas metas.
+A ordem completa, empresa por empresa, está em [Empresas do grupo](../empresas.md). Em resumo:
 
-## Próximos 90 dias
+| Etapa | Constrói | Testa |
+|---|---|---|
+| **1 · nov/26–jan/27** | Mini-curso de Lógica (sai do estudo da Etapa 0); os mesmos vídeos abrem o **Primer Code** | Planilha do AM Gestão (Financeiro) com quem já procura |
+| **2 · fev–abr/27** | MVP do AM Gestão (Caixa + Pedidos + Financeiro) em 1 restaurante | Anki e AM Mentor saídos das fichas; Bancada Dev |
+| **3 · mai–jul/27** | Pacotes do AM Gestão vendidos (a AM Logística fase 1 já é o Pedidos) | Udemy e canal de finanças |
+| **4 · ago–out/27** | AM Serviços (agenda + ordem de serviço) | Maker Digital (automações prontas e curso de robótica) |
+| **Depois** | Volume 1A da Editora | Fases físicas da Maker e da Logística, só no gatilho de cada uma |
 
-**Mês 1: base que serve a tudo**
-- Perfis completos e com a mesma identidade: Instagram, YouTube, LinkedIn, TikTok, newsletter.
-- Isca grátis + sequência de boas-vindas no MailerLite.
-- Página "meu setup" com links de afiliado das ferramentas que você usa de verdade.
-- CRM em planilha e painel com as primeiras métricas.
-- **Em construção:** mini-curso de Lógica de Programação (5 primeiras aulas). **Em validação:** pré-venda do mini-curso.
-
-**Mês 2: primeiro lançamento**
-- Lançamento do mini-curso com a lista e os canais.
-- Flywheel rodando: 1 peça-pilar por semana, cortes aprovados no celular.
-- **Em validação:** pacote de aulas prontas para professores (uma disciplina que você já leciona, reescrita por você).
-
-**Mês 3: primeiro serviço produtizado**
-- Sites em 3 pacotes com preço público.
-- **Em validação:** automação com IA para pequenos negócios (um piloto em troca de estudo de caso).
-- Mini-curso publicado na Udemy.
-- O livro segue em paralelo no ritmo da editora, sem disputar o bloco de construção: o Capítulo 1 é a entrega.
-
-## Meses 4 a 12 (na ordem, conforme as anteriores passarem de estágio)
-
-1. Banco de questões de TI para concursos e baralhos Anki, saindo do YAML do livro.
-2. Planilha do Caixa da Casa à venda (validação do AM Rendara).
-3. Canal com rosto: o Grupo AMtech construído em público.
-4. Presença digital mensal para os clientes de sites.
-5. **CNPJ da AMtech Tecnologia** quando a renda e os clientes B2B pedirem nota (portão A1 em [Estrutura e ordem](../negocios/00-estrutura-e-ordem.md)).
-6. Assistência técnica por agendamento e em domicílio, antes de alugar a loja.
-7. AM Kaixara com um cliente piloto pagante; o app white-label só depois disso.
+Até janeiro, só três coisas: **mini-curso, planilha do AM Gestão e Primer Code.** O catálogo do HTML segue no ar, atraindo alunos.
 
 ## O que fica de fora por enquanto (e quando volta)
 
@@ -61,12 +35,12 @@ O projeto de software da oferta da vez conta também como portfólio para a vaga
 |---|---|
 | Formação completa e comunidade paga | O mini-curso passar de 100 vendas |
 | Traduções do livro | 500 cópias em português |
-| Negócios físicos (loja, entregas, delivery, restaurantes) | Portões de cada fase |
+| Fases físicas da AMtech Maker (loja, assistência, kits) e da AM Logística (entregas, delivery) | O gatilho de cada uma em [Empresas do grupo](../empresas.md) |
 | Licença do delivery para outras cidades | Barbacena com lucro por 6 meses |
-| AM Taskoro | O Kaixara tiver clientes |
+| AM Projetos (Kanban, obras) | O AM Gestão vender e as suítes AM Serviços e AM Escola andarem |
 | Kwai, Pinterest, Threads | Os canais principais rodarem 3 meses |
 
-## A revisão de domingo (20 minutos)
+## A revisão de sábado (20 minutos, no fim do bloco de produção)
 
 1. Ler o relatório do `analista-semanal`.
 2. A oferta em construção andou? Se não, qual é o bloqueio?

@@ -26,14 +26,14 @@ ID_RE = re.compile(r"^[a-z0-9-]+$")
 
 CATEGORIAS = {
     "site": "Sites por tipo de negócio",
-    "sistema": "Sistemas AM (stack Aura)",
+    "sistema": "Sistemas AM (vendidos em suítes e pacotes)",
     "microsaas": "Micro-SaaS (validar rápido, reconstruir se vender)",
     "educacao": "Educação",
     "produto": "Produtos para devs e empresas",
     "proprio": "Seus sites e ferramentas (não vendidos)",
 }
 FERRAMENTAS = {
-    "builder": "Website Builder com IA (Hostinger)", "horizons": "Horizons (Hostinger)", "aura": "Stack Aura (.NET + Next.js)",
+    "builder": "Website Builder com IA (Hostinger)", "horizons": "Horizons (Hostinger)", "aura": "Stack AM (TypeScript + Next.js + PostgreSQL)",
     "nextjs": "Next.js", "wordpress": "WordPress", "n8n": "n8n", "python": "Python/planilha", "scripts": "Scripts do setup",
     "artifact": "Artefato do Claude",
 }
@@ -79,6 +79,37 @@ def validar(d: dict, ofs: dict | None = None) -> list[str]:
                 erros.append(f"{s['id']}: módulo inexistente {m}")
     for m in sorted(set(mods) - usados):
         erros.append(f"módulo {m} não é usado por nenhum software")
+    erros += validar_suites(d)
+    return erros
+
+
+def validar_suites(d: dict) -> list[str]:
+    """Suítes: 3 ou mais sistemas, cada sistema em uma suíte só, pacotes só com sistemas da própria suíte (decisão de 20/11)."""
+    erros, ids, dono = [], {s["id"] for s in d["softwares"]}, {}
+    for su in d.get("suites", []):
+        if len(su["sistemas"]) < 3:
+            erros.append(f"suíte {su['id']}: precisa juntar 3 ou mais sistemas")
+        for x in su["sistemas"]:
+            if x not in ids:
+                erros.append(f"suíte {su['id']}: sistema inexistente {x}")
+            if x in dono:
+                erros.append(f"{x} está em duas suítes ({dono[x]} e {su['id']})")
+            dono[x] = su["id"]
+        for x in su.get("mvp", []):
+            if x not in su["sistemas"]:
+                erros.append(f"suíte {su['id']}: MVP usa {x}, que não é da suíte")
+        if not su.get("pacotes"):
+            erros.append(f"suíte {su['id']}: sem pacotes")
+        for pc in su.get("pacotes", []):
+            fora = [x for x in pc["sistemas"] if x not in su["sistemas"]]
+            if fora:
+                erros.append(f"suíte {su['id']}, pacote {pc['nome']}: {', '.join(fora)} não é da suíte")
+    for s in d["softwares"]:
+        if s["categoria"] == "sistema" and s["id"] not in dono and s["id"] not in d.get("fora_das_suites", {}):
+            erros.append(f"{s['id']}: sistema sem suíte (ponha numa suíte ou em fora_das_suites com o motivo)")
+    ordens = [su["ordem"] for su in d.get("suites", [])]
+    if len(ordens) != len(set(ordens)):
+        erros.append("suítes com ordem repetida")
     return erros
 
 
@@ -92,6 +123,28 @@ def ordem_modulos(d: dict) -> list[tuple[dict, int, int]]:
         quem = [s for s in d["softwares"] if m["id"] in s["modulos"]]
         out.append((m, len(quem), sum(s["vende"] for s in quem)))
     return sorted(out, key=lambda t: (-t[2], -t[1], t[0]["nome"]))
+
+
+def gerar_suites(d: dict) -> list[str]:
+    nome = {s["id"]: s["nome"].split(" (")[0] for s in d["softwares"]}
+    o = ["## Suítes e pacotes\n",
+         "Cada sistema é vendido dentro de uma suíte: a suíte junta 3 ou mais sistemas e, com o MVP pronto, é vendida em pacotes (o menor pacote pode ter um sistema só). "
+         "Só a suíte 1 está em construção; a próxima começa quando a anterior vender (PLANO-UNICO: um ativo por vez).\n"]
+    for su in sorted(d.get("suites", []), key=lambda x: x["ordem"]):
+        o.append(f"### {su['ordem']}. {su['nome']}\n")
+        o.append(f"- **Para quem:** {su['publico']}")
+        o.append(f"- **Estado:** {su['estado']}")
+        o.append(f"- **Sistemas:** {', '.join(nome[x] for x in su['sistemas'])}")
+        o.append(f"- **MVP:** {', '.join(nome[x] for x in su['mvp'])}\n")
+        o.append("| Pacote | Sistemas |\n|---|---|")
+        o += [f"| {esc(pc['nome'])} | {esc(', '.join(nome[x] for x in pc['sistemas']))} |" for pc in su["pacotes"]]
+        o.append("")
+    fora = d.get("fora_das_suites", {})
+    if fora:
+        o.append("**Fora das suítes (decidir):**\n")
+        o += [f"- {nome[k]}: {v}" for k, v in fora.items()]
+        o.append("")
+    return o
 
 
 def gerar_md(d: dict) -> str:
@@ -115,6 +168,7 @@ def gerar_md(d: dict) -> str:
         if n:
             o.append(f"| {v} | {n} |")
     o.append("")
+    o += gerar_suites(d)
     o.append("## Módulos: construa nesta ordem\n")
     o.append("Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de trabalho caem: "
              "um site novo de padaria ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.\n")
@@ -126,7 +180,7 @@ def gerar_md(d: dict) -> str:
     o.append("- **Website Builder com IA:** site institucional que o cliente edita sozinho. Menos manutenção.")
     o.append("- **Horizons:** quando o cliente paga por uma função (pedido, agenda, catálogo, área do cliente) e para validar micro-SaaS. "
              "O código exportado é só o frontend (React/Vite); o banco fica na Hostinger.")
-    o.append("- **Stack Aura:** o que já provou que vende e precisa escalar, multi-empresa e com licença por módulo.")
+    o.append("- **Stack AM (TypeScript + Next.js + PostgreSQL, ADR 0017):** o que já provou que vende e precisa escalar, multi-empresa e com licença por módulo e por pacote.")
     o.append("- **Conta e domínio no nome do cliente**, com você como colaborador; contrato com o que a mensalidade cobre.\n")
     for k, v in CATEGORIAS.items():
         g = [s for s in sw if s["categoria"] == k]

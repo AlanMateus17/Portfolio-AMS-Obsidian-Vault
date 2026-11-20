@@ -37,7 +37,7 @@ Os planos mensais para empresas também são uma porta de entrada para a [AMtech
 
 ## Operação
 
-- **Ordem de serviço** no AM Kaixara: foto do aparelho na entrada, checklist de estado, senha do cliente só quando indispensável (e apagada na entrega), prazo, termo de garantia.
+- **Ordem de serviço** no AM Serviços (ordem de serviço) e no Caixa do AM Gestão: foto do aparelho na entrada, checklist de estado, senha do cliente só quando indispensável (e apagada na entrega), prazo, termo de garantia.
 - **Garantia:** 90 dias para serviço (Código de Defesa do Consumidor, art. 26) e a garantia do fabricante para a peça.
 - **Aparelho esquecido:** o termo de entrada diz o prazo de guarda e a cobrança de armazenagem, combinados com o advogado.
 - **Dados do cliente:** backup cifrado, apagado após a entrega, registrado na política de privacidade (LGPD).

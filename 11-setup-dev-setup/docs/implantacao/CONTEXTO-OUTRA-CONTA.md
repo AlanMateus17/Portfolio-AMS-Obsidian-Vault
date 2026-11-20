@@ -115,7 +115,7 @@ Os conectores são **por conta**: o que o Alan ligou na conta principal não exi
 | Google (Gmail, Agenda, Drive) | Rotina, agenda e documentos |
 | Canva, Figma, Adobe | Artes e sites |
 | MailerLite | Lista de e-mail (atenção ao limite grátis) |
-| Microsoft Learn | Estudo de .NET e Azure |
+| Microsoft Learn | Estudo de Azure (e .NET, carta de reserva) |
 | Supabase, Lovable | Validar MVP antes de construir |
 | Cloudflare (o novo, `https://mcp.cloudflare.com/mcp`) | DNS e Pages dos sites que vendem |
 | Upwork | Freelas (depois do inglês B1) |

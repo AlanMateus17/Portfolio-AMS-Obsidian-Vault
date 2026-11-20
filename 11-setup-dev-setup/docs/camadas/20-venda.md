@@ -64,7 +64,7 @@ flowchart LR
     n_bcurso["Curso por seção"]
     n_prof["Edição do professor"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_lic["aura-licensing"]
   end
   subgraph L_clc["Claude: recursos, conectores e plugins"]
@@ -137,7 +137,7 @@ flowchart LR
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
 | [Pix Automático + gateway (ex.: Asaas)](#pixa) | Remoto · precisa de conta · futuro | Cobrança recorrente dos sistemas AM por Pix, sem cartão. Lançado pelo Banco Central em 2025. Entra quando o primeiro SaaS tiver cliente. | passo 24.7 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 45.9 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 52.4 · Quando a renda pedir (começa quando: a renda passou do valor de virada definido com o contador) |
-| [Agenda online (Cal.com)](#agenda) | Remoto · precisa de conta | Aluno particular escolhe horário sozinho e já paga. Open source, com plano grátis. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.18 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.19 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Agenda online (Cal.com)](#agenda) | Remoto · precisa de conta | Aluno particular escolhe horário sozinho e já paga. Open source, com plano grátis. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.18 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [CRM simples (planilha)](#crm) | Local | Lista de alunos, clientes e propostas. Uma planilha resolve até dezenas de clientes. | passo 37.9 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Hotmart](#hotm) | Remoto · precisa de conta | Checkout, área de membros e afiliados para cursos e PDFs. Aceita vender no CPF. Melhor quando você mesmo leva o público. | passo 37.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.2 · Semanas 12 a 15 · jan a fev/2027; passo 40.5 · Semanas 12 a 15 · jan a fev/2027; passo 40.10 · Semanas 12 a 15 · jan a fev/2027; passo 46.3 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Kiwify](#kiwi) | Remoto · precisa de conta | Mesma função da Hotmart, com painel mais simples. Aceita vender no CPF. | passo 37.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.11 · Semanas 12 a 15 · jan a fev/2027 |
@@ -145,7 +145,7 @@ flowchart LR
 | [Udemy](#udemy) | Remoto · precisa de conta | Marketplace mundial: ela traz alunos que você não alcançaria. Ganha bem menos por venda orgânica do que pelo seu cupom. Recebe por PayPal ou Payoneer e pede um formulário fiscal dos EUA. | passo 37.6 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.11 · Semanas 12 a 15 · jan a fev/2027 |
 | [DIO (parceria)](#dio) | Remoto · precisa de conta | Não é marketplace aberto como a Udemy. Os experts trabalham em parceria com a DIO; o caminho é publicar artigos e projetos lá e se candidatar ou ser convidado. | passo 37.6 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [YouTube (membros)](#ytm) | Remoto · precisa de conta · futuro | Assinatura mensal do canal, quando houver público. | passo 47.9 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Mercado Pago](#mp) | Remoto · precisa de conta | Pix e cartão para aulas particulares e serviços de sites. | passo 37.7 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.19 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Mercado Pago](#mp) | Remoto · precisa de conta | Pix e cartão para aulas particulares e serviços de sites. | passo 37.7 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.18 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Afiliados (Amazon, Hotmart…)](#afil) | Remoto · precisa de conta | Links de produtos de terceiros no blog e nos vídeos. | passo 37.11 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.1 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Chatwoot (atendimento)](#chatwoot) | Local | Caixa única de WhatsApp, Instagram, e-mail e site, com o agente atendente e passagem para você. Código aberto. | passo 33.5 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.2 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
 | [Twenty (CRM aberto)](#twenty) | Local | CRM de verdade (funil, tarefas, e-mails) no lugar da planilha, quando houver 20+ clientes ou leads ativos. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.6 · Com a primeira página de venda no ar (jan/2027) e por etapas |
@@ -164,7 +164,7 @@ Cobrança recorrente dos sistemas AM por Pix, sem cartão. Lançado pelo Banco C
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [aura-licensing](11-app.md#lic) | Aplicação: sistemas AM (Aura) | cobrança recorrente |
+| → envia para | [aura-licensing](11-app.md#lic) | Aplicação: AM Gestão e as suítes AM | cobrança recorrente |
 | → envia para | [Conta bancária separada (CPF)](19-emp.md#banco) | Pessoa física: impostos e finanças | recebimento |
 | ← recebe de | [Agente cobrador](23-oper.md#ocob) | Operação do grupo (esteira, marca, qualidade) | Pix |
 
@@ -176,7 +176,7 @@ Cobrança recorrente dos sistemas AM por Pix, sem cartão. Lançado pelo Banco C
 
 Aluno particular escolhe horário sozinho e já paga. Open source, com plano grátis.
 
-**Quando entra:** passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.18 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.19 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão); passo 46.18 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -316,7 +316,7 @@ Assinatura mensal do canal, quando houver público.
 
 Pix e cartão para aulas particulares e serviços de sites.
 
-**Quando entra:** passo 37.7 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.19 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 37.7 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.18 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

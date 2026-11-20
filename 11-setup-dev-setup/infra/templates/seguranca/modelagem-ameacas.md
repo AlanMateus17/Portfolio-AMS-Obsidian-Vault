@@ -1,6 +1,6 @@
 # Modelagem de ameaças: [nome do sistema]
 
-> Copie para `docs/seguranca/ameacas.md` de cada sistema seu (ex.: AM Kaixara) antes de escrever a primeira linha
+> Copie para `docs/seguranca/ameacas.md` de cada sistema seu (ex.: AM Gestão) antes de escrever a primeira linha
 > de uma funcionalidade nova. Uma hora aqui evita a falha mais cara: a de desenho, que nenhum scanner acha.
 > Revise a cada funcionalidade que mexe com login, dinheiro, dado pessoal ou integração externa.
 

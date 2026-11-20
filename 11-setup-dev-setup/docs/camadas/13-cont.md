@@ -49,7 +49,7 @@ flowchart LR
   subgraph L_nuvem["Nuvem, código e entrega"]
     n_gpuh["GPU por hora (RunPod e afins)"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_front["Next.js + Aura Design System"]
   end
   subgraph L_clc["Claude: recursos, conectores e plugins"]
@@ -252,7 +252,7 @@ Design de telas e protótipos, aberto, alternativa ao Figma pago.
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | telas dos sistemas |
+| → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: AM Gestão e as suítes AM | telas dos sistemas |
 
 ---
 

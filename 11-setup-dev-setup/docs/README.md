@@ -16,7 +16,7 @@
 - [Editora AMS Silva](editora/README.md): estrutura legal, pipeline de produção dos livros, rigor editorial, identidade visual, avaliação, produtos, lançamento e roteiro
 - [Implantação](implantacao/README.md): roteiro que cobre todos os blocos do setup, scripts que instalam e verificadores que conferem; pipeline de conteúdo e stack de automação
 - [Operação do grupo](operacao/README.md): esteira de ofertas, portfólio pontuado, marca e presença, flywheel de conteúdo, automação, qualidade, clientes e ordem de execução
-- [Negócios do grupo](negocios/README.md): os nove negócios em Barbacena, estrutura de CNPJs, ordem de abertura, números, cardápios e mínimo legal
+- [Negócios do grupo](negocios/README.md): os negócios físicos (fase 2 da AMtech Maker e da AM Logística): estrutura de CNPJs, ordem de abertura, números e mínimo legal
 - [Segurança](seguranca/README.md): engenharia reversa com IA, AppSec nos seus sistemas, empresa de pentest com guarda de escopo e relatório CVSS, e o Jarvis
 - [Jarvis](jarvis/README.md): o setup e a casa por comando de voz: voz local, casa, câmeras, energia, água, robótica, PC e open source, com política de risco
 - [Construção civil, arquitetura e engenharia civil](construcao/README.md): BIM aberto e Autodesk educacional, estudo e normas, regras da IA e as rendas pela TI
@@ -37,12 +37,12 @@
 - [19 · Pessoa física: impostos e finanças](camadas/19-emp.md) (21 blocos)
 - [18 · Vitrine web (sites e domínio)](camadas/18-web.md) (15 blocos)
 - [17 · Produtos (o que você vende)](camadas/17-prod.md) (8 blocos)
-- [16 · Negócios do grupo (Barbacena)](camadas/16-neg.md) (19 blocos)
+- [16 · Negócios do grupo (Barbacena)](camadas/16-neg.md) (14 blocos)
 - [15 · Editora AMS Silva (produção de livros)](camadas/15-editora.md) (36 blocos)
 - [14 · Estudo e carreira](camadas/14-est.md) (16 blocos)
 - [13 · Produção de conteúdo](camadas/13-cont.md) (8 blocos)
 - [12 · Nuvem, código e entrega](camadas/12-nuvem.md) (32 blocos)
-- [11 · Aplicação: sistemas AM (Aura)](camadas/11-app.md) (26 blocos)
+- [11 · Aplicação: AM Gestão e as suítes AM](camadas/11-app.md) (26 blocos)
 - [10 · Observabilidade](camadas/10-obs.md) (10 blocos)
 - [09 · Containers, Kubernetes e infra como código](camadas/09-cnt.md) (16 blocos)
 - [08 · Claude: recursos, conectores e plugins](camadas/08-clc.md) (19 blocos)

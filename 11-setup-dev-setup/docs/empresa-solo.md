@@ -12,7 +12,7 @@ O que evita o Frankenstein não é deixar ferramenta de fora: é **cada função
 
 | Tema | Decisão |
 |---|---|
-| Linguagens | Aura em .NET 10 + Next.js; Astro para sites, SvelteKit + PocketBase para MVP, Go para CLIs, Rust para firmware, Python para dados e IA (ADR 0007) |
+| Linguagens | Núcleo TypeScript + Python + SQL (ADR 0017): AM Gestão em Next.js/NestJS + PostgreSQL (Supabase); Astro para sites, SvelteKit + PocketBase para MVP, Go para CLIs e o agente fiscal, Rust para firmware; .NET/C# é carta de reserva |
 | Repositórios | Um por sistema AM, todos com `apps/web`, `apps/api`, `packages/core`, `packages/db` e `config/deploy.yml` |
 | Deploy | Kamal; VM grátis da Oracle primeiro; EC2 (sa-east-1) ou Azure B2s (Brazil South) quando um cliente pagar (ADR 0005) |
 | Segredos | Só no KeePassXC. age cifra arquivos que saem da máquina; sops cifra configuração de VM fora do Git |
@@ -52,14 +52,14 @@ O que evita o Frankenstein não é deixar ferramenta de fora: é **cada função
 
 1. **`.claudeignore` não existe no Claude Code.** O que funciona é `permissions.deny` no `.claude/settings.json`. O `.aiderignore` é do Aider e também está no repo-padrão.
 2. **"Claude 3.5 Sonnet" está obsoleto.** A versão de modelo fica no gateway LiteLLM e em [custos.md](custos.md), nunca em documento.
-3. **Zod é TypeScript.** O contrato do backend .NET é o OpenAPI (ADR 0006).
+3. **Zod é TypeScript.** No back-end, o contrato é o OpenAPI (ADR 0006); entre front e back em TypeScript, o Zod vale dos dois lados.
 4. **age cifra, não assina.** Assinatura de firmware é o Secure Boot do chip (ESP32 ou STM32).
 5. **Fator R:** os 6% do Anexo III valem só na 1ª faixa (até R$ 180 mil em 12 meses) e o pró-labore de 28% paga INSS de 11% e IR.
 6. **`just architect` não pesquisa sozinho.** `just arquiteto` monta o pacote (stack, regras, o que existe, link do grep.app) e o Claude responde a partir dele.
 
 ## O cronograma de 14 dias
 
-Fase **Sprint de 14 dias (Estratégia do Halter)**, no recesso escolar de jan/2027, com o gatilho de uma das 3 rendas de agora já ter passado no portão:
+Fase **Sprint de 14 dias (Estratégia do Halter)**, no recesso escolar de jan/2027, com o gatilho de uma das 4 rendas de agora (onda 0) já ter passado no portão:
 
 | Dias | O quê |
 |---|---|

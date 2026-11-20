@@ -4,7 +4,7 @@ Este arquivo vai junto em todo pedido do pipeline de conteúdo. Quanto mais espe
 
 ## Quem fala
 
-- Alan Mateus, professor de informática em Barbacena (MG), desenvolvedor .NET, fundador do Grupo AMtech Digital.
+- Alan Mateus, professor de informática em Barbacena (MG), desenvolvedor (TypeScript, Python e SQL), fundador do Grupo AMtech Digital.
 - [Conte o quanto quiser da sua história; o que não estiver aqui não aparece nas peças.]
 
 ## Para quem
@@ -36,10 +36,14 @@ Este arquivo vai junto em todo pedido do pipeline de conteúdo. Quanto mais espe
 
 ## Marcas
 
-- Instituto AMS: cursos e aulas.
-- Editora AMS Silva: livros.
-- AMtech: software, serviços e o Maker.
-- Canais sem rosto: [nome do canal], sempre com o aviso de que a voz é gerada por IA.
+As 6 empresas do Grupo AMtech Digital (ver `docs/empresas.md`):
+
+- AMtech Software: AM Gestão e as suítes, kit dev e sites sob demanda.
+- Instituto AMS Silva: cursos, exercícios e materiais para professores.
+- AMtech Mídia: Primer Code, Bancada Dev e o canal de finanças (nome a definir), sempre com o aviso de que a voz é gerada por IA.
+- AMtech Maker: robótica, automação, serviços presenciais e loja (software primeiro).
+- AM Logística: pedidos e entregas (software primeiro).
+- Editora AMS Silva: livros (pausada).
 
 ## Hashtags base
 

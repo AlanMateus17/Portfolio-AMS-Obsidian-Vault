@@ -8,7 +8,7 @@ Uma pessoa pode ser aluna do mini-curso, compradora do livro e cliente da assist
 
 - **Uma ficha por pessoa ou empresa**, com as ofertas que comprou, a origem (canal e UTM), as conversas e o consentimento.
 - **Começa simples:** a planilha de CRM que já está no setup, com o MailerLite como base de e-mails e etiquetas por oferta. Vira tabela no PostgreSQL do grupo quando passar de algumas centenas de clientes.
-- **Um identificador por cliente** em todos os sistemas AM (Kaixara, Rotara, Rendara), para o painel juntar compras de negócios diferentes.
+- **Um identificador por cliente** em todos os módulos do AM Gestão (Caixa, Pedidos, Financeiro), para o painel juntar compras de negócios diferentes.
 
 ## Consentimento (LGPD)
 
@@ -32,7 +32,7 @@ flowchart LR
     AS["Assistência"] --> PM["Plano mensal"] --> SI
   end
   subgraph Restaurantes
-    KX["AM Kaixara"] --> CC["Consultoria de<br/>cardápio"] --> WL["App com a<br/>marca deles"]
+    KX["AM Gestão · Caixa"] --> CC["Consultoria de<br/>cardápio"] --> WL["App com a<br/>marca deles"]
   end
   PM -.-> KX
   WS["Workshop para<br/>empresários"] --> AU

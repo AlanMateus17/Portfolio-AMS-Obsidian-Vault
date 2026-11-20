@@ -18,10 +18,12 @@ data/biblioteca.json
 data/certificacoes.json
 data/custos.json
 data/ecossistema.json
+data/empresas.json
 data/implantacao-rapida.json
 data/implantacao.json
 data/investimentos.json
 data/kitsites.json
+data/livros.json
 data/mapa.json
 data/marcas/amtech.json
 data/marcas/editora.json
@@ -107,7 +109,9 @@ docs/editora/09-nivel-e-concursos.md
 docs/editora/10-imagens-e-figuras.md
 docs/editora/11-automacao-e-metodo.md
 docs/editora/README.md
+docs/editora/livros.md
 docs/empresa-solo.md
+docs/empresas.md
 docs/empresas/README.md
 docs/fluxos.md
 docs/fora-do-setup.md
@@ -157,10 +161,6 @@ docs/negocios/03-produtos-proprios.md
 docs/negocios/04-ponto-de-retirada.md
 docs/negocios/05-logistica-e-entregas.md
 docs/negocios/06-delivery-multiempresas.md
-docs/negocios/07-sushi.md
-docs/negocios/08-cafeteria.md
-docs/negocios/09-padaria-e-almoco.md
-docs/negocios/10-cardapios-e-desperdicio.md
 docs/negocios/11-minimo-para-abrir.md
 docs/negocios/12-sistemas-do-grupo.md
 docs/negocios/README.md
@@ -193,6 +193,7 @@ docs/recrutador/README.md
 docs/recrutador/historias-modelo.md
 docs/recursos.md
 docs/rede/README.md
+docs/repositorios.md
 docs/roteiro.md
 docs/seguranca/01-engenharia-reversa.md
 docs/seguranca/02-appsec.md
@@ -200,6 +201,13 @@ docs/seguranca/03-empresa-de-pentest.md
 docs/seguranca/04-jarvis.md
 docs/seguranca/README.md
 docs/sistemas-operacionais.md
+docs/vitrines/README.md
+docs/vitrines/editora.md
+docs/vitrines/instituto.md
+docs/vitrines/logistica.md
+docs/vitrines/maker.md
+docs/vitrines/midia.md
+docs/vitrines/software.md
 infra/automacao/.env.example
 infra/automacao/compose.yaml
 infra/automacao/gerar-senhas.sh
@@ -370,8 +378,12 @@ tools/custos/test_orcamento.py
 tools/diagrama.template.html
 tools/documentos/test_verificar.py
 tools/documentos/verificar.py
+tools/editora/livros.py
 tools/editora/tabela_verdade.py
+tools/editora/test_livros.py
 tools/editora/test_tabela_verdade.py
+tools/empresas/empresas.py
+tools/empresas/test_empresas.py
 tools/fabrica/modelos/ementa.example.toml
 tools/fabrica/modelos/regras.example.toml
 tools/fabrica/plano_semanal.py
@@ -445,6 +457,8 @@ tools/remoto/bot.py
 tools/remoto/fila.py
 tools/remoto/test_bot.py
 tools/remoto/test_fila.py
+tools/repos/repos.py
+tools/repos/test_repos.py
 tools/roi/roi.example.toml
 tools/roi/roi.py
 tools/roi/test_roi.py

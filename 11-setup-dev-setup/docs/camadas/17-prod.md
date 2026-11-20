@@ -72,9 +72,9 @@ flowchart LR
     n_azure["Azure"]
     n_gh["GitHub"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_lic["aura-licensing"]
-    n_nkaix["AM Kaixara (PDV e cardápio)"]
+    n_nkaix["AM Gestão · Caixa (PDV e cardápio)"]
     n_story["Storybook"]
   end
   subgraph L_clc["Claude: recursos, conectores e plugins"]
@@ -149,11 +149,11 @@ flowchart LR
 |---|---|---|---|
 | [Mini-curso Lógica de Programação](#curso) | Local | Primeiro produto de lançamento, para validar antes de construir mais. | passo 37.5 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 40.2 · Semanas 12 a 15 · jan a fev/2027; passo 40.3 · Semanas 12 a 15 · jan a fev/2027 |
 | [Formações (TI, Matemática, Finanças)](#form) | Local · futuro | Cursos completos, depois que o mini-curso vender. | passo 47.10 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
-| [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [Templates e código-fonte](#tmpl) | Local | Frontends prontos e projetos vendidos como download. | passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | [Livro Lógica e Máquina](#livro) | Local | Lógica e Máquina, em 5 volumes, publicado pela Editora AMS Silva. Ebook, impresso, kit, curso e site saem da mesma fonte. | passo 43.2 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos); passo 43.8 · Quando o capítulo 1 estiver pronto (começa quando: o capítulo 1 e o seu modelo de criação prontos) |
 | [Aulas particulares](#aulas) | Físico | Seus estudos viram aula paga. | passo 37.8 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Sites para pequenas empresas](#sites) | Local | Freelance em Barbacena: sites e lojas. | passo 23.3 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 36.13 · Semanas 6 e 7 · dez/2026; passo 46.9 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu); passo 46.10 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
-| [Sistemas AM (SaaS)](#saas) | Remoto · futuro | AM Kaixara, AM Rendara e os demais, vendidos por assinatura. | passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
+| [Sistemas AM (SaaS)](#saas) | Remoto · futuro | AM Gestão e as outras suítes, vendidos em pacotes por assinatura. | passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
 | [Esteira de sites (issue → PR → ar)](#esteira) | Local | Ficha como issue, agente abre o PR, CI confere HTML, links e acessibilidade, a rotina do Claude revisa, você aprova a prévia e o merge publica na Hostinger. Modelo em infra/templates/esteira-site. | passo 28.3 · Semana 6 · nov/2026 a dez/2026; passo 28.4 · Semana 6 · nov/2026 a dez/2026; passo 28.5 · Semana 6 · nov/2026 a dez/2026 |
 
 <a id="curso"></a>
@@ -202,7 +202,7 @@ Cursos completos, depois que o mini-curso vender.
 
 Frontends prontos e projetos vendidos como download.
 
-**Quando entra:** passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.7 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -210,7 +210,7 @@ Frontends prontos e projetos vendidos como download.
 | → envia para | [GitHub](12-nuvem.md#gh) | Nuvem, código e entrega | demo pública |
 | → envia para | [Polar (venda internacional)](20-venda.md#polar) | Plataformas de venda e recebimento | vende lá fora |
 | ← recebe de | [7-Zip](03-win.md#zip) | Windows 11, apps e máquinas virtuais | empacota o download |
-| ← recebe de | [Storybook](11-app.md#story) | Aplicação: sistemas AM (Aura) | demo do template |
+| ← recebe de | [Storybook](11-app.md#story) | Aplicação: AM Gestão e as suítes AM | demo do template |
 
 <a id="livro"></a>
 
@@ -283,15 +283,15 @@ Freelance em Barbacena: sites e lojas.
 
 *Remoto · futuro*
 
-AM Kaixara, AM Rendara e os demais, vendidos por assinatura.
+AM Gestão e as outras suítes, vendidos em pacotes por assinatura.
 
 **Quando entra:** passo 51.1 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Azure](12-nuvem.md#azure) | Nuvem, código e entrega | roda na nuvem |
-| → envia para | [aura-licensing](11-app.md#lic) | Aplicação: sistemas AM (Aura) | cobrança por módulo |
-| → envia para | [AM Kaixara (PDV e cardápio)](11-app.md#nkaix) | Aplicação: sistemas AM (Aura) | vende por assinatura |
+| → envia para | [aura-licensing](11-app.md#lic) | Aplicação: AM Gestão e as suítes AM | cobrança por módulo |
+| → envia para | [AM Gestão · Caixa (PDV e cardápio)](11-app.md#nkaix) | Aplicação: AM Gestão e as suítes AM | vende por assinatura |
 
 <a id="esteira"></a>
 

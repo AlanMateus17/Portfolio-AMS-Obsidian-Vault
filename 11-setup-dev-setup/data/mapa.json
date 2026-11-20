@@ -65,7 +65,7 @@
    "detalhes": [
     {
      "k": "Por quê",
-     "v": "A stack do Aura é TypeScript/Python; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft."
+     "v": "A stack AM é TypeScript + Python; o deploy primário é Vercel + VPS (ADR 0017). O Azure fica como estudo e portfólio para vagas: é forte em empresa brasileira que usa Microsoft."
     },
     {
      "k": "Certificações",
@@ -185,7 +185,7 @@
   "tendencias": [
    {
     "t": "Engenharia de IA e agentes",
-    "d": "Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, Microsoft.Extensions.AI, MCP e os agentes do Claude Code."
+    "d": "Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, SDK de IA em TypeScript, MCP e os agentes do Claude Code."
    },
    {
     "t": "Arquitetura de software",

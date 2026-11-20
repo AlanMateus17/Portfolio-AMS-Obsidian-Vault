@@ -33,7 +33,7 @@ Itens adicionados na revisão de 20/10/2026, por urgência.
 | **Sentry, Uptime Kuma e Caddy** | Saber do erro antes do cliente. |
 | **E-mail transacional e armazenamento de arquivos** | Confirmação de conta, recibos e anexos. |
 | **Pix Automático e API de NFS-e** | Cobrança recorrente sem cartão e nota emitida pelo próprio sistema. Dependem de CNPJ, então ficam para depois. |
-| **PostGIS + MapLibre** | Só quando o AM Rotara sair do papel. |
+| **PostGIS + MapLibre** | Só quando o Pedidos do AM Gestão sair do papel. |
 
 ## Vendendo no CPF
 

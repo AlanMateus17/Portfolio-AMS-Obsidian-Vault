@@ -69,8 +69,8 @@ flowchart LR
     n_kamal["Kamal (deploy em VM por SSH)"]
     n_repopadrao["Repositório padrão"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
-    n_nkaix["AM Kaixara (PDV e cardápio)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
+    n_nkaix["AM Gestão · Caixa (PDV e cardápio)"]
   end
   subgraph L_ia["Agentes de IA e sandbox"]
     n_hamcp["MCP do Home Assistant"]
@@ -142,7 +142,7 @@ flowchart LR
   n_bbplat -->|"programas com escopo"| n_kitpent
   n_escopo -->|"libera o alvo"| n_kitpent
   n_appsec -->|"soma ao CI"| n_repopadrao
-  n_appsec -->|"ameaças do Kaixara"| n_nkaix
+  n_appsec -->|"ameaças do AM Gestão"| n_nkaix
   n_appsec -->|"CodeQL"| n_dbot
   n_escopo -->|"registro de atividades"| n_relpent
   n_relpent -->|"entregável"| n_nseg
@@ -459,7 +459,7 @@ Modelagem de ameaças (STRIDE), checklist ASVS e ZAP na homologação, por cima 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Repositório padrão](12-nuvem.md#repopadrao) | Nuvem, código e entrega | soma ao CI |
-| → envia para | [AM Kaixara (PDV e cardápio)](11-app.md#nkaix) | Aplicação: sistemas AM (Aura) | ameaças do Kaixara |
+| → envia para | [AM Gestão · Caixa (PDV e cardápio)](11-app.md#nkaix) | Aplicação: AM Gestão e as suítes AM | ameaças do AM Gestão |
 | → envia para | [Dependabot + CodeQL](12-nuvem.md#dbot) | Nuvem, código e entrega | CodeQL |
 
 <a id="escopo"></a>

@@ -44,7 +44,7 @@ xychart-beta
 
 ## Tendências
 
-- **Engenharia de IA e agentes:** Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, Microsoft.Extensions.AI, MCP e os agentes do Claude Code.
+- **Engenharia de IA e agentes:** Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, SDK de IA em TypeScript, MCP e os agentes do Claude Code.
 - **Arquitetura de software:** 32% esperam mais demanda por arquitetos. Você já está no caminho certo com Clean Architecture, DDD e ADRs; falta mensageria e sistemas distribuídos.
 - **Plataforma e DevOps:** Kubernetes, Terraform, CI/CD e observabilidade aparecem em vaga pleno e sênior. Docker sozinho já é obrigatório.
 - **DevSecOps e LGPD:** Segurança dentro do pipeline (CodeQL, Trivy, gitleaks) e cuidado com dados pessoais. Combina com sua pós em cibersegurança.

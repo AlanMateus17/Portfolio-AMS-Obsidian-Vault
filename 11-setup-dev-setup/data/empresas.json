@@ -1,0 +1,584 @@
+{
+  "_comment": "As 6 empresas do Grupo AMtech Digital (marcas no plano; CNPJ só quando cada uma faturar), cada uma com produtos principais no raciocínio do AM Gestão: um produto junta componentes e é vendido em pacotes. Componentes são ofertas do portfolio.json (ou sistemas do softwares.json). Gera docs/empresas.md e as vitrines para clientes em docs/vitrines/ (tools/empresas/empresas.py). Decisões do Alan em 20/11/2026.",
+  "grupo": "Grupo AMtech Digital",
+  "regra": "Uma empresa por área, para nada ficar confuso; CNPJ próprio só quando a empresa faturar (confirmar com contador). As marcadas como 'software primeiro' começam vendendo software e conteúdo digital e só viram empresa física quando o software provar demanda; a decisão é do Alan.",
+  "empresas": [
+    {
+      "id": "software",
+      "nome": "AMtech Software",
+      "estado": "ativa",
+      "etapa": 1,
+      "frentes": [
+        "software",
+        "servicos"
+      ],
+      "faz": "Sistemas que organizam o caixa, os pedidos e o financeiro de pequenos negócios, mais ferramentas para desenvolvedores",
+      "para_quem": "Restaurantes, lojas, quem vende online, prestadores de serviço, escolas e pequenas equipes",
+      "problema": "O dono do pequeno negócio controla vendas, pedidos e contas em cadernos, planilhas soltas e vários aplicativos que não conversam; perde venda, erra estoque e não sabe se teve lucro no mês.",
+      "produtos": [
+        {
+          "id": "am-gestao",
+          "nome": "AM Gestão",
+          "estado": "MVP em construção; começa pela planilha do financeiro",
+          "resolve": "Caixa, pedidos e financeiro num sistema só: a venda do balcão e a do delivery caem no mesmo caixa, baixam o estoque e aparecem no resultado do mês.",
+          "componentes": [
+            "rendara",
+            "kaixara",
+            "rotara",
+            "whitelabel",
+            "licencadelivery"
+          ],
+          "suite": "am-gestao",
+          "pacotes": [
+            {
+              "nome": "Caixa",
+              "inclui": "PDV, estoque e fechamento do dia"
+            },
+            {
+              "nome": "Caixa + Financeiro",
+              "inclui": "o Caixa mais contas a pagar e receber, fluxo de caixa e resultado do mês"
+            },
+            {
+              "nome": "Integrado",
+              "inclui": "Caixa, pedidos e entregas, e financeiro"
+            },
+            {
+              "nome": "Integrado + Loja online",
+              "inclui": "o Integrado mais a loja virtual"
+            },
+            {
+              "nome": "Pedidos com a sua marca",
+              "inclui": "aplicativo de pedidos com a marca do seu negócio"
+            }
+          ]
+        },
+        {
+          "id": "am-servicos",
+          "nome": "AM Serviços (nome provisório)",
+          "suite": "am-servicos",
+          "estado": "depois do AM Gestão vender",
+          "resolve": "Agenda, ordem de serviço e histórico do cliente para quem vende serviço: ninguém esquece o horário, o orçamento vira ordem de serviço e o cliente acompanha o conserto.",
+          "componentes": [],
+          "pacotes": [
+            {
+              "nome": "Agenda",
+              "inclui": "agendamento online e lembretes ao cliente"
+            },
+            {
+              "nome": "Assistência",
+              "inclui": "agenda, orçamento e ordem de serviço com acompanhamento"
+            },
+            {
+              "nome": "Pet",
+              "inclui": "agenda e prontuário veterinário"
+            }
+          ]
+        },
+        {
+          "id": "am-escola",
+          "nome": "AM Escola (nome provisório)",
+          "suite": "am-escola",
+          "estado": "depois do AM Serviços",
+          "resolve": "Gestão da escola, exercícios com correção, plataforma de cursos e documentos do professor num lugar só.",
+          "componentes": [],
+          "pacotes": [
+            {
+              "nome": "Professor",
+              "inclui": "exercícios com correção e documentos escolares"
+            },
+            {
+              "nome": "Escola",
+              "inclui": "gestão escolar e exercícios"
+            },
+            {
+              "nome": "Curso online",
+              "inclui": "plataforma de cursos e exercícios"
+            }
+          ]
+        },
+        {
+          "id": "am-projetos",
+          "nome": "AM Projetos (nome provisório)",
+          "suite": "am-projetos",
+          "estado": "depois do AM Escola",
+          "resolve": "Quadro de tarefas, controle de obra e diagnóstico de arquitetura por IA para equipes pequenas.",
+          "componentes": [
+            "taskoro",
+            "amobra"
+          ],
+          "pacotes": [
+            {
+              "nome": "Quadro",
+              "inclui": "Kanban e Scrum"
+            },
+            {
+              "nome": "Obra",
+              "inclui": "quadro e controle de obra"
+            },
+            {
+              "nome": "Software house",
+              "inclui": "quadro e diagnóstico de arquitetura por IA"
+            }
+          ]
+        },
+        {
+          "id": "kit-dev",
+          "nome": "Kit Dev",
+          "estado": "fila (onda 2)",
+          "resolve": "Começar um projeto já com o esqueleto profissional pronto: templates, componentes e automações testadas, em vez de semanas montando do zero.",
+          "componentes": [
+            "templatesint",
+            "uikits",
+            "pluginwp",
+            "n8ntemplates",
+            "setuppro",
+            "amtechos"
+          ],
+          "pacotes": [
+            {
+              "nome": "Avulso",
+              "inclui": "um template ou kit"
+            },
+            {
+              "nome": "Pacote dev",
+              "inclui": "todos os templates e kits"
+            },
+            {
+              "nome": "Setup profissional",
+              "inclui": "o pacote dev com configuração remota do ambiente"
+            }
+          ]
+        },
+        {
+          "id": "sob-demanda-software",
+          "nome": "Sob demanda (renda ativa)",
+          "estado": "só o que o cliente pedir, sem prospectar",
+          "resolve": "Site, sistema ou automação feitos sob medida, com manutenção e conferência de segurança.",
+          "componentes": [
+            "sites",
+            "encomenda",
+            "auditsites",
+            "automacaoia",
+            "remoto",
+            "agencialocal"
+          ],
+          "pacotes": [
+            {
+              "nome": "Site",
+              "inclui": "site no ar, no nome do cliente"
+            },
+            {
+              "nome": "Site + manutenção",
+              "inclui": "o site com atualização e laudo mensal"
+            },
+            {
+              "nome": "Site + sistema",
+              "inclui": "o site com um sistema sob medida"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "instituto",
+      "nome": "Instituto AMS Silva",
+      "estado": "ativa",
+      "etapa": 1,
+      "frentes": [
+        "educacao"
+      ],
+      "faz": "Cursos, exercícios e materiais para quem aprende e para quem ensina tecnologia",
+      "para_quem": "Quem está começando em programação, estudantes de cursos técnicos, concurseiros de TI e professores",
+      "problema": "Quem começa em programação trava na lógica, estuda por vídeos soltos sem ordem e não tem como saber se aprendeu de verdade; o professor passa as noites montando aula e preenchendo documento.",
+      "produtos": [
+        {
+          "id": "trilha-logica",
+          "nome": "Trilha Lógica",
+          "estado": "agora (mini-curso)",
+          "resolve": "Aprender lógica de programação do zero, com explicação, exercícios corrigidos, revisão espaçada e simulados no estilo dos concursos.",
+          "componentes": [
+            "minicurso",
+            "ammentor",
+            "anki",
+            "simulados",
+            "questoes",
+            "udemy"
+          ],
+          "pacotes": [
+            {
+              "nome": "Mini-curso",
+              "inclui": "as aulas de lógica"
+            },
+            {
+              "nome": "Mini-curso + exercícios",
+              "inclui": "as aulas e o banco de exercícios com correção"
+            },
+            {
+              "nome": "Completo",
+              "inclui": "aulas, exercícios, baralhos Anki e simulados"
+            }
+          ]
+        },
+        {
+          "id": "formacoes",
+          "nome": "Formações",
+          "estado": "onda 3",
+          "resolve": "Um caminho inteiro e organizado, disciplina por disciplina, em vez de cursos soltos.",
+          "componentes": [
+            "formti",
+            "formmat",
+            "financas",
+            "cursoseg",
+            "comunidade",
+            "dublagem"
+          ],
+          "pacotes": [
+            {
+              "nome": "Disciplina avulsa",
+              "inclui": "uma disciplina"
+            },
+            {
+              "nome": "Formação",
+              "inclui": "a formação inteira"
+            },
+            {
+              "nome": "Assinatura",
+              "inclui": "todas as formações e a comunidade"
+            }
+          ]
+        },
+        {
+          "id": "para-professores",
+          "nome": "Para professores",
+          "estado": "onda 2",
+          "resolve": "Aula pronta e documento escolar preenchido e conferido, para o professor recuperar as noites.",
+          "componentes": [
+            "aulasprof",
+            "fabricaprof",
+            "abnt-auto",
+            "docs-escolas",
+            "abnt"
+          ],
+          "pacotes": [
+            {
+              "nome": "Professor",
+              "inclui": "aulas prontas e fábrica de documentos"
+            },
+            {
+              "nome": "Escola",
+              "inclui": "o pacote professor para toda a equipe"
+            }
+          ]
+        },
+        {
+          "id": "catalogo-html",
+          "nome": "Catálogo do HTML (gratuito)",
+          "estado": "no ar",
+          "resolve": "Criar e publicar o primeiro site com HTML, CSS e JavaScript, de graça: é a porta de entrada dos alunos.",
+          "componentes": [
+            "catalogo"
+          ],
+          "pacotes": []
+        },
+        {
+          "id": "sob-demanda-instituto",
+          "nome": "Sob demanda (renda ativa)",
+          "estado": "só o que chegar",
+          "resolve": "Aula particular e workshop sob medida.",
+          "componentes": [
+            "aulas",
+            "workshop"
+          ],
+          "pacotes": [
+            {
+              "nome": "Aula avulsa",
+              "inclui": "uma aula"
+            },
+            {
+              "nome": "Pacote de aulas",
+              "inclui": "aulas por mês"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "midia",
+      "nome": "AMtech Mídia",
+      "estado": "ativa",
+      "etapa": 1,
+      "frentes": [
+        "midia",
+        "economia"
+      ],
+      "faz": "Canais de conteúdo sobre programação, ferramentas e finanças, e ferramentas de finanças",
+      "para_quem": "Quem quer aprender programação, montar um bom ambiente de trabalho ou organizar o próprio dinheiro; marcas que querem falar com esse público",
+      "problema": "Conteúdo bom de programação e finanças em português é espalhado e superficial; e marcas de tecnologia não acham canais sérios para anunciar.",
+      "produtos": [
+        {
+          "id": "rede-de-canais",
+          "nome": "Rede de canais",
+          "estado": "agora",
+          "resolve": "Três canais sem rosto com conteúdo direto: Primer Code (lógica e programação), Bancada Dev (setup e ferramentas) e um canal de finanças (nome a definir).",
+          "componentes": [
+            "dark",
+            "monetizacao",
+            "afiliados",
+            "newsletter"
+          ],
+          "pacotes": [
+            {
+              "nome": "Patrocínio de 1 vídeo",
+              "inclui": "menção num vídeo"
+            },
+            {
+              "nome": "Vídeo + newsletter",
+              "inclui": "o vídeo e uma edição da newsletter"
+            },
+            {
+              "nome": "Mês inteiro",
+              "inclui": "presença em todos os canais por um mês"
+            }
+          ]
+        },
+        {
+          "id": "kit-financas",
+          "nome": "Kit Finanças",
+          "estado": "onda 1",
+          "resolve": "Decidir com números: calculadoras (CLT x PJ, MEI, financiamento), modelos de fluxo de caixa e DRE, e plano de negócios.",
+          "componentes": [
+            "calculadoras",
+            "modelosfin",
+            "planonegocio"
+          ],
+          "pacotes": [
+            {
+              "nome": "Avulso",
+              "inclui": "uma ferramenta"
+            },
+            {
+              "nome": "Kit completo",
+              "inclui": "todas as ferramentas"
+            }
+          ]
+        },
+        {
+          "id": "canal-com-rosto",
+          "nome": "Canal com rosto",
+          "estado": "onda 2",
+          "resolve": "Mostrar a construção do Grupo AMtech em público.",
+          "componentes": [
+            "buildpublic"
+          ],
+          "pacotes": []
+        }
+      ]
+    },
+    {
+      "id": "maker",
+      "nome": "AMtech Maker",
+      "estado": "software-primeiro",
+      "etapa": 4,
+      "frentes": [
+        "campo"
+      ],
+      "faz": "Robótica, automação e tecnologia instalada na casa, no comércio e no sítio",
+      "para_quem": "Casas, comércios, sítios e escolas",
+      "problema": "Automação e robótica parecem caras e complicadas; o comércio e o sítio dependem de alguém de confiança para instalar, consertar e manter os equipamentos.",
+      "fase1": "Digital: automações prontas (Home Assistant, ESP32), projetos de robótica e curso de robótica",
+      "fase2": "Kits e placas físicos, aluguel de kits, oficinas para escolas, assistência técnica, serviços presenciais e a loja com ponto de retirada",
+      "gatilho": "100 vendas do digital, 3 escolas pedindo oficina ou 20 assistências e lojas pagando o software",
+      "produtos": [
+        {
+          "id": "maker-digital",
+          "nome": "Maker Digital",
+          "estado": "fase 1, quando o estudo chegar em ESP32 e Raspberry Pi",
+          "resolve": "Automação de casa e de pequeno negócio feita por você mesmo, com projeto e código prontos e testados.",
+          "componentes": [
+            "maker"
+          ],
+          "pacotes": [
+            {
+              "nome": "Projeto avulso",
+              "inclui": "um projeto com código e lista de peças"
+            },
+            {
+              "nome": "Casa inteligente digital",
+              "inclui": "o conjunto de automações para a casa"
+            },
+            {
+              "nome": "Com curso",
+              "inclui": "as automações e o curso de robótica"
+            }
+          ]
+        },
+        {
+          "id": "kits",
+          "nome": "Kits",
+          "estado": "fase 2",
+          "resolve": "Robótica na escola e em casa sem montar tudo do zero.",
+          "componentes": [
+            "kitstindie",
+            "aluguelkits",
+            "oficinas"
+          ],
+          "pacotes": [
+            {
+              "nome": "Kit",
+              "inclui": "kit montável"
+            },
+            {
+              "nome": "Kit + curso",
+              "inclui": "o kit e o curso"
+            },
+            {
+              "nome": "Escola",
+              "inclui": "aluguel de kits e oficina"
+            }
+          ]
+        },
+        {
+          "id": "campo",
+          "nome": "Campo",
+          "estado": "fase 2",
+          "resolve": "Alguém de confiança para consertar, instalar e manter computadores, redes, câmeras e automação.",
+          "componentes": [
+            "assist",
+            "pecas",
+            "recuperacao",
+            "pcmontado",
+            "redescftv",
+            "casainteligente",
+            "agrotec"
+          ],
+          "pacotes": [
+            {
+              "nome": "Avulso",
+              "inclui": "um atendimento"
+            },
+            {
+              "nome": "Plano mensal",
+              "inclui": "manutenção e suporte por mês"
+            },
+            {
+              "nome": "Instalação + monitoramento",
+              "inclui": "instalação com acompanhamento mensal"
+            }
+          ]
+        },
+        {
+          "id": "loja",
+          "nome": "Loja",
+          "estado": "fase 2",
+          "resolve": "Um balcão para deixar e buscar o conserto, retirar pacotes da Shopee e do Mercado Livre e ver os kits.",
+          "componentes": [
+            "ponto"
+          ],
+          "pacotes": []
+        }
+      ]
+    },
+    {
+      "id": "logistica",
+      "nome": "AM Logística",
+      "estado": "software-primeiro",
+      "etapa": 3,
+      "frentes": [
+        "logistica"
+      ],
+      "faz": "Pedidos e entregas para os lojistas da cidade",
+      "para_quem": "Lojistas, restaurantes e motoboys",
+      "problema": "O lojista paga até 23% de comissão aos aplicativos de delivery e não tem entrega própria; o motoboy não tem um sistema de rotas.",
+      "fase1": "O módulo Pedidos e o app de delivery com a marca do cliente (do AM Gestão), vendidos a lojistas e motoboys",
+      "fase2": "Empresa de entregas com frota (Flex, coleta e rotas) e o AM Delivery da cidade",
+      "gatilho": "30 lojistas usando o Pedidos e 1.000 entregas por mês passando pelo sistema",
+      "produtos": [
+        {
+          "id": "am-entregas",
+          "nome": "AM Entregas",
+          "estado": "fase 2",
+          "resolve": "Entrega de moto e carro para empresas e coleta para os marketplaces, com rota e prova de entrega.",
+          "componentes": [
+            "entregas"
+          ],
+          "pacotes": [
+            {
+              "nome": "Por entrega",
+              "inclui": "cada entrega"
+            },
+            {
+              "nome": "Contrato mensal",
+              "inclui": "rotas fixas"
+            }
+          ]
+        },
+        {
+          "id": "am-delivery",
+          "nome": "AM Delivery",
+          "estado": "fase 2",
+          "resolve": "Um app de pedidos da cidade com comissão menor que a dos grandes aplicativos.",
+          "componentes": [
+            "delivery"
+          ],
+          "pacotes": [
+            {
+              "nome": "Lojista no app",
+              "inclui": "presença no app"
+            },
+            {
+              "nome": "Lojista + entregas",
+              "inclui": "app e entrega"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "editora",
+      "nome": "Editora AMS Silva",
+      "estado": "pausada",
+      "etapa": 5,
+      "frentes": [
+        "editora"
+      ],
+      "faz": "Livros didáticos de tecnologia (ver docs/editora/livros.md)",
+      "para_quem": "Estudantes do ensino médio e da faculdade, profissionais, professores e concurseiros de TI",
+      "problema": "Livro de TI em português que vá da lógica e da matemática até a máquina, com rigor, exercícios resolvidos e um caminho só, quase não existe.",
+      "produtos": [
+        {
+          "id": "colecao-logica-e-maquina",
+          "nome": "Coleção Lógica e Máquina",
+          "estado": "pausada: capítulos sendo estruturados",
+          "resolve": "Aprender TI de verdade, da lógica à máquina, num caminho único com exercícios para prova e para o trabalho.",
+          "componentes": [
+            "livro",
+            "kitlivro",
+            "adocao",
+            "traducao"
+          ],
+          "pacotes": [
+            {
+              "nome": "Volume avulso",
+              "inclui": "um volume"
+            },
+            {
+              "nome": "Coleção",
+              "inclui": "os 6 volumes"
+            },
+            {
+              "nome": "Edição do professor",
+              "inclui": "volumes com gabarito e material de aula"
+            },
+            {
+              "nome": "Adoção escolar",
+              "inclui": "licença por aluno"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "fora": {
+    "patrimonio": "Finanças pessoais (cascata e ARCA): não é empresa do grupo"
+  }
+}

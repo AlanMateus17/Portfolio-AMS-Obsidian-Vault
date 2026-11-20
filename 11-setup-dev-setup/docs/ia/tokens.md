@@ -63,7 +63,7 @@ Não. Dar tudo de antemão gasta token (entra texto) e cansa você. O setup trab
 
 1. **Você dá o essencial** e o resto a IA **assume por padrão**, dizendo o que assumiu: *"assumi pé-direito 2,70 m, parede 15 cm, porta 80 cm — mude se quiser"*.
 2. **Você corrige só o que está errado.** Uma frase de correção custa quase nada; a descrição completa custaria muito.
-3. **A IA reúsa o que já sabe de você:** preferências salvas, a stack por problema (.NET, PostgreSQL), as regras do repositório e os seus projetos. Ela não pergunta de novo o que já está escrito no setup.
+3. **A IA reúsa o que já sabe de você:** preferências salvas, a stack por problema (TypeScript, Python, PostgreSQL), as regras do repositório e os seus projetos. Ela não pergunta de novo o que já está escrito no setup.
 
 Então "criar da forma mais perfeita possível" não vem de você descrever tudo; vem de um primeiro rascunho com padrões sensatos, que você corrige em uma ou duas frases, rodando o gerador a cada ajuste. Isso é mais rápido, mais barato e dá um resultado melhor do que tentar acertar tudo na primeira descrição.
 
@@ -91,10 +91,10 @@ Versão de modelo não se escreve em documento: fica no gateway LiteLLM e em [cu
 ## Ferramentas
 
 ```bash
-python3 ~/dev/dev-setup/tools/ia/tokens.py rota "revisar a arquitetura do AM Kaixara"   # qual IA usar
+python3 ~/dev/dev-setup/tools/ia/tokens.py rota "revisar a arquitetura do AM Gestão"   # qual IA usar
 python3 ~/dev/dev-setup/tools/ia/tokens.py tamanho aula.md                               # estima os tokens
 python3 ~/dev/dev-setup/tools/ia/cabe.py 32                                              # cabe um modelo local?
-just arquiteto "módulo de aporte do AM Rendara"                                          # pacote curto para o Claude
+just arquiteto "módulo Financeiro do AM Gestão"                                          # pacote curto para o Claude
 ```
 
 O teto de gasto real fica no gateway LiteLLM (`infra/ia`) e no ai-usagebar; a tabela de rotas por tarefa está em [recursos.md](../recursos.md) e em [custos.md](../custos.md). A regra nº 1 — pedir o script, não o resultado — vale para todo agente do setup e está nas regras da IA.

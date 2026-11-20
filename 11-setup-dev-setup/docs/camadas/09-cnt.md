@@ -46,7 +46,7 @@ flowchart LR
     n_coolify["Coolify (apps de cliente em VPS)"]
     n_gcp["Google Cloud"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_ai["IA: RAG + pgvector"]
     n_api["API TypeScript (Next/NestJS)"]
     n_ef["Prisma/Drizzle + PostgreSQL"]
@@ -151,18 +151,18 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Caddy (proxy + HTTPS)](#caddy) | Local | Fica na frente das APIs e emite o certificado HTTPS sozinho. Usado no servidor e no homelab. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [Mailpit](#mailp) | Local | Caixa de e-mail falsa para testar os e-mails dos sistemas sem enviar nada de verdade. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [Caddy (proxy + HTTPS)](#caddy) | Local | Fica na frente das APIs e emite o certificado HTTPS sozinho. Usado no servidor e no homelab. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| [Mailpit](#mailp) | Local | Caixa de e-mail falsa para testar os e-mails dos sistemas sem enviar nada de verdade. | passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | [Kafka](#kafka) | Local · futuro | Mensageria padrão em empresa grande. Depois do RabbitMQ. | passo 55.1 · 2028 |
 | [kubectl · Helm · k9s](#k8st) | Local · futuro | Ferramentas para operar o Kubernetes: comandos, pacotes e painel no terminal. | passo 55.2 · 2028 |
-| [Azure CLI · AWS CLI](#clis) | Local | Linha de comando das nuvens; usadas pelo Terraform. | passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| [Azure CLI · AWS CLI](#clis) | Local | Linha de comando das nuvens; usadas pelo Terraform. | passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | [Histórico (append-only)](#datomic) | Local · futuro | Cortado: aura-historico foi arquivado; histórico vira tabela append-only no PostgreSQL. | passo 51.4 · 2027 (começa quando: o primeiro sistema AM pronto e testado com um cliente) |
 | [Docker + Compose](#docker) | Local | Engine no WSL2; um compose por sistema. | passo 4.2 · Semana 2 · nov/2026; passo 10.2 · Semana 4 · nov/2026 |
-| [PostgreSQL](#pg) | Local | Banco de todos os sistemas (com pgvector para IA). | passo 10.2 · Semana 4 · nov/2026; passo 22.5 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| [Redis](#redis) | Local | Cache (opcional, quando precisar de verdade). | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| [PostgreSQL](#pg) | Local | Banco de todos os sistemas (com pgvector para IA). | passo 10.2 · Semana 4 · nov/2026; passo 22.5 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| [Redis](#redis) | Local | Cache (opcional, quando precisar de verdade). | passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | [RabbitMQ](#rmq) | Local · futuro | Fila de eventos entre sistemas. | passo 55.1 · 2028 |
 | [Kubernetes local (kind)](#kind) | Local · futuro | Treino de Kubernetes sem pagar nuvem. | passo 55.2 · 2028 |
-| [Terraform](#tf) | Local | Cria Azure, AWS e Cloudflare por código. | passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); passo 42.3 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| [Terraform](#tf) | Local | Cria Azure, AWS e Cloudflare por código. | passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante); passo 42.3 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | [Mosquitto (MQTT)](#mqtt) | Local | Barramento da casa: Zigbee2MQTT, Frigate, leitor do hidrômetro e os robôs publicam e recebem comandos por aqui, com usuário e senha. | passo 60.2 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | [Zigbee2MQTT](#z2m) | Local · futuro | Liga o coordenador Zigbee ao MQTT; aceita aparelhos de várias marcas sem o app de cada uma. | passo 60.7 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | [Frigate (câmeras com detecção)](#frigate) | Local · futuro | Grava e detecta pessoas, carros e animais localmente; manda eventos ao Home Assistant. Imagem nunca vai para IA na nuvem. | passo 60.9 · Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
@@ -176,11 +176,11 @@ flowchart LR
 
 Fica na frente das APIs e emite o certificado HTTPS sozinho. Usado no servidor e no homelab.
 
-**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | HTTPS |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | HTTPS |
 
 <a id="mailp"></a>
 
@@ -190,11 +190,11 @@ Fica na frente das APIs e emite o certificado HTTPS sozinho. Usado no servidor e
 
 Caixa de e-mail falsa para testar os e-mails dos sistemas sem enviar nada de verdade.
 
-**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.3 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | SMTP de teste |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | SMTP de teste |
 | ← recebe de | [Docker + Compose](09-cnt.md#docker) | Containers, Kubernetes e infra como código | container |
 
 <a id="kafka"></a>
@@ -210,7 +210,7 @@ Mensageria padrão em empresa grande. Depois do RabbitMQ.
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Spark (PySpark)](06-dados.md#spark) | Dados e treino de IA | streaming |
-| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | eventos |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | eventos |
 
 <a id="k8st"></a>
 
@@ -234,7 +234,7 @@ Ferramentas para operar o Kubernetes: comandos, pacotes e painel no terminal.
 
 Linha de comando das nuvens; usadas pelo Terraform.
 
-**Quando entra:** passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -253,7 +253,7 @@ Cortado: aura-historico foi arquivado; histórico vira tabela append-only no Pos
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Módulos do AM Gestão](11-app.md#shared) | Aplicação: sistemas AM (Aura) | histórico (Postgres) |
+| → envia para | [Módulos do AM Gestão](11-app.md#shared) | Aplicação: AM Gestão e as suítes AM | histórico (Postgres) |
 
 <a id="docker"></a>
 
@@ -295,19 +295,19 @@ Engine no WSL2; um compose por sistema.
 
 Banco de todos os sistemas (com pgvector para IA).
 
-**Quando entra:** passo 10.2 · Semana 4 · nov/2026; passo 22.5 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 10.2 · Semana 4 · nov/2026; passo 22.5 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | ← recebe de | [DBeaver · Bruno](03-win.md#dbv) | Windows 11, apps e máquinas virtuais | porta 5432 |
 | ← recebe de | [Servidores MCP](05-ia.md#mcp) | Agentes de IA e sandbox | leitura do banco de dev |
 | ← recebe de | [Base de conhecimento (RAG) das suas notas](05-ia.md#rag) | Agentes de IA e sandbox | pgvector |
-| ← recebe de | [Prisma/Drizzle + PostgreSQL](11-app.md#ef) | Aplicação: sistemas AM (Aura) | driver pg |
-| ← recebe de | [Multi-tenant (RLS)](11-app.md#rls) | Aplicação: sistemas AM (Aura) | políticas |
-| ← recebe de | [PostGIS + MapLibre](11-app.md#gis) | Aplicação: sistemas AM (Aura) | extensão |
+| ← recebe de | [Prisma/Drizzle + PostgreSQL](11-app.md#ef) | Aplicação: AM Gestão e as suítes AM | driver pg |
+| ← recebe de | [Multi-tenant (RLS)](11-app.md#rls) | Aplicação: AM Gestão e as suítes AM | políticas |
+| ← recebe de | [PostGIS + MapLibre](11-app.md#gis) | Aplicação: AM Gestão e as suítes AM | extensão |
 | ← recebe de | [Docker + Compose](09-cnt.md#docker) | Containers, Kubernetes e infra como código | container |
-| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | driver pg |
-| ← recebe de | [IA: RAG + pgvector](11-app.md#ai) | Aplicação: sistemas AM (Aura) | pgvector |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | driver pg |
+| ← recebe de | [IA: RAG + pgvector](11-app.md#ai) | Aplicação: AM Gestão e as suítes AM | pgvector |
 | ← recebe de | [harlequin (SQL no terminal)](04-lin.md#harlequin) | Linux (Ubuntu no WSL2, Arch no 2º disco) | consulta o Postgres |
 
 <a id="redis"></a>
@@ -318,13 +318,13 @@ Banco de todos os sistemas (com pgvector para IA).
 
 Cache (opcional, quando precisar de verdade).
 
-**Quando entra:** passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.1 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| ← recebe de | [Supabase Realtime](11-app.md#sig) | Aplicação: sistemas AM (Aura) | backplane |
+| ← recebe de | [Supabase Realtime](11-app.md#sig) | Aplicação: AM Gestão e as suítes AM | backplane |
 | ← recebe de | [Docker + Compose](09-cnt.md#docker) | Containers, Kubernetes e infra como código | container |
-| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | cache |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | cache |
 
 <a id="rmq"></a>
 
@@ -339,7 +339,7 @@ Fila de eventos entre sistemas.
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | ← recebe de | [Docker + Compose](09-cnt.md#docker) | Containers, Kubernetes e infra como código | container |
-| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | eventos |
+| ← recebe de | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | eventos |
 
 <a id="kind"></a>
 
@@ -364,7 +364,7 @@ Treino de Kubernetes sem pagar nuvem.
 
 Cria Azure, AWS e Cloudflare por código.
 
-**Quando entra:** passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); passo 42.3 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 42.1 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante); passo 42.3 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

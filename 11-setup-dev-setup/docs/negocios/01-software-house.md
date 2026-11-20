@@ -11,7 +11,7 @@ Desenvolvimento de software para terceiros, ferramentas, SaaS e plataformas. É 
 | **Sites e lojas para pequenas empresas** | Pacote fechado (R$ 1.500), entrega em 2 semanas | Venda rápida em Barbacena, gera caixa e portfólio |
 | **Sistemas sob encomenda** | Escopo + 50% de entrada + entregas quinzenais | Ticket alto; cada projeto vira peça reaproveitável |
 | **Manutenção e hospedagem** | Mensalidade (R$ 250) depois de cada entrega | Receita recorrente que sustenta os meses fracos |
-| **SaaS AM** | Assinatura por Pix Automático (R$ 149) | AM Kaixara (PDV), AM Rotara (entregas), AM Rendara (finanças), testados primeiro nos negócios do grupo |
+| **SaaS AM** | Assinatura por Pix Automático (R$ 149) | AM Gestão (Caixa, Pedidos e Financeiro), vendido em pacotes; testado primeiro em clientes que já procuram |
 
 A regra de ouro: **todo projeto sob encomenda deixa um módulo para o SaaS.** O contrato garante que você mantém a propriedade do código-base genérico e o cliente recebe licença de uso, salvo quando ele pagar pela exclusividade.
 
@@ -29,7 +29,7 @@ flowchart LR
 
 - **Contrato padrão** com escopo, critério de aceite, propriedade intelectual, LGPD (você é operador dos dados do cliente) e multa por atraso de pagamento.
 - **Preço pelo valor, não pela hora**, mas com a hora como piso: estime as horas, multiplique pelo seu valor-hora mínimo (comece em R$ 80) e compare com o valor que o sistema gera para o cliente.
-- **Stack fixa do setup:** .NET 10, PostgreSQL, Next.js, Docker, GitHub Actions, Azure. Tudo multi-tenant com RLS desde o início, para virar SaaS sem reescrever.
+- **Stack do setup (ADR 0017):** TypeScript (Next.js/NestJS), Python, PostgreSQL (Supabase), Docker, GitHub Actions, Vercel + VPS. Tudo multi-tenant com RLS desde o início, para virar SaaS sem reescrever.
 
 ## Fator R: o detalhe que muda o imposto de 15,5% para 6%
 
