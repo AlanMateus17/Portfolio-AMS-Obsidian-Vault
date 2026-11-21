@@ -64,7 +64,7 @@ class TestNucleo(unittest.TestCase):
         self.assertEqual(total, n["adr"] + n["recusa"])
 
     def test_contexto_curto(self):
-        nucleo.lembrar(self.con, "Deploy do AM Rendara vai para a VM da Oracle pelo Kamal. " * 20, tipo="licao")
+        nucleo.lembrar(self.con, "Deploy do AM Gestão · Financeiro vai para a VM da Oracle pelo Kamal. " * 20, tipo="licao")
         txt = nucleo.contexto(self.con, "deploy rendara")
         self.assertTrue(txt.startswith("- [licao]"))
         self.assertLess(len(txt), 450)

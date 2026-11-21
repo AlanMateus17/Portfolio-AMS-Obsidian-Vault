@@ -42,7 +42,7 @@ Anote no vault o que faltou ou incomodou durante uma semana de uso. É isso que 
 
 | Perfil | Para quem | Traz |
 |---|---|---|
-| `dev` (padrão) | Você e quem programa | Base + Docker, Podman, KVM, Neovim e o preparador do dev-setup (.NET, Node, Python, Claude Code, ai-jail...) |
+| `dev` (padrão) | Você e quem programa | Base + Docker, Podman, KVM, Neovim e o preparador do dev-setup (Node, Python, Claude Code, ai-jail e o .NET de reserva...) |
 | `escola` | Laboratório de informática | Base + LibreOffice, Thonny, Okular |
 | `empresa` | Pequenos negócios | Base + LibreOffice, backup (Déjà Dup), acesso remoto (Remmina) |
 | `seguranca` | Estudo de pentest | Base + nmap, Wireshark, Lynis, rkhunter, USBGuard (desligado), KVM e o dev-setup |

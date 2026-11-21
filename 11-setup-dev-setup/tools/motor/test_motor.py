@@ -20,7 +20,7 @@ class Escada(unittest.TestCase):
         self.assertEqual(self.d("publicar o site novo do cliente", REC)["degrau"], 5)
 
     def test_pronto_no_catalogo(self):
-        r = self.d("site novo para a padaria", REC)
+        r = self.d("site novo para o pet shop", REC)
         self.assertEqual(r["degrau"], 1)
         self.assertTrue(r["pronto_no_setup"])
 

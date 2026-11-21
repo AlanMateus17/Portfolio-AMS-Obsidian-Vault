@@ -42,8 +42,8 @@ flowchart LR
     n_azure["Azure"]
     n_ghproj["Projects · ADRs · MkDocs"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
-    n_nkaix["AM Kaixara (PDV e cardápio)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
+    n_nkaix["AM Gestão · Caixa (PDV e cardápio)"]
   end
   subgraph L_chat["Assistentes de IA (chat, pesquisa e estudo)"]
     n_copi["GitHub Copilot"]
@@ -120,7 +120,7 @@ flowchart LR
 | [Crackmes (OWASP MAS, crackmes.one)](#crackmes) | Remoto | Desafios de engenharia reversa feitos para serem quebrados: o treino legal do laboratório. | passo 59.2 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | [BugHunt · HackerOne (bug bounty)](#bbplat) | Remoto · precisa de conta | Programas públicos de bug bounty com escopo e regras escritas: o primeiro histórico e a primeira renda de segurança. | passo 59.15 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | [Compiler Explorer (godbolt)](#godbolt) | Remoto | C de um lado, assembly do outro, no navegador: a aula de Arquitetura de Computadores sem instalar nada. | passo 59.2 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| [Repositórios de referência](#refarq) | Remoto | dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Kaixara e registrar em ADR. | passo 59.12 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
+| [Repositórios de referência](#refarq) | Remoto | dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Gestão e registrar em ADR. | passo 59.12 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | [Escola Akita (regras com seu ok)](#akita) | Local | O blog e os episódios do Akitando (transcrições no próprio blog) viram notas no Obsidian e regras com outras palavras e link da fonte. O texto original fica só na sua máquina; regra só muda o setup depois do seu ok, por PR. | passo 26.1 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; passo 26.2 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; passo 26.3 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; passo 26.4 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; passo 26.5 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último; passo 26.6 · Nov/2026 em diante: a era da IA (191 posts) primeiro, os episódios do Akitando depois, o histórico por último |
 | [Professor do setup (aula e revisão)](#professor) | Local | Currículo do eixo e do próprio setup: aula estruturada em blocos de 25 min, prática no setup, prova corrigida com rubrica, revisão espaçada e cartões para o Anki. Aulas geradas uma vez e guardadas no Obsidian. | passo 25.1 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.2 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.3 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.4 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.5 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.6 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.7 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.8 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre; passo 25.9 · Todo dia, nas 3 h de estudo do plano do eixo; o currículo cresce a cada trimestre |
 
@@ -319,13 +319,13 @@ C de um lado, assembly do outro, no navegador: a aula de Arquitetura de Computad
 
 *Remoto*
 
-dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Kaixara e registrar em ADR.
+dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Gestão e registrar em ADR.
 
 **Quando entra:** passo 59.12 · Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [AM Kaixara (PDV e cardápio)](11-app.md#nkaix) | Aplicação: sistemas AM (Aura) | comparar arquitetura |
+| → envia para | [AM Gestão · Caixa (PDV e cardápio)](11-app.md#nkaix) | Aplicação: AM Gestão e as suítes AM | comparar arquitetura |
 | → envia para | [Projects · ADRs · MkDocs](12-nuvem.md#ghproj) | Nuvem, código e entrega | vira ADR |
 
 <a id="akita"></a>

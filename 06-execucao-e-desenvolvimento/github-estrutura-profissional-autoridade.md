@@ -45,7 +45,7 @@ Diferente dos sistemas (1 repositório por sistema, seção 2), os exercícios d
 
 
 
-Com 21 sistemas documentados mas só o AM Kaixara em código, criar 40+ repositórios vazios agora seria o oposto de profissional — pareceria abandono, não ambição. Regra simples: **repositório só nasce quando o primeiro commit real está pronto pra subir**, não quando o planejamento termina.
+Com 21 sistemas documentados mas só o AM Gestão · Caixa em código, criar 40+ repositórios vazios agora seria o oposto de profissional — pareceria abandono, não ambição. Regra simples: **repositório só nasce quando o primeiro commit real está pronto pra subir**, não quando o planejamento termina.
 
 O que existe desde já, independente disso:
 

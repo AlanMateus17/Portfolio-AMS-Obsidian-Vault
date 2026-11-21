@@ -27,7 +27,7 @@ No cenário-alvo, a taxa de entrega é 60% da receita e só 9% da margem: quase 
 
 "Dominar o mercado" contra o iFood não se faz no primeiro ano. O que funciona numa cidade de 130 mil habitantes:
 
-1. **Começar pelos próprios restaurantes do grupo** (quando existirem) e por 10 lojistas âncora que pagam 23% no iFood e querem sair. Eles recebem o app da loja com a marca deles (o mesmo sistema, com o cardápio deles), e o AM Delivery é a vitrine coletiva.
+1. **Começar por 10 lojistas âncora** que pagam 23% no iFood e querem sair. Eles recebem o app da loja com a marca deles (o mesmo sistema, com o cardápio deles), e o AM Delivery é a vitrine coletiva.
 2. **Categorias que o iFood atende mal na cidade:** farmácias, mercados de bairro, pet shops, floriculturas, autopeças, lanchonetes de bairro.
 3. **Pedido pelo WhatsApp com link do cardápio** para quem não quer baixar app: o cliente pede em 3 toques, sem cadastro.
 4. **Repasse rápido ao lojista** (D+1 por Pix) como argumento contra o prazo das grandes plataformas.
@@ -40,7 +40,7 @@ O app recebe por Pix e cartão por um intermediador de pagamento com split (a pa
 
 ## Produto
 
-- **App do cliente** (Next.js como PWA primeiro; loja de apps quando houver volume), **painel do lojista** (cardápio, horários, pausa, pedidos em tempo real (Supabase Realtime)) e **app do entregador**, todos do mesmo AM Rotara.
+- **App do cliente** (Next.js como PWA primeiro; loja de apps quando houver volume), **painel do lojista** (cardápio, horários, pausa, pedidos em tempo real (Supabase Realtime)) e **app do entregador**, todos do mesmo AM Gestão · Pedidos.
 - Cardápio com foto, adicionais, tempo de preparo e estoque do dia.
 - Impressão automática do pedido na cozinha do lojista.
 

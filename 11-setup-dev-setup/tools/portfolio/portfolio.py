@@ -11,6 +11,9 @@ Cada nota vai de 1 a 5. Sinergia pesa em dobro porque reaproveitar o que já exi
 Facilidade (4 a 20, quanto maior, mais rápido vira dinheiro):
     sinergia + demanda + (6 − esforço) + (6 − capital)
 
+Plano (decisão de 18/11): cada oferta tem tipo (passiva ou ativa) e onda (0 a 3, ou null fora das ondas).
+Só passivas entram nas ondas; onda 0 = veredito "agora" (no máximo regras.max_agora); "próxima" = onda 1.
+
 Arsenal: cada oferta tem perfil (passiva, ativa que vale a pena, ativa), automação (%),
 veredito (agora, próxima, manter, fila, em2027, decidir, descartar) e o motivo. As regras
 (hora mínima, teto de horas, máximo de rendas "agora") ficam em data/portfolio.json.
@@ -42,6 +45,8 @@ NOTAS = ("sinergia", "escala", "demanda", "esforco", "capital")
 PERFIS = {"passiva": "Passiva (construída uma vez, vende sozinha)",
           "ativa_boa": "Ativa que vale a pena (paga bem por hora ou vira recorrência)",
           "ativa": "Ativa (sua hora presente, capital ou ganho baixo)"}
+TIPOS = {"passiva": "Passiva", "ativa": "Ativa"}
+ONDAS = {0: "Onda 0: agora", 1: "Onda 1", 2: "Onda 2", 3: "Onda 3"}
 ESTADOS = {"existe": "Já existe", "parcial": "Parcial (falta ligar)", "construir": "Construir"}
 VEREDITOS = {"agora": "Agora", "proxima": "Próxima da fila", "manter": "Manter (já funciona)", "fila": "Fila com portão",
              "em2027": "2027, se a tarde ficar livre", "decidir": "Decidir depois (capital alto)", "descartar": "Descartar"}
@@ -92,6 +97,17 @@ def validar(dados: dict) -> list[str]:
             erros.append(f"{o['id']}: automação deve ser inteira de 0 a 100")
         if not str(o.get("motivo", "")).strip():
             erros.append(f"{o['id']}: sem motivo do veredito")
+        if o.get("tipo") not in TIPOS:
+            erros.append(f"{o['id']}: tipo deve ser passiva ou ativa")
+        onda = o.get("onda", "falta")
+        if onda is not None and onda not in ONDAS:
+            erros.append(f"{o['id']}: onda deve ser 0 a 3 ou null (fora das ondas)")
+        elif onda is not None and o.get("tipo") != "passiva":
+            erros.append(f"{o['id']}: renda ativa não entra nas ondas (só passivas)")
+        if (o.get("veredito") == "agora") != (onda == 0):
+            erros.append(f"{o['id']}: 'agora' e onda 0 andam juntos")
+        if o.get("veredito") == "proxima" and onda != 1:
+            erros.append(f"{o['id']}: 'próxima' é só para a onda 1")
     auts = {a["id"]: a for a in dados.get("automacoes", [])}
     if len(auts) != len(dados.get("automacoes", [])):
         erros.append("Há automações com id repetido.")
@@ -192,6 +208,7 @@ def gerar_arsenal(dados: dict, rk: list[dict]) -> list[str]:
          "A semana do arsenal:\n"]
     o += [f"- {b}" for b in rg["blocos_da_semana"]]
     o.append("")
+    o += gerar_ondas(dados, rk)
     o.append("| Veredito | Ofertas | Passivas |\n|---|---:|---:|")
     for k, v in VEREDITOS.items():
         g = [x for x in rk if x["veredito"] == k]
@@ -216,6 +233,21 @@ def gerar_arsenal(dados: dict, rk: list[dict]) -> list[str]:
     tabela("Decidir depois: capital alto", [x for x in por_facil if x["veredito"] == "decidir"])
     tabela("Descartadas (revisão trimestral)", [x for x in por_facil if x["veredito"] == "descartar"])
     o += gerar_automacoes(dados, rk)
+    return o
+
+
+def gerar_ondas(dados: dict, rk: list[dict]) -> list[str]:
+    o = ["### Ondas do plano\n", f"{dados['regras'].get('plano', '')}\n", "| Onda | Ofertas |\n|---|---|"]
+    for n, tit in ONDAS.items():
+        g = [x for x in rk if x.get("onda") == n]
+        o.append(f"| {tit} | {esc_md(', '.join(x['nome'] for x in g)) or '—'} |")
+    at = [x for x in rk if x.get("tipo") == "ativa" and x["veredito"] != "descartar"]
+    o.append(f"| Ativas, fora das ondas | {len(at)} ofertas (ver tabelas abaixo) |")
+    o.append("")
+    for x in (x for x in rk if x.get("marcas")):
+        o.append(f"**{esc_md(x['nome'])}:**\n")
+        o += [f"- {m.get('nome') or 'nome a definir'}: {m['tema']}" + (f" ({m['nota']})" if m.get("nota") else "") for m in x["marcas"]]
+        o.append("")
     return o
 
 

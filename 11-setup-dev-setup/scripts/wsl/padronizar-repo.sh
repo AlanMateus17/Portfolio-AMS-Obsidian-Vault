@@ -12,6 +12,11 @@ aplicar() {
   # O próprio dev-setup não recebe o modelo: ele já tem o padrão dele, e o docs/adr/0001-modelo.md
   # colidiria com o ADR 0001 de verdade (quebrava o just check depois do just instalar).
   [[ "$(cd "$repo" && pwd -P)" == "$(cd "$RAIZ" && pwd -P)" ]] && { echo "pulando $repo (é o próprio dev-setup)"; return 0; }
+  # O vault do Obsidian (~/dev/notas) não é repositório de código: o modelo poluía a raiz dele
+  # (.aiderignore, .claude/, .github/, docs/, scripts/...). Reconhecido pela pasta ou pelos arquivos-guia.
+  if [[ "$(cd "$repo" && pwd -P)" == "$(cd "$HOME/dev/notas" 2>/dev/null && pwd -P)" ]] || [[ -f "$repo/PLANO-UNICO-AMtech.md" || -f "$repo/CARTAO-voce-esta-aqui.md" ]]; then
+    echo "pulando $repo (é o vault do Obsidian, não um repositório de código)"; return 0
+  fi
   while IFS= read -r f; do
     rel="${f#"$MODELO"/}"; [[ "$rel" == "LEIA.md" ]] && continue
     if [[ ! -e "$repo/$rel" ]]; then mkdir -p "$(dirname "$repo/$rel")"; cp "$f" "$repo/$rel"; n=$((n + 1)); echo "  + $rel"; fi

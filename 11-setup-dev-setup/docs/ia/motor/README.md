@@ -49,6 +49,6 @@ Documento complementar (Claude Docs): [Plano de Perfil Sênior](https://claude.a
 
 ## Pendências (decisão do Alan)
 
-- [x] **Calendário (decidido em 11/11/2026):** nada fica congelado. O motor e as frentes novas entram agora; a execução segue a ordem do roteiro e o limite de 3 frentes "agora".
+- [x] **Calendário (decidido em 11/11/2026):** nada fica congelado. O motor e as frentes novas entram agora; a execução segue a ordem do roteiro e o limite de 4 rendas "agora" (onda 0, decisão de 18/11).
 - [x] Skill `arquiteto-de-prompt` salva na conta.
 - [x] Linguagem do roteador: Python, como o resto de `tools/`.

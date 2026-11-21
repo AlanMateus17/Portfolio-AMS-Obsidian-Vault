@@ -1,6 +1,6 @@
 # Avaliação automática de um agente: cada mudança no prompt roda estes casos antes de ir para produção.
 #   cd infra/ia/evals && npx promptfoo@latest eval && npx promptfoo@latest view
-description: Agente atendente (WhatsApp) — respostas da padaria-exemplo
+description: Agente atendente (WhatsApp) — respostas do pet shop de exemplo
 prompts:
   - file://prompt-atendente.txt
 providers:

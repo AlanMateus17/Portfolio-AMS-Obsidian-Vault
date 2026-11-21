@@ -4,13 +4,13 @@
 
 [← Implantação](README.md)
 
-63 fases, 577 passos, cerca de **1655 h 18 min** de trabalho no total. Cada passo tem um critério de pronto que dá para conferir. A versão para marcar o progresso é o [`acompanhamento.html`](acompanhamento.html) (e o artefato Implantação AMtech).
+63 fases, 572 passos, cerca de **1449 h 48 min** de trabalho no total. Cada passo tem um critério de pronto que dá para conferir. A versão para marcar o progresso é o [`acompanhamento.html`](acompanhamento.html) (e o artefato Implantação AMtech).
 
 Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Script** (você roda o comando), **Claude com você** (o Claude faz pelo conector ou pelo Claude Code, com a sua aprovação).
 
-**Todo o planejamento está aqui:** os 486 blocos do [mapa do setup](../mapa.html), de todas as 23 camadas, entram em algum passo, com a data ou o gatilho de quando, e cada uma das 109 ofertas do portfólio tem o passo em que entra à venda. Nada fica de fora; o CI falha se um bloco ou uma oferta nova não tiver passo ([quando entra cada bloco](#quando-entra-cada-bloco)).
+**Todo o planejamento está aqui:** os 481 blocos do [mapa do setup](../mapa.html), de todas as 23 camadas, entram em algum passo, com a data ou o gatilho de quando, e cada uma das 98 ofertas do portfólio tem o passo em que entra à venda. Nada fica de fora; o CI falha se um bloco ou uma oferta nova não tiver passo ([quando entra cada bloco](#quando-entra-cada-bloco)).
 
-**Dá para fazer hoje:** 450 dos 577 passos (632 h 33 min) só precisam do notebook e de contas grátis. Os outros dizem o que falta: comprar algo, pagar um serviço, ter um conteúdo seu pronto ou esperar o gatilho da fase.
+**Dá para fazer hoje:** 449 dos 572 passos (631 h 03 min) só precisam do notebook e de contas grátis. Os outros dizem o que falta: comprar algo, pagar um serviço, ter um conteúdo seu pronto ou esperar o gatilho da fase.
 
 | Fase | Quando | Passos | Tempo |
 |---|---|---:|---:|
@@ -25,7 +25,7 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [8 · Acervo: tudo o que você já tem](#f8) | Semanas 3 e 4 · nov/2026 | 7 | 4 h 55 min |
 | [9 · Claude e assistentes](#f9) | Semana 4 · nov/2026 | 4 | 1 h 45 min |
 | [10 · Automação e medição](#f10) | Semana 4 · nov/2026 | 8 | 1 h 42 min |
-| [11 · Arsenal de rendas: regras e as 3 de agora](#f-arsenal) | Semana 4 · nov/2026 | 8 | 7 h 50 min |
+| [11 · Arsenal de rendas: regras e as 4 de agora](#f-arsenal) | Semana 4 · nov/2026 | 7 | 6 h 20 min |
 | [12 · Automações do arsenal](#f-automacoes) | Nov/2026 em diante, uma por vez, na ordem de desbloqueio | 12 | 24 h 00 min |
 | [13 · Kit de sites com IA da Hostinger](#f-sites) | Semanas 4 e 5 · nov/2026 | 5 | 5 h 00 min |
 | [14 · Escola: Fábrica de aulas e documentos](#f-escola) | Semanas 5 e 6 · nov/2026 | 9 | 7 h 42 min |
@@ -55,23 +55,23 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [38 · Vendas medidas](#f15) | Semana 11 · jan/2027 | 4 | 2 h 40 min |
 | [39 · Teste do núcleo](#f16) | Semana 11 · jan/2027 | 4 | 1 h 00 min |
 | [40 · Primeira venda: o mini-curso no ar](#f17) | Semanas 12 a 15 · jan a fev/2027 | 11 | 24 h 05 min |
-| [41 · Base dos sistemas AM](#f18) | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP | 9 | 8 h 40 min |
-| [42 · Nuvem e deploy](#f19) | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) | 8 | 7 h 45 min |
+| [41 · Base dos sistemas AM](#f18) | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP | 9 | 8 h 40 min |
+| [42 · Nuvem e deploy](#f19) | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) | 8 | 7 h 45 min |
 | [43 · Editora](#f20) | Quando o capítulo 1 estiver pronto · **gatilho:** O capítulo 1 e o seu modelo de criação prontos | 12 | 19 h 00 min |
 | [44 · Dados, IA e pendrives](#f21) | Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) | 12 | 16 h 20 min |
-| [45 · Sprint de 14 dias (Estratégia do Halter)](#f-sprint) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) · **gatilho:** O recesso começou e uma das 3 rendas de agora já passou no portão | 10 | 35 h 00 min |
-| [46 · Mais ofertas, uma por vez](#f22) | Fev a dez/2027, uma oferta por vez · **gatilho:** A primeira venda do mini-curso aconteceu | 23 | 129 h 00 min |
+| [45 · Sprint de 14 dias (Estratégia do Halter)](#f-sprint) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) · **gatilho:** O recesso começou e uma das 4 rendas de agora já passou no portão | 10 | 35 h 00 min |
+| [46 · Mais ofertas, uma por vez](#f22) | Fev a dez/2027, uma oferta por vez · **gatilho:** A primeira venda do mini-curso aconteceu | 22 | 125 h 00 min |
 | [47 · Marketing pago e crescimento](#f23) | A partir de fev/2027 · **gatilho:** O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar | 11 | 38 h 30 min |
 | [48 · AMtech OS: o setup como sistema operacional](#f-amtechos) | Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso | 5 | 12 h 15 min |
 | [49 · Linux nativo e laboratório completo](#f24) | 2027, conforme cada compra | 7 | 18 h 15 min |
-| [50 · IA dentro dos sistemas AM](#f25) | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção | 1 | 8 h 00 min |
+| [50 · IA dentro dos sistemas AM](#f25) | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Gestão já estiver em produção | 1 | 8 h 00 min |
 | [51 · Sistemas AM à venda](#f26) | 2027 · **gatilho:** O primeiro sistema AM pronto e testado com um cliente | 5 | 120 h 00 min |
 | [52 · CNPJ e formalização](#f27) | Quando a renda pedir · **gatilho:** A renda passou do valor de virada definido com o contador | 5 | 14 h 00 min |
 | [53 · Agentes do grupo](#f28) | Junto com o primeiro CNPJ · **gatilho:** Clientes e vendas recorrentes | 7 | 18 h 00 min |
 | [54 · Editora: depois do primeiro livro](#f29) | Depois do primeiro livro · **gatilho:** O primeiro livro publicado | 5 | 56 h 00 min |
 | [55 · Distribuído, plataforma e segunda nuvem](#f30) | 2028 | 6 | 69 h 00 min |
 | [56 · Infraestrutura própria](#f31) | 2028, quando o grupo pedir | 3 | 17 h 00 min |
-| [57 · Negócios do grupo em Barbacena](#f32) | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano · **gatilho:** Os 5 portões do planejador: negócio anterior se pagando há 3 meses, capital em caixa, alguém de confiança tocando, sistema AM rodando e a sua reserva intacta | 11 | 485 h 00 min |
+| [57 · Negócios do grupo em Barbacena](#f32) | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) · **gatilho:** Os 5 portões do planejador: negócio anterior se pagando há 3 meses, capital em caixa, alguém de confiança tocando, sistema AM rodando e a sua reserva intacta | 8 | 285 h 00 min |
 | [58 · Estudo contínuo](#f33) | Contínuo, desde a semana 2 | 14 | 7 h 30 min |
 | [59 · Engenharia reversa, AppSec e pentest](#f-seguranca) | Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) | 21 | 81 h 25 min |
 | [60 · Jarvis: o setup e a casa por comando de voz](#f-jarvis) | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas | 13 | 30 h 50 min |
@@ -1126,9 +1126,9 @@ cd ~/dev/dev-setup && claude "Passo backup-banco do roteiro: Pôr o banco de mé
 
 <a id="f-arsenal"></a>
 
-## 11 · Arsenal de rendas: regras e as 3 de agora
+## 11 · Arsenal de rendas: regras e as 4 de agora
 
-Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.
+No máximo 4 rendas agora (onda 0, só passivas), hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.
 
 **Quando:** Semana 4 · nov/2026
 
@@ -1148,15 +1148,7 @@ Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por s
 - **Fora do terminal:** A Rotina fica no Caixa da Casa (artefato), fora do terminal.
 - [ ] **Pronto quando:** Os dois blocos aparecem na Rotina do Caixa da Casa
 
-### 11.3 Cadastro e teste de entrada numa plataforma de avaliação de IA
-
-**Você** · 1 h 30 min
-
-- **Fora do terminal:** Cadastro no navegador. Nunca pague para entrar e nunca passe senha a ninguém.
-- [ ] **Pronto quando:** Teste de entrada feito
-- **Oferta:** Avaliação de respostas de IA (DataAnnotation, Outlier)
-
-### 11.4 Oferecer site com manutenção mensal a 5 comércios
+### 11.3 Oferecer site com manutenção mensal a 5 comércios
 
 **Você** · 2 h 00 min
 
@@ -1164,7 +1156,7 @@ Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por s
 - [ ] **Pronto quando:** 5 ofertas feitas e respostas anotadas no CRM
 - **Oferta:** Sites e lojas para pequenas empresas
 
-### 11.5 Criar as buscas salvas com alerta e ligar o radar de revenda
+### 11.4 Criar as buscas salvas com alerta e ligar o radar de revenda
 
 **Claude com você** · 2 h 00 min
 
@@ -1176,10 +1168,9 @@ cd ~/dev/dev-setup && claude "Passo ar-radar do roteiro: Criar as buscas salvas 
 
 - [ ] **Pronto quando:** Radar avisa no Telegram só itens acima da hora mínima, com checklist antigolpe
 - Lê só a pasta de alertas do Gmail. Não raspa sites que proíbem coleta, não compra e não fala com vendedor.
-- **Oferta:** Notebooks e PCs: comprar, consertar e revender · Celulares: comprar, consertar e revender · Livros técnicos e didáticos usados · Peças de máquinas sucateadas (RAM, SSD, placas)
 - Implanta: Radar de revenda
 
-### 11.6 Retorno por hora de cada marca no painel
+### 11.5 Retorno por hora de cada marca no painel
 
 **Claude com você** · 1 h 30 min
 
@@ -1192,7 +1183,7 @@ cd ~/dev/dev-setup && claude "Passo ar-retorno do roteiro: Retorno por hora de c
 - [ ] **Pronto quando:** O painel mostra R$ por hora sua de cada oferta ativa e marca as que ficaram abaixo da hora mínima
 - Implanta: Painel de lucro (Grafana)
 
-### 11.7 Conferir a fase da cascata antes de qualquer investimento
+### 11.6 Conferir a fase da cascata antes de qualquer investimento
 
 **Você** · 10 min
 
@@ -1200,7 +1191,7 @@ cd ~/dev/dev-setup && claude "Passo ar-retorno do roteiro: Retorno por hora de c
 - [ ] **Pronto quando:** Fase atual anotada no Caixa da Casa
 - **Oferta:** Dividendos, FIIs e renda fixa (cascata e ARCA)
 
-### 11.8 Revisar os descartes uma vez por trimestre
+### 11.7 Revisar os descartes uma vez por trimestre
 
 **Você** · 15 min
 
@@ -1321,7 +1312,7 @@ No **Ubuntu** (linha `alanmateus@...$`):
 cd ~/dev/dev-setup && claude "Passo au-estoque do roteiro: Automação: Estoque, ordem de serviço e parceiros"
 ```
 
-- [ ] **Pronto quando:** Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Kaixara).
+- [ ] **Pronto quando:** Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Caixa do AM Gestão).
 - Construir quando a primeira oferta que usa esta automação for ativada; a ordem está na seção Automações do portfólio.
 
 ### 12.9 Automação: Busca semanal de editais e oportunidades
@@ -1689,7 +1680,7 @@ python ~/dev/dev-setup/tools/investimentos/investimentos.py iniciar
 ```
 
 - [ ] **Pronto quando:** investimentos.toml, os 4 indicadores_*.csv, carteira.csv e carteiras.csv em ~/financas
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.2 Preencher a política e o investimentos.toml (portão, ARCA por classe, metodologias por classe, limites, NTN-B do mês)
 
@@ -1699,7 +1690,7 @@ python ~/dev/dev-setup/tools/investimentos/investimentos.py iniciar
 
 - **Fora do terminal:** Decisão sua; o modelo está em ~/financas/politica-investimentos.md (financeiro.py iniciar).
 - [ ] **Pronto quando:** Política assinada por você e o portão refletindo o cartão e a reserva de hoje
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.3 Escrever as suas anotações das perguntas do método do Raul Sena no investimentos.toml
 
@@ -1707,7 +1698,7 @@ python ~/dev/dev-setup/tools/investimentos/investimentos.py iniciar
 
 - **Fora do terminal:** O material do curso é pago: só as suas anotações vão para o arquivo, que fica fora do GitHub.
 - [ ] **Pronto quando:** Lista [sena] preenchida com as suas palavras
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.4 Montar os 4 CSVs de indicadores (ações, FIIs, renda fixa, internacional) dos ativos que você acompanha
 
@@ -1715,7 +1706,7 @@ python ~/dev/dev-setup/tools/investimentos/investimentos.py iniciar
 
 - **Fora do terminal:** Colunas de cada classe em docs/investimentos.md. Confira na fonte os números que decidem a compra (RI, CVM, relatório do fundo, Tesouro).
 - [ ] **Pronto quando:** Planilha com os indicadores conferidos na fonte (RI da empresa ou CVM)
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.5 Rodar a avaliação das 4 classes e a divisão do aporte
 
@@ -1728,7 +1719,7 @@ cd ~/dev/dev-setup && for c in acoes fiis caixa internacional; do python tools/i
 ```
 
 - [ ] **Pronto quando:** Consenso de cada ativo e a divisão do aporte por classe e por metodologia
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.6 Criar uma carteira por metodologia e uma do índice em cada classe (reais ou simuladas)
 
@@ -1736,7 +1727,7 @@ cd ~/dev/dev-setup && for c in acoes fiis caixa internacional; do python tools/i
 
 - **Fora do terminal:** Simulada = anotada com preço e data, sem comprar.
 - [ ] **Pronto quando:** carteiras.csv com classe, carteira, investido e valor atual, incluindo 'indice' em cada classe
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.7 Comparar as carteiras contra o índice todo mês
 
@@ -1749,7 +1740,7 @@ python ~/dev/dev-setup/tools/investimentos/investimentos.py comparar ~/financas/
 ```
 
 - [ ] **Pronto quando:** Resultado anotado no Caixa da Casa; metodologia que perder do índice por 3 anos é revista
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.8 Simular também as alocações gerais (Graham defensivo, Portfólio permanente, Bogle) contra o seu ARCA
 
@@ -1757,7 +1748,7 @@ python ~/dev/dev-setup/tools/investimentos/investimentos.py comparar ~/financas/
 
 - **Fora do terminal:** Todas as metodologias por classe já rodam juntas; aqui é a comparação no nível do ARCA.
 - [ ] **Pronto quando:** Uma carteira simulada de cada estratégia em carteiras.csv (classe 'geral')
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 ### 16.9 Marcar a prova CB da CNPI quando a verba de estudo permitir
 
@@ -2149,7 +2140,7 @@ bash ~/dev/dev-setup/scripts/wsl/teste-restauracao.sh
 
 - **Fora do terminal:** Revisão trimestral; peça ao Claude para atualizar data/custos.json com o que mudou.
 - [ ] **Pronto quando:** docs/custos.md revisado e Caixa da Casa conferido
-- Implanta: Caixa da Casa / AM Rendara
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 <a id="f-solo"></a>
 
@@ -2207,10 +2198,10 @@ cd ~/dev/dev-setup && just triagem "atendimento no WhatsApp com fila" --nucleo n
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && just arquiteto "módulo de aporte do AM Rendara" > /tmp/pacote.md
+cd ~/dev/dev-setup && just arquiteto "módulo Financeiro do AM Gestão" > /tmp/pacote.md
 ```
 
-- [ ] **Pronto quando:** A resposta usa a stack fixa, cita o que já existe e termina numa primeira fatia de até 4 horas
+- [ ] **Pronto quando:** A resposta usa a stack definida (ADR 0017), cita o que já existe e termina numa primeira fatia de até 4 horas
 - O pacote tem cerca de 400 tokens. Cole no Claude ou use just arquiteto-claude, que manda pelo Claude Code dentro do ai-jail.
 - Implanta: Triagem: montar, colar ou construir · Claude Code
 
@@ -2717,7 +2708,7 @@ cd ~/dev/dev-setup && less docs/plano-eixo.md
 ```
 
 - [ ] **Pronto quando:** Ordem confirmada ou ajustada por você em docs/plano-eixo.md
-- Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 3 frentes "agora".
+- Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 4 rendas "agora" (onda 0).
 - Implanta: Núcleo AMtech (banco central)
 
 ### 24.2 Montar a semana fixa: 2 h de ofício, 1 h de finanças, 30 min de inglês, 30 min de escrita, 1 dia de folga
@@ -2770,7 +2761,7 @@ cd ~/dev/dev-setup && just agora software
 
 - [ ] **Pronto quando:** Os quatro itens cumpridos até 31/jan/2027
 - Revisão no fim do trimestre: seguir, ajustar ou mudar o eixo, com o motivo anotado (just lembrar "..." padrao).
-- Implanta: Sites para pequenas empresas · Caixa da Casa / AM Rendara · Site pessoal + blog (Jekyll)
+- Implanta: Sites para pequenas empresas · Caixa da Casa / Financeiro AM Gestão · Site pessoal + blog (Jekyll)
 
 ### 24.6 Trimestre 2: 10 planilhas vendidas e o AM Gestão (MVP) num restaurante real, com busca com IA avaliada no CI, backup restaurado e rollback testado
 
@@ -2786,7 +2777,7 @@ cd ~/dev/dev-setup && just triagem "AM Gestão MVP"
 
 - [ ] **Pronto quando:** Itens cumpridos até 30/abr/2027
 - Se a planilha não vender 10, o sistema não nasce: muda a oferta, não o código.
-- Implanta: Caixa da Casa / AM Rendara · API TypeScript (Next/NestJS) · Next.js + Aura Design System · PostgreSQL · Testes: xUnit, Playwright, k6
+- Implanta: Caixa da Casa / Financeiro AM Gestão · API TypeScript (Next/NestJS) · Next.js + Aura Design System · PostgreSQL · Testes: xUnit, Playwright, k6
 
 ### 24.7 Trimestre 3: cobrança por Pix, observabilidade, 5 clientes pagantes e o 1º relato de incidente
 
@@ -2803,7 +2794,7 @@ cd ~/dev/dev-setup && just decisoes software
 - [ ] **Pronto quando:** Itens cumpridos até 31/jul/2027; CNPJ revisto com o contador
 - Implanta: Pix Automático + gateway (ex.: Asaas) · OpenTelemetry · Contador
 
-### 24.8 Trimestre 4: 1 PR aceito em open source .NET, 12 posts no ano, entrevista em inglês simulada e revisão do ano
+### 24.8 Trimestre 4: 1 PR aceito em open source (TypeScript ou Python), 12 posts no ano, entrevista em inglês simulada e revisão do ano
 
 **Você** · 1 h 00 min
 
@@ -2932,7 +2923,7 @@ cd ~/dev/dev-setup && claude "Passo prof-curriculo do roteiro: acrescente ao dat
 - Os trechos citados no currículo dizem 'confira o nome na sua edição' até essa confirmação.
 - Implanta: Professor do setup (aula e revisão)
 
-### 25.9 Depois de 4 semanas usando o Professor: tutor socrático, prever antes de rodar, confiança, caderno de erros, teste de entrada, prova acumulada, documentação local e o AM Rendara como projeto-âncora
+### 25.9 Depois de 4 semanas usando o Professor: tutor socrático, prever antes de rodar, confiança, caderno de erros, teste de entrada, prova acumulada, documentação local e o AM Gestão como projeto-âncora
 
 **Claude com você** · 4 h 00 min
 
@@ -4419,19 +4410,19 @@ cd ~/dev/dev-setup && claude "Passo prospeccao do roteiro: Montar a lista de par
 - [ ] **Pronto quando:** Pasta com informes e carnês do ano, guardada no backup
 - Implanta: Declaração anual do IR
 
-### 37.20 Começar o Caixa da Casa numa planilha até o sistema AM Rendara existir
+### 37.20 Começar o Caixa da Casa numa planilha até o Financeiro do AM Gestão existir
 
 **Claude com você** · 30 min
 
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo caixa do roteiro: Começar o Caixa da Casa numa planilha até o sistema AM Rendara existir"
+cd ~/dev/dev-setup && claude "Passo caixa do roteiro: Começar o Caixa da Casa numa planilha até o Financeiro do AM Gestão existir"
 ```
 
 - [ ] **Pronto quando:** Entradas e saídas do mês lançadas, separando casa e vendas
-- **Oferta:** AM Rendara (finanças), começando pela planilha
-- Implanta: Caixa da Casa / AM Rendara
+- **Oferta:** Planilha do AM Gestão (finanças)
+- Implanta: Caixa da Casa / Financeiro AM Gestão
 
 <a id="f15"></a>
 
@@ -4677,7 +4668,7 @@ cd ~/dev/dev-setup && claude "Passo mc-isca do roteiro: Isca grátis (aula 1) co
 
 Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy.
 
-**Quando:** Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP
+**Quando:** Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP
 
 ### 41.1 Gerar o modelo de sistema com /novo-sistema-aura
 
@@ -4689,8 +4680,8 @@ No **Ubuntu** (linha `alanmateus@...$`):
 cd ~/dev/dev-setup && claude "Passo template-aura do roteiro: Gerar o modelo de sistema com /novo-sistema-aura"
 ```
 
-- [ ] **Pronto quando:** Sistema exemplo sobe com 'dotnet run' e passa nos testes
-- Clean Architecture + DDD, Prisma/Drizzle, multi-tenant com RLS, Supabase Realtime, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com xUnit, Playwright e k6.
+- [ ] **Pronto quando:** Sistema exemplo sobe com 'pnpm dev' e passa nos testes
+- Clean Architecture + DDD, Prisma/Drizzle, multi-tenant com RLS, Supabase Realtime, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com Vitest, Playwright e k6.
 - Implanta: Clean Arch + DDD · Prisma/Drizzle + PostgreSQL · Supabase Realtime · Multi-tenant (RLS) · API TypeScript (Next/NestJS) · Next.js + Aura Design System · OpenAPI + Scalar · Storybook · PostgreSQL · Redis · Testes: xUnit, Playwright, k6
 
 ### 41.2 Ligar o login: Keycloak no dev e Entra ID na nuvem
@@ -4760,22 +4751,22 @@ cd ~/dev/dev-setup && claude "Passo ghcr do roteiro: Publicar a imagem Docker da
 - **Oferta:** Templates e código-fonte
 - Implanta: Templates e código-fonte
 
-### 41.8 Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — no trimestre 4 do eixo (ago a out/2027)
+### 41.8 Candidatar-se às vagas de dev (TypeScript, Python e SQL; .NET só se a vaga pedir) com GitHub, LinkedIn e site prontos — no trimestre 4 do eixo (ago a out/2027)
 
 **Você** · 2 h 00 min
 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
-- [ ] **Pronto quando:** 10 candidaturas enviadas com o portfólio do AM Rendara
+- [ ] **Pronto quando:** 10 candidaturas enviadas com o portfólio do AM Gestão
 - Implanta: Recrutadores
 
-### 41.9 Zod, Biome e Vitest no front do modelo Aura
+### 41.9 Zod, Biome e Vitest no front do modelo AM
 
 **Claude com você** · 1 h 00 min
 
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo front-contratos do roteiro: Zod, Biome e Vitest no front do modelo Aura"
+cd ~/dev/dev-setup && claude "Passo front-contratos do roteiro: Zod, Biome e Vitest no front do modelo AM"
 ```
 
 - [ ] **Pronto quando:** O front recusa resposta fora do contrato no teste e o just check do sistema roda Biome e Vitest
@@ -4788,7 +4779,7 @@ cd ~/dev/dev-setup && claude "Passo front-contratos do roteiro: Zod, Biome e Vit
 
 As contas de nuvem criadas por código, com custo sob controle.
 
-**Quando:** Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante)
+**Quando:** Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante)
 
 ### 42.1 Instalar Azure CLI, Terraform, Vercel CLI e Wrangler
 
@@ -5202,11 +5193,11 @@ cd ~/dev/dev-setup && claude "Passo modelo-no-ollama do roteiro: Avaliar contra 
 
 ## 45 · Sprint de 14 dias (Estratégia do Halter)
 
-As duas frentes do contexto mestre em 14 dias seguidos: caixa rápido com atendimento omnicanal (Chatwoot) e o MVP do ARCA (AM Rendara em PocketBase e SvelteKit), cada uma validada antes de virar sistema no Aura.
+As duas frentes do contexto mestre em 14 dias seguidos: caixa rápido com atendimento omnicanal (Chatwoot) e o MVP do ARCA (Financeiro do AM Gestão em PocketBase e SvelteKit), cada uma validada antes de virar módulo do AM Gestão.
 
 **Quando:** Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite)
 
-**Começa quando:** O recesso começou e uma das 3 rendas de agora já passou no portão
+**Começa quando:** O recesso começou e uma das 4 rendas de agora já passou no portão
 
 ### 45.1 Dia 1: conferir a VM, o Uptime Kuma e o Kamal
 
@@ -5283,8 +5274,8 @@ cd ~/dev && npx sv create am-rendara-mvp
 ```
 
 - [ ] **Pronto quando:** Ativos e transações gravados no PocketBase e listados na tela
-- **Oferta:** AM Rendara (finanças), começando pela planilha
-- Implanta: PocketBase (MVP antes do Aura) · SvelteKit (apps pequenos)
+- **Oferta:** Planilha do AM Gestão (finanças)
+- Implanta: PocketBase (MVP antes do AM Gestão) · SvelteKit (apps pequenos)
 
 ### 45.8 Dia 10: lógica dos 4 quadrantes do ARCA e do aporte, com Zod e Vitest
 
@@ -5297,7 +5288,7 @@ cd ~/dev/dev-setup && claude "Passo halter-d10 do roteiro: lógica dos 4 quadran
 ```
 
 - [ ] **Pronto quando:** Testes do rebalanceamento e do aporte passando
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Zod · Biome · Vitest (front)
 
 ### 45.9 Dias 11 e 12: Pix do Asaas e a landing page em Astro
@@ -5311,7 +5302,7 @@ cd ~/dev/dev-setup && claude "Passo halter-d11 do roteiro: Pix do Asaas e a land
 ```
 
 - [ ] **Pronto quando:** Um Pix de teste libera o plano Pro (R$ 29 a R$ 49/mês)
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Pix Automático + gateway (ex.: Asaas) · Astro (sites de conteúdo)
 
 ### 45.10 Dias 13 e 14: testes E2E, deploy pelo Kamal e 50 testadores
@@ -5326,7 +5317,7 @@ cd ~/dev/am-rendara-mvp && npx playwright test
 
 - [ ] **Pronto quando:** Playwright verde, MVP no ar com réplica no R2 e o post no TabNews publicado
 - Publicar no TabNews só com a sua aprovação.
-- **Oferta:** AM Rendara (finanças), começando pela planilha
+- **Oferta:** Planilha do AM Gestão (finanças)
 - Implanta: Testes: xUnit, Playwright, k6 · Kamal (deploy em VM por SSH) · Litestream (SQLite no R2)
 
 <a id="f22"></a>
@@ -5377,14 +5368,14 @@ cd ~/dev/dev-setup && claude "Passo of-catalogo do roteiro: Pôr no Catálogo do
 - **Oferta:** Pacote de aulas prontas para professores de informática
 - Implanta: Acervo (seus documentos) · Hotmart
 
-### 46.4 Vender a planilha do Caixa da Casa antes de construir o AM Rendara
+### 46.4 Vender a planilha do Caixa da Casa antes de construir o Financeiro do AM Gestão
 
 **Você** · 3 h 00 min
 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
 - [ ] **Pronto quando:** 10 planilhas vendidas
-- **Oferta:** AM Rendara (finanças), começando pela planilha
-- Implanta: Caixa da Casa / AM Rendara · Hotmart
+- **Oferta:** Planilha do AM Gestão (finanças)
+- Implanta: Caixa da Casa / Financeiro AM Gestão · Hotmart
 
 ### 46.5 Automação com IA para pequenos negócios: 1 implantação grátis em troca de caso
 
@@ -5461,7 +5452,7 @@ cd ~/dev/dev-setup && claude "Passo of-automacao do roteiro: Automação com IA 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
 - [ ] **Pronto quando:** Um estudo de caso, com autorização do dono
 - **Oferta:** Implantação de ficha técnica e engenharia de cardápio
-- Implanta: AM Kaixara (PDV e cardápio)
+- Implanta: AM Gestão · Caixa (PDV e cardápio)
 
 ### 46.13 AM Mentor: banco de exercícios com correção, começando pelo capítulo 1
 
@@ -5483,7 +5474,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 
 - **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
 - [ ] **Pronto quando:** 24 vídeos publicados e o resultado medido
-- **Oferta:** Canais sem rosto (YouTube, TikTok, Instagram, Facebook)
+- **Oferta:** Canais sem rosto: Primer Code, Bancada Dev e finanças (nome a definir)
 - Implanta: Agente editor de conteúdo · YouTube
 
 ### 46.15 Comunidade paga do Instituto AMS
@@ -5514,16 +5505,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 - **Oferta:** Sistemas sob encomenda
 - Implanta: API TypeScript (Next/NestJS) · Next.js + Aura Design System
 
-### 46.18 Aula de sushi e sushiman para eventos: 2 eventos de teste
-
-**Você** · 4 h 00 min
-
-- **Fora do terminal:** Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.
-- [ ] **Pronto quando:** 2 eventos pagos, com as regras sanitárias conferidas
-- **Oferta:** Aula de sushi e sushiman para eventos
-- Implanta: Agenda online (Cal.com)
-
-### 46.19 Workshop presencial para pequenos empresários: piloto com 10 vagas
+### 46.18 Workshop presencial para pequenos empresários: piloto com 10 vagas
 
 **Você** · 8 h 00 min
 
@@ -5532,7 +5514,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 - **Oferta:** Workshops presenciais para pequenos empresários (IA, planilhas, presença digital)
 - Implanta: Agenda online (Cal.com) · Mercado Pago
 
-### 46.20 Revisar a cada trimestre as ofertas em fila (AM Taskoro)
+### 46.19 Revisar a cada trimestre as ofertas em fila (AM Projetos)
 
 **Você** · 30 min
 
@@ -5543,7 +5525,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 - **Oferta:** AM Taskoro (gestão de projetos ágeis)
 - Implanta: Portfólio de ofertas
 
-### 46.21 Fila de produtos digitais (Fábrica para professores, Setup profissional, templates e outros)
+### 46.20 Fila de produtos digitais (Fábrica para professores, Setup profissional, templates e outros)
 
 **Você** · 30 min
 
@@ -5551,7 +5533,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 - [ ] **Pronto quando:** Cada uma ativada na ordem, uma de cada vez
 - **Oferta:** Fábrica de documentos para professores de MG (assinatura) · Setup profissional (curso, template e configuração remota) · Templates Next.js/Tailwind em inglês · Blocos e kits de componentes de interface · Plugin WordPress com versão Pro · Templates de automação n8n · Cursos em plataformas que pagam royalties (Alura, Rocketseat, Domestika) · Cursos dublados por IA em inglês e espanhol (só a sua voz) · Licença do ByteSDCoin para escolas (sem aposta) · Camisetas e canecas sob demanda (dev e professor)
 
-### 46.22 Fila de serviços que pagam bem por hora (conteudista, questões, ERP e outros)
+### 46.21 Fila de serviços que pagam bem por hora (conteudista, questões, ERP e outros)
 
 **Você** · 30 min
 
@@ -5559,7 +5541,7 @@ cd ~/dev/dev-setup && claude "Passo of-ammentor do roteiro: AM Mentor: banco de 
 - [ ] **Pronto quando:** Cada uma ativada na ordem, uma de cada vez
 - **Oferta:** Professor conteudista EAD · Elaboração e revisão de questões · Formatação ABNT de TCC (só formatar e revisar) · Segurança digital para pequenas empresas · Freela internacional em dólar (Upwork) · Parceiro de ERP (Bling, Tiny, Omie): implantação e comissão · Português para estrangeiros (Preply, italki) · Recuperação de dados (intermediação com laboratório)
 
-### 46.23 Fila da AMtech Economia (plano de negócios, BPO financeiro, crédito e editais, mentoria, modelos, calculadoras)
+### 46.22 Fila da AMtech Economia (plano de negócios, BPO financeiro, crédito e editais, mentoria, modelos, calculadoras)
 
 **Você** · 30 min
 
@@ -5822,7 +5804,7 @@ sudo pacman -S --needed ghostty zellij && chezmoi apply
 
 Busca e assistente com os seus dados dentro de um sistema AM.
 
-**Quando:** Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção
+**Quando:** Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Gestão já estiver em produção
 
 ### 50.1 RAG com pgvector dentro do primeiro sistema AM
 
@@ -5860,33 +5842,33 @@ cd ~/dev/dev-setup && claude "Passo saas do roteiro: Lançar o primeiro sistema 
 - [ ] **Pronto quando:** Primeiro cliente pagando por assinatura
 - Implanta: Sistemas AM (SaaS) · aura-licensing
 
-### 51.2 AM Kaixara: PDV, cardápio, fichas técnicas e estoque
+### 51.2 AM Gestão · Caixa: PDV, cardápio, fichas técnicas e estoque
 
 **Claude com você** · 40 h 00 min
 
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo kaixara do roteiro: AM Kaixara: PDV, cardápio, fichas técnicas e estoque"
+cd ~/dev/dev-setup && claude "Passo kaixara do roteiro: AM Gestão · Caixa: PDV, cardápio, fichas técnicas e estoque"
 ```
 
 - [ ] **Pronto quando:** Rodando num negócio real
-- **Oferta:** AM Kaixara (PDV, ficha técnica, cardápio)
-- Implanta: AM Kaixara (PDV e cardápio)
+- **Oferta:** AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio)
+- Implanta: AM Gestão · Caixa (PDV e cardápio)
 
-### 51.3 AM Rotara: pedidos, rotas e mapas
+### 51.3 AM Gestão · Pedidos: pedidos, rotas e mapas
 
 **Claude com você** · 40 h 00 min
 
 No **Ubuntu** (linha `alanmateus@...$`):
 
 ```bash
-cd ~/dev/dev-setup && claude "Passo rotara do roteiro: AM Rotara: pedidos, rotas e mapas"
+cd ~/dev/dev-setup && claude "Passo rotara do roteiro: AM Gestão · Pedidos: pedidos, rotas e mapas"
 ```
 
 - [ ] **Pronto quando:** Entregas rastreadas no mapa em tempo real
-- **Oferta:** AM Rotara (pedidos e entregas)
-- Implanta: AM Rotara (entregas) · PostGIS + MapLibre
+- **Oferta:** AM Gestão SaaS: Rotara (pedidos e entregas)
+- Implanta: AM Gestão · Pedidos (entregas) · PostGIS + MapLibre
 
 ### 51.4 Módulos do AM Gestão, só quando um sistema precisar
 
@@ -5914,7 +5896,7 @@ cd ~/dev/dev-setup && claude "Passo whitelabel do roteiro: App de delivery com a
 - [ ] **Pronto quando:** Primeiro restaurante usando o app com a marca dele
 - Comece oferecendo a 3 restaurantes que pagam 23% ao iFood.
 - **Oferta:** App de delivery com a marca do restaurante (white-label)
-- Implanta: AM Rotara (entregas)
+- Implanta: AM Gestão · Pedidos (entregas)
 
 <a id="f27"></a>
 
@@ -5933,7 +5915,7 @@ Sair do CPF na hora certa, com nota fiscal e cobrança automáticas.
 - **Fora do terminal:** Órgão público, contador ou entidade: feito no site do governo ou com atendimento.
 - [ ] **Pronto quando:** CNPJ ativo, conta PJ aberta e contador contratado
 - **Precisa:** pagar um serviço
-- Implanta: CNPJ (futuro) · 3 CNPJs por frente
+- Implanta: CNPJ (futuro) · 2 CNPJs por frente
 
 ### 52.2 Certificado digital e-CNPJ
 
@@ -6267,7 +6249,7 @@ Servidor em casa e máquina de IA quando o grupo pedir.
 
 Um negócio por vez, cada um só depois que o anterior passa no portão.
 
-**Quando:** Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano
+**Quando:** Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026)
 
 **Começa quando:** Os 5 portões do planejador: negócio anterior se pagando há 3 meses, capital em caixa, alguém de confiança tocando, sistema AM rodando e a sua reserva intacta
 
@@ -6323,37 +6305,7 @@ cd ~/dev/dev-setup && claude "Passo planejador-real do roteiro: Planejador do gr
 - **Oferta:** AM Delivery · Licença do AM Delivery para outras cidades
 - Implanta: AM Delivery (várias empresas)
 
-### 57.6 C1 · Sushi, delivery primeiro
-
-**Você** · 80 h 00 min
-
-- **Fora do terminal:** Negócio físico: ponto, alvará, compras e pessoas. O Claude faz os números e os documentos.
-- [ ] **Pronto quando:** Lucro por 3 meses e sushiman que toca a noite sem você
-- **Precisa:** comprar algo, pagar um serviço
-- **Oferta:** Sushi (delivery)
-- Implanta: Sushi (delivery) · Vigilância sanitária (RDC 216) · iFood (canal de descoberta)
-
-### 57.7 C2 · Padaria com café da manhã e almoço
-
-**Você** · 80 h 00 min
-
-- **Fora do terminal:** Negócio físico: ponto, alvará, compras e pessoas. O Claude faz os números e os documentos.
-- [ ] **Pronto quando:** Gerente no comando e CMV dentro da meta por 3 meses
-- **Precisa:** comprar algo, pagar um serviço
-- **Oferta:** Padaria com café da manhã e almoço
-- Implanta: Padaria + café da manhã + almoço
-
-### 57.8 C3 · Cafeteria
-
-**Você** · 40 h 00 min
-
-- **Fora do terminal:** Negócio físico: ponto, alvará, compras e pessoas. O Claude faz os números e os documentos.
-- [ ] **Pronto quando:** Cafeteria acima do equilíbrio
-- **Precisa:** comprar algo, pagar um serviço
-- **Oferta:** Cafeteria
-- Implanta: Cafeteria
-
-### 57.9 Serviços presenciais para 2027, se a tarde ficar livre (por parceiros quando der)
+### 57.6 Serviços presenciais para 2027, se a tarde ficar livre (por parceiros quando der)
 
 **Você** · 30 min
 
@@ -6361,15 +6313,15 @@ cd ~/dev/dev-setup && claude "Passo planejador-real do roteiro: Planejador do gr
 - [ ] **Pronto quando:** Decisão tomada no replanejamento de 2027
 - **Oferta:** PC montado e entregue configurado · Redes Wi-Fi e câmeras com monitoramento mensal · Casa inteligente para clientes (Home Assistant) · Instrutor horista (SENAC, SENAI, prefeitura) · Aulas de informática e celular para idosos · Colônia de férias tech (robótica e programação) · Gestão de tráfego pago para o comércio local
 
-### 57.10 Rendas de capital alto: decidir só com o portão aberto
+### 57.7 Rendas de capital alto: decidir só com o portão aberto
 
 **Você** · 30 min
 
 - **Fora do terminal:** Exigem capital; só quando a renda do núcleo pagar o investimento.
 - [ ] **Pronto quando:** Decisão registrada com capital próprio disponível
-- **Oferta:** Mercadinho autônomo em condomínio · Máquina de venda de lanches · Aluguel de kits de robótica · Kits e placas de robótica (Tindie e Mercado Livre) · Motos e carros: compra e revenda
+- **Oferta:** Aluguel de kits de robótica · Kits e placas de robótica (Tindie e Mercado Livre)
 
-### 57.11 ERPNext para o primeiro negócio físico até o Aura cobrir
+### 57.8 ERPNext para o primeiro negócio físico até o AM Gestão cobrir
 
 **Você** · 2 h 00 min
 
@@ -6429,7 +6381,7 @@ As trilhas de estudo ligadas ao setup, sem copiar conteúdo de ninguém.
 
 - **Fora do terminal:** Portão regulatório (CVM); fora do terminal.
 - [ ] **Pronto quando:** Certificação e registro conferidos
-- **Oferta:** Consultoria de investimentos (AM Rendara premium, com sócia certificada)
+- **Oferta:** Consultoria de investimentos (Financeiro do AM Gestão premium, com sócia certificada)
 
 ### 58.6 Estudo vira produto: rodar a esteira depois de cada bloco de estudo
 
@@ -6615,7 +6567,7 @@ powershell -ExecutionPolicy Bypass -File $HOME\dev-setup\scripts\windows\lab-alv
 - [ ] **Pronto quando:** Apprentice de todos os temas resolvidos e anotados no Obsidian
 - Implanta: PortSwigger Web Security Academy · Kit de pentest (Burp, ZAP, nmap…)
 
-### 59.10 Modelagem de ameaças e checklist ASVS do AM Rendara (o primeiro sistema)
+### 59.10 Modelagem de ameaças e checklist ASVS do AM Gestão (o primeiro sistema)
 
 **Claude com você** · 2 h 00 min
 
@@ -6626,7 +6578,7 @@ mkdir -p docs/seguranca && cp ~/dev/dev-setup/infra/templates/seguranca/modelage
 ```
 
 - [ ] **Pronto quando:** Tabela STRIDE preenchida e cada mitigação com um teste que prova
-- Rode dentro da pasta do AM Rendara. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal.
+- Rode dentro da pasta do AM Gestão. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal.
 - Implanta: AppSec nos seus sistemas
 
 ### 59.11 ZAP passivo na homologação de cada sistema
@@ -6640,14 +6592,14 @@ mkdir -p .github/workflows && cp ~/dev/dev-setup/infra/templates/seguranca/dast-
 ```
 
 - [ ] **Pronto quando:** Issue do ZAP aberta e sem alerta alto
-- Dentro da pasta do sistema, quando ele tiver homologação (trimestre 2 do eixo, com o AM Rendara). Crie a variável HOMOLOGACAO_URL no repositório.
+- Dentro da pasta do sistema, quando ele tiver homologação (trimestre 2 do eixo, com o AM Gestão). Crie a variável HOMOLOGACAO_URL no repositório.
 
-### 59.12 Comparar o AM Rendara com os repositórios de referência
+### 59.12 Comparar o AM Gestão com os repositórios de referência
 
 **Claude com você** · 3 h 00 min
 
 - **Fora do terminal:** Leitura guiada: a funcionalidade registrar lançamento seguida da API ao banco no eShop e no modular-monolith, comparada com a sua.
-- [ ] **Pronto quando:** 3 ADRs novas no AM Rendara, cada uma com a diferença e a decisão
+- [ ] **Pronto quando:** 3 ADRs novas no AM Gestão, cada uma com a diferença e a decisão
 - Implanta: Repositórios de referência
 
 ### 59.13 Ensaiar o serviço completo contra o seu próprio site
@@ -7184,7 +7136,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Portfólio de ofertas | 8.7, 37.14, 46.20 | Semanas 3 e 4 · nov/2026; Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
+| Portfólio de ofertas | 8.7, 37.14, 46.19 | Semanas 3 e 4 · nov/2026; Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Esteira de ofertas | 8.7, 37.14 | Semanas 3 e 4 · nov/2026; Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Padrão de qualidade | 37.14 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Marca pessoal Alan Mateus | 34.1, 36.1 | Semana 5 · nov/2026; Semanas 6 e 7 · dez/2026 |
@@ -7226,11 +7178,11 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | YouTube | 36.1, 46.14 | Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
 | LinkedIn | 36.1, 40.9 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
 | WhatsApp Business | 36.2, 40.9 | Semanas 6 e 7 · dez/2026; Semanas 12 a 15 · jan a fev/2027 |
-| Google Perfil da Empresa | 46.9, 57.3 | Fev a dez/2027, uma oferta por vez; Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| Google Perfil da Empresa | 46.9, 57.3 | Fev a dez/2027, uma oferta por vez; Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
 | Comunidade (Discord ou grupo) | 37.10, 46.15 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Busca Google (SEO) | 36.12 | Semanas 6 e 7 · dez/2026 |
 | Alunos e ex-alunos | 36.10 | Semanas 6 e 7 · dez/2026 |
-| Recrutadores | 24.3, 24.4, 41.8 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Recrutadores | 24.3, 24.4, 41.8 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | TikTok | 36.1 | Semanas 6 e 7 · dez/2026 |
 | Facebook | 36.1 | Semanas 6 e 7 · dez/2026 |
 
@@ -7254,7 +7206,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Lucro por Venda (calculadora) | 37.13 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Webhooks de venda | 38.1, 38.2, 39.3, 40.10 | Semana 11 · jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Banco de métricas (PostgreSQL) | 10.2, 10.7, 38.3 | Semana 4 · nov/2026; Semana 11 · jan/2027 |
-| Painel de lucro (Grafana) | 11.6, 12.11, 38.4, 39.3 | Semana 4 · nov/2026; Nov/2026 em diante, uma por vez, na ordem de desbloqueio; Semana 11 · jan/2027 |
+| Painel de lucro (Grafana) | 11.5, 12.11, 38.4, 39.3 | Semana 4 · nov/2026; Nov/2026 em diante, uma por vez, na ordem de desbloqueio; Semana 11 · jan/2027 |
 | Programa de afiliados | 47.5 | A partir de fev/2027 |
 | Prospecção de parceiros | 37.16 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Dublagem (YouTube + ElevenLabs) | 47.8 | A partir de fev/2027 |
@@ -7274,7 +7226,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Bloco | Passo | Quando |
 |---|---|---|
 | Pix Automático + gateway (ex.: Asaas) | 24.7, 45.9, 52.4 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite); Quando a renda pedir |
-| Agenda online (Cal.com) | 23.8, 37.8, 45.4, 46.18, 46.19 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 8 a 10 · dez/2026 a jan/2027; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite); Fev a dez/2027, uma oferta por vez |
+| Agenda online (Cal.com) | 23.8, 37.8, 45.4, 46.18 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Semanas 8 a 10 · dez/2026 a jan/2027; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite); Fev a dez/2027, uma oferta por vez |
 | CRM simples (planilha) | 37.9 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Hotmart | 37.5, 40.2, 40.5, 40.10, 46.3, 46.4 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027; Fev a dez/2027, uma oferta por vez |
 | Kiwify | 37.5, 40.11 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
@@ -7282,7 +7234,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Udemy | 37.6, 40.11 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | DIO (parceria) | 37.6 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | YouTube (membros) | 47.9 | A partir de fev/2027 |
-| Mercado Pago | 37.7, 46.19 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
+| Mercado Pago | 37.7, 46.18 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Afiliados (Amazon, Hotmart…) | 37.11, 46.1 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Chatwoot (atendimento) | 33.5, 45.2, 45.5 | Com a primeira página de venda no ar (jan/2027) e por etapas; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Twenty (CRM aberto) | 23.8, 33.6 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Com a primeira página de venda no ar (jan/2027) e por etapas |
@@ -7303,7 +7255,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Declaração anual do IR | 37.19 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Conta bancária separada (CPF) | 2.7, 37.2 | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Contador | 23.1, 24.7, 37.3 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 8 a 10 · dez/2026 a jan/2027 |
-| Caixa da Casa / AM Rendara | 16.1, 16.2, 16.3, 16.4, 16.5, 16.6, 16.7, 16.8, 20.10, 24.5, 24.6, 37.20, 46.4 | Dez/2026; Semana 5 · nov/2026; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
+| Caixa da Casa / Financeiro AM Gestão | 16.1, 16.2, 16.3, 16.4, 16.5, 16.6, 16.7, 16.8, 20.10, 24.5, 24.6, 37.20, 46.4 | Dez/2026; Semana 5 · nov/2026; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Financeiro local | 15.1, 15.2, 15.3, 15.4 | Dez/2026 |
 | Documenso (assinatura) | 23.4, 23.8, 33.7, 45.4 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Com a primeira página de venda no ar (jan/2027) e por etapas; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Invoice Ninja (orçamentos) | 23.8, 33.7, 45.5 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Com a primeira página de venda no ar (jan/2027) e por etapas; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
@@ -7341,7 +7293,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 |---|---|---|
 | Mini-curso Lógica de Programação | 37.5, 40.2, 40.3 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Formações (TI, Matemática, Finanças) | 47.10 | A partir de fev/2027 |
-| Templates e código-fonte | 41.7 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Templates e código-fonte | 41.7 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Livro Lógica e Máquina | 43.2, 43.8 | Quando o capítulo 1 estiver pronto |
 | Aulas particulares | 37.8 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Sites para pequenas empresas | 23.3, 24.5, 36.13, 46.9, 46.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
@@ -7352,25 +7304,20 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| AMtech Software (projetos e SaaS) | 57.2 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Loja AMtech (assistência) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Peças sem estoque (sob encomenda) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Ponto de retirada (Shopee e ML) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| AMtech Maker (robótica) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| AM Entregas (moto e carro) | 57.4 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Mercado Envios Flex | 57.4 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| AM Delivery (várias empresas) | 57.5 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Sushi (delivery) | 57.6 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Cafeteria | 57.8 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Padaria + café da manhã + almoço | 57.7 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| 3 CNPJs por frente | 52.1 | Quando a renda pedir |
-| Planejador do Grupo | 57.1 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| iFood (canal de descoberta) | 57.6 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Vigilância sanitária (RDC 216) | 57.6 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Anatel e Inmetro | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
-| Radar de revenda | 11.5 | Semana 4 · nov/2026 |
+| AMtech Software (projetos e SaaS) | 57.2 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| Loja AMtech (assistência) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| Peças sem estoque (sob encomenda) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| Ponto de retirada (Shopee e ML) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| AMtech Maker (robótica) | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| AM Entregas (moto e carro) | 57.4 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| Mercado Envios Flex | 57.4 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| AM Delivery (várias empresas) | 57.5 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| 2 CNPJs por frente | 52.1 | Quando a renda pedir |
+| Planejador do Grupo | 57.1 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| Anatel e Inmetro | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
+| Radar de revenda | 11.4 | Semana 4 · nov/2026 |
 | AMtech Segurança (pentest) | 59.19 | Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
-| ERPNext (negócios físicos) | 57.11 | Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano |
+| ERPNext (negócios físicos) | 57.8 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
 
 ### Editora AMS Silva (produção de livros)
 
@@ -7451,19 +7398,19 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Armazenamento de arquivos (Blob/R2) | 42.4 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
-| E-mail transacional (Resend, SES…) | 42.5, 45.2 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| SonarQube Cloud | 41.5 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Armazenamento de arquivos (Blob/R2) | 42.4 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
+| E-mail transacional (Resend, SES…) | 42.5, 45.2 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| SonarQube Cloud | 41.5 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Projects · ADRs · MkDocs | 5.5 | Semana 2 · nov/2026 |
 | Dependabot + CodeQL | 5.3 | Semana 2 · nov/2026 |
 | Google Cloud | 55.5 | 2028 |
 | GitHub | 2.7, 5.1, 5.4, 24.8 | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semana 2 · nov/2026; Nov/2026 a out/2027, revisão no fim de cada trimestre |
 | GitHub Actions | 5.2, 39.1 | Semana 2 · nov/2026; Semana 11 · jan/2027 |
-| GHCR (imagens) | 41.6 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| GHCR (imagens) | 41.6 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | GitHub Pages | 36.7 | Semanas 6 e 7 · dez/2026 |
-| Cloudflare (DNS, Pages, e-mail) | 28.4, 28.6, 28.7, 36.3, 36.8, 38.1, 42.6 | Semana 6 · nov/2026 a dez/2026; Semanas 6 e 7 · dez/2026; Semana 11 · jan/2027; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
-| Vercel | 42.6 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
-| Azure | 32.13, 42.2, 42.3, 42.6 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| Cloudflare (DNS, Pages, e-mail) | 28.4, 28.6, 28.7, 36.3, 36.8, 38.1, 42.6 | Semana 6 · nov/2026 a dez/2026; Semanas 6 e 7 · dez/2026; Semana 11 · jan/2027; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
+| Vercel | 42.6 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
+| Azure | 32.13, 42.2, 42.3, 42.6 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | AWS | 32.13, 55.4 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; 2028 |
 | Backblaze B2 (backup) | 7.2 | Semana 3 · nov/2026 |
 | GPU por hora (RunPod e afins) | 29.4, 44.9 | 2027, depois do primeiro fine-tuning de 8B; Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) |
@@ -7474,7 +7421,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | OpenRouter | 27.15 | Semana 6 · nov/2026 a dez/2026 |
 | Speckle (modelos na web) | 62.10 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
 | act (CI do Actions na sua máquina) | 21.7 | Semana 5 · nov/2026 (tudo grátis, em sessões curtas); o analisador lógico entra com a primeira compra de robótica |
-| Kamal (deploy em VM por SSH) | 23.5, 32.13, 42.8, 45.1, 45.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Kamal (deploy em VM por SSH) | 23.5, 32.13, 42.8, 45.1, 45.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | bore (túnel TCP próprio) | 32.7 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | Headscale (rede própria) | 32.4 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | Forgejo (espelho dos repositórios) | 32.1 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
@@ -7484,32 +7431,32 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Plunk (e-mail próprio no SES) | 32.12 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | Stripe CLI (testar pagamentos) | 33.13 | Com a primeira página de venda no ar (jan/2027) e por etapas |
 
-### Aplicação: sistemas AM (Aura)
+### Aplicação: AM Gestão e as suítes AM
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| OpenAPI + Scalar | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| OpenAPI + Scalar | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | PostGIS + MapLibre | 51.3 | 2027 |
-| Storybook | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Clean Arch + DDD | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Prisma/Drizzle + PostgreSQL | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Supabase Realtime | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Multi-tenant (RLS) | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Testes: xUnit, Playwright, k6 | 24.6, 41.1, 45.10 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Storybook | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Clean Arch + DDD | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Prisma/Drizzle + PostgreSQL | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Supabase Realtime | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Multi-tenant (RLS) | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Testes: xUnit, Playwright, k6 | 24.6, 41.1, 45.10 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Módulos do AM Gestão | 51.4 | 2027 |
-| Next.js + Aura Design System | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
-| API TypeScript (Next/NestJS) | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
-| Keycloak / Entra ID | 41.2 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| IA: RAG + pgvector | 50.1 | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção |
+| Next.js + Aura Design System | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
+| API TypeScript (Next/NestJS) | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
+| Keycloak / Entra ID | 41.2 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| IA: RAG + pgvector | 50.1 | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Gestão já estiver em produção |
 | aura-licensing | 51.1 | 2027 |
-| aura-status | 42.7 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
-| AM Kaixara (PDV e cardápio) | 46.12, 51.2 | Fev a dez/2027, uma oferta por vez; 2027 |
-| AM Rotara (entregas) | 51.3, 51.5 | 2027 |
+| aura-status | 42.7 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
+| AM Gestão · Caixa (PDV e cardápio) | 46.12, 51.2 | Fev a dez/2027, uma oferta por vez; 2027 |
+| AM Gestão · Pedidos (entregas) | 51.3, 51.5 | 2027 |
 | App mobile (React Native) | 55.6 | 2028 |
 | AM Obra (diário, medição, compras) | 62.12 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
-| Zod · Biome · Vitest (front) | 41.9, 45.8 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Zod · Biome · Vitest (front) | 41.9, 45.8 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | SvelteKit (apps pequenos) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| PocketBase (MVP antes do Aura) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| PocketBase (MVP antes do AM Gestão) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Litestream (SQLite no R2) | 45.10 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | React Email (modelos) | 33.12 | Com a primeira página de venda no ar (jan/2027) e por etapas |
 | Go (CLIs com bubbletea) | 58.13 | Contínuo, desde a semana 2 |
@@ -7519,14 +7466,14 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Sentry (erros) | 41.4 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Sentry (erros) | 41.4 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Uptime Kuma | 10.6, 31.5, 45.1 | Semana 4 · nov/2026; Dez/2026 a jan/2027; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| Seq (logs) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Seq (logs) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Loki + Tempo | 55.3 | 2028 |
-| OpenTelemetry | 24.7, 41.3 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Prometheus | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| OpenTelemetry | 24.7, 41.3 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Prometheus | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Grafana | 10.4, 38.4 | Semana 4 · nov/2026; Semana 11 · jan/2027 |
-| Docker Compose (dev) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Docker Compose (dev) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | SigNoz (logs, traces e métricas) | 32.3 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | GlitchTip (erros dos sistemas) | 32.2 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 
@@ -7534,18 +7481,18 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Caddy (proxy + HTTPS) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Mailpit | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| Caddy (proxy + HTTPS) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Mailpit | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Kafka | 55.1 | 2028 |
 | kubectl · Helm · k9s | 55.2 | 2028 |
-| Azure CLI · AWS CLI | 42.1 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| Azure CLI · AWS CLI | 42.1 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | Histórico (append-only) | 51.4 | 2027 |
 | Docker + Compose | 4.2, 10.2 | Semana 2 · nov/2026; Semana 4 · nov/2026 |
-| PostgreSQL | 10.2, 22.5, 24.6, 41.1 | Semana 4 · nov/2026; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
-| Redis | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP |
+| PostgreSQL | 10.2, 22.5, 24.6, 41.1 | Semana 4 · nov/2026; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Redis | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
 | RabbitMQ | 55.1 | 2028 |
 | Kubernetes local (kind) | 55.2 | 2028 |
-| Terraform | 42.1, 42.3 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante) |
+| Terraform | 42.1, 42.3 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | Mosquitto (MQTT) | 60.2 | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | Zigbee2MQTT | 60.7 | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |
 | Frigate (câmeras com detecção) | 60.9 | Voz no PC e política em dez/2026; servidor da casa e cada aparelho conforme a compra (2027); orquestrador depois da Operação 24 horas |

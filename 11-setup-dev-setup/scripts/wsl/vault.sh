@@ -40,12 +40,13 @@ if [[ $NOVO -eq 0 ]]; then
     if [[ $SIMULAR -eq 1 ]]; then linha clonar "$REPO_VAULT" "CLONARIA em $V"; exit 0; fi
     gh repo clone "$REPO_VAULT" "$V"
   fi
-  if [[ -f "$V/00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md" ]]; then
+  # Arquivos-guia do vault: PLANO-UNICO e Cartão (desde 13/11); o Sumário Único antigo foi para 99-arquivo/.
+  if [[ -f "$V/PLANO-UNICO-AMtech.md" || -f "$V/CARTAO-voce-esta-aqui.md" || -f "$V/00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md" ]]; then
     for p in "07-estudo-e-carreira/professor" "07-estudo-e-carreira/akita" "09-material-producao-simultanea/fichas-duplas"; do pasta "$p"; done
     echo "Seu vault está em $V. Para trazer o setup para a pasta 11: cd ~/dev/dev-setup && just vault-espelho"
     exit 0
   fi
-  echo "Aviso: $V existe mas não é o seu vault (sem o Sumário Único). Criando as pastas modelo; use --pasta para outro lugar."
+  echo "Aviso: $V existe mas não é o seu vault (sem PLANO-UNICO-AMtech.md nem CARTAO-voce-esta-aqui.md). Criando as pastas modelo; use --pasta para outro lugar."
 fi
 for p in "00-Entrada" "10-Estudos" "20-Aulas" "30-Acervo" "40-Produtos" "50-Projetos" "60-Conteudo" "90-Modelos" "99-Arquivo" "anexos"; do pasta "$p"; done
 

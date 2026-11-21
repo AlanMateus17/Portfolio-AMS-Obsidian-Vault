@@ -49,7 +49,7 @@ flowchart LR
     n_hotm["Hotmart"]
   end
   subgraph L_emp["Pessoa física: impostos e finanças"]
-    n_caixa["Caixa da Casa / AM Rendara"]
+    n_caixa["Caixa da Casa / Financeiro AM Gestão"]
   end
   subgraph L_web["Vitrine web (sites e domínio)"]
     n_hostg["Hostinger (clientes WP)"]
@@ -72,7 +72,7 @@ flowchart LR
     n_gdrv["Google Drive (seus documentos)"]
     n_vercel["Vercel"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_ai["IA: RAG + pgvector"]
     n_api["API TypeScript (Next/NestJS)"]
     n_front["Next.js + Aura Design System"]
@@ -133,7 +133,7 @@ flowchart LR
 
 | Bloco | Tipo | O que faz | Quando entra |
 |---|---|---|---|
-| [Projects + memória](#proj) | Remoto · precisa de conta | Um Project por frente (Aura, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas. | passo 9.1 · Semana 4 · nov/2026 |
+| [Projects + memória](#proj) | Remoto · precisa de conta | Um Project por frente (AM Gestão, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas. | passo 9.1 · Semana 4 · nov/2026 |
 | [Artifacts (Docs, Slides, Sheets…)](#arts) | Remoto · precisa de conta | Documentos, apresentações, planilhas e designs editáveis e compartilháveis. O Caixa da Casa e este diagrama são artifacts. | passo 9.1 · Semana 4 · nov/2026 |
 | [Pesquisa aprofundada](#resq) | Remoto · precisa de conta | Relatório com dezenas de fontes: mercado de cursos, concorrentes, editais. | passo 9.1 · Semana 4 · nov/2026 |
 | [Tarefas agendadas](#sched) | Remoto · precisa de conta | O Claude executa sozinho em horário marcado: resumo semanal dos repositórios, rascunho de post, revisão do plano de estudos. | passo 9.1 · Semana 4 · nov/2026; passo 31.8 · Dez/2026 a jan/2027 |
@@ -159,7 +159,7 @@ flowchart LR
 
 *Remoto · precisa de conta*
 
-Um Project por frente (Aura, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas.
+Um Project por frente (AM Gestão, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas.
 
 **Quando entra:** passo 9.1 · Semana 4 · nov/2026 ([roteiro](../implantacao/roteiro.md))
 
@@ -179,7 +179,7 @@ Documentos, apresentações, planilhas e designs editáveis e compartilháveis. 
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Caixa da Casa / AM Rendara](19-emp.md#caixa) | Pessoa física: impostos e finanças | app da família |
+| → envia para | [Caixa da Casa / Financeiro AM Gestão](19-emp.md#caixa) | Pessoa física: impostos e finanças | app da família |
 | ← recebe de | [Claude (app)](07-chat.md#capp2) | Assistentes de IA (chat, pesquisa e estudo) | cria |
 
 <a id="resq"></a>
@@ -239,7 +239,7 @@ Assinatura usada pelo app e pelo Claude Code; API para as funções de IA dos si
 |---|---|---|---|
 | ← recebe de | [Claude (app)](07-chat.md#capp2) | Assistentes de IA (chat, pesquisa e estudo) | assinatura |
 | ← recebe de | [Claude Code](05-ia.md#cc) | Agentes de IA e sandbox | modelo Claude |
-| ← recebe de | [IA: RAG + pgvector](11-app.md#ai) | Aplicação: sistemas AM (Aura) | modelos |
+| ← recebe de | [IA: RAG + pgvector](11-app.md#ai) | Aplicação: AM Gestão e as suítes AM | modelos |
 | ← recebe de | [Pipeline de conteúdo](23-oper.md#opipe) | Operação do grupo (esteira, marca, qualidade) | API do Claude |
 | ← recebe de | [ai-usagebar (Akita)](05-ia.md#aiusage) | Agentes de IA e sandbox | mostra o limite |
 
@@ -272,7 +272,7 @@ Já conectados. Canva para posts e capas; Figma para as telas dos sistemas e do 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
 | → envia para | [Canva · Krita · Inkscape](13-cont.md#img) | Produção de conteúdo | posts e capas |
-| → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: sistemas AM (Aura) | telas do Figma |
+| → envia para | [Next.js + Aura Design System](11-app.md#front) | Aplicação: AM Gestão e as suítes AM | telas do Figma |
 | → envia para | [Quadro de referências](15-editora.md#refs) | Editora AMS Silva (produção de livros) | quadros e capas |
 
 <a id="cml"></a>
@@ -375,7 +375,7 @@ Revisão de código, arquitetura, ADR, testes, incidentes, crítica de design e 
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | revisão e arquitetura |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | revisão e arquitetura |
 
 <a id="pfin"></a>
 
@@ -389,7 +389,7 @@ Demonstrativos e conciliação para a empresa; dados de empresas abertas para os
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Caixa da Casa / AM Rendara](19-emp.md#caixa) | Pessoa física: impostos e finanças | fechamento do mês |
+| → envia para | [Caixa da Casa / Financeiro AM Gestão](19-emp.md#caixa) | Pessoa física: impostos e finanças | fechamento do mês |
 
 <a id="phst"></a>
 

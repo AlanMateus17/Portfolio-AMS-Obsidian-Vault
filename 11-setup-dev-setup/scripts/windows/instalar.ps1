@@ -8,13 +8,15 @@
 #
 # Opcoes:
 #   -SoObrigatorios         instala so os programas marcados como obrigatorios
-#   -MemoriaWSL 12GB        limite de memoria do WSL (padrao 12GB, metade dos 32 GB deixa folga para o Windows)
+#   -MemoriaWSL 20GB        limite de memoria do WSL (padrao 20GB dos 32 GB; os 12 GB restantes ficam para o Windows)
+#   -ProcessadoresWSL 12    nucleos logicos para o WSL (padrao 12)
 #   -SobrescreverWslconfig  troca um .wslconfig que ja existe (o antigo vira .wslconfig.bak)
 
 param(
   [switch]$Aplicar,
   [switch]$SoObrigatorios,
-  [string]$MemoriaWSL = '12GB',
+  [string]$MemoriaWSL = '20GB',
+  [int]$ProcessadoresWSL = 12,
   [switch]$SobrescreverWslconfig
 )
 
@@ -87,6 +89,7 @@ $conteudo = @"
 # Gerado por dev-setup/scripts/windows/instalar.ps1
 [wsl2]
 memory=$MemoriaWSL
+processors=$ProcessadoresWSL
 swap=8GB
 localhostForwarding=true
 "@
@@ -95,7 +98,7 @@ if ((Test-Path $cfg) -and -not $SobrescreverWslconfig) {
   if ($atual -match "memory\s*=\s*$([regex]::Escape($MemoriaWSL))") { Registrar 'wslconfig' '.wslconfig' 'JA TEM' "memory=$MemoriaWSL" }
   else { Registrar 'wslconfig' '.wslconfig' 'DIFERENTE' 'Ja existe com outros valores. Rode com -SobrescreverWslconfig para trocar (o antigo vira .bak).' }
 } elseif (-not $Aplicar) {
-  Registrar 'wslconfig' '.wslconfig' 'CRIARIA' "memory=$MemoriaWSL, swap=8GB"
+  Registrar 'wslconfig' '.wslconfig' 'CRIARIA' "memory=$MemoriaWSL, processors=$ProcessadoresWSL, swap=8GB"
 } else {
   if (Test-Path $cfg) { Copy-Item $cfg "$cfg.bak" -Force }
   Set-Content -Path $cfg -Value $conteudo -Encoding ASCII

@@ -11,7 +11,7 @@ capitulos/
   v1a/01-proposicao/
     texto.md            teoria, exemplos e pranchas (Markdown com extensões)
     exercicios.yaml     enunciado, nível, fonte, gabarito, solução, habilidade
-    codigo/             exemplos em C#, TypeScript, Python, C (com testes)
+    codigo/             exemplos em TypeScript, Python e C (com testes)
     figuras/            TikZ, SVG, Mermaid (fonte, nunca só a imagem)
 modelo/                 o seu modelo de criação: template de capítulo e regras
 estilo/

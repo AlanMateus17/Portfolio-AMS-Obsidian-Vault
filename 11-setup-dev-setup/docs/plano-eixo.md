@@ -29,7 +29,7 @@ Inglês: 20 a 30 min todo dia, fora dos blocos.
 
 ## Também ativos, fora do eixo (nada pausado desde o ADR 0015)
 
-Andam junto com o eixo, na ordem do roteiro e dentro do limite de 3 frentes "agora":
+Andam junto com o eixo, na ordem do roteiro e dentro do limite de 4 rendas "agora" (onda 0):
 
 C/C++ da École 42 · AM-OS e AM Linux · eJPT e OSCP · treino de IA do zero e fine-tuning de 8B · robótica pessoal, casa inteligente e agro · construção civil · espanhol · escolha entre Ciências Econômicas e a faculdade de IA · certificações de investimentos.
 

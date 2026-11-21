@@ -65,7 +65,7 @@
    "detalhes": [
     {
      "k": "Por quê",
-     "v": "A stack do Aura é TypeScript/Python; o Azure tem a melhor integração (App Service, Azure SQL/PostgreSQL, Key Vault, Entra ID) e é forte em empresa brasileira que usa Microsoft."
+     "v": "A stack AM é TypeScript + Python; o deploy primário é Vercel + VPS (ADR 0017). O Azure fica como estudo e portfólio para vagas: é forte em empresa brasileira que usa Microsoft."
     },
     {
      "k": "Certificações",
@@ -185,7 +185,7 @@
   "tendencias": [
    {
     "t": "Engenharia de IA e agentes",
-    "d": "Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, Microsoft.Extensions.AI, MCP e os agentes do Claude Code."
+    "d": "Pesquisa SoftServe/MIT (2026): 51% dos executivos dizem que engenheiro de IA é o perfil mais procurado. Na prática: RAG, MCP, avaliação de respostas e orquestração de agentes. No seu setup: pgvector, SDK de IA em TypeScript, MCP e os agentes do Claude Code."
    },
    {
     "t": "Arquitetura de software",
@@ -213,8 +213,8 @@
   },
   {
    "etapa": "Nuvem Azure",
-   "quando": "Conta e deploy do sistema exemplo com o Passo 5 (≈ abr a jun/2027); produção do AM Kaixara no Passo 10 (≈ 2028)",
-   "o_que": "AZ-900 e deploy do AM Kaixara no Azure com Terraform, Key Vault e OIDC. Começar a observabilidade com OpenTelemetry e Aspire."
+   "quando": "Conta e deploy do sistema exemplo com o Passo 5 (≈ abr a jun/2027); produção do AM Gestão · Caixa no Passo 10 (≈ 2028)",
+   "o_que": "AZ-900 e deploy do AM Gestão · Caixa no Azure com Terraform, Key Vault e OIDC. Começar a observabilidade com OpenTelemetry e Aspire."
   },
   {
    "etapa": "Engenharia de dados",
@@ -300,7 +300,7 @@
    "nome": "aura-mcp",
    "tipo": "Servidor MCP em TypeScript",
    "fase": "f3",
-   "descricao": "Expõe ao agente o catálogo dos 13 sistemas, ADRs e o vault. Projeto de portfólio de IA com sua stack."
+   "descricao": "Expõe ao agente o catálogo do AM Gestão e das suítes, ADRs e o vault. Projeto de portfólio de IA com sua stack."
   },
   {
    "nome": "Subagente arquiteto-aura",

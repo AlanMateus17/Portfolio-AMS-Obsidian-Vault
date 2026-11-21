@@ -2,7 +2,7 @@
 
 [← Operação do grupo](README.md)
 
-Toda oferta, de um template de R$ 27 a uma padaria, anda pelos mesmos estágios. O que muda é o tamanho de cada passo, não a ordem.
+Toda oferta, de um template de R$ 27 à loja física, anda pelos mesmos estágios. O que muda é o tamanho de cada passo, não a ordem.
 
 ```mermaid
 flowchart LR
@@ -25,7 +25,7 @@ flowchart LR
 | **Escala** | Cresce sem você crescer junto? | Automação, tráfego pago, equipe, versões derivadas | Lucro por venda mantido enquanto o volume sobe |
 | **Pausa ou fim** | Ainda faz sentido? | Registro do porquê e do que se aprendeu | — |
 
-A regra que você mesmo adotou fica gravada aqui: **validar antes de construir.** A planilha vende antes do sistema; a pré-venda vem antes do curso; o evento de sushi vem antes do restaurante.
+A regra que você mesmo adotou fica gravada aqui: **validar antes de construir.** A planilha vende antes do sistema; a pré-venda vem antes do curso; o kit por encomenda vem antes do lote do Maker.
 
 ## Validações baratas por tipo
 
@@ -44,7 +44,7 @@ A regra que você mesmo adotou fica gravada aqui: **validar antes de construir.*
 | Estágio | Ferramentas e agentes |
 |---|---|
 | Ideia | Catálogo em `data/portfolio.json`, pesquisa de mercado no Claude e no Perplexity, palavras-chave no vidIQ |
-| Validação | Página rápida (Lovable ou o template do Instituto AMS), checkout na Hotmart ou Kiwify, lista no MailerLite, anúncio pequeno com UTM |
+| Validação | Página rápida (Lovable ou o template do Instituto AMS Silva), checkout na Hotmart ou Kiwify, lista no MailerLite, anúncio pequeno com UTM |
 | Construção | Repositório por oferta, CI, agentes de revisão (código, texto, exercícios), Aura Design System |
 | Lançamento | Postiz com aprovação no celular, sequências de e-mail, Pixel e API de conversões, painel de lucro |
 | Escala | n8n, agentes do grupo, tráfego pago com regras de corte, dublagem, Udemy, white-label |

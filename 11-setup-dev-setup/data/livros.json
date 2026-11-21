@@ -1,0 +1,36 @@
+{
+  "_comment": "Livros da Editora AMS Silva (pausada desde 20/11/2026: estrutura o conteúdo agora, publica depois). Gera docs/editora/livros.md (tools/editora/livros.py). Cada capítulo aponta para um assunto do MAPA.md do mapa-de-estudo; a distribuição nos volumes é proposta e o Alan ajusta.",
+  "estado": "pausada: estruturar o conteúdo agora, publicar depois",
+  "regra": "Todo capítulo é escrito pelo Alan, a partir das notas dele: a ficha do assunto (just ficha ETAPA), os cadernos e as anotações de estudo. O arquivo do mapa-de-estudo é referência e conferência, nunca o texto do livro. IA só revisa, confere e diagrama.",
+  "livros": [
+    {
+      "id": "logica-e-maquina",
+      "titulo": "Lógica e Máquina",
+      "subtitulo": "Do raciocínio lógico ao código: fundamentos de Tecnologia da Informação, da Matemática à Máquina",
+      "publico": "ensino médio, faculdade, profissionais e professores de TI, e quem estuda para concursos com TI (PF, PRF e Forças Armadas)",
+      "volumes": [
+        {"id": "1A", "tema": "Lógica, computador e programação orientada a objetos",
+         "capitulos": [
+           {"assunto": "0.2", "estado": "escrito", "nota": "Capítulo 1, \"O que é uma Proposição\" (piloto)"},
+           {"assunto": "0.3"}, {"assunto": "0.4"}, {"assunto": "0.5"}, {"assunto": "7.14"},
+           {"assunto": "0.6"}, {"assunto": "2.1"}, {"assunto": "2.2"}, {"assunto": "4.4"}, {"assunto": "8.1"}]},
+        {"id": "1B", "tema": "Estruturas de dados e algoritmos",
+         "capitulos": [{"assunto": "2.3"}, {"assunto": "8.11"}, {"assunto": "H6.3"}]},
+        {"id": "2", "tema": "Banco de dados e back-end",
+         "capitulos": [{"assunto": "4.1"}, {"assunto": "4.2"}, {"assunto": "4.3"}, {"assunto": "5.3"}, {"assunto": "7.4"},
+                       {"assunto": "4.9"}, {"assunto": "4.7"}, {"assunto": "4.8"}, {"assunto": "4.10"}, {"assunto": "7.9"}]},
+        {"id": "3", "tema": "Front-end e infraestrutura",
+         "capitulos": [{"assunto": "3.5"}, {"assunto": "3.6"}, {"assunto": "3.7"}, {"assunto": "3.8"}, {"assunto": "1.1"},
+                       {"assunto": "1.3"}, {"assunto": "5.11"}, {"assunto": "3.1"}, {"assunto": "3.2"}, {"assunto": "1.8"},
+                       {"assunto": "3.9"}, {"assunto": "5.13"}]},
+        {"id": "4", "tema": "Grafos, sistemas distribuídos, teoria dos números e segurança",
+         "capitulos": [{"assunto": "7.5"}, {"assunto": "8.9"}, {"assunto": "8.10"}, {"assunto": "8.12"}, {"assunto": "H6.1"},
+                       {"assunto": "1.4"}, {"assunto": "H3.1"}, {"assunto": "4.11"}, {"assunto": "6.4"}, {"assunto": "6.6"}]},
+        {"id": "5", "tema": "Estatística, álgebra linear, cálculo e IA",
+         "capitulos": [{"assunto": "7.1"}, {"assunto": "7.6"}, {"assunto": "7.7"}, {"assunto": "H4.1"}, {"assunto": "4.13"},
+                       {"assunto": "7.8"}, {"assunto": "7.15"}]}
+      ],
+      "derivados": ["kitlivro", "adocao", "traducao", "anki", "ammentor"]
+    }
+  ]
+}

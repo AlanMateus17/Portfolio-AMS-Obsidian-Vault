@@ -20,7 +20,7 @@ BOM = """<!doctype html><html lang="pt-BR"><head><title>Padaria Pão Quente em B
 class TestAvaliador(unittest.TestCase):
     def test_template_bom_e_util(self):
         with tempfile.TemporaryDirectory() as t:
-            p = Path(t) / "padaria-pao"
+            p = Path(t) / "petshop-racao"
             p.mkdir()
             (p / "index.html").write_text(BOM, encoding="utf-8")
             (p / "sobre.html").write_text("<html></html>", encoding="utf-8")

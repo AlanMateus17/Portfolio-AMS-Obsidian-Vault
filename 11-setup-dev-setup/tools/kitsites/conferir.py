@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Confere um site antes de entregar ao cliente e gera o laudo (Markdown).
 
-    python tools/kitsites/conferir.py https://padaria-exemplo.com.br
+    python tools/kitsites/conferir.py https://petshop-exemplo.com.br
     python tools/kitsites/conferir.py ./pasta-do-site            # site estático local (index.html)
     python tools/kitsites/conferir.py URL --saida laudo.md --fotos  # fotos de tela, se o Playwright estiver instalado
 

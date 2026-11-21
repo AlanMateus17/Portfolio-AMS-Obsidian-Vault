@@ -52,7 +52,7 @@ Se não dá para preencher PRONTO QUANDO, a tarefa não está madura: o pedido c
 
 | Quem | Campos ou funções |
 |---|---|
-| Setup sozinho | CONTEXTO (ripgrep, CONTINUAR.md, ESTADO.md, memória), RESTRIÇÕES (regras já registradas), FORA DO ESCOPO (limite de 3 frentes "agora" na execução), ENTREGÁVEL (padrão por tipo), PREMISSA (pesquisa), MODELO e LUGAR (roteador) |
+| Setup sozinho | CONTEXTO (ripgrep, CONTINUAR.md, ESTADO.md, memória), RESTRIÇÕES (regras já registradas), FORA DO ESCOPO (limite de 4 rendas "agora", onda 0 na execução), ENTREGÁVEL (padrão por tipo), PREMISSA (pesquisa), MODELO e LUGAR (roteador) |
 | Setup sugere, Alan confirma com "ok" | ESCOPO, PRONTO QUANDO, PARA QUE |
 | Só o Alan | Decidir o que importa e quando parar; aprovar o que é público, gasta dinheiro ou fala com cliente; testar no mundo real; vender; julgar o resultado; trazer o conhecimento local que torna o resultado único |
 
@@ -64,7 +64,7 @@ Proposta em 11/11/2026: especificação profissional → no máximo 3 perguntas 
 
 ## Plano de 30 dias (11/11 a 11/12/2026)
 
-- **Semana 1:** salvar a skill e usar o formulário; registrar as frentes novas (todas ativas, nada congelado); escolher UMA oferta para ser a primeira na ordem de execução (site para pequeno negócio, minicurso de Lógica ou planilha AM Rendara).
+- **Semana 1:** salvar a skill e usar o formulário; registrar as frentes novas (todas ativas, nada congelado); escolher UMA oferta para ser a primeira na ordem de execução (desde 20/11: minicurso de Lógica, com a planilha do AM Gestão em teste).
 - **Semana 2:** `just instalar` e só as fases que a oferta usa; critério de pronto em uma linha.
 - **Semana 3:** versão 0.1 vendável; uma conversa por tarefa.
 - **Semana 4:** à venda, mostrada a 10 pessoas do público certo; revisão (mudanças de decisão, uso do formulário, renda).

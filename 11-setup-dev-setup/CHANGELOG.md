@@ -2,6 +2,85 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.39.0] - 2026-11-20
+
+### Adicionado
+- Verificador de coerência (`tools/coerencia/coerencia.py`, regras em `data/coerencia.json`): o objetivo, as decisões em vigor e os termos que ficaram velhos (nomes antigos dos sistemas, restaurantes, 3 CNPJs, rendas antigas, .NET no centro). Confere todos os arquivos de texto, diz arquivo por arquivo e linha por linha o que atualizar, e com `--corrigir` troca sozinho o que tem troca segura. Roda no `just check` e no CI (falha com "erro"); `just coerencia` confere todos os repositórios em `~/dev` e grava `~/dev/COERENCIA.md`. Histórico (ADRs, CHANGELOG, ESTADO, 99-arquivo) fica de fora.
+
+### Alterado
+- Todo o dev-setup passou no verificador: AM Kaixara, Rotara, Rendara e Vendra viraram AM Gestão · Caixa, Pedidos, Financeiro e Loja online; exemplos de padaria viraram pet shop; "stack fixa" virou "stack definida (ADR 0017)"; limite de 4 rendas "agora".
+- .NET é reserva também na instalação: o `bootstrap.sh` só instala o SDK com `AMTECH_DOTNET=1`, e o `verificar.sh` não cobra mais o .NET como obrigatório.
+- Passo "cadastro na avaliação de IA" saiu do roteiro (oferta descartada); o roteiro não exige passo para oferta descartada.
+
+## [2.38.0] - 2026-11-20
+
+### Alterado
+- Revisão de coerência de todos os textos escritos à mão e dos dados que geram documentos: nada mais apresenta .NET/Aura como stack principal, AM Rendara/Kaixara/Rotara como produtos separados (agora são módulos do AM Gestão), restaurantes, nove negócios, 3 CNPJs, 3 rendas "agora" ou a avaliação de IA como renda atual. ADRs, CHANGELOG e ESTADO ficam como histórico.
+- Ordem de execução (`docs/operacao/07`) reescrita com a sequência de 20/11 e a rotina real (domingo de folga; revisão no sábado). Marca e presença (`docs/operacao/02`) e `config/marca.md` com as 6 empresas.
+- Planejador do grupo sem as fases de restaurante (C1 a C3), que quebravam a página.
+
+## [2.37.0] - 2026-11-20
+
+### Removido
+- Restaurantes próprios fora do plano (decisão do Alan, 20/11): negócios sushi, cafeteria e padaria (`data/negocios.json`, documentos 07 a 10 de `docs/negocios/`, blocos do ecossistema, passos C1 a C3 do roteiro); ofertas sushi, aula de sushi, cafeteria, padaria, mercadinho autônomo, máquina de lanches e revenda de veículos. A frente de alimentação e o 3º CNPJ saem; o grupo fica com 2 CNPJs.
+
+### Adicionado
+- Suítes e pacotes de software (`data/softwares.json`, seção nova em `docs/operacao/softwares.md`): AM Gestão é a suíte 1 (MVP Caixa + Pedidos + Financeiro, vendida em pacotes) e os outros sistemas viram AM Serviços, AM Escola e AM Projetos, uma por vez. Validação: 3 ou mais sistemas por suíte, cada sistema numa suíte só, pacote só com sistemas da suíte, sistema sem suíte precisa de motivo.
+- Livros da Editora (`data/livros.json` → `docs/editora/livros.md`, `tools/editora/livros.py`): *Lógica e Máquina* em 6 volumes, 52 capítulos ligados aos assuntos do mapa-de-estudo, com estado (notas, rascunho, escrito, revisado). Regra: o texto é do Alan, a partir das notas dele.
+
+### Adicionado (empresas)
+- `data/empresas.json` → `docs/empresas.md` (`tools/empresas/empresas.py`): as 6 empresas do grupo, cada uma com produtos principais no raciocínio do AM Gestão (componentes + pacotes), a sequência por etapa e as ofertas que sobram fora dos produtos (candidatas a corte). AMtech Maker (Maker + Campo, com a loja e o ponto de retirada) e AM Logística como "software primeiro, empresa depois", com fase 1, fase 2 e gatilho. O CI recusa frente sem empresa, componente inexistente, de outra empresa ou em dois produtos. Frente `fisico` virou `logistica`; a frente `maker` voltou para `campo`, agora AMtech Maker.
+- Vitrines para clientes (`docs/vitrines/`, uma por empresa): para quem é, o problema, como cada produto resolve e os pacotes, sem número interno; `just vitrine EMPRESA DESTINO` copia como README do repositório público.
+- `repos.json` com empresa e visibilidade de cada repositório e os repositórios planejados (4 de produto e 6 vitrines); `docs/repositorios.md` agrupado por empresa. Inclui o PR #11 (página dos repositórios).
+
+### Removido (revendas)
+- Revenda de notebooks, celulares, livros e peças (renda ativa de margem baixa e com estoque) e a automação do radar de revenda.
+
+### Alterado
+- Campo e Maker como linhas de renda do Grupo AMtech (frente nova `maker` no portfólio; Maker, kits, aluguel de kits e oficinas mudam para ela). Editora marcada como pausada.
+- Ferramenta "Stack Aura (.NET + Next.js)" dos softwares virou "Stack AM (TypeScript + Next.js + PostgreSQL)", pela ADR 0017.
+- CONTINUAR.md com as decisões de 20/11.
+## [2.36.0] - 2026-11-20
+
+### Adicionado
+- `docs/repositorios.md`: todos os repositórios do GitHub por status (ativo, estudo, revisar, arquivar), com o papel e a stack de cada um, gerado de `repos.json` por `tools/repos/repos.py` (no `just docs`, no `just check` e no CI). Link no README. O mesmo texto serve de README do perfil do GitHub.
+
+### Alterado
+- `repos.json` com acentos e o produto único escrito como AM Gestão; `codigo-c-` (só PDFs de aula) e `instala-o-do-S.O-windows-pendrive` (vazio) passam para **revisar**.
+
+### Corrigido
+- `tools/vault/espelho.py` reconhece o vault também por `PLANO-UNICO-AMtech.md` ou `CARTAO-voce-esta-aqui.md` (o Sumário Único foi para `99-arquivo/` em 13/11), como o `vault.sh` da v2.34.1. Com teste.
+- Modelo `repo-padrao`: o CI de qualidade usava `aquasecurity/trivy-action@0.28.0`, tag que não existe; agora as três ações (checkout, gitleaks e trivy) são fixadas por commit, como o próprio Semgrep do modelo exige. Os 4 repositórios padronizados hoje recebem a mesma correção.
+
+## [2.35.0] - 2026-11-20
+
+### Adicionado
+- Professor ligado ao mapa-de-estudo: campo `etapa` em cada um dos 49 módulos de `data/professor/curriculo.json`, apontando para um assunto do `MAPA.md`. Retrato do mapa em `data/professor/mapa-assuntos.json` (180 assuntos, gerado por `tools/professor/mapa.py`; `just professor-mapa` regrava e confere). Teste no `just check` falha se um módulo apontar para assunto inexistente ou se a ordem do Professor contrariar os pré-requisitos do mapa. Os 2 módulos de física ficam com `etapa: null` e motivo (o mapa só tem física em H6.6).
+- `data/portfolio.json`: campos `tipo` (`passiva`/`ativa`) e `onda` (0 a 3, ou null fora das ondas), seção "Ondas do plano" no portfólio e validação (só passivas nas ondas; "agora" = onda 0; "próxima" = onda 1). O antigo campo `tipo` (formato) virou `formato`.
+
+### Alterado
+- Rendas conforme a decisão de 18/11 (só passivas no plano): onda 0 = mini-curso, canais sem rosto, planilha do AM Gestão e catálogo; `max_agora` = 4; canais sem rosto = Primer Code, Bancada Dev e finanças (nome a definir); avaliação de IA descartada; sites, aulas, encomenda e laudo de sites como ativas, fora das ondas; ondas 1 a 3 preenchidas.
+- `CONTINUAR.md` reescrito com a realidade pós-13/11: stack TypeScript + Python + SQL (ADR 0017), produto único AM Gestão, repositório público, plano de estudo único (ADR 0018), mapa-de-estudo, rendas passivas × ativas e os 3 canais.
+- Ordem do Professor ajustada pelo teste: Astro aponta para 3.5 (HTML e CSS), testes do Akita para 2.4, DevOps para 3.9 e containers para 1.8, porque os assuntos mais altos do mapa contrariavam a ordem dos trimestres.
+## [2.34.1] - 2026-11-20
+
+### Corrigido
+- `padronizar-repo.sh` pula o vault do Obsidian (`~/dev/notas`, ou pasta com `PLANO-UNICO-AMtech.md`/`CARTAO-voce-esta-aqui.md`): o modelo de repositório de código tinha sido aplicado na raiz do vault.
+- `vault.sh` reconhece o vault por `PLANO-UNICO-AMtech.md` ou `CARTAO-voce-esta-aqui.md` (o Sumário Único foi para `99-arquivo/` em 13/11 e o script criava pastas modelo dentro do vault). Testes em `tools/vault/test_scripts_vault.py`.
+- `instalar.ps1`: padrão `-MemoriaWSL 20GB` e novo `-ProcessadoresWSL 12` (o comentário dizia "metade dos 32 GB" com 12 GB).
+- `verificar.sh`: com o contexto `desktop-linux` sem resposta, diz "abra o Docker Desktop no Windows".
+- `.gitignore`: `infra/soberania/data/`.
+
+## [2.34.0] - 2026-11-17
+
+### Adicionado
+- Ficha do assunto e colheita (ADR 0021): `just ficha ETAPA` cria uma ficha única por assunto do mapa de estudo; `just colher ETAPA` entrega a explicação ao pipeline de conteúdo, os exercícios ao banco (YAML) e ao Anki (TSV) e o plano de aula aos componentes do `ensino-ti`. Ligações em `data/aulas.json`.
+- `just diag ETAPA c3 x2 c1`: diagnóstico com certeza por resposta, registrado em `07-estudo-e-carreira/diagnosticos.md`, com a decisão do roteiro.
+- ADR 0020, que a v2.33.0 citava sem o arquivo existir.
+
+### Alterado
+- `just professor fechar` aponta para a ficha do assunto quando o módulo está ligado a uma etapa do mapa.
+
 ## [2.33.0] - 2026-11-17
 
 ### Adicionado

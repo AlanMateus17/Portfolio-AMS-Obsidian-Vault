@@ -1106,8 +1106,8 @@
   },
   {
    "id": "f-arsenal",
-   "titulo": "Arsenal de rendas: regras e as 3 de agora",
-   "objetivo": "Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.",
+   "titulo": "Arsenal de rendas: regras e as 4 de agora",
+   "objetivo": "No máximo 4 rendas agora (onda 0, só passivas), hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.",
    "quando": "Semana 4 · nov/2026",
    "passos": [
     {
@@ -1128,18 +1128,6 @@
      "tempo_min": 10,
      "fora": "A Rotina fica no Caixa da Casa (artefato), fora do terminal.",
      "blocos": []
-    },
-    {
-     "id": "ar-ia",
-     "titulo": "Cadastro e teste de entrada numa plataforma de avaliação de IA",
-     "quem": "voce",
-     "pronto": "Teste de entrada feito",
-     "tempo_min": 90,
-     "fora": "Cadastro no navegador. Nunca pague para entrar e nunca passe senha a ninguém.",
-     "blocos": [],
-     "ofertas": [
-      "avaliacaoia"
-     ]
     },
     {
      "id": "ar-sites",
@@ -1167,12 +1155,7 @@
      "blocos": [
       "radar"
      ],
-     "ofertas": [
-      "revenda-notebooks",
-      "revenda-celulares",
-      "revenda-livros",
-      "revenda-pecas"
-     ]
+     "ofertas": []
     },
     {
      "id": "ar-retorno",
@@ -1306,7 +1289,7 @@
      "id": "au-estoque",
      "titulo": "Automação: Estoque, ordem de serviço e parceiros",
      "quem": "claude",
-     "pronto": "Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Kaixara).",
+     "pronto": "Controla compra, conserto, venda e o serviço feito por parceiros, com custo e lucro por item (Caixa do AM Gestão).",
      "tempo_min": 120,
      "comando": "cd ~/dev/dev-setup && claude \"Passo au-estoque do roteiro: Automação: Estoque, ordem de serviço e parceiros\"",
      "nota": "Construir quando a primeira oferta que usa esta automação for ativada; a ordem está na seção Automações do portfólio.",
@@ -2192,9 +2175,9 @@
      "id": "solo-arquiteto",
      "titulo": "Pedir arquitetura com o pacote de contexto, não com o repositório inteiro",
      "quem": "claude",
-     "pronto": "A resposta usa a stack fixa, cita o que já existe e termina numa primeira fatia de até 4 horas",
+     "pronto": "A resposta usa a stack definida (ADR 0017), cita o que já existe e termina numa primeira fatia de até 4 horas",
      "tempo_min": 15,
-     "comando": "cd ~/dev/dev-setup && just arquiteto \"módulo de aporte do AM Rendara\" > /tmp/pacote.md",
+     "comando": "cd ~/dev/dev-setup && just arquiteto \"módulo Financeiro do AM Gestão\" > /tmp/pacote.md",
      "nota": "O pacote tem cerca de 400 tokens. Cole no Claude ou use just arquiteto-claude, que manda pelo Claude Code dentro do ai-jail.",
      "blocos": [
       "triagem",
@@ -2728,7 +2711,7 @@
      "pronto": "Ordem confirmada ou ajustada por você em docs/plano-eixo.md",
      "tempo_min": 20,
      "comando": "cd ~/dev/dev-setup && less docs/plano-eixo.md",
-     "nota": "Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 3 frentes \"agora\".",
+     "nota": "Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 4 rendas \"agora\" (onda 0).",
      "decisao": true,
      "empresas": [
       "software"
@@ -2838,7 +2821,7 @@
     },
     {
      "id": "eixo-t4",
-     "titulo": "Trimestre 4: 1 PR aceito em open source .NET, 12 posts no ano, entrevista em inglês simulada e revisão do ano",
+     "titulo": "Trimestre 4: 1 PR aceito em open source (TypeScript ou Python), 12 posts no ano, entrevista em inglês simulada e revisão do ano",
      "quem": "voce",
      "pronto": "Itens cumpridos até 31/out/2027; decisão sobre o que sai da pausa",
      "tempo_min": 60,
@@ -2964,7 +2947,7 @@
     },
     {
      "id": "prof-melhorias",
-     "titulo": "Depois de 4 semanas usando o Professor: tutor socrático, prever antes de rodar, confiança, caderno de erros, teste de entrada, prova acumulada, documentação local e o AM Rendara como projeto-âncora",
+     "titulo": "Depois de 4 semanas usando o Professor: tutor socrático, prever antes de rodar, confiança, caderno de erros, teste de entrada, prova acumulada, documentação local e o AM Gestão como projeto-âncora",
      "quem": "claude",
      "pronto": "As 10 melhorias da seção 5 de docs/professor/metodo.md feitas, com testes",
      "tempo_min": 240,
@@ -4648,11 +4631,11 @@
     },
     {
      "id": "caixa",
-     "titulo": "Começar o Caixa da Casa numa planilha até o sistema AM Rendara existir",
+     "titulo": "Começar o Caixa da Casa numa planilha até o Financeiro do AM Gestão existir",
      "quem": "claude",
      "pronto": "Entradas e saídas do mês lançadas, separando casa e vendas",
      "tempo_min": 30,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo caixa do roteiro: Começar o Caixa da Casa numa planilha até o sistema AM Rendara existir\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo caixa do roteiro: Começar o Caixa da Casa numa planilha até o Financeiro do AM Gestão existir\"",
      "blocos": [
       "caixa"
      ],
@@ -4990,10 +4973,10 @@
      "id": "template-aura",
      "titulo": "Gerar o modelo de sistema com /novo-sistema-aura",
      "quem": "claude",
-     "pronto": "Sistema exemplo sobe com 'dotnet run' e passa nos testes",
+     "pronto": "Sistema exemplo sobe com 'pnpm dev' e passa nos testes",
      "tempo_min": 120,
      "comando": "cd ~/dev/dev-setup && claude \"Passo template-aura do roteiro: Gerar o modelo de sistema com /novo-sistema-aura\"",
-     "nota": "Clean Architecture + DDD, Prisma/Drizzle, multi-tenant com RLS, Supabase Realtime, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com xUnit, Playwright e k6.",
+     "nota": "Clean Architecture + DDD, Prisma/Drizzle, multi-tenant com RLS, Supabase Realtime, OpenAPI com Scalar, Next.js com o Aura Design System e Storybook, testes com Vitest, Playwright e k6.",
      "blocos": [
       "clean",
       "ef",
@@ -5086,9 +5069,9 @@
     },
     {
      "id": "vaga",
-     "titulo": "Candidatar-se às vagas de dev .NET com GitHub, LinkedIn e site prontos — no trimestre 4 do eixo (ago a out/2027)",
+     "titulo": "Candidatar-se às vagas de dev (TypeScript, Python e SQL; .NET só se a vaga pedir) com GitHub, LinkedIn e site prontos — no trimestre 4 do eixo (ago a out/2027)",
      "quem": "voce",
-     "pronto": "10 candidaturas enviadas com o portfólio do AM Rendara",
+     "pronto": "10 candidaturas enviadas com o portfólio do AM Gestão",
      "tempo_min": 120,
      "fora": "Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.",
      "blocos": [
@@ -5097,18 +5080,18 @@
     },
     {
      "id": "front-contratos",
-     "titulo": "Zod, Biome e Vitest no front do modelo Aura",
+     "titulo": "Zod, Biome e Vitest no front do modelo AM",
      "quem": "claude",
      "pronto": "O front recusa resposta fora do contrato no teste e o just check do sistema roda Biome e Vitest",
      "tempo_min": 60,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo front-contratos do roteiro: Zod, Biome e Vitest no front do modelo Aura\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo front-contratos do roteiro: Zod, Biome e Vitest no front do modelo AM\"",
      "nota": "O contrato do backend é o OpenAPI; o Zod fica só no front (ADR 0006).",
      "blocos": [
       "zod"
      ]
     }
    ],
-   "quando": "Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Rendara (módulo o-dotnet do Professor) e ganha testes e qualidade até o MVP"
+   "quando": "Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP"
   },
   {
    "id": "f19",
@@ -5211,7 +5194,7 @@
      ]
     }
    ],
-   "quando": "Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Rendara (MVP com 1 usuário pagante)"
+   "quando": "Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante)"
   },
   {
    "id": "f20",
@@ -5598,9 +5581,9 @@
   {
    "id": "f-sprint",
    "titulo": "Sprint de 14 dias (Estratégia do Halter)",
-   "objetivo": "As duas frentes do contexto mestre em 14 dias seguidos: caixa rápido com atendimento omnicanal (Chatwoot) e o MVP do ARCA (AM Rendara em PocketBase e SvelteKit), cada uma validada antes de virar sistema no Aura.",
+   "objetivo": "As duas frentes do contexto mestre em 14 dias seguidos: caixa rápido com atendimento omnicanal (Chatwoot) e o MVP do ARCA (Financeiro do AM Gestão em PocketBase e SvelteKit), cada uma validada antes de virar módulo do AM Gestão.",
    "quando": "Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite)",
-   "gatilho": "O recesso começou e uma das 3 rendas de agora já passou no portão",
+   "gatilho": "O recesso começou e uma das 4 rendas de agora já passou no portão",
    "passos": [
     {
      "id": "halter-d1",
@@ -5827,7 +5810,7 @@
     },
     {
      "id": "of-planilha",
-     "titulo": "Vender a planilha do Caixa da Casa antes de construir o AM Rendara",
+     "titulo": "Vender a planilha do Caixa da Casa antes de construir o Financeiro do AM Gestão",
      "quem": "voce",
      "pronto": "10 planilhas vendidas",
      "tempo_min": 180,
@@ -6052,23 +6035,6 @@
      ]
     },
     {
-     "id": "of-aulasushi",
-     "titulo": "Aula de sushi e sushiman para eventos: 2 eventos de teste",
-     "quem": "voce",
-     "pronto": "2 eventos pagos, com as regras sanitárias conferidas",
-     "tempo_min": 240,
-     "fora": "Venda e relacionamento: falar com gente, publicar e atender. O Claude prepara textos e materiais; quem fala é você.",
-     "blocos": [
-      "agenda"
-     ],
-     "ofertas": [
-      "aulasushi"
-     ],
-     "empresas": [
-      "software"
-     ]
-    },
-    {
      "id": "of-workshop",
      "titulo": "Workshop presencial para pequenos empresários: piloto com 10 vagas",
      "quem": "voce",
@@ -6088,7 +6054,7 @@
     },
     {
      "id": "of-pausadas",
-     "titulo": "Revisar a cada trimestre as ofertas em fila (AM Taskoro)",
+     "titulo": "Revisar a cada trimestre as ofertas em fila (AM Projetos)",
      "quem": "voce",
      "pronto": "Decisão anotada: avançar ou manter na fila",
      "tempo_min": 30,
@@ -6511,7 +6477,7 @@
      ]
     }
    ],
-   "quando": "Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Rendara já estiver em produção"
+   "quando": "Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Gestão já estiver em produção"
   },
   {
    "id": "f26",
@@ -6532,11 +6498,11 @@
     },
     {
      "id": "kaixara",
-     "titulo": "AM Kaixara: PDV, cardápio, fichas técnicas e estoque",
+     "titulo": "AM Gestão · Caixa: PDV, cardápio, fichas técnicas e estoque",
      "quem": "claude",
      "pronto": "Rodando num negócio real",
      "tempo_min": 2400,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo kaixara do roteiro: AM Kaixara: PDV, cardápio, fichas técnicas e estoque\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo kaixara do roteiro: AM Gestão · Caixa: PDV, cardápio, fichas técnicas e estoque\"",
      "blocos": [
       "nkaix"
      ],
@@ -6546,11 +6512,11 @@
     },
     {
      "id": "rotara",
-     "titulo": "AM Rotara: pedidos, rotas e mapas",
+     "titulo": "AM Gestão · Pedidos: pedidos, rotas e mapas",
      "quem": "claude",
      "pronto": "Entregas rastreadas no mapa em tempo real",
      "tempo_min": 2400,
-     "comando": "cd ~/dev/dev-setup && claude \"Passo rotara do roteiro: AM Rotara: pedidos, rotas e mapas\"",
+     "comando": "cd ~/dev/dev-setup && claude \"Passo rotara do roteiro: AM Gestão · Pedidos: pedidos, rotas e mapas\"",
      "blocos": [
       "nrot",
       "gis"
@@ -7083,62 +7049,6 @@
      ]
     },
     {
-     "id": "neg-c1",
-     "titulo": "C1 · Sushi, delivery primeiro",
-     "quem": "voce",
-     "pronto": "Lucro por 3 meses e sushiman que toca a noite sem você",
-     "tempo_min": 4800,
-     "fora": "Negócio físico: ponto, alvará, compras e pessoas. O Claude faz os números e os documentos.",
-     "precisa": [
-      "compra",
-      "pagamento"
-     ],
-     "blocos": [
-      "nsushi",
-      "nvisa",
-      "nifood"
-     ],
-     "ofertas": [
-      "sushi"
-     ]
-    },
-    {
-     "id": "neg-c2",
-     "titulo": "C2 · Padaria com café da manhã e almoço",
-     "quem": "voce",
-     "pronto": "Gerente no comando e CMV dentro da meta por 3 meses",
-     "tempo_min": 4800,
-     "fora": "Negócio físico: ponto, alvará, compras e pessoas. O Claude faz os números e os documentos.",
-     "precisa": [
-      "compra",
-      "pagamento"
-     ],
-     "blocos": [
-      "npad"
-     ],
-     "ofertas": [
-      "padaria"
-     ]
-    },
-    {
-     "id": "neg-c3",
-     "titulo": "C3 · Cafeteria",
-     "quem": "voce",
-     "pronto": "Cafeteria acima do equilíbrio",
-     "tempo_min": 2400,
-     "fora": "Negócio físico: ponto, alvará, compras e pessoas. O Claude faz os números e os documentos.",
-     "precisa": [
-      "compra",
-      "pagamento"
-     ],
-     "blocos": [
-      "ncafe"
-     ],
-     "ofertas": [
-      "cafeteria"
-     ]
-    },
-    {
      "id": "nb-2027",
      "titulo": "Serviços presenciais para 2027, se a tarde ficar livre (por parceiros quando der)",
      "quem": "voce",
@@ -7165,16 +7075,13 @@
      "fora": "Exigem capital; só quando a renda do núcleo pagar o investimento.",
      "blocos": [],
      "ofertas": [
-      "mercadinho",
-      "vending",
       "aluguelkits",
-      "kitstindie",
-      "revenda-veiculos"
+      "kitstindie"
      ]
     },
     {
      "id": "neg-erpnext",
-     "titulo": "ERPNext para o primeiro negócio físico até o Aura cobrir",
+     "titulo": "ERPNext para o primeiro negócio físico até o AM Gestão cobrir",
      "quem": "voce",
      "pronto": "Estoque e vendas do negócio no ERPNext por um mês",
      "tempo_min": 120,
@@ -7184,7 +7091,7 @@
      ]
     }
    ],
-   "quando": "Fase A: 12 a 18 meses; B: mais 12 a 18; C: a partir do 3º ou 4º ano",
+   "quando": "Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026)",
    "gatilho": "Os 5 portões do planejador: negócio anterior se pagando há 3 meses, capital em caixa, alguém de confiança tocando, sistema AM rodando e a sua reserva intacta"
   },
   {
@@ -7449,7 +7356,7 @@
     },
     {
      "id": "sg-ameacas",
-     "titulo": "Modelagem de ameaças e checklist ASVS do AM Rendara (o primeiro sistema)",
+     "titulo": "Modelagem de ameaças e checklist ASVS do AM Gestão (o primeiro sistema)",
      "quem": "claude",
      "pronto": "Tabela STRIDE preenchida e cada mitigação com um teste que prova",
      "tempo_min": 120,
@@ -7457,7 +7364,7 @@
       "appsec"
      ],
      "comando": "mkdir -p docs/seguranca && cp ~/dev/dev-setup/infra/templates/seguranca/modelagem-ameacas.md docs/seguranca/ameacas.md",
-     "nota": "Rode dentro da pasta do AM Rendara. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal."
+     "nota": "Rode dentro da pasta do AM Gestão. Repita em cada sistema AM antes de cada funcionalidade com login, dinheiro ou dado pessoal."
     },
     {
      "id": "sg-dast",
@@ -7467,13 +7374,13 @@
      "tempo_min": 20,
      "blocos": [],
      "comando": "mkdir -p .github/workflows && cp ~/dev/dev-setup/infra/templates/seguranca/dast-zap.yml .github/workflows/",
-     "nota": "Dentro da pasta do sistema, quando ele tiver homologação (trimestre 2 do eixo, com o AM Rendara). Crie a variável HOMOLOGACAO_URL no repositório."
+     "nota": "Dentro da pasta do sistema, quando ele tiver homologação (trimestre 2 do eixo, com o AM Gestão). Crie a variável HOMOLOGACAO_URL no repositório."
     },
     {
      "id": "sg-arquitetura",
-     "titulo": "Comparar o AM Rendara com os repositórios de referência",
+     "titulo": "Comparar o AM Gestão com os repositórios de referência",
      "quem": "claude",
-     "pronto": "3 ADRs novas no AM Rendara, cada uma com a diferença e a decisão",
+     "pronto": "3 ADRs novas no AM Gestão, cada uma com a diferença e a decisão",
      "tempo_min": 180,
      "blocos": [
       "refarq"

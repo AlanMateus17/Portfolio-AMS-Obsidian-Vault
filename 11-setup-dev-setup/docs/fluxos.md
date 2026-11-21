@@ -22,7 +22,7 @@ flowchart LR
   s8["9. Hotmart"]
   s9["10. Carnê-leão (Receita Federal)"]
   s10["11. Conta bancária separada (CPF)"]
-  s11["12. Caixa da Casa / AM Rendara"]
+  s11["12. Caixa da Casa / Financeiro AM Gestão"]
   s0 --> s1
   s1 --> s2
   s2 --> s3
@@ -47,7 +47,7 @@ flowchart LR
 9. **[Hotmart](camadas/20-venda.md#hotm)**: A venda acontece na plataforma.
 10. **[Carnê-leão (Receita Federal)](camadas/19-emp.md#nfse)**: Você lança a venda no carnê-leão do mês.
 11. **[Conta bancária separada (CPF)](camadas/19-emp.md#banco)**: O saque cai na conta separada, que paga o DARF.
-12. **[Caixa da Casa / AM Rendara](camadas/19-emp.md#caixa)**: O Caixa da Casa registra a entrada.
+12. **[Caixa da Casa / Financeiro AM Gestão](camadas/19-emp.md#caixa)**: O Caixa da Casa registra a entrada.
 
 ## Codar com agente e publicar
 
@@ -202,7 +202,7 @@ flowchart LR
   s2["3. Mercado Pago"]
   s3["4. Carnê-leão (Receita Federal)"]
   s4["5. Conta bancária separada (CPF)"]
-  s5["6. Caixa da Casa / AM Rendara"]
+  s5["6. Caixa da Casa / Financeiro AM Gestão"]
   s0 --> s1
   s1 --> s2
   s2 --> s3
@@ -215,7 +215,7 @@ flowchart LR
 3. **[Mercado Pago](camadas/20-venda.md#mp)**: Cobra pelo Mercado Pago.
 4. **[Carnê-leão (Receita Federal)](camadas/19-emp.md#nfse)**: Lança no carnê-leão.
 5. **[Conta bancária separada (CPF)](camadas/19-emp.md#banco)**: Recebe na conta separada.
-6. **[Caixa da Casa / AM Rendara](camadas/19-emp.md#caixa)**: O Caixa da Casa registra a entrada.
+6. **[Caixa da Casa / Financeiro AM Gestão](camadas/19-emp.md#caixa)**: O Caixa da Casa registra a entrada.
 
 ## Publicar automaticamente no melhor horário
 
@@ -350,13 +350,13 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-  s0["1. Caixa da Casa / AM Rendara"]
+  s0["1. Caixa da Casa / Financeiro AM Gestão"]
   s1["2. Grafana"]
   s2["3. Planejador do Grupo"]
-  s3["4. 3 CNPJs por frente"]
-  s4["5. Sushi (delivery)"]
-  s5["6. AM Kaixara (PDV e cardápio)"]
-  s6["7. Caixa da Casa / AM Rendara"]
+  s3["4. 2 CNPJs por frente"]
+  s4["5. Loja AMtech (assistência)"]
+  s5["6. AM Gestão · Caixa (PDV e cardápio)"]
+  s6["7. Caixa da Casa / Financeiro AM Gestão"]
   s0 --> s1
   s1 --> s2
   s2 --> s3
@@ -365,13 +365,13 @@ flowchart LR
   s5 --> s6
 ```
 
-1. **[Caixa da Casa / AM Rendara](camadas/19-emp.md#caixa)**: O lucro do que já funciona acumula o capital.
+1. **[Caixa da Casa / Financeiro AM Gestão](camadas/19-emp.md#caixa)**: O lucro do que já funciona acumula o capital.
 2. **[Grafana](camadas/10-obs.md#graf)**: O painel confirma 3 meses seguidos acima do ponto de equilíbrio.
 3. **[Planejador do Grupo](camadas/16-neg.md#nplan)**: O planejador mostra investimento, rampa e capital mínimo do próximo negócio.
-4. **[3 CNPJs por frente](camadas/16-neg.md#ncnpj)**: O CNPJ da frente recebe os novos CNAEs ou nasce.
-5. **[Sushi (delivery)](camadas/16-neg.md#nsushi)**: A casa abre, com alvará sanitário e bombeiros em dia.
-6. **[AM Kaixara (PDV e cardápio)](camadas/11-app.md#nkaix)**: O AM Kaixara cuida do cardápio, das fichas técnicas e do PDV.
-7. **[Caixa da Casa / AM Rendara](camadas/19-emp.md#caixa)**: As vendas do dia voltam para o caixa.
+4. **[2 CNPJs por frente](camadas/16-neg.md#ncnpj)**: O CNPJ da frente recebe os novos CNAEs ou nasce.
+5. **[Loja AMtech (assistência)](camadas/16-neg.md#nloja)**: A loja abre, com alvará e bombeiros em dia.
+6. **[AM Gestão · Caixa (PDV e cardápio)](camadas/11-app.md#nkaix)**: O AM Gestão cuida do caixa, do estoque e das vendas.
+7. **[Caixa da Casa / Financeiro AM Gestão](camadas/19-emp.md#caixa)**: As vendas do dia voltam para o caixa.
 
 ## Do trabalho ao conteúdo
 

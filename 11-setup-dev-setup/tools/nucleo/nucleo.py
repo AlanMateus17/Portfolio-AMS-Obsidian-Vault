@@ -8,7 +8,7 @@ agentes consultam antes de agir.
     python3 tools/nucleo/nucleo.py iniciar                       # cria o banco e importa ADRs e recusas
     python3 tools/nucleo/nucleo.py lembrar "Kamal precisa de arch arm64 na t4g" --tipo licao --tags deploy
     python3 tools/nucleo/nucleo.py buscar "deploy arm"           # o que já se sabe sobre isso
-    python3 tools/nucleo/nucleo.py contexto "deploy do AM Rendara"  # bloco curto para o pacote do arquiteto
+    python3 tools/nucleo/nucleo.py contexto "deploy do AM Gestão · Financeiro"  # bloco curto para o pacote do arquiteto
     python3 tools/nucleo/nucleo.py evento venda.aprovada '{"oferta": "minicurso", "valor": 97}'
     python3 tools/nucleo/nucleo.py tarefa nova "Revisar PR do garimpo"   |   tarefa listar   |   tarefa feita 3
     python3 tools/nucleo/nucleo.py auditar claude-code "abriu PR" --nivel automatico --motivo "garimpo"

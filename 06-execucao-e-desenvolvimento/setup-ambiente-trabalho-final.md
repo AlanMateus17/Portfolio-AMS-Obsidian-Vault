@@ -28,7 +28,7 @@ A senha da chave SSH está anotada fisicamente, aguardando o KeePassXC terminar 
 - WSL2 + Ubuntu, usuário `alanmateus`
 - Chave SSH ED25519 gerada e autenticada no GitHub
 - Identidade Git configurada (nome + e-mail)
-- Repositórios confirmados intactos no GitHub: Aura, AM Kaixara, AMtech
+- Repositórios confirmados intactos no GitHub: Aura, AM Gestão · Caixa, AMtech
 - Visual Studio 2026 instalando com workload **C++ Desktop** já incluído — bom, isso já cobre parte do que a Trilha 42 vai precisar
 
 ---

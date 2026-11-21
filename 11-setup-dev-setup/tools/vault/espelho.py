@@ -31,8 +31,9 @@ def vault() -> Path:
 
 
 def eh_vault(v: Path) -> bool:
-    """O seu vault tem o Sumário Único na raiz; uma pasta qualquer não recebe o espelho."""
-    return (v / "00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md").exists() or (v / "00-INICIO.md").exists()
+    """O vault tem o PLANO-UNICO ou o CARTÃO na raiz (o Sumário Único foi para 99-arquivo em 13/11); uma pasta qualquer não recebe o espelho."""
+    guias = ("PLANO-UNICO-AMtech.md", "CARTAO-voce-esta-aqui.md", "00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md", "00-INICIO.md")
+    return any((v / g).exists() for g in guias)
 
 
 def arquivos(raiz: Path = RAIZ) -> list[str]:

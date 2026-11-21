@@ -303,7 +303,7 @@ flowchart LR
 | [Lucro por Venda (calculadora)](#calc) | Remoto | Artefato com taxas das plataformas, imposto, CPA e ROAS de empate, simulador e o lucro real de cada campanha. | passo 37.13 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Webhooks de venda](#hooks) | Remoto | Hotmart, Kiwify e Eduzz avisam cada venda e reembolso; o n8n grava no banco. | passo 38.1 · Semana 11 · jan/2027; passo 38.2 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027; passo 40.10 · Semanas 12 a 15 · jan a fev/2027 |
 | [Banco de métricas (PostgreSQL)](#metrics) | Local | Tabelas de produtos, vendas, gastos, ferramentas e impostos. | passo 10.2 · Semana 4 · nov/2026; passo 10.7 · Semana 4 · nov/2026; passo 38.3 · Semana 11 · jan/2027 |
-| [Painel de lucro (Grafana)](#painel) | Local | Lucro por produto, canal, campanha e país, atualizado sozinho. | passo 11.6 · Semana 4 · nov/2026; passo 12.11 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 38.4 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027 |
+| [Painel de lucro (Grafana)](#painel) | Local | Lucro por produto, canal, campanha e país, atualizado sozinho. | passo 11.5 · Semana 4 · nov/2026; passo 12.11 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 38.4 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027 |
 | [Programa de afiliados](#afprog) | Remoto · futuro | Comissão definida pela calculadora, aberta depois de 20 vendas próprias. | passo 47.5 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
 | [Prospecção de parceiros](#prosp) | Local | Busca e qualificação de parceiros com IA; mensagem revisada e enviada por você. | passo 37.16 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Dublagem (YouTube + ElevenLabs)](#dub) | Remoto · futuro | Dublagem automática do YouTube para vídeos; ElevenLabs para cursos fora do YouTube. Espanhol primeiro. | passo 47.8 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
@@ -315,7 +315,7 @@ flowchart LR
 | [Influenciadores e newsletters](#infl) | Remoto · futuro | Post pago ou por desempenho no nicho de TI e educação; peça números reais e use cupom. | passo 47.4 · A partir de fev/2027 (começa quando: o mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar) |
 | [PostHog (funil e gravações)](#posthog) | Remoto · precisa de conta | Funis, gravação de sessões e testes nas páginas de venda: mostra onde o visitante desiste. Plano de nuvem com cota grátis; código aberto. | passo 33.2 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 33.3 · Com a primeira página de venda no ar (jan/2027) e por etapas |
 | [GrowthBook (testes A/B)](#growthbook) | Local | Testes A/B e liberação gradual de funções com estatística correta. Código aberto. | passo 33.3 · Com a primeira página de venda no ar (jan/2027) e por etapas |
-| [Formbricks (NPS e pesquisas)](#formbricks) | Remoto · precisa de conta | Principal de pesquisas (ADR 0008): NPS e pesquisa dentro do produto e por link, com histórico por cliente. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.10 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
+| [Formbricks (NPS e pesquisas)](#formbricks) | Remoto · precisa de conta | Principal de pesquisas (ADR 0008): NPS e pesquisa dentro do produto e por link, com histórico por cliente. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.10 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) |
 | [Adaptadores do núcleo](#adaptadores) | Remoto · futuro | Um conector por ferramenta (n8n para os simples, código para os complexos): traduz webhooks em eventos do núcleo e executa as ações que ele manda. | passo 22.9 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 22.10 · Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada |
 
 <a id="ads"></a>
@@ -682,7 +682,7 @@ Tabelas de produtos, vendas, gastos, ferramentas e impostos.
 
 Lucro por produto, canal, campanha e país, atualizado sozinho.
 
-**Quando entra:** passo 11.6 · Semana 4 · nov/2026; passo 12.11 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 38.4 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027 ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 11.5 · Semana 4 · nov/2026; passo 12.11 · Nov/2026 em diante, uma por vez, na ordem de desbloqueio; passo 38.4 · Semana 11 · jan/2027; passo 39.3 · Semana 11 · jan/2027 ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -897,7 +897,7 @@ Testes A/B e liberação gradual de funções com estatística correta. Código 
 
 Principal de pesquisas (ADR 0008): NPS e pesquisa dentro do produto e por link, com histórico por cliente.
 
-**Quando entra:** passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.10 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.10 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.6 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

@@ -7,7 +7,7 @@ atualizado: 2026-10-26
 
 # 🖥️ O Setup Completo — Projeto e Planejamento
 
-> Todos os passos do setup estão no [Plano Mestre](../PLANO-UNICO-AMtech.md) com códigos `S-…`, distribuídos nas mesmas etapas do estudo.
+> Todos os passos do setup estão no [PLANO ÚNICO](../PLANO-UNICO-AMtech.md) com códigos `S-…`, distribuídos nas mesmas etapas do estudo.
 
 > **Em palavras simples:** "setup" é tudo o que você usa para trabalhar: o notebook, os programas, as contas, as automações e os sistemas que fazem o trabalho repetitivo por você. O seu setup foi planejado para **três coisas ao mesmo tempo**: estudar para ser dev sênior, produzir conteúdo e aulas, e **vender** (cursos, sites, serviços). Ele está documentado num repositório privado chamado **`dev-setup`**, com scripts que instalam e conferem tudo.
 >
@@ -48,7 +48,7 @@ atualizado: 2026-10-26
 
 > **Em palavras simples:** é a lista do que montar primeiro. As primeiras 15 fases (umas 51 horas) usam só o que você já tem. Até a primeira venda do curso são cerca de **75 horas**, umas **15 semanas a 5 horas por semana** (quinta e sexta de manhã).
 
-| Fase | Nome | O que você ganha com ela | Quando | Primeiro item no Plano Mestre |
+| Fase | Nome | O que você ganha com ela | Quando | Primeiro passo no roteiro do dev-setup |
 |---|---|---|---|---|
 | 0 | Diagnóstico: o que você já tem | Saber exatamente o que o notebook já tem de hardware, segurança, programas, contas e documentos, e começar o roteiro a partir daí. | Antes de tudo · semana 1 (out/2026) | `S-diag-pasta` |
 | 1 | Preparar | Nada se perde, o hardware está no lugar e as contas estão protegidas antes de mexer na máquina. | Semana 1 · out/2026 | `S-backup-inicial` |

@@ -31,12 +31,12 @@ Agentes do Claude Code e fluxos do n8n, cada um com um papel estreito, as permis
 |---|---|---|---|
 | `atendente` | Responde perguntas frequentes no WhatsApp de cada negócio, mostra catálogo e horários, agenda; passa para você o que não souber | 2, depois 3 nas perguntas frequentes | WhatsApp Business, catálogo, agenda |
 | `orcamentista` | Monta proposta a partir dos pacotes e do histórico | 2 | Sites, automação, assistência, eventos |
-| `cobrador` | Lembra vencimentos e envia Pix; avisa você nos atrasos | 3 | Mercado Pago, Asaas, AM Rendara |
+| `cobrador` | Lembra vencimentos e envia Pix; avisa você nos atrasos | 3 | Mercado Pago, Asaas, Financeiro do AM Gestão |
 | `pos-venda` | Pergunta a nota (NPS), pede avaliação no Google, oferece o próximo produto da jornada | 3 | CRM, Google Perfil, MailerLite |
 | `editor-de-conteudo` | Transforma gravações e textos em peças para cada rede | 2 | Whisper, Postiz, Telegram |
 | `analista-semanal` | Lê o painel toda segunda e manda 3 fatos e 1 sugestão de decisão | 3 (só leitura) | Painel do grupo |
-| `comprador` | Sugere a lista de compras pelo estoque mínimo e pela previsão | 2 | AM Kaixara |
-| `organizador-fiscal` | Junta notas, extratos e vendas do mês para o contador e para o carnê-leão | 2 | Bancos, plataformas, AM Rendara |
+| `comprador` | Sugere a lista de compras pelo estoque mínimo e pela previsão | 2 | Caixa do AM Gestão |
+| `organizador-fiscal` | Junta notas, extratos e vendas do mês para o contador e para o carnê-leão | 2 | Bancos, plataformas, Financeiro do AM Gestão |
 | `revisor-de-oferta` | Confere cada lançamento contra o padrão de qualidade | 2 | Repositório da oferta |
 
 Os agentes da editora (revisor técnico, verificador de gabarito e os demais) seguem em [Editora AMS Silva](../editora/02-arquitetura-de-producao.md).

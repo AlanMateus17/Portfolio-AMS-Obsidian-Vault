@@ -72,6 +72,25 @@ class TestPortfolio(unittest.TestCase):
             self.assertTrue(o["proximo_passo"].strip(), o["id"])
             self.assertTrue(o["metrica"].strip(), o["id"])
 
+    def test_plano_de_18_11(self):
+        o = {x["id"]: x for x in self.dados["ofertas"]}
+        self.assertEqual(self.dados["regras"]["max_agora"], 4)
+        self.assertEqual({i for i, x in o.items() if x["onda"] == 0}, {"minicurso", "dark", "rendara", "catalogo"})
+        self.assertEqual(o["avaliacaoia"]["veredito"], "descartar")
+        for i in ("sites", "aulas", "encomenda", "auditsites"):
+            self.assertEqual((o[i]["tipo"], o[i]["onda"]), ("ativa", None), i)
+        self.assertEqual([m["nome"] for m in o["dark"]["marcas"]], ["Primer Code", "Bancada Dev", None])
+
+    def test_ativa_nao_entra_em_onda(self):
+        d = copy.deepcopy(self.dados)
+        next(x for x in d["ofertas"] if x["id"] == "sites")["onda"] = 2
+        self.assertTrue(any("só passivas" in e for e in validar(d)))
+
+    def test_agora_e_onda_0_andam_juntos(self):
+        d = copy.deepcopy(self.dados)
+        next(x for x in d["ofertas"] if x["id"] == "anki")["veredito"] = "agora"
+        self.assertTrue(any("andam juntos" in e for e in validar(d)))
+
 
 if __name__ == "__main__":
     unittest.main()

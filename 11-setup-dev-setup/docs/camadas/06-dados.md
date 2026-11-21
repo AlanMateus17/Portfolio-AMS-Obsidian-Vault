@@ -59,7 +59,7 @@ flowchart LR
   subgraph L_nuvem["Nuvem, código e entrega"]
     n_gpuh["GPU por hora (RunPod e afins)"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_nobra["AM Obra (diário, medição, compras)"]
   end
   subgraph L_cnt["Containers, Kubernetes e infra como código"]
@@ -510,7 +510,7 @@ Custos de referência da construção por estado, todo mês, em Excel: base das 
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [AM Obra (diário, medição, compras)](11-app.md#nobra) | Aplicação: sistemas AM (Aura) | preços do mês |
+| → envia para | [AM Obra (diário, medição, compras)](11-app.md#nobra) | Aplicação: AM Gestão e as suítes AM | preços do mês |
 
 ---
 

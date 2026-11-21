@@ -46,7 +46,7 @@ Só três itens passam nas duas condições (conceito valioso de aprender **e** 
 
 **O que ensina de verdade:** como sistema desacopla comunicação — um sistema publica um evento, outro consome, sem esperar resposta direta. É o mecanismo, não a escala de bilhões de mensagens/segundo do Kafka real.
 
-**Escopo realista:** uma fila em memória (ou usando o Redis que você já tem no stack) com `Publish(evento)` e `Subscribe(tipo)` — sem replicação, sem partição, sem garantia de entrega distribuída. Isso já ensina o conceito e ainda resolve um problema real seu: quando dois sistemas Aura precisarem se avisar de algo (ex: AM Kaixara avisa AM Rendara de uma venda) sem chamar a API um do outro diretamente.
+**Escopo realista:** uma fila em memória (ou usando o Redis que você já tem no stack) com `Publish(evento)` e `Subscribe(tipo)` — sem replicação, sem partição, sem garantia de entrega distribuída. Isso já ensina o conceito e ainda resolve um problema real seu: quando dois sistemas Aura precisarem se avisar de algo (ex: AM Gestão · Caixa avisa AM Gestão · Financeiro de uma venda) sem chamar a API um do outro diretamente.
 
 **Onde entra:** depois que 2-3 sistemas já estiverem em produção e precisarem conversar entre si — não antes, não é urgente agora.
 

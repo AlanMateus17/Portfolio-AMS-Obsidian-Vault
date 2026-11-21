@@ -1,7 +1,7 @@
 ---
 tags: [setup, dev-setup, indice, espelho]
 tipo: indice
-atualizado: 2026-11-17
+atualizado: 2026-11-21
 ---
 
 # Setup completo (dev-setup) dentro do vault

@@ -34,6 +34,12 @@ class TestEspelho(unittest.TestCase):
             (Path(t) / "00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO.md").write_text("x")
             self.assertTrue(espelho.eh_vault(Path(t)))
 
+    def test_reconhece_vault_pelo_plano_unico_ou_cartao(self):
+        for guia in ("PLANO-UNICO-AMtech.md", "CARTAO-voce-esta-aqui.md"):
+            with tempfile.TemporaryDirectory() as t:
+                (Path(t) / guia).write_text("x")
+                self.assertTrue(espelho.eh_vault(Path(t)), guia)
+
     def test_lista_real_sem_github(self):
         lista = espelho.arquivos()
         self.assertIn("justfile", lista)

@@ -627,7 +627,7 @@
   },
   {
    "id": "am-kaixara",
-   "nome": "AM Kaixara (PDV, comandas, estoque, ficha técnica)",
+   "nome": "AM Gestão · Caixa (PDV, comandas, estoque, ficha técnica)",
    "categoria": "sistema",
    "publico": "restaurantes, lojas, assistências",
    "faz": "Venda, comanda, mesa, cozinha, estoque, receita e caixa",
@@ -646,7 +646,7 @@
   },
   {
    "id": "am-rendara",
-   "nome": "AM Rendara (finanças e ARCA)",
+   "nome": "AM Gestão · Financeiro (finanças e ARCA)",
    "categoria": "sistema",
    "publico": "pessoas, famílias, pequenas empresas",
    "faz": "Contas, fluxo de caixa, cascata, carteira e rebalanceamento",
@@ -664,7 +664,7 @@
   },
   {
    "id": "am-rotara",
-   "nome": "AM Rotara (pedidos e entregas)",
+   "nome": "AM Gestão · Pedidos (pedidos e entregas)",
    "categoria": "sistema",
    "publico": "delivery e lojistas",
    "faz": "Pedidos, rotas, app do entregador, prova de entrega",
@@ -823,7 +823,7 @@
   },
   {
    "id": "am-vendra",
-   "nome": "AM Vendra (loja virtual)",
+   "nome": "AM Gestão · Loja online (loja virtual)",
    "categoria": "sistema",
    "publico": "lojas pequenas",
    "faz": "Loja, carrinho, frete, pagamento",
@@ -966,7 +966,7 @@
    "faz": "IMEI, FIPE, sinais de golpe",
    "ferramenta": "horizons",
    "receita": "afiliados e isca",
-   "oferta": "revenda-notebooks",
+   "oferta": "assist",
    "modulos": [
     "leads"
    ],
@@ -1371,5 +1371,185 @@
    "estado": "ideia",
    "vende": true
   }
- ]
+ ],
+ "suites": [
+  {
+   "id": "am-gestao",
+   "nome": "AM Gestão",
+   "ordem": 1,
+   "estado": "MVP em construção",
+   "publico": "restaurantes, lojas e quem vende online (já procuram)",
+   "sistemas": [
+    "am-kaixara",
+    "am-rotara",
+    "am-rendara",
+    "am-vendra",
+    "delivery-whitelabel"
+   ],
+   "mvp": [
+    "am-kaixara",
+    "am-rotara",
+    "am-rendara"
+   ],
+   "pacotes": [
+    {
+     "nome": "Caixa",
+     "sistemas": [
+      "am-kaixara"
+     ]
+    },
+    {
+     "nome": "Caixa + Financeiro",
+     "sistemas": [
+      "am-kaixara",
+      "am-rendara"
+     ]
+    },
+    {
+     "nome": "Integrado (o MVP)",
+     "sistemas": [
+      "am-kaixara",
+      "am-rotara",
+      "am-rendara"
+     ]
+    },
+    {
+     "nome": "Integrado + Loja online",
+     "sistemas": [
+      "am-kaixara",
+      "am-rotara",
+      "am-rendara",
+      "am-vendra"
+     ]
+    },
+    {
+     "nome": "Pedidos com a marca do cliente",
+     "sistemas": [
+      "am-rotara",
+      "delivery-whitelabel"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "am-servicos",
+   "nome": "AM Serviços (nome provisório)",
+   "ordem": 2,
+   "estado": "depois do AM Gestão vender",
+   "publico": "assistências técnicas, veterinárias, salões, clínicas e consultórios",
+   "sistemas": [
+    "am-horaria",
+    "am-consertta",
+    "am-petara"
+   ],
+   "mvp": [
+    "am-horaria",
+    "am-consertta"
+   ],
+   "pacotes": [
+    {
+     "nome": "Agenda",
+     "sistemas": [
+      "am-horaria"
+     ]
+    },
+    {
+     "nome": "Assistência (agenda + ordem de serviço)",
+     "sistemas": [
+      "am-horaria",
+      "am-consertta"
+     ]
+    },
+    {
+     "nome": "Pet (agenda + veterinária)",
+     "sistemas": [
+      "am-horaria",
+      "am-petara"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "am-escola",
+   "nome": "AM Escola (nome provisório)",
+   "ordem": 3,
+   "estado": "depois do AM Serviços",
+   "publico": "professores, escolas e cursos livres",
+   "sistemas": [
+    "am-saberia",
+    "ed-ammentor",
+    "ed-instituto",
+    "ss-fabrica"
+   ],
+   "mvp": [
+    "ed-ammentor",
+    "ss-fabrica"
+   ],
+   "pacotes": [
+    {
+     "nome": "Professor (exercícios + documentos)",
+     "sistemas": [
+      "ed-ammentor",
+      "ss-fabrica"
+     ]
+    },
+    {
+     "nome": "Escola (gestão + exercícios)",
+     "sistemas": [
+      "am-saberia",
+      "ed-ammentor"
+     ]
+    },
+    {
+     "nome": "Curso online (plataforma + exercícios)",
+     "sistemas": [
+      "ed-instituto",
+      "ed-ammentor"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "am-projetos",
+   "nome": "AM Projetos (nome provisório)",
+   "ordem": 4,
+   "estado": "depois do AM Escola",
+   "publico": "equipes pequenas, construtoras e software houses",
+   "sistemas": [
+    "am-taskoro",
+    "am-canteira",
+    "am-projeta"
+   ],
+   "mvp": [
+    "am-taskoro",
+    "am-canteira"
+   ],
+   "pacotes": [
+    {
+     "nome": "Quadro (Kanban e Scrum)",
+     "sistemas": [
+      "am-taskoro"
+     ]
+    },
+    {
+     "nome": "Obra (quadro + obras)",
+     "sistemas": [
+      "am-taskoro",
+      "am-canteira"
+     ]
+    },
+    {
+     "nome": "Software house (quadro + diagnóstico por IA)",
+     "sistemas": [
+      "am-taskoro",
+      "am-projeta"
+     ]
+    }
+   ]
+  }
+ ],
+ "fora_das_suites": {
+  "am-predara": "condomínios: público diferente de todas as suítes; decidir se entra no AM Serviços ou sai",
+  "am-vynla": "produto para casais e famílias (consumidor final): decidir se fica"
+ }
 }

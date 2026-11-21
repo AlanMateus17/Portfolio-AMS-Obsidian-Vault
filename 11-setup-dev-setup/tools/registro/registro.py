@@ -10,6 +10,10 @@ Os dois viram um arquivo só cada, no seu vault, para você nunca precisar abrir
     python3 tools/registro/registro.py erros [--assunto 0.2]
     python3 tools/registro/registro.py atrito "conferir o backup à mão" --area backup
     python3 tools/registro/registro.py atritos               # agrupados, os repetidos 3 vezes ou mais primeiro
+    python3 tools/registro/registro.py diag 0.1 c3 x2 c1 --min 4   # diagnóstico: certo/errado + certeza 1 a 3
+
+O diagnóstico vira uma linha em 07-estudo-e-carreira/diagnosticos.md e devolve a decisão do roteiro
+(pular o apoio ou fazer o roteiro inteiro). Um acerto no chute (c1) conta como não saber.
 """
 from __future__ import annotations
 
@@ -28,6 +32,13 @@ ATRITOS_CAB = ("# Atritos do setup\n\n"
                "Gerado por `just atrito`. O que foi manual, lento, quebrou ou se repetiu. "
                "O que aparece 3 vezes vira script ou automação (regra do setup).\n\n"
                "| Data | Área | O que aconteceu |\n|---|---|---|\n")
+
+
+DIAG_CAB = ("# Diagnósticos\n\n"
+            "Gerado por `just diag`. Antes de cada assunto: responder sem consulta, dar a certeza (1 chute, 2 acho, "
+            "3 certeza) e só então conferir. Erro com certeza 3 vai para o caderno de erros na hora.\n\n"
+            "| Data | Assunto | Acertos | Erros com certeza | Chutes certos | Minutos | Decisão |\n|---|---|---|---|---|---|---|\n")
+CERTEZA = {"1": "chute", "2": "acho", "3": "certeza"}
 
 
 def vault() -> Path:
@@ -81,6 +92,43 @@ def atrito(texto: str, area: str, hoje: date | None = None) -> Path:
     return anexar(arq_atritos(), ATRITOS_CAB, [area, texto], hoje)
 
 
+def arq_diag() -> Path:
+    return vault() / "07-estudo-e-carreira" / "diagnosticos.md"
+
+
+def ler_respostas(respostas: list[str]) -> list[tuple[bool, int]]:
+    """'c3' = certo com certeza 3; 'x1' = errado no chute. Recusa qualquer outra forma."""
+    saida = []
+    for r in respostas:
+        r = r.strip().lower()
+        if len(r) != 2 or r[0] not in "cx" or r[1] not in CERTEZA:
+            raise SystemExit(f"resposta '{r}' inválida: use c ou x (certo/errado) + certeza 1, 2 ou 3. Ex.: c3 x2 c1")
+        saida.append((r[0] == "c", int(r[1])))
+    if not saida:
+        raise SystemExit("informe pelo menos uma resposta. Ex.: just diag 0.1 c3 x2 c1")
+    return saida
+
+
+def avaliar(resp: list[tuple[bool, int]]) -> dict:
+    total = len(resp)
+    acertos = sum(1 for certo, _ in resp if certo)
+    sabe = sum(1 for certo, conf in resp if certo and conf >= 2)
+    confiantes_errados = [i + 1 for i, (certo, conf) in enumerate(resp) if not certo and conf == 3]
+    chutes = [i + 1 for i, (certo, conf) in enumerate(resp) if certo and conf == 1]
+    rapido = sabe == total
+    return {"total": total, "acertos": acertos, "errados_com_certeza": confiantes_errados, "chutes_certos": chutes,
+            "decisao": "modo rápido: pular o apoio" if rapido else "roteiro inteiro", "rapido": rapido}
+
+
+def diag(assunto: str, respostas: list[str], minutos: int = 0, hoje: date | None = None) -> dict:
+    checar(assunto)
+    av = avaliar(ler_respostas(respostas))
+    lista = lambda xs: ", ".join(str(x) for x in xs) or "nenhum"
+    anexar(arq_diag(), DIAG_CAB, [assunto, f"{av['acertos']}/{av['total']}", lista(av["errados_com_certeza"]),
+                                  lista(av["chutes_certos"]), str(minutos or "-"), av["decisao"]], hoje)
+    return av
+
+
 def resumo_atritos() -> list[tuple[str, int]]:
     """Conta por (área + texto em minúsculas): o mesmo atrito anotado de novo soma."""
     cont = Counter(f"{c[1]}: {c[2].lower()}" for c in linhas(arq_atritos()))
@@ -94,6 +142,7 @@ def main(argv: list[str] | None = None) -> int:
     p = s.add_parser("erros"); p.add_argument("--assunto")
     p = s.add_parser("atrito"); p.add_argument("texto"); p.add_argument("--area", default="geral")
     s.add_parser("atritos")
+    p = s.add_parser("diag"); p.add_argument("assunto"); p.add_argument("respostas", nargs="*"); p.add_argument("--min", type=int, default=0)
     a = ap.parse_args(argv)
     if a.cmd == "erro":
         print(f"Anotado em {erro(a.assunto, a.texto, a.certo)}. Faça o cartão do Anki com o \"certo\".")
@@ -104,6 +153,15 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{len(ls)} erros.")
     elif a.cmd == "atrito":
         print(f"Anotado em {atrito(a.texto, a.area)}.")
+    elif a.cmd == "diag":
+        av = diag(a.assunto, a.respostas, a.min)
+        print(f"Diagnóstico {a.assunto}: {av['acertos']}/{av['total']} certos. Decisão: {av['decisao']}.")
+        for q in av["errados_com_certeza"]:
+            print(f"  Pergunta {q}: errou com certeza. Prioridade máxima: leia a resposta comentada agora e anote:\n"
+                  f"    just erro {a.assunto} \"o que eu achava\" --certo \"o que é\"")
+        for q in av["chutes_certos"]:
+            print(f"  Pergunta {q}: acertou no chute. Conta como não saber: estude essa parte normalmente.")
+        print(f"  Registrado em {arq_diag()}.")
     elif a.cmd == "atritos":
         for chave, n in resumo_atritos():
             marca = "  ← 3 vezes: vira script/automação" if n >= 3 else ""

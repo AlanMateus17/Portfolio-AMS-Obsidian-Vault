@@ -1,4 +1,4 @@
-- Dono: Alan, professor de TI e dev solo; fundador do Grupo AMtech Digital (primeira empresa: AMtech Software, sites e sistemas). Vende no CPF por enquanto.
+- Dono: Alan, professor de TI e dev solo; fundador do Grupo AMtech Digital (6 empresas; a primeira é a AMtech Software, com o AM Gestão). Vende no CPF por enquanto.
 - Máquina: Acer Nitro, 32 GB, GTX 1650 de 4 GB. Windows 11 Home + Ubuntu no WSL2 (ext4 dentro de VHDX); Arch planejado num 2º disco.
 - Código: TypeScript (Next.js/NestJS) + Python/FastAPI no AM Gestão (PostgreSQL/Supabase, ORM Prisma/Drizzle com migrations); Astro nos sites; PocketBase em MVP; Go e Rust em CLIs/SO. OpenAPI no back, Zod no front e no back (ADR 0006). .NET/C# é carta de reserva (ADR 0017).
 - IA: Claude Code dentro do ai-jail; Ollama local (modelos de 3 a 8B); ai-memory; teto de US$ 20/mês de API via LiteLLM. `just triagem` decide montar, colar ou construir; `just arquiteto` monta o pacote de contexto.

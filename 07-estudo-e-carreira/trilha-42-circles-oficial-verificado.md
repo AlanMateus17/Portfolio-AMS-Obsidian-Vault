@@ -134,7 +134,7 @@ Adotar esse currículo inteiro significa **aprender C e C++ como trilha completa
 
 | Projeto 42 | Entra? | Por quê |
 |---|---|---|
-| **`born2beroot`** (VM Linux, SSH, hardening, política de senha) | ✅ Entra | Não exige C — é Linux/ops puro, e conecta direto com a Fase 6 (deploy) já existente. Fazer esse projeto de verdade antes do primeiro deploy real do AM Kaixara é preparo genuíno, não currículo por currículo |
+| **`born2beroot`** (VM Linux, SSH, hardening, política de senha) | ✅ Entra | Não exige C — é Linux/ops puro, e conecta direto com a Fase 6 (deploy) já existente. Fazer esse projeto de verdade antes do primeiro deploy real do AM Gestão · Caixa é preparo genuíno, não currículo por currículo |
 | **`net_practice`** (configuração de rede/IP) | ✅ Entra | Mesma lógica — sem custo de linguagem nova, fortalece exatamente o tipo de conhecimento de infraestrutura que a Fase 6 e a Fase 12 (pentest) já exigem |
 | **Conceito de `webserv`** (construir servidor HTTP do zero) | ⚠️ Entra, mas **não em C++** | O valor real é entender o que o Next.js/Node abstrai por baixo — dá pra fazer em TypeScript (um servidor HTTP mínimo usando só `http`/`net` do Node, sem framework), sem custo de linguagem nova |
 | `libft`, `ft_printf`, `get_next_line`, `minishell`, `philosophers`, `cub3d`, módulos C++ | ❌ Não como exercício isolado | Concorrência, algoritmo e manipulação de string você já aprende dentro do próprio TS/Python; o C/C++ necessário vem aplicado na trilha de SO/robótica |

@@ -1,0 +1,142 @@
+{
+  "_comment": "O plano atual numa página só e os termos que ficaram velhos. tools/coerencia/coerencia.py procura esses termos em todos os arquivos de texto dos seus repositórios e diz, arquivo por arquivo, o que atualizar; com --corrigir troca sozinho o que tem troca segura. Mudou uma decisão? Atualize este arquivo primeiro e rode just coerencia.",
+  "versao": "2026-11-20",
+  "objetivo": "Ser desenvolvedor sênior que cria IA e entende de dinheiro, com o Grupo AMtech Digital como veículo: todo estudo constrói um ativo que gera renda e vira portfólio.",
+  "decisoes": [
+    "Stack: TypeScript + Python + SQL; .NET/C# é carta de reserva (ADR 0017).",
+    "Software: o AM Gestão é uma suíte (Caixa, Pedidos, Financeiro, Loja online) vendida em pacotes; depois AM Serviços, AM Escola e AM Projetos.",
+    "6 empresas: AMtech Software, Instituto AMS Silva e AMtech Mídia (ativas); Editora AMS Silva (pausada); AMtech Maker e AM Logística (software primeiro, empresa depois).",
+    "Rendas: só passivas nas ondas; onda 0 (agora, máximo 4) = mini-curso de Lógica, canais sem rosto, planilha do AM Gestão e catálogo do HTML.",
+    "Canais: Primer Code, Bancada Dev e o canal de finanças (nome a definir).",
+    "Fora do plano: restaurantes próprios, mercadinho, máquina de lanches, revenda de veículos e revendas de usados."
+  ],
+  "ignorar": [
+    "docs/adr/**",
+    "CHANGELOG.md",
+    "ESTADO.md",
+    "**/99-arquivo/**",
+    "11-setup-dev-setup/**",
+    "13-memoria-do-claude/**",
+    "data/coerencia.json",
+    "tools/coerencia/**",
+    "**/node_modules/**",
+    "**/*.pdf",
+    "**/*.png",
+    "**/*.jpg",
+    "**/*.svg",
+    "**/*.ico",
+    "**/*.lock",
+    "**/package-lock.json",
+    "**/.git/**",
+    "12-artefatos/**",
+    "10-ferramentas-pessoais/paginas/**",
+    "_posts/**"
+  ],
+  "regras": [
+    {
+      "id": "kaixara",
+      "nivel": "erro",
+      "padrao": "AM Kaixara",
+      "troca": "AM Gestão · Caixa",
+      "motivo": "o Kaixara virou o módulo Caixa do AM Gestão (13/11)"
+    },
+    {
+      "id": "rotara",
+      "nivel": "erro",
+      "padrao": "AM Rotara",
+      "troca": "AM Gestão · Pedidos",
+      "motivo": "o Rotara virou o módulo Pedidos do AM Gestão (13/11)"
+    },
+    {
+      "id": "rendara",
+      "nivel": "erro",
+      "padrao": "AM Rendara",
+      "troca": "AM Gestão · Financeiro",
+      "motivo": "o Rendara virou o módulo Financeiro do AM Gestão (13/11)"
+    },
+    {
+      "id": "vendra",
+      "nivel": "erro",
+      "padrao": "AM Vendra",
+      "troca": "AM Gestão · Loja online",
+      "motivo": "o Vendra virou o módulo Loja online do AM Gestão (13/11)"
+    },
+    {
+      "id": "aura-antigo",
+      "nivel": "erro",
+      "padrao": "\\b(AuraPOS|AuraWealth|Aura Delivery|AuraArquiteto|AuraCondo|AuraFix|AuraAgenda|AuraEdu|AuraObra)\\b",
+      "motivo": "nomes antigos do ecossistema Aura; hoje são módulos do AM Gestão ou das suítes",
+      "sugestao": "AM Gestão ou a suíte correspondente (docs/operacao/softwares.md)"
+    },
+    {
+      "id": "sistemas-soltos",
+      "nivel": "erro",
+      "padrao": "\\b(23|13) (sistemas|SaaS)\\b|império de 23",
+      "motivo": "não há mais sistemas soltos: o AM Gestão e as suítes, uma por vez",
+      "sugestao": "o AM Gestão e as suítes"
+    },
+    {
+      "id": "restaurante-proprio",
+      "nivel": "erro",
+      "padrao": "\\b(sushi|cafeteria|padaria|harumakis?|congelados)\\b",
+      "motivo": "restaurantes e comida própria saíram do plano (20/11)",
+      "sugestao": "remover, ou trocar por um exemplo atual",
+      "permitir_linhas": "sushiman|[Ss]ite de (restaurante|padaria|cafeteria)|padarias, confeitarias|cafeterias\"|Site de cafeteria|site-padaria|site-cafeteria|site-restaurante",
+      "permitir_arquivos": [
+        "data/softwares.json",
+        "data/kitsites.json",
+        "docs/operacao/softwares.md",
+        "docs/operacao/kit-sites.md",
+        "infra/templates/esteira-site/**",
+        "aula-*.html",
+        "projeto-*.html",
+        "projetos.html",
+        "site/aula-*.html",
+        "site/projeto-*.html",
+        "site/projetos.html",
+        "tools/financeiro/modelos/*.toml",
+        "**/gerar_projetos.py"
+      ]
+    },
+    {
+      "id": "cnpjs-antigos",
+      "nivel": "erro",
+      "padrao": "\\b(3|três) CNPJs\\b|AM Alimentação|nove negócios|os nove\\b",
+      "motivo": "sem restaurantes, o grupo fica com 2 CNPJs quando cada empresa faturar",
+      "sugestao": "as 6 empresas (docs/empresas.md)"
+    },
+    {
+      "id": "rendas-antigas",
+      "nivel": "erro",
+      "padrao": "avaliação de respostas de IA|DataAnnotation|\\b3 rendas\\b|máximo 3 rendas|limite de 3 frentes",
+      "motivo": "decisão de 18/11: só passivas, onda 0 com 4 rendas",
+      "sugestao": "onda 0: mini-curso, canais sem rosto, planilha do AM Gestão e catálogo",
+      "permitir_arquivos": [
+        "data/portfolio.json",
+        "docs/operacao/portfolio.md",
+        "docs/operacao/portfolio.html",
+        "docs/empresas.md"
+      ]
+    },
+    {
+      "id": "dotnet-centro",
+      "nivel": "revisar",
+      "padrao": "\\.NET 10|ASP\\.NET Core|C# ?/ ?\\.NET|stack fixa|[Ss]tack Aura",
+      "motivo": "ADR 0017: o núcleo é TypeScript + Python + SQL; .NET só como reserva",
+      "sugestao": "TypeScript + Python + SQL, ou deixar claro que .NET é reserva (currículo e conteúdo de curso: decisão sua)",
+      "permitir_linhas": "[Rr]eserva|ILSpy|vaga",
+      "permitir_arquivos": [
+        "repos.json",
+        "docs/repositorios.md"
+      ]
+    },
+    {
+      "id": "planos-antigos",
+      "nivel": "revisar",
+      "padrao": "Plano Mestre|Sumário Único|Plano Unificado|fontes-de-renda-completas",
+      "motivo": "o PLANO-UNICO substituiu os planos antigos (13/11)",
+      "sugestao": "apontar para PLANO-UNICO-AMtech.md ou para o 99-arquivo"
+    }
+  ],
+  "permitir_linhas": "(saíram|saiu|sai|saem) do plano|fora do plano|[Dd]escartad|no lugar d[aoe]s? |\\bex-|vem d[oa] |virou|viraram|era o |antes chamad|acabou|[Ee]m vez d|melhor que|arquivad|[Ii]mpério|antig[oa]s?\\b|não stack fixa|[Ss]ubstitu|99-arquivo"
+}

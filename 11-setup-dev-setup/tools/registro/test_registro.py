@@ -39,6 +39,27 @@ class TestRegistro(unittest.TestCase):
         resumo = registro.resumo_atritos()
         self.assertEqual(resumo[0], ("backup: conferir o backup à mão", 3))
 
+    def test_diag_todos_certos_com_seguranca_vai_rapido(self):
+        av = registro.diag("0.1", ["c3", "c2", "c3"], 4, date(2026, 11, 18))
+        self.assertTrue(av["rapido"])
+        linha = registro.linhas(registro.arq_diag())[0]
+        self.assertEqual(linha, ["2026-11-18", "0.1", "3/3", "nenhum", "nenhum", "4", "modo rápido: pular o apoio"])
+
+    def test_diag_chute_certo_conta_como_nao_saber(self):
+        av = registro.diag("0.1", ["c3", "c1", "c3"])
+        self.assertFalse(av["rapido"])
+        self.assertEqual(av["chutes_certos"], [2])
+
+    def test_diag_erro_com_certeza_aparece(self):
+        av = registro.diag("0.2", ["x3", "c2", "x1"])
+        self.assertEqual(av["errados_com_certeza"], [1])
+        self.assertEqual(av["acertos"], 1)
+
+    def test_diag_recusa_formato_errado(self):
+        for ruim in (["certo"], ["c4"], ["y2"], []):
+            with self.assertRaises(SystemExit):
+                registro.diag("0.1", ruim)
+
 
 if __name__ == "__main__":
     unittest.main()

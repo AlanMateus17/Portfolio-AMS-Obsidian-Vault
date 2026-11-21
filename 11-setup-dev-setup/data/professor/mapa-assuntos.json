@@ -1,0 +1,1190 @@
+{
+ "fonte": "AlanMateus17/mapa-de-estudo/MAPA.md",
+ "assuntos": {
+  "0.1": {
+   "titulo": "Aprender a aprender",
+   "depende": []
+  },
+  "0.2": {
+   "titulo": "Linguagem matemática e lógica",
+   "depende": [
+    "0.1"
+   ]
+  },
+  "0.3": {
+   "titulo": "Teoria dos conjuntos",
+   "depende": [
+    "0.2"
+   ]
+  },
+  "0.4": {
+   "titulo": "Como o computador funciona",
+   "depende": [
+    "0.1"
+   ]
+  },
+  "0.5": {
+   "titulo": "Representação de dados",
+   "depende": [
+    "0.4"
+   ]
+  },
+  "0.6": {
+   "titulo": "Lógica de programação",
+   "depende": [
+    "0.2",
+    "0.4"
+   ]
+  },
+  "0.7": {
+   "titulo": "Ler documentação e inglês técnico",
+   "depende": []
+  },
+  "1.1": {
+   "titulo": "Sistema operacional: o essencial",
+   "depende": [
+    "0.4"
+   ]
+  },
+  "1.2": {
+   "titulo": "WSL2 e virtualização",
+   "depende": [
+    "1.1"
+   ]
+  },
+  "1.3": {
+   "titulo": "Terminal Linux e shell",
+   "depende": [
+    "1.1",
+    "1.2"
+   ]
+  },
+  "1.4": {
+   "titulo": "Criptografia: o essencial",
+   "depende": [
+    "0.5"
+   ]
+  },
+  "1.5": {
+   "titulo": "Git e controle de versão",
+   "depende": [
+    "1.3",
+    "1.4"
+   ]
+  },
+  "1.6": {
+   "titulo": "Segredos",
+   "depende": [
+    "1.4",
+    "1.5"
+   ]
+  },
+  "1.7": {
+   "titulo": "Backup e recuperação",
+   "depende": [
+    "1.3"
+   ]
+  },
+  "1.8": {
+   "titulo": "Containers e Docker",
+   "depende": [
+    "1.1",
+    "1.2",
+    "1.3"
+   ]
+  },
+  "1.9": {
+   "titulo": "`just` e o Núcleo",
+   "depende": [
+    "1.3"
+   ]
+  },
+  "1.10": {
+   "titulo": "Segurança de agentes de IA",
+   "depende": [
+    "1.3",
+    "1.5"
+   ]
+  },
+  "2.1": {
+   "titulo": "TypeScript: fundamentos",
+   "depende": [
+    "0.5",
+    "0.6",
+    "1.3"
+   ]
+  },
+  "2.2": {
+   "titulo": "Programação funcional: o essencial",
+   "depende": [
+    "2.1"
+   ]
+  },
+  "2.3": {
+   "titulo": "Estruturas de dados básicas e Big-O",
+   "depende": [
+    "0.6",
+    "2.1"
+   ]
+  },
+  "2.4": {
+   "titulo": "Testes automatizados: o essencial",
+   "depende": [
+    "2.1"
+   ]
+  },
+  "2.5": {
+   "titulo": "Debugging como método",
+   "depende": [
+    "2.1",
+    "2.4"
+   ]
+  },
+  "2.6": {
+   "titulo": "Erros e assincronia: o essencial",
+   "depende": [
+    "1.1",
+    "2.1"
+   ]
+  },
+  "2.7": {
+   "titulo": "Porcentagem e juros",
+   "depende": [
+    "0.2"
+   ]
+  },
+  "2.8": {
+   "titulo": "Representações e potências",
+   "depende": [
+    "0.5"
+   ]
+  },
+  "3.1": {
+   "titulo": "Redes: o essencial",
+   "depende": [
+    "1.1",
+    "1.3"
+   ]
+  },
+  "3.2": {
+   "titulo": "HTTP e HTTPS",
+   "depende": [
+    "3.1",
+    "1.4"
+   ]
+  },
+  "3.3": {
+   "titulo": "A jornada de uma requisição",
+   "depende": [
+    "3.1",
+    "3.2"
+   ]
+  },
+  "3.4": {
+   "titulo": "Diagnóstico de rede",
+   "depende": [
+    "3.1"
+   ]
+  },
+  "3.5": {
+   "titulo": "HTML e CSS",
+   "depende": [
+    "3.2"
+   ]
+  },
+  "3.6": {
+   "titulo": "JavaScript no navegador",
+   "depende": [
+    "2.1",
+    "2.6",
+    "3.5"
+   ]
+  },
+  "3.7": {
+   "titulo": "React",
+   "depende": [
+    "3.6"
+   ]
+  },
+  "3.8": {
+   "titulo": "Next.js e Tailwind",
+   "depende": [
+    "3.7"
+   ]
+  },
+  "3.9": {
+   "titulo": "CI/CD: o essencial",
+   "depende": [
+    "1.5",
+    "2.4"
+   ]
+  },
+  "3.10": {
+   "titulo": "Deploy de site",
+   "depende": [
+    "3.8",
+    "3.9"
+   ]
+  },
+  "3.11": {
+   "titulo": "Revisar código de IA (R-1)",
+   "depende": [
+    "1.5",
+    "2.4"
+   ]
+  },
+  "3.12": {
+   "titulo": "Go: ferramentas (Go-1, Go-2)",
+   "depende": [
+    "1.3",
+    "2.1"
+   ]
+  },
+  "3.13": {
+   "titulo": "Contabilidade: o essencial",
+   "depende": [
+    "2.7"
+   ]
+  },
+  "3.14": {
+   "titulo": "Preço de serviço",
+   "depende": [
+    "2.7",
+    "3.13"
+   ]
+  },
+  "4.1": {
+   "titulo": "Modelagem relacional",
+   "depende": [
+    "0.3",
+    "2.3"
+   ]
+  },
+  "4.2": {
+   "titulo": "SQL",
+   "depende": [
+    "0.3",
+    "4.1"
+   ]
+  },
+  "4.3": {
+   "titulo": "PostgreSQL: o essencial",
+   "depende": [
+    "4.2",
+    "1.8"
+   ]
+  },
+  "4.4": {
+   "titulo": "POO",
+   "depende": [
+    "2.1",
+    "2.2"
+   ]
+  },
+  "4.5": {
+   "titulo": "Requisitos e histórias",
+   "depende": []
+  },
+  "4.6": {
+   "titulo": "Arquitetura em camadas: o essencial",
+   "depende": [
+    "4.4"
+   ]
+  },
+  "4.7": {
+   "titulo": "APIs REST e contratos",
+   "depende": [
+    "3.2",
+    "2.1"
+   ]
+  },
+  "4.8": {
+   "titulo": "Back-end com NestJS",
+   "depende": [
+    "4.4",
+    "4.6",
+    "4.7"
+   ]
+  },
+  "4.9": {
+   "titulo": "ORM e migrations",
+   "depende": [
+    "4.3",
+    "4.8"
+   ]
+  },
+  "4.10": {
+   "titulo": "Autenticação e autorização",
+   "depende": [
+    "1.4",
+    "3.2",
+    "4.8"
+   ]
+  },
+  "4.11": {
+   "titulo": "OWASP Top 10",
+   "depende": [
+    "3.2",
+    "4.2",
+    "4.10"
+   ]
+  },
+  "4.12": {
+   "titulo": "Testes de integração e teste antes do código (R-2)",
+   "depende": [
+    "2.4",
+    "4.8"
+   ]
+  },
+  "4.13": {
+   "titulo": "Como a IA funciona: o essencial",
+   "depende": [
+    "0.4"
+   ]
+  },
+  "4.14": {
+   "titulo": "IA em TypeScript (IA-T1)",
+   "depende": [
+    "4.7",
+    "4.13"
+   ]
+  },
+  "4.15": {
+   "titulo": "Arduino: primeiro protótipo",
+   "depende": [
+    "0.6"
+   ]
+  },
+  "5.1": {
+   "titulo": "Dinheiro no código",
+   "depende": [
+    "0.5",
+    "2.1"
+   ]
+  },
+  "5.2": {
+   "titulo": "Concorrência e paralelismo",
+   "depende": [
+    "1.1",
+    "2.6"
+   ]
+  },
+  "5.3": {
+   "titulo": "Transações a fundo",
+   "depende": [
+    "4.3",
+    "5.2"
+   ]
+  },
+  "5.4": {
+   "titulo": "Idempotência e pagamentos",
+   "depende": [
+    "4.7",
+    "5.3"
+   ]
+  },
+  "5.5": {
+   "titulo": "Matemática financeira",
+   "depende": [
+    "2.7"
+   ]
+  },
+  "5.6": {
+   "titulo": "Ledger de partidas dobradas",
+   "depende": [
+    "3.13",
+    "5.1",
+    "5.3"
+   ]
+  },
+  "5.7": {
+   "titulo": "SQLite e offline",
+   "depende": [
+    "4.3",
+    "5.3"
+   ]
+  },
+  "5.8": {
+   "titulo": "Go: HTTP e agente fiscal (Go-3 a Go-6)",
+   "depende": [
+    "3.12",
+    "3.2"
+   ]
+  },
+  "5.9": {
+   "titulo": "Fiscal",
+   "depende": [
+    "5.8"
+   ]
+  },
+  "5.10": {
+   "titulo": "Especificação para agentes (R-3)",
+   "depende": [
+    "3.11",
+    "4.12"
+   ]
+  },
+  "5.11": {
+   "titulo": "Linux: administração",
+   "depende": [
+    "1.3"
+   ]
+  },
+  "5.12": {
+   "titulo": "SSH e acesso remoto",
+   "depende": [
+    "1.4",
+    "3.1"
+   ]
+  },
+  "5.13": {
+   "titulo": "Deploy em servidor e os 12 fatores",
+   "depende": [
+    "1.8",
+    "3.10",
+    "5.11",
+    "5.12"
+   ]
+  },
+  "5.14": {
+   "titulo": "Geometria e PostGIS",
+   "depende": [
+    "4.3"
+   ]
+  },
+  "5.15": {
+   "titulo": "Vetores: o essencial",
+   "depende": [
+    "2.8"
+   ]
+  },
+  "5.16": {
+   "titulo": "RAG e embeddings (IA-T2)",
+   "depende": [
+    "4.14",
+    "5.15",
+    "4.3"
+   ]
+  },
+  "5.17": {
+   "titulo": "Tempo real",
+   "depende": [
+    "3.2"
+   ]
+  },
+  "6.1": {
+   "titulo": "Observabilidade",
+   "depende": [
+    "5.13"
+   ]
+  },
+  "6.2": {
+   "titulo": "Testes a fundo",
+   "depende": [
+    "4.12",
+    "5.4"
+   ]
+  },
+  "6.3": {
+   "titulo": "Avaliar IA (R-4)",
+   "depende": [
+    "5.16",
+    "3.9"
+   ]
+  },
+  "6.4": {
+   "titulo": "Modelagem de ameaças",
+   "depende": [
+    "4.11"
+   ]
+  },
+  "6.5": {
+   "titulo": "LGPD e privacidade",
+   "depende": [
+    "4.10"
+   ]
+  },
+  "6.6": {
+   "titulo": "Segurança do Linux e da rede",
+   "depende": [
+    "5.11",
+    "5.12"
+   ]
+  },
+  "6.7": {
+   "titulo": "DevSecOps",
+   "depende": [
+    "3.9",
+    "4.11"
+   ]
+  },
+  "6.8": {
+   "titulo": "Relato de incidente",
+   "depende": [
+    "6.1"
+   ]
+  },
+  "7.1": {
+   "titulo": "Estatística descritiva",
+   "depende": [
+    "2.7"
+   ]
+  },
+  "7.2": {
+   "titulo": "Python",
+   "depende": [
+    "2.1",
+    "4.4"
+   ]
+  },
+  "7.3": {
+   "titulo": "Python para dados",
+   "depende": [
+    "7.1",
+    "7.2"
+   ]
+  },
+  "7.4": {
+   "titulo": "SQL avançado e índices",
+   "depende": [
+    "4.2",
+    "2.3"
+   ]
+  },
+  "7.5": {
+   "titulo": "Estruturas de dados: árvores e grafos",
+   "depende": [
+    "2.3"
+   ]
+  },
+  "7.6": {
+   "titulo": "Contagem e probabilidade",
+   "depende": [
+    "0.3",
+    "7.1"
+   ]
+  },
+  "7.7": {
+   "titulo": "Álgebra linear",
+   "depende": [
+    "5.15"
+   ]
+  },
+  "7.8": {
+   "titulo": "Machine learning clássico",
+   "depende": [
+    "7.3",
+    "7.6",
+    "7.7"
+   ]
+  },
+  "7.9": {
+   "titulo": "Back-end em Python",
+   "depende": [
+    "7.2",
+    "4.7"
+   ]
+  },
+  "7.10": {
+   "titulo": "Tributação brasileira",
+   "depende": [
+    "3.13"
+   ]
+  },
+  "7.11": {
+   "titulo": "Pix e Pix Automático",
+   "depende": [
+    "5.4"
+   ]
+  },
+  "7.12": {
+   "titulo": "Custo e roteamento de IA (R-5)",
+   "depende": [
+    "4.14",
+    "6.3"
+   ]
+  },
+  "7.13": {
+   "titulo": "Gerenciamento de memória",
+   "depende": [
+    "5.2"
+   ]
+  },
+  "7.14": {
+   "titulo": "Arquitetura de computadores",
+   "depende": [
+    "0.4",
+    "7.13"
+   ]
+  },
+  "7.15": {
+   "titulo": "Deep learning: o essencial",
+   "depende": [
+    "7.7",
+    "7.8"
+   ]
+  },
+  "7.16": {
+   "titulo": "IA local",
+   "depende": [
+    "7.14",
+    "5.16"
+   ]
+  },
+  "7.17": {
+   "titulo": "Conceitos de SO",
+   "depende": [
+    "5.2",
+    "7.13"
+   ]
+  },
+  "7.18": {
+   "titulo": "ESP32 e Raspberry Pi",
+   "depende": [
+    "4.15",
+    "5.11"
+   ]
+  },
+  "8.1": {
+   "titulo": "POO e princípios SOLID",
+   "depende": [
+    "4.4",
+    "4.6"
+   ]
+  },
+  "8.2": {
+   "titulo": "Padrões de projeto",
+   "depende": [
+    "8.1"
+   ]
+  },
+  "8.3": {
+   "titulo": "Código limpo e refatoração",
+   "depende": [
+    "6.2",
+    "8.1"
+   ]
+  },
+  "8.4": {
+   "titulo": "Arquitetura de software",
+   "depende": [
+    "4.6",
+    "8.1"
+   ]
+  },
+  "8.5": {
+   "titulo": "Domain-Driven Design",
+   "depende": [
+    "8.4"
+   ]
+  },
+  "8.6": {
+   "titulo": "Modelagem e documentação",
+   "depende": [
+    "8.4"
+   ]
+  },
+  "8.7": {
+   "titulo": "Performance e escalabilidade",
+   "depende": [
+    "6.1",
+    "7.4"
+   ]
+  },
+  "8.8": {
+   "titulo": "Cache",
+   "depende": [
+    "8.7"
+   ]
+  },
+  "8.9": {
+   "titulo": "Mensageria",
+   "depende": [
+    "5.4",
+    "8.7"
+   ]
+  },
+  "8.10": {
+   "titulo": "Consistência em sistemas distribuídos",
+   "depende": [
+    "5.3",
+    "8.9"
+   ]
+  },
+  "8.11": {
+   "titulo": "Algoritmos clássicos e complexidade",
+   "depende": [
+    "7.5",
+    "2.8"
+   ]
+  },
+  "8.12": {
+   "titulo": "System design",
+   "depende": [
+    "8.4"
+   ]
+  },
+  "8.13": {
+   "titulo": "Orquestrar agentes (R-6)",
+   "depende": [
+    "5.10",
+    "7.12"
+   ]
+  },
+  "8.14": {
+   "titulo": "Entrevista técnica",
+   "depende": [
+    "8.11",
+    "8.12"
+   ]
+  },
+  "8.15": {
+   "titulo": "Portfólio e GitHub em inglês",
+   "depende": [
+    "8.6"
+   ]
+  },
+  "8.16": {
+   "titulo": "Finanças corporativas e valuation",
+   "depende": [
+    "5.5"
+   ]
+  },
+  "8.17": {
+   "titulo": "Boot, sistemas de arquivos e o AMtech OS",
+   "depende": [
+    "7.17",
+    "5.11"
+   ]
+  },
+  "H1.1": {
+   "titulo": "Eletrônica digital",
+   "depende": [
+    "0.2",
+    "7.14"
+   ]
+  },
+  "H1.2": {
+   "titulo": "C",
+   "depende": [
+    "7.13",
+    "1.3"
+   ]
+  },
+  "H1.3": {
+   "titulo": "Assembly",
+   "depende": [
+    "H1.1",
+    "H1.2"
+   ]
+  },
+  "H1.4": {
+   "titulo": "C++",
+   "depende": [
+    "H1.2",
+    "8.1"
+   ]
+  },
+  "H1.5": {
+   "titulo": "Compiladores e interpretadores",
+   "depende": [
+    "H1.2",
+    "7.5"
+   ]
+  },
+  "H1.6": {
+   "titulo": "Teoria da computação",
+   "depende": [
+    "0.2",
+    "7.6"
+   ]
+  },
+  "H1.7": {
+   "titulo": "Teoria da informação",
+   "depende": [
+    "7.6"
+   ]
+  },
+  "H1.8": {
+   "titulo": "Sistemas embarcados",
+   "depende": [
+    "H1.1",
+    "H1.2",
+    "7.18"
+   ]
+  },
+  "H1.9": {
+   "titulo": "Rust",
+   "depende": [
+    "H1.2"
+   ]
+  },
+  "H1.10": {
+   "titulo": "Linux internals",
+   "depende": [
+    "7.17",
+    "H1.2"
+   ]
+  },
+  "H1.11": {
+   "titulo": "Windows internals",
+   "depende": [
+    "7.17"
+   ]
+  },
+  "H1.12": {
+   "titulo": "macOS e iOS internals",
+   "depende": [
+    "7.17"
+   ]
+  },
+  "H1.13": {
+   "titulo": "AM Linux e AM-OS",
+   "depende": [
+    "H1.10",
+    "H1.3",
+    "8.17"
+   ]
+  },
+  "H2.1": {
+   "titulo": "Endereçamento e sub-redes",
+   "depende": [
+    "3.1"
+   ]
+  },
+  "H2.2": {
+   "titulo": "Sinais e correção de erros",
+   "depende": [
+    "3.1",
+    "H1.7"
+   ]
+  },
+  "H2.3": {
+   "titulo": "Infraestrutura de rede",
+   "depende": [
+    "H2.1"
+   ]
+  },
+  "H2.4": {
+   "titulo": "Roteamento",
+   "depende": [
+    "H2.3"
+   ]
+  },
+  "H2.5": {
+   "titulo": "VPN e rede segura",
+   "depende": [
+    "5.12",
+    "H2.3"
+   ]
+  },
+  "H2.6": {
+   "titulo": "Wi-Fi",
+   "depende": [
+    "H2.3"
+   ]
+  },
+  "H2.7": {
+   "titulo": "Diagnóstico avançado",
+   "depende": [
+    "3.4",
+    "H2.3"
+   ]
+  },
+  "H3.1": {
+   "titulo": "Criptografia a fundo",
+   "depende": [
+    "1.4",
+    "H6.1"
+   ]
+  },
+  "H3.2": {
+   "titulo": "Metodologia e lei",
+   "depende": [
+    "6.4"
+   ]
+  },
+  "H3.3": {
+   "titulo": "Reconhecimento",
+   "depende": [
+    "H2.3",
+    "H3.2"
+   ]
+  },
+  "H3.4": {
+   "titulo": "Web hacking",
+   "depende": [
+    "4.11",
+    "H3.3"
+   ]
+  },
+  "H3.5": {
+   "titulo": "Bypass e evasão",
+   "depende": [
+    "H3.4",
+    "H2.5",
+    "H1.11"
+   ]
+  },
+  "H3.6": {
+   "titulo": "Escalada de privilégios",
+   "depende": [
+    "H1.10",
+    "H1.11"
+   ]
+  },
+  "H3.7": {
+   "titulo": "Active Directory",
+   "depende": [
+    "H1.11",
+    "H3.6"
+   ]
+  },
+  "H3.8": {
+   "titulo": "Pivoting e tunneling",
+   "depende": [
+    "H2.5",
+    "H3.6"
+   ]
+  },
+  "H3.9": {
+   "titulo": "Wireless",
+   "depende": [
+    "H2.6"
+   ]
+  },
+  "H3.10": {
+   "titulo": "Engenharia reversa",
+   "depende": [
+    "H1.3"
+   ]
+  },
+  "H3.11": {
+   "titulo": "Desenvolvimento de exploit",
+   "depende": [
+    "H1.3",
+    "H3.10"
+   ]
+  },
+  "H3.12": {
+   "titulo": "Análise de malware",
+   "depende": [
+    "H3.10"
+   ]
+  },
+  "H3.13": {
+   "titulo": "C2 e OPSEC",
+   "depende": [
+    "H3.5",
+    "H3.8"
+   ]
+  },
+  "H3.14": {
+   "titulo": "Engenharia social",
+   "depende": [
+    "H3.2"
+   ]
+  },
+  "H3.15": {
+   "titulo": "Cloud e mobile security",
+   "depende": [
+    "H5.3",
+    "H1.12"
+   ]
+  },
+  "H3.16": {
+   "titulo": "Relatório de pentest",
+   "depende": [
+    "H3.4"
+   ]
+  },
+  "H3.17": {
+   "titulo": "Blue team e forense",
+   "depende": [
+    "6.8",
+    "H3.12"
+   ]
+  },
+  "H4.1": {
+   "titulo": "Cálculo",
+   "depende": [
+    "H6.2",
+    "7.7"
+   ]
+  },
+  "H4.2": {
+   "titulo": "Deep learning",
+   "depende": [
+    "H4.1",
+    "7.15"
+   ]
+  },
+  "H4.3": {
+   "titulo": "Engenharia de dados",
+   "depende": [
+    "7.3",
+    "7.4"
+   ]
+  },
+  "H4.4": {
+   "titulo": "Agentes e MCP",
+   "depende": [
+    "8.13",
+    "7.12"
+   ]
+  },
+  "H4.5": {
+   "titulo": "Treinar e ajustar modelos",
+   "depende": [
+    "H4.2",
+    "7.16"
+   ]
+  },
+  "H4.6": {
+   "titulo": "MLOps",
+   "depende": [
+    "H4.5",
+    "6.1"
+   ]
+  },
+  "H4.7": {
+   "titulo": "Voz e visão",
+   "depende": [
+    "7.16"
+   ]
+  },
+  "H5.1": {
+   "titulo": "Infraestrutura como código",
+   "depende": [
+    "5.13"
+   ]
+  },
+  "H5.2": {
+   "titulo": "Kubernetes",
+   "depende": [
+    "1.8",
+    "H2.3"
+   ]
+  },
+  "H5.3": {
+   "titulo": "Nuvem",
+   "depende": [
+    "5.13"
+   ]
+  },
+  "H5.4": {
+   "titulo": "Homelab",
+   "depende": [
+    "H2.5",
+    "6.1"
+   ]
+  },
+  "H5.5": {
+   "titulo": "Arch Linux e Omarchy",
+   "depende": [
+    "5.11",
+    "8.17"
+   ]
+  },
+  "H6.1": {
+   "titulo": "Teoria dos números",
+   "depende": [
+    "0.2"
+   ]
+  },
+  "H6.2": {
+   "titulo": "Álgebra e funções",
+   "depende": [
+    "0.2"
+   ]
+  },
+  "H6.3": {
+   "titulo": "Matemática discreta",
+   "depende": [
+    "0.3",
+    "7.6"
+   ]
+  },
+  "H6.4": {
+   "titulo": "Números complexos",
+   "depende": [
+    "H6.2"
+   ]
+  },
+  "H6.5": {
+   "titulo": "Matemática avançada",
+   "depende": [
+    "H4.1"
+   ]
+  },
+  "H6.6": {
+   "titulo": "Física: mecânica, eletromagnetismo, termodinâmica",
+   "depende": [
+    "H4.1"
+   ]
+  },
+  "H6.7": {
+   "titulo": "Mercado financeiro e regulação",
+   "depende": [
+    "8.16"
+   ]
+  },
+  "H6.8": {
+   "titulo": "Economia",
+   "depende": [
+    "7.1",
+    "8.16"
+   ]
+  },
+  "H6.9": {
+   "titulo": "Finanças quantitativas",
+   "depende": [
+    "H6.8",
+    "7.8"
+   ]
+  },
+  "H7.1": {
+   "titulo": "Casa inteligente e Jarvis",
+   "depende": [
+    "7.18",
+    "H4.7"
+   ]
+  },
+  "H7.2": {
+   "titulo": "Robótica móvel e agro",
+   "depende": [
+    "7.18",
+    "H6.6"
+   ]
+  },
+  "H7.3": {
+   "titulo": "Blockchain",
+   "depende": [
+    "H3.1",
+    "8.10"
+   ]
+  },
+  "H7.4": {
+   "titulo": "Construção civil pela TI",
+   "depende": [
+    "7.2"
+   ]
+  },
+  "H7.5": {
+   "titulo": "Empreendedorismo, marketing e vendas",
+   "depende": []
+  },
+  "H7.6": {
+   "titulo": "Didática e produção de conteúdo",
+   "depende": []
+  },
+  "H7.7": {
+   "titulo": "Espanhol",
+   "depende": []
+  },
+  "H7.8": {
+   "titulo": "Formação formal",
+   "depende": []
+  }
+ }
+}

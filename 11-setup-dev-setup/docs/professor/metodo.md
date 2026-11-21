@@ -34,7 +34,7 @@ Cada linha diz de onde veio e onde aparece no Professor.
 5. Anote o tempo real.
 6. Só então avance.
 
-**A mesma ideia de 4 jeitos** (o seu loop de 5 etapas, sem a etapa da ficha, que já é o protocolo): a ideia pura → em C# → em TypeScript → no sistema real. Só entra quando faz sentido. Exemplo do seu vault: o "E" lógico vira a tabela-verdade, depois `&&` em C#, depois `&&` em TS, depois o `if (produto.Estoque > 0 && cliente.Ativo)` do AM Kaixara.
+**A mesma ideia de 4 jeitos** (o seu loop de 5 etapas, sem a etapa da ficha, que já é o protocolo): a ideia pura → em TypeScript → em Python → no sistema real. Só entra quando faz sentido. Exemplo do seu vault: o "E" lógico vira a tabela-verdade, depois `&&` em C#, depois `&&` em TS, depois o `if (produto.Estoque > 0 && cliente.Ativo)` do AM Gestão · Caixa.
 
 **Ficha dupla e registro de entrevista** (produção didática simultânea). O mesmo estudo gera dois materiais:
 
@@ -96,7 +96,7 @@ Depois de 4 semanas usando o Professor (passo `prof-melhorias` do roteiro):
 7. 15 minutos de tentativa antes de abrir ajuda.
 8. A sequência de dias estudando visível no `hoje`.
 9. Documentação oficial guardada na sua máquina, com os trechos certos dentro da aula.
-10. O AM Rendara como projeto-âncora: cada módulo acrescenta uma peça.
+10. O AM Gestão como projeto-âncora: cada módulo acrescenta uma peça.
 
 ## 6. O ciclo de um módulo
 

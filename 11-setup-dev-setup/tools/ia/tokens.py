@@ -5,7 +5,7 @@ Não mede tokens exatos (cada modelo conta diferente); dá uma estimativa de bol
 e aplica a regra do roteador: tarefa barata vai para o modelo local ou grátis, o Claude fica para o que é
 difícil ou vai para cliente. Serve para você (ou um agente) escolherem a rota certa sem pensar.
 
-    python3 tools/ia/tokens.py rota "revisar a arquitetura do AM Kaixara"
+    python3 tools/ia/tokens.py rota "revisar a arquitetura do AM Gestão · Caixa"
     python3 tools/ia/tokens.py tamanho arquivo.md           # estima os tokens de um texto
     echo "meu texto" | python3 tools/ia/tokens.py tamanho -
 

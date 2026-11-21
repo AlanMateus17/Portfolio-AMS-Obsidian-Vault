@@ -38,7 +38,7 @@
   {
    "id": "neg",
    "titulo": "Negócios do grupo (Barbacena)",
-   "ponte": "Os nove negócios físicos e de serviço usam os sistemas AM, a frota de entregas e o mesmo caixa de medição."
+   "ponte": "Os negócios do grupo usam o AM Gestão, a frota de entregas (quando existir) e o mesmo caixa de medição."
   },
   {
    "id": "editora",
@@ -62,7 +62,7 @@
   },
   {
    "id": "app",
-   "titulo": "Aplicação: sistemas AM (Aura)",
+   "titulo": "Aplicação: AM Gestão e as suítes AM",
    "ponte": "A API envia logs, métricas e traces pelo OpenTelemetry."
   },
   {
@@ -408,7 +408,7 @@
   {
    "id": "caixa",
    "camada": "emp",
-   "rotulo": "Caixa da Casa /|AM Rendara",
+   "rotulo": "Caixa da Casa /|Financeiro AM Gestão",
    "tipo": "local",
    "conta": false,
    "futuro": false,
@@ -556,7 +556,7 @@
    "tipo": "remoto",
    "conta": false,
    "futuro": true,
-   "descricao": "AM Kaixara, AM Rendara e os demais, vendidos por assinatura."
+   "descricao": "AM Gestão e as outras suítes, vendidos em pacotes por assinatura."
   },
   {
    "id": "learn",
@@ -817,7 +817,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": true,
-   "descricao": "Mapas e geolocalização do AM Rotara. Lacuna já identificada nos cursos da Alura e da Rocketseat."
+   "descricao": "Mapas e geolocalização do Pedidos do AM Gestão. Lacuna já identificada nos cursos da Alura e da Rocketseat."
   },
   {
    "id": "story",
@@ -853,7 +853,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Tempo real: pedido mudou de status no AM Rotara, venda nova no AM Kaixara."
+   "descricao": "Tempo real: pedido mudou de status no Pedidos, venda nova no Caixa (AM Gestão)."
   },
   {
    "id": "rls",
@@ -1159,7 +1159,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "Um Project por frente (Aura, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas."
+   "descricao": "Um Project por frente (AM Gestão, aulas, livro, infoprodutos) com arquivos e instruções fixas. A memória lembra o contexto entre conversas."
   },
   {
    "id": "arts",
@@ -2791,40 +2791,13 @@
    "descricao": "App de pedidos de restaurantes e lojas da cidade com comissão de 8% e entrega pela AM Entregas. O lucro está na comissão, não na taxa de entrega."
   },
   {
-   "id": "nsushi",
-   "camada": "neg",
-   "rotulo": "Sushi (delivery)",
-   "tipo": "fisico",
-   "conta": false,
-   "futuro": true,
-   "descricao": "Delivery e retirada de quarta a domingo à noite, cardápio em torno do salmão com destino para filé, aparas e pele. Primeiro restaurante do grupo."
-  },
-  {
-   "id": "ncafe",
-   "camada": "neg",
-   "rotulo": "Cafeteria",
-   "tipo": "fisico",
-   "conta": false,
-   "futuro": true,
-   "descricao": "Cafés especiais de Minas, pão de queijo assado na hora e doces caseiros. Melhor dentro da padaria, onde o investimento cai para cerca de R$ 30 mil."
-  },
-  {
-   "id": "npad",
-   "camada": "neg",
-   "rotulo": "Padaria + café|da manhã + almoço",
-   "tipo": "fisico",
-   "conta": false,
-   "futuro": true,
-   "descricao": "Padaria de finalização com massa congelada, café da manhã mineiro, almoço por quilo, prato executivo do dia, marmitas e encomendas. Maior receita e maior capital do grupo."
-  },
-  {
    "id": "ncnpj",
    "camada": "neg",
-   "rotulo": "3 CNPJs por frente",
+   "rotulo": "2 CNPJs por frente",
    "tipo": "remoto",
    "conta": true,
    "futuro": true,
-   "descricao": "AMtech Tecnologia, AM Logística e AM Alimentação, cada um com os seus CNAEs, conta e caixa. Holding só quando houver patrimônio."
+   "descricao": "AMtech Tecnologia (software, Campo e Maker) e AM Logística (entregas), cada um com os seus CNAEs, conta e caixa. Holding só quando houver patrimônio."
   },
   {
    "id": "nplan",
@@ -2834,24 +2807,6 @@
    "conta": false,
    "futuro": true,
    "descricao": "Artefato e motor tools/negocios/financas.py: investimento, ponto de equilíbrio, rampa, retorno e capital mínimo de cada negócio, com o mesmo cálculo."
-  },
-  {
-   "id": "nifood",
-   "camada": "neg",
-   "rotulo": "iFood (canal de|descoberta)",
-   "tipo": "remoto",
-   "conta": true,
-   "futuro": true,
-   "descricao": "Usado para ser encontrado, não como canal principal: o plano Entrega cobra 23% + 3,2%. O canal próprio deixa o dobro de margem."
-  },
-  {
-   "id": "nvisa",
-   "camada": "neg",
-   "rotulo": "Vigilância sanitária|(RDC 216)",
-   "tipo": "remoto",
-   "conta": true,
-   "futuro": true,
-   "descricao": "Alvará sanitário, Manual de Boas Práticas, POPs, curso dos manipuladores e controle de pragas. Em MG, o nível de risco define se há inspeção antes de abrir."
   },
   {
    "id": "nanatel",
@@ -2865,7 +2820,7 @@
   {
    "id": "nkaix",
    "camada": "app",
-   "rotulo": "AM Kaixara|(PDV e cardápio)",
+   "rotulo": "AM Gestão · Caixa|(PDV e cardápio)",
    "tipo": "remoto",
    "conta": false,
    "futuro": true,
@@ -2874,7 +2829,7 @@
   {
    "id": "nrot",
    "camada": "app",
-   "rotulo": "AM Rotara|(entregas)",
+   "rotulo": "AM Gestão · Pedidos|(entregas)",
    "tipo": "remoto",
    "conta": false,
    "futuro": true,
@@ -3580,7 +3535,7 @@
    "tipo": "remoto",
    "conta": false,
    "futuro": false,
-   "descricao": "dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Kaixara e registrar em ADR."
+   "descricao": "dotnet/eShop, modular-monolith-with-ddd, Clean Architecture, bitwarden/server e system-design-primer: comparar com o AM Gestão e registrar em ADR."
   },
   {
    "id": "wireguard",
@@ -3886,7 +3841,7 @@
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "tools/triagem/triagem.py (just triagem): acha no setup o que já resolve o pedido e decide A (subir pronto), B (colar com n8n ou API) ou C (construir o núcleo no Aura, com ADR). O arquitetar monta o pacote curto de contexto para o Claude. Regra das 4 horas."
+   "descricao": "tools/triagem/triagem.py (just triagem): acha no setup o que já resolve o pedido e decide A (subir pronto), B (colar com n8n ou API) ou C (construir o núcleo no AM Gestão, com ADR). O arquitetar monta o pacote curto de contexto para o Claude. Regra das 4 horas."
   },
   {
    "id": "repomix",
@@ -4260,11 +4215,11 @@
   {
    "id": "pocketbase",
    "camada": "app",
-   "rotulo": "PocketBase (MVP|antes do Aura)",
+   "rotulo": "PocketBase (MVP|antes do AM Gestão)",
    "tipo": "local",
    "conta": false,
    "futuro": false,
-   "descricao": "Banco, login, arquivos e tempo real num binário: valida a ideia antes de construir no Aura. Modelo em infra/pocketbase."
+   "descricao": "Banco, login, arquivos e tempo real num binário: valida a ideia antes de construir no AM Gestão. Modelo em infra/pocketbase."
   },
   {
    "id": "litestream",
@@ -4417,7 +4372,7 @@
    "tipo": "remoto",
    "conta": true,
    "futuro": false,
-   "descricao": "ERP aberto para os negócios físicos até o Aura cobrir e referência de mercado ao desenhar o AM Kaixara."
+   "descricao": "ERP aberto para os negócios físicos até o AM Gestão cobrir e referência de mercado ao desenhar o Caixa."
   },
   {
    "id": "nucleo",
@@ -6774,64 +6729,9 @@
    "rotulo": "mapas"
   },
   {
-   "de": "ndeliv",
-   "para": "nsushi",
-   "rotulo": "pedidos"
-  },
-  {
-   "de": "ndeliv",
-   "para": "ncafe",
-   "rotulo": "pedidos"
-  },
-  {
-   "de": "ndeliv",
-   "para": "npad",
-   "rotulo": "pedidos e marmitas"
-  },
-  {
-   "de": "npad",
-   "para": "ncafe",
-   "rotulo": "pães e doces"
-  },
-  {
-   "de": "nifood",
-   "para": "nsushi",
-   "rotulo": "pedidos de descoberta"
-  },
-  {
    "de": "nkaix",
    "para": "nloja",
    "rotulo": "ordens de serviço"
-  },
-  {
-   "de": "nkaix",
-   "para": "nsushi",
-   "rotulo": "PDV e ficha técnica"
-  },
-  {
-   "de": "nkaix",
-   "para": "ncafe",
-   "rotulo": "PDV"
-  },
-  {
-   "de": "nkaix",
-   "para": "npad",
-   "rotulo": "PDV e previsão"
-  },
-  {
-   "de": "nvisa",
-   "para": "nsushi",
-   "rotulo": "alvará sanitário"
-  },
-  {
-   "de": "nvisa",
-   "para": "ncafe",
-   "rotulo": "alvará sanitário"
-  },
-  {
-   "de": "nvisa",
-   "para": "npad",
-   "rotulo": "alvará sanitário"
   },
   {
    "de": "cnpj",
@@ -6850,8 +6750,8 @@
   },
   {
    "de": "ncnpj",
-   "para": "nsushi",
-   "rotulo": "AM Alimentação"
+   "para": "nloja",
+   "rotulo": "AMtech Tecnologia"
   },
   {
    "de": "nkaix",
@@ -6961,16 +6861,6 @@
   {
    "de": "ogbp",
    "para": "nloja",
-   "rotulo": "presença local"
-  },
-  {
-   "de": "ogbp",
-   "para": "nsushi",
-   "rotulo": "presença local"
-  },
-  {
-   "de": "ogbp",
-   "para": "npad",
    "rotulo": "presença local"
   },
   {
@@ -7896,7 +7786,7 @@
   {
    "de": "appsec",
    "para": "nkaix",
-   "rotulo": "ameaças do Kaixara"
+   "rotulo": "ameaças do AM Gestão"
   },
   {
    "de": "appsec",
@@ -8661,7 +8551,7 @@
   {
    "de": "erpnext",
    "para": "nkaix",
-   "rotulo": "referência do Kaixara"
+   "rotulo": "referência do AM Gestão"
   },
   {
    "de": "kamal",
@@ -9261,12 +9151,12 @@
      "descricao": "O CNPJ da frente recebe os novos CNAEs ou nasce."
     },
     {
-     "bloco": "nsushi",
-     "descricao": "A casa abre, com alvará sanitário e bombeiros em dia."
+     "bloco": "nloja",
+     "descricao": "A loja abre, com alvará e bombeiros em dia."
     },
     {
      "bloco": "nkaix",
-     "descricao": "O AM Kaixara cuida do cardápio, das fichas técnicas e do PDV."
+     "descricao": "O AM Gestão cuida do caixa, do estoque e das vendas."
     },
     {
      "bloco": "caixa",
@@ -9910,7 +9800,7 @@
     },
     {
      "nome": "PostGIS + MapLibre",
-     "obs": "Só quando o AM Rotara sair do papel."
+     "obs": "Só quando o Pedidos do AM Gestão sair do papel."
     }
    ]
   },

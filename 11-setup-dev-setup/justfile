@@ -30,7 +30,7 @@ motor-refazer id:
 motor-relatorio:
     python3 tools/motor/motor.py relatorio
 
-# Pacote de contexto para o Claude (só imprime, gasta zero token): just arquiteto "módulo de aporte do AM Rendara"
+# Pacote de contexto para o Claude (só imprime, gasta zero token): just arquiteto "módulo de aporte do AM Gestão · Financeiro"
 arquiteto pedido:
     python3 tools/triagem/triagem.py arquitetar "{{pedido}}"
 
@@ -44,6 +44,8 @@ docs:
     python3 tools/implantacao/gerar.py
     python3 tools/portfolio/portfolio.py
     python3 tools/softwares/softwares.py
+    python3 tools/editora/livros.py
+    python3 tools/empresas/empresas.py
     python3 tools/kitsites/gerar.py
     python3 tools/custos/custos.py
     python3 tools/recursos/recursos.py
@@ -54,6 +56,7 @@ docs:
     python3 tools/akita/akita.py docs
     python3 tools/biblioteca/biblioteca.py docs
     python3 tools/nucleo/agenda.py rapido --doc
+    python3 tools/repos/repos.py
     python3 tools/vault/espelho.py --se-existir
 
 # O portão antes de cada commit: dados, documentação gerada, testes e segredos (o mesmo que o CI confere)
@@ -62,6 +65,9 @@ check:
     python3 tools/implantacao/gerar.py --check
     python3 tools/portfolio/portfolio.py --check
     python3 tools/softwares/softwares.py --check
+    python3 tools/editora/livros.py --check
+    python3 tools/empresas/empresas.py --check
+    python3 tools/coerencia/coerencia.py
     python3 tools/kitsites/gerar.py --check
     python3 tools/custos/custos.py --check
     python3 tools/recursos/recursos.py --check
@@ -72,6 +78,7 @@ check:
     python3 tools/akita/akita.py docs --check
     python3 tools/biblioteca/biblioteca.py docs --check
     python3 tools/nucleo/agenda.py rapido --check
+    python3 tools/repos/repos.py --check
     python3 -m unittest discover -s tools -p "test_gerar_docs.py" -q
     for d in tools/*/; do if ls "$d"test_*.py >/dev/null 2>&1; then python3 -m unittest discover -s "$d" -q; fi; done
     if command -v gitleaks >/dev/null; then gitleaks git --no-banner -v . >/dev/null; else echo "gitleaks ausente: rode o bootstrap"; fi
@@ -169,6 +176,10 @@ progresso empresa="":
 professor *args:
     python3 tools/professor/professor.py {{args}}
 
+# Professor × mapa-de-estudo: regrava o retrato do MAPA.md e confere (campo etapa de cada módulo)
+professor-mapa md="~/dev/mapa-de-estudo/MAPA.md":
+    python3 tools/professor/mapa.py atualizar {{md}} && python3 tools/professor/mapa.py conferir
+
 # Caderno de erros e atritos do setup (uma linha, sem abrir arquivo): just erro 0.2 "o erro" --certo "o certo" | just atrito "o que travou" --area backup
 [positional-arguments]
 erro *args:
@@ -184,6 +195,20 @@ atrito *args:
 
 atritos:
     python3 tools/registro/registro.py atritos
+
+# Diagnóstico antes de cada assunto (certo/errado + certeza 1 a 3): just diag 0.1 c3 x2 c1 --min 4
+[positional-arguments]
+diag *args:
+    python3 tools/registro/registro.py diag "$@"
+
+# Ficha do assunto (escreva uma vez, depois de estudar): just ficha 0.2
+ficha etapa:
+    python3 tools/colher/colher.py ficha {{etapa}}
+
+# Entrega a ficha: capítulo no pipeline, exercícios no banco e no Anki, plano de aula no ensino-ti: just colher 0.2 [--seco] [--forcar]
+[positional-arguments]
+colher *args:
+    python3 tools/colher/colher.py colher "$@"
 
 # Biblioteca: just livros lista | para ETAPA | comprar | ler LIVRO --trecho T --min N --assunto ETAPA --nota "..." | lidos | marcar LIVRO tenho
 [positional-arguments]
@@ -229,3 +254,13 @@ pedir texto:
 # Pedidos da fila e se o Claude está em pausa por limite
 fila:
     python3 tools/remoto/fila.py listar
+
+# Vitrine para clientes: copia docs/vitrines/EMPRESA.md como README do repositório público da empresa (ex.: just vitrine software ~/dev/amtech-software)
+vitrine EMPRESA DESTINO:
+    test -f docs/vitrines/{{EMPRESA}}.md && test -d {{DESTINO}}/.git && cp docs/vitrines/{{EMPRESA}}.md {{DESTINO}}/README.md && echo "README da vitrine copiado; revise, faça o commit e o push em {{DESTINO}}"
+
+# Coerência com o plano (data/coerencia.json): confere o dev-setup e todos os repositórios em ~/dev e grava ~/dev/COERENCIA.md
+# just coerencia            (só relatório)     just coerencia --corrigir     (troca sozinho o que tem troca segura)
+coerencia *opcao:
+    python3 tools/coerencia/coerencia.py . $(find ~/dev -maxdepth 2 -name .git -type d -printf '%h ' 2>/dev/null) --relatorio ~/dev/COERENCIA.md {{opcao}} || true
+    @echo "Leia ~/dev/COERENCIA.md: arquivo por arquivo, o que atualizar"

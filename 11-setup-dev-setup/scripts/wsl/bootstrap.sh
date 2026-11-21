@@ -80,8 +80,10 @@ else rodar "github" "gh" bash -c "
   $SUDO apt-get update -y && $SUDO env $APT install gh"; fi
 
 # ------------------------------------------------------------------ 3. linguagens
-if tem dotnet && dotnet --list-sdks 2>/dev/null | grep -q '^10\.'; then linha "linguagem" ".NET 10 SDK" "JA TEM"
-else rodar "linguagem" ".NET 10 SDK" bash -c "$SUDO apt-get update -y && $SUDO env $APT install dotnet-sdk-10.0"; fi
+# .NET é carta de reserva (ADR 0017): só instala com AMTECH_DOTNET=1 (vaga ou cliente que peça .NET).
+if tem dotnet && dotnet --list-sdks 2>/dev/null | grep -q '^10\.'; then linha "linguagem" "SDK de reserva (dotnet 10)" "JA TEM"
+elif [[ "${AMTECH_DOTNET:-0}" == 1 ]]; then rodar "linguagem" "SDK de reserva (dotnet 10)" bash -c "$SUDO apt-get update -y && $SUDO env $APT install dotnet-sdk-10.0"
+else linha "linguagem" "SDK de reserva (dotnet 10)" "PULADO (reserva; AMTECH_DOTNET=1 instala)"; fi
 
 # Runtimes pelo mise (ADR 0008): Node, Go e Rust num gerenciador só; o fnm fica só como reserva se já existir.
 if tem mise; then linha "linguagem" "mise" "JA TEM" "$(mise --version 2>/dev/null | cut -d' ' -f1)"

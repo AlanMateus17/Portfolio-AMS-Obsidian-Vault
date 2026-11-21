@@ -21,7 +21,7 @@ Nenhum sistema zera erros e alucinações. O objetivo é pegar o erro antes de c
 | Finanças | Cálculo em código testado e fonte do dado registrada |
 | Aulas | Alinhada à ementa e à apostila |
 
-Contra atraso: limite de frentes ativas, fila priorizada pela VEH, prazos com data. Nada é congelado: ideias novas entram a qualquer hora, e a ordem de execução respeita o limite de 3 frentes "agora".
+Contra atraso: limite de frentes ativas, fila priorizada pela VEH, prazos com data. Nada é congelado: ideias novas entram a qualquer hora, e a ordem de execução respeita o limite de 4 rendas "agora" (onda 0).
 
 ## As 7 lacunas de sênior e a técnica de cada uma
 

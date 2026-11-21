@@ -62,7 +62,7 @@ A engenharia reversa mostra onde procurar; o pentest prova se dá para explorar.
 
 | Situação | Pode? |
 |---|---|
-| Software seu (AM Kaixara, sites, o crackme da aula) | Sim, e é o melhor uso |
+| Software seu (AM Gestão, sites, o crackme da aula) | Sim, e é o melhor uso |
 | Desafios e apps feitos para isso (crackmes, Juice Shop, WebGoat, OWASP MAS) | Sim |
 | Software de código aberto | Sim. Falha real achada: aviso em particular ao projeto antes de publicar |
 | Programa comercial instalado no seu PC | Depende da licença; quebrar proteção para usar sem pagar é crime |

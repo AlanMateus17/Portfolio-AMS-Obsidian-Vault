@@ -11,7 +11,7 @@
 | Categoria | Softwares | Já existem ou em construção |
 |---|---:|---:|
 | Sites por tipo de negócio | 26 | 0 |
-| Sistemas AM (stack Aura) | 14 | 2 |
+| Sistemas AM (vendidos em suítes e pacotes) | 14 | 2 |
 | Micro-SaaS (validar rápido, reconstruir se vender) | 13 | 2 |
 | Educação | 5 | 3 |
 | Produtos para devs e empresas | 6 | 1 |
@@ -21,7 +21,7 @@
 |---|---:|
 | Website Builder com IA (Hostinger) | 16 |
 | Horizons (Hostinger) | 21 |
-| Stack Aura (.NET + Next.js) | 19 |
+| Stack AM (TypeScript + Next.js + PostgreSQL) | 19 |
 | Next.js | 8 |
 | WordPress | 1 |
 | n8n | 1 |
@@ -29,9 +29,72 @@
 | Scripts do setup | 2 |
 | Artefato do Claude | 1 |
 
+## Suítes e pacotes
+
+Cada sistema é vendido dentro de uma suíte: a suíte junta 3 ou mais sistemas e, com o MVP pronto, é vendida em pacotes (o menor pacote pode ter um sistema só). Só a suíte 1 está em construção; a próxima começa quando a anterior vender (PLANO-UNICO: um ativo por vez).
+
+### 1. AM Gestão
+
+- **Para quem:** restaurantes, lojas e quem vende online (já procuram)
+- **Estado:** MVP em construção
+- **Sistemas:** AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro, AM Gestão · Loja online, App de delivery com a marca do restaurante
+- **MVP:** AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro
+
+| Pacote | Sistemas |
+|---|---|
+| Caixa | AM Gestão · Caixa |
+| Caixa + Financeiro | AM Gestão · Caixa, AM Gestão · Financeiro |
+| Integrado (o MVP) | AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro |
+| Integrado + Loja online | AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro, AM Gestão · Loja online |
+| Pedidos com a marca do cliente | AM Gestão · Pedidos, App de delivery com a marca do restaurante |
+
+### 2. AM Serviços (nome provisório)
+
+- **Para quem:** assistências técnicas, veterinárias, salões, clínicas e consultórios
+- **Estado:** depois do AM Gestão vender
+- **Sistemas:** AM Horaria, AM Consertta, AM Petara
+- **MVP:** AM Horaria, AM Consertta
+
+| Pacote | Sistemas |
+|---|---|
+| Agenda | AM Horaria |
+| Assistência (agenda + ordem de serviço) | AM Horaria, AM Consertta |
+| Pet (agenda + veterinária) | AM Horaria, AM Petara |
+
+### 3. AM Escola (nome provisório)
+
+- **Para quem:** professores, escolas e cursos livres
+- **Estado:** depois do AM Serviços
+- **Sistemas:** AM Saberia, AM Mentor, Plataforma do Instituto AMS, Fábrica de documentos para professores
+- **MVP:** AM Mentor, Fábrica de documentos para professores
+
+| Pacote | Sistemas |
+|---|---|
+| Professor (exercícios + documentos) | AM Mentor, Fábrica de documentos para professores |
+| Escola (gestão + exercícios) | AM Saberia, AM Mentor |
+| Curso online (plataforma + exercícios) | Plataforma do Instituto AMS, AM Mentor |
+
+### 4. AM Projetos (nome provisório)
+
+- **Para quem:** equipes pequenas, construtoras e software houses
+- **Estado:** depois do AM Escola
+- **Sistemas:** AM Taskoro, AM Canteira, AM Projeta
+- **MVP:** AM Taskoro, AM Canteira
+
+| Pacote | Sistemas |
+|---|---|
+| Quadro (Kanban e Scrum) | AM Taskoro |
+| Obra (quadro + obras) | AM Taskoro, AM Canteira |
+| Software house (quadro + diagnóstico por IA) | AM Taskoro, AM Projeta |
+
+**Fora das suítes (decidir):**
+
+- AM Predara: condomínios: público diferente de todas as suítes; decidir se entra no AM Serviços ou sai
+- AM Vynla: produto para casais e famílias (consumidor final): decidir se fica
+
 ## Módulos: construa nesta ordem
 
-Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de trabalho caem: um site novo de padaria ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.
+Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de trabalho caem: um site novo de pet shop ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.
 
 | # | Módulo | O que faz | Softwares que usam | Vendáveis |
 |---:|---|---|---:|---:|
@@ -60,7 +123,7 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 
 - **Website Builder com IA:** site institucional que o cliente edita sozinho. Menos manutenção.
 - **Horizons:** quando o cliente paga por uma função (pedido, agenda, catálogo, área do cliente) e para validar micro-SaaS. O código exportado é só o frontend (React/Vite); o banco fica na Hostinger.
-- **Stack Aura:** o que já provou que vende e precisa escalar, multi-empresa e com licença por módulo.
+- **Stack AM (TypeScript + Next.js + PostgreSQL, ADR 0017):** o que já provou que vende e precisa escalar, multi-empresa e com licença por módulo e por pacote.
 - **Conta e domínio no nome do cliente**, com você como colaborador; contrato com o que a mensalidade cobre.
 
 ## Sites por tipo de negócio
@@ -94,24 +157,24 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 | **Site de igreja e ONG** | igrejas, associações, ONGs | Agenda, transmissões, doações | Website Builder com IA (Hostinger) | criação + mensalidade | Ideia | Sites e lojas para pequenas empresas | Vitrine base, Avaliações e depoimentos, Captura de contatos, Relatório mensal, Blog e notícias, Pagamento e assinatura |
 | **Site de indústria e fornecedor B2B** | pequenas indústrias e distribuidores | Catálogo técnico e pedido de cotação | Website Builder com IA (Hostinger) | criação + mensalidade | Ideia | Sites e lojas para pequenas empresas | Vitrine base, Avaliações e depoimentos, Captura de contatos, Relatório mensal, Catálogo com filtros, Pedido de orçamento |
 
-## Sistemas AM (stack Aura)
+## Sistemas AM (vendidos em suítes e pacotes)
 
 | Software | Para quem | O que faz | Ferramenta | Receita | Estado | Oferta | Módulos |
 |---|---|---|---|---|---|---|---|
-| **AM Kaixara (PDV, comandas, estoque, ficha técnica)** | restaurantes, lojas, assistências | Venda, comanda, mesa, cozinha, estoque, receita e caixa | Stack Aura (.NET + Next.js) | assinatura por módulo | Em construção | AM Kaixara (PDV, ficha técnica, cardápio) | Base multi-empresa Aura, Estoque e ficha técnica, Emissão fiscal, Financeiro, Pagamento e assinatura |
-| **AM Rendara (finanças e ARCA)** | pessoas, famílias, pequenas empresas | Contas, fluxo de caixa, cascata, carteira e rebalanceamento | Stack Aura (.NET + Next.js) | assinatura | Em construção | AM Rendara (finanças), começando pela planilha | Base multi-empresa Aura, Financeiro, Pagamento e assinatura, Assistente de IA |
-| **AM Rotara (pedidos e entregas)** | delivery e lojistas | Pedidos, rotas, app do entregador, prova de entrega | Stack Aura (.NET + Next.js) | assinatura + por entrega | Planejado | AM Rotara (pedidos e entregas) | Base multi-empresa Aura, Mapa e rastreio, Pedido online, Pagamento e assinatura |
-| **AM Taskoro (Kanban e Scrum)** | equipes pequenas | Quadros, sprints, métricas | Stack Aura (.NET + Next.js) | assinatura | Planejado | AM Taskoro (gestão de projetos ágeis) | Base multi-empresa Aura, Pagamento e assinatura |
-| **AM Projeta (diagnóstico de setup e arquitetura por IA)** | devs e pequenas software houses | Diagnóstico do ambiente e proposta de arquitetura | Stack Aura (.NET + Next.js) | assinatura | Planejado | Setup profissional (curso, template e configuração remota) | Base multi-empresa Aura, Assistente de IA, Pagamento e assinatura |
-| **AM Predara (condomínios)** | síndicos e administradoras | Boletos, reservas, ocorrências, comunicados | Stack Aura (.NET + Next.js) | assinatura por unidade | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Financeiro, Agendamento, Área do cliente, Pagamento e assinatura |
-| **AM Canteira (obras e construção)** | construtoras e empreiteiras | Orçamento, cronograma, compras e medição de obra | Stack Aura (.NET + Next.js) | assinatura | Planejado | Sistemas sob encomenda | Base multi-empresa Aura, Pedido de orçamento, Financeiro, Estoque e ficha técnica |
-| **AM Consertta (assistência técnica)** | assistências técnicas | Ordem de serviço, status para o cliente, garantia, peças | Stack Aura (.NET + Next.js) | assinatura | Planejado | Assistência técnica | Base multi-empresa Aura, Estoque e ficha técnica, Área do cliente, Pedido de orçamento |
-| **AM Horaria (agendamentos)** | salões, clínicas, autônomos | Agenda, pagamento antecipado, lembretes | Stack Aura (.NET + Next.js) | assinatura | Planejado | Aulas particulares | Base multi-empresa Aura, Agendamento, Pagamento e assinatura |
-| **AM Saberia (educacional)** | escolas e cursos | Turmas, conteúdo, avaliações. Dado de menor com regras LGPD | Stack Aura (.NET + Next.js) | assinatura por aluno | Planejado | Fábrica de documentos para professores de MG (assinatura) | Base multi-empresa Aura, Banco de exercícios e correção, Área do cliente, Assistente de IA |
-| **AM Petara (veterinária e pet shop)** | clínicas veterinárias e pet shops | Prontuário do animal, vacinas, banho e tosa, estoque | Stack Aura (.NET + Next.js) | assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Agendamento, Estoque e ficha técnica, Emissão fiscal |
-| **AM Vendra (loja virtual)** | lojas pequenas | Loja, carrinho, frete, pagamento | Stack Aura (.NET + Next.js) | assinatura + taxa | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Catálogo com filtros, Pedido online, Pagamento e assinatura, Emissão fiscal |
-| **AM Vynla (linha do tempo e NFC para casais e famílias)** | casais, famílias, presentes | Linha do tempo, memórias, cartão NFC | Stack Aura (.NET + Next.js) | venda + assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Galeria e portfólio, Pagamento e assinatura |
-| **App de delivery com a marca do restaurante** | restaurantes | Pedido próprio sem comissão de marketplace | Stack Aura (.NET + Next.js) | assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Cardápio digital, Pedido online, Mapa e rastreio, Pagamento e assinatura |
+| **AM Gestão · Caixa (PDV, comandas, estoque, ficha técnica)** | restaurantes, lojas, assistências | Venda, comanda, mesa, cozinha, estoque, receita e caixa | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por módulo | Em construção | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | Base multi-empresa Aura, Estoque e ficha técnica, Emissão fiscal, Financeiro, Pagamento e assinatura |
+| **AM Gestão · Financeiro (finanças e ARCA)** | pessoas, famílias, pequenas empresas | Contas, fluxo de caixa, cascata, carteira e rebalanceamento | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Em construção | Planilha do AM Gestão (finanças) | Base multi-empresa Aura, Financeiro, Pagamento e assinatura, Assistente de IA |
+| **AM Gestão · Pedidos (pedidos e entregas)** | delivery e lojistas | Pedidos, rotas, app do entregador, prova de entrega | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura + por entrega | Planejado | AM Gestão SaaS: Rotara (pedidos e entregas) | Base multi-empresa Aura, Mapa e rastreio, Pedido online, Pagamento e assinatura |
+| **AM Taskoro (Kanban e Scrum)** | equipes pequenas | Quadros, sprints, métricas | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | AM Taskoro (gestão de projetos ágeis) | Base multi-empresa Aura, Pagamento e assinatura |
+| **AM Projeta (diagnóstico de setup e arquitetura por IA)** | devs e pequenas software houses | Diagnóstico do ambiente e proposta de arquitetura | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | Setup profissional (curso, template e configuração remota) | Base multi-empresa Aura, Assistente de IA, Pagamento e assinatura |
+| **AM Predara (condomínios)** | síndicos e administradoras | Boletos, reservas, ocorrências, comunicados | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por unidade | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Financeiro, Agendamento, Área do cliente, Pagamento e assinatura |
+| **AM Canteira (obras e construção)** | construtoras e empreiteiras | Orçamento, cronograma, compras e medição de obra | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | Sistemas sob encomenda | Base multi-empresa Aura, Pedido de orçamento, Financeiro, Estoque e ficha técnica |
+| **AM Consertta (assistência técnica)** | assistências técnicas | Ordem de serviço, status para o cliente, garantia, peças | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | Assistência técnica | Base multi-empresa Aura, Estoque e ficha técnica, Área do cliente, Pedido de orçamento |
+| **AM Horaria (agendamentos)** | salões, clínicas, autônomos | Agenda, pagamento antecipado, lembretes | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | Aulas particulares | Base multi-empresa Aura, Agendamento, Pagamento e assinatura |
+| **AM Saberia (educacional)** | escolas e cursos | Turmas, conteúdo, avaliações. Dado de menor com regras LGPD | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por aluno | Planejado | Fábrica de documentos para professores de MG (assinatura) | Base multi-empresa Aura, Banco de exercícios e correção, Área do cliente, Assistente de IA |
+| **AM Petara (veterinária e pet shop)** | clínicas veterinárias e pet shops | Prontuário do animal, vacinas, banho e tosa, estoque | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Agendamento, Estoque e ficha técnica, Emissão fiscal |
+| **AM Gestão · Loja online (loja virtual)** | lojas pequenas | Loja, carrinho, frete, pagamento | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura + taxa | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Catálogo com filtros, Pedido online, Pagamento e assinatura, Emissão fiscal |
+| **AM Vynla (linha do tempo e NFC para casais e famílias)** | casais, famílias, presentes | Linha do tempo, memórias, cartão NFC | Stack AM (TypeScript + Next.js + PostgreSQL) | venda + assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Galeria e portfólio, Pagamento e assinatura |
+| **App de delivery com a marca do restaurante** | restaurantes | Pedido próprio sem comissão de marketplace | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Cardápio digital, Pedido online, Mapa e rastreio, Pagamento e assinatura |
 
 ## Micro-SaaS (validar rápido, reconstruir se vender)
 
@@ -120,14 +183,14 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 | **Ficha técnica e preço para confeitaria, marmita e lanchonete** | negócios de comida em casa | Custo por receita, preço de venda e margem | Horizons (Hostinger) | assinatura barata | Ideia | Implantação de ficha técnica e engenharia de cardápio | Estoque e ficha técnica, Pagamento e assinatura |
 | **Orçamento e ordem de serviço para autônomos** | eletricistas, técnicos, marceneiros | Orçamento em PDF, link de WhatsApp, OS | Horizons (Hostinger) | assinatura barata | Ideia | Suporte remoto e planos mensais para empresas | Pedido de orçamento, Pagamento e assinatura, Área do cliente |
 | **Controle de alunos e mensalidades** | professores particulares e personal trainers | Alunos, presença, cobrança | Horizons (Hostinger) | assinatura barata | Ideia | Aulas particulares | Agendamento, Pagamento e assinatura, Área do cliente |
-| **Cardápio digital com QR** | bares e restaurantes | Cardápio, esgotado, QR por mesa | Horizons (Hostinger) | assinatura barata | Ideia | AM Kaixara (PDV, ficha técnica, cardápio) | Cardápio digital, Pagamento e assinatura |
+| **Cardápio digital com QR** | bares e restaurantes | Cardápio, esgotado, QR por mesa | Horizons (Hostinger) | assinatura barata | Ideia | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | Cardápio digital, Pagamento e assinatura |
 | **Diagnóstico de presença digital do comércio** | comércio local | Nota automática de Google, site e redes; vira lead de serviço | Horizons (Hostinger) | isca para serviços | Ideia | Presença digital para comércio local (Google Perfil, redes, avaliações) | Captura de contatos, Assistente de IA |
-| **Checklist de compra de usados** | quem compra celular, notebook ou veículo usado | IMEI, FIPE, sinais de golpe | Horizons (Hostinger) | afiliados e isca | Ideia | Notebooks e PCs: comprar, consertar e revender | Captura de contatos |
+| **Checklist de compra de usados** | quem compra celular, notebook ou veículo usado | IMEI, FIPE, sinais de golpe | Horizons (Hostinger) | afiliados e isca | Ideia | Assistência técnica | Captura de contatos |
 | **Calculadoras financeiras (CLT x PJ, MEI, financiamento)** | público geral | Cálculo com as regras do Caixa da Casa | Horizons (Hostinger) | anúncios e isca | Ideia | Calculadoras financeiras online (CLT x PJ, MEI, financiamento, independência financeira) | Captura de contatos, Blog e notícias |
 | **Gerador de plano de negócios e viabilidade** | quem vai abrir empresa | Projeção, ponto de equilíbrio, documento | Horizons (Hostinger) | venda única | Ideia | Plano de negócios e viabilidade financeira para quem vai abrir empresa | Financeiro, Pagamento e assinatura, Assistente de IA |
-| **Painel de BPO financeiro para clientes** | pequenas empresas | Conciliação e relatório mensal | Stack Aura (.NET + Next.js) | mensalidade do serviço | Ideia | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) | Financeiro, Relatório mensal, Área do cliente |
+| **Painel de BPO financeiro para clientes** | pequenas empresas | Conciliação e relatório mensal | Stack AM (TypeScript + Next.js + PostgreSQL) | mensalidade do serviço | Ideia | BPO financeiro para pequenas empresas (contas, conciliação, fluxo de caixa) | Financeiro, Relatório mensal, Área do cliente |
 | **Fábrica de documentos para professores** | professores da rede de MG | Planejamento semanal, guia de ensino, documentos | Horizons (Hostinger) | assinatura | Ideia | Fábrica de documentos para professores de MG (assinatura) | Assistente de IA, Pagamento e assinatura, Área do cliente |
-| **Planilha Cascata (validação do Rendara)** | pessoas organizando as finanças | Caixas em cascata e metas | Python/planilha | venda única | Existe | AM Rendara (finanças), começando pela planilha | Financeiro |
+| **Planilha Cascata (validação do Rendara)** | pessoas organizando as finanças | Caixas em cascata e metas | Python/planilha | venda única | Existe | Planilha do AM Gestão (finanças) | Financeiro |
 | **Verificador e formatador ABNT online** | universitários e pós-graduandos | Laudo ABNT e arquivo corrigido a partir do .docx enviado | Horizons (Hostinger) | por documento ou assinatura | Em construção | Verificador e formatador ABNT automático (TCC, artigos, relatórios) | Pagamento e assinatura, Área do cliente, Assistente de IA |
 | **Conferência de documentos escolares** | coordenações e escolas | Aponta campos vazios, fora do modelo e fora das regras em cada planejamento | Horizons (Hostinger) | licença por escola | Ideia | Conferência automática de documentos para coordenações e escolas | Área do cliente, Pagamento e assinatura |
 
@@ -137,8 +200,8 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 |---|---|---|---|---|---|---|---|
 | **AM Mentor (735 exercícios, correção e certificado)** | estudantes de programação | Exercícios com correção automática | Next.js | assinatura | Existe | AM Mentor: banco de exercícios com correção | Banco de exercícios e correção, Pagamento e assinatura, Área do cliente |
 | **Catálogo do HTML** | alunos e iniciantes | Site didático para publicar o próprio site | Next.js | isca gratuita | Existe | Catálogo do HTML (gratuito) | Vitrine base, Blog e notícias |
-| **Plataforma do Instituto AMS (multiprofessor)** | alunos e professores parceiros | Cursos, vídeos, comunidade, certificados | Stack Aura (.NET + Next.js) | venda de cursos + parte dos professores | Planejado | Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | Área do cliente, Pagamento e assinatura, Banco de exercícios e correção |
-| **ByteSDCoin (blockchain educacional, sem aposta)** | escolas e clubes | Moeda escolar, mérito, tabuleiro robótico | Stack Aura (.NET + Next.js) | licença | Em construção | Licença do ByteSDCoin para escolas (sem aposta) | Base multi-empresa Aura, Área do cliente |
+| **Plataforma do Instituto AMS (multiprofessor)** | alunos e professores parceiros | Cursos, vídeos, comunidade, certificados | Stack AM (TypeScript + Next.js + PostgreSQL) | venda de cursos + parte dos professores | Planejado | Formação Téc. em Desenvolvimento de Sistemas (13 disciplinas) | Área do cliente, Pagamento e assinatura, Banco de exercícios e correção |
+| **ByteSDCoin (blockchain educacional, sem aposta)** | escolas e clubes | Moeda escolar, mérito, tabuleiro robótico | Stack AM (TypeScript + Next.js + PostgreSQL) | licença | Em construção | Licença do ByteSDCoin para escolas (sem aposta) | Base multi-empresa Aura, Área do cliente |
 | **Jogo educativo de lógica** | iniciantes | Desafios de lógica em forma de jogo | Next.js | venda única | Ideia | Jogo educativo de lógica (itch.io e Steam) | Banco de exercícios e correção |
 
 ## Produtos para devs e empresas
@@ -160,6 +223,6 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 | **Site da Grupo AMtech Digital** | clientes do grupo | Marcas, serviços e contato | Next.js | vitrine das vendas | Planejado | — | Vitrine base, Captura de contatos, Avaliações e depoimentos |
 | **Site da Editora AMS Silva** | leitores e escolas | Livros, kits e adoção | Next.js | vitrine das vendas | Planejado | — | Vitrine base, Catálogo com filtros, Pagamento e assinatura |
 | **Caixa da Casa** | você e a família | Finanças da casa, rotina, metas, veículos | Artefato do Claude | protótipo do Rendara | Existe | — | Financeiro |
-| **aura-status** | você | Status de todos os projetos num painel | Stack Aura (.NET + Next.js) | uso próprio | Em construção | — | Relatório mensal |
-| **AuraTest** | você e os sistemas AM | Testes dos sistemas Aura | Stack Aura (.NET + Next.js) | uso próprio | Em construção | — | Base multi-empresa Aura |
+| **aura-status** | você | Status de todos os projetos num painel | Stack AM (TypeScript + Next.js + PostgreSQL) | uso próprio | Em construção | — | Relatório mensal |
+| **AuraTest** | você e os sistemas AM | Testes dos sistemas Aura | Stack AM (TypeScript + Next.js + PostgreSQL) | uso próprio | Em construção | — | Base multi-empresa Aura |
 | **dev-setup (este repositório)** | você | O setup inteiro, verificado no CI | Scripts do setup | base de tudo | Existe | — | Relatório mensal |

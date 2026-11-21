@@ -24,7 +24,7 @@ flowchart LR
     n_irpf["Declaração anual do IR"]
     n_banco["Conta bancária separada (CPF)"]
     n_conta["Contador"]
-    n_caixa["Caixa da Casa / AM Rendara"]
+    n_caixa["Caixa da Casa / Financeiro AM Gestão"]
     n_financas["Financeiro local"]
     n_documenso["Documenso (assinatura)"]
     n_invoiceninja["Invoice Ninja (orçamentos)"]
@@ -62,17 +62,17 @@ flowchart LR
     n_sites["Sites para pequenas empresas"]
   end
   subgraph L_neg["Negócios do grupo (Barbacena)"]
-    n_ncnpj["3 CNPJs por frente"]
+    n_ncnpj["2 CNPJs por frente"]
   end
   subgraph L_editora["Editora AMS Silva (produção de livros)"]
     n_kdp["Amazon KDP"]
     n_pod["Gráfica sob demanda (Brasil)"]
     n_selo["Selo Editora AMS Silva"]
   end
-  subgraph L_app["Aplicação: sistemas AM (Aura)"]
+  subgraph L_app["Aplicação: AM Gestão e as suítes AM"]
     n_api["API TypeScript (Next/NestJS)"]
-    n_nkaix["AM Kaixara (PDV e cardápio)"]
-    n_nrot["AM Rotara (entregas)"]
+    n_nkaix["AM Gestão · Caixa (PDV e cardápio)"]
+    n_nrot["AM Gestão · Pedidos (entregas)"]
   end
   subgraph L_obs["Observabilidade"]
     n_graf["Grafana"]
@@ -149,10 +149,10 @@ flowchart LR
 | [Declaração anual do IR](#irpf) | Remoto · precisa de conta | Os valores lançados no carnê-leão entram sozinhos na declaração. | passo 37.19 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Conta bancária separada (CPF)](#banco) | Remoto · precisa de conta | Uma conta só para receber vendas e serviços, separada do salário. Facilita o carnê-leão e a futura passagem para CNPJ. | passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 37.2 · Semanas 8 a 10 · dez/2026 a jan/2027 |
 | [Contador](#conta) | Físico | Uma consulta para montar o carnê-leão do jeito certo e dizer a partir de que renda vale abrir CNPJ. | passo 23.1 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 24.7 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.3 · Semanas 8 a 10 · dez/2026 a jan/2027 |
-| [Caixa da Casa / AM Rendara](#caixa) | Local | Controle financeiro pessoal e da empresa (seu sistema). | passo 16.1 · Dez/2026; passo 16.2 · Dez/2026; passo 16.3 · Dez/2026; passo 16.4 · Dez/2026; passo 16.5 · Dez/2026; passo 16.6 · Dez/2026; passo 16.7 · Dez/2026; passo 16.8 · Dez/2026; passo 20.10 · Semana 5 · nov/2026; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
+| [Caixa da Casa / Financeiro AM Gestão](#caixa) | Local | Controle financeiro pessoal e da empresa (seu sistema). | passo 16.1 · Dez/2026; passo 16.2 · Dez/2026; passo 16.3 · Dez/2026; passo 16.4 · Dez/2026; passo 16.5 · Dez/2026; passo 16.6 · Dez/2026; passo 16.7 · Dez/2026; passo 16.8 · Dez/2026; passo 20.10 · Semana 5 · nov/2026; passo 24.5 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 24.6 · Nov/2026 a out/2027, revisão no fim de cada trimestre; passo 37.20 · Semanas 8 a 10 · dez/2026 a jan/2027; passo 46.4 · Fev a dez/2027, uma oferta por vez (começa quando: a primeira venda do mini-curso aconteceu) |
 | [Financeiro local](#financas) | Local | Importa extratos, categoriza, resume o mês e aplica a sua cascata. Dados em ~/financas, fora do GitHub. | passo 15.1 · Dez/2026; passo 15.2 · Dez/2026; passo 15.3 · Dez/2026; passo 15.4 · Dez/2026 |
-| [Documenso (assinatura)](#documenso) | Local | Contratos assinados online com validade, código aberto, no lugar de serviços pagos. | passo 23.4 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
-| [Invoice Ninja (orçamentos)](#invoiceninja) | Local | Orçamentos, faturas e cobrança recorrente de serviços. Código aberto. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
+| [Documenso (assinatura)](#documenso) | Local | Contratos assinados online com validade, código aberto, no lugar de serviços pagos. | passo 23.4 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) |
+| [Invoice Ninja (orçamentos)](#invoiceninja) | Local | Orçamentos, faturas e cobrança recorrente de serviços. Código aberto. | passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) |
 | [Beancount + Fava (livro contábil)](#beancount) | Local | Principal da contabilidade em partidas dobradas (ADR 0008): o livro em texto puro, versionado em ~/financas, com balanço e DRE na tela do Fava. | passo 15.5 · Dez/2026 |
 | [hledger (relatórios no terminal)](#hledger) | Local | Reserva do Beancount: relatórios de partidas dobradas no terminal. | passo 15.6 · Dez/2026 |
 | [Portfolio Performance (rentabilidade)](#pportf) | Local | Principal da rentabilidade (ADR 0008): TTWROR, IRR e proventos em várias moedas, para conferir o resultado de cada metodologia do investimentos.py. | passo 16.10 · Dez/2026 |
@@ -219,7 +219,7 @@ Só quando houver CNPJ. Implementa o seu IEmissorFiscal: os sistemas AM emitem n
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: sistemas AM (Aura) | IEmissorFiscal |
+| → envia para | [API TypeScript (Next/NestJS)](11-app.md#api) | Aplicação: AM Gestão e as suítes AM | IEmissorFiscal |
 | ← recebe de | [Certificado digital (e-CNPJ)](19-emp.md#ecnpj) | Pessoa física: impostos e finanças | autentica |
 
 <a id="cnpj"></a>
@@ -237,7 +237,7 @@ Ainda não. Quando a renda crescer, MEI ou SLU. Até lá, tudo no seu CPF.
 | → envia para | [gov.br (prata ou ouro)](19-emp.md#govbr) | Pessoa física: impostos e finanças | acesso |
 | → envia para | [Conta bancária separada (CPF)](19-emp.md#banco) | Pessoa física: impostos e finanças | titular |
 | → envia para | [Domínio (Registro.br)](18-web.md#dom) | Vitrine web (sites e domínio) | titular do domínio |
-| → envia para | [3 CNPJs por frente](16-neg.md#ncnpj) | Negócios do grupo (Barbacena) | vira |
+| → envia para | [2 CNPJs por frente](16-neg.md#ncnpj) | Negócios do grupo (Barbacena) | vira |
 | ← recebe de | [Registro de marca (INPI)](19-emp.md#inpi) | Pessoa física: impostos e finanças | marca passa para a empresa |
 | ← recebe de | [Akaunting (contabilidade CNPJ)](19-emp.md#akaunting) | Pessoa física: impostos e finanças | contas do CNPJ |
 
@@ -310,7 +310,7 @@ Uma conta só para receber vendas e serviços, separada do salário. Facilita o 
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Caixa da Casa / AM Rendara](19-emp.md#caixa) | Pessoa física: impostos e finanças | extrato |
+| → envia para | [Caixa da Casa / Financeiro AM Gestão](19-emp.md#caixa) | Pessoa física: impostos e finanças | extrato |
 | → envia para | [Carnê-leão (Receita Federal)](19-emp.md#nfse) | Pessoa física: impostos e finanças | paga o DARF |
 | ← recebe de | [Kiwify](20-venda.md#kiwi) | Plataformas de venda e recebimento | saque |
 | ← recebe de | [Eduzz](20-venda.md#eduzz) | Plataformas de venda e recebimento | saque |
@@ -339,7 +339,7 @@ Uma consulta para montar o carnê-leão do jeito certo e dizer a partir de que r
 
 <a id="caixa"></a>
 
-### Caixa da Casa / AM Rendara
+### Caixa da Casa / Financeiro AM Gestão
 
 *Local*
 
@@ -353,8 +353,8 @@ Controle financeiro pessoal e da empresa (seu sistema).
 | ← recebe de | [Plugins: finance + Fiscal.ai](08-clc.md#pfin) | Claude: recursos, conectores e plugins | fechamento do mês |
 | ← recebe de | [Artifacts (Docs, Slides, Sheets…)](08-clc.md#arts) | Claude: recursos, conectores e plugins | app da família |
 | ← recebe de | [Conta bancária separada (CPF)](19-emp.md#banco) | Pessoa física: impostos e finanças | extrato |
-| ← recebe de | [AM Kaixara (PDV e cardápio)](11-app.md#nkaix) | Aplicação: sistemas AM (Aura) | vendas do dia |
-| ← recebe de | [AM Rotara (entregas)](11-app.md#nrot) | Aplicação: sistemas AM (Aura) | repasses |
+| ← recebe de | [AM Gestão · Caixa (PDV e cardápio)](11-app.md#nkaix) | Aplicação: AM Gestão e as suítes AM | vendas do dia |
+| ← recebe de | [AM Gestão · Pedidos (entregas)](11-app.md#nrot) | Aplicação: AM Gestão e as suítes AM | repasses |
 | ← recebe de | [Actual Budget (envelopes)](19-emp.md#actual) | Pessoa física: impostos e finanças | complementa |
 
 <a id="financas"></a>
@@ -382,7 +382,7 @@ Importa extratos, categoriza, resume o mês e aplica a sua cascata. Dados em ~/f
 
 Contratos assinados online com validade, código aberto, no lugar de serviços pagos.
 
-**Quando entra:** passo 23.4 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.4 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.4 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -396,7 +396,7 @@ Contratos assinados online com validade, código aberto, no lugar de serviços p
 
 Orçamentos, faturas e cobrança recorrente de serviços. Código aberto.
 
-**Quando entra:** passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.8 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 33.7 · Com a primeira página de venda no ar (jan/2027) e por etapas; passo 45.5 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -472,7 +472,7 @@ Orçamento pessoal por envelopes, base zero, local-first. O Caixa da Casa segue 
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
-| → envia para | [Caixa da Casa / AM Rendara](19-emp.md#caixa) | Pessoa física: impostos e finanças | complementa |
+| → envia para | [Caixa da Casa / Financeiro AM Gestão](19-emp.md#caixa) | Pessoa física: impostos e finanças | complementa |
 
 <a id="firefly"></a>
 

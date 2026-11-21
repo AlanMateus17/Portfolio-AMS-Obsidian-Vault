@@ -2727,7 +2727,7 @@
    "id": "S-caixa",
    "trilha": "setup",
    "etapa": "E2",
-   "titulo": "Começar o Caixa da Casa numa planilha até o sistema AM Rendara existir",
+   "titulo": "Começar o Caixa da Casa numa planilha até o sistema AM Gestão · Financeiro existir",
    "pronto": "Entradas e saídas do mês lançadas, separando casa e vendas",
    "quando": "Setup 14.20 · Vendas e finanças no CPF · Semanas 8 a 10 · dez/2026 a jan/2027",
    "liga": [
@@ -3314,7 +3314,7 @@
    "etapa": "E3",
    "titulo": "Instalar Azure CLI, Terraform, Vercel CLI e Wrangler",
    "pronto": "Termina com 'Pronto'; verificar.sh mostra as quatro ferramentas",
-   "quando": "Setup 19.1 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.1 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-vaga",
     "S-azure-conta",
@@ -3337,7 +3337,7 @@
    "etapa": "E3",
    "titulo": "Criar a conta Azure com alerta de orçamento",
    "pronto": "'az login' entra e o alerta de gasto está ligado",
-   "quando": "Setup 19.2 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.2 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-nuvem-clis",
     "S-terraform-base",
@@ -3360,7 +3360,7 @@
    "etapa": "E3",
    "titulo": "Criar com Terraform o grupo de recursos, o banco e o Key Vault do primeiro sistema",
    "pronto": "'terraform plan' sem diferenças depois do apply",
-   "quando": "Setup 19.3 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.3 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-azure-conta",
     "S-arquivos-nuvem",
@@ -3383,7 +3383,7 @@
    "etapa": "E3",
    "titulo": "Criar o armazenamento de arquivos (R2 da Cloudflare ou Blob)",
    "pronto": "Upload de teste pelo sistema exemplo",
-   "quando": "Setup 19.4 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.4 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-terraform-base",
     "S-email-transacional",
@@ -3406,7 +3406,7 @@
    "etapa": "E3",
    "titulo": "Configurar o e-mail transacional (Resend) com o domínio verificado",
    "pronto": "E-mail de confirmação de conta chega na caixa de entrada, não no spam",
-   "quando": "Setup 19.5 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.5 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-arquivos-nuvem",
     "S-deploy-teste",
@@ -3429,7 +3429,7 @@
    "etapa": "E3",
    "titulo": "Fazer o primeiro deploy do sistema exemplo",
    "pronto": "Sistema no ar com HTTPS, login e erro de teste no Sentry",
-   "quando": "Setup 19.6 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.6 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-email-transacional",
     "S-aura-status",
@@ -3453,7 +3453,7 @@
    "etapa": "E3",
    "titulo": "Criar o aura-status: painel de repositórios, backup e Dependabot",
    "pronto": "Painel mostra o estado de todos os repositórios",
-   "quando": "Setup 19.7 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Kaixara é o Passo 10 (≈ 2028)",
+   "quando": "Setup 19.7 · Nuvem e deploy · Com o Passo 5 da trilha de estudo (≈ abr a jun/2027) para a conta e o deploy do sistema exemplo; o deploy de produção do AM Gestão · Caixa é o Passo 10 (≈ 2028)",
    "liga": [
     "S-deploy-teste",
     "S-modelo-metodo",
@@ -4078,7 +4078,7 @@
    "id": "S-of-planilha",
    "trilha": "setup",
    "etapa": "E3",
-   "titulo": "Vender a planilha do Caixa da Casa antes de construir o AM Rendara",
+   "titulo": "Vender a planilha do Caixa da Casa antes de construir o AM Gestão · Financeiro",
    "pronto": "10 planilhas vendidas",
    "quando": "Setup 22.4 · Mais ofertas, uma por vez · Fev a dez/2027, uma oferta por vez",
    "liga": [
@@ -4929,7 +4929,7 @@
    "id": "S-kaixara",
    "trilha": "setup",
    "etapa": "E5",
-   "titulo": "AM Kaixara: PDV, cardápio, fichas técnicas e estoque",
+   "titulo": "AM Gestão · Caixa: PDV, cardápio, fichas técnicas e estoque",
    "pronto": "Rodando num negócio real",
    "quando": "Setup 26.2 · Sistemas AM à venda · 2027",
    "liga": [
@@ -4955,7 +4955,7 @@
    "id": "S-rotara",
    "trilha": "setup",
    "etapa": "E5",
-   "titulo": "AM Rotara: pedidos, rotas e mapas",
+   "titulo": "AM Gestão · Pedidos: pedidos, rotas e mapas",
    "pronto": "Entregas rastreadas no mapa em tempo real",
    "quando": "Setup 26.3 · Sistemas AM à venda · 2027",
    "liga": [
@@ -6029,8 +6029,8 @@
    "id": "E-P7",
    "trilha": "estudo",
    "etapa": "E4",
-   "titulo": "Passo 7 — Fechar o AM Kaixara: pagamento e cobrança",
-   "pronto": "AM Kaixara com fluxo de venda ponta a ponta, pagamento idempotente, ledger fechando em zero.",
+   "titulo": "Passo 7 — Fechar o AM Gestão · Caixa: pagamento e cobrança",
+   "pronto": "AM Gestão · Caixa com fluxo de venda ponta a ponta, pagamento idempotente, ledger fechando em zero.",
    "quando": "2-3 semanas",
    "liga": [
     "E-P6",
@@ -6068,7 +6068,7 @@
    "etapa": "E5",
    "titulo": "Passo 9 — Ponte técnica pro próximo sistema",
    "pronto": "dashboard atualiza em tempo real sem refresh.",
-   "quando": "após MVP do AM Kaixara",
+   "quando": "após MVP do AM Gestão · Caixa",
    "liga": [
     "E-P8",
     "S-observabilidade-dev",
@@ -6137,7 +6137,7 @@
    "id": "E-P13",
    "trilha": "estudo",
    "etapa": "E6",
-   "titulo": "Passo 13 — Segundo sistema: AM Rotara",
+   "titulo": "Passo 13 — Segundo sistema: AM Gestão · Pedidos",
    "pronto": "segundo sistema em produção — meça quanto tempo real foi economizado vs. o primeiro.",
    "quando": "bem mais rápido que o primeiro",
    "liga": [
@@ -6671,7 +6671,7 @@
    "id": "R-rendara",
    "trilha": "renda",
    "etapa": "E2",
-   "titulo": "AM Rendara (finanças), começando pela planilha — Vender a planilha do Caixa da Casa antes de construir o sistema",
+   "titulo": "AM Gestão · Financeiro (finanças), começando pela planilha — Vender a planilha do Caixa da Casa antes de construir o sistema",
    "pronto": "Métrica: vendas da planilha",
    "quando": "passo 14.20 · Semanas 8 a 10 · dez/2026 a jan/2027",
    "liga": [
@@ -6953,7 +6953,7 @@
    "id": "R-kaixara",
    "trilha": "renda",
    "etapa": "E5",
-   "titulo": "AM Kaixara (PDV, ficha técnica, cardápio) — Rodar primeiro num cliente piloto pagante",
+   "titulo": "AM Gestão · Caixa (PDV, ficha técnica, cardápio) — Rodar primeiro num cliente piloto pagante",
    "pronto": "Métrica: MRR e cancelamento",
    "quando": "passo 26.2 · 2027",
    "liga": [
@@ -7052,7 +7052,7 @@
    "id": "R-rotara",
    "trilha": "renda",
    "etapa": "E5",
-   "titulo": "AM Rotara (pedidos e entregas) — Nasce junto com a AM Entregas",
+   "titulo": "AM Gestão · Pedidos (pedidos e entregas) — Nasce junto com a AM Entregas",
    "pronto": "Métrica: entregas roteirizadas",
    "quando": "passo 26.3 · 2027",
    "liga": [
