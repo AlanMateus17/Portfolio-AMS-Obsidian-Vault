@@ -5,6 +5,8 @@ status: ativo
 atualizado: 2026-10-26
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (todas as etapas; este currículo serve para conferir que nada ficou de fora); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas
 
 > **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [PLANO ÚNICO](../PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).

@@ -2,6 +2,24 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.40.0] - 2026-11-21
+
+### Alterado
+- **Professor na ordem do mapa-de-estudo** (ADR 0018): um módulo só é liberado quando o assunto dele está escrito e conferido no mapa (📘), quando todo assunto de que ele depende no mapa também está escrito e quando os módulos desses assuntos já passaram na prova. Antes, cada módulo tinha pré-requisitos próprios e o `just professor hoje` podia mandar TypeScript (2.1) e terminal (1.3) antes do 0.1.
+- O dia da semana só filtra as trilhas; quando nenhuma trilha do dia tem módulo liberado, o `hoje` mostra o próximo da fila do mapa e os próximos assuntos que precisam ser escritos antes de entrar.
+- `just professor aula` abre o arquivo conferido do mapa quando o assunto já está escrito, em vez de gerar outra aula por IA (`--gerar` força a aula extra). Evita aula duplicada e conteúdo não conferido.
+- Pedido de aula: "a mesma ideia de 4 jeitos" passa a ser ideia pura → TypeScript → Python → sistema real (antes ainda dizia C#); a ficha dupla cita AM Gestão no lugar de Aura.
+- Ids `o-csharp` e `o-dotnet` viraram `o-typescript` e `o-ts-projeto` (os títulos já eram de TypeScript); o progresso salvo e as aulas e provas já geradas são migrados na primeira execução, e o id antigo ainda é aceito.
+- `tools/professor/mapa.py`: o retrato do mapa guarda se cada assunto está escrito (📘) e o caminho do arquivo; o `conferir` mostra a cobertura (hoje 40 de 180 assuntos têm módulo; 2 escritos).
+- `docs/implantacao/INSTALACAO-AUTONOMA.md` e `CONTEXTO-OUTRA-CONTA.md`: o PR #4 já está na `main` desde 12/11; o passo 1 virou "rode git pull na cópia do Windows".
+
+### Corrigido
+- Motor ausente ou com erro não derruba mais o Professor com traceback do Python: aviso em português com o que fazer, e a `aula` cai no motor `imprimir` sozinha.
+- `just professor nota ID NOTA`: registra a nota tirada nos exercícios e no gabarito do arquivo do mapa, sem IA, na mesma escada de revisão. Sem isso, quem não tem o `claude` instalado ficava preso no 0.1 (o 0.2 só libera com o 0.1 aprovado).
+
+### Adicionado
+- Verificador de coerência: regras `rotulo-plano-antigo` (rótulos [00-SUMARIO-UNICO…], [00-PLANO-UNIFICADO…] e [00-PLANO-MESTRE…] em links que já apontam para o PLANO-UNICO; troca segura) e `ensino-csharp`; decisão "Estudo: a ordem é a do mapa" no plano.
+
 ## [2.39.0] - 2026-11-20
 
 ### Adicionado

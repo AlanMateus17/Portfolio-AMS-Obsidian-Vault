@@ -5,6 +5,8 @@ status: ativo
 companion: "[roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)"
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (segurança: 1.4, 1.6, 6.4 e o horizonte H3 (certificações no fim do H3)); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🛡️ Roadmap Completo — Segurança Ofensiva
 
 > [!important] Como usar este documento
@@ -66,7 +68,7 @@ OSCP → eMAPT (Mobile)
 **macOS (base agora, aprofundar no Nível 5):** Gatekeeper, SIP, Notarization, TCC, LaunchDaemons/LaunchAgents, Keychain.
 
 ## 0.3 Programação e Scripting
-Prioridade: Python ⭐⭐⭐⭐⭐, Bash ⭐⭐⭐⭐⭐, PowerShell ⭐⭐⭐⭐⭐, C ⭐⭐⭐⭐, C#/.NET ⭐⭐⭐⭐, Assembly x86/x64 ⭐⭐⭐, Go ⭐⭐⭐, JavaScript ⭐⭐⭐, C++ ⭐⭐, Rust ⭐⭐.
+Prioridade: Python ⭐⭐⭐⭐⭐, Bash ⭐⭐⭐⭐⭐, PowerShell ⭐⭐⭐⭐⭐, C ⭐⭐⭐⭐, C#/.NET ⭐⭐⭐⭐ (muita ferramenta ofensiva de Windows é em C#; no seu software, .NET segue como reserva), Assembly x86/x64 ⭐⭐⭐, Go ⭐⭐⭐, JavaScript ⭐⭐⭐, C++ ⭐⭐, Rust ⭐⭐.
 
 > [!warning] Sequência correta
 > Python + Bash sólidos → antes do OSCP. C básico → antes do CRTO. Assembly → antes do OSED. Não inverta.
@@ -322,7 +324,7 @@ FASE 6 — ESPECIALIZAÇÃO (ongoing): Cloud (CARTP/AWS) + Mobile (eMAPT) + Malw
 ```
 
 > [!tip] Regra de ouro
-> Cada técnica aprendida teoricamente deve ser praticada em lab antes de avançar. Plano sem horas de hands-on não forma profissional. Isso é a mesma lógica de prática deliberada da [metodo-de-estudo](metodo-de-estudo.md).
+> Cada técnica aprendida teoricamente deve ser praticada em lab antes de avançar. Plano sem horas de hands-on não forma profissional. Isso é a mesma lógica de prática deliberada do [aprender-a-aprender (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md).
 
 ---
 
@@ -391,7 +393,7 @@ Este roadmap (os 6 níveis acima) roda entrelaçado com [trilha-linux-arch-profi
 | **CTFtime** 🆓 | Agenda de CTFs | Grátis | Todos |
 
 > [!tip] Progressão ideal de labs
-> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente da [metodo-de-estudo](metodo-de-estudo.md).
+> TryHackMe (base) → HTB Academy (teoria) → HackTheBox (prática) → Proving Grounds (prep OSCP) → VulnLab (AD/Red Team). A mesma lógica de dificuldade crescente do [aprender-a-aprender (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md).
 
 ---
 
@@ -500,7 +502,7 @@ Este roadmap (os 6 níveis acima) roda entrelaçado com [trilha-linux-arch-profi
 - **Anual:** revisar este roadmap, avaliar próxima certificação
 
 > [!tip] Note-taking
-> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio da [metodo-de-estudo](metodo-de-estudo.md): documentar para reter.
+> Mantenha suas próprias notas de técnica em formato consultável. Você já usa Obsidian — crie uma pasta dedicada de pentest com template por máquina (recon → enum → exploit → privesc → loot). Mesmo princípio do [aprender-a-aprender (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md): documentar para reter.
 
 ---
 

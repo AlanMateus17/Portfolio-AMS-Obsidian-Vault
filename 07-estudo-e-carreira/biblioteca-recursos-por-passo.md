@@ -4,6 +4,8 @@ tipo: estudo
 status: completo
 ---
 
+> 📚 **Organizado pelos "Passos" do plano antigo** (21/11/2026). Os recursos continuam valendo, mas hoje o que ler em cada assunto sai do setup: `just livros para ETAPA` (ex.: `just livros para 0.4`), na ordem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md).
+
 # Biblioteca de Recursos — O Que Ler/Assistir em Cada Passo
 ### Organizado na mesma ordem do `passo-a-passo-mestre` — abra o passo, encontre a leitura certa aqui, sem procurar sozinho
 

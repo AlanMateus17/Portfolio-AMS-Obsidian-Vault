@@ -55,7 +55,7 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [38 · Vendas medidas](#f15) | Semana 11 · jan/2027 | 4 | 2 h 40 min |
 | [39 · Teste do núcleo](#f16) | Semana 11 · jan/2027 | 4 | 1 h 00 min |
 | [40 · Primeira venda: o mini-curso no ar](#f17) | Semanas 12 a 15 · jan a fev/2027 | 11 | 24 h 05 min |
-| [41 · Base dos sistemas AM](#f18) | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP | 9 | 8 h 40 min |
+| [41 · Base dos sistemas AM](#f18) | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP | 9 | 8 h 40 min |
 | [42 · Nuvem e deploy](#f19) | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) | 8 | 7 h 45 min |
 | [43 · Editora](#f20) | Quando o capítulo 1 estiver pronto · **gatilho:** O capítulo 1 e o seu modelo de criação prontos | 12 | 19 h 00 min |
 | [44 · Dados, IA e pendrives](#f21) | Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) | 12 | 16 h 20 min |
@@ -4668,7 +4668,7 @@ cd ~/dev/dev-setup && claude "Passo mc-isca do roteiro: Isca grátis (aula 1) co
 
 Um sistema novo nasce pronto: arquitetura, testes, login, observabilidade e deploy.
 
-**Quando:** Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP
+**Quando:** Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP
 
 ### 41.1 Gerar o modelo de sistema com /novo-sistema-aura
 
@@ -7182,7 +7182,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Comunidade (Discord ou grupo) | 37.10, 46.15 | Semanas 8 a 10 · dez/2026 a jan/2027; Fev a dez/2027, uma oferta por vez |
 | Busca Google (SEO) | 36.12 | Semanas 6 e 7 · dez/2026 |
 | Alunos e ex-alunos | 36.10 | Semanas 6 e 7 · dez/2026 |
-| Recrutadores | 24.3, 24.4, 41.8 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Recrutadores | 24.3, 24.4, 41.8 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | TikTok | 36.1 | Semanas 6 e 7 · dez/2026 |
 | Facebook | 36.1 | Semanas 6 e 7 · dez/2026 |
 
@@ -7293,7 +7293,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 |---|---|---|
 | Mini-curso Lógica de Programação | 37.5, 40.2, 40.3 | Semanas 8 a 10 · dez/2026 a jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Formações (TI, Matemática, Finanças) | 47.10 | A partir de fev/2027 |
-| Templates e código-fonte | 41.7 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Templates e código-fonte | 41.7 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Livro Lógica e Máquina | 43.2, 43.8 | Quando o capítulo 1 estiver pronto |
 | Aulas particulares | 37.8 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Sites para pequenas empresas | 23.3, 24.5, 36.13, 46.9, 46.10 | Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; Nov/2026 a out/2027, revisão no fim de cada trimestre; Semanas 6 e 7 · dez/2026; Fev a dez/2027, uma oferta por vez |
@@ -7400,13 +7400,13 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 |---|---|---|
 | Armazenamento de arquivos (Blob/R2) | 42.4 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | E-mail transacional (Resend, SES…) | 42.5, 45.2 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante); Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| SonarQube Cloud | 41.5 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| SonarQube Cloud | 41.5 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Projects · ADRs · MkDocs | 5.5 | Semana 2 · nov/2026 |
 | Dependabot + CodeQL | 5.3 | Semana 2 · nov/2026 |
 | Google Cloud | 55.5 | 2028 |
 | GitHub | 2.7, 5.1, 5.4, 24.8 | Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; Semana 2 · nov/2026; Nov/2026 a out/2027, revisão no fim de cada trimestre |
 | GitHub Actions | 5.2, 39.1 | Semana 2 · nov/2026; Semana 11 · jan/2027 |
-| GHCR (imagens) | 41.6 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| GHCR (imagens) | 41.6 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | GitHub Pages | 36.7 | Semanas 6 e 7 · dez/2026 |
 | Cloudflare (DNS, Pages, e-mail) | 28.4, 28.6, 28.7, 36.3, 36.8, 38.1, 42.6 | Semana 6 · nov/2026 a dez/2026; Semanas 6 e 7 · dez/2026; Semana 11 · jan/2027; Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | Vercel | 42.6 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
@@ -7435,18 +7435,18 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| OpenAPI + Scalar | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| OpenAPI + Scalar | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | PostGIS + MapLibre | 51.3 | 2027 |
-| Storybook | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Clean Arch + DDD | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Prisma/Drizzle + PostgreSQL | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Supabase Realtime | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Multi-tenant (RLS) | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Testes: xUnit, Playwright, k6 | 24.6, 41.1, 45.10 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Storybook | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Clean Arch + DDD | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Prisma/Drizzle + PostgreSQL | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Supabase Realtime | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Multi-tenant (RLS) | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Testes: xUnit, Playwright, k6 | 24.6, 41.1, 45.10 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Módulos do AM Gestão | 51.4 | 2027 |
-| Next.js + Aura Design System | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
-| API TypeScript (Next/NestJS) | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
-| Keycloak / Entra ID | 41.2 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Next.js + Aura Design System | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
+| API TypeScript (Next/NestJS) | 24.6, 41.1, 46.17 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP; Fev a dez/2027, uma oferta por vez |
+| Keycloak / Entra ID | 41.2 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | IA: RAG + pgvector | 50.1 | Depois do trimestre 4 do eixo (ADR 0011, ≈ 2028), quando o AM Gestão já estiver em produção |
 | aura-licensing | 51.1 | 2027 |
 | aura-status | 42.7 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
@@ -7454,7 +7454,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | AM Gestão · Pedidos (entregas) | 51.3, 51.5 | 2027 |
 | App mobile (React Native) | 55.6 | 2028 |
 | AM Obra (diário, medição, compras) | 62.12 | Ferramentas grátis no estudo da manhã a partir de jan/2027; serviços e o AM Obra só depois das rendas de agora passarem no portão |
-| Zod · Biome · Vitest (front) | 41.9, 45.8 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
+| Zod · Biome · Vitest (front) | 41.9, 45.8 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | SvelteKit (apps pequenos) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | PocketBase (MVP antes do AM Gestão) | 45.7 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
 | Litestream (SQLite no R2) | 45.10 | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
@@ -7466,14 +7466,14 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Sentry (erros) | 41.4 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Sentry (erros) | 41.4 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Uptime Kuma | 10.6, 31.5, 45.1 | Semana 4 · nov/2026; Dez/2026 a jan/2027; Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) |
-| Seq (logs) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Seq (logs) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Loki + Tempo | 55.3 | 2028 |
-| OpenTelemetry | 24.7, 41.3 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Prometheus | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| OpenTelemetry | 24.7, 41.3 | Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Prometheus | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Grafana | 10.4, 38.4 | Semana 4 · nov/2026; Semana 11 · jan/2027 |
-| Docker Compose (dev) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Docker Compose (dev) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | SigNoz (logs, traces e métricas) | 32.3 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 | GlitchTip (erros dos sistemas) | 32.2 | Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
 
@@ -7481,15 +7481,15 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 
 | Bloco | Passo | Quando |
 |---|---|---|
-| Caddy (proxy + HTTPS) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Mailpit | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Caddy (proxy + HTTPS) | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Mailpit | 41.3 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | Kafka | 55.1 | 2028 |
 | kubectl · Helm · k9s | 55.2 | 2028 |
 | Azure CLI · AWS CLI | 42.1 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | Histórico (append-only) | 51.4 | 2027 |
 | Docker + Compose | 4.2, 10.2 | Semana 2 · nov/2026; Semana 4 · nov/2026 |
-| PostgreSQL | 10.2, 22.5, 24.6, 41.1 | Semana 4 · nov/2026; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
-| Redis | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| PostgreSQL | 10.2, 22.5, 24.6, 41.1 | Semana 4 · nov/2026; Nov/2026 a abr/2027, uma fase por vez, dentro das 7 h extras por semana; fases 0 e 1 primeiro, o garimpo logo depois; Nov/2026 a out/2027, revisão no fim de cada trimestre; Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
+| Redis | 41.1 | Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | RabbitMQ | 55.1 | 2028 |
 | Kubernetes local (kind) | 55.2 | 2028 |
 | Terraform | 42.1, 42.3 | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |

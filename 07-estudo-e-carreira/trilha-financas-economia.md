@@ -5,6 +5,8 @@ status: ativo
 atualizado: 2026-10-26
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (finanças: 3.13, 3.14, 5.5, 7.10, 8.16 e o horizonte H6.7 a H6.9); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 💹 Trilha de Finanças e Economia — Especialização no Mercado Financeiro e Econômico
 
 > **Em palavras simples:** é o estudo de **dinheiro**: como investir, como uma empresa registra o que ganha e gasta (contabilidade), como funcionam juros, impostos, a bolsa e a economia do país. Você aprende para construir sistemas financeiros e para tirar as certificações. Começa leve e vai aprofundando.

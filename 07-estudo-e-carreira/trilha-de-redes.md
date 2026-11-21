@@ -5,9 +5,11 @@ status: novo
 data: 2026-09-28
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (redes: 3.1 a 3.4, 5.12 (SSH) e o horizonte H2); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🌐 Trilha de Redes
 
-> Base de redes para segurança, servidores e deploy. Pré-requisito da parte de segurança ([roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)) e do homelab ([trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) Fase 8). Ponto de entrada do dia a dia: [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md).
+> Base de redes para segurança, servidores e deploy. Pré-requisito da parte de segurança ([roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md)) e do homelab ([trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) Fase 8). Ponto de entrada do dia a dia: [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md).
 
 **Ritmo:** 6 a 10 semanas em horas livres chegam a um nível sólido. Cada fase termina com algo testável na própria máquina. Ferramentas (todas no Arch): `ip`, `ping`, `traceroute`, `dig`, `ss`, `nmap`, `curl`, Wireshark.
 

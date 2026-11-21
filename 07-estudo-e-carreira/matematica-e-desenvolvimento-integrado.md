@@ -123,4 +123,4 @@ O livro de matemática não cobre física, então ela entra como bloco leve, de 
 ## 🔗 Documentos relacionados
 - [trilha-42-circles-oficial-verificado](trilha-42-circles-oficial-verificado.md) — `miniRT` (Geometria Analítica) e `Libft`/Algoritmo de Euclides (indução, Parte II) são as conexões reais desta matemática com a trilha 42
 - [sequencia-mestra-completa-desde-o-inicio](../99-arquivo/sequencia-mestra-completa-desde-o-inicio.md) — onde cada Parte do livro entra na ordem real de estudo
-- [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) — a Parte I (Lógica) em formato de tarefa, User Story por User Story
+- [EPIC-01-backlog-passo1-fundamentos (histórico)](../99-arquivo/EPIC-01-backlog-passo1-fundamentos.md) — a Parte I (Lógica) em formato de tarefa, User Story por User Story

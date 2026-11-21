@@ -69,13 +69,13 @@ Passo a passo próprio em [trilha-go-ferramentas](../07-estudo-e-carreira/trilha
 | Saiu | Era | Virou |
 |---|---|---|
 | C# como base (19/21 sistemas) | coração de tudo | carta de reserva |
-| ASP.NET Core Controllers | backend fixo | Next/NestJS + FastAPI |
+| ASP.NET Core Controllers | backend fixo | substituído por Next/NestJS + FastAPI |
 | Clojure + Datomic (`aura-historico`) | histórico temporal | cortado (1 produto só não justifica) |
 | SignalR | tempo real .NET | realtime do Supabase |
 | Redis / Redis Streams | peça fixa | opcional (só com necessidade real) |
 | EF Core | ORM fixo | Prisma / Drizzle + cliente Supabase |
 | GraphQL / HotChocolate | AM Taskoro | saiu junto com o Taskoro |
-| "stack fixa, sem exceção nos 21 docs" | regra central | **stack por problema** |
+| "stack fixa, sem exceção nos 21 docs" | regra central | substituída por **stack por problema** |
 | Mandarim | trilha de idioma | removido (foco: inglês + espanhol) |
 | Império de 23 sistemas | portfólio | **1 produto: AM Gestão** |
 

@@ -5,6 +5,8 @@ status: ativo
 atualizado: 2026-10-26
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (engenharia de software: Etapas 2 e 4 a 6 e a Etapa 8); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🏗️ Engenharia de Software — O Currículo Completo, Mapeado nos Passos
 
 > **Em palavras simples:** engenharia de software é tudo o que faz um sistema funcionar bem por anos, e não só hoje: organização do código, testes, segurança, publicação e, no seu caso, fazer contas com dinheiro sem nunca errar um centavo.

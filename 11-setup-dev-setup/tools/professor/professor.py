@@ -9,14 +9,21 @@ entrevista, exercícios N1 a N4 do padrão do livro, 20/80, uma porta só). Dom�
 prática, passou na prova, ensinou.
 
 As aulas ficam no seu vault (~/dev/notas/07-estudo-e-carreira/professor) e são geradas uma vez só: reler não gasta token.
+Quando o assunto do módulo já está escrito e conferido no mapa-de-estudo (📘), a aula É o arquivo do mapa: o Professor
+abre esse arquivo em vez de pedir texto novo à IA (use --gerar só se quiser uma aula extra).
+
+A ordem vem do mapa-de-estudo (ADR 0018): um módulo só é liberado quando o assunto dele está escrito e conferido e todos
+os assuntos de que ele depende no mapa (direta ou indiretamente) já passaram na prova. O dia da semana só filtra as
+trilhas; quando nenhuma trilha do dia tem módulo liberado, o `hoje` mostra o próximo da fila do mapa.
 
     python3 tools/professor/professor.py hoje                 # o que estudar hoje (revisões + próxima aula de cada trilha)
     python3 tools/professor/professor.py trilha               # o currículo com o seu nível em cada módulo
-    python3 tools/professor/professor.py aula s-backup [--motor claude|ollama|imprimir] [--refazer]
+    python3 tools/professor/professor.py aula s-backup [--motor claude|ollama|imprimir] [--refazer] [--gerar]
     python3 tools/professor/professor.py ferramenta restic    # mini-aula sobre qualquer bloco do ecossistema
     python3 tools/professor/professor.py praticei s-backup    # nível 2
     python3 tools/professor/professor.py prova s-backup       # gera a prova; você responde no próprio arquivo
     python3 tools/professor/professor.py corrigir s-backup    # a IA corrige com rubrica, marca o nível e agenda a revisão
+    python3 tools/professor/professor.py nota b-aprender 85   # sem IA: a nota que você tirou no gabarito do arquivo do mapa
     python3 tools/professor/professor.py ensinei s-backup     # nível 4: escreveu post ou deu a aula
     python3 tools/professor/professor.py fechar s-backup 80   # Protocolo de fim de bloco: ficha dupla, registro de entrevista, tempo real
     python3 tools/professor/professor.py escutei "Hipsters: carreira" "ideia 1; ideia 2; ideia 3" --acao "..."  # podcast vira nota
@@ -38,6 +45,9 @@ sys.path.insert(0, str(RAIZ / "tools" / "nucleo"))
 import nucleo as nuc  # noqa: E402
 
 CURRICULO = RAIZ / "data" / "professor" / "curriculo.json"
+RETRATO = RAIZ / "data" / "professor" / "mapa-assuntos.json"
+# ids antigos (da época do C#) → ids novos; o progresso salvo é migrado na primeira execução
+RENOMEADOS = {"o-csharp": "o-typescript", "o-dotnet": "o-ts-projeto"}
 CONTEXTO = RAIZ / "docs" / "akita" / "contexto-setup.md"
 INTERVALOS = (1, 3, 7, 21, 60, 120)
 APROVA = 80
@@ -118,7 +128,32 @@ def curriculo() -> dict:
     return json.loads(CURRICULO.read_text(encoding="utf-8"))
 
 
+def assuntos_mapa() -> dict[str, dict]:
+    """O retrato do MAPA.md (tools/professor/mapa.py atualizar), na ordem do mapa. Vazio se ainda não existir."""
+    if not RETRATO.exists():
+        return {}
+    return json.loads(RETRATO.read_text(encoding="utf-8")).get("assuntos", {})
+
+
+def pasta_mapa() -> Path:
+    return Path(os.environ.get("AMTECH_MAPA") or Path.home() / "dev" / "mapa-de-estudo")
+
+
+def migrar_ids(con) -> None:
+    """Leva o progresso dos ids antigos (o-csharp, o-dotnet) para os novos, sem apagar nada que já exista no novo."""
+    for velho, novo in RENOMEADOS.items():
+        con.execute("UPDATE dominio SET topico = ? WHERE topico = ? AND NOT EXISTS (SELECT 1 FROM dominio WHERE topico = ?)",
+                    (novo, velho, novo))
+        for sub in ("aulas", "provas"):
+            for arq in (pasta() / sub).glob(f"{velho}*.md") if (pasta() / sub).exists() else []:
+                alvo = arq.with_name(arq.name.replace(velho, novo, 1))
+                if not alvo.exists():
+                    arq.rename(alvo)
+    con.commit()
+
+
 def modulo(mid: str) -> dict:
+    mid = RENOMEADOS.get(mid, mid)
     for m in curriculo()["modulos"]:
         if m["id"] == mid:
             return m
@@ -158,17 +193,68 @@ def registrar_prova(con, topico: str, nota: int, hoje: date | None = None) -> tu
     return intervalo, prox
 
 
-def plano_do_dia(mods: list[dict], nv: dict[str, dict], hoje: date | None = None) -> dict:
-    """Revisões vencidas e, por trilha, o primeiro módulo ainda não dominado cujos pré-requisitos já passaram na prova."""
+def _fecho(assuntos: dict[str, dict]) -> dict[str, set[str]]:
+    """Para cada assunto do mapa, todos os assuntos de que ele depende, direta ou indiretamente."""
+    memo: dict[str, set[str]] = {}
+
+    def visita(a, pilha=()):
+        if a in memo:
+            return memo[a]
+        if a in pilha:
+            return set()
+        tudo: set[str] = set()
+        for d in assuntos.get(a, {}).get("depende", []):
+            tudo |= {d} | visita(d, pilha + (a,))
+        memo[a] = tudo
+        return tudo
+    for a in assuntos:
+        visita(a)
+    return memo
+
+
+def bloqueio(m: dict, mods: list[dict], nv: dict[str, dict], assuntos: dict[str, dict],
+             dep: dict[str, set[str]] | None = None) -> str | None:
+    """Por que o módulo ainda não pode ser estudado (None = liberado).
+    1) pré-requisitos do próprio módulo; 2) com o retrato do mapa: o assunto precisa estar escrito e conferido (📘),
+    todo assunto de que ele depende no mapa também, e os módulos desses assuntos precisam ter passado na prova."""
+    dom = lambda mid: nv.get(mid, {}).get("nivel", 0) >= 3  # noqa: E731
+    falta = [p for p in m.get("prereq", []) if not dom(p)]
+    if falta:
+        return "falta passar na prova de " + ", ".join(falta)
+    etapa = m.get("etapa")
+    if not assuntos or etapa is None or etapa not in assuntos:
+        return None
+    if not assuntos[etapa].get("escrito"):
+        return f"o assunto {etapa} ainda não foi escrito e conferido no mapa"
+    dep = dep if dep is not None else _fecho(assuntos)
+    nao_escritos = sorted(p for p in dep.get(etapa, set()) if not assuntos.get(p, {}).get("escrito"))
+    if nao_escritos:
+        return "o mapa pede antes: " + ", ".join(nao_escritos) + " (ainda não escritos)"
+    pendentes = sorted(x["id"] for x in mods if x.get("etapa") in dep.get(etapa, set()) and not dom(x["id"]))
+    if pendentes:
+        return "o mapa pede antes: " + ", ".join(pendentes)
+    return None
+
+
+def plano_do_dia(mods: list[dict], nv: dict[str, dict], hoje: date | None = None,
+                 assuntos: dict[str, dict] | None = None) -> dict:
+    """Revisões vencidas; por trilha, o primeiro módulo liberado (ordem do mapa); a fila do mapa (todos os liberados,
+    em qualquer trilha) e os próximos assuntos do mapa que precisam ser escritos antes de entrar."""
     hoje = (hoje or date.today()).isoformat()
+    assuntos = assuntos or {}
     revisoes = sorted(t for t, r in nv.items() if r.get("proxima_revisao") and r["proxima_revisao"] <= hoje)
-    proximos = {}
-    for m in sorted(mods, key=lambda m: m["trimestre"]):
-        if m["trilha"] in proximos or nv.get(m["id"], {}).get("nivel", 0) >= 3:
+    ordem = {a: i for i, a in enumerate(assuntos)}
+    dep = _fecho(assuntos) if assuntos else {}
+    chave = lambda m: (m["trimestre"], ordem.get(m.get("etapa"), len(ordem)))  # noqa: E731
+    proximos, fila = {}, []
+    for m in sorted(mods, key=chave):
+        if nv.get(m["id"], {}).get("nivel", 0) >= 3 or bloqueio(m, mods, nv, assuntos, dep):
             continue
-        if all(nv.get(p, {}).get("nivel", 0) >= 3 for p in m["prereq"]):
-            proximos[m["trilha"]] = m
-    return {"revisoes": revisoes, "proximos": proximos}
+        fila.append(m)
+        proximos.setdefault(m["trilha"], m)
+    a_escrever = [a for a, info in assuntos.items() if not info.get("escrito")
+                  and all(assuntos.get(d, {}).get("escrito") for d in info.get("depende", []))][:3]
+    return {"revisoes": revisoes, "proximos": proximos, "fila": fila, "a_escrever": a_escrever}
 
 
 # ---------- pedidos à IA ----------
@@ -188,8 +274,8 @@ Markdown, sobre o módulo abaixo. O método (docs/professor/metodo.md) é fixo; 
 ## Bloco 2 (25 min) · O modelo: como funciona por dentro, com um diagrama em texto ou Mermaid; 3 a 5 exemplos
    resolvidos embutidos na explicação; um quadro "> **Pare e responda:**" no meio
 ## Bloco 3 (25 min) · Os detalhes que pegam: casos de borda e diagnóstico, com quadros "> **Erro comum:**"
-## A mesma ideia de 4 jeitos (quando fizer sentido): a ideia pura (matemática ou conceito) → em C# → em TypeScript →
-   no sistema real (Aura, AMtech, o próprio setup). Se não fizer sentido para o tema, diga e pule.
+## A mesma ideia de 4 jeitos (quando fizer sentido): a ideia pura (matemática ou conceito) → em TypeScript → em Python →
+   no sistema real (AM Gestão, o próprio setup). Se não fizer sentido para o tema, diga e pule.
 ## Exemplo resolvido completo (passo a passo, explicando cada decisão)
 ## Agora você tenta (o mesmo tipo de exemplo com lacunas ___)
 ## Exercícios em 4 níveis (N1 reconhecimento; N2 aplicação direta; N3 aplicação combinada e "encontre o erro";
@@ -226,7 +312,7 @@ FICHA = """# Ficha dupla · {titulo}
 
 1. **A ideia** (pura, sem código): definição com as suas palavras + um exemplo + um exercício
 2. **A mesma ideia, em código**: o trecho + por que é a MESMA coisa + um exercício
-3. **Por que importa**: onde aparece num sistema real (Aura, AMtech, o setup) + a motivação em uma frase
+3. **Por que importa**: onde aparece num sistema real (AM Gestão, o setup) + a motivação em uma frase
 4. **Conexão com o próximo tópico**: uma linha
 
 ---
@@ -245,7 +331,8 @@ PROTOCOLO = """Protocolo de fim de bloco ({titulo}):
   3. ENSINE em 3 a 5 frases sem jargão: preencha a ficha dupla e o registro de entrevista em {ficha}
   4. ANKI: 1 a 3 cartões de conceito (just professor cartoes junta os da aula).
   5. TEMPO: {minutos} min reais contra {estimado} min estimados.
-  6. Só então avance: just professor praticei {id} (se fez a prática) ou just professor prova {id}."""
+  6. Só então avance: just professor praticei {id} (se fez a prática) e a prova: just professor prova {id}
+     (corrigida pela IA) ou, sem IA, os exercícios e o gabarito do arquivo do mapa e just professor nota {id} NOTA."""
 
 PROVA = """Monte uma prova em português do Brasil sobre o módulo "{titulo}" (objetivos: {objetivos}). 8 questões: 3 de
 explicar com as próprias palavras, 3 de aplicar no setup dele (comando ou decisão), 2 de diagnosticar um erro. Nada de
@@ -267,6 +354,10 @@ def pedido_aula(m: dict, contexto_nucleo: str = "") -> str:
             .replace("{contexto}", ctx).replace("{nucleo}", contexto_nucleo or "(nada ainda)"))
 
 
+class MotorAusente(ValueError):
+    """O programa do motor (claude ou ollama) não está instalado neste Linux."""
+
+
 def rodar(motor: str, pedido: str) -> str:
     if motor == "imprimir":
         return pedido
@@ -274,7 +365,16 @@ def rodar(motor: str, pedido: str) -> str:
            "ollama": ["ollama", "run", os.environ.get("PROFESSOR_MODELO", "qwen2.5:7b")]}.get(motor)
     if not cmd:
         raise ValueError("motor: claude, ollama ou imprimir")
-    return subprocess.run(cmd, input=pedido, capture_output=True, text=True, check=True, timeout=1800).stdout
+    try:
+        return subprocess.run(cmd, input=pedido, capture_output=True, text=True, check=True, timeout=1800).stdout
+    except FileNotFoundError:
+        raise MotorAusente(f"O motor '{motor}' não está instalado neste Linux (o comando '{cmd[0]}' não existe). "
+                           f"Use --motor imprimir (mostra o pedido para colar numa conversa) ou --motor ollama, "
+                           f"ou instale o Claude Code no Ubuntu e faça login.") from None
+    except subprocess.CalledProcessError as erro:
+        detalhe = (erro.stderr or erro.stdout or "").strip()[-400:] or "sem mensagem"
+        raise ValueError(f"O motor '{motor}' falhou (código {erro.returncode}): {detalhe}. "
+                         f"Confira o login (claude) ou o modelo (ollama list), ou use --motor imprimir.") from None
 
 
 def cartoes_de(texto: str) -> list[tuple[str, str]]:
@@ -324,35 +424,56 @@ def main(argv: list[str] | None = None) -> int:
     s.add_parser("hoje")
     s.add_parser("trilha")
     a = s.add_parser("aula"); a.add_argument("id"); a.add_argument("--motor", default="claude"); a.add_argument("--refazer", action="store_true")
+    a.add_argument("--gerar", action="store_true", help="gera uma aula por IA mesmo com o arquivo do mapa pronto")
     f = s.add_parser("ferramenta"); f.add_argument("bloco"); f.add_argument("--motor", default="claude")
     for nome in ("praticei", "ensinei"):
         s.add_parser(nome).add_argument("id")
     p = s.add_parser("prova"); p.add_argument("id"); p.add_argument("--motor", default="claude")
     c = s.add_parser("corrigir"); c.add_argument("id"); c.add_argument("--motor", default="claude")
+    n = s.add_parser("nota"); n.add_argument("id"); n.add_argument("valor", type=int)
     s.add_parser("cartoes")
     z = s.add_parser("fechar"); z.add_argument("id"); z.add_argument("minutos", type=int)
     y = s.add_parser("escutei"); y.add_argument("titulo"); y.add_argument("ideias"); y.add_argument("--acao", default="")
     args = ap.parse_args(argv)
     con = nuc.abrir()
     try:
+        migrar_ids(con)
         cur = curriculo()
+        assuntos = assuntos_mapa()
         if args.cmd == "hoje":
-            pl = plano_do_dia(cur["modulos"], niveis(con))
+            pl = plano_do_dia(cur["modulos"], niveis(con), assuntos=assuntos)
             if pl["revisoes"]:
                 print("Revisar primeiro (prova curta de novo): " + ", ".join(pl["revisoes"]))
             hoje_trilhas = trilhas_do_dia()
             if not hoje_trilhas:
                 print("Domingo é folga. O descanso faz parte do plano.")
+
+            def mostrar(m, rotulo):
+                etapa = m.get("etapa")
+                info = assuntos.get(etapa, {}) if etapa else {}
+                print(f"{rotulo}: {m['id']} · {m['titulo']}" + (f"  (mapa {etapa})" if etapa else ""))
+                for ln in entrada(m):
+                    print(f"   antes, {ln}")
+                if info.get("escrito"):
+                    print(f"   estude pelo arquivo do mapa: {pasta_mapa() / info['arquivo']}  (just professor aula {m['id']} abre)")
+                else:
+                    print(f"   depois: just professor aula {m['id']}")
+            mostrados = set()
             for trilha in hoje_trilhas:
                 m = pl["proximos"].get(trilha)
                 if m:
-                    print(f"{TRILHAS[trilha]}: {m['id']} · {m['titulo']}")
-                    for ln in entrada(m):
-                        print(f"   antes, {ln}")
-                    print(f"   depois: just professor aula {m['id']}")
+                    mostrar(m, TRILHAS[trilha])
+                    mostrados.add(m["id"])
+            if hoje_trilhas:
+                extra = next((m for m in pl["fila"] if m["id"] not in mostrados and m.get("etapa")), None)
+                if extra:
+                    mostrar(extra, "Próximo da fila do mapa (fora das trilhas de hoje)")
             for mid, fracos in pontos_fracos(con).items():
                 print(f"Prática deliberada em {mid}: {', '.join(fracos)}")
-            if not pl["proximos"] and not pl["revisoes"]:
+            if pl["a_escrever"]:
+                nomes = ", ".join(f"{a} {assuntos[a]['titulo']}" for a in pl["a_escrever"])
+                print(f"Próximos assuntos do mapa a escrever e conferir antes de entrar: {nomes}")
+            if not pl["fila"] and not pl["revisoes"] and not pl["a_escrever"]:
                 print("Currículo do trimestre dominado. Hora de acrescentar módulos (data/professor/curriculo.json).")
         elif args.cmd == "trilha":
             nv, nomes = niveis(con), cur["niveis"]
@@ -371,11 +492,27 @@ def main(argv: list[str] | None = None) -> int:
                 refazer = False
             else:
                 m, refazer = modulo(args.id), args.refazer
+                motivo = bloqueio(m, cur["modulos"], niveis(con), assuntos)
+                if motivo:
+                    print(f"Aviso: {m['id']} ainda não está liberado ({motivo}). Siga o just professor hoje.", file=sys.stderr)
+            info = assuntos.get(m.get("etapa") or "", {})
             destino = pasta() / "aulas" / f"{m['id']}.md"
-            if destino.exists() and not refazer:
+            if args.cmd == "aula" and info.get("escrito") and not args.gerar:
+                arq = pasta_mapa() / info["arquivo"]
+                print(f"A aula deste módulo é o arquivo conferido do mapa ({m['etapa']} {info['titulo']}):\n  {arq}")
+                if not arq.exists():
+                    print("  O mapa-de-estudo não está nesse caminho. No Ubuntu: "
+                          "git clone https://github.com/AlanMateus17/mapa-de-estudo.git ~/dev/mapa-de-estudo")
+                print("  Comece pela seção 0 (diagnóstico). Quer uma aula extra gerada por IA? Use --gerar.")
+            elif destino.exists() and not refazer:
                 print(f"A aula já existe (reler não gasta token): {destino}")
             else:
-                texto = rodar(args.motor, pedido_aula(m, nuc.contexto(con, m["titulo"], excluir=("referencia",))))
+                pedido = pedido_aula(m, nuc.contexto(con, m["titulo"], excluir=("referencia",)))
+                try:
+                    texto = rodar(args.motor, pedido)
+                except MotorAusente as erro:
+                    print(f"{erro}\nMostrando o pedido (motor imprimir):\n", file=sys.stderr)
+                    args.motor, texto = "imprimir", pedido
                 if args.motor == "imprimir":
                     print(texto)
                     return 0
@@ -390,6 +527,9 @@ def main(argv: list[str] | None = None) -> int:
             modulo(args.id); subir(con, args.id, 4); print(f"{args.id}: nível 4 (ensinou). É assim que o assunto fica de vez.")
         elif args.cmd == "prova":
             m = modulo(args.id)
+            motivo = bloqueio(m, cur["modulos"], niveis(con), assuntos)
+            if motivo:
+                print(f"Aviso: {m['id']} ainda não está liberado ({motivo}).", file=sys.stderr)
             texto = rodar(args.motor, PROVA.replace("{titulo}", m["titulo"]).replace("{objetivos}", "; ".join(m["objetivos"])))
             destino = pasta() / "provas" / f"{m['id']}-{date.today().isoformat()}.md"
             destino.parent.mkdir(parents=True, exist_ok=True)
@@ -410,6 +550,17 @@ def main(argv: list[str] | None = None) -> int:
                        fonte="professor")
             veredito = "aprovado" if nota >= APROVA else f"abaixo de {APROVA}: releia o Bloco 3 e refaça"
             print(f"Nota {nota} ({veredito}). Próxima revisão em {intervalo} dia(s): {prox}.")
+        elif args.cmd == "nota":
+            # Para quando a prova é feita sem IA: os exercícios e o gabarito comentado do arquivo do mapa (seções 12, 13
+            # e 17). A nota entra na mesma escada de revisão da prova corrigida pela IA.
+            m = modulo(args.id)
+            if not 0 <= args.valor <= 100:
+                raise ValueError("a nota vai de 0 a 100")
+            intervalo, prox = registrar_prova(con, m["id"], args.valor)
+            nuc.evento(con, "professor.prova", {"modulo": m["id"], "nota": args.valor, "revisar": [], "origem": "gabarito"},
+                       fonte="professor")
+            veredito = "aprovado" if args.valor >= APROVA else f"abaixo de {APROVA}: revise e refaça"
+            print(f"{m['id']}: nota {args.valor} ({veredito}). Próxima revisão em {intervalo} dia(s): {prox}.")
         elif args.cmd == "fechar":
             m = modulo(args.id)
             etapa = etapa_do_modulo(m["id"])

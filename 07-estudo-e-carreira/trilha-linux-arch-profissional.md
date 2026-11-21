@@ -7,7 +7,7 @@ data: 2026-09-28
 
 # 🐧 Trilha Linux/Arch Profissional
 
-> Base de infraestrutura para dev, segurança e servidores. Cada fase termina com evidência pública (commit, README, post). O que não vira evidência não entra no currículo. Ponto de entrada do dia a dia continua sendo [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md).
+> Base de infraestrutura para dev, segurança e servidores. Cada fase termina com evidência pública (commit, README, post). O que não vira evidência não entra no currículo. O que fazer hoje vem do [CARTÃO](../CARTAO-voce-esta-aqui.md); a ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (Linux: 1.1 a 1.3 e 5.11, depois H1.10 e H5.5).
 
 **Regra de foco:** uma fase por vez. Repositório único desde o dia 1: `AlanMateus17/dotfiles`, que recebe configs, scripts e notas de todas as fases.
 
@@ -150,7 +150,7 @@ Dá para começar sem o NAS: PC velho, Raspberry Pi ou VM sempre ligada.
 
 ## Horizonte longo — sistemas, baixo nível e SO próprio (estacionado)
 
-> **Camada D do [00-PLANO-UNIFICADO](../PLANO-UNICO-AMtech.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
+> **Camada D do [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md).** Tudo aqui está **estacionado de propósito**: é o arco de ~10 anos, da base de sistemas até criar seu próprio SO e sua própria distro. Nenhum bloco compete pelas horas de 2026-2027. Ver tudo documentado aqui é o que te deixa tranquilo pra **não** tocar nisso agora.
 >
 > A parte ofensiva (reverse, exploit, kernel exploitation) é só **nomeada** aqui — o detalhe vive em [roadmap-seguranca-ofensiva-completo](roadmap-seguranca-ofensiva-completo.md), não é duplicado.
 
@@ -185,7 +185,7 @@ OS RESEARCH → AM-OS (SO próprio) · AM Linux (distro própria)
 ## 📚 Blocos por área (nível de currículo — o QUE estudar, não o passo a passo)
 
 ### Fundamentos de estudo
-Terminal Linux/Windows · Git/GitHub · Markdown · leitura de RFC/manual/código-fonte · debugging · método científico · laboratório (virtualização, snapshots, redes isoladas) · escrita técnica · inglês técnico. → já coberto por [metodo-de-estudo](metodo-de-estudo.md).
+Terminal Linux/Windows · Git/GitHub · Markdown · leitura de RFC/manual/código-fonte · debugging · método científico · laboratório (virtualização, snapshots, redes isoladas) · escrita técnica · inglês técnico. → já coberto por [aprender-a-aprender (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md) e pelas Etapas 0 e 1 do mapa.
 
 ### Matemática (profunda)
 Básica → Álgebra → Geometria/Trigonometria → Discreta → Teoria dos Números → Cálculo → Álgebra Linear → Probabilidade/Estatística → (depois) Análise Real, Álgebra Abstrata, Topologia, Análise Complexa, EDO, Teoria da Informação, Teoria da Computação. → [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md).

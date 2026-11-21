@@ -12,8 +12,8 @@ MD = """
 
 | # | Assunto | Área | Conceitos | Nível | Depende de | Arquivo |
 |---|---|---|---|---|---|---|
-| 1.1 | Base | x | x | 1 | — | a.md |
-| 1.2 | ↻ Meio | x | x | 1 | 1.1, física T1 | b.md |
+| 1.1 | Base | x | x | 1 | — | 📘 [a](assuntos/a.md) |
+| 1.2 | ↻ Meio | x | x | 1 | 1.1, física T1 | 📝 |
 
 ## H7
 
@@ -33,7 +33,9 @@ class TestMapa(unittest.TestCase):
 
     def test_le_tabelas_de_formatos_diferentes(self):
         self.assertEqual(set(self.a), {"1.1", "1.2", "H7.1"})
-        self.assertEqual(self.a["1.2"], {"titulo": "Meio", "depende": ["1.1"]})
+        self.assertEqual(self.a["1.2"], {"titulo": "Meio", "depende": ["1.1"], "escrito": False, "arquivo": None})
+        self.assertEqual((self.a["1.1"]["escrito"], self.a["1.1"]["arquivo"]), (True, "assuntos/a.md"))
+        self.assertFalse(self.a["H7.1"]["escrito"], "horizonte não tem coluna Arquivo")
         self.assertEqual(self.a["H7.1"]["depende"], ["1.2"])
 
     def test_assunto_inexistente_falha(self):
@@ -60,6 +62,12 @@ class TestMapa(unittest.TestCase):
         a = json.loads(mapa.RETRATO.read_text(encoding="utf-8"))["assuntos"]
         self.assertEqual(mapa.conferir(c, a), [])
         self.assertEqual(len([m for m in c["modulos"] if m["etapa"] is None]), 2)  # só os de física
+
+    def test_cobertura(self):
+        c = mapa.cobertura({"modulos": [mod("base", "1.1")]}, self.a)
+        self.assertEqual((c["total"], c["com_modulo"], c["escritos"], c["escritos_sem_modulo"]), (3, 1, 1, []))
+        c = mapa.cobertura({"modulos": [mod("topo", "H7.1")]}, self.a)
+        self.assertEqual(c["escritos_sem_modulo"], ["1.1"])
 
     def test_aulas_json_concorda_com_etapa(self):
         c = {m["id"]: m["etapa"] for m in json.loads(mapa.CURRICULO.read_text(encoding="utf-8"))["modulos"]}

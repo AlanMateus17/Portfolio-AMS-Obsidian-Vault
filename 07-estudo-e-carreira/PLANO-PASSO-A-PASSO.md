@@ -2,7 +2,7 @@
 tags: [estudo, rotina, passo-a-passo, portfolio-ams]
 tipo: plano
 status: ativo
-atualizado: 2026-11-17
+atualizado: 2026-11-21
 fonte-unica: true
 ---
 
@@ -52,7 +52,7 @@ A âncora é simples e à prova de TDAH: **toda manhã, 6h–8h, é estudo**, an
 
 ## PARTE 2 — COMO ESTUDAR (o seu método completo, do Professor)
 
-Detalhe inteiro em [metodo-de-estudo](metodo-de-estudo.md) e no `docs/professor/metodo.md` do dev-setup. Resumo fiel:
+Detalhe inteiro em [aprender-a-aprender (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md) e no `docs/professor/metodo.md` do dev-setup. Resumo fiel:
 
 ### 2.1 O 20/80 em DUAS passadas (o princípio que rege o plano todo)
 Cada tecnologia e cada tema tem uma **profundidade calibrada** decidida antes:
@@ -115,15 +115,16 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 
 ### 🟢 TRIMESTRE 1 — Fundamentos viram o primeiro dinheiro (nov/26–jan/27)
 
-> **Calendário real:** o estudo começou em **17/11/2026**. Cada mês abaixo anda ~2 semanas para frente (Mês 1 = 17/11 a 13/12, Mês 2 = 14/12 a ~10/01, e assim por diante). Os nomes dos meses ficam como referência.
+> **Calendário real (revisto em 21/11/2026):** o plano previa começar em 17/11; o estudo começa de fato em **23/11/2026**, com o setup de pé. O Mês 1 ganhou uma semana (o 0.1 e o 0.2 têm uma semana só deles): **Mês 1 = 23/11 a 27/12, Mês 2 = 28/12 a ~24/01**, e assim por diante. Os nomes dos meses ficam como referência.
 
 #### Mês 1 (nov) — Setup + lógica + TypeScript do zero
 - **Foco:** deixar a máquina pronta, **aprender a operar o setup** e começar a programar de verdade em TS.
 - **Passo a passo (semana a semana; o dia a dia está no [Cartão](../CARTAO-voce-esta-aqui.md)):**
-  - **Semana 1 (17–23/11) · Etapa 0:** como o computador funciona e representação de dados (0.4, 0.5) + lógica de programação no TS Playground com os 3 exercícios, **sem IA** (0.6) + Matemática Cap. 1, lógica (0.2).
-  - **Semana 2 (24–30/11) · Etapas 0 → 1, setup instalado:** Matemática Cap. 2, conjuntos (0.3) + sistema operacional essencial e WSL2 (1.1, 1.2) + `s-terminal` (1.3) + Akita `b-aprender`.
-  - **Semana 3 (01–07/12) · Etapa 1:** criptografia essencial (1.4) + `s-git` (1.5) + `s-segredos` (1.6) + `s-backup` (1.7) + Akita `b-computador`.
-  - **Semana 4 (08–13/12) · Etapas 1 → 2:** `s-docker`, `s-just`, `s-nucleo`, `s-ia-segura` (1.8–1.10) + TypeScript de verdade no terminal com testes (2.1, 2.4) + refazer os 3 exercícios de cabeça, agora com testes (prova do mês).
+  - **Semana 1 (23–29/11) · Etapa 0:** 0.1 Aprender a aprender e 0.2 Linguagem matemática e lógica (VHSlins Cap. 1), até o fim, com ficha, nota e colheita + Akita `b-aprender` + setup de pé na segunda.
+  - **Semana 2 (30/11–06/12) · Etapa 0:** conjuntos (0.3, VHSlins Cap. 2) + como o computador funciona e representação de dados (0.4, 0.5, Petzold), cada um quando o arquivo estiver escrito e conferido.
+  - **Semana 3 (07–13/12) · Etapas 0 → 1:** lógica de programação no TS Playground com os 3 exercícios, **sem IA** (0.6) + ler documentação (0.7) + sistema operacional essencial, WSL2 e `s-terminal` (1.1 a 1.3) + Akita `b-computador`.
+  - **Semana 4 (14–20/12) · Etapa 1:** criptografia essencial (1.4) + `s-git` (1.5, nasce o repo `logica-ts`) + `s-segredos` (1.6) + `s-backup` (1.7).
+  - **Semana 5 (21–27/12, curta por causa do Natal) · Etapas 1 → 2:** `s-docker`, `s-just`, `s-nucleo`, `s-ia-segura` (1.8–1.10) + TypeScript de verdade no terminal com testes (2.1, 2.4) + refazer os 3 exercícios de cabeça, agora com testes (prova do mês).
 - **Recursos:** [TS Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) · [SQLBolt](https://sqlbolt.com/) · [roadmap.sh/typescript](https://roadmap.sh/typescript).
 - **Entregável:** ambiente reproduzível (`setup-dev.sh`) + repositório de exercícios de lógica em TS + começo de 1 site simples. **Renda:** primeiras aulas particulares.
 
@@ -304,5 +305,5 @@ Se um mês atrasar, **não empilha**: termina o ativo em curso antes de começar
 ---
 
 ## 🔗 Trilhas com o detalhe profundo
-- [trilha-engenharia-software](trilha-engenharia-software.md) · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) · [trilha-go-ferramentas](trilha-go-ferramentas.md) · [trilha-dados-ia](trilha-dados-ia.md) · [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [trilha-financas-economia](trilha-financas-economia.md) · [ingles-espanhol-integrado](ingles-espanhol-integrado.md) · [metodo-de-estudo](metodo-de-estudo.md)
+- [trilha-engenharia-software](trilha-engenharia-software.md) · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) · [trilha-go-ferramentas](trilha-go-ferramentas.md) · [trilha-dados-ia](trilha-dados-ia.md) · [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [trilha-financas-economia](trilha-financas-economia.md) · [ingles-espanhol-integrado](ingles-espanhol-integrado.md) · [aprender-a-aprender (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md)
 - Plano e stack: [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md) · [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md)

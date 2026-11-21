@@ -61,7 +61,7 @@ Estimativas são projeção, não medição. Do Passo 3-4 em diante, recalibre c
 ```
 1. Livro (papel) → 2. TypeScript → 3. Python → 4. Sistema real → 5. Ficha de aula
 ```
-Expressar a mesma ideia de 4 jeitos = entendeu, não decorou. Nem todo tópico tem Etapa 4 (ex.: Números Complexos) — use o loop completo só nos marcados com conexão real em [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md).
+Expressar a mesma ideia de 4 jeitos = entendeu, não decorou. Nem todo tópico tem Etapa 4 (ex.: Números Complexos) — use o loop completo só nos marcados com conexão real em [matematica-e-desenvolvimento-integrado](../07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md).
 
 **Exemplo — "E"/conjunção:** Etapa 1 tabela-verdade · Etapa 2 `estudei && dormiBem` em TypeScript · Etapa 3 mesmo em Python · Etapa 4 `if (produto.estoque > 0 && cliente.ativo && !pedido.cancelado)` no AM Gestão · Etapa 5 vira ficha.
 
@@ -101,7 +101,7 @@ Cada User Story do EPIC-01 ganha a Task "produzir a ficha dupla", logo após os 
 ---
 
 ## 🔗 Relacionados
-- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md) · [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md) · [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) · [matematica-e-desenvolvimento-integrado](matematica-e-desenvolvimento-integrado.md) · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md)
+- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](../PLANO-UNICO-AMtech.md) · [00-catalogo-progresso](../09-material-producao-simultanea/00-catalogo-progresso.md) · [EPIC-01-backlog-passo1-fundamentos](EPIC-01-backlog-passo1-fundamentos.md) · [matematica-e-desenvolvimento-integrado](../07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) · [curriculo-dev-senior-completo](../07-estudo-e-carreira/curriculo-dev-senior-completo.md)
 
 ---
 

@@ -62,7 +62,7 @@ atualizado: 2026-10-26
 - [ ] **Setup — Diagnóstico:** rodar o `RODAR-DIAGNOSTICO.cmd` (só lê o notebook). *Pronto quando:* você tem o relatório `diagnostico.md`.
 - [ ] **Setup — Senhas:** instalar o KeePassXC e começar a passar as contas para ele, 5 por semana. *Pronto quando:* e-mail principal e banco estão no cofre, com 2FA.
 - [ ] **Finanças:** lançar no módulo Financeiro (ou planilha) os gastos fixos (R$ 2.045) e as parcelas do cartão. *Pronto quando:* você sabe quanto sobra por mês.
-- [ ] **Estudo:** abrir o [EPIC-01](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md) e fazer a primeira User Story do **Passo 1** (lógica + matemática).
+- [ ] **Estudo:** abrir o [CARTÃO](CARTAO-voce-esta-aqui.md) e fazer a próxima linha sem [x] (Etapa 0 do mapa: 0.1 e 0.2).
 - [ ] **Renda:** mandar mensagem para contatos e pais de alunos oferecendo **aulas particulares** e **manutenção de computador** (formatação, limpeza, troca por SSD). *Pronto quando:* a mensagem saiu.
 
 ### Etapa 1 — Novembro e dezembro de 2026: primeiros clientes

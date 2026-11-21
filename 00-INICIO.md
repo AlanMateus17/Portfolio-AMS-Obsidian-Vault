@@ -11,7 +11,7 @@ tipo: home
 > - **[PLANO ÚNICO](PLANO-UNICO-AMtech.md)** — o quê e por quê (fonte da verdade)
 > - **[PLANO PASSO A PASSO + ROTINA](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md)** — quando e como estudar, dia a dia
 > - [stack-tecnologica](05-stack-tecnologica/stack-tecnologica.md) — com o quê · [Guia do Iniciante](00-GUIA-DO-INICIANTE.md) · [Glossário](00-GLOSSARIO.md)
-> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · [método do Professor](07-estudo-e-carreira/metodo-de-estudo.md)
+> - **O que estudar hoje:** `cd ~/dev/dev-setup && just professor hoje` · [método do Professor](11-setup-dev-setup/docs/professor/metodo.md)
 
 ---
 
@@ -28,10 +28,10 @@ tipo: home
 - [Pasta do dev-setup](11-setup-dev-setup/00-INDICE-DO-SETUP.md) — documentos, fluxogramas, roteiro, páginas e scripts (espelho do repo `dev-setup`)
 
 ## 📚 Estudo e Carreira
-- 👉 **[PLANO PASSO A PASSO + ROTINA](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md)** ⭐ · [EPIC-01 — tarefas de agora](07-estudo-e-carreira/EPIC-01-backlog-passo1-fundamentos.md)
+- 👉 **[PLANO PASSO A PASSO + ROTINA](07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md)** ⭐ · [CARTÃO — o que fazer hoje](CARTAO-voce-esta-aqui.md)
 - **Trilhas ativas:** [🏗️ Engenharia de Software](07-estudo-e-carreira/trilha-engenharia-software.md) · [🧭 Currículo Dev Sênior](07-estudo-e-carreira/curriculo-dev-senior-completo.md) · [🛠️ Go (ferramentas)](07-estudo-e-carreira/trilha-go-ferramentas.md) · [🤖 Dados e IA](07-estudo-e-carreira/trilha-dados-ia.md) · [💹 Finanças e Economia](07-estudo-e-carreira/trilha-financas-economia.md) · [🔧 Robótica e IoT](07-estudo-e-carreira/trilha-robotica-iot.md) · [🐧 Linux/Arch](07-estudo-e-carreira/trilha-linux-arch-profissional.md) · [École 42](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md)
 - **Paralelas / fila:** [🎓 Formação acadêmica](07-estudo-e-carreira/formacao-academica.md) · [🌐 Redes](07-estudo-e-carreira/trilha-de-redes.md) · [🛡️ Segurança ofensiva](07-estudo-e-carreira/roadmap-seguranca-ofensiva-completo.md)
-- **Base:** [Matemática + dev](07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) · [Inglês e espanhol](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Método de estudo](07-estudo-e-carreira/metodo-de-estudo.md) · [Método de idiomas](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Integração 42 + Akita](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [Biblioteca de recursos](07-estudo-e-carreira/biblioteca-recursos-por-passo.md)
+- **Base:** [Matemática + dev](07-estudo-e-carreira/matematica-e-desenvolvimento-integrado.md) · [Inglês e espanhol](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Método de estudo (0.1 do mapa)](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/assuntos/00-aprender-a-aprender/aprender-a-aprender.md) · [Método de idiomas](07-estudo-e-carreira/ingles-espanhol-integrado.md) · [Integração 42 + Akita](07-estudo-e-carreira/trilha-42-circles-oficial-verificado.md) · [Biblioteca de recursos](07-estudo-e-carreira/biblioteca-recursos-por-passo.md)
 - **Sênior:** [Perfil sênior — auditoria](07-estudo-e-carreira/curriculo-dev-senior-completo.md) · [Horizonte longo (CC, SO, compiladores)](07-estudo-e-carreira/trilha-linux-arch-profissional.md)
 
 ## 1️⃣ Planejamento Geral

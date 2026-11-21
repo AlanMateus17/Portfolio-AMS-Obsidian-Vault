@@ -5,6 +5,8 @@ status: novo
 atualizado: 2026-10-26
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (dados e IA: 4.13, 4.14, 5.15, 5.16, a Etapa 7 e o horizonte H4); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🤖 Trilha de Dados e Inteligência Artificial — Do Python ao Treino dos Próprios Modelos
 
 > **Em palavras simples:** é o caminho para **criar inteligência artificial**, não só usar. Começa por Python e matemática, passa por programas que aprendem com exemplos, e termina com você treinando um modelo pequeno do zero e ajustando um modelo maior com o seu próprio material.

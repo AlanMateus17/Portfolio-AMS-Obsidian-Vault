@@ -172,11 +172,11 @@ feito +ids:
 progresso empresa="":
     python3 tools/nucleo/agenda.py progresso {{ if empresa != "" { "--empresa " + empresa } else { "" } }}
 
-# Professor: just professor hoje | trilha | aula ID | praticei ID | prova ID | corrigir ID | ensinei ID | cartoes | ferramenta BLOCO
+# Professor: just professor hoje | trilha | aula ID | praticei ID | prova ID | corrigir ID | nota ID NOTA (sem IA, pelo gabarito do mapa) | ensinei ID | cartoes | ferramenta BLOCO
 professor *args:
     python3 tools/professor/professor.py {{args}}
 
-# Professor × mapa-de-estudo: regrava o retrato do MAPA.md e confere (campo etapa de cada módulo)
+# Professor × mapa-de-estudo: regrava o retrato do MAPA.md (pré-requisitos, assuntos escritos 📘 e caminho do arquivo) e confere a ligação e a cobertura
 professor-mapa md="~/dev/mapa-de-estudo/MAPA.md":
     python3 tools/professor/mapa.py atualizar {{md}} && python3 tools/professor/mapa.py conferir
 

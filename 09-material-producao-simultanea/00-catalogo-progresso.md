@@ -35,18 +35,18 @@ status: novo
 ## Como preencher uma linha nova
 
 1. Ao **começar** a codificar o "Desenvolver" de um Passo: crie a pasta local (`C:\dev\aura-estudos\` pra exercício, `C:\dev\aura-workspace\` pra sistema real — convenção completa em [github-estrutura-profissional-autoridade](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) seção 1.5) e já preencha a coluna "Código" da linha
-2. Ao **fechar** o bloco, seguindo o Protocolo de Fim de Bloco do [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md): salve a Ficha Dupla em `fichas-duplas/` e o Registro de Entrevista em `registros-entrevista/` (mesmo nome de arquivo pros dois, pra ficar óbvio que são o par um do outro) e complete as colunas restantes da mesma linha
+2. Ao **fechar** o bloco, seguindo o Protocolo de Fim de Bloco do [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md): salve a Ficha Dupla em `fichas-duplas/` e o Registro de Entrevista em `registros-entrevista/` (mesmo nome de arquivo pros dois, pra ficar óbvio que são o par um do outro) e complete as colunas restantes da mesma linha
 3. Sistema real só vira repositório novo no GitHub quando o primeiro commit estiver pronto pra subir — regra já registrada em [github-estrutura-profissional-autoridade](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) seção 2, não muda aqui
 
 ## Quando já tiver ~10-15 linhas
 
-- As Fichas Duplas viram a primeira apostila piloto (ver [metodo-de-estudo](../07-estudo-e-carreira/metodo-de-estudo.md))
-- Os Registros de Entrevista viram o banco de respostas pra `perfil-senior-completo-auditoria` — revise-os juntos antes de qualquer entrevista real, não estude do zero na hora
+- As Fichas Duplas viram a primeira apostila piloto (ver [metodo-de-estudo, histórico](../99-arquivo/metodo-de-estudo.md); hoje a ficha é a do assunto: `just ficha`)
+- Os Registros de Entrevista viram o banco de respostas do Recrutador (`just recrutador`) e do `curriculo-dev-senior-completo` — revise-os juntos antes de qualquer entrevista real, não estude do zero na hora
 
 ---
 
 ## 🔗 Documentos relacionados
-- [metodo-de-estudo](../07-estudo-e-carreira/metodo-de-estudo.md) — o método completo por trás da Ficha Dupla e do Registro de Entrevista
+- [metodo-de-estudo (histórico)](../99-arquivo/metodo-de-estudo.md) — o método completo por trás da Ficha Dupla e do Registro de Entrevista
 - [github-estrutura-profissional-autoridade](../06-execucao-e-desenvolvimento/github-estrutura-profissional-autoridade.md) — a convenção completa de pasta local, repositório e Organization
-- [00-SUMARIO-UNICO-SEQUENCIA-DE-ESTUDO](PLANO-UNICO-AMtech.md) — a sequência de Passos que gera cada linha deste catálogo
-- [perfil-senior-completo-auditoria](../07-estudo-e-carreira/perfil-senior-completo-auditoria.md) — o que a entrevista de verdade cobra, pra calibrar o Registro de Entrevista
+- [PLANO-UNICO-AMtech](../PLANO-UNICO-AMtech.md) — a sequência de Passos que gera cada linha deste catálogo
+- [curriculo-dev-senior-completo](../07-estudo-e-carreira/curriculo-dev-senior-completo.md) (absorveu o antigo perfil-senior) — o que a entrevista de verdade cobra, pra calibrar o Registro de Entrevista

@@ -53,7 +53,7 @@ Os testes passam: `just check` verde, 14 testes em `tools/remoto`, simulação d
 
 ### A.4 Estado em 11/11/2026, 20h46
 
-- **PR #4 aberto, sem conflito e com os testes passando, esperando o merge do Alan.** Se ainda não estiver na `main`, peça a ele (pode ser pelo app do GitHub). Não faça o merge você.
+- **PR #4: já está na `main` (merge em 12/11/2026).** Nada a fazer; só confira com `git pull` que a cópia do notebook está em dia.
 - O que já está feito no notebook **não está confirmado**. Por um registro de 06/11, as fases 0, 3, 4 e 5 estavam feitas, além do backup inicial, do Windows Update, do 2FA no GitHub e do KeePassXC instalado. Confira tudo pelo diagnóstico e pela ficha.
 
 ---
