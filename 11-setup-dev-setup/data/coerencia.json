@@ -1,6 +1,6 @@
 {
   "_comment": "O plano atual numa página só e os termos que ficaram velhos. tools/coerencia/coerencia.py procura esses termos em todos os arquivos de texto dos seus repositórios e diz, arquivo por arquivo, o que atualizar; com --corrigir troca sozinho o que tem troca segura. Mudou uma decisão? Atualize este arquivo primeiro e rode just coerencia.",
-  "versao": "2026-11-20",
+  "versao": "2026-11-21",
   "objetivo": "Ser desenvolvedor sênior que cria IA e entende de dinheiro, com o Grupo AMtech Digital como veículo: todo estudo constrói um ativo que gera renda e vira portfólio.",
   "decisoes": [
     "Stack: TypeScript + Python + SQL; .NET/C# é carta de reserva (ADR 0017).",
@@ -8,7 +8,8 @@
     "6 empresas: AMtech Software, Instituto AMS Silva e AMtech Mídia (ativas); Editora AMS Silva (pausada); AMtech Maker e AM Logística (software primeiro, empresa depois).",
     "Rendas: só passivas nas ondas; onda 0 (agora, máximo 4) = mini-curso de Lógica, canais sem rosto, planilha do AM Gestão e catálogo do HTML.",
     "Canais: Primer Code, Bancada Dev e o canal de finanças (nome a definir).",
-    "Fora do plano: restaurantes próprios, mercadinho, máquina de lanches, revenda de veículos e revendas de usados."
+    "Fora do plano: restaurantes próprios, mercadinho, máquina de lanches, revenda de veículos e revendas de usados.",
+    "Estudo: a ordem é a do mapa-de-estudo; o Professor só libera assunto escrito e conferido (📘) e com os pré-requisitos do mapa já aprovados (ADR 0018, v2.40)."
   ],
   "ignorar": [
     "docs/adr/**",
@@ -136,6 +137,20 @@
       "padrao": "Plano Mestre|Sumário Único|Plano Unificado|fontes-de-renda-completas",
       "motivo": "o PLANO-UNICO substituiu os planos antigos (13/11)",
       "sugestao": "apontar para PLANO-UNICO-AMtech.md ou para o 99-arquivo"
+    },
+    {
+      "id": "rotulo-plano-antigo",
+      "nivel": "erro",
+      "padrao": "\\[00-(SUMARIO-UNICO|PLANO-UNIFICADO|PLANO-MESTRE)[^\\]]*\\]",
+      "troca": "[PLANO-UNICO-AMtech]",
+      "motivo": "o Sumário Único, o Plano Unificado e o Plano Mestre viraram o PLANO-UNICO (13/11); o link já aponta para ele, só o rótulo era antigo"
+    },
+    {
+      "id": "ensino-csharp",
+      "nivel": "erro",
+      "padrao": "→ em C# →|em C# → em TypeScript",
+      "sugestao": "a mesma ideia de 4 jeitos é ideia pura → TypeScript → Python → sistema real (ADR 0017)",
+      "motivo": "C# saiu do centro (ADR 0017): os exemplos de estudo são em TypeScript e Python"
     }
   ],
   "permitir_linhas": "(saíram|saiu|sai|saem) do plano|fora do plano|[Dd]escartad|no lugar d[aoe]s? |\\bex-|vem d[oa] |virou|viraram|era o |antes chamad|acabou|[Ee]m vez d|melhor que|arquivad|[Ii]mpério|antig[oa]s?\\b|não stack fixa|[Ss]ubstitu|99-arquivo"

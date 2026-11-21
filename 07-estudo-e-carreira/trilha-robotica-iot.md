@@ -5,6 +5,8 @@ status: ativo-parcial
 atualizado: 2026-10-26
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (robótica e IoT: 4.15, 7.18, H1.8 e H7.1 a H7.2); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🤖 Trilha de Robótica e IoT
 
 > **Em palavras simples:** robótica e IoT são placas pequenas (Arduino, ESP32, Raspberry Pi) com sensores e motores, ligadas à internet. Você começa pelo que usa na escola e, mais tarde, monta casa inteligente, robôs e produtos para vender.

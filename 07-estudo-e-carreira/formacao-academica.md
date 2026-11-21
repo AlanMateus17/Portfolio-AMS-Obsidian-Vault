@@ -5,6 +5,8 @@ status: ativo
 atualizado: 2026-10-26
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (formação formal: H7.8); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🎓 Formação — Diplomas, Certificações e o Que Fica Só no Autodidata
 
 > **Em palavras simples:** aqui está o que você vai ter de **diploma** (faculdades), de **certificado** (provas do mercado de investimentos) e o que vai aprender **sozinho**. Também diz quais certificados a lei exige para recomendar investimentos e criar fundos.

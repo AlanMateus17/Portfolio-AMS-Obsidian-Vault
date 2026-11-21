@@ -362,7 +362,7 @@
    ]
   },
   {
-   "id": "o-csharp",
+   "id": "o-typescript",
    "trilha": "oficio",
    "trimestre": 1,
    "etapa": "2.1",
@@ -414,7 +414,7 @@
    ]
   },
   {
-   "id": "o-dotnet",
+   "id": "o-ts-projeto",
    "trilha": "oficio",
    "trimestre": 1,
    "etapa": "4.8",
@@ -425,7 +425,7 @@
     "Rodar testes (Vitest) e ler a cobertura"
    ],
    "prereq": [
-    "o-csharp",
+    "o-typescript",
     "s-git"
    ],
    "pratica": "Montar o esqueleto do módulo Financeiro do AM Gestão com um teste passando no CI.",

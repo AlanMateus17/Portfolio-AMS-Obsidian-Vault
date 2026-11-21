@@ -261,13 +261,13 @@ flowchart LR
 |---|---|---|---|
 | [Armazenamento de arquivos (Blob/R2)](#blob) | Remoto · precisa de conta | Fotos de produtos, anexos e PDFs dos sistemas AM fora do banco de dados. | passo 42.4 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | [E-mail transacional (Resend, SES…)](#tmail) | Remoto · precisa de conta | E-mails automáticos dos sistemas: confirmação de conta, senha, recibo. | passo 42.5 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante); passo 45.2 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) |
-| [SonarQube Cloud](#sonar) | Remoto · precisa de conta | Nota de qualidade e segurança do código a cada PR. Grátis para repositório público; recrutador vê o selo. | passo 41.5 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| [SonarQube Cloud](#sonar) | Remoto · precisa de conta | Nota de qualidade e segurança do código a cada PR. Grátis para repositório público; recrutador vê o selo. | passo 41.5 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | [Projects · ADRs · MkDocs](#ghproj) | Remoto | GitHub Projects espelhando o EPIC-01, decisões de arquitetura registradas e documentação publicada no Pages. | passo 5.5 · Semana 2 · nov/2026 |
 | [Dependabot + CodeQL](#dbot) | Remoto | Dependabot atualiza pacotes vulneráveis; CodeQL procura falhas no seu código. Grátis em repositório público. | passo 5.3 · Semana 2 · nov/2026 |
 | [Google Cloud](#gcp) | Remoto · precisa de conta · futuro | Terceira nuvem: só o básico, quando um projeto de IA ou dados pedir. | passo 55.5 · 2028 |
 | [GitHub](#gh) | Remoto · precisa de conta | Código, vault, ensino-ti e a org grupo-amtech-digital. É também o seu portfólio. | passo 2.7 · Semana 1 · out/2026 (o e-mail e as críticas); o resto, 5 contas por semana até dez/2026; passo 5.1 · Semana 2 · nov/2026; passo 5.4 · Semana 2 · nov/2026; passo 24.8 · Nov/2026 a out/2027, revisão no fim de cada trimestre |
 | [GitHub Actions](#gha) | Remoto | CI/CD: build, testes, segurança e deploy. | passo 5.2 · Semana 2 · nov/2026; passo 39.1 · Semana 11 · jan/2027 |
-| [GHCR (imagens)](#ghcr) | Remoto | Registro das imagens Docker das APIs. | passo 41.6 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP |
+| [GHCR (imagens)](#ghcr) | Remoto | Registro das imagens Docker das APIs. | passo 41.6 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP |
 | [GitHub Pages](#ghp) | Remoto | Hospeda site pessoal, blog e Catálogo do HTML. | passo 36.7 · Semanas 6 e 7 · dez/2026 |
 | [Cloudflare (DNS, Pages, e-mail)](#cf) | Remoto · precisa de conta | DNS, HTTPS, proteção, hospedagem estática dos sites comerciais e redirecionamento de e-mail do domínio. O Cloudflare Tunnel leva os webhooks de venda até o n8n sem abrir portas em casa. | passo 28.4 · Semana 6 · nov/2026 a dez/2026; passo 28.6 · Semana 6 · nov/2026 a dez/2026; passo 28.7 · Semana 6 · nov/2026 a dez/2026; passo 36.3 · Semanas 6 e 7 · dez/2026; passo 36.8 · Semanas 6 e 7 · dez/2026; passo 38.1 · Semana 11 · jan/2027; passo 42.6 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
 | [Vercel](#vercel) | Remoto · precisa de conta | Frontends Next.js. O plano grátis é para uso pessoal e não comercial; confira os termos antes de pôr venda nele. | passo 42.6 · Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) |
@@ -331,7 +331,7 @@ E-mails automáticos dos sistemas: confirmação de conta, senha, recibo.
 
 Nota de qualidade e segurança do código a cada PR. Grátis para repositório público; recrutador vê o selo.
 
-**Quando entra:** passo 41.5 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.5 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|
@@ -450,7 +450,7 @@ CI/CD: build, testes, segurança e deploy.
 
 Registro das imagens Docker das APIs.
 
-**Quando entra:** passo 41.6 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 41.6 · Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

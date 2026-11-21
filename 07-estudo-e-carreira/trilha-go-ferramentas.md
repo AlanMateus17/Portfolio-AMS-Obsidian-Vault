@@ -5,6 +5,8 @@ status: ativo
 atualizado: 2026-11-13
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (Go: 3.12 e 5.8); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # 🛠️ Go para as suas ferramentas — passo a passo
 
 > **Em palavras simples:** Go é a linguagem com que você vai fabricar as **suas próprias ferramentas** — programinhas de linha de comando que automatizam o seu dia (organizar arquivos, gerar relatório, fazer backup, falar com a impressora fiscal). Go gera **um único arquivo executável**, sem instalar nada no computador de ninguém. É isso que faz dela perfeita pra ferramenta.

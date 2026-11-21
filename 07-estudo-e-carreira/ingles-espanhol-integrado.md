@@ -4,6 +4,8 @@ tipo: estudo
 status: completo
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (inglês corre todo dia por baixo das etapas; 0.7 e H7.7 (espanhol depois do B1)); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # Inglês e Espanhol — Integrados ao Desenvolvimento, Não Empilhados
 ### Como estudar os dois idiomas sem que virem mais uma trilha separada competindo pelas mesmas 9h/semana
 

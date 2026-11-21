@@ -39,10 +39,10 @@ Cada módulo do currículo, na ordem em que o Professor ensina, com os posts do 
 - [ ] [SQLite + Kamal: Deploy de Rails sem Drama | Bastidores do The M.Akita Chronicles](https://akitaonrails.com/2026/02/20/sqlite-kamal-deploy-de-rails-sem-drama-bastidores-do-the-m-akita-chronicles/)
 - [ ] [[Akitando] #113 - A Forma Ideal de Projetos Web | Os 12 Fatores](https://akitaonrails.com/2022/01/29/akitando-113-a-forma-ideal-de-projetos-web-os-12-fatores/)
 
-**o-csharp · TypeScript do zero ao confortável: tipos, arrays/map, funções de ordem superior, classes e erros**
+**o-typescript · TypeScript do zero ao confortável: tipos, arrays/map, funções de ordem superior, classes e erros**
 - [ ] [[Akitando] #46 - Gerenciamento de Memória (Parte 2) | Entendendo Back-end para Iniciantes (Parte 6)](https://akitaonrails.com/2019/04/03/akitando-46-gerenciamento-de-memoria-parte-2-entendendo-back-end-para-iniciantes-parte-6/)
 
-**o-dotnet · Projeto TypeScript de verdade: API (Next/NestJS), ORM, testes e configuração**
+**o-ts-projeto · Projeto TypeScript de verdade: API (Next/NestJS), ORM, testes e configuração**
 - [ ] [[Akitando] #130 - Rant: Projetos, TESTES e Estimativa??? | Rated-R](https://akitaonrails.com/2022/10/25/akitando-130-rant-projetos-testes-e-estimativa-rated-r/)
 
 **o-sql · SQL e PostgreSQL: modelar, consultar e não perder dado**

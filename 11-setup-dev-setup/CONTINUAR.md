@@ -2,7 +2,7 @@
 
 > Instalação no notebook feita por outra conta ou conversa: use [docs/implantacao/INSTALACAO-AUTONOMA.md](docs/implantacao/INSTALACAO-AUTONOMA.md).
 
-Cole este arquivo na primeira mensagem de uma conversa nova (ou rode `python3 ~/dev/dev-setup/tools/sessao/contexto.py --inicio | clip.exe`). Decisões do dia a dia vão para o ESTADO.md; este arquivo muda quando algo grande muda. Última revisão: 20/11/2026 (v2.35, realidade pós-13/11).
+Cole este arquivo na primeira mensagem de uma conversa nova (ou rode `python3 ~/dev/dev-setup/tools/sessao/contexto.py --inicio | clip.exe`). Decisões do dia a dia vão para o ESTADO.md; este arquivo muda quando algo grande muda. Última revisão: 21/11/2026 (v2.40: Professor na ordem do mapa).
 
 **Fonte da verdade:** `PLANO-UNICO-AMtech.md` no vault (`~/dev/notas`). Se este arquivo divergir dele, vale o PLANO-UNICO e este arquivo é corrigido. O que fazer hoje: `CARTAO-voce-esta-aqui.md` no vault, até o `just professor hoje` estar de pé.
 
@@ -20,7 +20,7 @@ Cole este arquivo na primeira mensagem de uma conversa nova (ou rode `python3 ~/
 ## 2. Onde está tudo
 - **dev-setup** (este repositório, **público** desde nov/2026): github.com/AlanMateus17/dev-setup; no PC em `~/dev/dev-setup`. Por ser público: nada de segredo, dado pessoal, financeiro ou de aluno aqui; o que é privado fica em `~/.config/amtech`, `~/financas` e no KeePassXC.
 - **Vault do Obsidian** (`~/dev/notas`, repositório Portfolio-AMS-Obsidian-Vault): PLANO-UNICO, CARTÃO, `07-estudo-e-carreira/PLANO-PASSO-A-PASSO.md` (o plano de estudo, ADR 0018). A pasta 11 é espelho do setup e **não se edita à mão** (`just vault-espelho`).
-- **mapa-de-estudo** (público, `~/dev/mapa-de-estudo`): `MAPA.md` com tudo o que se estuda em etapas por pré-requisito (0 a 8 + horizonte H1–H7) e os arquivos de assunto conferidos. Cada módulo do Professor aponta para um assunto do mapa (campo `etapa`; `just professor-mapa` confere).
+- **mapa-de-estudo** (público, `~/dev/mapa-de-estudo`): `MAPA.md` com tudo o que se estuda em etapas por pré-requisito (0 a 8 + horizonte H1–H7) e os arquivos de assunto conferidos. Cada módulo do Professor aponta para um assunto do mapa (campo `etapa`; `just professor-mapa` confere e mostra a cobertura). **A ordem é a do mapa:** o Professor só libera um módulo quando o assunto dele está escrito e conferido (📘) e os assuntos de que ele depende já passaram na prova; quando o assunto está escrito, a aula é o próprio arquivo do mapa (v2.40).
 - Outros repositórios e o status de cada um (ativo, estudo, revisar, arquivar): `data/repos.json`.
 - **Mudou uma decisão?** Primeiro edite `data/coerencia.json` (objetivo, decisões e termos velhos); depois `just coerencia` mostra, em todos os repositórios, o que ficou desatualizado, e `just coerencia --corrigir` troca o que é seguro. O CI do dev-setup falha se algum texto contradisser o plano.
 - **Regra do repositório:** `data/*.json` → geradores → `docs/`. Nunca editar arquivo gerado. Toda mudança: dados ou ferramenta, geradores, testes, `just check` verde, CHANGELOG, linha no ESTADO.md, PR.

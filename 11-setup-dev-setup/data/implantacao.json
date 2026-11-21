@@ -5091,7 +5091,7 @@
      ]
     }
    ],
-   "quando": "Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-dotnet do Professor, hoje um projeto TypeScript) e ganha testes e qualidade até o MVP"
+   "quando": "Trimestre 2 do eixo (fev a abr/2027): o modelo nasce no esqueleto do AM Gestão (módulo o-ts-projeto do Professor: projeto TypeScript) e ganha testes e qualidade até o MVP"
   },
   {
    "id": "f19",

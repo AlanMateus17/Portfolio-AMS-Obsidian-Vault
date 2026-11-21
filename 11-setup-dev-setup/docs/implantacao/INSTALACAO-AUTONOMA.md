@@ -3,7 +3,7 @@
 > **Leia antes** o [CONTEXTO-OUTRA-CONTA.md](CONTEXTO-OUTRA-CONTA.md): o que a conta principal decidiu e tudo o que precisa estar conectado.
 >
 > **Como usar:** abra o Claude Code no notebook do Alan (app do Claude no Windows → aba **Code**, ou o terminal) com a conta que vai fazer a instalação e **cole este arquivo inteiro como primeira mensagem**. Depois que o repositório estiver no notebook, basta dizer: *"Leia docs/implantacao/INSTALACAO-AUTONOMA.md e continue de onde parou."*
-> Versão: v2.28 · 11/11/2026 · prazo: **25/11/2026**.
+> Versão: v2.28 · 11/11/2026 (revisada em 21/11/2026, v2.40) · prazo: **25/11/2026**.
 
 ---
 
@@ -11,7 +11,7 @@
 
 Antes de colar este arquivo, o Alan prepara o terreno. A outra conta não consegue fazer isso por ele.
 
-1. **Merge do PR #4** no GitHub (pelo app do celular serve). Sem ele, este arquivo e o `just ligar` não estão na `main`.
+1. **Repositório em dia:** o PR #4 (`just ligar`) já está na `main` desde 12/11/2026. Se o repositório já estiver clonado no Windows, rode `cd $HOME\dev-setup; git pull` antes de tudo: uma cópia antiga roda o Professor e os comandos de estudo de versões passadas.
 2. **Conta que vai instalar:** plano **Pro ou Max**. O plano grátis não tem Claude Code.
 3. **No notebook, no PowerShell normal (sem administrador, `PS C:\>`), uma linha por vez:**
    - Git e o repositório (o Git abre o navegador uma vez para o login do GitHub):

@@ -4,6 +4,8 @@ tipo: estudo
 status: completo
 ---
 
+> 📚 **Referência, não plano paralelo** (21/11/2026). A ordem de estudo vem do [MAPA](https://github.com/AlanMateus17/mapa-de-estudo/blob/main/MAPA.md) (C e C++ pela École 42: H1.2 e H1.4); o quando, do [PLANO-PASSO-A-PASSO](PLANO-PASSO-A-PASSO.md); o hoje, do [CARTÃO](../CARTAO-voce-esta-aqui.md). Este arquivo guarda o detalhe.
+
 # Trilha 42 — Estrutura Oficial Verificada (25 entregáveis + 5 Exam Rank)
 ### Substitui a versão anterior de "29 entregáveis" — corrigida contra fonte real (repositório de ex-aluno, cruzado com 4 fontes independentes)
 
