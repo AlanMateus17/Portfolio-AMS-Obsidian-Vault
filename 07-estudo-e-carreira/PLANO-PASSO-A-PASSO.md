@@ -128,30 +128,30 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Recursos:** [TS Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) · [SQLBolt](https://sqlbolt.com/) · [roadmap.sh/typescript](https://roadmap.sh/typescript).
 - **Entregável:** ambiente reproduzível (`setup-dev.sh`) + repositório de exercícios de lógica em TS + começo de 1 site simples. **Renda:** primeiras aulas particulares.
 
-#### Mês 2 (dez) — Web (Next.js) + SQL + **Go começa (ferramentas)**
+#### Mês 2 (dez) — Como a web funciona + Next.js + **Go começa (ferramentas)**
 - **Foco:** colocar um site no ar e fabricar sua primeira ferramenta. **Etapas 2 (fim) e 3.**
 - **Passo a passo:**
-  0. **Antes do site (Etapa 2 → 3):** funcional essencial, estruturas de dados básicas e Big-O, debugging, assincronia (2.2–2.6); depois **redes essenciais, HTTP/HTTPS e a jornada de uma requisição** (3.1–3.4), e só então HTML/CSS, JavaScript no navegador e React (3.5–3.7).
-  1. **Next.js + Tailwind:** páginas, componentes, deploy na Vercel.
-  2. **PostgreSQL via Supabase:** criar banco, tabela, consulta do app.
-  3. **Go-1 e Go-2** ([trilha-go-ferramentas](trilha-go-ferramentas.md)): primeiro binário + organizador de arquivos.
-  4. **Git fluente** + GitHub Actions básico (rodar teste a cada push).
-  5. **Finanças F0 (leve):** contabilidade básica — débito/crédito.
-  6. **Trilha R-1 (revisar código de IA):** o site do cliente sai pela esteira do setup (issue → agente → PR); você **revisa cada PR com o checklist** (Parte 4.1) antes do merge.
-- **Recursos:** [Next.js Learn](https://nextjs.org/learn) · [Supabase Docs](https://supabase.com/docs) · [Tour of Go](https://go.dev/tour/).
+  0. **Antes do site (fim da Etapa 2):** funcional essencial, estruturas de dados básicas e Big-O, debugging, assincronia (2.2–2.6) + **matemática de sexta:** porcentagem e juros (2.7) e representações e potências (2.8).
+  1. **Como a web funciona (Etapa 3):** redes essenciais, HTTP/HTTPS, a jornada de uma requisição e diagnóstico de rede (3.1–3.4); só então HTML/CSS, JavaScript no navegador e React (3.5–3.7).
+  2. **Next.js + Tailwind (3.8)** e **deploy na Vercel ou na Hostinger por push (3.10)**. O site ainda não precisa de banco: PostgreSQL é o 4.3, no Mês 3.
+  3. **Go-1 e Go-2 (3.12)** ([trilha-go-ferramentas](trilha-go-ferramentas.md)): primeiro binário + organizador de arquivos.
+  4. **CI/CD essencial (3.9):** GitHub Actions rodando os testes a cada push, com o `just check` como portão.
+  5. **Finanças F0 (leve):** contabilidade essencial, débito e crédito (3.13), e preço de serviço (3.14), que usa o 2.7.
+  6. **Trilha R-1 (3.11, revisar código de IA):** o site do cliente sai pela esteira do setup (issue → agente → PR); você **revisa cada PR com o checklist** (Parte 4.1) antes do merge.
+- **Recursos:** [Next.js Learn](https://nextjs.org/learn) · [Tour of Go](https://go.dev/tour/).
 - **Entregável:** **1 site de cliente no ar (pago)** + 1 CLI em Go que você usa no dia a dia.
 
 #### Mês 3 (jan) — Backend TS + API + banco a fundo + segurança
 - **Foco:** sair do "site" para "sistema" — API, banco sério, segurança. **Etapa 4.**
 - **Passo a passo:**
-  0. **Antes da API:** modelagem relacional e SQL (4.1, 4.2), **POO** e arquitetura em camadas essencial (4.4, 4.6), requisitos (4.5). NestJS só depois de POO.
-  1. **API** em Next/NestJS: rotas, validação com Zod, status corretos.
-  2. **ORM (Prisma/Drizzle):** migrations, relacionamentos, evitar N+1.
-  3. **Segurança (Passo 4):** OWASP Top 10, autenticação, Row-Level Security do Supabase.
-  4. **Testes (Vitest):** primeiro teste de unidade e de API. **Teste antes de pedir código ao agente** (Trilha R-2): você escreve o teste, o agente implementa, o teste decide.
-  5. **IA em TypeScript (IA-T1):** chamar um modelo pela API (Vercel AI SDK), saída estruturada validada com Zod, custo por chamada medido. Exemplo: classificar despesas da planilha do financeiro. **Não precisa de Python.**
-  6. **Robótica (paralelo, sábado):** primeiro protótipo — LED/sensor no Arduino/ESP32.
-- **Recursos:** [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [Prisma Docs](https://www.prisma.io/docs) · [Vitest](https://vitest.dev/guide/).
+  0. **Antes da API:** modelagem relacional e SQL (4.1, 4.2), **PostgreSQL essencial, no Supabase (4.3)**, **POO** e arquitetura em camadas essencial (4.4, 4.6), requisitos (4.5). NestJS só depois de POO.
+  1. **APIs REST e contratos (4.7) e back-end com NestJS (4.8):** rotas, validação com Zod, status corretos.
+  2. **ORM e migrations (4.9, Prisma/Drizzle):** migrations, relacionamentos, evitar N+1.
+  3. **Segurança:** autenticação e autorização (4.10), OWASP Top 10 (4.11) e Row-Level Security do Supabase.
+  4. **Testes de integração e teste antes do código (4.12, Trilha R-2, com Vitest):** você escreve o teste, o agente implementa, o teste decide.
+  5. **Como a IA funciona (4.13)** e **IA em TypeScript (4.14, IA-T1):** chamar um modelo pela API (Vercel AI SDK), saída estruturada validada com Zod, custo por chamada medido. Exemplo: classificar despesas da planilha do financeiro. **Não precisa de Python.**
+  6. **Robótica (paralelo, sábado):** primeiro protótipo no Arduino (4.15), com LED e sensor; usa a física de sábado.
+- **Recursos:** [Supabase Docs](https://supabase.com/docs) · [OWASP Top 10](https://owasp.org/www-project-top-ten/) · [Prisma Docs](https://www.prisma.io/docs) · [Vitest](https://vitest.dev/guide/).
 - **Entregável:** **planilha do financeiro à venda** + esqueleto do AM Gestão com teste no CI + protótipo 1. **Renda:** aulas + site + planilha.
 
 ### 🟡 TRIMESTRE 2 — O produto nasce e roda num cliente (fev–abr/27)
@@ -160,11 +160,11 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Foco:** o coração do produto, com dinheiro correto. **Etapa 5 (5.1–5.10).**
 - **Passo a passo:**
   0. **Antes do Caixa:** concorrência e paralelismo (5.2), depois transações a fundo (5.3).
-  1. **Engenharia financeira (Passo 3/5):** dinheiro em `decimal` nunca `float`; arredondamento; idempotência de pagamento; concorrência otimista.
-  2. **PDV offline:** SQLite local + sincronização quando a conexão volta.
-  3. **Go-5 e Go-6:** servidor HTTP local + **agente fiscal** (impressora ESC/POS).
-  4. **Matemática financeira:** juros, porcentagem aplicada ao PDV.
-  5. **Trilha R-3:** um `CLAUDE.md` por projeto com as regras do AM Gestão (dinheiro, migrations, o que o agente nunca faz), incluindo as regras do Akita aprovadas (AK-0008, AK-0016, AK-0018).
+  1. **Dinheiro no código (5.1) e idempotência e pagamentos (5.4):** `decimal`, nunca `float`; arredondamento; idempotência de pagamento; concorrência otimista. **Ledger de partidas dobradas (5.6)** estudado aqui e aplicado no Financeiro do Mês 5.
+  2. **SQLite e offline (5.7):** PDV com banco local + sincronização quando a conexão volta.
+  3. **Go-3 a Go-6 (5.8)** e **fiscal (5.9):** servidor HTTP local + **agente fiscal** (impressora ESC/POS).
+  4. **Matemática financeira (5.5):** juros compostos, VPL, TIR, SAC e Price, aplicados ao PDV.
+  5. **Trilha R-3 (5.10, especificação para agentes):** um `CLAUDE.md` por projeto com as regras do AM Gestão (dinheiro, migrations, o que o agente nunca faz), incluindo as regras do Akita aprovadas (AK-0008, AK-0016, AK-0018).
 - **Recursos:** [trilha-go-ferramentas](trilha-go-ferramentas.md) Go-5/Go-6 · [curriculo-dev-senior-completo](curriculo-dev-senior-completo.md) (camada banco/testes).
 - **Entregável:** módulo **Caixa** funcionando com impressão real.
 
@@ -172,50 +172,53 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 - **Etapa 5 (5.11–5.17).**
 - **Passo a passo:**
   0. **Antes do servidor e da IA:** Linux administração e SSH (5.11, 5.12) antes do deploy em VPS; vetores essencial (5.15) antes do RAG.
-  1. **Pedidos/Delivery:** PostGIS (geolocalização, rotas).
-  2. **Financeiro:** ledger de partidas dobradas (todo movimento = débito+crédito).
-  3. **Deploy + Docker + CI/CD:** subir o MVP num servidor.
+  1. **Pedidos/Delivery:** geometria e PostGIS (5.14, geolocalização e rotas) e tempo real (5.17) para acompanhar o pedido.
+  2. **Financeiro:** o ledger de partidas dobradas do Mês 4 (5.6) no produto (todo movimento = débito + crédito).
+  3. **Deploy em servidor e os 12 fatores (5.13):** Docker + CI/CD, subir o MVP num servidor.
   4. **SO (paralelo):** Arch como máquina do dia a dia (daily driver).
-  5. **IA-T2 (RAG em TypeScript):** pgvector no próprio Postgres + embeddings; busca "como faço X?" na ajuda do AM Gestão. Primeira feature de IA que um cliente vê.
+  5. **IA-T2 (5.16, RAG em TypeScript):** pgvector no próprio Postgres + embeddings; busca "como faço X?" na ajuda do AM Gestão. Primeira feature de IA que um cliente vê.
 - **Recursos:** [PostGIS](https://postgis.net/documentation/) · [trilha-linux-arch-profissional](trilha-linux-arch-profissional.md).
 - **Entregável:** **MVP (Caixa+Pedidos+Financeiro) rodando em 1 restaurante** que já te procura.
 
 #### Mês 6 (abr) — Produção de verdade: testes + observabilidade
 - **Etapa 6.**
 - **Passo a passo:**
-  1. **Observabilidade (Passo 10):** logs estruturados, métricas, o que quebrou e por quê.
-  2. **Testes de propriedade** para a regra de dinheiro (dispara 100 pagamentos, cobra 1).
-  2b. **Trilha R-4 (avaliar IA):** um conjunto de 20 perguntas reais com resposta esperada para a busca do Mês 5; roda no CI e mostra se a IA piorou depois de cada mudança.
+  1. **Observabilidade (6.1):** logs estruturados, métricas, o que quebrou e por quê; **relato de incidente (6.8)** a cada falha: backup restaurado e rollback testado de verdade.
+  2. **Testes a fundo (6.2):** testes de propriedade para a regra de dinheiro (dispara 100 pagamentos, cobra 1).
+  2a. **Segurança de produção:** modelagem de ameaças (6.4), LGPD e privacidade (6.5), segurança do Linux e da rede (6.6) e DevSecOps (6.7): varredura de dependências e de segredos no CI.
+  2b. **Trilha R-4 (6.3, avaliar IA):** um conjunto de 20 perguntas reais com resposta esperada para a busca do Mês 5; roda no CI e mostra se a IA piorou depois de cada mudança.
   3. **Go (ferramenta 3):** CLI de deploy/monitoramento.
   4. **Inglês Fase B:** documentação técnica só em inglês a partir daqui.
-- **Entregável:** MVP estável + **10 planilhas vendidas** + começo da base de clientes.
+- **Entregável:** MVP estável com alertas, backup restaurado e rollback testado + **10 planilhas vendidas** + começo da base de clientes.
 
 ### 🟠 TRIMESTRE 3 — Dados, Python e os primeiros clientes pagantes (mai–jul/27)
 
 #### Mês 7 (mai) — **Python** começa + dados
 - **Etapa 7 (meses 7–9).** Estatística (7.1) vem antes de pandas; probabilidade e álgebra linear (7.6, 7.7) antes de machine learning.
 - **Passo a passo:**
-  1. **Python do zero→confortável** (reusa a lógica que você já tem de TS): [trilha-dados-ia](trilha-dados-ia.md) IA0.
-  2. **pandas:** analisar os dados reais do AM Gestão (vendas, caixa).
-  3. **SQL avançado:** `GROUP BY`, window functions, índices.
-  4. **Robótica:** protótipo 2 (algo útil para casa/terreno).
+  0. **Matemática:** estatística descritiva (7.1); contagem e probabilidade (7.6) e álgebra linear (7.7) até o fim do Mês 8.
+  1. **Python (7.2) do zero ao confortável** (reusa a lógica que você já tem de TS): [trilha-dados-ia](trilha-dados-ia.md) IA0.
+  2. **Python para dados (7.3, pandas):** analisar os dados reais do AM Gestão (vendas, caixa).
+  3. **SQL avançado e índices (7.4):** `GROUP BY`, window functions, índices. E **estruturas de dados: árvores e grafos (7.5)**.
+  4. **Robótica:** protótipo 2 com ESP32 ou Raspberry Pi (7.18), algo útil para casa ou terreno.
 - **Recursos:** [pandas Getting Started](https://pandas.pydata.org/docs/getting_started/) · [trilha-dados-ia](trilha-dados-ia.md).
 - **Entregável:** **dashboard de dados do próprio produto** (o que vende mais, horário de pico).
 
 #### Mês 8 (jun) — Python + **IA (início)** + tributos
 - **Passo a passo:**
-  1. **scikit-learn:** primeiro modelo simples (previsão de caixa / classificação de itens).
-  2. **Pix / Pix Automático** no produto.
-  3. **Finanças:** tributos de empresa, conciliação.
-  4. **Trilha R-5 (custo de IA):** o roteador do setup decide código, IA local ou IA online por tarefa; medir tokens e custo de cada feature de IA do AM Gestão.
+  1. **Machine learning clássico (7.8, scikit-learn):** primeiro modelo simples (previsão de caixa, classificação de itens).
+  1b. **Back-end em Python (7.9, FastAPI):** um serviço pequeno que entrega o modelo ao AM Gestão.
+  2. **Pix e Pix Automático (7.11)** no produto.
+  3. **Tributação brasileira (7.10):** tributos de empresa, conciliação.
+  4. **Trilha R-5 (7.12, custo e roteamento de IA):** o roteador do setup decide código, IA local ou IA online por tarefa; medir tokens e custo de cada feature de IA do AM Gestão.
 - **Recursos:** [scikit-learn](https://scikit-learn.org/stable/getting_started.html) · [Pix — Banco Central](https://www.bcb.gov.br/estabilidadefinanceira/pix).
 - **Entregável:** **5 clientes pagantes** + 1ª feature de dados no produto.
 
 #### Mês 9 (jul) — **IA de verdade** (RAG/local) + SO internals
 - **Passo a passo:**
-  1. **Ollama + Python:** levar o RAG do Mês 5 para IA local (sem custo por chamada) e virar assistente dentro do AM Gestão.
-  2. **PyTorch (noção):** entender o que há por baixo.
-  3. **SO internals + C/C++ (leve):** processos, memória, arquivos.
+  1. **IA local (7.16, Ollama + Python):** levar o RAG do Mês 5 para IA local (sem custo por chamada) e virar assistente dentro do AM Gestão.
+  2. **Deep learning essencial (7.15, PyTorch em noção):** entender o que há por baixo.
+  3. **Por baixo da máquina:** gerenciamento de memória (7.13), arquitetura de computadores (7.14) e conceitos de SO (7.17): processos, memória e arquivos.
 - **Recursos:** [pgvector](https://github.com/pgvector/pgvector) · [Ollama](https://ollama.com/) · [trilha-dados-ia](trilha-dados-ia.md) IA5–IA7.
 - **Entregável:** assistente/IA rodando no produto (seu diferencial de mercado).
 
@@ -224,24 +227,24 @@ Cada mês tem: **Foco · O que estudar (passo a passo) · Recursos · Exemplo/en
 #### Mês 10 (ago) — Arquitetura + performance + DDD
 - **Etapa 8 (meses 10–12).**
 - **Passo a passo:**
-  1. **SOLID, padrões, Clean Architecture, DDD** (Passos 8/12) — ler *Refactoring* e *DDD*.
-  2. **Performance e escalabilidade.**
-  3. **Go (ferramenta de performance).**
-  4. **Investimentos:** sua metodologia aplicada ao módulo financeiro.
+  1. **POO e SOLID (8.1), padrões de projeto (8.2), código limpo e refatoração (8.3), arquitetura de software (8.4) e DDD (8.5):** ler *Refactoring* e *DDD*.
+  2. **Modelagem e documentação (8.6):** diagramas e ADRs do AM Gestão.
+  3. **Performance e escalabilidade (8.7)** + Go (ferramenta de performance).
+  4. **Finanças corporativas e valuation (8.16)** + a sua metodologia de investimentos aplicada ao módulo financeiro.
 - **Entregável:** refactor do AM Gestão + **system design documentado** (material de entrevista).
 
 #### Mês 11 (set) — Sistemas distribuídos + skills de sênior
 - **Passo a passo:**
-  1. **Cache, filas/outbox, consistência eventual** (ler *Designing Data-Intensive Applications*).
-  2. **Algoritmos para entrevista** + **system design** (explicar um sistema grande em 45 min).
-  3. **Portfólio público em inglês:** README, ADRs e estudos de caso dos seus sistemas.
-  4. **Trilha R-6 (orquestrar agentes):** vários agentes em paralelo no setup (worktrees, revisão automática de PR que trata a descrição como não verificada, regra AK-0017), com você como revisor final.
+  1. **Cache (8.8), mensageria com filas e outbox (8.9) e consistência em sistemas distribuídos (8.10)** (ler *Designing Data-Intensive Applications*).
+  2. **Algoritmos clássicos (8.11)** + **system design (8.12)** + **entrevista técnica (8.14):** explicar um sistema grande em 45 min.
+  3. **Portfólio e GitHub em inglês (8.15):** README, ADRs e estudos de caso dos seus sistemas.
+  4. **Trilha R-6 (8.13, orquestrar agentes):** vários agentes em paralelo no setup (worktrees, revisão automática de PR que trata a descrição como não verificada, regra AK-0017), com você como revisor final.
 - **Entregável:** **portfólio em inglês + registros de entrevista** (recrutador) — pronto para aplicar a vagas, inclusive fora.
 
 #### Mês 12 (out) — AMtech OS + loja online + consolidação
 - **Passo a passo:**
-  1. **AMtech OS:** Linux com o dev-setup embutido — a trilha de SO culmina aqui.
-  2. **Loja online (módulo Vendra)** no AM Gestão.
+  1. **Boot, sistemas de arquivos e o AMtech OS (8.17):** Linux com o dev-setup embutido; a trilha de SO culmina aqui.
+  2. **Loja online** (o 4º módulo do AM Gestão).
   3. **Revisão geral** + entrevistas simuladas (recrutador).
 - **Entregável:** renda **rumo a R$ 7 mil líq./mês** + portfólio completo + **AMtech OS v1**.
 
