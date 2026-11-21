@@ -52,7 +52,7 @@ Se não dá para preencher PRONTO QUANDO, a tarefa não está madura: o pedido c
 
 | Quem | Campos ou funções |
 |---|---|
-| Setup sozinho | CONTEXTO (ripgrep, CONTINUAR.md, ESTADO.md, memória), RESTRIÇÕES (regras já registradas), FORA DO ESCOPO (limite de 3 frentes "agora" na execução), ENTREGÁVEL (padrão por tipo), PREMISSA (pesquisa), MODELO e LUGAR (roteador) |
+| Setup sozinho | CONTEXTO (ripgrep, CONTINUAR.md, ESTADO.md, memória), RESTRIÇÕES (regras já registradas), FORA DO ESCOPO (limite de 4 rendas "agora", onda 0 na execução), ENTREGÁVEL (padrão por tipo), PREMISSA (pesquisa), MODELO e LUGAR (roteador) |
 | Setup sugere, Alan confirma com "ok" | ESCOPO, PRONTO QUANDO, PARA QUE |
 | Só o Alan | Decidir o que importa e quando parar; aprovar o que é público, gasta dinheiro ou fala com cliente; testar no mundo real; vender; julgar o resultado; trazer o conhecimento local que torna o resultado único |
 

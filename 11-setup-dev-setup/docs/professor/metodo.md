@@ -34,7 +34,7 @@ Cada linha diz de onde veio e onde aparece no Professor.
 5. Anote o tempo real.
 6. Só então avance.
 
-**A mesma ideia de 4 jeitos** (o seu loop de 5 etapas, sem a etapa da ficha, que já é o protocolo): a ideia pura → em TypeScript → em Python → no sistema real. Só entra quando faz sentido. Exemplo do seu vault: o "E" lógico vira a tabela-verdade, depois `&&` em C#, depois `&&` em TS, depois o `if (produto.Estoque > 0 && cliente.Ativo)` do AM Kaixara.
+**A mesma ideia de 4 jeitos** (o seu loop de 5 etapas, sem a etapa da ficha, que já é o protocolo): a ideia pura → em TypeScript → em Python → no sistema real. Só entra quando faz sentido. Exemplo do seu vault: o "E" lógico vira a tabela-verdade, depois `&&` em C#, depois `&&` em TS, depois o `if (produto.Estoque > 0 && cliente.Ativo)` do AM Gestão · Caixa.
 
 **Ficha dupla e registro de entrevista** (produção didática simultânea). O mesmo estudo gera dois materiais:
 

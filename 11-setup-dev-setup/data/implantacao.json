@@ -1106,8 +1106,8 @@
   },
   {
    "id": "f-arsenal",
-   "titulo": "Arsenal de rendas: regras e as 3 de agora",
-   "objetivo": "Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.",
+   "titulo": "Arsenal de rendas: regras e as 4 de agora",
+   "objetivo": "No máximo 4 rendas agora (onda 0, só passivas), hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.",
    "quando": "Semana 4 · nov/2026",
    "passos": [
     {
@@ -1128,18 +1128,6 @@
      "tempo_min": 10,
      "fora": "A Rotina fica no Caixa da Casa (artefato), fora do terminal.",
      "blocos": []
-    },
-    {
-     "id": "ar-ia",
-     "titulo": "Cadastro e teste de entrada numa plataforma de avaliação de IA",
-     "quem": "voce",
-     "pronto": "Teste de entrada feito",
-     "tempo_min": 90,
-     "fora": "Cadastro no navegador. Nunca pague para entrar e nunca passe senha a ninguém.",
-     "blocos": [],
-     "ofertas": [
-      "avaliacaoia"
-     ]
     },
     {
      "id": "ar-sites",
@@ -2187,7 +2175,7 @@
      "id": "solo-arquiteto",
      "titulo": "Pedir arquitetura com o pacote de contexto, não com o repositório inteiro",
      "quem": "claude",
-     "pronto": "A resposta usa a stack fixa, cita o que já existe e termina numa primeira fatia de até 4 horas",
+     "pronto": "A resposta usa a stack definida (ADR 0017), cita o que já existe e termina numa primeira fatia de até 4 horas",
      "tempo_min": 15,
      "comando": "cd ~/dev/dev-setup && just arquiteto \"módulo Financeiro do AM Gestão\" > /tmp/pacote.md",
      "nota": "O pacote tem cerca de 400 tokens. Cole no Claude ou use just arquiteto-claude, que manda pelo Claude Code dentro do ai-jail.",
@@ -2723,7 +2711,7 @@
      "pronto": "Ordem confirmada ou ajustada por você em docs/plano-eixo.md",
      "tempo_min": 20,
      "comando": "cd ~/dev/dev-setup && less docs/plano-eixo.md",
-     "nota": "Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 3 frentes \"agora\".",
+     "nota": "Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 4 rendas \"agora\" (onda 0).",
      "decisao": true,
      "empresas": [
       "software"
@@ -5595,7 +5583,7 @@
    "titulo": "Sprint de 14 dias (Estratégia do Halter)",
    "objetivo": "As duas frentes do contexto mestre em 14 dias seguidos: caixa rápido com atendimento omnicanal (Chatwoot) e o MVP do ARCA (Financeiro do AM Gestão em PocketBase e SvelteKit), cada uma validada antes de virar módulo do AM Gestão.",
    "quando": "Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite)",
-   "gatilho": "O recesso começou e uma das 3 rendas de agora já passou no portão",
+   "gatilho": "O recesso começou e uma das 4 rendas de agora já passou no portão",
    "passos": [
     {
      "id": "halter-d1",

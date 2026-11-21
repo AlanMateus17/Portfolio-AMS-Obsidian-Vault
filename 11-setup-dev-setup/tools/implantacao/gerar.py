@@ -98,11 +98,13 @@ def validar(d: dict, eco: dict | None = None) -> list[str]:
     for f in d["fases"]:
         if not f.get("quando", "").strip():
             erros.append(f"fase {f['id']} ({f['titulo']}) sem 'quando'")
-    ofertas = {o["id"] for o in carregar_portfolio()["ofertas"]}
+    todas = carregar_portfolio()["ofertas"]
+    ofertas = {o["id"] for o in todas}
+    descartadas = {o["id"] for o in todas if o.get("veredito") == "descartar"}
     usadas = {o for f in d["fases"] for p in f["passos"] for o in p.get("ofertas", [])}
     for o in sorted(usadas - ofertas):
         erros.append(f"oferta {o} citada no roteiro não existe em data/portfolio.json")
-    for o in sorted(ofertas - usadas):
+    for o in sorted(ofertas - usadas - descartadas):  # descartada não precisa de passo
         erros.append(f"oferta {o} do portfólio sem passo no roteiro: diga quando ela entra")
     if d.get("cobertura"):
         erros.append("'cobertura' não é mais usada: todo bloco entra num passo")

@@ -244,7 +244,7 @@ B · Logística · rampa de 10 meses, começando em 20,0% do alvo.
 |---|---:|
 | Sala de despacho | R$ 1.200 |
 | Contador | R$ 500 |
-| Nuvem, mapas e WhatsApp Business API (AM Rotara) | R$ 450 |
+| Nuvem, mapas e WhatsApp Business API (AM Gestão · Pedidos) | R$ 450 |
 | Seguro de carga e responsabilidade civil | R$ 300 |
 | Telefone e internet | R$ 200 |
 | Marketing B2B | R$ 500 |

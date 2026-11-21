@@ -78,3 +78,4 @@ O pacote de contexto (tools/sessao/contexto.py --resumo) lê as últimas linhas 
 - 2026-11-20: PRs #9 e #10 no ar (merge pedido pelo Alan); v2.36.0: docs/repositorios.md lista todos os repositórios do GitHub por status, gerado do repos.json.
 - 2026-11-20: 6 empresas (Maker e Campo juntos na AMtech Maker), cada uma com produtos principais em componentes e pacotes; vitrines para clientes em docs/vitrines; repositórios por empresa no repos.json; revendas fora.
 - 2026-11-20: v2.38.0: revisão de coerência de todos os textos do dev-setup (stack TS/Python, AM Gestão com módulos, 6 empresas, sequência de 20/11); ADRs, CHANGELOG e ESTADO ficam como histórico.
+- 2026-11-20: v2.39.0: verificador de coerência (data/coerencia.json + just coerencia): todo texto é comparado com o plano a cada atualização; dev-setup 100% alinhado.

@@ -100,7 +100,7 @@ Três verificadores, todos somente leitura, que terminam dizendo "pronto" ou lis
 
 Testado aqui, num Ubuntu 24.04 igual ao do WSL:
 
-- `bootstrap.sh` rodado de verdade duas vezes: instalou .NET 10, fnm, gitleaks, trivy e ai-jail, configurou Git e criou as pastas; na segunda vez não refez nada.
+- `bootstrap.sh` rodado de verdade duas vezes: instalou o SDK do dotnet 10 (hoje só com AMTECH_DOTNET=1, pois é reserva), fnm, gitleaks, trivy e ai-jail, configurou Git e criou as pastas; na segunda vez não refez nada.
 - `verificar.sh`, inclusive a saída em JSON.
 - O banco de métricas com dados de exemplo: lucro, CPA, venda repetida que não duplica, e o usuário do Grafana que só lê.
 - O pipeline de conteúdo com 10 testes automáticos (transcrição, fila, quarentena, nomes repetidos) e uma rodada simulada.

@@ -16,6 +16,7 @@ data/akita/regras.json
 data/aulas.json
 data/biblioteca.json
 data/certificacoes.json
+data/coerencia.json
 data/custos.json
 data/ecossistema.json
 data/empresas.json
@@ -362,6 +363,8 @@ tools/carreira/test_certificacoes.py
 tools/cockpit/cockpit.template.html
 tools/cockpit/gerar.py
 tools/cockpit/test_cockpit.py
+tools/coerencia/coerencia.py
+tools/coerencia/test_coerencia_plano.py
 tools/colher/colher.py
 tools/colher/test_colher.py
 tools/construcao/ifc_resumo.py

@@ -156,7 +156,7 @@ flowchart LR
 | [Klaro! (consentimento LGPD)](#klaro) | Local | Banner de consentimento aberto: Pixel da Meta, tag do Google e demais só disparam depois do aceite. O Umami não usa cookie e fica fora do banner. | passo 40.6 · Semanas 12 a 15 · jan a fev/2027 |
 | [Plausible (reserva do Umami)](#plausible) | Remoto · precisa de conta | Analytics sem cookie, reserva do Umami e painel público para cliente que pedir. | passo 33.11 · Com a primeira página de venda no ar (jan/2027) e por etapas |
 | [BookStack (manuais dos clientes)](#bookstack) | Remoto · precisa de conta | Wiki em livros, capítulos e páginas para os manuais que o cliente lê e o pós-venda aponta. A documentação de dev segue no MkDocs. | passo 32.5 · Dez/2026 a jan/2027 na VM grátis da Oracle, depois da Operação 24 horas; VPS e VM paga quando uma renda pagar |
-| [Astro (sites de conteúdo)](#astro) | Local | Principal dos sites de conteúdo (ADR 0007 e 0008): blog, landing pages, Instituto AMS, Catálogo do HTML. O site pessoal migra do Jekyll para ele; publica no Cloudflare Pages. | passo 23.7 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 36.14 · Semanas 6 e 7 · dez/2026; passo 45.9 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) |
+| [Astro (sites de conteúdo)](#astro) | Local | Principal dos sites de conteúdo (ADR 0007 e 0008): blog, landing pages, Instituto AMS, Catálogo do HTML. O site pessoal migra do Jekyll para ele; publica no Cloudflare Pages. | passo 23.7 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 36.14 · Semanas 6 e 7 · dez/2026; passo 45.9 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) |
 
 <a id="mail"></a>
 
@@ -406,7 +406,7 @@ Wiki em livros, capítulos e páginas para os manuais que o cliente lê e o pós
 
 Principal dos sites de conteúdo (ADR 0007 e 0008): blog, landing pages, Instituto AMS, Catálogo do HTML. O site pessoal migra do Jekyll para ele; publica no Cloudflare Pages.
 
-**Quando entra:** passo 23.7 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 36.14 · Semanas 6 e 7 · dez/2026; passo 45.9 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 3 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
+**Quando entra:** passo 23.7 · Nov/2026 a jan/2027 (no CPF); o CNPJ quando a renda de software passar do ponto de virada; passo 36.14 · Semanas 6 e 7 · dez/2026; passo 45.9 · Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) (começa quando: o recesso começou e uma das 4 rendas de agora já passou no portão) ([roteiro](../implantacao/roteiro.md))
 
 | Direção | Bloco | Camada | O que passa |
 |---|---|---|---|

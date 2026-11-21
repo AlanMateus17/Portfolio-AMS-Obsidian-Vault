@@ -30,7 +30,7 @@ motor-refazer id:
 motor-relatorio:
     python3 tools/motor/motor.py relatorio
 
-# Pacote de contexto para o Claude (só imprime, gasta zero token): just arquiteto "módulo de aporte do AM Rendara"
+# Pacote de contexto para o Claude (só imprime, gasta zero token): just arquiteto "módulo de aporte do AM Gestão · Financeiro"
 arquiteto pedido:
     python3 tools/triagem/triagem.py arquitetar "{{pedido}}"
 
@@ -67,6 +67,7 @@ check:
     python3 tools/softwares/softwares.py --check
     python3 tools/editora/livros.py --check
     python3 tools/empresas/empresas.py --check
+    python3 tools/coerencia/coerencia.py
     python3 tools/kitsites/gerar.py --check
     python3 tools/custos/custos.py --check
     python3 tools/recursos/recursos.py --check
@@ -257,3 +258,9 @@ fila:
 # Vitrine para clientes: copia docs/vitrines/EMPRESA.md como README do repositório público da empresa (ex.: just vitrine software ~/dev/amtech-software)
 vitrine EMPRESA DESTINO:
     test -f docs/vitrines/{{EMPRESA}}.md && test -d {{DESTINO}}/.git && cp docs/vitrines/{{EMPRESA}}.md {{DESTINO}}/README.md && echo "README da vitrine copiado; revise, faça o commit e o push em {{DESTINO}}"
+
+# Coerência com o plano (data/coerencia.json): confere o dev-setup e todos os repositórios em ~/dev e grava ~/dev/COERENCIA.md
+# just coerencia            (só relatório)     just coerencia --corrigir     (troca sozinho o que tem troca segura)
+coerencia *opcao:
+    python3 tools/coerencia/coerencia.py . $(find ~/dev -maxdepth 2 -name .git -type d -printf '%h ' 2>/dev/null) --relatorio ~/dev/COERENCIA.md {{opcao}} || true
+    @echo "Leia ~/dev/COERENCIA.md: arquivo por arquivo, o que atualizar"

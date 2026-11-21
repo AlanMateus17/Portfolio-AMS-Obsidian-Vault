@@ -35,8 +35,9 @@ if grep -qi microsoft /proc/version 2>/dev/null; then r ambiente WSL OK "$(uname
 # Ferramentas
 cmd git git "sudo apt install git"
 cmd "GitHub CLI" gh "bootstrap.sh"
-if command -v dotnet >/dev/null 2>&1 && dotnet --list-sdks 2>/dev/null | grep -q '^10\.'; then r ferramenta ".NET 10 SDK" OK "$(dotnet --list-sdks | grep '^10\.' | tail -1 | cut -d' ' -f1)"
-else r ferramenta ".NET 10 SDK" FALTA "sudo apt install dotnet-sdk-10.0"; fi
+# .NET é carta de reserva (ADR 0017): não é obrigatório.
+if command -v dotnet >/dev/null 2>&1 && dotnet --list-sdks 2>/dev/null | grep -q '^10\.'; then r ferramenta "SDK de reserva (dotnet 10)" OK "$(dotnet --list-sdks | grep '^10\.' | tail -1 | cut -d' ' -f1)" 0
+else r ferramenta "SDK de reserva (dotnet 10)" AVISO "opcional: AMTECH_DOTNET=1 bash scripts/wsl/bootstrap.sh" 0; fi
 if command -v node >/dev/null 2>&1 && [[ "$(node -v | tr -d v | cut -d. -f1)" -ge 22 ]]; then r ferramenta "Node 22+" OK "$(node -v)"
 else r ferramenta "Node 22+" FALTA "mise use -g node@lts"; fi
 cmd "uv (Python)" uv "bootstrap.sh"

@@ -6,16 +6,16 @@ Dois comandos (os mesmos de `just triagem` e `just arquiteto`):
     python3 tools/triagem/triagem.py triar "atendimento no WhatsApp com fila para clientes"
     python3 tools/triagem/triagem.py triar "rebalancear a carteira ARCA" --nucleo sim
     python3 tools/triagem/triagem.py triar "agenda online" --nucleo nao --integra nao --adr docs/adr
-    python3 tools/triagem/triagem.py arquitetar "módulo de aporte do AM Rendara" > pacote.md
+    python3 tools/triagem/triagem.py arquitetar "módulo de aporte do AM Gestão · Financeiro" > pacote.md
 
 triar: procura no setup (data/ecossistema.json) o que já resolve o pedido, olha a lista do que ficou
 de fora (data/mapa.json) e decide uma de três opções:
     A · SUBIR PRONTO   já existe ferramenta aberta no setup e não precisa mexer nos sistemas AM (< 30 min)
     B · COLAR          existe o pronto, mas precisa ligar aos sistemas AM ou a outra ferramenta (< 1 dia, n8n ou API)
-    C · CONSTRUIR      é o núcleo que gera faturamento: programa no Aura, na stack fixa, com ADR (2 a 3 dias por fatia)
+    C · CONSTRUIR      é o núcleo que gera faturamento: programa no AM Gestão, na stack definida (ADR 0017), com ADR (2 a 3 dias por fatia)
 Com --adr PASTA, grava o rascunho do ADR da decisão na próxima numeração da pasta.
 
-arquitetar: não chama IA nenhuma. Monta um pacote curto (stack fixa, regras, o que já existe, o que foi
+arquitetar: não chama IA nenhuma. Monta um pacote curto (stack definida, regras, o que já existe, o que foi
 recusado e o pedido) para colar no Claude ou mandar por `claude -p`. Pedir o pacote pronto gasta menos
 token do que o Claude descobrir tudo isso sozinho lendo o repositório.
 
@@ -64,7 +64,7 @@ REGRAS = [
     "Nada publicado, enviado ou cobrado em nome do Alan sem aprovação.",
 ]
 INSTRUCAO = ("Responda seco, sem saudação nem resumo: (1) o que do setup já resolve parte disso, (2) a arquitetura mínima "
-             "na stack fixa, (3) os contratos (rotas OpenAPI e esquemas Zod do front), (4) as 3 armadilhas de manutenção "
+             "na stack definida (ADR 0017), (3) os contratos (rotas OpenAPI e esquemas Zod do front), (4) as 3 armadilhas de manutenção "
              "mais prováveis, (5) a primeira fatia entregável em até 4 horas. Não proponha ferramenta fora da stack sem "
              "dizer qual ADR ela exigiria.")
 VAZIAS = {"a", "o", "e", "de", "do", "da", "dos", "das", "para", "com", "sem", "em", "no", "na", "nos", "nas",
@@ -73,7 +73,7 @@ VAZIAS = {"a", "o", "e", "de", "do", "da", "dos", "das", "para", "com", "sem", "
 OPCOES = {
     "A": ("SUBIR PRONTO", "< 30 min", "Suba o container/ferramenta que já está no setup e configure. Nada de código."),
     "B": ("COLAR", "< 1 dia", "Use o pronto e ligue com n8n ou com a API dele. Código só de cola, com teste."),
-    "C": ("CONSTRUIR", "2 a 3 dias por fatia", "É núcleo: programe no Aura, na stack fixa, com ADR e testes."),
+    "C": ("CONSTRUIR", "2 a 3 dias por fatia", "É núcleo: programe no AM Gestão, na stack definida (ADR 0017), com ADR e testes."),
 }
 
 

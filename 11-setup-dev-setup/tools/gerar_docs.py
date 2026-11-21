@@ -375,6 +375,7 @@ def gerar_readme(eco: dict, por_camada: dict) -> str:
            "- **Montar tudo de uma vez**: `cd ~/dev/dev-setup && just instalar` (veja antes com `just instalar --simular`). O plano de autonomia está no [Núcleo AMtech](docs/nucleo/README.md).",
            "- **No Ubuntu, um comando só**: `cd ~/dev/dev-setup && just` lista tudo; `just check` antes de cada commit e `just triagem \"o que você quer\"` antes de construir algo novo. Ver [Empresa solo](docs/empresa-solo.md).",
            "- **[Empresas do grupo](docs/empresas.md)**: as 6 empresas, os produtos principais de cada uma (com componentes e pacotes), a sequência e as [vitrines para clientes](docs/vitrines/README.md).",
+           "- **Coerência com o plano**: `data/coerencia.json` guarda o objetivo, as decisões em vigor e os termos velhos; `just coerencia` confere todos os repositórios e grava `~/dev/COERENCIA.md` (arquivo por arquivo, o que atualizar); o CI falha se o dev-setup contradisser o plano.",
            "- **[Repositórios](docs/repositorios.md)**: todos os repositórios no GitHub, por empresa e por status, com o papel de cada um.",
            "- **[Arquitetura](docs/arquitetura.md)**: a pilha inteira, camada por camada, com o diagrama de cada uma.",
            "- **[Fluxos de ponta a ponta](docs/fluxos.md)**: codar com agente e publicar, vender um curso, publicar automaticamente, medir uma campanha e outros.",

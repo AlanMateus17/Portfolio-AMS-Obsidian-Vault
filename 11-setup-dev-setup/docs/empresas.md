@@ -29,7 +29,7 @@ O que mostrar ao cliente está em [vitrines](vitrines/README.md), uma página po
 
 *MVP em construção; começa pela planilha do financeiro.* Caixa, pedidos e financeiro num sistema só: a venda do balcão e a do delivery caem no mesmo caixa, baixam o estoque e aparecem no resultado do mês.
 
-- **Componentes:** AM Kaixara; AM Rotara; AM Rendara; AM Vendra; App de delivery com a marca do restaurante; Planilha do AM Gestão (finanças); AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio); AM Gestão SaaS: Rotara (pedidos e entregas); App de delivery com a marca do restaurante (white-label); Licença do AM Delivery para outras cidades
+- **Componentes:** AM Gestão · Caixa; AM Gestão · Pedidos; AM Gestão · Financeiro; AM Gestão · Loja online; App de delivery com a marca do restaurante; Planilha do AM Gestão (finanças); AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio); AM Gestão SaaS: Rotara (pedidos e entregas); App de delivery com a marca do restaurante (white-label); Licença do AM Delivery para outras cidades
 - **Pacotes:** Caixa · Caixa + Financeiro · Integrado · Integrado + Loja online · Pedidos com a sua marca
 
 ### AM Serviços (nome provisório)

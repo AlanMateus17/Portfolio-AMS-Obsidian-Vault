@@ -18,7 +18,7 @@ Os degraus 2 e 3 costumam andar juntos (script disparado por agenda). A escada e
 
 Regra: se dá para escrever a regra, vira código. Se só dá para descrever o que se quer, entra a IA, e logo depois um teste confere.
 
-- **Roteador:** tabela de regras decide primeiro; o modelo local só quando nenhuma regra casar. Teto de gasto é contador que bloqueia. Escopo cruza com `portfolio.json` e o limite de 3 frentes. Contexto por lista fixa de arquivos por tipo de tarefa e ripgrep.
+- **Roteador:** tabela de regras decide primeiro; o modelo local só quando nenhuma regra casar. Teto de gasto é contador que bloqueia. Escopo cruza com `portfolio.json` e o limite de 4 rendas "agora" (onda 0). Contexto por lista fixa de arquivos por tipo de tarefa e ripgrep.
 - **Camada de IA:** prompts versionados no git, saída em JSON validado por schema, temperatura 0 em classificação e extração, cache de respostas, conjunto fixo de testes a cada mudança.
 - **Dinheiro:** nenhuma conta por IA (Caixa da Casa, rateio, imposto, metodologias, R$ 45/h, VEH, métricas).
 - **Segurança e aprovação:** KeePassXC, sops/age, tokens mínimos, guarda de escopo de pentest, política do Jarvis, portões de publicar, pagar e falar com cliente.

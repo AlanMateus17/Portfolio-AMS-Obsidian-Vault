@@ -213,8 +213,8 @@
   },
   {
    "etapa": "Nuvem Azure",
-   "quando": "Conta e deploy do sistema exemplo com o Passo 5 (≈ abr a jun/2027); produção do AM Kaixara no Passo 10 (≈ 2028)",
-   "o_que": "AZ-900 e deploy do AM Kaixara no Azure com Terraform, Key Vault e OIDC. Começar a observabilidade com OpenTelemetry e Aspire."
+   "quando": "Conta e deploy do sistema exemplo com o Passo 5 (≈ abr a jun/2027); produção do AM Gestão · Caixa no Passo 10 (≈ 2028)",
+   "o_que": "AZ-900 e deploy do AM Gestão · Caixa no Azure com Terraform, Key Vault e OIDC. Começar a observabilidade com OpenTelemetry e Aspire."
   },
   {
    "etapa": "Engenharia de dados",
@@ -300,7 +300,7 @@
    "nome": "aura-mcp",
    "tipo": "Servidor MCP em TypeScript",
    "fase": "f3",
-   "descricao": "Expõe ao agente o catálogo dos 13 sistemas, ADRs e o vault. Projeto de portfólio de IA com sua stack."
+   "descricao": "Expõe ao agente o catálogo do AM Gestão e das suítes, ADRs e o vault. Projeto de portfólio de IA com sua stack."
   },
   {
    "nome": "Subagente arquiteto-aura",

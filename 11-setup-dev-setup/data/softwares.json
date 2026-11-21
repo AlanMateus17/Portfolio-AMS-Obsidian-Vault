@@ -627,7 +627,7 @@
   },
   {
    "id": "am-kaixara",
-   "nome": "AM Kaixara (PDV, comandas, estoque, ficha técnica)",
+   "nome": "AM Gestão · Caixa (PDV, comandas, estoque, ficha técnica)",
    "categoria": "sistema",
    "publico": "restaurantes, lojas, assistências",
    "faz": "Venda, comanda, mesa, cozinha, estoque, receita e caixa",
@@ -646,7 +646,7 @@
   },
   {
    "id": "am-rendara",
-   "nome": "AM Rendara (finanças e ARCA)",
+   "nome": "AM Gestão · Financeiro (finanças e ARCA)",
    "categoria": "sistema",
    "publico": "pessoas, famílias, pequenas empresas",
    "faz": "Contas, fluxo de caixa, cascata, carteira e rebalanceamento",
@@ -664,7 +664,7 @@
   },
   {
    "id": "am-rotara",
-   "nome": "AM Rotara (pedidos e entregas)",
+   "nome": "AM Gestão · Pedidos (pedidos e entregas)",
    "categoria": "sistema",
    "publico": "delivery e lojistas",
    "faz": "Pedidos, rotas, app do entregador, prova de entrega",
@@ -823,7 +823,7 @@
   },
   {
    "id": "am-vendra",
-   "nome": "AM Vendra (loja virtual)",
+   "nome": "AM Gestão · Loja online (loja virtual)",
    "categoria": "sistema",
    "publico": "lojas pequenas",
    "faz": "Loja, carrinho, frete, pagamento",

@@ -171,7 +171,7 @@ def gerar_md(d: dict) -> str:
     o += gerar_suites(d)
     o.append("## Módulos: construa nesta ordem\n")
     o.append("Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de trabalho caem: "
-             "um site novo de padaria ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.\n")
+             "um site novo de pet shop ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.\n")
     o.append("| # | Módulo | O que faz | Softwares que usam | Vendáveis |\n|---:|---|---|---:|---:|")
     for i, (m, n, v) in enumerate(ordem_modulos(d), 1):
         o.append(f"| {i} | **{esc(m['nome'])}** | {esc(m['faz'])} | {n} | {v} |")

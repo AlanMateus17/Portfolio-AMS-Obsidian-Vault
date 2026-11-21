@@ -4,13 +4,13 @@
 
 [← Implantação](README.md)
 
-63 fases, 573 passos, cerca de **1451 h 18 min** de trabalho no total. Cada passo tem um critério de pronto que dá para conferir. A versão para marcar o progresso é o [`acompanhamento.html`](acompanhamento.html) (e o artefato Implantação AMtech).
+63 fases, 572 passos, cerca de **1449 h 48 min** de trabalho no total. Cada passo tem um critério de pronto que dá para conferir. A versão para marcar o progresso é o [`acompanhamento.html`](acompanhamento.html) (e o artefato Implantação AMtech).
 
 Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Script** (você roda o comando), **Claude com você** (o Claude faz pelo conector ou pelo Claude Code, com a sua aprovação).
 
 **Todo o planejamento está aqui:** os 481 blocos do [mapa do setup](../mapa.html), de todas as 23 camadas, entram em algum passo, com a data ou o gatilho de quando, e cada uma das 98 ofertas do portfólio tem o passo em que entra à venda. Nada fica de fora; o CI falha se um bloco ou uma oferta nova não tiver passo ([quando entra cada bloco](#quando-entra-cada-bloco)).
 
-**Dá para fazer hoje:** 450 dos 573 passos (632 h 33 min) só precisam do notebook e de contas grátis. Os outros dizem o que falta: comprar algo, pagar um serviço, ter um conteúdo seu pronto ou esperar o gatilho da fase.
+**Dá para fazer hoje:** 449 dos 572 passos (631 h 03 min) só precisam do notebook e de contas grátis. Os outros dizem o que falta: comprar algo, pagar um serviço, ter um conteúdo seu pronto ou esperar o gatilho da fase.
 
 | Fase | Quando | Passos | Tempo |
 |---|---|---:|---:|
@@ -25,7 +25,7 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [8 · Acervo: tudo o que você já tem](#f8) | Semanas 3 e 4 · nov/2026 | 7 | 4 h 55 min |
 | [9 · Claude e assistentes](#f9) | Semana 4 · nov/2026 | 4 | 1 h 45 min |
 | [10 · Automação e medição](#f10) | Semana 4 · nov/2026 | 8 | 1 h 42 min |
-| [11 · Arsenal de rendas: regras e as 3 de agora](#f-arsenal) | Semana 4 · nov/2026 | 8 | 7 h 50 min |
+| [11 · Arsenal de rendas: regras e as 4 de agora](#f-arsenal) | Semana 4 · nov/2026 | 7 | 6 h 20 min |
 | [12 · Automações do arsenal](#f-automacoes) | Nov/2026 em diante, uma por vez, na ordem de desbloqueio | 12 | 24 h 00 min |
 | [13 · Kit de sites com IA da Hostinger](#f-sites) | Semanas 4 e 5 · nov/2026 | 5 | 5 h 00 min |
 | [14 · Escola: Fábrica de aulas e documentos](#f-escola) | Semanas 5 e 6 · nov/2026 | 9 | 7 h 42 min |
@@ -59,7 +59,7 @@ Legenda de quem faz: **Você** (só você pode: contas, senhas, decisões), **Sc
 | [42 · Nuvem e deploy](#f19) | Trimestre 2 do eixo (fev a abr/2027): conta, deploy com Kamal e rollback testado do AM Gestão (MVP com 1 restaurante pagante) | 8 | 7 h 45 min |
 | [43 · Editora](#f20) | Quando o capítulo 1 estiver pronto · **gatilho:** O capítulo 1 e o seu modelo de criação prontos | 12 | 19 h 00 min |
 | [44 · Dados, IA e pendrives](#f21) | Pendrives, laboratório, dados (Zoomcamp, dbt, Airflow) e treino de IA podem começar já, na ordem do roteiro (ADR 0015) | 12 | 16 h 20 min |
-| [45 · Sprint de 14 dias (Estratégia do Halter)](#f-sprint) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) · **gatilho:** O recesso começou e uma das 3 rendas de agora já passou no portão | 10 | 35 h 00 min |
+| [45 · Sprint de 14 dias (Estratégia do Halter)](#f-sprint) | Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite) · **gatilho:** O recesso começou e uma das 4 rendas de agora já passou no portão | 10 | 35 h 00 min |
 | [46 · Mais ofertas, uma por vez](#f22) | Fev a dez/2027, uma oferta por vez · **gatilho:** A primeira venda do mini-curso aconteceu | 22 | 125 h 00 min |
 | [47 · Marketing pago e crescimento](#f23) | A partir de fev/2027 · **gatilho:** O mini-curso vendeu sem anúncio (por exemplo, 10 vendas) e o painel de lucro está no ar | 11 | 38 h 30 min |
 | [48 · AMtech OS: o setup como sistema operacional](#f-amtechos) | Nov/2026: teste na VM (grátis, 2 h); no notebook quando o 2º NVMe chegar; venda depois de alguns meses de uso | 5 | 12 h 15 min |
@@ -1126,9 +1126,9 @@ cd ~/dev/dev-setup && claude "Passo backup-banco do roteiro: Pôr o banco de mé
 
 <a id="f-arsenal"></a>
 
-## 11 · Arsenal de rendas: regras e as 3 de agora
+## 11 · Arsenal de rendas: regras e as 4 de agora
 
-Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.
+No máximo 4 rendas agora (onda 0, só passivas), hora mínima de R$ 45, teto de 7 horas extras por semana e o resto em fila com portão.
 
 **Quando:** Semana 4 · nov/2026
 
@@ -1148,15 +1148,7 @@ Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por s
 - **Fora do terminal:** A Rotina fica no Caixa da Casa (artefato), fora do terminal.
 - [ ] **Pronto quando:** Os dois blocos aparecem na Rotina do Caixa da Casa
 
-### 11.3 Cadastro e teste de entrada numa plataforma de avaliação de IA
-
-**Você** · 1 h 30 min
-
-- **Fora do terminal:** Cadastro no navegador. Nunca pague para entrar e nunca passe senha a ninguém.
-- [ ] **Pronto quando:** Teste de entrada feito
-- **Oferta:** Avaliação de respostas de IA (DataAnnotation, Outlier)
-
-### 11.4 Oferecer site com manutenção mensal a 5 comércios
+### 11.3 Oferecer site com manutenção mensal a 5 comércios
 
 **Você** · 2 h 00 min
 
@@ -1164,7 +1156,7 @@ Só 3 rendas ativas por vez, hora mínima de R$ 45, teto de 7 horas extras por s
 - [ ] **Pronto quando:** 5 ofertas feitas e respostas anotadas no CRM
 - **Oferta:** Sites e lojas para pequenas empresas
 
-### 11.5 Criar as buscas salvas com alerta e ligar o radar de revenda
+### 11.4 Criar as buscas salvas com alerta e ligar o radar de revenda
 
 **Claude com você** · 2 h 00 min
 
@@ -1178,7 +1170,7 @@ cd ~/dev/dev-setup && claude "Passo ar-radar do roteiro: Criar as buscas salvas 
 - Lê só a pasta de alertas do Gmail. Não raspa sites que proíbem coleta, não compra e não fala com vendedor.
 - Implanta: Radar de revenda
 
-### 11.6 Retorno por hora de cada marca no painel
+### 11.5 Retorno por hora de cada marca no painel
 
 **Claude com você** · 1 h 30 min
 
@@ -1191,7 +1183,7 @@ cd ~/dev/dev-setup && claude "Passo ar-retorno do roteiro: Retorno por hora de c
 - [ ] **Pronto quando:** O painel mostra R$ por hora sua de cada oferta ativa e marca as que ficaram abaixo da hora mínima
 - Implanta: Painel de lucro (Grafana)
 
-### 11.7 Conferir a fase da cascata antes de qualquer investimento
+### 11.6 Conferir a fase da cascata antes de qualquer investimento
 
 **Você** · 10 min
 
@@ -1199,7 +1191,7 @@ cd ~/dev/dev-setup && claude "Passo ar-retorno do roteiro: Retorno por hora de c
 - [ ] **Pronto quando:** Fase atual anotada no Caixa da Casa
 - **Oferta:** Dividendos, FIIs e renda fixa (cascata e ARCA)
 
-### 11.8 Revisar os descartes uma vez por trimestre
+### 11.7 Revisar os descartes uma vez por trimestre
 
 **Você** · 15 min
 
@@ -2209,7 +2201,7 @@ No **Ubuntu** (linha `alanmateus@...$`):
 cd ~/dev/dev-setup && just arquiteto "módulo Financeiro do AM Gestão" > /tmp/pacote.md
 ```
 
-- [ ] **Pronto quando:** A resposta usa a stack fixa, cita o que já existe e termina numa primeira fatia de até 4 horas
+- [ ] **Pronto quando:** A resposta usa a stack definida (ADR 0017), cita o que já existe e termina numa primeira fatia de até 4 horas
 - O pacote tem cerca de 400 tokens. Cole no Claude ou use just arquiteto-claude, que manda pelo Claude Code dentro do ai-jail.
 - Implanta: Triagem: montar, colar ou construir · Claude Code
 
@@ -2716,7 +2708,7 @@ cd ~/dev/dev-setup && less docs/plano-eixo.md
 ```
 
 - [ ] **Pronto quando:** Ordem confirmada ou ajustada por você em docs/plano-eixo.md
-- Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 3 frentes "agora".
+- Nada fica pausado (ADR 0015): todos estão ativos. A ordem de execução segue o roteiro e o limite de 4 rendas "agora" (onda 0).
 - Implanta: Núcleo AMtech (banco central)
 
 ### 24.2 Montar a semana fixa: 2 h de ofício, 1 h de finanças, 30 min de inglês, 30 min de escrita, 1 dia de folga
@@ -5205,7 +5197,7 @@ As duas frentes do contexto mestre em 14 dias seguidos: caixa rápido com atendi
 
 **Quando:** Recesso escolar de jan/2027 (14 dias seguidos, de dia; o restaurante segue à noite)
 
-**Começa quando:** O recesso começou e uma das 3 rendas de agora já passou no portão
+**Começa quando:** O recesso começou e uma das 4 rendas de agora já passou no portão
 
 ### 45.1 Dia 1: conferir a VM, o Uptime Kuma e o Kamal
 
@@ -7214,7 +7206,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | Lucro por Venda (calculadora) | 37.13 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Webhooks de venda | 38.1, 38.2, 39.3, 40.10 | Semana 11 · jan/2027; Semanas 12 a 15 · jan a fev/2027 |
 | Banco de métricas (PostgreSQL) | 10.2, 10.7, 38.3 | Semana 4 · nov/2026; Semana 11 · jan/2027 |
-| Painel de lucro (Grafana) | 11.6, 12.11, 38.4, 39.3 | Semana 4 · nov/2026; Nov/2026 em diante, uma por vez, na ordem de desbloqueio; Semana 11 · jan/2027 |
+| Painel de lucro (Grafana) | 11.5, 12.11, 38.4, 39.3 | Semana 4 · nov/2026; Nov/2026 em diante, uma por vez, na ordem de desbloqueio; Semana 11 · jan/2027 |
 | Programa de afiliados | 47.5 | A partir de fev/2027 |
 | Prospecção de parceiros | 37.16 | Semanas 8 a 10 · dez/2026 a jan/2027 |
 | Dublagem (YouTube + ElevenLabs) | 47.8 | A partir de fev/2027 |
@@ -7323,7 +7315,7 @@ Camada por camada, na mesma ordem do mapa. O número é o passo do roteiro.
 | 2 CNPJs por frente | 52.1 | Quando a renda pedir |
 | Planejador do Grupo | 57.1 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
 | Anatel e Inmetro | 57.3 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
-| Radar de revenda | 11.5 | Semana 4 · nov/2026 |
+| Radar de revenda | 11.4 | Semana 4 · nov/2026 |
 | AMtech Segurança (pentest) | 59.19 | Dez/2026 em diante: 1 bloco de 1 h por semana dentro do estudo da manhã; serviços pagos só depois dos portões (eJPT, ensaio, OSCP) |
 | ERPNext (negócios físicos) | 57.8 | Fase A: 12 a 18 meses; B: mais 12 a 18 (sem restaurantes desde 20/11/2026) |
 

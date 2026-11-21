@@ -2,6 +2,16 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [2.39.0] - 2026-11-20
+
+### Adicionado
+- Verificador de coerência (`tools/coerencia/coerencia.py`, regras em `data/coerencia.json`): o objetivo, as decisões em vigor e os termos que ficaram velhos (nomes antigos dos sistemas, restaurantes, 3 CNPJs, rendas antigas, .NET no centro). Confere todos os arquivos de texto, diz arquivo por arquivo e linha por linha o que atualizar, e com `--corrigir` troca sozinho o que tem troca segura. Roda no `just check` e no CI (falha com "erro"); `just coerencia` confere todos os repositórios em `~/dev` e grava `~/dev/COERENCIA.md`. Histórico (ADRs, CHANGELOG, ESTADO, 99-arquivo) fica de fora.
+
+### Alterado
+- Todo o dev-setup passou no verificador: AM Kaixara, Rotara, Rendara e Vendra viraram AM Gestão · Caixa, Pedidos, Financeiro e Loja online; exemplos de padaria viraram pet shop; "stack fixa" virou "stack definida (ADR 0017)"; limite de 4 rendas "agora".
+- .NET é reserva também na instalação: o `bootstrap.sh` só instala o SDK com `AMTECH_DOTNET=1`, e o `verificar.sh` não cobra mais o .NET como obrigatório.
+- Passo "cadastro na avaliação de IA" saiu do roteiro (oferta descartada); o roteiro não exige passo para oferta descartada.
+
 ## [2.38.0] - 2026-11-20
 
 ### Alterado

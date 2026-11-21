@@ -37,16 +37,16 @@ Cada sistema é vendido dentro de uma suíte: a suíte junta 3 ou mais sistemas 
 
 - **Para quem:** restaurantes, lojas e quem vende online (já procuram)
 - **Estado:** MVP em construção
-- **Sistemas:** AM Kaixara, AM Rotara, AM Rendara, AM Vendra, App de delivery com a marca do restaurante
-- **MVP:** AM Kaixara, AM Rotara, AM Rendara
+- **Sistemas:** AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro, AM Gestão · Loja online, App de delivery com a marca do restaurante
+- **MVP:** AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro
 
 | Pacote | Sistemas |
 |---|---|
-| Caixa | AM Kaixara |
-| Caixa + Financeiro | AM Kaixara, AM Rendara |
-| Integrado (o MVP) | AM Kaixara, AM Rotara, AM Rendara |
-| Integrado + Loja online | AM Kaixara, AM Rotara, AM Rendara, AM Vendra |
-| Pedidos com a marca do cliente | AM Rotara, App de delivery com a marca do restaurante |
+| Caixa | AM Gestão · Caixa |
+| Caixa + Financeiro | AM Gestão · Caixa, AM Gestão · Financeiro |
+| Integrado (o MVP) | AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro |
+| Integrado + Loja online | AM Gestão · Caixa, AM Gestão · Pedidos, AM Gestão · Financeiro, AM Gestão · Loja online |
+| Pedidos com a marca do cliente | AM Gestão · Pedidos, App de delivery com a marca do restaurante |
 
 ### 2. AM Serviços (nome provisório)
 
@@ -94,7 +94,7 @@ Cada sistema é vendido dentro de uma suíte: a suíte junta 3 ou mais sistemas 
 
 ## Módulos: construa nesta ordem
 
-Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de trabalho caem: um site novo de padaria ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.
+Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de trabalho caem: um site novo de pet shop ou de imobiliária vira montagem de módulos prontos, não um projeto do zero.
 
 | # | Módulo | O que faz | Softwares que usam | Vendáveis |
 |---:|---|---|---:|---:|
@@ -161,9 +161,9 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 
 | Software | Para quem | O que faz | Ferramenta | Receita | Estado | Oferta | Módulos |
 |---|---|---|---|---|---|---|---|
-| **AM Kaixara (PDV, comandas, estoque, ficha técnica)** | restaurantes, lojas, assistências | Venda, comanda, mesa, cozinha, estoque, receita e caixa | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por módulo | Em construção | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | Base multi-empresa Aura, Estoque e ficha técnica, Emissão fiscal, Financeiro, Pagamento e assinatura |
-| **AM Rendara (finanças e ARCA)** | pessoas, famílias, pequenas empresas | Contas, fluxo de caixa, cascata, carteira e rebalanceamento | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Em construção | Planilha do AM Gestão (finanças) | Base multi-empresa Aura, Financeiro, Pagamento e assinatura, Assistente de IA |
-| **AM Rotara (pedidos e entregas)** | delivery e lojistas | Pedidos, rotas, app do entregador, prova de entrega | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura + por entrega | Planejado | AM Gestão SaaS: Rotara (pedidos e entregas) | Base multi-empresa Aura, Mapa e rastreio, Pedido online, Pagamento e assinatura |
+| **AM Gestão · Caixa (PDV, comandas, estoque, ficha técnica)** | restaurantes, lojas, assistências | Venda, comanda, mesa, cozinha, estoque, receita e caixa | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por módulo | Em construção | AM Gestão SaaS: Kaixara (PDV, ficha técnica, cardápio) | Base multi-empresa Aura, Estoque e ficha técnica, Emissão fiscal, Financeiro, Pagamento e assinatura |
+| **AM Gestão · Financeiro (finanças e ARCA)** | pessoas, famílias, pequenas empresas | Contas, fluxo de caixa, cascata, carteira e rebalanceamento | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Em construção | Planilha do AM Gestão (finanças) | Base multi-empresa Aura, Financeiro, Pagamento e assinatura, Assistente de IA |
+| **AM Gestão · Pedidos (pedidos e entregas)** | delivery e lojistas | Pedidos, rotas, app do entregador, prova de entrega | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura + por entrega | Planejado | AM Gestão SaaS: Rotara (pedidos e entregas) | Base multi-empresa Aura, Mapa e rastreio, Pedido online, Pagamento e assinatura |
 | **AM Taskoro (Kanban e Scrum)** | equipes pequenas | Quadros, sprints, métricas | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | AM Taskoro (gestão de projetos ágeis) | Base multi-empresa Aura, Pagamento e assinatura |
 | **AM Projeta (diagnóstico de setup e arquitetura por IA)** | devs e pequenas software houses | Diagnóstico do ambiente e proposta de arquitetura | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | Setup profissional (curso, template e configuração remota) | Base multi-empresa Aura, Assistente de IA, Pagamento e assinatura |
 | **AM Predara (condomínios)** | síndicos e administradoras | Boletos, reservas, ocorrências, comunicados | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por unidade | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Financeiro, Agendamento, Área do cliente, Pagamento e assinatura |
@@ -172,7 +172,7 @@ Primeiro os que entram em mais softwares vendáveis. É aqui que as horas de tra
 | **AM Horaria (agendamentos)** | salões, clínicas, autônomos | Agenda, pagamento antecipado, lembretes | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | Aulas particulares | Base multi-empresa Aura, Agendamento, Pagamento e assinatura |
 | **AM Saberia (educacional)** | escolas e cursos | Turmas, conteúdo, avaliações. Dado de menor com regras LGPD | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura por aluno | Planejado | Fábrica de documentos para professores de MG (assinatura) | Base multi-empresa Aura, Banco de exercícios e correção, Área do cliente, Assistente de IA |
 | **AM Petara (veterinária e pet shop)** | clínicas veterinárias e pet shops | Prontuário do animal, vacinas, banho e tosa, estoque | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Agendamento, Estoque e ficha técnica, Emissão fiscal |
-| **AM Vendra (loja virtual)** | lojas pequenas | Loja, carrinho, frete, pagamento | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura + taxa | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Catálogo com filtros, Pedido online, Pagamento e assinatura, Emissão fiscal |
+| **AM Gestão · Loja online (loja virtual)** | lojas pequenas | Loja, carrinho, frete, pagamento | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura + taxa | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Catálogo com filtros, Pedido online, Pagamento e assinatura, Emissão fiscal |
 | **AM Vynla (linha do tempo e NFC para casais e famílias)** | casais, famílias, presentes | Linha do tempo, memórias, cartão NFC | Stack AM (TypeScript + Next.js + PostgreSQL) | venda + assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Galeria e portfólio, Pagamento e assinatura |
 | **App de delivery com a marca do restaurante** | restaurantes | Pedido próprio sem comissão de marketplace | Stack AM (TypeScript + Next.js + PostgreSQL) | assinatura | Planejado | App de delivery com a marca do restaurante (white-label) | Base multi-empresa Aura, Cardápio digital, Pedido online, Mapa e rastreio, Pagamento e assinatura |
 
