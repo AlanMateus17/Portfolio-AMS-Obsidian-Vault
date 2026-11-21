@@ -38,7 +38,7 @@ atualizado: 2026-10-26
 - **Desenvolver:** endpoint FastAPI que recebe uma série e devolve média/desvio — o esqueleto do módulo de dados do AM Gestão.
 - **✅ Pronto quando:** reescreve em Python um exercício do Passo 1 e testa com pytest.
 
-> O Passo 13 (Python + OR-Tools no AM Rotara) fica mais rápido: o Python já estará pronto.
+> O Passo 13 (Python + OR-Tools no AM Gestão · Pedidos) fica mais rápido: o Python já estará pronto.
 
 ## IA1 — Matemática para IA *(contínua, puxada pelos livros)*
 - [ ] Estatística descritiva e probabilidade (Lins Partes III e VII)

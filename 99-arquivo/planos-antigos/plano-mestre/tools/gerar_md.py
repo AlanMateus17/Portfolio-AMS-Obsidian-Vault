@@ -60,7 +60,7 @@ for a, b in [("Passo 2 (Git, SQL, Docker)", "Fases 4–5 do setup (Linux/WSL2, G
              ("IA2 da trilha de Dados e IA (≈ 2028)", "Zoomcamp, dbt e Airflow da fase 21"),
              ("Passo 9 + IA0 (≈ 2028)", "IA dentro dos sistemas AM (fase 25), junto do IA5"),
              ("IA6 da trilha (≈ 2029)", "Dataset, fine-tuning do 8B e modelo no Ollama (fase 21)"),
-             ("Passo 10 (Produção real)", "Deploy de produção do AM Kaixara na nuvem montada na fase 19"),
+             ("Passo 10 (Produção real)", "Deploy de produção do AM Gestão · Caixa na nuvem montada na fase 19"),
              ("Passo 12 (Plataforma interna)", "Sistemas AM à venda; espanhol começa"),
              ("Passo 14 + fase sênior", "Rendara, consultoria, fundo; decisão do aura-historico")]:
     w(f"| {a} | {b} |")

@@ -207,7 +207,7 @@ status: completo
 **Critério de aceite:** função recebe "dias em atraso" e retorna status (ativo/atraso/restrito/suspenso) corretamente nos 4 casos e nos limites entre eles.
 **Estimativa:** 1h30 | **Prioridade:** Alta | **Depende de:** US-02
 
-### US-14 — Simulação simplificada do rebalanceamento ARCA (AM Rendara)
+### US-14 — Simulação simplificada do rebalanceamento ARCA (AM Gestão · Financeiro)
 **Critério de aceite:** função recebe 4 valores de quadrante e retorna quanto falta para cada um chegar a 25% do total, sem usar banco de dado, só aritmética e `if`.
 **Estimativa:** 2h | **Prioridade:** Alta | **Depende de:** US-01
 

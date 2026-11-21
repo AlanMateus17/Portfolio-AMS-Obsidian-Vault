@@ -7,13 +7,13 @@ atualizado: 2026-10-26
 
 # 🧭 Currículo Completo do Desenvolvedor Sênior — Todas as Camadas e Etapas
 
-> **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [Sumário Único](../PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
+> **Em palavras simples:** esta é a lista **completa** do que um programador sênior sabe, dividida em 15 áreas. Ela é grande de propósito: serve para conferir que nada ficou de fora, não para estudar de uma vez. A ordem de estudo é a do [PLANO ÚNICO](../PLANO-UNICO-AMtech.md); cada linha diz em qual Passo entra. Termos: [Glossário](../00-GLOSSARIO.md).
 
 > **O que este documento é:** a lista completa do que você precisa dominar tecnicamente para ser **desenvolvedor sênior** na sua stack (núcleo **TypeScript/Next.js + Python/FastAPI + PostgreSQL (Supabase)** + Docker), no Brasil e no exterior. Cobre **todas as camadas** (fundamentos, backend, frontend, dados, arquitetura, infraestrutura, segurança, qualidade, produção) e **todas as etapas** (requisitos → design → código → teste → deploy → operação → evolução).
 >
 > **Nota (13/11):** o .NET saiu do centro e virou **carta de reserva**. As seções que detalham C#/.NET/ASP.NET/CLR/GC abaixo valem só para quando você puxar essa carta (vaga corporativa ou agente fiscal) — não são mais o caminho principal. O principal é TS + Python + SQL. Fonte da verdade: [stack-tecnologica](../05-stack-tecnologica/stack-tecnologica.md).
 >
-> **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [Sumário Único](../PLANO-UNICO-AMtech.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
+> **Como usar:** você **não** estuda este documento de cima para baixo. A ordem continua sendo a do [PLANO ÚNICO](../PLANO-UNICO-AMtech.md). Cada item aqui diz **em qual Passo** entra (coluna "Onde"). Use este documento para três coisas:
 > 1. **Auditoria:** no início de cada Passo, abra a camada correspondente e veja se nada ficou de fora.
 > 2. **Critério de sênior:** cada camada termina com "**Sênior quando…**" — é o teste de que você domina, não de que estudou.
 > 3. **Preparação de entrevista:** a seção 15 lista o que é cobrado em vaga sênior, inclusive no exterior.
@@ -206,7 +206,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 | Migrações sem parar o sistema | Expandir e contrair (adicionar coluna, migrar dado, remover depois), migração em produção com rollback | P10 |
 | Operação | Backup e **teste de restauração**, point-in-time recovery, réplica de leitura, connection pooling (PgBouncer), particionamento de tabela | P10 · Sr |
 | Redis | Tipos (string, hash, list, set, sorted set, stream), TTL, padrões de cache (cache-aside, write-through), invalidação, locks distribuídos e seus riscos, Redis Streams como fila | P9 |
-| Geoespacial | PostGIS: geometria × geografia, índice espacial, distância e área (AM Rotara) | P9 · P13 |
+| Geoespacial | PostGIS: geometria × geografia, índice espacial, distância e área (AM Gestão · Pedidos) | P9 · P13 |
 | Busca | Full-text search no PostgreSQL; quando um motor dedicado seria necessário | Sr |
 | SQLite | Banco local do agente offline do Kaixara, sincronização | P7 |
 | Dados analíticos | OLTP × OLAP, modelagem dimensional (noção), ETL | IA2 |
@@ -342,7 +342,7 @@ O `aura-historico` (Clojure + Datomic) foi arquivado. Histórico de eventos, se 
 
 ---
 
-## 13. Software de desktop e dispositivo — agente local do AM Kaixara
+## 13. Software de desktop e dispositivo — agente local do AM Gestão · Caixa
 
 | Tópico | O que dominar | Onde |
 |---|---|---|

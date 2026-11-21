@@ -1,6 +1,6 @@
 # PLANO ÚNICO — AMtech
 
-Data: 2026-11-13 (atualizado para a nova realidade) · Alan Mateus
+Data: 2026-11-13 (nova realidade) · revisado em 2026-11-20 (rendas, empresas e suítes) · Alan Mateus
 
 > **Este é o único planejamento.** Substitui o Plano Unificado, o Sumário Único,
 > o Plano Mestre passo a passo e os rascunhos. Todos viraram referência em
@@ -87,10 +87,10 @@ vende online — onde você já tem procura).
 
 | Módulo | Vem de | Faz |
 |---|---|---|
-| PDV / Caixa | AM Kaixara | Venda no balcão, ficha técnica, cardápio |
-| Pedidos / Delivery | AM Rotara | Pedido online, entrega, geolocalização |
-| Financeiro | AM Rendara | Caixa, contas, DRE, conciliação |
-| Loja online (opcional) | AM Vendra | Venda online para além do restaurante |
+| PDV / Caixa | o antigo Kaixara | Venda no balcão, ficha técnica, cardápio |
+| Pedidos / Delivery | o antigo Rotara | Pedido online, entrega, geolocalização |
+| Financeiro | o antigo Rendara | Caixa, contas, DRE, conciliação |
+| Loja online (opcional) | o antigo Vendra | Venda online para além do restaurante |
 
 Nome provisório: **AM Gestão** (um produto, vários módulos). **MVP = PDV +
 Pedidos + Financeiro básico**, lançado primeiro para os restaurantes/vendedores
@@ -98,8 +98,13 @@ que já te procuram. A loja online entra como módulo depois que o MVP vender.
 
 Isso é melhor que 23 sistemas por três motivos: você termina **um**, vende
 **um**, e um cliente que usa PDV + pedidos + financeiro junto dificilmente troca
-(fica preso ao valor). Os outros sistemas antigos viram, no máximo, módulos
-futuros — não produtos separados.
+(fica preso ao valor). Com o MVP pronto, o AM Gestão é vendido em **pacotes**
+(Caixa · Caixa + Financeiro · Integrado · Integrado + Loja · Pedidos com a sua
+marca). Os outros sistemas antigos seguem o mesmo raciocínio (decisão de 20/11):
+viram **suítes** de 3 ou mais sistemas, vendidas em pacotes, uma por vez e só
+depois da anterior vender — AM Serviços (agenda, assistência, veterinária),
+AM Escola (gestão escolar, AM Mentor, plataforma de cursos, documentos) e
+AM Projetos (Kanban, obras, diagnóstico por IA).
 
 ---
 
@@ -111,10 +116,10 @@ recursos e exemplos, está em [PLANO-PASSO-A-PASSO](07-estudo-e-carreira/PLANO-P
 
 | Trim. | Construir (AM Gestão + web) | Estudar junto | Renda que testa | Repos |
 |---|---|---|---|---|
-| **1 · nov/26–jan/27** | Setup; fundamentos TS/Python + SQL; 1 site de cliente | Contabilidade básica; matemática VHSlins | 1 site pago; aulas particulares; planilha do financeiro à venda; 3 posts | dev-setup, github.io, catalogo-html, ensino-ti |
-| **2 · fev–abr/27** | MVP do AM Gestão (PDV + Pedidos + Financeiro); deploy, testes, Docker | Matemática financeira | 10 planilhas vendidas; MVP rodando em 1 restaurante que já te procura | dev-setup, am-gestao (novo) |
-| **3 · mai–jul/27** | Pix/Pix Automático, loja online (módulo Vendra), observabilidade; começa Python/dados | Tributos de empresa; conciliação | 5 clientes pagantes (restaurantes + vendas online) | am-gestao |
-| **4 · ago–out/27** | IA no produto (ex.: previsão de caixa, classificação de itens); DDD, performance | Investimentos (sua metodologia no financeiro) | Renda rumo a R$ 7 mil líq./mês; 12 posts/ano | am-gestao, github.io |
+| **1 · nov/26–jan/27** | Setup; fundamentos TS/Python + SQL; mini-curso de Lógica | Contabilidade básica; matemática VHSlins | Mini-curso no ar; planilha do financeiro à venda; primeiros vídeos do Primer Code | dev-setup, github.io, catalogo-html, ensino-ti |
+| **2 · fev–abr/27** | MVP do AM Gestão (PDV + Pedidos + Financeiro); deploy, testes, Docker | Matemática financeira | 10 planilhas vendidas; MVP rodando em 1 restaurante que já te procura; Anki e AM Mentor; Bancada Dev | dev-setup, am-gestao (novo) |
+| **3 · mai–jul/27** | Pix/Pix Automático, loja online (módulo Vendra), observabilidade; começa Python/dados | Tributos de empresa; conciliação | 5 clientes pagantes nos pacotes do AM Gestão; Udemy; canal de finanças | am-gestao |
+| **4 · ago–out/27** | IA no produto (ex.: previsão de caixa, classificação de itens); DDD, performance | Investimentos (sua metodologia no financeiro) | Renda rumo a R$ 7 mil líq./mês; AM Serviços e Maker Digital começam | am-gestao, github.io |
 
 Robótica e SO rodam **em paralelo leve**, com saída concreta: um protótipo para
 casa/terreno por trimestre e o Arch como máquina do dia a dia — sem roubar o foco
@@ -125,42 +130,49 @@ segurança/alunos, dormir.
 
 ---
 
-## 6. As fontes de renda — foco em 4 que compõem
+## 6. As fontes de renda — só passivas, em ondas (decisão de 18/11)
 
-De 47 para as 4 que saem do mesmo estudo e se reforçam:
+Só **rendas passivas** entram no plano, em ondas. A onda seguinte só começa quando
+uma da atual passar no portão (3 meses se pagando). Lista completa, com tipo e
+onda de cada oferta, no dev-setup: `docs/operacao/portfolio.md` e `docs/empresas.md`.
 
-1. **Aulas particulares** — caixa agora.
-2. **Mini-curso de Lógica** — escala o que você ensina.
-3. **Sites para empresas** — freela com a stack nova.
-4. **AM Gestão (SaaS)** — o produto, começando pela planilha do financeiro.
-
-O resto entra **uma por vez, depois da primeira venda**, nesta ordem (a lista
-completa pontuada está em `99-arquivo/planos-antigos/fontes-de-renda-completas.md`):
-
-- **Ensino / infoproduto (saem do mesmo material das aulas):** mini-curso de
-  Lógica · pacote de aulas prontas para professores · aulas particulares · banco
-  de questões de TI · baralhos Anki · cursos na Udemy (PT/EN) · formações (Téc. em
-  Desenvolvimento, Matemática) · curso de finanças pessoais · comunidade paga do
-  Instituto AMS.
-- **Software / serviço (saem do AM Gestão e da stack):** planilha do financeiro →
-  AM Gestão (SaaS) · sites e lojas para empresas · automação com IA para pequenos
-  negócios · suporte remoto mensal · presença digital para comércio local ·
-  sistemas sob encomenda.
-- **Robótica:** oficinas de robótica/programação para escolas · AMtech Maker.
-- **Conteúdo / mídia:** canal em público · newsletter · afiliados · monetização.
-- **Editora (pausada):** livro *Lógica e Máquina* e derivados.
-- **Negócios físicos (fora do mapa ativo por ora):** assistência técnica · ponto
-  de retirada · delivery · sushi · cafeteria · padaria.
-
-Regra: nada disso abre antes da anterior vender. Uma por vez, pela pontuação.
+- **Onda 0 — agora (no máximo 4):** mini-curso de Lógica · canais sem rosto ·
+  planilha do AM Gestão (financeiro) · catálogo do HTML.
+- **Os 3 canais sem rosto:** **Primer Code** (lógica e programação), **Bancada Dev**
+  (setup e ferramentas) e um canal de finanças com **nome a definir** (Bolso Exato
+  está ocupado).
+- **Onda 1:** Anki · templates · modelos financeiros · calculadoras · Udemy · afiliados.
+- **Onda 2:** monetização das plataformas · newsletter · AM Mentor · simulados ·
+  aulas prontas para professores · fábrica de documentos para professores ·
+  dublagem · templates em inglês · UI kits · canal em público.
+- **Onda 3:** AM Gestão SaaS (Kaixara e Rotara) · formação técnica · comunidade ·
+  livro · camisetas · dividendos.
+- **Rendas ativas, fora das ondas:** sites, aulas particulares, sistemas sob
+  encomenda e laudo de segurança de sites — só o que chegar, sem prospectar.
+- **Saíram do plano:** avaliação de IA (18/11); restaurantes próprios, mercadinho,
+  máquina de lanches, revenda de veículos e revendas de usados (20/11).
 
 ---
 
-## 7. As empresas — uma, com linhas de produto
+## 7. As empresas — 6 marcas, CNPJ só quando faturar (decisão de 20/11)
 
-De 3 empresas para **uma com linhas**: a **Grupo AMtech** é o veículo; o
-**Instituto AMS** é a linha de cursos (nasce das suas aulas); a **Editora** fica
-pausada. Não abra 3 CNPJs — uma estrutura, vários produtos.
+Uma empresa por área, para nada ficar confuso; o **Grupo AMtech Digital** é o
+nome-mãe. CNPJ próprio só quando cada uma faturar (confirmar com contador).
+Detalhe, produtos e pacotes de cada uma em `docs/empresas.md` do dev-setup.
+
+| Empresa | Estado | Produtos principais |
+|---|---|---|
+| **AMtech Software** | ativa | AM Gestão e as suítes; Kit Dev; sites sob demanda |
+| **Instituto AMS Silva** | ativa | Trilha Lógica; formações; para professores; catálogo do HTML |
+| **AMtech Mídia** | ativa | Primer Code, Bancada Dev, canal de finanças; Kit Finanças |
+| **AMtech Maker** | software primeiro | Maker Digital → kits, serviços de campo e loja (fase 2) |
+| **AM Logística** | software primeiro | Pedidos do AM Gestão → entregas e delivery (fase 2) |
+| **Editora AMS Silva** | pausada | Coleção *Lógica e Máquina* (6 volumes, escrita a partir das suas notas) |
+
+**Sequência:** 1) mini-curso, planilha do AM Gestão e Primer Code · 2) MVP do AM
+Gestão em 1 restaurante, Anki e AM Mentor, Bancada Dev · 3) pacotes do AM Gestão,
+Udemy, canal de finanças · 4) AM Serviços e Maker Digital · depois Editora e as
+fases físicas, só no gatilho. Patrimônio é finança pessoal, não empresa.
 
 ---
 

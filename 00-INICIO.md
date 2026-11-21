@@ -5,7 +5,7 @@ tipo: home
 
 # 🏠 Portfólio AMS — Índice
 
-> **Atualizado 13/11/2026 para a nova realidade:** um produto só (**AM Gestão**) + **AMtech OS** + **dev-setup**. O império de 23 sistemas e os planos antigos foram para `99-arquivo/` (reversível, nada apagado).
+> **Atualizado 20/11/2026:** um produto principal (**AM Gestão**, vendido em pacotes), **6 empresas** com produtos em suítes e pacotes, rendas só passivas em ondas, **AMtech OS** + **dev-setup**. Os planos e sistemas antigos estão em `99-arquivo/` (reversível, nada apagado).
 
 > 🧭 **Comece por aqui:**
 > - **[PLANO ÚNICO](PLANO-UNICO-AMtech.md)** — o quê e por quê (fonte da verdade)
@@ -16,10 +16,10 @@ tipo: home
 ---
 
 ## 🎯 O produto: AM Gestão (um só, vários módulos)
-- [Módulo Caixa / PDV](02-sistemas-de-negocio/kaixara-documento-projeto-final.md) ⭐ *(era AM Kaixara)* — [↳ especificação técnica](02-sistemas-de-negocio/kaixara-especificacao-tecnica-completa.md) · [↳ frontend](02-sistemas-de-negocio/kaixara-frontend-documento-unico.md)
-- [Módulo Pedidos / Delivery](02-sistemas-de-negocio/rotara-documento-projeto-final.md) *(era AM Rotara)*
-- [Módulo Financeiro](02-sistemas-de-negocio/rendara-documento-projeto-final.md) *(era AM Rendara)*
-- [Módulo Loja online](02-sistemas-de-negocio/vendra-documento-projeto-final.md) *(era AM Vendra)*
+- [Módulo Caixa / PDV](02-sistemas-de-negocio/kaixara-documento-projeto-final.md) ⭐ *(era AM Gestão · Caixa)* — [↳ especificação técnica](02-sistemas-de-negocio/kaixara-especificacao-tecnica-completa.md) · [↳ frontend](02-sistemas-de-negocio/kaixara-frontend-documento-unico.md)
+- [Módulo Pedidos / Delivery](02-sistemas-de-negocio/rotara-documento-projeto-final.md) *(era AM Gestão · Pedidos)*
+- [Módulo Financeiro](02-sistemas-de-negocio/rendara-documento-projeto-final.md) *(era AM Gestão · Financeiro)*
+- [Módulo Loja online](02-sistemas-de-negocio/vendra-documento-projeto-final.md) *(era AM Gestão · Loja online)*
 
 > MVP = Caixa + Pedidos + Financeiro. Os outros sistemas antigos (Taskoro, Projeta, Petara, Consertta, Vynla, Predara, Canteira, Saberia, Horaria e os serviços `aura-*`) estão em [`99-arquivo/sistemas-antigos/`](99-arquivo/).
 
